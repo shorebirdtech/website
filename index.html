@@ -2,16 +2,69 @@
 
 <head>
     <title>Shorebird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Baloo 2', cursive;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #logo {
+            margin: auto;
+            width: 300px;
+        }
+
+        #content {
+            margin: auto;
+            max-width: 300px;
+        }
+
+        .link_logo {
+            width: 32px;
+        }
+
+        #logo_list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #logo_list a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        #mission {
+            max-width: 300px;
+        }
+    </style>
 
 <body>
-    <h1>Shorebird</h1>
-    <p>Building the best way to write apps.
-    </p>
-    <ul>
-        <li><a href="https://discord.gg/9hKJcWGcaB">Discord</a></li>
-        <li><a href="https://twitter.com/shorebirddev">Twitter</a></li>
-        <li><a href="https://github.com/shorebirdtech">GitHub</a></li>
-    </ul>
+    <div id="content">
+        <h1>Shorebird</h1>
+        <img id="logo" src="logo.png" alt="Shorebird Logo" />
+        <p>Join us on discord.</p>
+        <div id="logo_list">
+            <a href="https://discord.gg/9hKJcWGcaB"><img src="discord_logo.png" id="discord" class="link_logo"
+                    alt="Discord logo" />
+            </a>
+            <a href="https://twitter.com/shorebirddev"><img class="link_logo" src="twitter_logo.png" id="twitter"
+                    alt="Twitter logo" />
+            </a>
+            <a href="https://github.com/shorebirdtech">
+                <img class="link_logo" src="github_logo.png" id="GitHub logo" />
+            </a>
+        </div>
+        <p id="mission">Building the best way to write apps.
+        </p>
+    </div>
 </body>
 
 </html>
