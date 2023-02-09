@@ -8,11 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        /* https://coolors.co/0a0908-006989-f2f4f3-a9927d-007090 */
+        :root {
+            --black: #000000;
+            --cerulean: #006989ff;
+            --white: #ffffff;
+            --beaver: #a9927dff;
+            --cerulean-2: #007090ff;
+        }
+
         body {
             font-family: 'Baloo 2', cursive;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: var(--black);
+            color: var(--white);
             text-align: center;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--beaver);
+        }
+
+        a {
+            color: var(--cerulean);
         }
 
         #logo {
@@ -92,7 +114,7 @@
 
             <div>
                 <h3>About Shorebird</h3>
-                <p>Businesses today write the same app at
+                <p>The problem: Businesses today write the same app at
                     least twice at 2x the necessary costs, with redundant codebases, teams, bug lists. Flutter has
                     proven
                     that
@@ -103,16 +125,22 @@
                     Shorebird is changing that. We're filling in the gaps in the Flutter ecosystem and making it easy
                     for
                     enterprises to adopt multiplatform development.</p>
-                <p>The primary unlock we made in building Flutter was bringing circa 2014 web tech to mobile (reactive
-                    programming,
-                    hot reload, etc). Shorebird is repeating this by bringing 2023 web tech to mobile (blurring
-                    client/server, always up-to-date deploys, etc). There are 10s of millions of
-                    developers
-                    but only a tiny fraction of those are using Flutter today. Shorebird will change that.</p>
-
-                <p>We're here to save developers and business time and money, help them provide their customers with
+                <p>Why? We're here to save developers and business time and money, help them provide their customers
+                    with
                     better
                     experiences, and hopefully make the world a better place.</p>
+                <p>The primary unlock we made in building Flutter was bringing circa 2014 web tech to mobile
+                    (reactive
+                    programming,
+                    hot reload, etc). Shorebird is repeating this by bringing 2023 web tech to mobile (blurring
+                    client/server, always up-to-date deploys, etc).</p>
+
+                <p>We're a default-public organization, we operate on a <a
+                        href="https://discord.gg/9hKJcWGcaB"></a>public discord</a>, our
+                    <a href="https://github.com/shorebirdtech/">source is open</a>, our company <a
+                        href="https://github.com/shorebirdtech/handbook">handbook</a> is open. We're globally
+                    distributed team operating largely asynchronous.
+                </p>
 
                 <p>More information about the company we're trying to build can be found in our public <a
                         href="https://github.com/shorebirdtech/handbook">Handbook</a>.</p>
@@ -123,13 +151,17 @@
                     About the role
                 </h3>
                 <p>
-                    <b>Skills</b>: Dart, Flutter, some amount of C++ or cloud (AWS/GCP) experience desired. We
+                    <b>Skills</b>: Dart, Flutter, and some amount of one of a systems language (e.g. C++, C, Rust) OR
+                    cloud experience (e.g. AWS, GCP) desired. We work on many systems *around* Flutter and Dart, but
                     rarely
-                    write Flutter apps, rather we write the tools others will use to build Flutter apps.
+                    write Flutter apps. We write the tools others will use to build Flutter apps.
+                    Experience working on reused code (e.g. apis, libraries, tools, build systems) will also serve you
+                    well.
                 </p>
 
                 <h4>How you add value</h4>
-                <p>As a founding engineer, you will wear many hats. You will work with a diverse team of exceptional
+                <p>As a founding engineer, you will wear many hats. You will work with a diverse (and distributed) team
+                    of exceptional
                     engineers (some who built Flutter or key parts of the Flutter ecosystem initially) to build the
                     future
                     of development
@@ -161,6 +193,13 @@
                     <li>Ability to prioritize your own work among way too many options</li>
                     <li>Excellent English spoken and written communication skills</li>
                 </ul>
+
+                <h4>Interview process</h4>
+                No, we don't ask you to do leetcode. We're interested most in your past projects/accomplishments (do you
+                ship stuff?), your
+                desire to work at a startup and on this mission in particular, and your ability to communicate clearly.
+                We'll have a few conversations, possibly do a small project together and check references. If it's a
+                mutual fit, we'll make you an offer.
             </div>
             <h4>Reach out</h4>
             If you're interested in joining us at Shorebird, please hop on our public <a
