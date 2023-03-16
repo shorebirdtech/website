@@ -78,3 +78,22 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+hr {
+    border: 0;
+    background-color: var(--cerulean);
+    height: 1px;
+}
+
+#footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#footer li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 10px;
+}
