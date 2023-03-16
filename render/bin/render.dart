@@ -31,5 +31,7 @@ void main(List<String> arguments) {
   final template = templateFile.readAsStringSync();
 
   final html = template.replaceAll('{{content}}', content);
-  outFile.writeAsStringSync(html);
+  final htmlWithComment =
+      '<!-- Do not edit directly, generated from ${file.path} -->\n$html';
+  outFile.writeAsStringSync(htmlWithComment);
 }
