@@ -35,7 +35,8 @@ posted by others who have accounts under your account).
 * One person or legal entity may not maintain more than one free account.
 * You may not use the Service for any illegal or unauthorized purpose. You must not, in the use of the Service,
 violate any laws in your jurisdiction (including but not limited to copyright or trademark laws).
-<h3>B. API Terms</h3>
+
+### B. API Terms
 Customers may access their Shorebird account data via an API (Application Program Interface). Any use of the
 API, including use of the API through a third-party product that accesses Shorebird, is bound by these Terms of
 Service plus the following specific terms:
@@ -52,7 +53,7 @@ to suspension.
 the API (or any part thereof) with or without notice.
 
 
-## C. Deletion, Cancellation, and Termination
+### C. Deletion, Cancellation, and Termination
 * All of your Content will be immediately deleted from the Service upon account deletion. This information can not
 be recovered once your account is deleted.
 
@@ -90,7 +91,6 @@ all reasonable assistance, at Your expense.
 duplicate, copy, or reuse any portion of the Shorebird mobile applications without express written permission
 from Shorebird. The Shorebird command-line interface is open-sourced under the MIT or Apache 2.0 license at your
 choice.
-
 
 ### F. Refund Policy
 * If you feel you are being billed in error, we strongly encourage you to request a refund from your account or
