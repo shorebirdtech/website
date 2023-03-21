@@ -1,5 +1,5 @@
 # Terms of Service
-_Last updated March 16th, 2023._
+_Last updated March 21th, 2023._
 
 By using the shorebird.dev website ("Service"), or any services of Code Town,
 Inc("Shorebird"), you are agreeing to be bound by the following terms and
@@ -25,6 +25,14 @@ Account. While Shorebird prohibits such conduct and Content on the Service, you
 understand and agree that Shorebird cannot be responsible for the Content posted
 on the Service and you nonetheless may be exposed to such materials. You agree
 to use the Service at your own risk.
+
+### 0. Beta Version
+PLEASE NOTE THAT THE PRODUCTS ARE CURRENTLY BEING PROVIDED IN THEIR BETA
+VERSIONS, THE FEATURES OF WHICH HAVE NOT BEEN FULLY IMPLEMENTED OR REFINED. AS
+WITH ANY BETA VERSION, THE PRODUCTS CURRENTLY CONSTITUTE A WORK IN PROGRESS AND
+AS SUCH, THERE MAY BE UNRESOLVED ISSUES. UNLESS YOU ARE COMFORTABLE USING BETA
+SOFTWARE AND UNDERSTAND THE IMPLICATIONS THEREOF, PLEASE DO NOT TO USE THIS BETA
+VERSION OF THE PRODUCTS
 
 ### A. Account Terms
 * You must be 16 years or older to use this Service. If you are under 16 years
@@ -68,7 +76,6 @@ owner prior to suspension.
 * Shorebird reserves the right at any time to modify or discontinue, temporarily
 or permanently, your access to the API (or any part thereof) with or without
 notice.
-
 
 ### C. Deletion, Cancellation, and Termination
 * All of your Content will be immediately deleted from the Service upon account
