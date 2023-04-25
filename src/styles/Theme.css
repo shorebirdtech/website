@@ -1,0 +1,50 @@
+/* Typography */
+
+.shorebird-block-big-title {
+  @apply text-white text-4xl xl:text-5xl font-bold tracking-normal;
+}
+.shorebird-block-subtitle {
+  @apply text-xs text-shorebirdSecondary  tracking-wider font-bold uppercase;
+}
+.shorebird-content-title {
+  @apply text-white text-lg font-bold tracking-normal;
+}
+
+/* Backgrounds */
+
+.shorebird-bg1 {
+  @apply bg-shorebirdBg1  fill-shorebirdBg1;
+}
+.shorebird-bg2 {
+  @apply bg-shorebirdBg2  fill-shorebirdBg2;
+}
+body,
+html {
+  @apply bg-shorebirdBg2;
+}
+
+/* Borders */
+
+.shorebird-border-gray {
+  @apply border border-solid border-[rgb(255,255,255,0.15)];
+}
+.shorebird-border-gray-darker {
+  @apply border border-solid border-[rgb(255,255,255,0.07)];
+}
+
+/* Buttons */
+
+.shorebird-button-colored {
+  @apply rounded-lg font-bold bg-shorebirdPrimary text-white flex justify-center items-center hover:bg-[#0196C0] cursor-pointer transition;
+}
+
+/* Navbar */
+
+.navbar-link {
+  @apply text-white lg:text-base text-2xl  leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition duration-300 h-full pt-2;
+}
+
+/* Preventing FOUC */
+@font-face {
+  font-display: var(--fontsource-Inter-font-display, optional);
+}

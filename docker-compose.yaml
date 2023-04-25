@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  shorebird-site:
+    build: .
+    container_name: shorebird-site
+    stdin_open: true
+    tty: true
+    ports:
+      - 3000:3000
+      - 35729:35729
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    working_dir: /app

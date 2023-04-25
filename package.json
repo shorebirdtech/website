@@ -1,0 +1,35 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint ."
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.19.0",
+    "@astrojs/tailwind": "^3.1.1",
+    "@fontsource/inter": "^4.5.15",
+    "astro": "^2.2.0",
+    "framer-motion": "^10.11.2",
+    "npm-check-updates": "^16.10.7",
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^2.1.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-plugin-astro": "^0.26.1",
+    "prettier": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
