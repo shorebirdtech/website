@@ -35,7 +35,8 @@ export const Pricing = () => {
                 Join the Flock
               </h2>
               <p className="mb-6 text-shorebirdTextGray">
-                As a paying customer, you will get access to Code Push, our private discord, live support, and more!
+                As a paying customer, you will get access to Code Push, our
+                private discord, live support, and more!
               </p>
             </div>
             <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center justify-center mt-20">
