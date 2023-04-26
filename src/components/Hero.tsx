@@ -28,7 +28,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="text-shorebirdTextGray text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            We build products to help businesses succeed Flutter
+            We build products to help businesses succeed with Flutter
           </div>
         </motion.div>
         <motion.div
