@@ -72,9 +72,7 @@ export const FAQ = () => (
           <p className="mb-7 shorebird-block-subtitle text-center">
             Have any questions?
           </p>
-          <h2 className="mb-16 shorebird-block-big-title text-center">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="mb-16 shorebird-block-big-title text-center">FAQs</h2>
           <div className="mb-11 flex flex-wrap -m-1">
             {faqs.map((faq, index) => (
               <div key={index} className="w-full p-1">
