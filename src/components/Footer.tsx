@@ -85,7 +85,7 @@ export const Footer = () => {
                   <li className="mb-4">
                     <a
                       className="text-gray-400 hover:text-gray-300"
-                      href="/website/terms"
+                      href="/terms"
                       aria-label="terms of use"
                     >
                       Terms &amp; Conditions
@@ -94,7 +94,7 @@ export const Footer = () => {
                   <li>
                     <a
                       className="text-gray-400 hover:text-gray-300"
-                      href="/website/privacy"
+                      href="/privacy"
                       aria-label="privacy policy"
                     >
                       Privacy Policy
