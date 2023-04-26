@@ -129,27 +129,6 @@ export const Navbar = (props: Props) => {
                   {label}
                 </a>
               ))}
-              <a
-                className="navbar-link"
-                href={config.githubUrl}
-                target="_blank"
-              >
-                GitHub
-              </a>
-              <a
-                className="navbar-link"
-                href={config.discordUrl}
-                target="_blank"
-              >
-                Discord
-              </a>
-              <a
-                className="navbar-link"
-                href={config.twitterUrl}
-                target="_blank"
-              >
-                Twitter
-              </a>
             </div>
           </motion.div>
         )}

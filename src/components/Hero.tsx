@@ -13,18 +13,9 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0 }}
         >
-          <div className="text-shorebirdSecondary text-sm sm:text-base  mb-6 sm:mt-32 mt-16 font-bold">
-            {config.app} is
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-        >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-8 md:px-20 lg:px-4">
+          <div className="text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-white  px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
             <span className="inline">Flutter</span>
           </div>
           <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24">
@@ -74,7 +65,7 @@ export const Hero = () => {
               muted={true}
               playsInline={true}
               src={demo}
-              className="w-4/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl shorebird-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              className="w-5/6 sm:w-4/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl shorebird-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
         </motion.div>

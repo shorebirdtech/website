@@ -67,7 +67,9 @@ export const ProductsCodePush = () => {
           <div className="w-4/5 lg:w-2/3 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
             <img
               src={init}
-              alt="f1"
+              alt="Get Started with Shorebird"
+              width="800"
+              height="933"
               className="rounded-xl  shorebird-border-gray"
             />
           </div>

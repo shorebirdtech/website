@@ -6,9 +6,14 @@ import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
 const pricing = [
   {
     title: 'Open Beta',
-    description: 'For early adopters with a sense of adventure',
+    description: 'For early adopters with a sense of adventure.',
     price: 20,
-    features: ['Unlimited apps', 'Unlimited updates', '1 team member'],
+    features: [
+      'Unlimited apps',
+      'Unlimited updates',
+      'Access to private Discord',
+      'Live Support',
+    ],
   },
 ];
 
@@ -30,8 +35,7 @@ export const Pricing = () => {
                 Join the Flock
               </h2>
               <p className="mb-6 text-shorebirdTextGray">
-                As a paying customer, you will get access to our private Discord
-                and live support.
+                As a paying customer, you will get access to Code Push, our private discord, live support, and more!
               </p>
             </div>
             <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center justify-center mt-20">
@@ -41,9 +45,9 @@ export const Pricing = () => {
                   className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0"
                 >
                   <div className="p-8 bg-shorebirdBg3 rounded-3xl">
-                    <h4 className="mb-2 text-xl font-bold font-heading text-white text-left">
+                    <p className="mb-2 text-xl font-bold font-heading text-white text-left">
                       {item.title}
-                    </h4>
+                    </p>
                     <div className="flex justify-start items-end">
                       <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
                         ${item.price}
@@ -64,7 +68,7 @@ export const Pricing = () => {
                     <a
                       target="_blank"
                       href={config.docsUrl}
-                      className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-colored font-bold leading-loose mt-16"
+                      className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-colored font-bold leading-loose mt-8"
                     >
                       Get Started
                     </a>
