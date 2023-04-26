@@ -1,8 +1,8 @@
-# 🐦 Shorebird Site
+# Shorebird Site 🐦
 
 Home of the [shorebird.dev](https://shorebird.dev) site.
 
-## 🐳 Running with Docker
+## Running with Docker 🐳
 
 ```
 docker compose up --build
