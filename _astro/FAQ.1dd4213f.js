@@ -1,4 +1,4 @@
-import{r as a}from"./index.f1bc5ebf.js";import{j as e}from"./jsx-runtime.109e40f8.js";import{m as n}from"./motion.e3ea24f3.js";const d=[{question:"What is code push?",answer:`
+import{r as a}from"./index.f1bc5ebf.js";import{j as e}from"./jsx-runtime.109e40f8.js";import{m as n}from"./motion.8321705d.js";const d=[{question:"What is code push?",answer:`
       Code push, also referred to as "over the air updates" (OTA) is a cloud service
       we are building to enable Flutter developers to deploy updates directly to
       devices anywhere they have shipped Flutter.
