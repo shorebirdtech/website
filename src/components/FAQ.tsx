@@ -73,7 +73,7 @@ export const FAQ = () => (
             Have any questions?
           </p>
           <h2 className="mb-16 shorebird-block-big-title text-center">
-            Frequently Asked Questions
+            FAQs
           </h2>
           <div className="mb-11 flex flex-wrap -m-1">
             {faqs.map((faq, index) => (

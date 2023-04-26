@@ -12,7 +12,7 @@ const pricing = [
       'Unlimited apps',
       'Unlimited updates',
       'Access to private Discord',
-      'Live Support',
+      'Live support',
     ],
   },
 ];
@@ -32,10 +32,10 @@ export const Pricing = () => {
             <div className="max-w-2xl mx-auto text-center mb-16">
               <span className="shorebird-block-subtitle">Pricing</span>
               <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
-                Join the Flock
+                Join the flock
               </h2>
               <p className="mb-6 text-shorebirdTextGray">
-                As a paying customer, you will get access to Code Push, our
+                As a paying customer, you will get access to code push, our
                 private discord, live support, and more!
               </p>
             </div>

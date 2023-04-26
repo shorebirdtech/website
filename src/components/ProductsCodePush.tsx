@@ -33,13 +33,13 @@ export const ProductsCodePush = () => {
         <div className=" 2xl:w-[1150px] xl:w-[1050px]  md:w-4/5 flex justify-center bg-shorebirdBg1 pt-12 lg:pt-24 pb-8 lg:pb-20 mx-auto lg:flex-row flex-col">
           <div className="w-3/4 lg:w-1/2 flex flex-col lg:mx-unset mx-auto">
             <span className="shorebird-block-subtitle">
-              Code Push for Flutter
+              Code push for Flutter
             </span>
             <h2 className="mt-10 mb-8 text-4xl lg:text-5xl shorebird-block-big-title">
-              Deploy app updates instantly.
+              Deploy app updates instantly
             </h2>
             <p className="mb-16 text-shorebirdTextGray leading-loose">
-              Code Push is a cloud service provided by Shorebird that allows
+              Code push is a cloud service provided by Shorebird that allows
               developers to push app updates directly to users' devices.
             </p>
             <ul className="mb-6 text-white">
