@@ -1,0 +1,33 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Hero } from '../components/Hero.jsx';
+import { Navbar } from '../components/Navbar.jsx';
+import { ProductsCodePush } from '../components/ProductsCodePush.jsx';
+import { Pricing } from '../components/Pricing.jsx';
+import { FAQ } from '../components/FAQ.jsx';
+import { Divider } from '../components/Divider';
+import { Footer } from '../components/Footer.jsx';
+import { ScrollToTopButton } from '../components/ScrollToTopButton';
+import { config } from '../config';
+
+import '../styles/Theme.css';
+import '../styles/Shapes.css';
+
+const links = [
+  { label: 'Home', href: '#home', ariaLabel: 'Home' },
+  { label: 'Products', href: '#products-code-push', ariaLabel: 'Products' },
+  { label: 'Pricing', href: '#pricing', ariaLabel: 'Pricing' },
+  { label: 'FAQ', href: '#FAQ', ariaLabel: 'FAQ' },
+];
+---
+
+<MainLayout title={config.app}>
+  <Navbar links={links} client:load />
+  <Hero client:load />
+  <ProductsCodePush client:load />
+  <Divider />
+  <Pricing client:load />
+  <FAQ client:load />
+  <Footer />
+  <ScrollToTopButton client:load />
+</MainLayout>
