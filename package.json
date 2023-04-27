@@ -18,6 +18,7 @@
     "@fontsource/inter": "^4.5.15",
     "astro": "^2.3.1",
     "framer-motion": "^10.12.4",
+    "react-markdown": "^8.0.7",
     "tailwindcss": "^3.3.1"
   },
   "devDependencies": {

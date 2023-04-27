@@ -46,10 +46,10 @@ export const Hero = () => {
             </a>
             <a
               target="_blank"
-              href={config.discordUrl}
+              href={config.calendly}
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-shorebirdBg2 hover:bg-shorebirdBg3 border-shorebirdPrimary transition"
             >
-              Join us on Discord
+              Book a Demo
             </a>
           </div>
         </motion.div>
