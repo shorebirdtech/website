@@ -4,6 +4,7 @@ import { Hero } from '../components/Hero.jsx';
 import { Navbar } from '../components/Navbar.jsx';
 import { ProductsCodePush } from '../components/ProductsCodePush.jsx';
 import { Pricing } from '../components/Pricing.jsx';
+import { Team } from '../components/Team.jsx';
 import { FAQ } from '../components/FAQ.jsx';
 import { Divider } from '../components/Divider';
 import { Footer } from '../components/Footer.jsx';
@@ -16,8 +17,9 @@ import '../styles/Shapes.css';
 const links = [
   { label: 'Home', href: '#home', ariaLabel: 'Home' },
   { label: 'Products', href: '#products-code-push', ariaLabel: 'Products' },
+  { label: 'Team', href: '#team', ariaLabel: 'Team' },
   { label: 'Pricing', href: '#pricing', ariaLabel: 'Pricing' },
-  { label: 'FAQ', href: '#FAQ', ariaLabel: 'FAQ' },
+  { label: 'FAQ', href: '#faq', ariaLabel: 'FAQ' },
 ];
 ---
 
@@ -26,6 +28,7 @@ const links = [
   <Hero client:load />
   <ProductsCodePush client:load />
   <Divider />
+  <Team client:load />
   <Pricing client:load />
   <FAQ client:load />
   <Footer />
