@@ -54,10 +54,11 @@ export const Team = () => (
             >
               <div className="flex">
                 <img
-                  className="rounded-xl"
+                  className="rounded-xl h-[45px] w-[45px]"
                   src={member.headshot}
                   alt={`${member.name} headshot`}
-                  width="45px"
+                  width="45"
+                  height="45"
                 />
                 <div className="flex flex-col ml-4">
                   <div className="font-medium">{member.name}</div>
