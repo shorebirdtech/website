@@ -18,6 +18,9 @@
 .shorebird-bg2 {
   @apply bg-shorebirdBg2  fill-shorebirdBg2;
 }
+.shorebird-bg3 {
+  @apply bg-shorebirdBg3  fill-shorebirdBg3;
+}
 body,
 html {
   @apply bg-shorebirdBg2;
