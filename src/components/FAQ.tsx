@@ -1,60 +1,54 @@
+import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const faqs = [
   {
-    question: 'What is code push?',
-    answer: `
-      Code push, also referred to as "over the air updates" (OTA) is a cloud service
-      we are building to enable Flutter developers to deploy updates directly to
-      devices anywhere they have shipped Flutter.
-    `,
+    question: 'Can my company use Shorebird?',
+    answer:
+      'Yes! In fact we would like to help your team integrate Shorebird into your apps! Please [contact us](mailto:contact@shorebird.dev) - we are happy to work with you.',
     isOpen: true,
+  },
+  {
+    question: 'Does Shorebird work everywhere Flutter does?',
+    answer:
+      'Not yet. Shorebird is designed to work everywhere Flutter does, but we chose to focus on Android first. Let us know if you are interested in [iOS](https://github.com/shorebirdtech/shorebird/issues/381), [desktop](https://github.com/shorebirdtech/shorebird/issues/397), or other support.',
+  },
+  {
+    question: 'Does Shorebird comply with Play Store guidelines?',
+    answer:
+      'Yes. Shorebird has been designed to comply with Play Store guidelines. Code push is common in the industry, including several other commercial code push products from Microsoft [app center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). [More info](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines).',
+  },
+  {
+    question: 'Can I use this in production?',
+    answer:
+      'Yes!  Shorebird is used in production today. If you have any concerns we are happy to meet with you and/or discuss your concerns live [on Discord](https://discord.gg/9hKJcWGcaB).',
+  },
+  {
+    question: 'Are there any limitations or known issues?',
+    answer:
+      'We keep a list of known issues at [https://docs.shorebird.dev/status](https://docs.shorebird.dev/status).',
+  },
+  {
+    question: 'Is there a free tier?',
+    answer:
+      'Shorebird does not yet support a free tier, but we plan to [add one soon](https://github.com/shorebirdtech/shorebird/issues/396). We expect to re-work our pricing structure in the coming months as we better understand customer needs and our own costs.',
   },
   {
     question:
       'How does this relate to Firebase Remote Config or Launch Darkly?',
-    answer: `
-    Code push allows adding new code / replacing code on the device.  Firebase
-    Remote Config and Launch Darkly are both configuration systems.  They allow you
-    to change the configuration of your app without having to ship a new version.
-    They are not intended to replace code.
-    `,
+    answer:
+      'Code push allows adding new code / replacing code on the device. Firebase Remote Config and Launch Darkly are both configuration systems. They allow you to change the configuration of your app without having to ship a new version. They are not intended to replace code.',
   },
   {
     question: 'How does this relate to Flutter Hot Reload?',
-    answer: `
-    Flutter's Hot reload is a development-time-only feature.  Code push is for
-    production.
-    
-    Hot reload is a feature of Flutter that allows you to change code on the device
-    during development.  It requires building the Flutter engine with a debug-mode
-    Dart VM which includes a just-in-time (JIT) Dart compiler.
-    
-    Code push is a feature that allows you to change code on the device in
-    production.  We will use a variety of different techniques to make this possible
-    depending on the platform.  Current demos execute ahead-of-time compiled Dart
-    code and do not require a JIT Dart compiler.
-    `,
+    answer:
+      "Flutter's Hot reload is a development-time-only feature. Code push is for production. Hot reload is a feature of Flutter that allows you to change code on the device during development. It requires building the Flutter engine with a debug-mode Dart VM which includes a just-in-time (JIT) Dart compiler. Code push is a feature that allows you to change code on the device in production. We will use a variety of different techniques to make this possible depending on the platform. Current demos execute ahead-of-time compiled Dart code and do not require a JIT Dart compiler.",
   },
   {
-    question: 'Does code push require the internet to work?',
-    answer: `
-      Yes. One could imagine running a server to distribute the updates separately
-      from the general internet, but some form of network connectivity is required to
-      transport updates to the devices.
-    `,
-  },
-  {
-    question:
-      "What happens if a user doesn't update for a long time and misses an update?",
-    answer: `
-      Our current designs for code push send the current app version & code signature
-      as part of the update request.  Thus the update server could be written to
-      respond with either the next incremental version or the latest version depending
-      on your application's needs.  The current demo always sends the latest version
-      but this logic would not be hard to add.
-    `,
+    question: 'Where is the roadmap?',
+    answer:
+      'Shorebird is developed entirely in the public, including our [project boards](https://github.com/shorebirdtech/shorebird/projects) shows what we are currently working on.',
   },
 ];
 
@@ -102,13 +96,12 @@ const FAQBox = ({ defaultOpen, title, content }) => {
         <h3 className=" shorebird-content-title pt-3 sm:pt-0 pr-8 sm:pr-0">
           {title}
         </h3>
-        <p
-          className={`text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${
+        <ReactMarkdown
+          className={`prose prose-invert text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${
             isOpen ? 'max-h-96' : 'max-h-0'
           }`}
-        >
-          {content}
-        </p>
+          children={`${content}`}
+        ></ReactMarkdown>
       </div>
       <div className="absolute top-6 right-4 sm:top-8 sm:right-8">
         <svg
