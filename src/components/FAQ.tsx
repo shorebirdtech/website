@@ -30,6 +30,11 @@ const faqs = [
       'We keep a list of known issues at [https://docs.shorebird.dev/status](https://docs.shorebird.dev/status).',
   },
   {
+    question: 'Can I self-host Shorebird or do you offer on-prem?',
+    answer:
+      'Not yet. We plan to offer on-prem in the future. [Contact us](mailto:contact@shorebird.dev) if you are interested in self-hosting.',
+  },
+  {
     question: 'Is there a free tier?',
     answer:
       'Shorebird does not yet support a free tier, but we plan to [add one soon](https://github.com/shorebirdtech/shorebird/issues/396). We expect to re-work our pricing structure in the coming months as we better understand customer needs and our own costs.',
