@@ -58,7 +58,7 @@ libraries, tools, build systems) will also serve you well.
 
 #### How you add value
 
-As one of our first engineer, you will wear many hats. You will work with a
+As one of our first engineers, you will wear many hats. You will work with a
 diverse (and distributed) team of exceptional engineers (some who built Flutter
 or key parts of the Flutter ecosystem initially) to build the future of
 development for _any screen_ Most of our work will be _around_ Flutter, making
