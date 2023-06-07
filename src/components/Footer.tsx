@@ -68,13 +68,22 @@ export const Footer = () => {
               <div className="w-full md:w-1/3 lg:w-auto">
                 <h3 className="mb-6 text-2xl font-bold text-white">Company</h3>
                 <ul>
-                  <li>
+                  <li className="mb-4">
                     <a
                       className="text-gray-400 hover:text-gray-300"
                       href={`mailto:${config.contactEmail}`}
                       aria-label="contact us"
                     >
                       Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="/jobs"
+                      aria-label="jobs"
+                    >
+                      Jobs
                     </a>
                   </li>
                 </ul>

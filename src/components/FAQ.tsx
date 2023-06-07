@@ -4,15 +4,24 @@ import { motion } from 'framer-motion';
 
 const faqs = [
   {
-    question: 'Can my company use Shorebird?',
+    question: 'Is there a free tier?',
     answer:
-      'Yes! In fact we would like to help your team integrate Shorebird into your apps! Please [contact us](mailto:contact@shorebird.dev) - we are happy to work with you.',
-    isOpen: true,
+      'Shorebird does not yet support a free tier, but we plan to [add one soon](https://github.com/shorebirdtech/shorebird/issues/396). We expect to re-work our pricing structure in the coming months as we better understand customer needs and our own costs.',
   },
   {
-    question: 'Does Shorebird work everywhere Flutter does?',
+    question: 'What platforms does Shorebird support?',
     answer:
-      'Not yet. Shorebird is designed to work everywhere Flutter does, but we chose to focus on Android first. Let us know if you are interested in [iOS](https://github.com/shorebirdtech/shorebird/issues/381), [desktop](https://github.com/shorebirdtech/shorebird/issues/397), or other support.',
+      'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support. iOS support is launching in July 2023. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
+  },
+  {
+    question: 'How do I sign up?',
+    answer:
+      'Shorebird does everything via its command-line tool. Once you have [installed Shorebird](), you can create an account with `shorebird account create`.',
+  },
+  {
+    question: 'Does Shorebird work for existing apps?',
+    answer:
+      'Yes. Shorebird requires no code changes to your Flutter app to work. See our [quick start guide](https://docs.shorebird.dev/guides/code_push_quickstart) to get started.',
   },
   {
     question: 'Does Shorebird comply with Play Store guidelines?',
@@ -33,22 +42,6 @@ const faqs = [
     question: 'Can I self-host Shorebird or do you offer on-prem?',
     answer:
       'Not yet. We plan to offer on-prem in the future. [Contact us](mailto:contact@shorebird.dev) if you are interested in self-hosting.',
-  },
-  {
-    question: 'Is there a free tier?',
-    answer:
-      'Shorebird does not yet support a free tier, but we plan to [add one soon](https://github.com/shorebirdtech/shorebird/issues/396). We expect to re-work our pricing structure in the coming months as we better understand customer needs and our own costs.',
-  },
-  {
-    question:
-      'How does this relate to Firebase Remote Config or Launch Darkly?',
-    answer:
-      'Code push allows adding new code / replacing code on the device. Firebase Remote Config and Launch Darkly are both configuration systems. They allow you to change the configuration of your app without having to ship a new version. They are not intended to replace code.',
-  },
-  {
-    question: 'How does this relate to Flutter Hot Reload?',
-    answer:
-      "Flutter's Hot reload is a development-time-only feature. Code push is for production. Hot reload is a feature of Flutter that allows you to change code on the device during development. It requires building the Flutter engine with a debug-mode Dart VM which includes a just-in-time (JIT) Dart compiler. Code push is a feature that allows you to change code on the device in production. We will use a variety of different techniques to make this possible depending on the platform. Current demos execute ahead-of-time compiled Dart code and do not require a JIT Dart compiler.",
   },
   {
     question: 'Where is the roadmap?',
@@ -78,10 +71,30 @@ export const FAQ = () => (
                 <FAQBox
                   title={faq.question}
                   content={faq.answer}
-                  defaultOpen={faq.isOpen}
+                  defaultOpen={true}
                 />
               </div>
             ))}
+          </div>
+          <div>
+            <p className="text-center text-white">
+              For additional questions,{' '}
+              <a
+                target="_blank"
+                className="underline"
+                href="https://docs.shorebird.dev/faq"
+              >
+                see our docs
+              </a>{' '}
+              or{' '}
+              <a
+                target="_blank"
+                className="underline"
+                href="https://discord.gg/shorebird"
+              >
+                ask us on Discord.
+              </a>
+            </p>
           </div>
         </div>
       </div>
