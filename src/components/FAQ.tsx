@@ -7,7 +7,6 @@ const faqs = [
     question: 'Is there a free tier?',
     answer:
       'Shorebird does not yet support a free tier, but we plan to [add one soon](https://github.com/shorebirdtech/shorebird/issues/396). We expect to re-work our pricing structure in the coming months as we better understand customer needs and our own costs.',
-    isOpen: true,
   },
   {
     question: 'What platforms does Shorebird support?',
