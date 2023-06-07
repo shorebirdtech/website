@@ -15,7 +15,7 @@ const team = [
   {
     name: 'Felix Angelov',
     title: 'Founding Engineer',
-    bio: 'Creator of [Bloc](https://github.com/felangel/bloc) and [Mason](https://github.com/felangel/mason). Former Principle Engineer at [Very Good Ventures](https://verygood.ventures).',
+    bio: 'Creator of [Bloc](https://github.com/felangel/bloc) & [Mason](https://github.com/felangel/mason). Former Principle Engineer at [Very Good Ventures](https://verygood.ventures).',
     headshot: felixHeadshot,
   },
   {
