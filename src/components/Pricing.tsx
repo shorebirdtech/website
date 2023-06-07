@@ -11,8 +11,7 @@ const pricing: Pricing[] = [
     features: [
       '10 apps',
       'Up to 1,000,000 users',
-      'Access to private Discord',
-      'Live support',
+      'Private support via Discord',
     ],
     cta: {
       title: 'Get Started',

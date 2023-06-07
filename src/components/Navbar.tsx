@@ -95,14 +95,18 @@ export const Navbar = (props: Props) => {
             </a>
           </div>
         </motion.div>
-        <div
-          className="lg:hidden flex flex-col  px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-shorebirdBg2"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-          <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-          <div className="w-5 h-0.5 bg-gray-500 "></div>
-        </div>
+        {props.links ? (
+          <div
+            className="lg:hidden flex flex-col  px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-shorebirdBg2"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
+            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
+            <div className="w-5 h-0.5 bg-gray-500 "></div>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       {/* Mobile navbar */}
       <AnimatePresence>

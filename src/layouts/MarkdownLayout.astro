@@ -23,7 +23,7 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <Navbar client:load />
-    <div class="prose prose-invert mx-auto pt-24 pb-16">
+    <div class="prose prose-invert mx-auto pt-24 pb-16 px-4 md:px-0">
       <slot />
     </div>
     <Footer client:load />
