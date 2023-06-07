@@ -78,7 +78,7 @@ export const FAQ = () => (
           </div>
           <div>
             <p className="text-center text-white">
-              For more FAQs,{' '}
+              For additional questions,{' '}
               <a
                 target="_blank"
                 className="underline"
@@ -92,7 +92,7 @@ export const FAQ = () => (
                 className="underline"
                 href="https://discord.gg/shorebird"
               >
-                ask us on discord.
+                ask us on Discord.
               </a>
             </p>
           </div>

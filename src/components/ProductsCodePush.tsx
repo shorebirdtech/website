@@ -32,7 +32,7 @@ export const ProductsCodePush = () => {
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Update any Dart code or asset</span>
+                <span>Push updates to any Dart code or asset</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
