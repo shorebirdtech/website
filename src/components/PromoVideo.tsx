@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import demo from '../assets/videos/demo.mp4';
+import promo from '../assets/videos/promo.mp4';
 
 export const PromoVideo = () => {
   return (
@@ -20,8 +20,8 @@ export const PromoVideo = () => {
             loop={true}
             muted={true}
             playsInline={true}
-            src={demo}
-            className="w-5/6 sm:w-4/6 2xl:w-[1200px] mx-auto rounded-xl shorebird-border-gray hero-dashboard-border-gradient"
+            src={promo}
+            className="w-6/7 sm:w-4/6 2xl:w-[1200px] mx-auto rounded-xl shorebird-border-gray hero-dashboard-border-gradient"
           />
         </motion.div>
       </div>
