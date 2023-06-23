@@ -31,7 +31,7 @@ const faqs = [
   {
     question: 'Can I use this in production?',
     answer:
-      'Yes!  Shorebird is used in production today. If you have any concerns we are happy to meet with you and/or discuss your concerns live [on Discord](https://discord.gg/9hKJcWGcaB).',
+      'Yes!  Shorebird is used in production today. If you have any concerns we are happy to meet with you and/or discuss your concerns live [on Discord]({config.discordUrl}).',
   },
   {
     question: 'Are there any limitations or known issues?',
@@ -90,7 +90,7 @@ export const FAQ = () => (
               <a
                 target="_blank"
                 className="underline"
-                href="https://discord.gg/shorebird"
+                href="{config.discordUrl}"
               >
                 ask us on Discord.
               </a>
