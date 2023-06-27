@@ -15,11 +15,13 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
         >
-          <div className="text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-white  px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
-            <span className="inline">Code Push</span>
-          </div>
-          <div className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-white  px-8 sm:px-20 md:px-24 lg:px-24">
-            for Flutter
+          <div className="text-7xl lg:text-8xl xl:text-8xl font-extrabold tracking-wide text-white px-8 sm:px-8 md:px-20 lg:px-4 sm:mt-32 mt-16">
+            <div className="text-7xl lg:text-8xl xl:text-8xl font-extrabold tracking-wide text-white px-8 sm:px-8 md:px-20 lg:px-4">
+              <span className="">Flutter</span>
+            </div>
+            <span className="bg-gradient-to-r text-transparent bg-clip-text from-blue-400 to-orange-500 via-purple-500 animate-gradient-xy inline">
+              Code Push
+            </span>
           </div>
         </motion.div>
       </div>

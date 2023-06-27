@@ -21,7 +21,7 @@ export const ProductsCodePush = () => {
             <h2 className="mt-10 mb-8 text-4xl lg:text-5xl shorebird-block-big-title">
               Deploy app updates instantly
             </h2>
-            <p className="mb-16 text-shorebirdTextGray leading-loose">
+            <p className="mb-8 text-shorebirdTextGray leading-loose">
               Code push is a cloud service that allows developers to push app
               updates directly to users' devices.
             </p>
