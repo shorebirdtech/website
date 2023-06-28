@@ -12,7 +12,7 @@ const pricing: Pricing[] = [
       { title: 'No team members' },
       {
         title: '100 patch installs included',
-        info: '$0.01 per additional patch install',
+        info: 'Upgrade plan to increase limit',
       },
       { title: 'Public Discord support' },
       { title: 'Tracks latest stable Flutter' },
