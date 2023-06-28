@@ -5,8 +5,26 @@ import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
 
 const pricing: Pricing[] = [
   {
+    title: 'Hobby',
+    price: 0,
+    features: [
+      { title: '1 app' },
+      { title: 'No team members' },
+      {
+        title: '100 patch installs included',
+        info: '$0.01 per additional patch install',
+      },
+      { title: 'Public Discord support' },
+      { title: 'Tracks latest stable Flutter' },
+    ],
+    cta: {
+      title: 'Get Started',
+      link: config.docsUrl,
+    },
+  },
+  {
     title: 'Team',
-    price: 99,
+    price: 20,
     highlight: true,
     features: [
       { title: 'Unlimited apps' },
