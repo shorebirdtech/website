@@ -61,9 +61,9 @@ export const FAQ = () => (
     >
       <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
         <div className="md:max-w-4xl mx-auto">
-          <p className="mb-7 shorebird-block-subtitle text-center">
+          {/* <p className="mb-7 shorebird-block-subtitle text-center">
             Have any questions?
-          </p>
+          </p> */}
           <h2 className="mb-16 shorebird-block-big-title text-center">FAQs</h2>
           <div className="mb-11 flex flex-wrap -m-1">
             {faqs.map((faq, index) => (

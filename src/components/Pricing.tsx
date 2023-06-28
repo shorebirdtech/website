@@ -6,16 +6,13 @@ import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
 const pricing: Pricing[] = [
   {
     title: 'Hobby',
+    description: 'For small apps and demos.',
     price: 0,
     features: [
-      { title: '1 app' },
-      { title: 'No team members' },
-      {
-        title: '100 patch installs included',
-        info: 'Upgrade plan to increase limit',
-      },
-      { title: 'Public Discord support' },
-      { title: 'Tracks latest stable Flutter' },
+      { title: 'Unlimited apps' },
+      { title: '1 developer' },
+      { title: '1K patch installs per month' },
+      { title: 'Community support' },
     ],
     cta: {
       title: 'Get Started',
@@ -24,37 +21,21 @@ const pricing: Pricing[] = [
   },
   {
     title: 'Team',
+    description: 'For production apps that can scale.',
     price: 20,
     highlight: true,
     features: [
       { title: 'Unlimited apps' },
-      { title: 'Unlimited team members' },
+      { title: 'Unlimited developers' },
       {
-        title: '20K patch installs',
-        info: '$0.005 per additional patch install',
+        title: '4K patch installs per month',
+        info: `$0.005 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
       },
-      { title: 'Dedicated email support' },
-      { title: 'Tracks latest stable Flutter' },
+      { title: 'Private Discord & email support' },
     ],
     cta: {
       title: 'Get Started',
       link: config.docsUrl,
-    },
-  },
-  {
-    title: 'Enterprise',
-    price: 'Contact Us',
-    features: [
-      { title: 'Unlimited apps' },
-      { title: 'Unlimited team members' },
-      { title: 'Unlimited patch installs' },
-      { title: 'Priority support' },
-      { title: 'Custom Flutter versions' },
-      { title: 'Custom pricing' },
-    ],
-    cta: {
-      title: 'Book a Demo',
-      link: config.calendly,
     },
   },
 ];
@@ -71,8 +52,9 @@ interface Feature {
 
 interface Pricing {
   title: string;
+  description: string;
   features: Feature[];
-  price: number | string;
+  price?: number;
   cta: CTA;
   highlight?: boolean;
 }
@@ -104,7 +86,9 @@ const PricingCard = (props: Pricing) => {
               </div>
             )}
           </div>
-          <div className="h-8"></div>
+          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+            {props.description}
+          </p>
           <ul className="mb-2 2xl:mb-6 text-white">
             {props.features.map((feature, index) => (
               <li className="mb-4 flex" key={`${feature.title}-${index}`}>
@@ -114,7 +98,10 @@ const PricingCard = (props: Pricing) => {
                   {feature.info && (
                     <span className="tooltip-container">
                       <InfoIcon />
-                      <span className="tooltip">{feature.info}</span>
+                      <span
+                        className="tooltip"
+                        dangerouslySetInnerHTML={{ __html: feature.info }}
+                      ></span>
                     </span>
                   )}
                 </span>
@@ -147,7 +134,7 @@ export const Pricing = () => {
         >
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-16">
-              <span className="shorebird-block-subtitle">Pricing</span>
+              {/* <span className="shorebird-block-subtitle">Pricing</span> */}
               <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
                 Join the flock
               </h2>
@@ -160,6 +147,16 @@ export const Pricing = () => {
               {pricing.map((item, index) => (
                 <PricingCard {...item} key={`pricing-card-${index}`} />
               ))}
+            </div>
+
+            <div className="pt-8">
+              <p className="text-center text-shorebirdTextGray">
+                Got a large app?{' '}
+                <a className="underline" href={`mailto:${config.contactEmail}`}>
+                  Contact us
+                </a>{' '}
+                for bulk pricing.
+              </p>
             </div>
           </div>
         </motion.div>

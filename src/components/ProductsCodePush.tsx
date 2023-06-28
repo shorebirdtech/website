@@ -48,17 +48,10 @@ export const ProductsCodePush = () => {
               <a
                 target="_blank"
                 href={config.docsUrl}
-                className="shorebird-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0"
+                className="shorebird-button-colored w-full h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0"
               >
                 Get Started
-              </a>
-              <a
-                target="_blank"
-                href={config.calendly}
-                className="w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-shorebirdBg2 hover:bg-shorebirdBg3 border-shorebirdPrimary transition"
-              >
-                Book a Demo
-              </a>
+              </a>              
             </div>
           </div>
           <div className="w-4/5 lg:w-2/3 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0 ">
