@@ -51,7 +51,7 @@ export const ProductsCodePush = () => {
                 className="shorebird-button-colored w-full h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0"
               >
                 Get Started
-              </a>              
+              </a>
             </div>
           </div>
           <div className="w-4/5 lg:w-2/3 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0 ">
