@@ -4,11 +4,6 @@ import { motion } from 'framer-motion';
 
 const faqs = [
   {
-    question: 'Is there a free tier?',
-    answer:
-      'Yes, the "hobby" tier is free and includes 1K monthly patch installs.',
-  },
-  {
     question: 'What platforms does Shorebird support?',
     answer:
       'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support. iOS support is launching in July 2023. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
@@ -16,7 +11,7 @@ const faqs = [
   {
     question: 'How do I sign up?',
     answer:
-      'Shorebird does everything via its command-line tool. Once you have [installed Shorebird](), you can create an account with `shorebird account create`.',
+      'Shorebird does everything via its command-line tool. Once you have [installed Shorebird](https://docs.shorebird.dev), you can create an account with `shorebird account create`.',
   },
   {
     question: 'Does Shorebird work for existing apps?',
