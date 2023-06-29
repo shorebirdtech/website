@@ -51,3 +51,12 @@ html {
 @font-face {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
+
+/* Tooltip */
+.tooltip {
+  @apply invisible absolute p-2 md:p-4 rounded shadow-lg md:ml-4 -ml-14 text-sm bg-shorebirdBg1 -mt-28 md:-mt-20;
+}
+
+.tooltip-container:hover .tooltip {
+  @apply visible z-50;
+}

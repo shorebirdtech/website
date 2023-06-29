@@ -21,7 +21,7 @@ export const ProductsCodePush = () => {
             <h2 className="mt-10 mb-8 text-4xl lg:text-5xl shorebird-block-big-title">
               Deploy app updates instantly
             </h2>
-            <p className="mb-16 text-shorebirdTextGray leading-loose">
+            <p className="mb-8 text-shorebirdTextGray leading-loose">
               Code push is a cloud service that allows developers to push app
               updates directly to users' devices.
             </p>
@@ -48,16 +48,9 @@ export const ProductsCodePush = () => {
               <a
                 target="_blank"
                 href={config.docsUrl}
-                className="shorebird-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0"
+                className="shorebird-button-colored w-full h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0"
               >
                 Get Started
-              </a>
-              <a
-                target="_blank"
-                href={config.calendly}
-                className="w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-shorebirdBg2 hover:bg-shorebirdBg3 border-shorebirdPrimary transition"
-              >
-                Book a Demo
               </a>
             </div>
           </div>
