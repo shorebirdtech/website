@@ -61,7 +61,7 @@ interface Pricing {
 
 const PricingCard = (props: Pricing) => {
   return (
-    <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
+    <div className="w-[350px] sm:w-[380px] lg:w-3/10 px-4 mb-8 lg:mb-0">
       <div
         className={
           props.highlight &&
@@ -173,7 +173,7 @@ function InfoIcon() {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-6 h-6"
+      className="w-5 h-5"
     >
       <path
         strokeLinecap="round"
