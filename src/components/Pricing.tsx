@@ -134,7 +134,6 @@ export const Pricing = () => {
         >
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-16">
-              {/* <span className="shorebird-block-subtitle">Pricing</span> */}
               <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
                 Join the flock
               </h2>

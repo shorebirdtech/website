@@ -6,7 +6,7 @@ const faqs = [
   {
     question: 'Is there a free tier?',
     answer:
-      'Shorebird does not yet support a free tier, but we plan to [add one soon](https://github.com/shorebirdtech/shorebird/issues/396). We expect to re-work our pricing structure in the coming months as we better understand customer needs and our own costs.',
+      'Yes, the "hobby" tier is free and includes 1K monthly patch installs.',
   },
   {
     question: 'What platforms does Shorebird support?',
@@ -61,9 +61,6 @@ export const FAQ = () => (
     >
       <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
         <div className="md:max-w-4xl mx-auto">
-          {/* <p className="mb-7 shorebird-block-subtitle text-center">
-            Have any questions?
-          </p> */}
           <h2 className="mb-16 shorebird-block-big-title text-center">FAQs</h2>
           <div className="mb-11 flex flex-wrap -m-1">
             {faqs.map((faq, index) => (

@@ -1,7 +1,4 @@
 import { motion } from 'framer-motion';
-import { config } from '../config';
-
-import demo from '../assets/videos/demo.mp4';
 
 export const Hero = () => {
   return (
