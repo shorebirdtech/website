@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { config } from '../config';
 
 const faqs = [
   {
@@ -79,11 +80,7 @@ export const FAQ = () => (
                 see our docs
               </a>{' '}
               or{' '}
-              <a
-                target="_blank"
-                className="underline"
-                href="{config.discordUrl}"
-              >
+              <a target="_blank" className="underline" href={config.discordUrl}>
                 ask us on Discord.
               </a>
             </p>
