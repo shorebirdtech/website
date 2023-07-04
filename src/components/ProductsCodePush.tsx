@@ -47,7 +47,7 @@ export const ProductsCodePush = () => {
             <div className="flex flex-col sm:flex-row">
               <a
                 target="_blank"
-                href={config.docsUrl}
+                href={config.consoleUrl}
                 className="shorebird-button-colored w-full h-12 mr-0 sm:mr-4 lg:mr-4 mb-2 sm:mb-0"
               >
                 Get Started
