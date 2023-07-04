@@ -3,7 +3,6 @@ export const config = {
   discordUrl: 'https://discord.gg/shorebird',
   githubUrl: 'https://github.com/shorebirdtech/shorebird',
   twitterUrl: 'https://twitter.com/shorebirddev',
-  docsUrl: 'https://docs.shorebird.dev',
+  consoleUrl: 'https://console.shorebird.dev',
   contactEmail: 'contact@shorebird.dev',
-  calendly: 'https://calendly.com/eseidel/shorebird-demo',
 };

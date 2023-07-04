@@ -16,7 +16,7 @@ const pricing: Pricing[] = [
     ],
     cta: {
       title: 'Get Started',
-      link: config.docsUrl,
+      link: config.consoleUrl,
     },
   },
   {
@@ -35,7 +35,7 @@ const pricing: Pricing[] = [
     ],
     cta: {
       title: 'Get Started',
-      link: config.docsUrl,
+      link: config.consoleUrl,
     },
   },
 ];
