@@ -52,15 +52,28 @@ export const Footer = () => {
             </div>
             <div className="w-full lg:w-2/3 lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
-                <h3 className="mb-6 text-2xl font-bold text-white">Products</h3>
+                <h3 className="mb-6 text-2xl font-bold text-white">Develop</h3>
                 <ul>
                   <li className="mb-4">
                     <a
+                      target="_blank"
+                      rel="noreferrer"
                       className="text-gray-400 hover:text-gray-300"
-                      href="/#products-code-push"
-                      aria-label="code push"
+                      href="https://docs.shorebird.dev"
+                      aria-label="documentation"
                     >
-                      Code Push
+                      Documentation
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-gray-400 hover:text-gray-300"
+                      href="https://console.shorebird.dev"
+                      aria-label="console"
+                    >
+                      Console
                     </a>
                   </li>
                 </ul>

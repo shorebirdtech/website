@@ -65,7 +65,7 @@ export const Navbar = (props: Props) => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="grow basis-0 justify-end hidden lg:flex">
+          <div className="grow basis-0 justify-end items-center hidden lg:flex">
             <a
               className="text-white rounded-xl
            bg-shorebirdBg2 text-sm flex"
@@ -92,6 +92,14 @@ export const Navbar = (props: Props) => {
               aria-label="source code"
             >
               <GitHubIcon />
+            </a>
+            <a
+              className="text-white ml-4 border-2 border-slate-600 rounded-md p-2 hover:border-slate-400"
+              href={config.consoleUrl}
+              target="_blank"
+              aria-label="source code"
+            >
+              Sign In
             </a>
           </div>
         </motion.div>
@@ -122,6 +130,14 @@ export const Navbar = (props: Props) => {
         items-center gap-10 pb-10 border-y border-solid border-shorebirdBg3 pt-10
         "
             >
+              <a
+                className="navbar-link"
+                href={config.consoleUrl}
+                target="_blank"
+                aria-label="source code"
+              >
+                Sign In
+              </a>
               {props.links?.map(({ label, href, ariaLabel }) => (
                 <a
                   key={href}
