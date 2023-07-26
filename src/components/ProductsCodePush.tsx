@@ -28,7 +28,7 @@ export const ProductsCodePush = () => {
             <ul className="mb-6 text-white">
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Integrate in minutes</span>
+                <span>Integrate in minutes with no code changes</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
@@ -36,12 +36,7 @@ export const ProductsCodePush = () => {
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>
-                  Supports all Android devices,{' '}
-                  <span className="underline font-bold">
-                    <a href="#newsletter">iOS launching July 2023</a>
-                  </span>
-                </span>
+                <span>Supports all Android and iOS devices</span>
               </li>
             </ul>
             <div className="flex flex-col sm:flex-row">
