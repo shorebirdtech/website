@@ -12,12 +12,7 @@ const faqs = [
   {
     question: 'What does it mean that iOS is in alpha?',
     answer:
-      'iOS alpha is fully App Store compliant, but not yet tuned to full performance.  You may notice a slow-down in your application when using iOS alpha which will be resolved in the coming months.',
-  },
-  {
-    question: 'How do I sign up?',
-    answer:
-      'Shorebird does everything via its command-line tool. Once you have [installed Shorebird](https://docs.shorebird.dev), you can create an account with `shorebird account create`.',
+      'iOS alpha is fully App Store compliant, but not yet tuned for performance.  You may notice a slowdown in your app when using iOS alpha which will be resolved in the coming months.',
   },
   {
     question: 'Does Shorebird work for existing apps?',
@@ -27,7 +22,7 @@ const faqs = [
   {
     question: 'Does Shorebird comply with Play Store and App Store guidelines?',
     answer:
-      'Yes. Shorebird has been designed to comply with Play Store and App Store guidelines. Code push is common in the industry, including several other commercial code push products from Microsoft [app center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). [More info](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines).',
+      'Yes. Shorebird has been designed to comply with Play Store and App Store guidelines. Code push is common in the industry, including several other commercial code push products from Microsoft [App Center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). [More info](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines).',
   },
   {
     question: 'Can I use this in production?',
