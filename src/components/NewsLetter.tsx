@@ -16,7 +16,7 @@ export const NewsLetter = () => {
               Get notified
             </h2>
             <p className="mx-auto mb-8 max-w-2xl font-light md:mb-12 sm:text-xl text-gray-400">
-              Notify me when iOS support is available
+              Keep me up-to-date with updates from Shorebird:
             </p>
             <div id="mc_embed_signup">
               <form

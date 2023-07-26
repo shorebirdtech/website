@@ -7,7 +7,12 @@ const faqs = [
   {
     question: 'What platforms does Shorebird support?',
     answer:
-      'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support. iOS support is launching in July 2023. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
+      'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support and iOS in alpha. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
+  },
+  {
+    question: 'What does it mean that iOS is in alpha?',
+    answer:
+      'iOS alpha is fully App Store compliant, but not yet tuned to full performance.  You may notice a slow-down in your application when using iOS alpha which will be resolved in the coming months.',
   },
   {
     question: 'How do I sign up?',
@@ -20,14 +25,14 @@ const faqs = [
       'Yes. Shorebird requires no code changes to your Flutter app to work. See our [quick start guide](https://docs.shorebird.dev/guides/code_push_quickstart) to get started.',
   },
   {
-    question: 'Does Shorebird comply with Play Store guidelines?',
+    question: 'Does Shorebird comply with Play Store and App Store guidelines?',
     answer:
-      'Yes. Shorebird has been designed to comply with Play Store guidelines. Code push is common in the industry, including several other commercial code push products from Microsoft [app center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). [More info](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines).',
+      'Yes. Shorebird has been designed to comply with Play Store and App Store guidelines. Code push is common in the industry, including several other commercial code push products from Microsoft [app center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). [More info](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines).',
   },
   {
     question: 'Can I use this in production?',
     answer:
-      'Yes!  Shorebird is used in production today. If you have any concerns we are happy to meet with you and/or discuss your concerns live [on Discord]({config.discordUrl}).',
+      'Yes!  Shorebird is used in production today on Android.  iOS support just launched in alpha July 2023.',
   },
   {
     question: 'Are there any limitations or known issues?',
