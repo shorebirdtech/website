@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'Can I use this in production?',
     answer:
-      'Yes!  Shorebird is used in production today on Android.  iOS support just launched in alpha July 2023.',
+      'Yes!  Shorebird is used in production today on Android. iOS support just launched in alpha July 2023.',
   },
   {
     question: 'Are there any limitations or known issues?',
