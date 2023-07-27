@@ -65,7 +65,7 @@ const PricingCard = (props: Pricing) => {
       <div
         className={
           props.highlight &&
-          'rounded-3xl bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 p-1'
+          'rounded-3xl bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy p-1'
         }
       >
         <div className="h-full p-8 bg-shorebirdBg3 rounded-3xl">
