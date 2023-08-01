@@ -50,7 +50,7 @@ export const Team = () => (
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0 items-center">
           {team.map((member, index) => (
             <motion.div
-              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 shorebird-border-gray-darker rounded-xl bg-shorebirdBg3 text-white flex flex-col px-4 py-4"
+              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 shorebird-border-gray-darker rounded-xl bg-shorebirdBg3 text-white flex flex-col p-4"
               key={`${member.name}-${index}`}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
