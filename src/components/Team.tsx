@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import ericHeadshot from '../assets/images/eric-headshot.jpeg';
 import felixHeadshot from '../assets/images/felix-headshot.jpeg';
 import bryanHeadshot from '../assets/images/bryan-headshot.png';
+import kevinHeadshot from '../assets/images/kevin-headshot.jpg';
 
 const team = [
   {
@@ -23,6 +24,12 @@ const team = [
     title: 'Founding Engineer',
     bio: "Former architecture lead for Google's internal-facing enterprise [Flutter](https://flutter.dev) team.",
     headshot: bryanHeadshot,
+  },
+  {
+    name: 'Kevin Millikin',
+    title: 'Founding Engineer',
+    bio: 'Former tech lead for the [Dart](https://dart.dev) compiler front end.  Original member of the [V8](https://v8.dev) team.',
+    headshot: kevinHeadshot,
   },
 ];
 
