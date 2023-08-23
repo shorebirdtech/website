@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'What does it mean that iOS is in alpha?',
     answer:
-      'iOS alpha is fully App Store compliant, but not yet tuned for performance.  You may notice a slowdown in your app when using iOS alpha which will be resolved in the coming months.',
+      'iOS alpha is fully App Store compliant, but not yet tuned for performance.  You may notice a slowdown in your app when using iOS alpha which will be resolved in the coming months.  More details on our [iOS Status page].',
   },
   {
     question: 'Does Shorebird work for existing apps?',
