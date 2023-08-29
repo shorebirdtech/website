@@ -28,7 +28,7 @@ const pricing: Pricing[] = [
       { title: 'Unlimited apps' },
       { title: 'Unlimited developers' },
       {
-        title: '50k patch installs per month',
+        title: '50K patch installs per month',
         info: `$0.003 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
       },
       { title: 'Discord & email support' },
