@@ -21,7 +21,7 @@ const pricing: Pricing[] = [
   },
   {
     title: 'Team',
-    description: 'For apps with the option to scale.',
+    description: 'For apps that can scale.',
     price: 20,
     highlight: true,
     features: [
@@ -83,7 +83,7 @@ const PricingCard = (props: Pricing) => {
           'rounded-3xl bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy p-1'
         }
       >
-        <div className="h-full p-8 bg-shorebirdBg3 rounded-3xl">
+        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
           <p className="mb-2 text-xl font-bold font-heading text-white text-left">
             {props.title}
           </p>

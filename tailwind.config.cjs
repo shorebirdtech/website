@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -17,7 +19,8 @@ module.exports = {
         shorebirdBgTransparentLighter: 'rgb(48, 49, 54, 0.7)',
       },
       fontFamily: {
-        Inter: 'Inter',
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        mono: ['SourceCodePro', ...defaultTheme.fontFamily.mono],
       },
       screens: {
         xs: '530px',
