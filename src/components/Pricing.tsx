@@ -11,7 +11,7 @@ const pricing: Pricing[] = [
     features: [
       { title: 'Unlimited apps' },
       { title: '1 developer' },
-      { title: '5K patch installs per month' },
+      { title: '5K patch installs/month' },
       { title: 'Community support' },
     ],
     cta: {
@@ -21,14 +21,14 @@ const pricing: Pricing[] = [
   },
   {
     title: 'Team',
-    description: 'For production apps that can scale.',
+    description: 'For apps with the option to scale.',
     price: 20,
     highlight: true,
     features: [
       { title: 'Unlimited apps' },
       { title: 'Unlimited developers' },
       {
-        title: '50K patch installs per month',
+        title: '50K patch installs/month',
         info: `$0.0003 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
       },
       { title: 'Discord & email support' },
@@ -45,6 +45,7 @@ const pricing: Pricing[] = [
     features: [
       { title: 'Unlimited apps' },
       { title: 'Unlimited developers' },
+      { title: 'High volume discounts' },
       { title: 'Private Support' },
     ],
     cta: {
@@ -75,7 +76,7 @@ interface Pricing {
 
 const PricingCard = (props: Pricing) => {
   return (
-    <div className="w-[350px] sm:w-[380px] lg:w-3/10 px-4 mb-8 lg:mb-0">
+    <div className="w-[325px] px-1 mb-8 lg:mb-0">
       <div
         className={
           props.highlight &&
@@ -156,7 +157,7 @@ export const Pricing = () => {
                 as you grow.
               </p>
             </div>
-            <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center justify-center mt-20">
+            <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center mt-20 gap-4">
               {pricing.map((item, index) => (
                 <PricingCard {...item} key={`pricing-card-${index}`} />
               ))}
