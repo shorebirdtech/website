@@ -11,7 +11,7 @@ const pricing: Pricing[] = [
     features: [
       { title: 'Unlimited apps' },
       { title: '1 developer' },
-      { title: '1K patch installs per month' },
+      { title: '5K patch installs/month' },
       { title: 'Community support' },
     ],
     cta: {
@@ -21,21 +21,36 @@ const pricing: Pricing[] = [
   },
   {
     title: 'Team',
-    description: 'For production apps that can scale.',
+    description: 'For apps with the option to scale.',
     price: 20,
     highlight: true,
     features: [
       { title: 'Unlimited apps' },
       { title: 'Unlimited developers' },
       {
-        title: '4K patch installs per month',
-        info: `$0.005 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
+        title: '50K patch installs/month',
+        info: `$0.0003 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
       },
-      { title: 'Private Discord & email support' },
+      { title: 'Discord & email support' },
     ],
     cta: {
       title: 'Get Started',
       link: config.consoleUrl,
+    },
+  },
+  {
+    title: 'Enterprise',
+    description: 'For 1M+ user apps.',
+    price: 'Custom',
+    features: [
+      { title: 'Unlimited apps' },
+      { title: 'Unlimited developers' },
+      { title: 'High volume discounts' },
+      { title: 'Private Support' },
+    ],
+    cta: {
+      title: 'Schedule a call',
+      link: config.contactSales,
     },
   },
 ];
@@ -54,14 +69,14 @@ interface Pricing {
   title: string;
   description: string;
   features: Feature[];
-  price?: number;
+  price?: string | number;
   cta: CTA;
   highlight?: boolean;
 }
 
 const PricingCard = (props: Pricing) => {
   return (
-    <div className="w-[350px] sm:w-[380px] lg:w-3/10 px-4 mb-8 lg:mb-0">
+    <div className="w-[325px] px-1 mb-8 lg:mb-0">
       <div
         className={
           props.highlight &&
@@ -142,20 +157,10 @@ export const Pricing = () => {
                 as you grow.
               </p>
             </div>
-            <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center justify-center mt-20">
+            <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center mt-20 gap-4">
               {pricing.map((item, index) => (
                 <PricingCard {...item} key={`pricing-card-${index}`} />
               ))}
-            </div>
-
-            <div className="pt-8">
-              <p className="text-center text-shorebirdTextGray">
-                Got a large app?{' '}
-                <a className="underline" href={`mailto:${config.contactEmail}`}>
-                  Contact us
-                </a>{' '}
-                for bulk pricing.
-              </p>
             </div>
           </div>
         </motion.div>
