@@ -11,7 +11,7 @@ const pricing: Pricing[] = [
     features: [
       { title: 'Unlimited apps' },
       { title: '1 developer' },
-      { title: '1K patch installs per month' },
+      { title: '5K patch installs per month' },
       { title: 'Community support' },
     ],
     cta: {
@@ -28,14 +28,28 @@ const pricing: Pricing[] = [
       { title: 'Unlimited apps' },
       { title: 'Unlimited developers' },
       {
-        title: '4K patch installs per month',
-        info: `$0.005 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
+        title: '50k patch installs per month',
+        info: `$0.003 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
       },
-      { title: 'Private Discord & email support' },
+      { title: 'Discord & email support' },
     ],
     cta: {
       title: 'Get Started',
       link: config.consoleUrl,
+    },
+  },
+  {
+    title: 'Enterprise',
+    description: 'For 1M+ user apps.',
+    price: 'Custom',
+    features: [
+      { title: 'Unlimited apps' },
+      { title: 'Unlimited developers' },
+      { title: 'Private Support' },
+    ],
+    cta: {
+      title: 'Schedule a call',
+      link: config.contactSales,
     },
   },
 ];
@@ -54,7 +68,7 @@ interface Pricing {
   title: string;
   description: string;
   features: Feature[];
-  price?: number;
+  price?: string | number;
   cta: CTA;
   highlight?: boolean;
 }
@@ -146,16 +160,6 @@ export const Pricing = () => {
               {pricing.map((item, index) => (
                 <PricingCard {...item} key={`pricing-card-${index}`} />
               ))}
-            </div>
-
-            <div className="pt-8">
-              <p className="text-center text-shorebirdTextGray">
-                Got a large app?{' '}
-                <a className="underline" href={`mailto:${config.contactEmail}`}>
-                  Contact us
-                </a>{' '}
-                for bulk pricing.
-              </p>
             </div>
           </div>
         </motion.div>
