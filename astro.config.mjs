@@ -6,4 +6,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://shorebird.dev',
   integrations: [react(), tailwind()],
+  redirects: {
+    // Some old docs may still point to .html urls for terms and privacy.
+    '/terms.html': '/terms',
+    '/privacy.html': '/privacy',
+  }
 });
