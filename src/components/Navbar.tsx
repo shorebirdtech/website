@@ -99,7 +99,7 @@ export const Navbar = (props: Props) => {
               target="_blank"
               aria-label="source code"
             >
-              Sign In
+              Console
             </a>
           </div>
         </motion.div>
@@ -136,7 +136,7 @@ export const Navbar = (props: Props) => {
                 target="_blank"
                 aria-label="source code"
               >
-                Sign In
+                Console
               </a>
               {props.links?.map(({ label, href, ariaLabel }) => (
                 <a
