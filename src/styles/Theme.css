@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Typography */
 
 .shorebird-block-big-title {
@@ -37,8 +41,12 @@ html {
 
 /* Buttons */
 
-.shorebird-button-colored {
+.shorebird-button-primary {
   @apply rounded-lg font-bold bg-shorebirdPrimary text-white flex justify-center items-center hover:bg-[#0196C0] cursor-pointer transition;
+}
+
+.shorebird-button-secondary {
+  @apply rounded-lg font-bold border border-shorebirdPrimary text-white flex justify-center items-center hover:border-[#0196C0] cursor-pointer transition;
 }
 
 /* Navbar */
@@ -59,4 +67,30 @@ html {
 
 .tooltip-container:hover .tooltip {
   @apply visible z-50;
+}
+
+@layer components {
+  input[type='range'] {
+    @apply appearance-none bg-transparent cursor-pointer;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    @apply bg-black/25 rounded-full;
+  }
+
+  input[type='range']::-moz-range-track {
+    @apply bg-black/25 rounded-full;
+  }
+
+  input[type='range']::-ms-track {
+    @apply bg-black/25 rounded-full;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    @apply appearance-none bg-gradient-to-r from-teal-400 to-purple-400 animate-gradient-xy w-4 h-4 rounded-full shadow-lg;
+  }
+
+  input[type='range']::-moz-range-thumb {
+    @apply appearance-none bg-gradient-to-r from-teal-400 to-purple-400 animate-gradient-xy w-4 h-4 rounded-full shadow-lg;
+  }
 }
