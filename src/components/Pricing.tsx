@@ -35,9 +35,9 @@ export const Pricing = () => {
               </p>
             </div>
             <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center mt-20 gap-4">
-              <HobbyTier />
-              <TeamTier />
-              <EnterpriseTier />
+              <HobbyPlan />
+              <TeamPlan />
+              <EnterprisePlan />
             </div>
           </div>
         </motion.div>
@@ -46,7 +46,7 @@ export const Pricing = () => {
   );
 };
 
-function HobbyTier() {
+function HobbyPlan() {
   const features: Feature[] = [
     { title: 'Unlimited apps' },
     { title: '1 developer' },
@@ -124,7 +124,7 @@ function PriceSlider({
   );
 }
 
-function TeamTier() {
+function TeamPlan() {
   const prices: Price[] = [
     {
       amount: '$20',
@@ -262,7 +262,7 @@ function TeamTier() {
   );
 }
 
-function EnterpriseTier() {
+function EnterprisePlan() {
   const features: Feature[] = [
     { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
