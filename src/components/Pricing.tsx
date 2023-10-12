@@ -144,7 +144,7 @@ function TeamPlan() {
     },
     {
       amount: '$1,250',
-      quantity: '$5M',
+      quantity: '5M',
     },
     {
       amount: '$2,000',
@@ -155,7 +155,7 @@ function TeamPlan() {
   const features: Feature[] = [
     { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
-    { title: 'Discord & email support' },
+    { title: 'Private support beyond 5M' },
   ];
 
   function PatchInstallCount({ quantity }: { quantity: string }) {
@@ -196,8 +196,8 @@ function TeamPlan() {
                           key={`tiers-modal-${price.quantity}-${index}`}
                         >
                           <span>
-                            <b>{price.amount}</b> &lt;= {price.quantity} patch
-                            installs
+                            <b>{price.amount}</b> for up to{' '}
+                            <b>{price.quantity}</b> patch installs
                           </span>
                         </li>
                       ))}
@@ -282,7 +282,7 @@ function EnterprisePlan() {
             </div>
           </div>
           <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
-            For 10M+ user apps.
+            For very large apps.
           </p>
           <ul className="mb-2 2xl:mb-6 text-white">
             {features.map((feature, index) => (
