@@ -2,139 +2,16 @@ import { motion } from 'framer-motion';
 
 import { config } from '../config';
 import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
-
-const pricing: Pricing[] = [
-  {
-    title: 'Hobby',
-    description: 'For small apps and demos.',
-    price: 0,
-    features: [
-      { title: 'Unlimited apps' },
-      { title: '1 developer' },
-      { title: '5K patch installs/month' },
-      { title: 'Community support' },
-    ],
-    cta: {
-      title: 'Get Started',
-      link: config.consoleUrl,
-    },
-  },
-  {
-    title: 'Team',
-    description: 'For apps that can scale.',
-    price: 20,
-    highlight: true,
-    features: [
-      { title: 'Unlimited apps' },
-      { title: 'Unlimited developers' },
-      {
-        title: '50K patch installs/month',
-        info: `$0.0003 per additional patch install<br/><a style="text-decoration: underline" href="mailto:${config.contactEmail}">Contact us</a> for bulk pricing.`,
-      },
-      { title: 'Discord & email support' },
-    ],
-    cta: {
-      title: 'Get Started',
-      link: config.consoleUrl,
-    },
-  },
-  {
-    title: 'Enterprise',
-    description: 'For 1M+ user apps.',
-    price: 'Custom',
-    features: [
-      { title: 'Unlimited apps' },
-      { title: 'Unlimited developers' },
-      { title: 'High volume discounts' },
-      { title: 'Private Support' },
-    ],
-    cta: {
-      title: 'Schedule a call',
-      link: config.contactSales,
-    },
-  },
-];
-
-interface CTA {
-  title: string;
-  link: string;
-}
+import { useState } from 'react';
 
 interface Feature {
   title: string;
-  info?: string;
 }
 
-interface Pricing {
-  title: string;
-  description: string;
-  features: Feature[];
-  price?: string | number;
-  cta: CTA;
-  highlight?: boolean;
+interface Price {
+  amount: string;
+  quantity: string;
 }
-
-const PricingCard = (props: Pricing) => {
-  return (
-    <div className="w-[325px] px-1 mb-8 lg:mb-0">
-      <div
-        className={
-          props.highlight &&
-          'rounded-3xl bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy p-1'
-        }
-      >
-        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
-          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
-            {props.title}
-          </p>
-          <div className="flex justify-start items-end">
-            {typeof props.price == 'number' ? (
-              <>
-                <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
-                  ${props.price}
-                </div>
-                <div className="text-gray-500">{'/ month'}</div>
-              </>
-            ) : (
-              <div className="text-3xl sm:text-4xl font-bold text-white text-left mt-4 mr-2 mb-2">
-                {props.price}
-              </div>
-            )}
-          </div>
-          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
-            {props.description}
-          </p>
-          <ul className="mb-2 2xl:mb-6 text-white">
-            {props.features.map((feature, index) => (
-              <li className="mb-4 flex" key={`${feature.title}-${index}`}>
-                <CheckArrowIcon />
-                <span className="flex gap-1">
-                  {feature.title}
-                  {feature.info && (
-                    <span className="tooltip-container">
-                      <InfoIcon />
-                      <span
-                        className="tooltip"
-                        dangerouslySetInnerHTML={{ __html: feature.info }}
-                      ></span>
-                    </span>
-                  )}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <a
-            target="_blank"
-            href={props.cta.link}
-            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-colored font-bold leading-loose mt-8"
-          >
-            {props.cta.title}
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const Pricing = () => {
   return (
@@ -158,9 +35,9 @@ export const Pricing = () => {
               </p>
             </div>
             <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center mt-20 gap-4">
-              {pricing.map((item, index) => (
-                <PricingCard {...item} key={`pricing-card-${index}`} />
-              ))}
+              <HobbyTier />
+              <TeamTier />
+              <EnterpriseTier />
             </div>
           </div>
         </motion.div>
@@ -169,21 +46,261 @@ export const Pricing = () => {
   );
 };
 
-function InfoIcon() {
+function HobbyTier() {
+  const features: Feature[] = [
+    { title: 'Unlimited apps' },
+    { title: '1 developer' },
+    { title: '5K patch installs/month' },
+    { title: 'Community support' },
+  ];
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className="w-5 h-5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-      />
-    </svg>
+    <div className="w-[325px] px-1 mb-8 lg:mb-0">
+      <div>
+        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
+          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
+            Hobby
+          </p>
+          <div className="flex justify-start items-end">
+            <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
+              $0
+            </div>
+            <div className="text-gray-500">{'/ month'}</div>
+          </div>
+          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+            For small apps and demos.
+          </p>
+          <ul className="mb-2 2xl:mb-6 text-white">
+            {features.map((feature, index) => (
+              <li className="mb-4 flex" key={`hobby-${feature.title}-${index}`}>
+                <CheckArrowIcon />
+                <span className="flex gap-1">{feature.title}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            target="_blank"
+            href={config.consoleUrl}
+            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-primary font-bold leading-loose mt-8"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PriceSlider({
+  prices,
+  onChange,
+}: {
+  prices: Price[];
+  onChange: (price: Price) => void;
+}) {
+  const [priceIndex, setPriceIndex] = useState(0);
+  const price = prices[priceIndex];
+  return (
+    <div className="flex w-full flex-col">
+      <div className="flex flex-row items-end">
+        <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
+          {price.amount}
+        </div>
+        <div className="text-gray-500 justify-end">{'/ month'}</div>
+      </div>
+      <div className="h-4"></div>
+      <input
+        className="accent-shorebirdPrimary bg-red"
+        type="range"
+        min={0}
+        max={prices.length - 1}
+        value={priceIndex}
+        onChange={(e) => {
+          const index = parseInt(e.target.value);
+          setPriceIndex(index);
+          onChange(prices[index]);
+        }}
+      ></input>
+    </div>
+  );
+}
+
+function TeamTier() {
+  const prices: Price[] = [
+    {
+      amount: '$20',
+      quantity: '50K',
+    },
+    {
+      amount: '$100',
+      quantity: '300K',
+    },
+    {
+      amount: '$300',
+      quantity: '1M',
+    },
+    {
+      amount: '$700',
+      quantity: '2.5M',
+    },
+    {
+      amount: '$1,250',
+      quantity: '$5M',
+    },
+    {
+      amount: '$2,000',
+      quantity: '10M',
+    },
+  ];
+
+  const features: Feature[] = [
+    { title: 'Unlimited apps' },
+    { title: 'Unlimited developers' },
+    { title: 'Discord & email support' },
+  ];
+
+  function PatchInstallCount({ quantity }: { quantity: string }) {
+    return (
+      <li className="mb-4 flex" key={`teams-patch-install-count`}>
+        <CheckArrowIcon />
+        <span className="flex gap-1">{`${quantity} patch installs/month`}</span>
+      </li>
+    );
+  }
+
+  const [quantity, setQuantity] = useState(prices[0].quantity);
+
+  function AllTiersModal() {
+    const [showModal, setShowModal] = useState(false);
+    return (
+      <>
+        <button
+          className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-secondary font-bold leading-loose"
+          type="button"
+          onClick={() => setShowModal(true)}
+        >
+          View Tiers
+        </button>
+        {showModal ? (
+          <>
+            <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+              <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                <div className="rounded-lg shadow-lg relative flex flex-col  bg-shorebirdBg3 outline-none focus:outline-none text-white">
+                  <div className="flex items-start justify-between p-5 rounded-t">
+                    <h3 className="text-xl font-semibold">Teams Tiers</h3>
+                  </div>
+                  <div className="relative px-12 py-5 flex-auto">
+                    <ul>
+                      {prices.map((price, index) => (
+                        <li
+                          className="mb-4 flex"
+                          key={`tiers-modal-${price.quantity}-${index}`}
+                        >
+                          <span>
+                            <b>{price.amount}</b> &lt;= {price.quantity} patch
+                            installs
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <button
+                    className="text-center text-slate-100 font-bold pb-6"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          </>
+        ) : null}
+      </>
+    );
+  }
+
+  return (
+    <div className="w-[325px] px-1 mb-8 lg:mb-0">
+      <div className="rounded-3xl bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy p-1">
+        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
+          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
+            Team
+          </p>
+          <div className="flex justify-start items-end">
+            <PriceSlider
+              prices={prices}
+              onChange={(price) => {
+                setQuantity(price.quantity);
+              }}
+            />
+          </div>
+          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+            For apps that can scale.
+          </p>
+          <ul className="mb-2 2xl:mb-6 text-white">
+            <PatchInstallCount quantity={quantity} />
+            {features.map((feature, index) => (
+              <li className="mb-4 flex" key={`hobby-${feature.title}-${index}`}>
+                <CheckArrowIcon />
+                <span className="flex gap-1">{feature.title}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            target="_blank"
+            href={config.consoleUrl}
+            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-primary font-bold leading-loose"
+          >
+            Get Started
+          </a>
+          <div className="h-4"></div>
+          <AllTiersModal />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function EnterpriseTier() {
+  const features: Feature[] = [
+    { title: 'Unlimited apps' },
+    { title: 'Unlimited developers' },
+    { title: 'High volume discounts' },
+    { title: 'Private Support' },
+  ];
+  return (
+    <div className="w-[325px] px-1 mb-8 lg:mb-0">
+      <div>
+        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
+          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
+            Enterprise
+          </p>
+          <div className="flex justify-start items-end">
+            <div className="text-3xl sm:text-4xl font-bold text-white text-left mt-4 mr-2 mb-2">
+              Custom
+            </div>
+          </div>
+          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+            For 10M+ user apps.
+          </p>
+          <ul className="mb-2 2xl:mb-6 text-white">
+            {features.map((feature, index) => (
+              <li className="mb-4 flex" key={`hobby-${feature.title}-${index}`}>
+                <CheckArrowIcon />
+                <span className="flex gap-1">{feature.title}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            target="_blank"
+            href={config.contactSales}
+            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-primary font-bold leading-loose mt-8"
+          >
+            Schedule a Call
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }
