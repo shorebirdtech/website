@@ -109,7 +109,6 @@ function PriceSlider({
       </div>
       <div className="h-4"></div>
       <input
-        className="accent-shorebirdPrimary"
         type="range"
         min={0}
         aria-label="Price slider"
