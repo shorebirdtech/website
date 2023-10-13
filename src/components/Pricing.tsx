@@ -71,10 +71,10 @@ function HobbyPlan() {
           </p>
           <ul className="mb-2 2xl:mb-6 text-white">
             {features.map((feature, index) => (
-              <li className="mb-4 flex" key={`hobby-${feature.title}-${index}`}>
-                <CheckArrowIcon />
-                <span className="flex gap-1">{feature.title}</span>
-              </li>
+              <FeatureListItem
+                key={`hobby-feature-${index}`}
+                title={feature.title}
+              />
             ))}
           </ul>
           <a
@@ -109,9 +109,9 @@ function PriceSlider({
       </div>
       <div className="h-4"></div>
       <input
-        className="accent-shorebirdPrimary bg-red"
         type="range"
         min={0}
+        aria-label="Price slider"
         max={prices.length - 1}
         value={priceIndex}
         onChange={(e) => {
@@ -155,19 +155,11 @@ function TeamPlan() {
   const features: Feature[] = [
     { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
-    { title: 'Private support beyond 5M' },
   ];
 
-  function PatchInstallCount({ quantity }: { quantity: string }) {
-    return (
-      <li className="mb-4 flex" key={`teams-patch-install-count`}>
-        <CheckArrowIcon />
-        <span className="flex gap-1">{`${quantity} patch installs/month`}</span>
-      </li>
-    );
-  }
-
   const [quantity, setQuantity] = useState(prices[0].quantity);
+  const priceIndex = prices.findIndex((price) => price.quantity === quantity);
+  const supportLevel = priceIndex > 3 ? 'Private' : 'Community';
 
   function AllTiersModal() {
     const [showModal, setShowModal] = useState(false);
@@ -182,7 +174,10 @@ function TeamPlan() {
         </button>
         {showModal ? (
           <>
-            <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div
+              className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              onClick={() => setShowModal(false)}
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div className="rounded-lg shadow-lg relative flex flex-col  bg-shorebirdBg3 outline-none focus:outline-none text-white">
                   <div className="flex items-start justify-between p-5 rounded-t">
@@ -239,13 +234,20 @@ function TeamPlan() {
             For apps that can scale.
           </p>
           <ul className="mb-2 2xl:mb-6 text-white">
-            <PatchInstallCount quantity={quantity} />
+            <FeatureListItem
+              key={`teams-patch-install-count`}
+              title={`${quantity} patch installs/month`}
+            />
             {features.map((feature, index) => (
-              <li className="mb-4 flex" key={`hobby-${feature.title}-${index}`}>
-                <CheckArrowIcon />
-                <span className="flex gap-1">{feature.title}</span>
-              </li>
+              <FeatureListItem
+                key={`teams-feature-${index}`}
+                title={feature.title}
+              />
             ))}
+            <FeatureListItem
+              key={`teams-support-level`}
+              title={`${supportLevel} support`}
+            />
           </ul>
           <a
             target="_blank"
@@ -286,10 +288,10 @@ function EnterprisePlan() {
           </p>
           <ul className="mb-2 2xl:mb-6 text-white">
             {features.map((feature, index) => (
-              <li className="mb-4 flex" key={`hobby-${feature.title}-${index}`}>
-                <CheckArrowIcon />
-                <span className="flex gap-1">{feature.title}</span>
-              </li>
+              <FeatureListItem
+                key={`enterprise-feature-${index}`}
+                title={feature.title}
+              />
             ))}
           </ul>
           <a
@@ -302,5 +304,14 @@ function EnterprisePlan() {
         </div>
       </div>
     </div>
+  );
+}
+
+function FeatureListItem({ title }: { title: string }) {
+  return (
+    <li className="mb-4 flex">
+      <CheckArrowIcon />
+      <span className="flex gap-1">{title}</span>
+    </li>
   );
 }
