@@ -28,7 +28,7 @@ export const NewsLetter = () => {
                 <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                   <div className="relative w-full">
                     <label
-                      htmlFor="email"
+                      htmlFor="mce-EMAIL"
                       className="hidden mb-2 text-sm font-medium text-gray-300"
                     >
                       Email address
@@ -50,6 +50,7 @@ export const NewsLetter = () => {
                       type="email"
                       name="EMAIL"
                       id="mce-EMAIL"
+                      autoComplete="email"
                       required={false}
                     />
                   </div>

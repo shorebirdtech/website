@@ -53,7 +53,7 @@ export const ProductsCodePush = () => {
           <div className="w-4/5 lg:w-2/3 lg:pl-16 mx-auto pt-16 lg:pt-0 flex-1">
             <div className="relative inline-flex">
               <img
-                src={android}
+                src={android.src}
                 alt="Get Started with Shorebird on Android"
                 width="800"
                 height="405"
@@ -66,7 +66,7 @@ export const ProductsCodePush = () => {
                 NEW
               </div>
               <img
-                src={ios}
+                src={ios.src}
                 alt="Get Started with Shorebird on iOS"
                 width="800"
                 height="405"
