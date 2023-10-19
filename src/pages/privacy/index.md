@@ -1,7 +1,8 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
+layout: ../../layouts/MarkdownLayout.astro
 title: Privacy Policy
 description: Shorebird Privacy Policy
+last_updated: 03-14-2023
 ---
 
 # Privacy Policy
