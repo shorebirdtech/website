@@ -1,7 +1,8 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
+layout: ../../layouts/MarkdownLayout.astro
 title: Terms of Use
 description: Shorebird Terms of Use
+last_updated: 03-21-2023
 ---
 
 # Terms of Service
