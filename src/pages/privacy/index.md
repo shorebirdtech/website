@@ -24,6 +24,7 @@ We collect the following categories of information when you use our Services:
 
 - Information you provide directly to us: Contact Information, like name and
   email address.
+
   - Sign-In Information, including your username, password, and site
     registrations.
   - Transaction and Billing Data, including your bank account and payment card
@@ -138,6 +139,7 @@ Any questions about this Privacy Policy or our practices should be sent to us
 via email at privacy@shorebird.dev.
 
 # Shorebird List of Vendors
+
 - Google, USA, Cloud infrastructure for our Website & Services.
 - Stripe, USA, Payment processing
 - Loops.so, USA, Customer interactions
