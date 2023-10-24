@@ -140,9 +140,10 @@ via email at privacy@shorebird.dev.
 
 # Shorebird List of Vendors
 
-- Google, USA, Cloud infrastructure for our Website & Services.
-- Stripe, USA, Payment processing
-- Loops.so, USA, Customer interactions
-- Mailchimp, USA, Customer interactions
 - Discord, USA, Customer support
 - GitHub, USA, Code, bug reports, contributions
+- Google, USA, Cloud infrastructure for our Website & Services.
+- Loops.so, USA, Customer interactions
+- Mailchimp, USA, Customer interactions
+- Redis Labs, USA, Cloud infrastructure for our Services.
+- Stripe, USA, Payment processing
