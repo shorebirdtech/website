@@ -1,5 +1,7 @@
 export const config = {
   app: 'Shorebird',
+  tagline:
+    'Use code push for Flutter to deliver instant updates to all devices. Patch issues in your iOS or Android Flutter apps instantly.',
   discordUrl: 'https://discord.gg/shorebird',
   githubUrl: 'https://github.com/shorebirdtech/shorebird',
   twitterUrl: 'https://twitter.com/shorebirddev',
