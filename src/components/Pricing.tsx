@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { config } from '../config';
 import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
 import { useState } from 'react';
+import { DivMotion } from './DivMotion';
 
 interface Feature {
   title: string;
@@ -18,12 +19,7 @@ export const Pricing = () => {
     <section className="w-screen flex justify-center bg-shorebirdBg2 relative">
       <div className="absolute -top-16" id="pricing" />
       <div className="pb-20 pt-12 bg-shorebirdBg2  2xl:w-[1150px] lg:w-[1050px]  md:w-4/5 ">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        <DivMotion>
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
@@ -40,7 +36,7 @@ export const Pricing = () => {
               <EnterprisePlan />
             </div>
           </div>
-        </motion.div>
+        </DivMotion>
       </div>
     </section>
   );

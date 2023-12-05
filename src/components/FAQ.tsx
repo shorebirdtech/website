@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { config } from '../config';
+import { DivMotion } from './DivMotion';
 
 const faqs = [
   {
@@ -49,12 +50,7 @@ const faqs = [
 export const FAQ = () => (
   <section className="relative pt-16 pb-16 bg-blueGray-50 overflow-hidden">
     <div className="absolute -top-10" id="faq" />
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
+    <DivMotion>
       <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
         <div className="md:max-w-4xl mx-auto">
           <h2 className="mb-16 shorebird-block-big-title text-center">FAQs</h2>
@@ -87,7 +83,7 @@ export const FAQ = () => (
           </div>
         </div>
       </div>
-    </motion.div>
+    </DivMotion>
   </section>
 );
 
@@ -104,9 +100,8 @@ const FAQBox = ({ defaultOpen, title, content }) => {
           {title}
         </h3>
         <ReactMarkdown
-          className={`prose prose-invert text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${
-            isOpen ? 'max-h-96' : 'max-h-0'
-          }`}
+          className={`prose prose-invert text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'
+            }`}
           children={`${content}`}
         ></ReactMarkdown>
       </div>
@@ -117,9 +112,8 @@ const FAQBox = ({ defaultOpen, title, content }) => {
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`transition-all duration-500  ${
-            isOpen ? 'rotate-[180deg]' : 'rotate-[270deg]'
-          }`}
+          className={`transition-all duration-500  ${isOpen ? 'rotate-[180deg]' : 'rotate-[270deg]'
+            }`}
         >
           <path
             d="M4.16732 12.5L10.0007 6.66667L15.834 12.5"

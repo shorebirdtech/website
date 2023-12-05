@@ -4,6 +4,7 @@ import ios from '../assets/images/patch_ios.png';
 import android from '../assets/images/patch_android.png';
 import { config } from '../config';
 import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
+import { DivMotion } from './DivMotion';
 
 export const ProductsCodePush = () => {
   return (
@@ -11,12 +12,7 @@ export const ProductsCodePush = () => {
       className="lg:mb-16 w-full flex flex-col justify-center items-center bg-shorebirdBg1"
       id="products-code-push"
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
+      <DivMotion>
         <div className=" 2xl:w-[1150px] xl:w-[1050px]  md:w-4/5 flex justify-center bg-shorebirdBg1 pt-12 lg:pt-24 pb-8 lg:pb-20 mx-auto lg:flex-row flex-col">
           <div className="w-3/4 lg:w-1/2 flex flex-col lg:mx-unset mx-auto">
             <h2 className="mt-10 mb-8 text-4xl md:text-5xl shorebird-block-big-title">
@@ -75,7 +71,7 @@ export const ProductsCodePush = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </DivMotion>
       <div className="custom-shape-divider-top-code-push w-full">
         <svg
           data-name="Layer 1"
