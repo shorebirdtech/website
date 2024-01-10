@@ -38,16 +38,16 @@ all remote, distributed team.
 More information about the company we're trying to build can be found in our
 [public handbook](https://github.com/shorebirdtech/handbook)
 
-# Founding Systems Engineer
+# Founding Engineer
 
 We write the tools others will use to build Flutter apps, including the compiler
 used to build them and runtime used to execute them. We’re looking for someone
-who enjoys working down at the “systems” level with our forks of the Flutter
-and Dart runtime and compiler.
+who enjoys working down at on the "lower" levels of our system including the
+forks of the Flutter and Dart runtime and compiler.
 
 As one of our first engineers, you will wear many hats and work across many
-systems. You will work with a diverse and distributed team of exceptional
-engineers to build the future of development for _any screen_.
+systems over time. You will work with a diverse and distributed team of
+exceptional engineers to build the future of development for _any screen_.
 
 ## Responsibilities
 
@@ -75,25 +75,22 @@ often leaving video calls open in the background while we work independently.
 150-200k USD salary, 2% equity, and
 [benefits](https://github.com/shorebirdtech/handbook/blob/main/benefits.md).
 
-## Skills
+## Requirements
 
-Proficiency in at least one systems language (e.g. C++, C, Rust). Experience
-working on reused code (e.g. APIs, libraries, tools, build systems) or in
-systems which are too large for any single person to understand would serve you
-well in this role.
-
-## Must haves
-
+- Excellent English spoken and written communication skills
 - Ability to work well independently and without direct supervision.
 - Interest/willingness to work on a small, distributed team
 - Excited about our mission of making high-quality multi-platform the default
 - Passion around creating excellent developer experiences
-- Experience building production software
+- Experience building and shipping production software
 - Familiarity with Compilers and/or Linkers
 - Comfortable with Assembly, ideally ARM64
 - Comfortable with C++, C, or Rust
 - Ability and desire to learn/teach yourself new skills as we go
-- Excellent English spoken and written communication skills
+
+Experience working on reused code (e.g. APIs, libraries, tools, build systems)
+or in systems which are too large for any single person to understand would
+serve you well in this role.
 
 ## Interview Process
 
