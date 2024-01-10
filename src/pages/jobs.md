@@ -81,6 +81,7 @@ product that is easy to use, performant, secure and delightful to developers.
 That starts of course by building something we ourselves want to use.
 
 ## Must haves
+
 - Ability to work well independently and without direct supervision.
 - Interest/willingness to work on a small, distributed team
 - Excited about Shorebird's mission of making high-quality multi-platform the default
