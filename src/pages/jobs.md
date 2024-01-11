@@ -12,7 +12,7 @@ The problem: Today, businesses write the same app at least twice at 2x the
 necessary costs, with redundant code-bases, teams, bug lists. Flutter has proven
 that high-quality multi-platform is possible. However, adopting Flutter can be
 challenging since the default offerings from Google are sometimes an ill fit or
-incomplete for non-Google teams. Shorebird is filling in the gaps business need
+incomplete for non-Google teams. Shorebird is filling in the gaps businesses need
 to be successful with Flutter development, starting with code push.
 
 There are more screens every day, and they don't all run iOS (or even Android).
@@ -42,7 +42,7 @@ More information about the company we're trying to build can be found in our
 
 We write the tools others will use to build Flutter apps, including the compiler
 used to build them and runtime used to execute them. We’re looking for someone
-who enjoys working down at on the "lower" levels of our system including the
+who enjoys working down at the "lower" levels of our system including the
 forks of the Flutter and Dart runtime and compiler.
 
 As one of our first engineers, you will wear many hats and work across many
@@ -107,7 +107,7 @@ verify we're the real deal. This is an awesome team and we'd like you on it.
 
 ## Reach out
 
-If you're interested in joining us, please email eric@. You can also (and are
+If you're interested in joining us, please email eric@shorebird.dev. You can also (and are
 encouraged to) hop on our [Discord](https://discord.gg/shorebird) and chat with
 us there. We do pretty much everything in the public so you can very much see
 what we're like without even needing to apply.
