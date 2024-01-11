@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { config } from '../config';
-import { DivMotion } from './DivMotion';
+import { MotionDiv } from './MotionDiv';
 
 const faqs = [
   {
@@ -50,7 +50,7 @@ const faqs = [
 export const FAQ = () => (
   <section className="relative pt-16 pb-16 bg-blueGray-50 overflow-hidden">
     <div className="absolute -top-10" id="faq" />
-    <DivMotion>
+    <MotionDiv>
       <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
         <div className="md:max-w-4xl mx-auto">
           <h2 className="mb-16 shorebird-block-big-title text-center">FAQs</h2>
@@ -83,7 +83,7 @@ export const FAQ = () => (
           </div>
         </div>
       </div>
-    </DivMotion>
+    </MotionDiv>
   </section>
 );
 

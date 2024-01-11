@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { DivMotion } from './DivMotion';
+import { MotionDiv } from './MotionDiv';
 
 export const NewsLetter = () => {
   return (
     <section className="w-screen flex justify-center bg-shorebirdBg1 relative">
       <div className="absolute -top-16" id="newsletter" />
       <div className="pb-20 pt-12 bg-shorebirdBg1  2xl:w-[1150px] lg:w-[1050px]  md:w-4/5 ">
-        <DivMotion>
+        <MotionDiv>
           <div className="mx-auto max-w-screen-md sm:text-center">
             <h2 className="mb-4 text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight sm:text-4xl">
               Get notified
@@ -75,7 +75,7 @@ export const NewsLetter = () => {
               </form>
             </div>
           </div>
-        </DivMotion>
+        </MotionDiv>
       </div>
     </section>
   );
