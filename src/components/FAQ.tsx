@@ -100,8 +100,9 @@ const FAQBox = ({ defaultOpen, title, content }) => {
           {title}
         </h3>
         <ReactMarkdown
-          className={`prose prose-invert text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'
-            }`}
+          className={`prose prose-invert text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${
+            isOpen ? 'max-h-96' : 'max-h-0'
+          }`}
           children={`${content}`}
         ></ReactMarkdown>
       </div>
@@ -112,8 +113,9 @@ const FAQBox = ({ defaultOpen, title, content }) => {
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`transition-all duration-500  ${isOpen ? 'rotate-[180deg]' : 'rotate-[270deg]'
-            }`}
+          className={`transition-all duration-500  ${
+            isOpen ? 'rotate-[180deg]' : 'rotate-[270deg]'
+          }`}
         >
           <path
             d="M4.16732 12.5L10.0007 6.66667L15.834 12.5"
