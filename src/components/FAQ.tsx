@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'What does it mean that iOS is in beta?',
     answer:
-      'iOS beta is fully App Store compliant, but not yet tuned for performance in patches.  You may notice a slowdown when running patches in iOS beta which will be resolved in the coming months.',
+      'iOS beta is fully App Store compliant.  You may notice a slowdown in your app after patching with iOS beta which will be resolved in the coming months.',
   },
   {
     question: 'Does Shorebird work for existing apps?',
