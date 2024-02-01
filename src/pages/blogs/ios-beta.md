@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: Blog | iOS Beta
-description: Shorebird blog post announcing our iOS beta release.
+description: Shorebird Code Push for iOS beta announcement
 ---
 
 # Announcing Code Push iOS beta 🥳

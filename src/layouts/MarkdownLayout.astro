@@ -19,6 +19,12 @@ const { frontmatter } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={frontmatter.description} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:image" content="/open-graph.png" />
+    <meta property="og:url" content="https://shorebird.dev" />
+    <meta name="twitter:image" content="/open-graph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://shorebird.dev" />
     <title>{frontmatter.title}</title>
   </head>
   <body>
