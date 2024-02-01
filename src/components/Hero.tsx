@@ -6,7 +6,7 @@ export const Hero = () => {
       className="w-screen flex justify-center items-center bg-shorebirdBg1"
       id="home"
     >
-      <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
+      <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-20 md:pt-10 lg:pt-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

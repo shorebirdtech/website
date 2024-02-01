@@ -1,17 +1,18 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import { Hero } from '../components/Hero.jsx';
-import { NewsLetter } from '../components/NewsLetter.jsx';
-import { Navbar } from '../components/Navbar.jsx';
-import { ProductsCodePush } from '../components/ProductsCodePush.jsx';
-import { PromoVideo } from '../components/PromoVideo.jsx';
-import { Pricing } from '../components/Pricing.jsx';
-import { Team } from '../components/Team.jsx';
-import { FAQ } from '../components/FAQ.jsx';
-import { Divider } from '../components/Divider';
-import { Footer } from '../components/Footer.jsx';
-import { ScrollToTopButton } from '../components/ScrollToTopButton';
 import { config } from '../config';
+import { Divider } from '../components/Divider';
+import { FAQ } from '../components/FAQ';
+import { Footer } from '../components/Footer';
+import { Hero } from '../components/Hero';
+import { IOSBetaBanner } from '../components/IOSBetaBanner';
+import { Navbar } from '../components/Navbar';
+import { NewsLetter } from '../components/NewsLetter';
+import { Pricing } from '../components/Pricing';
+import { ProductsCodePush } from '../components/ProductsCodePush';
+import { PromoVideo } from '../components/PromoVideo';
+import { ScrollToTopButton } from '../components/ScrollToTopButton';
+import { Team } from '../components/Team';
+import MainLayout from '../layouts/MainLayout.astro';
 
 import '../styles/Theme.css';
 import '../styles/Shapes.css';
@@ -33,6 +34,7 @@ const links = [
 
 <MainLayout title={config.app}>
   <Navbar links={links} client:load />
+  <IOSBetaBanner client:load />  
   <Hero client:load />
   <ProductsCodePush client:load />
   <PromoVideo client:load />

@@ -7,17 +7,17 @@ import { GitHubIcon } from '../assets/icons/GitHubIcon';
 import { DiscordIcon } from '../assets/icons/DiscordIcon';
 import { TwitterIcon } from '../assets/icons/TwitterIcon';
 
-interface NavbarLink {
+export interface NavbarLink {
   label: string;
   href: string;
   ariaLabel: string;
 }
 
-interface Props {
+export interface NavbarProps {
   links?: NavbarLink[];
 }
 
-export const Navbar = (props: Props) => {
+export const Navbar = (props: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
