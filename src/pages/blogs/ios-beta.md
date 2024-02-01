@@ -10,7 +10,7 @@ We're very excited to announce that Code Push for Flutter is now in beta for iOS
 
 **Note: iOS beta requires the latest version of Shorebird CLI (0.25.0) with the latest stable version of Flutter (3.16.9).**
 
-Shorebird Code Push is a tool that allows you to update your Flutter app instantly over the air, without going through the store update process. This allows you to directly deploy fixes and new features to your end users' devices.
+Shorebird Code Push is a tool that allows you to update your Flutter app instantly over the air. This allows you to directly deploy fixes to your end users' devices.
 
 ## What this means
 
