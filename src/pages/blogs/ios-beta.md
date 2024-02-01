@@ -64,7 +64,8 @@ Please [try adding Shorebird to your
 app](https://docs.shorebird.dev/guides/code_push_quickstart) on iOS and let us
 know what you think!
 
-Thanks,
-The Shorebird Team (Eric, Bryan, and Felix)
-
 See you on [Discord](https://discord.gg/shorebird) 👋
+
+Thanks,
+
+The Shorebird Team (Eric, Bryan, and Felix)
