@@ -67,4 +67,4 @@ know what you think!
 Thanks,
 The Shorebird Team (Eric, Bryan, and Felix)
 
-👋 See you on [Discord](https://discord.gg/shorebird)!
+See you on [Discord](https://discord.gg/shorebird) 👋
