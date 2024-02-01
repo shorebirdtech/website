@@ -41,7 +41,7 @@ address it immediately!
 - 📦 Patch sizes are 10x smaller
 - 🔨 Hundreds of other issues resolved.
 
-Thank you again to the thousans of developers who have supported Shorebird and
+Thank you again to the thousands of developers who have supported Shorebird and
 provided feedback thus far.
 
 ## 🚏 Road to 1.0
@@ -65,6 +65,6 @@ app](https://docs.shorebird.dev/guides/code_push_quickstart) on iOS and let us
 know what you think!
 
 Thanks,
-The Shorebird Team (Eric, Bryan, and Felix
+The Shorebird Team (Eric, Bryan, and Felix)
 
-See you on [Discord](https://discord.gg/shorebird)!)
+👋 See you on [Discord](https://discord.gg/shorebird)!
