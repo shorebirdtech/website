@@ -55,8 +55,7 @@ This release is marked "beta" rather than 1.0 due to a couple oustanding issues:
 
 Both of these will be addressed in the coming weeks. There is no change to app
 speed before patches have been applied. Android builds run at full speed both
-patched and unpatched. iOS beta is most suitable for patching critical bug fixes
-until they can update from a store.
+patched and unpatched.
 
 ## 🐦 Try Shorebird
 
