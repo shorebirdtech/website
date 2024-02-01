@@ -7,12 +7,12 @@ const faqs = [
   {
     question: 'What platforms does Shorebird support?',
     answer:
-      'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support and iOS in alpha. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
+      'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support and iOS in beta. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
   },
   {
-    question: 'What does it mean that iOS is in alpha?',
+    question: 'What does it mean that iOS is in beta?',
     answer:
-      'iOS alpha is fully App Store compliant, but not yet tuned for performance.  You may notice a slowdown in your app when using iOS alpha which will be resolved in the coming months.',
+      'iOS beta is fully App Store compliant, but not yet tuned for performance in patches.  You may notice a slowdown when running patches in iOS beta which will be resolved in the coming months.',
   },
   {
     question: 'Does Shorebird work for existing apps?',
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'Can I use this in production?',
     answer:
-      'Yes!  Shorebird is used in production today on Android. iOS support just launched in alpha July 2023.',
+      'Yes!  Shorebird is used in production today on Android. iOS support just launched in beta February 2024.',
   },
   {
     question: 'Are there any limitations or known issues?',
