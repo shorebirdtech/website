@@ -6,40 +6,65 @@ description: Shorebird Code Push for iOS beta announcement
 
 # Announcing Code Push iOS beta 🥳
 
-We're very excited to announce that Code Push for Flutter is now in beta for iOS!
+Shorebird Code Push allows you to update your Flutter app instantly over the air
+and deploy fixes directly to end users' devices.
 
-**Note: iOS beta requires the latest version of Shorebird CLI (0.25.0) with the latest stable version of Flutter (3.16.9).**
+Shorebird's Android support has been production ready for nearly a year and is
+used by thousands of apps. Hundreds of early adopters have tried our iOS support
+during alpha these last 7 months.
 
-Shorebird Code Push is a tool that allows you to update your Flutter app instantly over the air. This allows you to directly deploy fixes to your end users' devices.
+We're excited to announce that Code Push for Flutter is now in beta for iOS!
 
-## What this means
+iOS beta requires the latest version of Shorebird CLI (`0.25.0`) and the latest
+stable version of Flutter (`3.16.9`).
 
-Code Push for Android has been production ready for over a year and is battle-tested and used by thousands of apps already.
+## 🚀 Get Started
 
-Code Push for iOS is newly in beta. We believe that iOS is now stable and safe for use in production so if you've been waiting to try Shorebird until there was stable iOS support, now is the time!
+Get started now with our [Quick Start
+Guide](https://docs.shorebird.dev/guides/code_push_quickstart) and join the
+Shorebird community on [Discord](https://discord.gg/shorebird)!
 
-We've fixed all known crashers in iOS, but as with any beta, there may be bugs. If you encounter any problems, [please file an issue](https://github.com/shorebirdtech/shorebird/issues/new/choose) and we will address it as quickly as possible.
+## 🚦 Status
 
-### Performance
+Code Push for iOS is now beta and safe for production apps. If you've been
+waiting to try Shorebird until there was stable iOS support, now is the time!
 
-This beta release dramatically improves performance on iOS.
+If you encounter any problems, [please file an
+issue](https://github.com/shorebirdtech/shorebird/issues/new/choose) or reach
+out over [Discord](https://discord.gg/shorebird) we will work with you to
+address it immediately!
 
-iOS releases that include Shorebird now run at full speed meaning releasing with Shorebird will not affect app performance.
+## 🔥 iOS improvements from alpha
 
-At the moment, iOS patches may run slower. Patches on iOS run approximately 2x faster than they previously did and we are hard at work improving patch performance, with the goal of achieveing identical performance between releases and patches in the coming weeks.
+- 🚀 Apps run 100x faster before patching.
+- 🏎️ Apps run 2x faster after patching.
+- 📦 Patch sizes are 10x smaller
+- 🔨 Hundreds of other issues resolved.
 
-As a result, we recommend only pushing patches on iOS for critical bug fixes. In addition, we recommend [staging patches](https://docs.shorebird.dev/guides/staging-patches) and validating the patches locally before deploying the patch to end users.
+Thank you again to the thousans of developers who have supported Shorebird and
+provided feedback thus far.
 
-### Patch sizes
+## 🚏 Road to 1.0
 
-We've reduced iOS patch sizes by 10x which means faster patch installs and less data used per patch install by end users. Patches are now diffed against the release, so a patch only include things that have changed since the release.
+This release is marked "beta" rather than 1.0 due to a couple oustanding issues:
 
-### CLI updates
+- `--obfuscate` is not currently supported on iOS
+  ([#1619](https://github.com/shorebirdtech/shorebird/issues/1619)).
+- Apps run slower after patching on iOS (unpatched apps run at full speed)
+  ([#674](https://github.com/shorebirdtech/shorebird/issues/674))
 
-We have removed the alpha suffix from all iOS CLI commands. We've kept the old aliases for backward compatibility and plan to remove them in a future release.
+Both of these will be addressed in the coming weeks. There is no change to app
+speed before patches have been applied. Android builds run at full speed both
+patched and unpatched. iOS beta is most suitable for patching critical bug fixes
+until they can update from a store.
 
-## Get Started
+## 🐦 Try Shorebird
 
-Get started now with our [Quick Start Guide](https://docs.shorebird.dev/guides/code_push_quickstart).
+Please [try adding Shorebird to your
+app](https://docs.shorebird.dev/guides/code_push_quickstart) on iOS and let us
+know what you think!
 
-Join the Shorebird community on [Discord](https://discord.gg/shorebird)!
+Thanks,
+The Shorebird Team (Eric, Bryan, and Felix
+
+See you on [Discord](https://discord.gg/shorebird)!)
