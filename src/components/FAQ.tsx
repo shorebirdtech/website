@@ -12,12 +12,12 @@ const faqs = [
   {
     question: 'What does it mean that iOS is in beta?',
     answer:
-      'iOS beta is fully App Store compliant.  You may notice a slowdown in your app after patching with iOS beta which will be resolved in the coming months.',
+      'iOS beta is fully App Store compliant. You may notice a slowdown in your app after patching with iOS beta which will be resolved in our coming 1.0 release.',
   },
   {
     question: 'Does Shorebird work for existing apps?',
     answer:
-      'Yes. Shorebird requires no code changes to your Flutter app to work. See our [quick start guide](https://docs.shorebird.dev/guides/code_push_quickstart) to get started.',
+      'Yes. Shorebird requires no code changes to your Flutter app to adopt. See our [quick start guide](https://docs.shorebird.dev/guides/code_push_quickstart) to get started.',
   },
   {
     question: 'Does Shorebird comply with Play Store and App Store guidelines?',
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'Can I use this in production?',
     answer:
-      'Yes!  Shorebird is used in production today on Android. iOS support just launched in beta February 2024.',
+      'Yes! Shorebird has been used in production by thousands of apps since early 2023.',
   },
   {
     question: 'Are there any limitations or known issues?',
@@ -37,12 +37,12 @@ const faqs = [
   {
     question: 'Can I self-host Shorebird or do you offer on-prem?',
     answer:
-      'Not yet. We plan to offer on-prem in the future. [Contact us](mailto:contact@shorebird.dev) if you are interested in self-hosting.',
+      'Not yet. [Contact us](mailto:contact@shorebird.dev) if this is a blocker for you.',
   },
   {
     question: 'Where is the roadmap?',
     answer:
-      'Shorebird is developed entirely in the public, including our [project boards](https://github.com/shorebirdtech/shorebird/projects) shows what we are currently working on.',
+      'Shorebird is developed entirely in the public, including our [project boards](https://github.com/orgs/shorebirdtech/projects) shows what we are currently working on.',
   },
 ];
 
