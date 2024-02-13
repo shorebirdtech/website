@@ -15,6 +15,6 @@ export const GET: APIRoute = async () => {
       headers: {
         'content-type': 'application/json; charset=utf-8',
       },
-    }
+    },
   );
 };
