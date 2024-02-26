@@ -80,7 +80,7 @@ VERSION OF THE PRODUCTS.
 - You must be a human. Accounts registered by “bots” or other automated methods
   are not permitted.
 - You must provide your name, a valid email address, and any other information
-  requested in order to complete the signup process for Your Account. All such
+  requested in order to complete the sign-up process for Your Account. All such
   information shall be accurate and complete.
 - Your login may only be used by one person - a single login shared by multiple
   people is not permitted.
@@ -103,7 +103,7 @@ display the Application and/or User Data solely for the purposes of providing
 the Services. You further agree Shorebird has the perpetual license and right to
 copy, analyze and use any of Your User Data solely in anonymized and aggregated
 format for Shorebird’s business purposes. For the avoidance of doubt,
-Shorebird will not; (i) reverse engineer, decompile, translate, disassemble, or
+Shorebird will not; (i) reverse engineer, de-compile, translate, disassemble, or
 attempt to discover the source code of any Application or any part thereof; or
 (ii) distribute the Application or any part thereof to any third party other
 than solely as part of providing the Services. Shorebird does not pre-screen
@@ -115,7 +115,7 @@ available via the Services.
 
 Shorebird hereby grant to You, solely during the applicable term of Your use of
 the Services, a royalty free, limited, personal, non-exclusive,
-non-transferable, non-sublicensable license to: (i) access (via the Internet
+non-transferable, non-sub-licensable license to: (i) access (via the Internet
 address provided to You by Shorebird), download, install and use the Services;
 (ii) build and distribute to Your applications built with the Services (but
 without including or distributing the Services or any part thereof); and (iii)
