@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownLayout.astro
 title: Terms of Use
 description: Shorebird Terms of Use
-last_updated: 02-22-2023
+last_updated: 02-29-2024
 ---
 
 # Terms of Service
 
-Last updated and Effective as of February 26, 2024.
+Last updated and Effective as of February 29, 2024.
 
 THESE TERMS OF SERVICE (“TERMS OF SERVICE” OR “AGREEMENT”) GOVERN YOUR USE OF
 THE SHOREBIRD.DEV WEBSITE AND/OR ANY OF THE SERVICES OFFERED BY CODE TOWN, INC.
