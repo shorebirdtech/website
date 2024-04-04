@@ -28,7 +28,7 @@ const team = [
   {
     name: 'Erick Zanardo',
     title: 'Founding Engineer',
-    bio: 'Flutter & Dart GDE. Core member of [Flame](https://flame-engine.org/). Former TDL at [Very Good Ventures](https://verygood.ventures).',
+    bio: 'Flutter & Dart GDE. [Flame](https://flame-engine.org/) Core member. Previously at [Very Good Ventures](https://verygood.ventures).',
     headshot: erickHeadshot,
   },
 ];
