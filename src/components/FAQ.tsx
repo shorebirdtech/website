@@ -17,7 +17,7 @@ const faqs = [
   {
     question: 'Does Shorebird comply with Play Store and App Store guidelines?',
     answer:
-      'Yes. Shorebird has been designed to comply with Play Store and App Store guidelines. Code push is common in the industry, including several other commercial code push products from Microsoft [App Center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). Refer to the [FAQs](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines) for more info.',
+      'Yes. Shorebird has been designed to comply with Play Store and App Store guidelines. Code push is common in the industry, including several other commercial update products from Microsoft [App Center](https://appcenter.ms), [Expo](https://expo.dev), and [Ionic](https://ionic.io/). Refer to the [FAQs](https://docs.shorebird.dev/faq#does-shorebird-comply-with-play-store-guidelines) for more info.',
   },
   {
     question: 'Can I use this in production?',
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'Can I self-host Shorebird or do you offer on-prem?',
     answer:
-      'Not yet. [Contact us](mailto:contact@shorebird.dev) if this is a blocker for you.',
+      'Not yet. See [tracking issue](https://github.com/shorebirdtech/shorebird/issues/485).',
   },
   {
     question: 'Where is the roadmap?',
