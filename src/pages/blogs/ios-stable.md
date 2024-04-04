@@ -9,9 +9,13 @@ description: Shorebird Code Push for iOS stable announcement
 Shorebird Code Push allows you to update your Flutter app instantly over the air
 and deploy fixes directly to end users' devices.
 
-Shorebird's Android support has been production ready for nearly a year and is
-used by thousands of apps. Hundreds of early adopters have tried our iOS support
-during alpha these last 7 months.
+Shorebird's Android support has been production ready for nearly a year and has
+been used by thousands of apps. Hundreds of early adopters have tried our iOS
+support during alpha these last 7 months.
+
+To make iOS possible we built a custom interpreter and compiler for Dart. This
+allows you to patch the Dart code in your Flutter app while complying with
+Apple's security requirements.
 
 We're excited to announce that Code Push for Flutter is now stable for iOS!
 
@@ -24,31 +28,15 @@ Get started now with our [Quick Start
 Guide](https://docs.shorebird.dev/guides/code_push_quickstart) and join the
 Shorebird community on [Discord](https://discord.gg/shorebird)!
 
-## 🚦 Status
-
-Code Push for iOS is now stable and safe for production apps. If you've been
-waiting to try Shorebird until there was stable iOS support, now is the time!
-
-If you encounter any problems, [please file an
-issue](https://github.com/shorebirdtech/shorebird/issues/new/choose) or reach
-out over [Discord](https://discord.gg/shorebird) we will work with you to
-address it immediately!
-
 ## 🔥 iOS improvements from beta
 
-TODO
-
-- 🚀 Apps run 100x faster before patching.
-- 🏎️ Apps run 2x faster after patching.
-- 📦 Patch sizes are 10x smaller
+- 🚀 Apps run 10x faster before patching.
+- 🏎️ Apps run 5x faster after patching.
+- 📦 Patch sizes are 10x smaller.
 - 🔨 Hundreds of other issues resolved.
 
 Thank you again to the thousands of developers who have supported Shorebird and
 provided feedback thus far.
-
-## 🚏 What's Next
-
-TODO
 
 ## 🐦 Try Shorebird
 
@@ -60,4 +48,4 @@ See you on [Discord](https://discord.gg/shorebird) 👋
 
 Thanks,
 
-The Shorebird Team (Eric, Bryan, and Felix)
+The Shorebird Team (Eric, Erick, Bryan, and Felix)
