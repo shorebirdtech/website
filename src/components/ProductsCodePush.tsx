@@ -62,15 +62,12 @@ export const ProductsCodePush = () => {
             </div>
             <div className="h-4"></div>
             <div className="relative inline-flex">
-              <div className="py-2 px-4 rounded-full bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy text-white absolute right-0 left-auto top-0 bottom-auto font-bold -translate-y-1/3 translate-x-1/3">
-                BETA
-              </div>
               <img
                 src={ios.src}
                 alt="Get Started with Shorebird on iOS"
                 width="800"
                 height="405"
-                className="rounded-xl shorebird-border-gray bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy p-1"
+                className="rounded-xl shorebird-border-gray"
               />
             </div>
           </div>

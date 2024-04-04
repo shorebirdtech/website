@@ -10,11 +10,6 @@ const faqs = [
       'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support and iOS in beta. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
   },
   {
-    question: 'What does it mean that iOS is in beta?',
-    answer:
-      'iOS beta is fully App Store compliant. You may notice a slowdown in your app after patching with iOS beta which will be resolved in our coming 1.0 release.',
-  },
-  {
     question: 'Does Shorebird work for existing apps?',
     answer:
       'Yes. Shorebird requires no code changes to your Flutter app to adopt. See our [quick start guide](https://docs.shorebird.dev/guides/code_push_quickstart) to get started.',

@@ -4,7 +4,7 @@ import { Divider } from '../components/Divider';
 import { FAQ } from '../components/FAQ';
 import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
-import { IOSBetaBanner } from '../components/IOSBetaBanner';
+import { IOSStableBanner } from '../components/IOSStableBanner';
 import { Navbar } from '../components/Navbar';
 import { NewsLetter } from '../components/NewsLetter';
 import { Pricing } from '../components/Pricing';
@@ -34,7 +34,7 @@ const links = [
 
 <MainLayout title={config.app}>
   <Navbar links={links} client:load />
-  <IOSBetaBanner client:load />  
+  <IOSStableBanner client:load />
   <Hero client:load />
   <ProductsCodePush client:load />
   <PromoVideo client:load />
