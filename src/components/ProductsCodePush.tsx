@@ -41,7 +41,7 @@ export const ProductsCodePush = () => {
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Designed around App Store and Play Store requirements</span>
+                <span>Designed for App Store and Play Store compliance</span>
               </li>
             </ul>
             <div className="flex flex-col sm:flex-row">
