@@ -19,7 +19,7 @@ Apple's security requirements.
 
 We're excited to announce that Code Push for Flutter is now stable for iOS!
 
-iOS beta requires the latest version of Shorebird CLI (`1.0.0`) and the latest
+iOS stable requires the latest version of Shorebird CLI (`1.0.0`) and the latest
 stable version of Flutter (`3.19.5`).
 
 ## 🚀 Get Started
