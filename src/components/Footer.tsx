@@ -6,6 +6,8 @@ import { ShorebirdLogo } from '../assets/logos/ShorebirdLogo';
 import { TwitterIcon } from '../assets/icons/TwitterIcon';
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       <div className="pt-10  lg:pt-20 lg:pb-12 bg-shorebirdBg1 radius-for-skewed ">
@@ -127,7 +129,7 @@ export const Footer = () => {
             </div>
           </div>
           <p className="lg:text-center text-sm text-gray-400 border-t border-[rgb(255,255,255,0.2)] pt-12 mt-16 hidden lg:block">
-            &copy; 2023, Code Town Inc.
+            &copy; {currentYear}, Code Town Inc.
           </p>
         </div>
       </div>
