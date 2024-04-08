@@ -11,7 +11,7 @@ import { Footer } from '../components/Footer.jsx';
 const { frontmatter } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,6 +39,9 @@ const { frontmatter } = Astro.props;
         background-color: #26272b;
         overflow-x: hidden;
         scroll-behavior: smooth;
+      }
+      img {
+        border-radius: 10px;
       }
     </style>
   </body>
