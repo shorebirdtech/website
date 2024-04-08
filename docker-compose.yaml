@@ -10,7 +10,7 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 3000:3000
+      - 4321:4321
       - 35729:35729
     volumes:
       - ./:/app
