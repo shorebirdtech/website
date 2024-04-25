@@ -27,7 +27,7 @@ export const ScrollToTopButton = () => {
     <>
       {isVisible && (
         <div
-          className="w-12 h-12 fixed bottom-6 right-6 shorebird-border-gray rounded-xl  bg-shorebirdBg2 hover:bg-shorebirdBg3 cursor-pointer flex justify-center items-center transition z-50"
+          className="shorebird-border-gray fixed bottom-6 right-6 z-50 flex h-12  w-12 cursor-pointer items-center justify-center rounded-xl bg-shorebirdBg2 transition hover:bg-shorebirdBg3"
           onClick={scrollToTop}
         >
           <svg

@@ -21,8 +21,8 @@ export const Navbar = (props: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-shorebirdBg1 lg:bg-shorebirdBgTransparent z-40 lg:backdrop-blur-xl">
-      <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
+    <nav className="fixed z-40 flex h-20 w-full flex-col items-center justify-center bg-shorebirdBg1 lg:bg-shorebirdBgTransparent lg:backdrop-blur-xl">
+      <div className="relative flex w-11/12 items-center justify-between xl:w-10/12 2xl:w-[1280px]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,11 +30,11 @@ export const Navbar = (props: NavbarProps) => {
           exit={{ opacity: 0 }}
         >
           <a className="navbar-link" href="/" aria-label="Home">
-            <div className="flex justify-start items-center grow basis-0">
-              <div className="text-white mr-2 text-6xl">
+            <div className="flex grow basis-0 items-center justify-start">
+              <div className="mr-2 text-6xl text-white">
                 <ShorebirdLogo />
               </div>
-              <div className="text-white font-['Inter'] font-bold text-xl">
+              <div className="font-['Inter'] text-xl font-bold text-white">
                 {config.app}
               </div>
             </div>
@@ -46,7 +46,7 @@ export const Navbar = (props: NavbarProps) => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="hidden lg:flex h-full pl-12 pb-2">
+          <div className="hidden h-full pb-2 pl-12 lg:flex">
             {props.links?.map(({ href, label, ariaLabel }) => (
               <a
                 className="navbar-link"
@@ -65,10 +65,10 @@ export const Navbar = (props: NavbarProps) => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="grow basis-0 justify-end items-center hidden lg:flex">
+          <div className="hidden grow basis-0 items-center justify-end lg:flex">
             <a
-              className="text-white rounded-xl
-           bg-shorebirdBg2 text-sm flex"
+              className="flex rounded-xl
+           bg-shorebirdBg2 text-sm text-white"
               href={config.discordUrl}
               target="_blank"
               aria-label="discord"
@@ -76,8 +76,8 @@ export const Navbar = (props: NavbarProps) => {
               <DiscordIcon />
             </a>
             <a
-              className="text-white rounded-xl
-           bg-shorebirdBg2 text-sm flex ml-4"
+              className="ml-4 flex
+           rounded-xl bg-shorebirdBg2 text-sm text-white"
               href={config.twitterUrl}
               target="_blank"
               aria-label="twitter"
@@ -85,8 +85,8 @@ export const Navbar = (props: NavbarProps) => {
               <TwitterIcon />
             </a>
             <a
-              className="text-white rounded-xl
-           bg-shorebirdBg2 text-sm flex ml-4"
+              className="ml-4 flex
+           rounded-xl bg-shorebirdBg2 text-sm text-white"
               href={config.githubUrl}
               target="_blank"
               aria-label="source code"
@@ -94,7 +94,7 @@ export const Navbar = (props: NavbarProps) => {
               <GitHubIcon />
             </a>
             <a
-              className="text-white ml-4 border-2 border-slate-600 rounded-md p-2 hover:border-slate-400"
+              className="ml-4 rounded-md border-2 border-slate-600 p-2 text-white hover:border-slate-400"
               href={config.consoleUrl}
               target="_blank"
               aria-label="source code"
@@ -105,12 +105,12 @@ export const Navbar = (props: NavbarProps) => {
         </motion.div>
         {props.links ? (
           <div
-            className="lg:hidden flex flex-col  px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-shorebirdBg2"
+            className="flex cursor-pointer flex-col  rounded-md border border-solid border-gray-600 px-2 py-3 hover:bg-shorebirdBg2 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-            <div className="w-5 h-0.5 bg-gray-500 "></div>
+            <div className="mb-1 h-0.5 w-5  bg-gray-500"></div>
+            <div className="mb-1 h-0.5 w-5  bg-gray-500"></div>
+            <div className="h-0.5 w-5 bg-gray-500 "></div>
           </div>
         ) : (
           <></>
@@ -126,8 +126,8 @@ export const Navbar = (props: NavbarProps) => {
             exit={{ opacity: 0 }}
           >
             <div
-              className="flex flex-col mt-16 lg:hidden absolute top-4 left-0  bg-shorebirdBg1 z-50 w-full 
-        items-center gap-10 pb-10 border-y border-solid border-shorebirdBg3 pt-10
+              className="absolute left-0 top-4 z-50 mt-16 flex w-full  flex-col items-center gap-10 
+        border-y border-solid border-shorebirdBg3 bg-shorebirdBg1 pb-10 pt-10 lg:hidden
         "
             >
               <a

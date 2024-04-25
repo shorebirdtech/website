@@ -42,7 +42,7 @@ const faqs = [
 ];
 
 export const FAQ = () => (
-  <section className="relative pt-16 pb-16 bg-blueGray-50 overflow-hidden">
+  <section className="bg-blueGray-50 relative overflow-hidden pb-16 pt-16">
     <div className="absolute -top-10" id="faq" />
     <motion.div
       initial={{ opacity: 0 }}
@@ -50,10 +50,10 @@ export const FAQ = () => (
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
-        <div className="md:max-w-4xl mx-auto">
-          <h2 className="mb-16 shorebird-block-big-title text-center">FAQs</h2>
-          <div className="mb-11 flex flex-wrap -m-1">
+      <div className="container relative z-10 mx-auto w-11/12 px-2 sm:w-full sm:px-8 lg:px-4">
+        <div className="mx-auto md:max-w-4xl">
+          <h2 className="shorebird-block-big-title mb-16 text-center">FAQs</h2>
+          <div className="-m-1 mb-11 flex flex-wrap">
             {faqs.map((faq, index) => (
               <div key={index} className="w-full p-1">
                 <FAQBox
@@ -91,21 +91,21 @@ const FAQBox = ({ defaultOpen, title, content }) => {
 
   return (
     <div
-      className="pt-2 sm:pt-6 pb-2 px-3 sm:px-8  rounded-3xl bg-shorebirdBg3 shorebird-border-gray-darker mb-4 relative hover:bg-shorebirdBg3Hover cursor-pointer"
+      className="shorebird-border-gray-darker relative mb-4 cursor-pointer rounded-3xl  bg-shorebirdBg3 px-3 pb-2 pt-2 hover:bg-shorebirdBg3Hover sm:px-8 sm:pt-6"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex flex-col p-2  justify-center items-start">
-        <h3 className=" shorebird-content-title pt-3 sm:pt-0 pr-8 sm:pr-0">
+      <div className="flex flex-col items-start  justify-center p-2">
+        <h3 className=" shorebird-content-title pr-8 pt-3 sm:pr-0 sm:pt-0">
           {title}
         </h3>
         <ReactMarkdown
-          className={`prose prose-invert text-shorebirdTextGray pt-4 transition-all duration-300 overflow-hidden ${
+          className={`prose prose-invert overflow-hidden pt-4 text-shorebirdTextGray transition-all duration-300 ${
             isOpen ? 'max-h-96' : 'max-h-0'
           }`}
           children={`${content}`}
         ></ReactMarkdown>
       </div>
-      <div className="absolute top-6 right-4 sm:top-8 sm:right-8">
+      <div className="absolute right-4 top-6 sm:right-8 sm:top-8">
         <svg
           width="28px"
           height="30px"

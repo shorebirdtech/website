@@ -34,23 +34,23 @@ const team = [
 ];
 
 export const Team = () => (
-  <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 relative">
+  <section className="relative mb-16 flex w-full justify-center pt-10 lg:mb-32">
     <div className="absolute -top-16" id="team" />
-    <div className="flex flex-col w-full lg:w-[1150px] justify-center">
+    <div className="flex w-full flex-col justify-center lg:w-[1150px]">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: 0.3 }}
       >
-        <div className="shorebird-block-big-title text-center mb-16 px-8 sm:px-24 md:px-48">
+        <div className="shorebird-block-big-title mb-16 px-8 text-center sm:px-24 md:px-48">
           Built by Flutter experts
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0 items-center">
+        <div className="flex flex-col items-center gap-8 px-6 lg:flex-row lg:gap-5 xl:gap-10 xl:px-0">
           {team.map((member, index) => (
             <motion.div
-              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 shorebird-border-gray-darker rounded-xl bg-shorebirdBg3 text-white flex flex-col p-4"
+              className="shorebird-border-gray-darker flex w-11/12 flex-col rounded-xl bg-shorebirdBg3 p-4 text-white sm:w-4/5 md:w-[560px] lg:w-1/3"
               key={`${member.name}-${index}`}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -59,17 +59,17 @@ export const Team = () => (
             >
               <div className="flex">
                 <img
-                  className="rounded-xl h-[45px] w-[45px]"
+                  className="h-[45px] w-[45px] rounded-xl"
                   src={member.headshot.src}
                   alt={`${member.name} headshot`}
                   width="45"
                   height="45"
                 />
-                <div className="flex flex-col justify-center ml-4">
-                  <div className="font-medium text-2xl">{member.name}</div>
+                <div className="ml-4 flex flex-col justify-center">
+                  <div className="text-2xl font-medium">{member.name}</div>
                 </div>
               </div>
-              <div className="mt-4 mb-2 xl:mt-8 xl:mb-4">
+              <div className="mb-2 mt-4 xl:mb-4 xl:mt-8">
                 <ReactMarkdown className="prose prose-invert text-shorebirdTextGray">
                   {member.bio}
                 </ReactMarkdown>
