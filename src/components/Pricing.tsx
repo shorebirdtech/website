@@ -40,11 +40,25 @@ export const Pricing = () => {
               <EnterprisePlan />
             </div>
           </div>
+          <PricesNote />
         </motion.div>
       </div>
     </section>
   );
 };
+
+function PricesNote() {
+  return (
+    // Make the text smaller and centered.
+    <div className="text-center text-shorebirdTextGray text-sm mt-8">
+      <p>
+      Prices are quoted in USD and sold as "patch installs per month", reflecting
+      successful installs of a given patch. e.g. 1 patch pushed to 10 devices is
+      10 installs. 2 patches pushed to 5 devices each is also 10 installs.
+      </p>
+    </div>
+  );
+}
 
 function HobbyPlan() {
   const features: Feature[] = [
