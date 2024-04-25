@@ -49,7 +49,7 @@ export const Pricing = () => {
 
 function PricesNote() {
   return (
-    <div className="mx-auto mb-8 mt-6 max-w-xl px-8 text-center text-sm text-shorebirdTextGray">
+    <div className="mx-auto mb-8 mt-6 max-w-2xl px-8 text-center text-sm text-shorebirdTextGray">
       <p>
         *Prices are quoted in USD and sold as "patch installs per month",
         reflecting successful installs of a given patch. For example, 1 patch
