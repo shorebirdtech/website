@@ -49,14 +49,15 @@ export const Pricing = () => {
 
 function PricesNote() {
   return (
-    // Make the text smaller and centered.
-    <div className="text-center text-shorebirdTextGray text-sm mt-8">
-      <p>
-        Prices are quoted in USD and sold as "patch installs per month",
-        reflecting successful installs of a given patch. e.g. 1 patch pushed to
-        10 devices is 10 installs. 2 patches pushed to 5 devices each is also 10
-        installs.
-      </p>
+    <div className="container px-8">
+      <div className="text-center mx-auto text-shorebirdTextGray text-sm mt-6 max-w-xl mb-8">
+        <p>
+          *Prices are quoted in USD and sold as "patch installs per month",
+          reflecting successful installs of a given patch. For example, 1 patch
+          pushed to 10 devices is 10 installs. 2 patches pushed to 5 devices is
+          also 10 installs.
+        </p>
+      </div>
     </div>
   );
 }
