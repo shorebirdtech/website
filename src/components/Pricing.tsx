@@ -15,9 +15,9 @@ interface Price {
 
 export const Pricing = () => {
   return (
-    <section className="w-screen flex justify-center bg-shorebirdBg2 relative">
+    <section className="relative flex w-screen justify-center bg-shorebirdBg2">
       <div className="absolute -top-16" id="pricing" />
-      <div className="pb-20 pt-12 bg-shorebirdBg2  2xl:w-[1150px] lg:w-[1050px]  md:w-4/5 ">
+      <div className="bg-shorebirdBg2 pb-20 pt-12  md:w-4/5 lg:w-[1050px]  2xl:w-[1150px] ">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -25,8 +25,8 @@ export const Pricing = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center mb-16">
-              <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-white">
+            <div className="mx-auto mb-16 max-w-2xl text-center">
+              <h2 className="font-heading mb-6 mt-6 text-4xl font-bold text-white lg:text-5xl">
                 Join the flock
               </h2>
               <p className="mb-6 text-shorebirdTextGray">
@@ -34,7 +34,7 @@ export const Pricing = () => {
                 as you grow.
               </p>
             </div>
-            <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center mt-20 gap-4">
+            <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
               <HobbyPlan />
               <TeamPlan />
               <EnterprisePlan />
@@ -49,7 +49,7 @@ export const Pricing = () => {
 
 function PricesNote() {
   return (
-    <div className="px-8 text-center mx-auto text-shorebirdTextGray text-sm mt-6 max-w-xl mb-8">
+    <div className="mx-auto mb-8 mt-6 max-w-xl px-8 text-center text-sm text-shorebirdTextGray">
       <p>
         *Prices are quoted in USD and sold as "patch installs per month",
         reflecting successful installs of a given patch. For example, 1 patch
@@ -68,22 +68,22 @@ function HobbyPlan() {
     { title: 'Community support' },
   ];
   return (
-    <div className="w-[325px] px-1 mb-8 lg:mb-0">
+    <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div>
-        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
-          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
+        <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
+          <p className="font-heading mb-2 text-left text-xl font-bold text-white">
             Hobby
           </p>
-          <div className="flex justify-start items-end">
-            <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
+          <div className="flex items-end justify-start">
+            <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
               $0
             </div>
             <div className="text-gray-500">{'/ month'}</div>
           </div>
-          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+          <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
             For small apps and demos.
           </p>
-          <ul className="mb-2 2xl:mb-6 text-white">
+          <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
               <FeatureListItem
                 key={`hobby-feature-${index}`}
@@ -94,7 +94,7 @@ function HobbyPlan() {
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-primary font-bold leading-loose mt-8"
+            className="shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
@@ -116,10 +116,10 @@ function PriceSlider({
   return (
     <div className="flex w-full flex-col">
       <div className="flex flex-row items-end">
-        <div className="text-4xl sm:text-5xl font-bold text-white text-left mt-4 mr-2">
+        <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
           {price.amount}
         </div>
-        <div className="text-gray-500 justify-end">{'/ month'}</div>
+        <div className="justify-end text-gray-500">{'/ month'}</div>
       </div>
       <div className="h-4"></div>
       <input
@@ -180,7 +180,7 @@ function TeamPlan() {
     return (
       <>
         <button
-          className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-secondary font-bold leading-loose"
+          className="shorebird-button-secondary inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           type="button"
           onClick={() => setShowModal(true)}
         >
@@ -189,15 +189,15 @@ function TeamPlan() {
         {showModal ? (
           <>
             <div
-              className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none"
               onClick={() => setShowModal(false)}
             >
-              <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                <div className="rounded-lg shadow-lg relative flex flex-col  bg-shorebirdBg3 outline-none focus:outline-none text-white">
-                  <div className="flex items-start justify-between p-5 rounded-t">
+              <div className="relative mx-auto my-6 w-auto max-w-3xl">
+                <div className="relative flex flex-col rounded-lg bg-shorebirdBg3  text-white shadow-lg outline-none focus:outline-none">
+                  <div className="flex items-start justify-between rounded-t p-5">
                     <h3 className="text-xl font-semibold">Teams Tiers</h3>
                   </div>
-                  <div className="relative px-12 py-5 flex-auto">
+                  <div className="relative flex-auto px-12 py-5">
                     <ul>
                       {prices.map((price, index) => (
                         <li
@@ -213,7 +213,7 @@ function TeamPlan() {
                     </ul>
                   </div>
                   <button
-                    className="text-center text-slate-100 font-bold pb-6"
+                    className="pb-6 text-center font-bold text-slate-100"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
@@ -222,7 +222,7 @@ function TeamPlan() {
                 </div>
               </div>
             </div>
-            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
           </>
         ) : null}
       </>
@@ -230,13 +230,13 @@ function TeamPlan() {
   }
 
   return (
-    <div className="w-[325px] px-1 mb-8 lg:mb-0">
-      <div className="rounded-3xl bg-gradient-to-r from-blue-400 to-teal-500 via-purple-500 animate-gradient-xy p-1">
-        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
-          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
+    <div className="mb-8 w-[325px] px-1 lg:mb-0">
+      <div className="animate-gradient-xy rounded-3xl bg-gradient-to-r from-blue-400 via-purple-500 to-teal-500 p-1">
+        <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
+          <p className="font-heading mb-2 text-left text-xl font-bold text-white">
             Team
           </p>
-          <div className="flex justify-start items-end">
+          <div className="flex items-end justify-start">
             <PriceSlider
               prices={prices}
               onChange={(price) => {
@@ -244,10 +244,10 @@ function TeamPlan() {
               }}
             />
           </div>
-          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+          <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
             For apps that can scale.
           </p>
-          <ul className="mb-2 2xl:mb-6 text-white">
+          <ul className="mb-2 text-white 2xl:mb-6">
             <FeatureListItem
               key={`teams-patch-install-count`}
               title={`${quantity} patch installs/month`}
@@ -266,7 +266,7 @@ function TeamPlan() {
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-primary font-bold leading-loose"
+            className="shorebird-button-primary inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
@@ -286,21 +286,21 @@ function EnterprisePlan() {
     { title: 'Private Support' },
   ];
   return (
-    <div className="w-[325px] px-1 mb-8 lg:mb-0">
+    <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div>
-        <div className="h-full p-6 bg-shorebirdBg3 rounded-3xl">
-          <p className="mb-2 text-xl font-bold font-heading text-white text-left">
+        <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
+          <p className="font-heading mb-2 text-left text-xl font-bold text-white">
             Enterprise
           </p>
-          <div className="flex justify-start items-end">
-            <div className="text-3xl sm:text-4xl font-bold text-white text-left mt-4 mr-2 mb-2">
+          <div className="flex items-end justify-start">
+            <div className="mb-2 mr-2 mt-4 text-left text-3xl font-bold text-white sm:text-4xl">
               Custom
             </div>
           </div>
-          <p className="mt-4 mb-4 text-gray-500 leading-loose text-left">
+          <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
             For very large apps.
           </p>
-          <ul className="mb-2 2xl:mb-6 text-white">
+          <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
               <FeatureListItem
                 key={`enterprise-feature-${index}`}
@@ -311,7 +311,7 @@ function EnterprisePlan() {
           <a
             target="_blank"
             href={config.contactSales}
-            className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl shorebird-button-primary font-bold leading-loose mt-8"
+            className="shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Schedule a Call
           </a>

@@ -3,15 +3,15 @@ import promo from '../assets/videos/promo.mp4';
 
 export const PromoVideo = () => {
   return (
-    <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 relative">
-      <div className="flex flex-col w-full lg:w-[1150px] justify-center">
+    <section className="relative mb-16 flex w-full justify-center pt-10 lg:mb-32">
+      <div className="flex w-full flex-col justify-center lg:w-[1150px]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.3 }}
         >
-          <div className="shorebird-block-big-title text-center mb-16 px-8 sm:px-24 md:px-48">
+          <div className="shorebird-block-big-title mb-16 px-8 text-center sm:px-24 md:px-48">
             See it in action
           </div>
           <video
@@ -20,7 +20,7 @@ export const PromoVideo = () => {
             muted={true}
             playsInline={true}
             src={promo}
-            className="w-6/7 sm:w-4/6 2xl:w-[1200px] mx-auto rounded-xl shorebird-border-gray hero-dashboard-border-gradient"
+            className="w-6/7 shorebird-border-gray hero-dashboard-border-gradient mx-auto rounded-xl sm:w-4/6 2xl:w-[1200px]"
           />
         </motion.div>
       </div>

@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 export const NewsLetter = () => {
   return (
-    <section className="w-screen flex justify-center bg-shorebirdBg1 relative">
+    <section className="relative flex w-screen justify-center bg-shorebirdBg1">
       <div className="absolute -top-16" id="newsletter" />
-      <div className="pb-20 pt-12 bg-shorebirdBg1  2xl:w-[1150px] lg:w-[1050px]  md:w-4/5 ">
+      <div className="bg-shorebirdBg1 pb-20 pt-12  md:w-4/5 lg:w-[1050px]  2xl:w-[1150px] ">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -12,10 +12,10 @@ export const NewsLetter = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="mb-4 text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight sm:text-4xl">
+            <h2 className="font-heading mb-4 text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Get notified
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl font-light md:mb-12 sm:text-xl text-gray-400">
+            <p className="mx-auto mb-8 max-w-2xl font-light text-gray-400 sm:text-xl md:mb-12">
               Stay in the know with updates from Shorebird.
             </p>
             <div id="mc_embed_signup">
@@ -25,17 +25,17 @@ export const NewsLetter = () => {
                 id="mc-embedded-subscribe-form"
                 target="_self"
               >
-                <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+                <div className="mx-auto mb-3 max-w-screen-sm items-center space-y-4 sm:flex sm:space-y-0">
                   <div className="relative w-full">
                     <label
                       htmlFor="mce-EMAIL"
-                      className="hidden mb-2 text-sm font-medium text-gray-300"
+                      className="mb-2 hidden text-sm font-medium text-gray-300"
                     >
                       Email address
                     </label>
-                    <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                       <svg
-                        className="w-5 h-5  text-gray-400"
+                        className="h-5 w-5  text-gray-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export const NewsLetter = () => {
                       </svg>
                     </div>
                     <input
-                      className="block p-3 pl-10 w-full text-sm  rounded-lg border sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500"
+                      className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 block  w-full rounded-lg border border-gray-600 bg-gray-700 p-3 pl-10 text-sm text-white placeholder-gray-400 sm:rounded-none sm:rounded-l-lg"
                       placeholder="Enter your email"
                       type="email"
                       name="EMAIL"
@@ -60,7 +60,7 @@ export const NewsLetter = () => {
                       type="submit"
                       value="Subscribe"
                       name="subscribe"
-                      className="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
+                      className="bg-primary-700 border-primary-600 hover:bg-primary-800 focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800 w-full cursor-pointer rounded-lg border px-5 py-3 text-center text-sm font-medium text-white focus:ring-4 sm:rounded-none sm:rounded-r-lg"
                     >
                       Subscribe
                     </button>

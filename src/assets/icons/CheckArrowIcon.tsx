@@ -1,5 +1,5 @@
 export const CheckArrowIcon = () => (
-  <div className="rounded-full bg-transparent w-5 h-5 flex justify-center items-center mr-4">
+  <div className="mr-4 flex h-5 w-5 items-center justify-center rounded-full bg-transparent">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"

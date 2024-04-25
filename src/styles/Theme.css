@@ -5,13 +5,13 @@
 /* Typography */
 
 .shorebird-block-big-title {
-  @apply text-white text-5xl xl:text-6xl font-bold tracking-normal;
+  @apply text-5xl font-bold tracking-normal text-white xl:text-6xl;
 }
 .shorebird-block-subtitle {
-  @apply text-xs text-shorebirdSecondary  tracking-wider font-bold uppercase;
+  @apply text-xs font-bold  uppercase tracking-wider text-shorebirdSecondary;
 }
 .shorebird-content-title {
-  @apply text-white text-lg font-bold tracking-normal;
+  @apply text-lg font-bold tracking-normal text-white;
 }
 
 /* Backgrounds */
@@ -42,17 +42,17 @@ html {
 /* Buttons */
 
 .shorebird-button-primary {
-  @apply rounded-lg font-bold bg-shorebirdPrimary text-white flex justify-center items-center hover:bg-[#0196C0] cursor-pointer transition;
+  @apply flex cursor-pointer items-center justify-center rounded-lg bg-shorebirdPrimary font-bold text-white transition hover:bg-[#0196C0];
 }
 
 .shorebird-button-secondary {
-  @apply rounded-lg font-bold border border-shorebirdPrimary text-white flex justify-center items-center hover:border-[#0196C0] cursor-pointer transition;
+  @apply flex cursor-pointer items-center justify-center rounded-lg border border-shorebirdPrimary font-bold text-white transition hover:border-[#0196C0];
 }
 
 /* Navbar */
 
 .navbar-link {
-  @apply text-white lg:text-base text-2xl leading-6 mr-4 ml-4 2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition duration-300 h-full pt-2;
+  @apply ml-4 mr-4 h-full cursor-pointer pt-2 text-2xl font-normal leading-6 text-white transition duration-300 hover:scale-110 lg:text-base lg:font-medium 2xl:ml-6 2xl:mr-6;
 }
 
 /* Preventing FOUC */
@@ -62,7 +62,7 @@ html {
 
 /* Tooltip */
 .tooltip {
-  @apply invisible absolute p-2 md:p-4 rounded shadow-lg md:ml-4 -ml-14 text-sm bg-shorebirdBg1 -mt-28 md:-mt-20;
+  @apply invisible absolute -ml-14 -mt-28 rounded bg-shorebirdBg1 p-2 text-sm shadow-lg md:-mt-20 md:ml-4 md:p-4;
 }
 
 .tooltip-container:hover .tooltip {
@@ -71,26 +71,26 @@ html {
 
 @layer components {
   input[type='range'] {
-    @apply appearance-none bg-transparent cursor-pointer;
+    @apply cursor-pointer appearance-none bg-transparent;
   }
 
   input[type='range']::-webkit-slider-runnable-track {
-    @apply bg-black/25 rounded-full;
+    @apply rounded-full bg-black/25;
   }
 
   input[type='range']::-moz-range-track {
-    @apply bg-black/25 rounded-full;
+    @apply rounded-full bg-black/25;
   }
 
   input[type='range']::-ms-track {
-    @apply bg-black/25 rounded-full;
+    @apply rounded-full bg-black/25;
   }
 
   input[type='range']::-webkit-slider-thumb {
-    @apply appearance-none bg-gradient-to-r from-teal-400 to-purple-400 animate-gradient-xy w-4 h-4 rounded-full shadow-lg;
+    @apply h-4 w-4 animate-gradient-xy appearance-none rounded-full bg-gradient-to-r from-teal-400 to-purple-400 shadow-lg;
   }
 
   input[type='range']::-moz-range-thumb {
-    @apply appearance-none bg-gradient-to-r from-teal-400 to-purple-400 animate-gradient-xy w-4 h-4 rounded-full shadow-lg;
+    @apply h-4 w-4 animate-gradient-xy appearance-none rounded-full bg-gradient-to-r from-teal-400 to-purple-400 shadow-lg;
   }
 }
