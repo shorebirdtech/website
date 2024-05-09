@@ -60,7 +60,7 @@ uses Dart’s "just-in-time" (JIT) compiler. A JIT compiler is a way of turning
 source code into machine code right before the computer executes it. It’s the
 way that JavaScript, JavaScript, Lua and many other languages typically work.
 Shorebird does not use Dart’s JIT, rather a customer interpreter we built. An
-[interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing)) is code
+[interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)>) is code
 that is used to execute logic from source code directly, without "compiling" it
 (translating it to machine code). This is important in the context of updates,
 because use of an interpreter is required by [Apple’s developer
