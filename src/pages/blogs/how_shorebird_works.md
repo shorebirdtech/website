@@ -1,3 +1,9 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: Blog | How Shorebird Works
+description: How Shorebird Code Push works
+---
+
 # How Shorebird Works
 
 ## Code Push

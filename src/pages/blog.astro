@@ -1,0 +1,11 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const allPosts = await Astro.glob('../pages/blogs/*.md');
+const title = "Shorebird Blog";
+---
+<MainLayout title={title}>
+  <p>Shorebird Blog Posts</p>
+  <ul>
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
+</MainLayout>
