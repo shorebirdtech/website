@@ -10,7 +10,7 @@ description: How Shorebird Code Push works
 
 Code push, sometimes called “over the air updates”, is a way of updating
 application code in production so that all your users are always running the
-latest code – just like how your web application works. Code push for Flutter is
+latest code – just like how a web application works. Code push for Flutter is
 one of the top 50 most upvoted issues across all of GitHub. Code push solutions
 have long been used by mobile developers to make app development more like web
 development. Existing solutions have typically relied on WebViews or Lua
