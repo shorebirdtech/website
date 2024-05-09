@@ -12,10 +12,10 @@ Code push, sometimes called "over the air updates", is a way of updating
 application code in production so that all your users are always running the
 latest code – just like how a web application works. [Code push for
 Flutter](https://github.com/flutter/flutter/issues/14330) is one of the top 50
-most upvoted issues across all of GitHub. Code push solutions have long been
-used by mobile developers to make app development more like web development.
+most upvoted issues across all of GitHub. Code push has long been used by mobile
+developers to make app development more like web development.
 
-Existing code push olutions have typically relied on WebViews or Lua scripts,
+Existing code push solutions have typically relied on WebViews or Lua scripts,
 and require developers to use different languages and frameworks for different
 parts of their applications. These also implicitly require developers to be able
 to predict where their code will have bugs, since only some parts of their
@@ -23,16 +23,16 @@ applications are updatable and others not. At Shorebird when we sat down to
 build Code Push for Flutter, we wanted to build something better.
 
 Shorebird’s code push for Flutter allows developers to update their Flutter apps
-instantly, over the air, deploying fixes directly to end users’ devices. Our
-solution takes < 5 minutes to integrate and requires no code changes.
-Shorebird’s code push can update any Dart code in your app. We’ve designed our
-system to comply with Apple and Google store policies without sacrificing
-performance (even after patching).
+instantly, over the air, deploying fixes directly to end users’ devices.
+Shorebird takes < 5 minutes to integrate and requires no code changes. Our code
+push can update any Dart code in your app. We’ve designed our system to comply
+with Apple and Google store policies without sacrificing performance (even after
+patching).
 
 ## How does code push work?
 
 Shorebird’s code push starts by forking Flutter & Dart. We’ve made very few
-modifications to the Flutter tool, and Flutter engine, none to the Framework,
+modifications to the Flutter tool and Flutter engine, none to the Framework,
 but have made significant changes to Dart. Essentially we built a custom Dart
 toolchain and Dart runtime to make apps updatable in production.
 
