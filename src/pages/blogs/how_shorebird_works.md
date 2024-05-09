@@ -10,16 +10,17 @@ description: How Shorebird Code Push works
 
 Code push, sometimes called "over the air updates", is a way of updating
 application code in production so that all your users are always running the
-latest code – just like how a web application works. Code push for Flutter is
-one of the top 50 most upvoted issues across all of GitHub. Code push solutions
-have long been used by mobile developers to make app development more like web
-development. Existing solutions have typically relied on WebViews or Lua
-scripts, and require developers to use different languages and frameworks for
-different parts of their applications. Such solutions also implicitly require
-developers to be able to predict where they will have bugs in their code, since
-only some parts of their applications are updatable and others not. At Shorebird
-when we sat down to build Code Push for Flutter, we wanted to build something
-better.
+latest code – just like how a web application works. [Code push for
+Flutter](https://github.com/flutter/flutter/issues/14330) is one of the top 50
+most upvoted issues across all of GitHub. Code push solutions have long been
+used by mobile developers to make app development more like web development.
+
+Existing code push olutions have typically relied on WebViews or Lua scripts,
+and require developers to use different languages and frameworks for different
+parts of their applications. These also implicitly require developers to be able
+to predict where their code will have bugs, since only some parts of their
+applications are updatable and others not. At Shorebird when we sat down to
+build Code Push for Flutter, we wanted to build something better.
 
 Shorebird’s code push for Flutter allows developers to update their Flutter apps
 instantly, over the air, deploying fixes directly to end users’ devices. Our
@@ -37,8 +38,8 @@ toolchain and Dart runtime to make apps updatable in production.
 
 Our Code Push consists of:
 
-1. A command line program shorebird that knows how to wrap flutter, including
-   pulling down its own fork of Flutter’s engine.
+1. A command line program `shorebird` that knows how to wrap `flutter`,
+   including pulling down its own fork of Flutter’s engine.
 2. A fork of Flutter’s engine that includes our custom updater, a library we
    built to manage patches in your application.
 3. A cloud service at shorebird.dev to store information about your releases
@@ -47,9 +48,10 @@ Our Code Push consists of:
 4. And finally fork of the Dart compiler toolchain, which makes it possible to
    construct and run these "patches" to your application.
 
-The command line and cloud service are already covered in our architecture
-documentation. But recently we’ve received a bunch of questions about how our
-Dart modifications work, so I’m going to cover those here.
+The command line and cloud service are already covered in our
+[architecture](https://docs.shorebird.dev/architecture/) documentation. But
+recently we’ve received a bunch of questions about how our Dart modifications
+work, so I’m going to cover those here.
 
 ## Dart
 
@@ -58,12 +60,13 @@ uses Dart’s "just-in-time" (JIT) compiler. A JIT compiler is a way of turning
 source code into machine code right before the computer executes it. It’s the
 way that JavaScript, JavaScript, Lua and many other languages typically work.
 Shorebird does not use Dart’s JIT, rather a customer interpreter we built. An
-interpreter is logic that is used to execute logic from source code directly,
-without "compiling" it (translating it to machine code). This is important in
-the context of updates, because use of an interpreter is required by Apple’s
-developer agreement when updating applications. Dart did not have a
-production-ready interpreter, but was designed in such a way that adding one was
-possible, so we did.
+[interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing)) is code
+that is used to execute logic from source code directly, without "compiling" it
+(translating it to machine code). This is important in the context of updates,
+because use of an interpreter is required by [Apple’s developer
+agreement](https://developer.apple.com/support/terms/apple-developer-program-license-agreement/#b331)
+when updating applications. Dart did not have a production-ready interpreter,
+but was designed in such a way that adding one was possible, so we did.
 
 Just-in-time systems have several nice properties. One is flexibility – a JIT’d
 language like JavaScript can run source code it’s never seen before in
@@ -99,13 +102,14 @@ your application at runtime without needing to compile new code on the device.
 ## An interpreter for Dart
 
 Adding an interpreter to Dart was a challenge (working on compilers is hard, if
-you like compilers, we’re hiring), and took us most of the last year. We didn’t
-try to build a particularly fancy interpreter for Dart (that had been attempted
-at Google multiple times before), but rather built something very simple. One of
-the challenges this creates is that Interpreters (and particularly our simple
-one) are very slow. In our case, our current (unoptimized) interpreter is about
-100x slower than executing Dart AOT code on a CPU. Thankfully we had an insight
-early on that made us not have to care about interpreter speed.
+you like compilers, we’re [hiring](https://shorebird.dev/jobs/)), and took us
+most of the last year. We didn’t try to build a particularly fancy interpreter
+for Dart (that had been attempted at Google multiple times before), but rather
+built something very simple. One of the challenges this creates is that
+Interpreters (and particularly our simple one) are very slow. In our case, our
+current (unoptimized) interpreter is about 100x slower than executing Dart AOT
+code on a CPU. Thankfully we had an insight early on that made us not have to
+care about interpreter speed.
 
 The insight that makes Shorebird possible is building a system that runs only
 changed Dart logic on the interpreter. Since the vast majority of the
@@ -121,10 +125,11 @@ was hard. To do this we invented a new phase of Dart compilation we called the
 "linker". The linker’s job is to analyze two (similar) Dart programs and find
 the maximal similarity between them and then decide what would be necessary to
 update in the first one in order to make it run like the second. We still have a
-couple missing optimizations in this part of our system, but when it works well,
-developers see 99% of their code run on the CPU (even for large changes).
-Teaching the linker how to figure this out however required significant changes
-to Dart’s compiler toolchain.
+[couple missing
+optimizations](https://github.com/shorebirdtech/shorebird/issues/1892) in this
+part of our system, but when it works well, developers see 99% of their code run
+on the CPU (even for large changes). Teaching the linker how to figure this out
+however required significant changes to Dart’s compiler toolchain.
 
 ## Changes to Dart’s Toolchain
 
