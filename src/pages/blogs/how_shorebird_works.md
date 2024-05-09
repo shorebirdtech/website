@@ -37,7 +37,7 @@ toolchain and Dart runtime to make apps updatable in production.
 
 Our Code Push consists of:
 
-1. a command line program shorebird that knows how to wrap flutter, including
+1. A command line program shorebird that knows how to wrap flutter, including
    pulling down its own fork of Flutter’s engine.
 2. A fork of Flutter’s engine that includes our custom updater, a library we
    built to manage patches in your application.
