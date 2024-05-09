@@ -8,7 +8,7 @@ description: How Shorebird Code Push works
 
 ## Code Push
 
-Code push, sometimes called “over the air updates”, is a way of updating
+Code push, sometimes called "over the air updates", is a way of updating
 application code in production so that all your users are always running the
 latest code – just like how a web application works. Code push for Flutter is
 one of the top 50 most upvoted issues across all of GitHub. Code push solutions
@@ -45,7 +45,7 @@ Our Code Push consists of:
    (builds you send to the stores) and patches (changes you make to releases via
    Shorebird), control rollout, see analytics, etc.
 4. And finally fork of the Dart compiler toolchain, which makes it possible to
-   construct and run these “patches” to your application.
+   construct and run these "patches" to your application.
 
 The command line and cloud service are already covered in our architecture
 documentation. But recently we’ve received a bunch of questions about how our
@@ -53,13 +53,13 @@ Dart modifications work, so I’m going to cover those here.
 
 ## Dart
 
-Dart has a “hot reload” feature used commonly during Flutter development. This
-uses Dart’s “just-in-time” (JIT) compiler. A JIT compiler is a way of turning
+Dart has a "hot reload" feature used commonly during Flutter development. This
+uses Dart’s "just-in-time" (JIT) compiler. A JIT compiler is a way of turning
 source code into machine code right before the computer executes it. It’s the
 way that JavaScript, JavaScript, Lua and many other languages typically work.
 Shorebird does not use Dart’s JIT, rather a customer interpreter we built. An
 interpreter is logic that is used to execute logic from source code directly,
-without “compiling” it (translating it to machine code). This is important in
+without "compiling" it (translating it to machine code). This is important in
 the context of updates, because use of an interpreter is required by Apple’s
 developer agreement when updating applications. Dart did not have a
 production-ready interpreter, but was designed in such a way that adding one was
@@ -67,14 +67,14 @@ possible, so we did.
 
 Just-in-time systems have several nice properties. One is flexibility – a JIT’d
 language like JavaScript can run source code it’s never seen before in
-production. Another is that a JIT can be very good at “peak performance”, since
+production. Another is that a JIT can be very good at "peak performance", since
 a JIT runtime includes a compiler (something to turn source code into machine
 code) during production, which means a sophisticated JIT can run some code,
 measure that it’s being run very often and then go back and compile the same
 code in a more optimized way (with different tradeoffs) to make it run faster (a
-type of “profile guided optimization”). In an “ahead of time” (AOT) compiled
+type of "profile guided optimization"). In an "ahead of time" (AOT) compiled
 language (like Swift) the source code is only used on the developer’s machine to
-produce the “machine code” which will end up running on the user’s device. AOT
+produce the "machine code" which will end up running on the user’s device. AOT
 solutions have the nice advantage of not including a compiler in production
 (smaller binary size) as well as having faster startup because there is no work
 to do when starting the app. At the tradeoff of some amount of peak performance
@@ -118,7 +118,7 @@ This was our bet. Other than being extremely hard to make work, it paid off.
 
 Determining what parts of your program we could run on the CPU vs. interpreter
 was hard. To do this we invented a new phase of Dart compilation we called the
-“linker”. The linker’s job is to analyze two (similar) Dart programs and find
+"linker". The linker’s job is to analyze two (similar) Dart programs and find
 the maximal similarity between them and then decide what would be necessary to
 update in the first one in order to make it run like the second. We still have a
 couple missing optimizations in this part of our system, but when it works well,
@@ -128,30 +128,29 @@ to Dart’s compiler toolchain.
 
 ## Changes to Dart’s Toolchain
 
-We changed large swaths of Dart’s codebase, including:
+We made many changes to Dart, including:
 
 1. Runtime changes to add our interpreter.
-2. Compiler changes to “optimize” a compiled program to make it maximally
-   similar to a previous version of the same program. (Including compiler
-   changes to be able to record and analyze internal compiler state as part of
-   this optimization.)
-3. This brand new linker which can compare “subgraphs” of your program and
-   decide if and how they’ve changed.
+2. Compiler changes teach the Dart compiler how to compile a program maximally
+   similar to a previous version of the same program.
+3. A new linker which can compare parts two versions of an app and decide if and
+   how they’ve changed.
 
-There were too many changes to go through here, but I’ll describe one example we recently solved.
+And much more -- too many to go through here, but I’ll give one example of a
+problem we recently solved.
 
 ## Optimizing Dart’s constant pool
 
-In programming languages it’s typically to have “constants” which are variables
+In programming languages it’s typically to have "constants" which are variables
 that don’t change at runtime. These are often pre-computed during compile time,
 saved in a common space and shared throughout the program. E.g. if you have the
-string “hello” in your program many times, most compilers will only allocate a
-single string “hello” and share it throughout your program.
+string "hello" in your program many times, most compilers will only allocate a
+single string "hello" and share it throughout your program.
 
-The way this works in Dart, is via something Dart calls the “Object Pool” (aka a
+The way this works in Dart, is via something Dart calls the "Object Pool" (aka a
 constant pool). In Dart’s JIT mode, each function ends up with its own Object
 Pool to hold constant references used within that function (e.g. strings,
-integers). In Dart’s AOT mode it combines all of these “Object Pools” into one
+integers). In Dart’s AOT mode it combines all of these "Object Pools" into one
 global object pool and updates all parts of your program accordingly to
 reference slots in this global object pool. So why does this matter? This
 matters because when we’re trying to update your program if the new version of
@@ -173,8 +172,8 @@ print("z");
 The dart compiler would produce an object pool:
 
 ```
-0 : “a”
-1 : “z”
+0 : "a"
+1 : "z"
 ```
 
 If we then change that to be:
@@ -190,22 +189,22 @@ print("c");
 Dart object pool would be:
 
 ```
-0: “a”
-1: “b”
-2: “z”
+0: "a"
+1: "b"
+2: "z"
 ```
 
-Notice that that index for “z” has changed! That means that all parts of your
-program that reference “z” are now changed and thus we can’t use the previously
+Notice that that index for "z" has changed! That means that all parts of your
+program that reference "z" are now changed and thus we can’t use the previously
 compiled (fast) version of this function, and have to run this logic in our
 interpreter.
 
 We solved this by teaching the Dart compiler how to construct order-dependent
 structures (there are many of these) like the Object Pool in a stable ordered
 fashion. Importantly we taught Dart that sometimes when it’s processing a
-“patch”, it should assign these indices in the Object Pool (and similar data
+"patch", it should assign these indices in the Object Pool (and similar data
 structures) to be maximally similar to how they were assigned in the provided
-“base” release.
+"base" release.
 
 As noted above, we had to make many more changes to Dart in order to make it
 work well for code push, but those we’ll have to save for another article.
