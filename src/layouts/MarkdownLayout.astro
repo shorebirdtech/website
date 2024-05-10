@@ -5,8 +5,11 @@ import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/inter/900.css';
+import { config } from '../config';
 import { Navbar } from '../components/Navbar.jsx';
 import { Footer } from '../components/Footer.jsx';
+
+import '../styles/Theme.css';
 
 const { frontmatter } = Astro.props;
 ---
@@ -28,7 +31,7 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title}</title>
   </head>
   <body>
-    <Navbar client:load />
+    <Navbar links={config.navLinks} client:load />
     <div class="prose prose-invert mx-auto pt-24 pb-16 px-4 md:px-0">
       <slot />
     </div>
