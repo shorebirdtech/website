@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownLayout.astro
 title: Blog | How Shorebird Works
 description: How Shorebird Code Push works
+date: May 9, 2024
 ---
 
 # How Shorebird Works

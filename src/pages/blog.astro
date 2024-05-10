@@ -1,11 +1,18 @@
 ---
+import { config } from '../config';
+import Blogs from '../components/Blogs.astro';
+import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
+import { ScrollToTopButton } from '../components/ScrollToTopButton';
 import MainLayout from '../layouts/MainLayout.astro';
-const allPosts = await Astro.glob('../pages/blogs/*.md');
-const title = "Shorebird Blog";
+
+import '../styles/Theme.css';
+import '../styles/Shapes.css';
 ---
-<MainLayout title={title}>
-  <p>Shorebird Blog Posts</p>
-  <ul>
-    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-  </ul>
+
+<MainLayout title={config.app}>
+  <Navbar links={config.navLinks} client:load />
+  <Blogs />
+  <Footer />
+  <ScrollToTopButton client:load />
 </MainLayout>
