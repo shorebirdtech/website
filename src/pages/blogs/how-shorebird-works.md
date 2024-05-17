@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: Blog | How Shorebird Works
-description: Explaining some of the changes we had to make to Dart and Flutter to make Shorebird's code push work.
+description: A deep-dive into some of the changes we made to Dart and Flutter in order to make code push work.
 date: May 9, 2024
 ---
 
