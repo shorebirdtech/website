@@ -10,10 +10,11 @@ date: May 9, 2024
 # How we changed Flutter and Dart to make code push work
 
 One of the most common questions we get, is "how does Shorebird work?". This
-
 article describes some of the changes we made to Dart and Flutter in order to
-make code push work. If you have more questions, [send us an email](mailto:contact@shorebird.dev) or [ask on
-Discord](https://discord.gg/shorebird) and we’ll be happy to answer them or include them in a future article.
+make code push work. If you have more questions, [send us an
+email](mailto:contact@shorebird.dev) or [ask on
+Discord](https://discord.gg/shorebird) and we’ll be happy to answer them or
+include them in a future article.
 
 ## Code Push
 
@@ -22,8 +23,8 @@ application code in production so that all your users are always running the
 latest code – just like how a web application works. [Code push for
 Flutter](https://github.com/flutter/flutter/issues/14330) is one of the top 50
 most upvoted issues across all of GitHub. Code push is a helpful tool to allow
-developers to push small updates such as typos, small fixes, and crashing
-without having to force all your users to download a new version of your app.
+developers to push small updates to their applications without having to force
+all your users to download a new version of your app.
 
 This blog takes a closer look at how we built a custom Dart toolchain and
 runtime to make apps updatable in production. For more information on the
@@ -41,10 +42,10 @@ build code push for Flutter, we wanted to build something better.
 
 Shorebird’s code push for Flutter allows developers to update their Flutter apps
 instantly, over the air, deploying fixes directly to end users’ devices.
-Shorebird takes < 5 minutes to integrate and requires no code changes. Our code
-push can update any Dart code in your app. We’ve designed our system to comply
-with Apple and Google store policies without sacrificing performance (even after
-patching).
+Shorebird takes < 5 minutes to integrate and _requires no code changes_. Our
+code push can _update any Dart code_ in your app. We’ve designed our system to
+comply with Apple and Google store policies without sacrificing performance
+(even after patching).
 
 Shorebird code push consists of:
 
@@ -221,7 +222,7 @@ work well for code push, but those we’ll have to save for another article.
 
 We made a lot of (difficult) changes to Dart so you don’t have to! Shorebird is
 a drop-in replacement for `flutter build` and allows you to add code push to
-your app in only a few minutes – with no code changes required.
+your app in only a few minutes – with _no code changes required_.
 
 Shorebird is free to use for small applications, with
 [pricing](https://shorebird.dev/#pricing) that scales with your business needs.
