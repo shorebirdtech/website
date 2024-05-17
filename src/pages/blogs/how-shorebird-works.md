@@ -10,9 +10,10 @@ date: May 9, 2024
 # How we changed Flutter and Dart to make code push work
 
 One of the most common questions we get, is "how does Shorebird work?". This
+
 article describes some of the changes we made to Dart and Flutter in order to
-make code push work. If you have more questions, send us a mail or ask on
-Discord and we’ll be happy to answer them or include them in a future article.
+make code push work. If you have more questions, [send us an email](mailto:contact@shorebird.dev) or [ask on
+Discord](https://discord.gg/shorebird) and we’ll be happy to answer them or include them in a future article.
 
 ## Code Push
 
