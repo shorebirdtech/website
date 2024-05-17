@@ -16,24 +16,10 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 import '../styles/Theme.css';
 import '../styles/Shapes.css';
-
-const links = [
-  { label: 'Home', href: '#home', ariaLabel: 'Home' },
-  { label: 'Products', href: '#products-code-push', ariaLabel: 'Products' },
-  { label: 'Pricing', href: '#pricing', ariaLabel: 'Pricing' },
-  { label: 'Team', href: '#team', ariaLabel: 'Team' },
-  { label: 'Newsletter', href: '#newsletter', ariaLabel: 'Newsletter' },
-  { label: 'FAQ', href: '#faq', ariaLabel: 'FAQ' },
-  {
-    label: 'Docs',
-    href: 'https://docs.shorebird.dev',
-    ariaLabel: 'Documentation',
-  },
-];
 ---
 
 <MainLayout title={config.app}>
-  <Navbar links={links} client:load />
+  <Navbar links={config.navLinks} client:load />
   <StableBanner client:load />
   <Hero client:load />
   <ProductsCodePush client:load />

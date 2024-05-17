@@ -61,6 +61,17 @@ export const Footer = () => {
                       target="_blank"
                       rel="noreferrer"
                       className="text-gray-400 hover:text-gray-300"
+                      href="https://console.shorebird.dev"
+                      aria-label="console"
+                    >
+                      Console
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-gray-400 hover:text-gray-300"
                       href="https://docs.shorebird.dev"
                       aria-label="documentation"
                     >
@@ -69,13 +80,11 @@ export const Footer = () => {
                   </li>
                   <li className="mb-4">
                     <a
-                      target="_blank"
-                      rel="noreferrer"
                       className="text-gray-400 hover:text-gray-300"
-                      href="https://console.shorebird.dev"
-                      aria-label="console"
+                      href="/blog"
+                      aria-label="blog"
                     >
-                      Console
+                      Blog
                     </a>
                   </li>
                 </ul>
