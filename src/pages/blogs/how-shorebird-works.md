@@ -5,6 +5,8 @@ description: A deep-dive into some of the changes we made to Dart and Flutter in
 date: May 9, 2024
 ---
 
+![Shorebird staring at a Dart board (AI generated).](../../assets/images/how-shorebird-works-header.webp)
+
 # How we changed Flutter and Dart to make code push work
 
 One of the most common questions we get, is "how does Shorebird work?". This
