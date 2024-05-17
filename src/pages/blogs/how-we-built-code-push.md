@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
-title: Blog | How Shorebird Works
-description: A deep-dive into some of the changes we made to Dart and Flutter in order to make code push work.
-date: May 9, 2024
+title: Blog | How we built Flutter code push
+description: Walks through changes we made to Dart and Flutter in order to make code push work.
+date: May 17, 2024
 ---
 
 ![Shorebird staring at a Dart board (AI generated).](../../assets/images/how-shorebird-works-header.webp)
