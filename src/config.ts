@@ -9,11 +9,8 @@ export const config = {
   contactSales: 'https://calendly.com/eseidel/shorebird-demo',
   contactEmail: 'contact@shorebird.dev',
   navLinks: [
-    { label: 'Home', href: '/#home', ariaLabel: 'Home' },
-    { label: 'Products', href: '/#products-code-push', ariaLabel: 'Products' },
     { label: 'Pricing', href: '/#pricing', ariaLabel: 'Pricing' },
     { label: 'Team', href: '/#team', ariaLabel: 'Team' },
-    { label: 'Newsletter', href: '/#newsletter', ariaLabel: 'Newsletter' },
     { label: 'FAQ', href: '/#faq', ariaLabel: 'FAQ' },
     {
       label: 'Docs',
