@@ -78,15 +78,19 @@ often leaving video calls open in the background while we work independently.
 ## Requirements
 
 - Excellent English spoken and written communication skills
+- Some experience (ideally open source) with C++, C, or Rust.
+- Located in GMT-10 through GMT-3.
+- Ability and desire to learn/teach yourself new skills as we go
 - Ability to work well independently and without direct supervision.
 - Interest/willingness to work on a small, distributed team
 - Excited about our mission of making high-quality multi-platform the default
-- Passion around creating excellent developer experiences
+- Likes creating excellent developer experiences
 - Experience building and shipping production software
+
+## Nice to haves
+
 - Familiarity with Compilers and/or Linkers
-- Comfortable with Assembly, ideally ARM64
-- Comfortable with C++, C, or Rust
-- Ability and desire to learn/teach yourself new skills as we go
+- Familiarity with Assembly, ideally ARM64
 
 Experience working on reused code (e.g. APIs, libraries, tools, build systems)
 or in systems which are too large for any single person to understand would
@@ -107,7 +111,7 @@ verify we're the real deal. This is an awesome team and we'd like you on it.
 
 ## Reach out
 
-If you're interested in joining us, please email eric@shorebird.dev. You can also (and are
-encouraged to) hop on our [Discord](https://discord.gg/shorebird) and chat with
-us there. We do pretty much everything in the public so you can very much see
-what we're like without even needing to apply.
+If you're interested in joining us, please email eric@shorebird.dev. You can
+also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
+and chat with us there. We do pretty much everything in the public so you can
+very much see what we're like without even needing to apply.
