@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: Blog | How we built Flutter code push
 description: Walks through changes we made to Dart and Flutter in order to make code push work.
 date: May 17, 2024
@@ -161,52 +161,56 @@ pool). In Dart’s JIT mode, each function ends up with its own Object Pool to
 hold constant references used within that function (e.g. strings, integers).
 Dart’s AOT combines all of these "Object Pools" into one global object pool and
 updates all parts of your program accordingly to reference slots in this global
-object pool. So why does this matter? This matters because when we’re trying to
-update your program if the new version of your code uses new constants (a very
-common occurrence), those new constants also need a slot in this pool. Worse is
-that if we add this slot in the middle of the pool, all of the references into
-the latter half of the pool would break. If we’re trying to end up running code
-on the CPU, we have to be very careful never to change things that the
-pre-compiled code makes reference to.
+object pool. Objects in this pool are referenced by index, so the string "hello"
+mentioned above might be at index 1234 in the object pool and thus code
+compiled for your program would reference "hello" by the number 1234.
+
+So why does this matter? This matters because when we’re trying to update your
+program if the new version of your code uses new constants (a very common
+occurrence), those new constants also need a slot in this pool (and index
+assigned). Worse is that if we add this slot in the middle of the pool, all of
+the references into the latter half of the pool would break (indices would
+change). If we’re trying to end up running code on the CPU, we have to be very
+careful never to change things that the pre-compiled code makes reference to.
 
 For example:
 
 ```dart
 void main() {
-print("a");
-print("z");
+  print("hello");
+  print("world");
 }
 ```
 
 The dart compiler would produce an object pool:
 
 ```
-0 : "a"
-1 : "z"
+0 : "hello"
+1 : "world"
 ```
 
 If we then change that to be:
 
 ```dart
 void main() {
-print("a");
-print("b");
-print("z");
+  print("hello");
+  print("new");
+  print("world");
 }
 ```
 
 Dart object pool would be:
 
 ```
-0: "a"
-1: "b"
-2: "z"
+0: "hello"
+1: "new"
+2: "world"
 ```
 
-Notice that that index for "z" has changed! That means that all parts of your
-program that reference "z" are now changed and thus we can’t use the previously
-compiled (fast) version of any functions which reference "z", thus having to run
-all logic which references "z" on the interpreter.
+Notice that that index for "world" has changed! That means that all parts of
+your program that reference "world" are now changed and thus we can’t use the
+previously compiled (fast) version of any functions which reference "world",
+thus having to run all logic which references "world" on the interpreter.
 
 We solved this by teaching the Dart compiler how to construct order-dependent
 structures (there are many of these) like the Object Pool in a stable ordered
