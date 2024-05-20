@@ -25,6 +25,11 @@ const faqs = [
       'Yes! Shorebird has been used in production by thousands of apps since early 2023.',
   },
   {
+    question: 'Can Shorebird see my code?',
+    answer:
+      'No. Shorebird does not store any of your source code on our servers. The patches we store are binary diffs of your compiled code, which are not human-readable.',
+  },
+  {
     question: 'Are there any limitations or known issues?',
     answer:
       'We keep a list of known issues at [https://docs.shorebird.dev/status](https://docs.shorebird.dev/status).',
