@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'Can Shorebird see my source code?',
     answer:
-      'No. Shorebird never stores or transmits your source code.',
+      'No. Shorebird never stores or transmits your source code. See our [documentation](https://docs.shorebird.dev/faq/#does-shorebird-store-my-source-code) for more information.',
   },
   {
     question: 'Are there any limitations or known issues?',
