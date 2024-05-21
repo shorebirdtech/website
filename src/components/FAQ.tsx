@@ -22,7 +22,12 @@ const faqs = [
   {
     question: 'Can I use this in production?',
     answer:
-      'Yes! Shorebird has been used in production by thousands of apps since early 2023.',
+      'Yes! Shorebird is production ready on iOS and Android and has been used in production by thousands of apps since early 2023.  We safely deliver millions of patches every month on behalf of our customers.',
+  },
+  {
+    question: 'Can Shorebird see my source code?',
+    answer:
+      'No. Shorebird never stores or transmits your source code. See our [documentation](https://docs.shorebird.dev/faq/#does-shorebird-store-my-source-code) for more information.',
   },
   {
     question: 'Are there any limitations or known issues?',
