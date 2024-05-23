@@ -1,20 +1,35 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
-title: Blog | How Shorebird Works
-description: A deep-dive into some of the changes we made to Dart and Flutter in order to make code push work.
-date: May 9, 2024
+layout: ../../layouts/BlogLayout.astro
+title: Blog | How we built Flutter code push
+description: Walk through of the changes made to Dart and Flutter in order to make code push work.
+date: May 17, 2024
 ---
 
-# How Shorebird Works
+![How code push works header image](../../assets/images/how-code-push-works.png)
 
-## Code push
+One of the most common questions we get, is "how does Shorebird work?". This
+article describes some of the changes we made to Dart and Flutter in order to
+make code push work. If you have more questions, [send us an
+email](mailto:contact@shorebird.dev) or [ask on
+Discord](https://discord.gg/shorebird) and we’ll be happy to answer them or
+include them in a future article.
+
+## Code Push
 
 Code push, sometimes called "over the air updates", is a way of updating
 application code in production so that all your users are always running the
 latest code – just like how a web application works. [Code push for
 Flutter](https://github.com/flutter/flutter/issues/14330) is one of the top 50
-most upvoted issues across all of GitHub. Code push has long been used by mobile
-developers to make app development more like web development.
+most upvoted issues across all of GitHub. Code push is a helpful tool to allow
+developers to push small updates to their applications without having to force
+all your users to download a new version of your app.
+
+This blog takes a closer look at how we built a custom Dart toolchain and
+runtime to make apps updatable in production. For more information on the
+architecture of Shorebird Code Push, [check out our
+docs](https://docs.shorebird.dev/architecture/).
+
+## How Does Code Push Work?
 
 Existing code push solutions have typically relied on WebViews or Lua scripts,
 and require developers to use different languages and frameworks for different
@@ -25,36 +40,24 @@ build code push for Flutter, we wanted to build something better.
 
 Shorebird’s code push for Flutter allows developers to update their Flutter apps
 instantly, over the air, deploying fixes directly to end users’ devices.
-Shorebird takes < 5 minutes to integrate and requires no code changes. Our code
-push can update any Dart code in your app. We’ve designed our system to comply
-with Apple and Google store policies without sacrificing performance (even after
-patching).
-
-## How does code push work?
-
-Shorebird’s code push starts by forking Flutter & Dart. We’ve made very few
-modifications to Flutter, but have made significant changes to Dart. Essentially
-we built a custom Dart toolchain and Dart runtime to make apps updatable in
-production.
+Shorebird takes < 5 minutes to integrate and _requires no code changes_. Our
+code push can _update any Dart code_ in your app. We’ve designed our system to
+comply with Apple and Google store policies without sacrificing performance
+(even after patching).
 
 Shorebird code push consists of:
 
-1. A command line program `shorebird` that knows how to wrap `flutter`,
-   including pulling down its own fork of Flutter’s engine.
-2. A fork of Flutter’s engine that includes our custom updater, a library we
+1. A command line program -- the `shorebird` command knows how to wrap
+   `flutter`, including pulling down its own fork of Flutter’s engine.
+2. A fork of Flutter’s engine -- this includes our custom updater, a library we
    built to manage patches in your application.
-3. A cloud service at shorebird.dev to store information about your releases
-   (builds you send to the stores) and patches (changes you make to releases via
-   Shorebird), control rollout, see analytics, etc.
-4. And finally, a fork of the Dart compiler toolchain, which makes it possible
-   to construct and run these "patches" to your application.
+3. A cloud service at shorebird.dev -- this stores information about your
+   releases (builds you send to the stores) and patches (changes you make to
+   releases via Shorebird), control rollout, see analytics, etc.
+4. A fork of the Dart compiler toolchain -- this makes it possible to construct
+   and run these "patches" to your application.
 
-The command line and cloud service are already covered in our
-[architecture](https://docs.shorebird.dev/architecture/) documentation. But
-recently we’ve received a bunch of questions about how our Dart modifications
-work, so I’m going to cover those here.
-
-## Dart
+## A Closer Look at Dart
 
 Dart has a "hot reload" feature used commonly during Flutter development. This
 uses Dart’s "just-in-time" (JIT) compiler. A JIT compiler is a way of turning
@@ -99,7 +102,7 @@ Dart’s architecture to insert a new interpreter as an alternative mechanism
 for a function to use to execute. This allows us to effectively replace parts of
 your application at runtime without needing to compile new code on the device.
 
-## An interpreter for Dart
+## Building a Custom Interpreter for Dart
 
 Adding an interpreter to Dart was a challenge (working on compilers is hard, if
 you like compilers, we’re [hiring](https://shorebird.dev/jobs/)), and took us
@@ -156,52 +159,56 @@ pool). In Dart’s JIT mode, each function ends up with its own Object Pool to
 hold constant references used within that function (e.g. strings, integers).
 Dart’s AOT combines all of these "Object Pools" into one global object pool and
 updates all parts of your program accordingly to reference slots in this global
-object pool. So why does this matter? This matters because when we’re trying to
-update your program if the new version of your code uses new constants (a very
-common occurrence), those new constants also need a slot in this pool. Worse is
-that if we add this slot in the middle of the pool, all of the references into
-the latter half of the pool would break. If we’re trying to end up running code
-on the CPU, we have to be very careful never to change things that the
-pre-compiled code makes reference to.
+object pool. Objects in this pool are referenced by index, so the string "hello"
+mentioned above might be at index 1234 in the object pool and thus code
+compiled for your program would reference "hello" by the number 1234.
+
+So why does this matter? This matters because when we’re trying to update your
+program if the new version of your code uses new constants (a very common
+occurrence), those new constants also need a slot in this pool (and index
+assigned). Worse is that if we add this slot in the middle of the pool, all of
+the references into the latter half of the pool would break (indices would
+change). If we’re trying to end up running code on the CPU, we have to be very
+careful never to change things that the pre-compiled code makes reference to.
 
 For example:
 
 ```dart
 void main() {
-print("a");
-print("z");
+  print("hello");
+  print("world");
 }
 ```
 
 The dart compiler would produce an object pool:
 
 ```
-0 : "a"
-1 : "z"
+0 : "hello"
+1 : "world"
 ```
 
 If we then change that to be:
 
 ```dart
 void main() {
-print("a");
-print("b");
-print("z");
+  print("hello");
+  print("new");
+  print("world");
 }
 ```
 
 Dart object pool would be:
 
 ```
-0: "a"
-1: "b"
-2: "z"
+0: "hello"
+1: "new"
+2: "world"
 ```
 
-Notice that that index for "z" has changed! That means that all parts of your
-program that reference "z" are now changed and thus we can’t use the previously
-compiled (fast) version of any functions which reference "z", thus having to run
-all logic which references "z" on the interpreter.
+Notice that that index for "world" has changed! That means that all parts of
+your program that reference "world" are now changed and thus we can’t use the
+previously compiled (fast) version of any functions which reference "world",
+thus having to run all logic which references "world" on the interpreter.
 
 We solved this by teaching the Dart compiler how to construct order-dependent
 structures (there are many of these) like the Object Pool in a stable ordered
@@ -215,14 +222,13 @@ work well for code push, but those we’ll have to save for another article.
 
 ## Conclusion
 
-In conclusion, we made a lot of (difficult) changes to Dart, so you don’t have
-to. Shorebird’s Flutter & Dart now supports code push – allowing you to push
-fixes to your production Flutter apps instantly. Shorebird is a drop-in
-replacement for flutter build and you can add code push to your app in only a
-few minutes – with no code changes required. Shorebird is free to use for small
-applications, with pricing that scales with your business needs.
+We made a lot of (difficult) changes to Dart so you don’t have to! Shorebird is
+a drop-in replacement for `flutter build` and allows you to add code push to
+your app in only a few minutes – with _no code changes required_.
 
-Learn more at our website: https://shorebird.dev. Most Shorebird source code is
-open on GitHub: https://github.com/shorebirdtech/shorebird. If you ever have
-questions, our entire team is on Discord:
-https://discord.gg/shorebird.
+Shorebird is free to use for small applications, with
+[pricing](https://shorebird.dev/#pricing) that scales with your business needs.
+
+Learn more at our website: https://shorebird.dev. See most of our source code
+on GitHub: https://github.com/shorebirdtech/shorebird. If you ever have
+questions, our entire team is on Discord: https://discord.gg/shorebird.
