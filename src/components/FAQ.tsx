@@ -30,6 +30,11 @@ const faqs = [
       'No. Shorebird never stores or transmits your source code. See our [documentation](https://docs.shorebird.dev/faq/#does-shorebird-store-my-source-code) for more information.',
   },
   {
+    question: 'Will my app still work if I delete my account?',
+    answer:
+      'Yes, any user that have your app installed, or any that comes to install it from the store will still be able to use it. However, no new patch install install will happen.',
+  },
+  {
     question: 'Are there any limitations or known issues?',
     answer:
       'We keep a list of known issues at [https://docs.shorebird.dev/status](https://docs.shorebird.dev/status).',
