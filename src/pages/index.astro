@@ -12,6 +12,7 @@ import { ProductsCodePush } from '../components/ProductsCodePush';
 import { PromoVideo } from '../components/PromoVideo';
 import { ScrollToTopButton } from '../components/ScrollToTopButton';
 import { Team } from '../components/Team';
+import { Customers } from '../components/Customers';
 import MainLayout from '../layouts/MainLayout.astro';
 
 import '../styles/Theme.css';
@@ -27,6 +28,7 @@ import '../styles/Shapes.css';
   <Divider />
   <Pricing client:load />
   <Team client:load />
+  <Customers client:load />
   <NewsLetter client:load />
   <FAQ client:load />
   <Footer />
