@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 import kijijiLogo from '../assets/customer_logos/kijiji.svg';
 import jungleeGamesLogo from '../assets/customer_logos/junglee_games_white.png';
-import felloLogo from '../assets/customer_logos/fello_white.png';
+import trackerLogo from '../assets/customer_logos/tracker.svg';
 
 const customers = [
   {
@@ -17,9 +17,9 @@ const customers = [
     logo: jungleeGamesLogo,
   },
   {
-    name: 'Fello',
-    tagline: "India's Largest Rewarding and Savings app",
-    logo: felloLogo,
+    name: 'Tracker',
+    tagline: 'Best communication system for hunters and outdoor enthusiasts.',
+    logo: trackerLogo,
   },
 ];
 
