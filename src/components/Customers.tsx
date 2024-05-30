@@ -34,7 +34,7 @@ export const Customers = () => (
         transition={{ duration: 0.4, delay: 0.3 }}
       >
         <div className="shorebird-block-big-title mb-8 px-8 text-center sm:px-24 md:px-48">
-          Trust by thousands of developers
+          Trusted by thousands of developers
         </div>
 
         <div className="shorebird-content-title mb-16 px-8 text-center sm:px-24 md:px-48">
