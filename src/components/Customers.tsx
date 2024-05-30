@@ -38,7 +38,8 @@ export const Customers = () => (
         </div>
 
         <div className="shorebird-content-title mb-16 px-8 text-center sm:px-24 md:px-48">
-Shorebird delivers millions of patches for thousands of developers every month.
+          Shorebird delivers millions of patches for thousands of developers
+          every month.
         </div>
 
         <div className="flex flex-col items-center gap-8 px-6 lg:flex-row lg:gap-5 xl:gap-10 xl:px-0">
