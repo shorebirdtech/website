@@ -28,7 +28,7 @@ signing, your app has the ability to independently verify patch contents without
 trusting any system or networks (including Shorebird) that might have been
 involved in transporting the patch from you to your users.
 
-Patch signing is optional and another layer in addition to the many ways in
+Patch signing is optional and an addition to the many ways in
 which Shorebird already works to protect the security of all our customers. We
 always take many precautions to protect the security of your app, including
 limiting what data ever leaves your servers (we never see or store your source
