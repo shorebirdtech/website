@@ -16,9 +16,8 @@ comply with Apple and Google store policies without sacrificing performance
 
 One of our goals is that Shorebird should be the default for all users of
 Flutter. To do that, using Shorebird needs to be a strict upgrade from default
-Flutter and never worse than not using it. This includes ensuring that Shorebird
-is always helping with the security and privacy of your application, never the
-other way around.
+Flutter. This includes ensuring that Shorebird
+is always helping with the security and privacy of your application.
 
 Today we're announcing another layer of security for Shorebird: patch
 signing. Patch signing allows you to cryptographically sign updates to your app
