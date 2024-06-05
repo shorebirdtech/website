@@ -10,32 +10,34 @@ date: June 5th, 2024
 Shorebird’s code push allows developers to update their Flutter apps instantly,
 over the air, deploying fixes directly to end users’ devices. Our solution takes
 less than 5 minutes to integrate and requires no code changes. Shorebird’s code
-push can update any Dart code in your app and we’ve designed our system to comply
-with Apple and Google store policies without sacrificing performance (even after
-patching).
+push can update any Dart code in your app and we’ve designed the system to
+comply with Apple and Google store policies without sacrificing performance
+(even after patching).
 
-One of our design goals has been that Shorebird should be the default for all
-users of Flutter. To do that, using Shorebird needs to be a strict upgrade from
-default Flutter and never worse than not using it. This includes ensuring that
-Shorebird is always helping with the security and privacy of your application,
-never the other way around.
+One of our goals is that Shorebird should be the default for all users of
+Flutter. To do that, using Shorebird needs to be a strict upgrade from default
+Flutter and never worse than not using it. This includes ensuring that Shorebird
+is always helping with the security and privacy of your application, never the
+other way around.
 
 Today we're announcing another layer of security possible with Shorebird: patch
-signing. Patch signing allows you to cryptographically sign updates to your app.
-Apps using patch signing verify the patch contents came from you before using
-the patch. This means your application never has to trust any systems or
-networks (including Shorebird) between you and your users, since your app will
-mathematically verify the patch came from you using the same signing
-technologies the app stores use for distribution.
+signing. Patch signing allows you to cryptographically sign updates to your app
+and make your app require that patch contents are verified (via cryptographic
+signature) before applying the patch. This uses the same signing technologies
+that are used in distributing your app through the app stores. With patch
+signing, your app has the ability to independently verify patch contents without
+trusting any system or networks (including Shorebird) that might have been
+involved in transporting the patch from you to your users.
 
 Patch signing is optional and another layer in addition to the many ways in
-which Shorebird already works to protect the security of all our customers.  We
-already take many precautions including limiting what data ever leaves your
-servers (we never see or store your source code), securing what data we do store
-both via encryption in transit and in rest, cryptographically hashing and
-validating the contents of any patch you create, as examples. You can see a full
-break-down of security practices we follow on your behalf in our [public
-security policies](https://handbook.shorebird.dev/security).
+which Shorebird already works to protect the security of all our customers. We
+always take many precautions to protect the security of your app, including
+limiting what data ever leaves your servers (we never see or store your source
+code), securing what data we do store both via encryption in transit and in
+rest, cryptographically hashing and validating the contents of any patch you
+create, as examples. You can see a full break-down of security practices we
+follow on your behalf in our [public security
+policies](https://handbook.shorebird.dev/security).
 
 The patch signing we’ve shipped today is marked as “beta”. The feature is fully
 functional, but we expect rough edges in how the patch signing integrates with
