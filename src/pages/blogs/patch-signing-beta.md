@@ -34,7 +34,7 @@ always take many precautions to protect the security of your app, including
 limiting what data leaves your servers (we never see or store your source
 code), securing what data we do store both via encryption in transit and in
 rest, cryptographically hashing and validating the contents of any patch you
-create, as examples. You can see a full break-down of security practices we
+create, as examples. You can see a full breakdown of security practices we
 follow on your behalf in our [public security
 policies](https://handbook.shorebird.dev/security).
 
