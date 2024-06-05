@@ -31,7 +31,7 @@ involved in transporting the patch from you to your users.
 Patch signing is optional and an addition to the many ways in
 which Shorebird already works to protect the security of all our customers. We
 always take many precautions to protect the security of your app, including
-limiting what data ever leaves your servers (we never see or store your source
+limiting what data leaves your servers (we never see or store your source
 code), securing what data we do store both via encryption in transit and in
 rest, cryptographically hashing and validating the contents of any patch you
 create, as examples. You can see a full break-down of security practices we
