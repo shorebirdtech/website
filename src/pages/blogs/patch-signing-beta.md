@@ -39,7 +39,7 @@ follow on your behalf in our [public security
 policies](https://handbook.shorebird.dev/security).
 
 The patch signing we’ve shipped today is marked as “beta”. The feature is fully
-functional, but we expect rough edges in how the patch signing integrates with
+functional, but we expect there to be rough edges in how the patch signing integrates with
 existing continuous deployment and key storage. A system is only as secure as
 its weakest link, so improving our integrations with your preferred key
 management systems, etc. is where we go next and where we need your help.
