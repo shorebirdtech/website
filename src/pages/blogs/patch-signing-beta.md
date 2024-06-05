@@ -20,7 +20,7 @@ Flutter and never worse than not using it. This includes ensuring that Shorebird
 is always helping with the security and privacy of your application, never the
 other way around.
 
-Today we're announcing another layer of security possible with Shorebird: patch
+Today we're announcing another layer of security for Shorebird: patch
 signing. Patch signing allows you to cryptographically sign updates to your app
 and make your app require that patch contents are verified (via cryptographic
 signature) before applying the patch. This uses the same signing technologies
