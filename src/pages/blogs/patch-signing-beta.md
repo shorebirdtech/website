@@ -14,8 +14,7 @@ push can update any Dart code in your app and we’ve designed the system to
 comply with Apple and Google store policies without sacrificing performance
 (even after patching).
 
-One of our goals is that Shorebird should be the default for all users of
-Flutter. To do that, using Shorebird needs to be a strict upgrade from default
+One of our goals is that Shorebird should be the default for all Flutter users. To do that, using Shorebird needs to be a strict upgrade from default
 Flutter. This includes ensuring that Shorebird
 is always helping with the security and privacy of your application.
 
