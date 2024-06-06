@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: Blog | Patch Signing Beta
 description: Announcing Patch Signing for Shorebird Code Push.
 date: June 5, 2024
