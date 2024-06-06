@@ -2,7 +2,7 @@
 const sortByDate = (a, b) =>
   new Date(b.frontmatter.date).valueOf() -
   new Date(a.frontmatter.date).valueOf();
-const blogs = (await Astro.glob('../pages/blogs/*.md')).sort(sortByDate);
+const blogs = (await Astro.glob('../pages/blog/*.md')).sort(sortByDate);
 import { Card } from '../components/Card';
 ---
 
