@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: Blog | iOS Beta
 description: Shorebird Code Push for iOS beta announcement
 date: February 1, 2024
