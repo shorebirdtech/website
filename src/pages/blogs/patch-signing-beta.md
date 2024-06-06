@@ -21,7 +21,9 @@ is always helping with the security and privacy of your application.
 Today we're announcing another layer of security for Shorebird: patch
 signing. Patch signing allows you to cryptographically sign updates to your app
 and make your app require that patch contents are verified (via cryptographic
-signature) before applying the patch. This uses the same signing technologies
+signature) before applying the patch.
+
+This uses the same signing technologies
 that are used in distributing your app through the app stores. With patch
 signing, your app has the ability to independently verify patch contents without
 trusting any system or networks (including Shorebird) that might have been
