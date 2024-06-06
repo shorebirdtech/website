@@ -24,7 +24,7 @@ and make your app require that patch contents are verified (via cryptographic
 signature) before applying the patch.
 
 This uses the same signing technologies
-that are used in distributing your app through the app stores. With patch
+that are used when distributing your app through the app stores. With patch
 signing, your app has the ability to independently verify patch contents without
 trusting any system or networks (including Shorebird) that might have been
 involved in transporting the patch from you to your users.
