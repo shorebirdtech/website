@@ -53,4 +53,4 @@ via [GitHub](https://github.com/shorebirdtech/shorebird/),
 you have feedback or questions.
 
 We’d love to help you integrate Shorebird code push into your application.
-Please reach out to us if you have any questions or need help getting started.
+Please [reach out](mail:contact@shorebird.dev) to us if you have any questions or need help getting started.
