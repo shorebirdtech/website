@@ -41,9 +41,9 @@ can see a full breakdown of security practices we follow on your behalf in our
 
 The patch signing we’ve shipped today is marked as “beta”. The feature is fully
 functional, but we expect there to be rough edges in how the patch signing
-integrates with continuous deployment and key storage. A system is only as
-secure as its weakest link, so improving our integrations with your preferred
-key management systems, etc. is where we go next and where we need your help.
+integrates with your existing developer flows. A system is only as secure as its
+weakest link, so improving our integrations with your preferred key management
+systems, etc. is where we go next and where we need your help.
 
 We’re looking for companies to work with us in testing and improving patch
 signing over the next few weeks. If you are interested, please give it a try:
