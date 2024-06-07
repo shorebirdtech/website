@@ -57,3 +57,6 @@ you have feedback or questions.
 We’d love to help you integrate Shorebird code push into your application.
 Please [reach out](mail:contact@shorebird.dev) to us if you have any questions
 or need help getting started.
+
+If you're curious about what we had to change in Dart to make this all possible,
+check out our [previous post](how-we-built-code-push).
