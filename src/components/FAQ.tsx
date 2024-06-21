@@ -7,7 +7,7 @@ const faqs = [
   {
     question: 'What platforms does Shorebird support?',
     answer:
-      'Shorebird is designed to work everywhere Flutter does. Shorebird has production Android support and iOS in beta. Let us know if you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms.',
+      'iOS and Android. Shorebird is designed to go anywhere Flutter can. If you are interested in [desktop](https://github.com/shorebirdtech/shorebird/issues/397) or other platforms, let us know.',
   },
   {
     question: 'Does Shorebird work for existing apps?',
@@ -64,7 +64,7 @@ export const FAQ = () => (
                 <FAQBox
                   title={faq.question}
                   content={faq.answer}
-                  defaultOpen={true}
+                  defaultOpen={false}
                 />
               </div>
             ))}
