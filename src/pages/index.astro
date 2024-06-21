@@ -4,7 +4,6 @@ import { Divider } from '../components/Divider';
 import { FAQ } from '../components/FAQ';
 import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
-import { StableBanner } from '../components/StableBanner';
 import { Navbar } from '../components/Navbar';
 import { NewsLetter } from '../components/NewsLetter';
 import { Pricing } from '../components/Pricing';
@@ -21,7 +20,6 @@ import '../styles/Shapes.css';
 
 <MainLayout title={config.app}>
   <Navbar links={config.navLinks} client:load />
-  <StableBanner client:load />
   <Hero client:load />
   <ProductsCodePush client:load />
   <PromoVideo client:load />
