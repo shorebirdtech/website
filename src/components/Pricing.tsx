@@ -17,7 +17,7 @@ export const Pricing = () => {
   return (
     <section className="relative flex w-screen justify-center bg-shorebirdBg2">
       <div className="absolute -top-16" id="pricing" />
-      <div className="bg-shorebirdBg2 pb-20 pt-12  md:w-4/5 lg:w-[1050px]  2xl:w-[1150px] ">
+      <div className="bg-shorebirdBg2 pb-20 pt-12 md:w-4/5 lg:w-[1050px] 2xl:w-[1150px] ">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -26,7 +26,7 @@ export const Pricing = () => {
         >
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-16 max-w-2xl text-center">
-              <h2 className="font-heading mb-6 mt-6 text-4xl font-bold text-white lg:text-5xl">
+              <h2 className="mb-6 mt-6 text-4xl font-bold text-white lg:text-5xl">
                 Join the flock
               </h2>
               <p className="mb-6 text-shorebirdTextGray">
@@ -71,9 +71,7 @@ function HobbyPlan() {
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div>
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="font-heading mb-2 text-left text-xl font-bold text-white">
-            Hobby
-          </p>
+          <p className="mb-2 text-left text-xl font-bold text-white">Hobby</p>
           <div className="flex items-end justify-start">
             <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
               $0
@@ -233,9 +231,7 @@ function TeamPlan() {
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div className="animate-gradient-xy rounded-3xl bg-gradient-to-r from-blue-400 via-purple-500 to-teal-500 p-1">
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="font-heading mb-2 text-left text-xl font-bold text-white">
-            Team
-          </p>
+          <p className="mb-2 text-left text-xl font-bold text-white">Team</p>
           <div className="flex items-end justify-start">
             <PriceSlider
               prices={prices}
@@ -289,7 +285,7 @@ function EnterprisePlan() {
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div>
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="font-heading mb-2 text-left text-xl font-bold text-white">
+          <p className="mb-2 text-left text-xl font-bold text-white">
             Enterprise
           </p>
           <div className="flex items-end justify-start">

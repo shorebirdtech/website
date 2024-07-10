@@ -5,13 +5,14 @@ import { FAQ } from '../components/FAQ';
 import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
 import { Navbar } from '../components/Navbar';
+import { Brands } from '../components/Brands';
 import { NewsLetter } from '../components/NewsLetter';
+import { Testimonials } from '../components/Testimonials';
 import { Pricing } from '../components/Pricing';
 import { ProductsCodePush } from '../components/ProductsCodePush';
 import { PromoVideo } from '../components/PromoVideo';
 import { ScrollToTopButton } from '../components/ScrollToTopButton';
 import { Team } from '../components/Team';
-import { Customers } from '../components/Customers';
 import MainLayout from '../layouts/MainLayout.astro';
 
 import '../styles/Theme.css';
@@ -24,9 +25,10 @@ import '../styles/Shapes.css';
   <ProductsCodePush client:load />
   <PromoVideo client:load />
   <Divider />
+  <Testimonials client:load />
   <Pricing client:load />
+  <Brands client:load />
   <Team client:load />
-  <Customers client:load />
   <NewsLetter client:load />
   <FAQ client:load />
   <Footer />

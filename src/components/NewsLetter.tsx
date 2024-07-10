@@ -12,7 +12,7 @@ export const NewsLetter = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="font-heading mb-4 text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Get notified
             </h2>
             <p className="mx-auto mb-8 max-w-2xl font-light text-gray-400 sm:text-xl md:mb-12">
