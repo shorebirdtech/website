@@ -7,6 +7,9 @@
 .shorebird-block-big-title {
   @apply text-5xl font-bold tracking-normal text-white xl:text-6xl;
 }
+.shorebird-block-big-title-primary {
+  @apply text-5xl font-bold tracking-normal text-shorebirdPrimary xl:text-6xl;
+}
 .shorebird-block-subtitle {
   @apply text-xs font-bold  uppercase tracking-wider text-shorebirdSecondary;
 }
