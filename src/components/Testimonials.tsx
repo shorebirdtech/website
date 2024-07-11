@@ -8,23 +8,23 @@ import TahaTesser from '../assets/testimonials/taha-tesser.png';
 const testimonials = [
   {
     name: 'Jason Rai',
-    title: 'Head of Frontend Engineering at Kijiji',
+    title: 'Head of Frontend Engineering, Kijiji',
     quote:
       "We use Shorebird at Kijiji on Android and it's been awesome. Working well at a very large scale.",
     image: JasonRai,
   },
   {
     name: 'Renan Araujo',
-    title: 'Senior Engineer at Superlist',
+    title: 'Senior Engineer, Superlist',
     quote:
       'Shorebird was very useful for distributing updates to my Flame game with over 10k players. Works like a charm.',
     image: RenanAraujo,
   },
   {
     name: 'Taha Tesser',
-    title: 'Engineer at Codemagic',
+    title: 'Engineer, Codemagic',
     quote:
-      'Shorebird solves one of the biggest challenges -- bringing over-the-air updates instantly to your users. Backed by an amazing team.',
+      'Shorebird solves one of the biggest challenges: bringing over-the-air updates instantly to your users. Backed by an amazing team.',
     image: TahaTesser,
   },
 ];
