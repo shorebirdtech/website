@@ -73,7 +73,7 @@ often leaving video calls open in the background while we work independently.
 ## Compensation
 
 150-200k USD salary, 2% equity, and
-[benefits](https://github.com/shorebirdtech/handbook/blob/main/benefits.md).
+[benefits](https://handbook.shorebird.dev/benefits/).
 
 ## Requirements
 
