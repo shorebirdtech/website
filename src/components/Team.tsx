@@ -1,10 +1,10 @@
+// cspell:words Seidel headshot Angelov Oltman
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 
 import ericHeadshot from '../assets/images/eric-headshot.jpeg';
 import felixHeadshot from '../assets/images/felix-headshot.jpeg';
 import bryanHeadshot from '../assets/images/bryan-headshot.png';
-import erickHeadshot from '../assets/images/erick-headshot.png';
 
 const team = [
   {
@@ -24,12 +24,6 @@ const team = [
     title: 'Founding Engineer',
     bio: "Former architecture lead for Google's internal-facing enterprise [Flutter](https://flutter.dev) team.",
     headshot: bryanHeadshot,
-  },
-  {
-    name: 'Erick Zanardo',
-    title: 'Founding Engineer',
-    bio: 'Flutter & Dart GDE. [Flame](https://flame-engine.org/) Core member. Previously at [Very Good Ventures](https://verygood.ventures).',
-    headshot: erickHeadshot,
   },
 ];
 
