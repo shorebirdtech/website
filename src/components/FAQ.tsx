@@ -37,7 +37,7 @@ const faqs = [
   {
     question: 'Can I self-host Shorebird or do you offer on-prem?',
     answer:
-      'Not yet. See [tracking issue](https://github.com/shorebirdtech/shorebird/issues/485).',
+      'No. Shorebird only offers a centrally hosted solution at this time.',
   },
   {
     question: 'Where is the roadmap?',
