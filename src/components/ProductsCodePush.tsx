@@ -17,7 +17,7 @@ export const ProductsCodePush = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className=" mx-auto flex  flex-col justify-center bg-shorebirdBg1 pb-8 pt-12 md:w-4/5 lg:flex-row lg:pb-20 lg:pt-24 xl:w-[1050px] 2xl:w-[1150px]">
+        <div className="mx-auto flex flex-col justify-center bg-shorebirdBg1 pb-8 pt-12 md:w-4/5 lg:flex-row lg:pb-20 lg:pt-24 xl:w-[1050px] 2xl:w-[1150px]">
           <div className="lg:mx-unset mx-auto flex w-3/4 flex-col lg:w-1/2">
             <h2 className="shorebird-block-big-title mb-8 mt-10 text-4xl md:text-5xl">
               Deploy updates instantly
@@ -48,7 +48,7 @@ export const ProductsCodePush = () => {
               <a
                 target="_blank"
                 href={config.consoleUrl}
-                className="shorebird-button-primary mb-2 mr-0 h-12 w-full sm:mb-0 sm:mr-4 lg:mr-4"
+                className="plausible-event-name=Top+Get+Started+Button+Clicked shorebird-button-primary mb-2 mr-0 h-12 w-full sm:mb-0 sm:mr-4 lg:mr-4"
               >
                 Get Started
               </a>
