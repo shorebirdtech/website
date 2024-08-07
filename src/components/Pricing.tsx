@@ -92,7 +92,7 @@ function HobbyPlan() {
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+            className="plausible-event-name=Hobby+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
@@ -262,7 +262,7 @@ function TeamPlan() {
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="shorebird-button-primary inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+            className="plausible-event-name=Team+Get+Started+Button+Clicked shorebird-button-primary inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
