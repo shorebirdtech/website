@@ -1,0 +1,31 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: "0.2"
+ignorePaths: ["dist", "node_modules"]
+words:
+  - junglee
+  - kijiji
+  - astro
+  - astrojs
+  - fontsource
+  - frontmatter
+  - upvoted
+  - FOUC
+  - tsconfigs
+  - renan
+  - taha
+  - tesser
+  - BIGL
+  - ITAR
+  - mailchimp
+  - eseidel
+  - jsxs
+  - xlink
+  - seidel
+  - angelov
+  - oltman
+  - headshot
+  - signups
+  - codemagic
+  - araujo
+  - superlist
+  - cancelbots
