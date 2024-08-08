@@ -24,6 +24,7 @@ const brands = [
 
 export const Brands = () => (
   <section className="mb-8 w-full bg-shorebirdBg3 py-12 sm:py-24 lg:mb-16 lg:mt-16">
+    <div className="absolute -top-16" id="brands" />
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
