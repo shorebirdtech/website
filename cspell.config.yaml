@@ -1,6 +1,6 @@
 $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
-version: "0.2"
-ignorePaths: ["dist", "node_modules"]
+version: '0.2'
+ignorePaths: ['dist', 'node_modules']
 words:
   - junglee
   - kijiji
