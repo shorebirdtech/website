@@ -60,6 +60,9 @@ jobs:
       - name: 🧹 Lint
         run: npm run lint
 
+      - name: 🔤 Check Spelling
+        run: npm cspell "**"
+
       - name: 👷 Build website
         run: npm run build
 

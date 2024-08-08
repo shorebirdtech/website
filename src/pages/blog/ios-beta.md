@@ -47,7 +47,8 @@ provided feedback thus far.
 
 ## 🚏 Road to 1.0
 
-This release is marked "beta" rather than 1.0 due to a couple oustanding issues:
+This release is marked "beta" rather than 1.0 due to a couple outstanding
+issues:
 
 - `--obfuscate` is not currently supported on iOS
   ([#1619](https://github.com/shorebirdtech/shorebird/issues/1619)).

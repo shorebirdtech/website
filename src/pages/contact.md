@@ -11,7 +11,7 @@ description: Contact Shorebird
 Shorebird [Discord](https://discord.gg/shorebird) is the fastest way to get
 support.
 
-Paying Shorebird customers are eligable for private support via a private
+Paying Shorebird customers are eligible for private support via a private
 Discord channel. Ask any Shorebird team member for access.
 
 You can also [email us](mailto:contact@shorebird.dev), but we're slower to
