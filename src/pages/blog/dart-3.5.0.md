@@ -43,7 +43,7 @@ If:
 This can be worked around by adding a `pubspec.yaml` at the root of your
 checkout/workspace. This is what we've used:
 
-```
+```yaml
 # This file is a workaround for https://github.com/dart-lang/sdk/issues/56047
 name: your_project_name_here
 environment:
