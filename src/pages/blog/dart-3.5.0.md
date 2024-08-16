@@ -13,7 +13,7 @@ the Dart team provides a thorough rundown of all the new features, so we won't
 be covering that here. Instead, we'll talk about some of the issues we and our
 users have seen with the upgrade and provide solutions to them.
 
-# ../.pub-cache/hosted/pub.dev/win32-5.2.0/lib/src/guid.dart:32:9: Error: Type 'UnmodifiableVint8ListView' not found.
+# Error (Xcode): ../.pub-cache/hosted/pub.dev/win32-5.5.0/lib/src/guid.dart:32:9: Error: Type 'UnmodifiableUint8ListView' not found.
 
 We were [not](https://github.com/jonataslaw/get_cli/issues/263)
 [alone](https://github.com/orgs/codemagic-ci-cd/discussions/2678) in seeing this
