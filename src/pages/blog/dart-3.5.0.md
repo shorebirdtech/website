@@ -7,10 +7,10 @@ date: August 16, 2024
 
 # Dart 3.5.0
 
-One of the big features of Flutter 3.22.4 is an upgrade to Dart 3.5.0. Which
-came with a whole bunch of [nice
-changes](https://medium.com/dartlang/dart-3-5-6ca36259fa2f). Unfortunately like
-all software releases it also came with some bugs.
+One of the big features of Flutter 3.22.4 is an upgrade to Dart 3.5.0, which
+comes with a whole bunch of [nice
+changes](https://medium.com/dartlang/dart-3-5-6ca36259fa2f). Unfortunately, like
+all software releases, it also came with some bugs.
 
 We encountered some bugs when upgrading our projects at Shorebird and have
 listed the problems and workarounds we found here:
@@ -32,19 +32,19 @@ able to build.
 
 ## None of your analysis warnings show up in Visual Studio Code.
 
-If you are both:
+If:
 
-1. your package (pubspec.yaml) is not at the root of your repo (or "workspace")
-2. your analysis_options.yaml file uses an "import" to pull in rules from
-   another file (the default Flutter and Dart templates include package:lints or
-   package:flutter_lints).
+1. Your `pubspec.yaml` file is not at the root of your repo (or "workspace")
+2. Your `analysis_options.yaml` file uses an "import" to pull in rules from
+   another file (the default Flutter and Dart templates include `package:lints`
+   or `package:flutter_lints`).
 
-This can be worked around, by adding a `pubspec.yaml` at the root of your
-checkout / workspace. This is what we've used:
+This can be worked around by adding a `pubspec.yaml` at the root of your
+checkout/workspace. This is what we've used:
 
 ```
 # This file is a workaround for https://github.com/dart-lang/sdk/issues/56047
-name: _
+name: your_project_name_here
 environment:
   sdk: ^3.5.0
 dev_dependencies:
