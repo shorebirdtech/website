@@ -51,6 +51,17 @@ dev_dependencies:
   very_good_analysis: ^6.0.0
 ```
 
+The above example uses
+[very_good_analysis](https://pub.dev/packages/very_good_analysis) (which is the
+lints package we use at [Shorebird](https://shorebird.dev)), but you can easily
+change the above to use [package:lints](https://pub.dev/packages/lints) or
+[package:flutter_lints](https://pub.dev/packages/flutter_lints) or whatever
+analysis imports you depend on.
+
+You can test that this is working by introducing an error in one of your
+packages not at the root of your repo and you should once again see that error
+in the "Problems" tab of Visual Studio Code.
+
 ## Conclusion
 
 Did you have trouble with Dart 3.5.0? Did we miss something? We'd love to hear
