@@ -3,6 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: Blog | Upgrading to Dart 3.5.0
 description: Troubleshooting when upgrading to Dart 3.5.0
 date: August 16, 2024
+# # cSpell:words pubspec
 ---
 
 # Upgrading your project to Dart 3.5.0
