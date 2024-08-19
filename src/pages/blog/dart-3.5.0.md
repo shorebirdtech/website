@@ -16,7 +16,7 @@ all software releases, it also came with some bugs.
 We encountered some bugs when upgrading our projects at Shorebird and have
 listed the problems and workarounds we found here:
 
-## Error (Xcode): ../.pub-cache/hosted/pub.dev/win32-5.5.0/lib/src/guid.dart:32:9: Error: Type 'UnmodifiableUint8ListView' not found.
+## ../.pub-cache/hosted/pub.dev/win32-5.5.0/lib/src/guid.dart:32:9: Error: Type 'UnmodifiableUint8ListView' not found.
 
 We were [not](https://github.com/jonataslaw/get_cli/issues/263)
 [alone](https://github.com/orgs/codemagic-ci-cd/discussions/2678) in seeing this
