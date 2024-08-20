@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: Blog | Viewing logs in release apps
+title: Blog | Viewing logs in released apps
 description: How to view logs for an app without a debugger attached.
 date: August 20, 2024
 ---
 
-# Viewing logs for your release app
+# Viewing logs for a released app
 
 Whether you're using a logging framework or the humble `print` function, logs
 provide a window into how your app is working (or not working) in real-time.
