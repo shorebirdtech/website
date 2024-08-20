@@ -2,31 +2,32 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: '0.2'
 ignorePaths: ['dist', 'node_modules']
 words:
-  - junglee
-  - kijiji
+  - BIGL
+  - FOUC
+  - ITAR
+  - angelov
+  - araujo
   - astro
   - astrojs
+  - cancelbots
+  - codemagic
+  - eseidel
   - fontsource
   - frontmatter
-  - upvoted
-  - FOUC
-  - tsconfigs
+  - headshot
+  - jsxs
+  - junglee
+  - kijiji
+  - logcat
+  - mailchimp
+  - oltman
+  - pubspec
   - renan
+  - seidel
+  - signups
+  - superlist
   - taha
   - tesser
-  - BIGL
-  - ITAR
-  - mailchimp
-  - eseidel
-  - jsxs
+  - tsconfigs
+  - upvoted
   - xlink
-  - seidel
-  - angelov
-  - oltman
-  - headshot
-  - signups
-  - codemagic
-  - araujo
-  - superlist
-  - cancelbots
-  - pubspec

@@ -48,7 +48,7 @@ and press <kbd>Enter</kbd>.
 By default, this shows logs for your Mac, but it can also be used to view logs
 for your iPhone, iPad, Apple Watch, etc.
 
-To see system logss, connect your device to your Mac via USB, select it in the
+To see system logs, connect your device to your Mac via USB, select it in the
 left column, and press the "Start" button in the top toolbar.
 
 ![](../../assets/images/blog/release-logs/EmptyConsoleStartButtonArrow.png)
