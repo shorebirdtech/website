@@ -36,7 +36,8 @@ export const Pricing = () => {
             </div>
             <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
               <HobbyPlan />
-              <TeamPlan />
+              {/* <TeamPlan /> */}
+              <PaygPlan />
               <EnterprisePlan />
             </div>
           </div>
@@ -132,6 +133,54 @@ function PriceSlider({
           onChange(prices[index]);
         }}
       ></input>
+    </div>
+  );
+}
+
+function PaygPlan() {
+  const features: Feature[] = [
+    { title: 'Unlimited apps' },
+    { title: 'Unlimited developers' },
+    { title: '50K patch installs/month included' },
+    { title: 'Control exactly how much you spend' },
+    { title: 'Community support' },
+  ];
+  return (
+    <div className="mb-8 w-[325px] px-1 lg:mb-0">
+      <div>
+        <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
+          <p className="text-left text-xl font-bold text-white">
+            Pay-as-you-go
+          </p>
+          <div className="flex items-end justify-start">
+            <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
+              $20
+            </div>
+            <div className="text-gray-500">{'/ month'}</div>
+          </div>
+          <p className="mb-4 text-left text-xs leading-loose text-gray-500">
+            then $1 per 2,500 patch installs.
+          </p>
+          <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
+            For apps that can scale.
+          </p>
+          <ul className="mb-2 text-white 2xl:mb-6">
+            {features.map((feature, index) => (
+              <FeatureListItem
+                key={`hobby-feature-${index}`}
+                title={feature.title}
+              />
+            ))}
+          </ul>
+          <a
+            target="_blank"
+            href={config.consoleUrl}
+            className="plausible-event-name=Payg+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
