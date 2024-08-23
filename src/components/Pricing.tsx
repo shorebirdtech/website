@@ -175,7 +175,7 @@ function PayAsYouGoPlan() {
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="plausible-event-name=Payg+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+            className="plausible-event-name=Pay+as+you+go+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
