@@ -37,7 +37,7 @@ export const Pricing = () => {
             <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
               <HobbyPlan />
               {/* <TeamPlan /> */}
-              <PaygPlan />
+              <PayAsYouGoPlan />
               <EnterprisePlan />
             </div>
           </div>
@@ -137,7 +137,7 @@ function PriceSlider({
   );
 }
 
-function PaygPlan() {
+function PayAsYouGoPlan() {
   const features: Feature[] = [
     { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
