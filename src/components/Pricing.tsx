@@ -38,7 +38,7 @@ export const Pricing = () => {
             <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
               <HobbyPlan />
               {/* <TeamPlan /> */}
-              <TeamPlanV2 />
+              <ProPlan />
               <EnterprisePlan />
             </div>
           </div>
@@ -138,7 +138,7 @@ function PriceSlider({
   );
 }
 
-function TeamPlanV2() {
+function ProPlan() {
   const features: Feature[] = [
     {
       title: '50K patch installs/month',
@@ -152,7 +152,7 @@ function TeamPlanV2() {
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div className="animate-gradient-xy rounded-3xl bg-gradient-to-r from-blue-400 via-purple-500 to-teal-500 p-1">
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="text-left text-xl font-bold text-white">Teams</p>
+          <p className="text-left text-xl font-bold text-white">Pro</p>
           <div className="flex items-end justify-start">
             <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
               $20
@@ -165,7 +165,7 @@ function TeamPlanV2() {
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
               <FeatureListItem
-                key={`team-v2-feature-${index}`}
+                key={`pro-feature-${index}`}
                 title={feature.title}
                 caption={feature.caption}
               />
@@ -174,7 +174,7 @@ function TeamPlanV2() {
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="plausible-event-name=Teams+V2+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+            className="plausible-event-name=Pro+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
