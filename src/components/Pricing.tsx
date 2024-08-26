@@ -149,9 +149,7 @@ function PayAsYouGoPlan() {
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div>
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="text-left text-xl font-bold text-white">
-            Teams
-          </p>
+          <p className="text-left text-xl font-bold text-white">Teams</p>
           <div className="flex items-end justify-start">
             <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
               $20
