@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 interface Feature {
   title: string;
+  caption?: string;
 }
 
 interface Price {
@@ -139,15 +140,17 @@ function PriceSlider({
 
 function TeamPlanV2() {
   const features: Feature[] = [
+    {
+      title: '50K patch installs/month',
+      caption: 'then $1 per 2,500 patch installs.',
+    },
     { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
-    { title: '50K patch installs/month included' },
-    { title: 'Control exactly how much you spend' },
     { title: 'Community support' },
   ];
   return (
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
-      <div>
+      <div className="animate-gradient-xy rounded-3xl bg-gradient-to-r from-blue-400 via-purple-500 to-teal-500 p-1">
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
           <p className="text-left text-xl font-bold text-white">Teams</p>
           <div className="flex items-end justify-start">
@@ -156,9 +159,6 @@ function TeamPlanV2() {
             </div>
             <div className="text-gray-500">{'/ month'}</div>
           </div>
-          <p className="mb-4 text-left text-xs leading-loose text-gray-500">
-            then $1 per 2,500 patch installs.
-          </p>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
             For apps that can scale.
           </p>
@@ -167,6 +167,7 @@ function TeamPlanV2() {
               <FeatureListItem
                 key={`team-v2-feature-${index}`}
                 title={feature.title}
+                caption={feature.caption}
               />
             ))}
           </ul>
@@ -364,11 +365,20 @@ function EnterprisePlan() {
   );
 }
 
-function FeatureListItem({ title }: { title: string }) {
+function FeatureListItem({
+  title,
+  caption,
+}: {
+  title: string;
+  caption?: string;
+}) {
   return (
     <li className="mb-4 flex">
       <CheckArrowIcon />
-      <span className="flex gap-1">{title}</span>
+      <div>
+        <span className="flex gap-1">{title}</span>
+        {caption && <span className="text-xs text-gray-500">{caption}</span>}
+      </div>
     </li>
   );
 }
