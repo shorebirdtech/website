@@ -354,7 +354,7 @@ function EnterprisePlan() {
           <a
             target="_blank"
             href={config.contactSales}
-            className="shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+            className="plausible-event-name=Enterprise+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Schedule a Call
           </a>
