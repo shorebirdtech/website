@@ -165,7 +165,7 @@ function TeamPlanV2() {
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
               <FeatureListItem
-                key={`hobby-feature-${index}`}
+                key={`team-v2-feature-${index}`}
                 title={feature.title}
               />
             ))}
