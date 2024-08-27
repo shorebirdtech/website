@@ -44,4 +44,4 @@ usage-based billing at any time via the console.shorebird.dev.
 
 We made a bunch of improvements behind the scenes to make this happen. If you
 have any questions about billing, or would like to purchase Shorebird in a
-different way, please don’t hesitate to reach out.  contact@shorebird.dev.
+different way, please don’t hesitate to [reach out](mailto:contact@shorebird.dev).
