@@ -5,7 +5,7 @@ description: Announcing simplified pricing for Shorebird
 date: August 27, 2024
 ---
 
-# Simplified Flexible Pricing
+![Simplified pricing header image](../../assets/images/blog/simplified-pricing/Header.png)
 
 Today we’re announcing simplified pricing for Shorebird. We offer two plans:
 **Free** and a new **Pro** plan.
