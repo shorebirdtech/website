@@ -10,14 +10,16 @@ date: August 16, 2024
 Today we’re announcing simplified pricing for Shorebird.  We offer two plans: Free and Pro.
 
 Free
-Includes 5,000 patch installs per month
-Unlimited Apps.  1 User
+- Includes 5,000 patch installs per month
+- Unlimited Apps
+- 1 User
 
 Pro
-$20 per month
-Includes 50,000 patch installs per month
-Additional installs at $0.0004 per install, with configurable spending limit.
-Unlimited Apps.  Unlimited Collaborators.
+- $20 per month
+- Includes 50,000 patch installs per month
+- Additional installs at $0.0004 per install, with configurable spending limit
+- Unlimited Apps
+- Unlimited Collaborators
 
 Previously, Shorebird offered a variety of usage tiers.  Customers told us this
 was confusing and harder to manage for apps with variable updating needs.  So
