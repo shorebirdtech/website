@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 interface Feature {
   title: string;
+  caption?: string;
 }
 
 interface Price {
@@ -36,7 +37,7 @@ export const Pricing = () => {
             </div>
             <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
               <HobbyPlan />
-              <TeamPlan />
+              <ProPlan />
               <EnterprisePlan />
             </div>
           </div>
@@ -102,172 +103,46 @@ function HobbyPlan() {
   );
 }
 
-function PriceSlider({
-  prices,
-  onChange,
-}: {
-  prices: Price[];
-  onChange: (price: Price) => void;
-}) {
-  const [priceIndex, setPriceIndex] = useState(0);
-  const price = prices[priceIndex];
-  return (
-    <div className="flex w-full flex-col">
-      <div className="flex flex-row items-end">
-        <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
-          {price.amount}
-        </div>
-        <div className="justify-end text-gray-500">{'/ month'}</div>
-      </div>
-      <div className="h-4"></div>
-      <input
-        type="range"
-        min={0}
-        aria-label="Price slider"
-        max={prices.length - 1}
-        value={priceIndex}
-        onChange={(e) => {
-          const index = parseInt(e.target.value);
-          setPriceIndex(index);
-          onChange(prices[index]);
-        }}
-      ></input>
-    </div>
-  );
-}
-
-function TeamPlan() {
-  const prices: Price[] = [
-    {
-      amount: '$20',
-      quantity: '50K',
-    },
-    {
-      amount: '$100',
-      quantity: '300K',
-    },
-    {
-      amount: '$300',
-      quantity: '1M',
-    },
-    {
-      amount: '$700',
-      quantity: '2.5M',
-    },
-    {
-      amount: '$1,250',
-      quantity: '5M',
-    },
-    {
-      amount: '$2,000',
-      quantity: '10M',
-    },
-  ];
-
+function ProPlan() {
   const features: Feature[] = [
+    {
+      title: '50K patch installs/month',
+      caption: 'then $1 per 2,500 patch installs.',
+    },
     { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
+    { title: 'Community support' },
   ];
-
-  const [quantity, setQuantity] = useState(prices[0].quantity);
-  const priceIndex = prices.findIndex((price) => price.quantity === quantity);
-  const supportLevel = priceIndex > 3 ? 'Private' : 'Community';
-
-  function AllTiersModal() {
-    const [showModal, setShowModal] = useState(false);
-    return (
-      <>
-        <button
-          className="shorebird-button-secondary inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
-          type="button"
-          onClick={() => setShowModal(true)}
-        >
-          View Tiers
-        </button>
-        {showModal ? (
-          <>
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none"
-              onClick={() => setShowModal(false)}
-            >
-              <div className="relative mx-auto my-6 w-auto max-w-3xl">
-                <div className="relative flex flex-col rounded-lg bg-shorebirdBg3  text-white shadow-lg outline-none focus:outline-none">
-                  <div className="flex items-start justify-between rounded-t p-5">
-                    <h3 className="text-xl font-semibold">Teams Tiers</h3>
-                  </div>
-                  <div className="relative flex-auto px-12 py-5">
-                    <ul>
-                      {prices.map((price, index) => (
-                        <li
-                          className="mb-4 flex"
-                          key={`tiers-modal-${price.quantity}-${index}`}
-                        >
-                          <span>
-                            <b>{price.amount}</b> for up to{' '}
-                            <b>{price.quantity}</b> patch installs
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <button
-                    className="pb-6 text-center font-bold text-slate-100"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
-          </>
-        ) : null}
-      </>
-    );
-  }
-
   return (
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div className="animate-gradient-xy rounded-3xl bg-gradient-to-r from-blue-400 via-purple-500 to-teal-500 p-1">
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="mb-2 text-left text-xl font-bold text-white">Team</p>
+          <p className="text-left text-xl font-bold text-white">Pro</p>
           <div className="flex items-end justify-start">
-            <PriceSlider
-              prices={prices}
-              onChange={(price) => {
-                setQuantity(price.quantity);
-              }}
-            />
+            <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
+              $20
+            </div>
+            <div className="text-gray-500">{'/ month'}</div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
             For apps that can scale.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
-            <FeatureListItem
-              key={`teams-patch-install-count`}
-              title={`${quantity} patch installs/month`}
-            />
             {features.map((feature, index) => (
               <FeatureListItem
-                key={`teams-feature-${index}`}
+                key={`pro-feature-${index}`}
                 title={feature.title}
+                caption={feature.caption}
               />
             ))}
-            <FeatureListItem
-              key={`teams-support-level`}
-              title={`${supportLevel} support`}
-            />
           </ul>
           <a
             target="_blank"
             href={config.consoleUrl}
-            className="plausible-event-name=Team+Get+Started+Button+Clicked shorebird-button-primary inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+            className="plausible-event-name=Pro+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
           </a>
-          <div className="h-4"></div>
-          <AllTiersModal />
         </div>
       </div>
     </div>
@@ -317,11 +192,20 @@ function EnterprisePlan() {
   );
 }
 
-function FeatureListItem({ title }: { title: string }) {
+function FeatureListItem({
+  title,
+  caption,
+}: {
+  title: string;
+  caption?: string;
+}) {
   return (
     <li className="mb-4 flex">
       <CheckArrowIcon />
-      <span className="flex gap-1">{title}</span>
+      <div>
+        <span className="flex gap-1">{title}</span>
+        {caption && <span className="text-xs text-gray-500">{caption}</span>}
+      </div>
     </li>
   );
 }
