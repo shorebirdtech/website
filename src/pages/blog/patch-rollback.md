@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 title: Blog | Patch Rollbacks
-description: Announcing Patch Rollback Support.
-date: August 9, 2024
+description: Announcing support for rolling back patches.
+date: 8/9/2024
 ---
 
 # Patch Rollbacks

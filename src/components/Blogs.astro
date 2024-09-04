@@ -25,7 +25,9 @@ import { Card } from '../components/Card';
             <Card
               title={blog.frontmatter.title.split('Blog |').pop()}
               description={blog.frontmatter.description}
-              date={blog.frontmatter.date}
+              date={new Intl.DateTimeFormat('en-US', {
+                dateStyle: 'medium',
+              }).format(Date.parse(blog.frontmatter.date))}
               link={blog.url}
             />
           ))

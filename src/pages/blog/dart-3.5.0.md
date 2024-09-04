@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: Blog | Surviving the upgrade to Dart 3.5.0
 description: Troubleshooting when upgrading to Dart 3.5.0
-date: August 16, 2024
+date: 8/16/2024
 ---
 
 # Dart 3.5.0

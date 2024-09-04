@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: Blog | iOS Beta
 description: Shorebird Code Push for iOS beta announcement
-date: February 1, 2024
+date: 2/1/2024
 ---
 
 # Announcing Code Push iOS beta 🥳

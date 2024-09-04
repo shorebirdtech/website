@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: Blog | Viewing logs in released apps
 description: How to view logs for an app without a debugger attached.
-date: August 20, 2024
+date: 8/20/2024
 ---
 
 # Viewing logs for a released app
