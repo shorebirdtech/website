@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: Blog | How we built Flutter code push
 description: Walk through of the changes made to Dart and Flutter in order to make code push work.
-date: May 17, 2024
+date: 5/17/2024
 ---
 
 ![How code push works header image](../../assets/images/how-code-push-works.png)

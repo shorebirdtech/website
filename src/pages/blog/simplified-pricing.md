@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: Blog | Simplified, Flexible Pricing
 description: Announcing simplified pricing for Shorebird
-date: August 27, 2024
+date: 8/27/2024
 ---
 
 ![Simplified pricing header image](../../assets/images/blog/simplified-pricing/Header.png)
