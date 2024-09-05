@@ -3,6 +3,7 @@ title: Surviving the upgrade to Dart 3.5.0
 author: bryanoltman
 description: Troubleshooting when upgrading to Dart 3.5.0
 date: 2024-08-16
+slug: 'dart-3.5.0'
 ---
 
 One of the big features of [Flutter
