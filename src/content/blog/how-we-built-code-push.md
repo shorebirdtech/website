@@ -1,11 +1,11 @@
 ---
-layout: ../../layouts/BlogLayout.astro
-title: Blog | How we built Flutter code push
+title: How we built Flutter code push
+author: eseidel
 description: Walk through of the changes made to Dart and Flutter in order to make code push work.
-date: 5/17/2024
+date: 2024-05-17
+cover: /blog/how-code-push-works-cover.png
+coverAlt: How code push works header image
 ---
-
-![How code push works header image](../../assets/images/how-code-push-works.png)
 
 One of the most common questions we get, is "how does Shorebird work?". This
 article describes some of the changes we made to Dart and Flutter in order to

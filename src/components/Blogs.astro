@@ -1,9 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
+import Card from '../components/Card.astro';
+
 const sortByDate = (a, b) =>
-  new Date(b.frontmatter.date).valueOf() -
-  new Date(a.frontmatter.date).valueOf();
-const blogs = (await Astro.glob('../pages/blog/*.md')).sort(sortByDate);
-import { Card } from '../components/Card';
+  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
+const blogs = (await getCollection('blog')).sort(sortByDate);
 ---
 
 <section
@@ -23,12 +24,11 @@ import { Card } from '../components/Card';
         {
           blogs.map((blog) => (
             <Card
-              title={blog.frontmatter.title.split('Blog |').pop()}
-              description={blog.frontmatter.description}
-              date={new Intl.DateTimeFormat('en-US', {
-                dateStyle: 'medium',
-              }).format(Date.parse(blog.frontmatter.date))}
-              link={blog.url}
+              title={blog.data.title}
+              author={blog.data.author}
+              description={blog.data.description}
+              date={blog.data.date}
+              link={`/blog/${blog.slug}`}
             />
           ))
         }

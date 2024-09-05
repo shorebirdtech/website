@@ -1,0 +1,66 @@
+---
+import ericHeadshot from '../assets/images/eric-headshot.jpeg';
+import felixHeadshot from '../assets/images/felix-headshot.jpeg';
+import bryanHeadshot from '../assets/images/bryan-headshot.png';
+import shorebirdHeadshot from '../assets/images/shorebird-headshot.png';
+
+interface Author {
+  name: string;
+  title: string;
+  avatar: ImageMetadata;
+  github: string;
+}
+
+const authors: Record<string, Author> = {
+  shorebirdtech: {
+    name: 'Shorebird',
+    title: 'The Shorebird Team',
+    avatar: shorebirdHeadshot,
+    github: 'shorebirdtech',
+  },
+  eseidel: {
+    name: 'Eric Seidel',
+    title: 'Founder of Shorebird',
+    avatar: ericHeadshot,
+    github: 'eseidel',
+  },
+  felangel: {
+    name: 'Felix Angelov',
+    title: 'Founding Engineer @ Shorebird',
+    avatar: felixHeadshot,
+    github: 'felangel',
+  },
+  bryanoltman: {
+    name: 'Bryan Oltman',
+    title: 'Founding Engineer @ Shorebird',
+    avatar: bryanHeadshot,
+    github: 'bryanoltman',
+  },
+};
+
+const { handle } = Astro.props;
+const author = authors[handle];
+---
+
+<div class="flex items-center">
+  <img
+    src={author.avatar.src}
+    alt={author.name}
+    class="m-0 w-12 h-12 rounded-full"
+  />
+  <div class="flex flex-col">
+    <div class="ml-2">
+      <p class="m-0 font-semibold">
+        <a
+          class="no-underline hover:underline"
+          href={`https://github.com/${author.github}`}
+        >
+          {author.name}
+        </a>
+      </p>
+    </div>
+    <div class="ml-2">
+      <p class="text-sm m-0">{author.title}</p>
+    </div>
+  </div>
+</div>

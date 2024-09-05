@@ -1,11 +1,9 @@
 ---
-layout: ../../layouts/BlogLayout.astro
-title: Blog | Patch Rollbacks
+title: Patch Rollbacks
+author: shorebirdtech
 description: Announcing support for rolling back patches.
-date: 8/9/2024
+date: 2024-08-09
 ---
-
-# Patch Rollbacks
 
 _Shorebird Code Push allows developers to deploy fixes to Flutter apps
 instantly, over the air, to end users’ devices. It takes less than 5 minutes to
