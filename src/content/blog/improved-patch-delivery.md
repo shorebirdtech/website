@@ -40,16 +40,16 @@ improvements.
 
 **Average Response Times**
 
-| Location       | Before | After  |
-| -------------- | :----: | :----: |
-| Netherlands    | 543ms  |  59ms  |
-| USA            | 556ms  | 137ms  |
-| Germany        | 754ms  | 211ms  |
-| India          | 1739ms | 1540ms |
-| United Kingdom | 748ms  |  78ms  |
-| Australia      | 1113ms | 153ms  |
-| Kenya          | 2121ms | 1431ms |
-| Korea          | 1949ms |  45ms  |
+| Location       | Before | After |
+| -------------- | :----: | :---: |
+| Netherlands    | 543ms  | 59ms  |
+| USA            | 556ms  | 137ms |
+| Germany        | 754ms  | 211ms |
+| India          | 1730ms | 156ms |
+| United Kingdom | 748ms  | 78ms  |
+| Australia      | 1113ms | 153ms |
+| Nigeria        | 1891ms | 826ms |
+| Korea          | 1949ms | 45ms  |
 
 _Note: snapshot of data taken on 9/5/2024_
 
