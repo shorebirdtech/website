@@ -12,15 +12,22 @@ improve patch delivery, availability, and performance around the world 🥳
 
 ## What's Changed
 
-When a patch is published via `shorebird patch`, the generated patch artifact is uploaded to Shorebird's cloud.
-On app launch, the corresponding release running on users' devices will ping Shorebird's API to check whether a newer patch is available.
-If a newer patch is available, Shorebird's API will respond with a link to the patch artifact and the patch is then downloaded and installed on the device.
+When a patch is published via `shorebird patch`, the generated patch artifact is
+uploaded to Shorebird's cloud. On app launch, the corresponding release running
+on users' devices will ping Shorebird's API to check whether a newer patch is
+available. If a newer patch is available, Shorebird's API will respond with a
+link to the patch artifact and the patch is then downloaded and installed on the
+device.
 
-We've made some improvements to how we store and serve patch artifacts to both improve availability and performance — patches can be downloaded faster in more places around the world.
+We've made some improvements to how we store and serve patch artifacts to both
+improve availability and performance — patches can be downloaded faster in more
+places around the world.
 
 ## Wider Availability
 
-We've made some changes to our cloud infrastructure to enable Shorebird to deliver patches to more regions around the world. You may now find that users are able to download patches in regions that were previously unavailable.
+We've made some changes to our cloud infrastructure to enable Shorebird to
+deliver patches to more regions around the world. You may now find that users
+are able to download patches in regions that were previously unavailable.
 
 ![China Patch availability image](../../assets/images/blog/improved-patch-delivery/china-availability.png)
 
@@ -48,6 +55,8 @@ _Note: snapshot of data taken on 9/5/2024_
 
 ## Get Started
 
-These infrastructure improvements are already rolled out to all Shorebird customers around the world. 🥳
+These infrastructure improvements are already rolled out to all Shorebird
+customers around the world. 🥳
 
-If you're new to Shorebird and want to get started, head over to the [Shorebird Console](https://console.shorebird.dev).
+If you're new to Shorebird and want to get started, head over to the
+[Shorebird Console](https://console.shorebird.dev).
