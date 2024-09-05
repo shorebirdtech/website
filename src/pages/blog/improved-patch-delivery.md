@@ -16,7 +16,7 @@ When a patch is published via `shorebird patch`, the generated patch artifact is
 On app launch, the corresponding release running on users' devices will ping Shorebird's API to check whether a newer patch is available.
 If a newer patch is available, Shorebird's API will respond with a link to the patch artifact and the patch is then downloaded and installed on the device.
 
-We've made some improvements to how we store and serve patch artifacts to both improve availability (e.g patches can be downloaded by devices in more places around the world) and performance (e.g patches take less time to download).
+We've made some improvements to how we store and serve patch artifacts to both improve availability and performance — patches can be downloaded faster in more places around the world.
 
 ## Wider Availability
 
