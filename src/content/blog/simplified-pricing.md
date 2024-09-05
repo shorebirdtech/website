@@ -1,11 +1,11 @@
 ---
-layout: ../../layouts/BlogLayout.astro
-title: Blog | Simplified, Flexible Pricing
+title: Simplified, Flexible Pricing
+author: shorebirdtech
 description: Announcing simplified pricing for Shorebird
-date: 8/27/2024
+date: 2024-08-27
+cover: /blog/simplified-pricing-cover.png
+coverAlt: Simplified pricing header image
 ---
-
-![Simplified pricing header image](../../assets/images/blog/simplified-pricing/Header.png)
 
 Today we’re announcing simplified pricing for Shorebird. We offer two plans:
 **Free** and a new **Pro** plan.

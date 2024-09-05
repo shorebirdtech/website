@@ -5,14 +5,16 @@ import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/inter/900.css';
-import { config } from '../config';
-import { Navbar } from '../components/Navbar.jsx';
-import { Footer } from '../components/Footer.jsx';
-import { BlogSubscribe } from '../components/BlogSubscribe.jsx';
+import { config } from '~/config';
+import Author from '~/components/Author.astro';
+import FormattedDate from '~/components/FormattedDate.astro';
+import { Navbar } from '~/components/Navbar';
+import { Footer } from '~/components/Footer';
+import { BlogSubscribe } from '~/components/BlogSubscribe';
 
 import '../styles/Theme.css';
 
-const { frontmatter } = Astro.props;
+const { title, description, author, date, cover, coverAlt } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,8 +25,8 @@ const { frontmatter } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={frontmatter.description} />
-    <meta property="og:description" content={frontmatter.description} />
+    <meta name="description" content={description} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content="/open-graph.png" />
     <meta property="og:url" content="https://shorebird.dev" />
     <meta name="twitter:image" content="/open-graph.png" />
@@ -34,11 +36,24 @@ const { frontmatter } = Astro.props;
       defer
       data-domain="shorebird.dev"
       src="https://plausible.io/js/script.tagged-events.js"></script>
-    <title>{frontmatter.title}</title>
+    <title>{`Blog | ${title}`}</title>
   </head>
   <body>
     <Navbar links={config.navLinks} client:load />
     <div class="prose prose-invert mx-auto pt-24 pb-16 px-4 md:px-0">
+      <h1 class="m-0">{title}</h1>
+      <p class="m-0"><FormattedDate date={date} /></p>
+      <div class="mt-8 mb-8"></div>
+      <Author handle={author} />
+      {
+        cover && (
+          <>
+            <div class="mt-2 mb-2" />
+            <img class="m-0" src={cover} alt={coverAlt} />
+          </>
+        )
+      }
+      <hr class="mt-8 mb-8" />
       <slot />
       <BlogSubscribe />
     </div>

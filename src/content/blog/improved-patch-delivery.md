@@ -1,11 +1,11 @@
 ---
-layout: ../../layouts/BlogLayout.astro
-title: Blog | Improved Patch Delivery
+title: Improved Patch Delivery
+author: felangel
 description: Announcing improved global patch delivery, availability, and performance.
-date: 9/5/2024
+date: 2024-09-05
+cover: /blog/improved-patch-delivery-cover.png
+coverAlt: Improved Patch Delivery Cover Image
 ---
-
-![Improved patch delivery header image](../../assets/images/blog/improved-patch-delivery/heading.png)
 
 We're excited to announce some improvements to cloud infrastructure which
 improve patch delivery, availability, and performance around the world 🥳
