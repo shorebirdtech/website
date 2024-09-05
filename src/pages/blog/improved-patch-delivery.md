@@ -24,7 +24,6 @@ We've made some changes to our cloud infrastructure to enable Shorebird to deliv
 
 ![China Patch availability image](../../assets/images/blog/improved-patch-delivery/china-availability.png)
 
-
 ## Faster Downloads
 
 Our cloud infrastructure improvements have also reduced the time it takes to
