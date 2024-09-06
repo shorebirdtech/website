@@ -28,10 +28,10 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="/open-graph.png" />
-    <meta property="og:url" content="https://shorebird.dev" />
+    <meta property="og:url" content={Astro.site} />
     <meta name="twitter:image" content="/open-graph.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://shorebird.dev" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <script
       defer
       data-domain="shorebird.dev"
