@@ -1,11 +1,10 @@
 ---
-layout: ../../layouts/BlogLayout.astro
-title: Blog | Surviving the upgrade to Dart 3.5.0
+title: Surviving the upgrade to Dart 3.5.0
+author: bryanoltman
 description: Troubleshooting when upgrading to Dart 3.5.0
-date: August 16, 2024
+date: 2024-08-16
+slug: 'dart-3.5.0'
 ---
-
-# Dart 3.5.0
 
 One of the big features of [Flutter
 3.24.0](https://medium.com/flutter/whats-new-in-flutter-3-24-6c040f87d1e4) is an

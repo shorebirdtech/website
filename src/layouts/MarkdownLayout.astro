@@ -25,11 +25,14 @@ const { frontmatter } = Astro.props;
     <meta name="description" content={frontmatter.description} />
     <meta property="og:description" content={frontmatter.description} />
     <meta property="og:image" content="/open-graph.png" />
-    <meta property="og:url" content="https://shorebird.dev" />
+    <meta property="og:url" content={Astro.site} />
     <meta name="twitter:image" content="/open-graph.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://shorebird.dev" />
-    <script defer data-domain="shorebird.dev" src="https://plausible.io/js/script.tagged-events.js"></script>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <script
+      defer
+      data-domain="shorebird.dev"
+      src="https://plausible.io/js/script.tagged-events.js"></script>
     <title>{frontmatter.title}</title>
   </head>
   <body>
