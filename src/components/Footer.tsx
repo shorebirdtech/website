@@ -133,6 +133,15 @@ export const Footer = () => {
                       Privacy Policy
                     </a>
                   </li>
+                  <li>
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="/legal/dpa"
+                      aria-label="data processing addendum"
+                    >
+                      DPA
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
