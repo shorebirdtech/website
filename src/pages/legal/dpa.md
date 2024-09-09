@@ -17,4 +17,4 @@ copy.
 We will keep a record of the above email, for the purposes of updating you when
 the document has been updated.
 
-[Download DPA Template](../../assets/legal/Shorebird%20DPA%20online%20template%20EU,%20UK%20and%20Swiss%202024-09-07.docx.pdf)
+[Download DPA Template](/legal/Shorebird%20DPA%20online%20template%20EU,%20UK%20and%20Swiss%202024-09-07.docx.pdf)
