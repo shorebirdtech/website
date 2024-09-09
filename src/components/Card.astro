@@ -18,14 +18,14 @@ const { title, author, description, date, link } = Astro.props;
   class="flex max-w-sm flex-col justify-between rounded-xl bg-shorebirdBg3 bg-clip-border text-white shadow-md hover:bg-shorebirdBg3Hover cursor-pointer"
 >
   <div class="p-6">
-    <h5
+    <div
       class="text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased"
     >
       <span class="hover:underline">{title}</span>
       <p class="mb-3 text-xs font-light text-gray-400">
         <FormattedDate date={date} />
       </p>
-    </h5>
+    </div>
     <p
       class="block font-sans text-base font-light leading-relaxed text-inherit antialiased"
     >
