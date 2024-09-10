@@ -124,13 +124,22 @@ export const Footer = () => {
                       Terms &amp; Conditions
                     </a>
                   </li>
-                  <li>
+                  <li className="mb-4">
                     <a
                       className="text-gray-400 hover:text-gray-300"
                       href="/privacy"
                       aria-label="privacy policy"
                     >
                       Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="/legal/dpa"
+                      aria-label="data processing addendum"
+                    >
+                      DPA
                     </a>
                   </li>
                 </ul>
