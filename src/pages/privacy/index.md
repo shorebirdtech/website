@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownLayout.astro
 title: Privacy Policy
 description: Shorebird Privacy Policy
-last_updated: 10-24-2023
+last_updated: 09-19-2024
 ---
 
 # Privacy Policy
 
-_Last updated October 24, 2023._
+_Last updated Sept 10, 2024._
 
 ### General Information
 
@@ -140,10 +140,13 @@ via email at privacy@shorebird.dev.
 
 # Shorebird List of Vendors
 
+- Cloudflare, USA, Cloud infrastructure for our Services
 - Discord, USA, Customer support
 - GitHub, USA, Code, bug reports, contributions
-- Google, USA, Cloud infrastructure for our Website & Services.
-- Loops.so, USA, Customer interactions
-- Mailchimp, USA, Customer interactions
-- Redis Labs, USA, Cloud infrastructure for our Services.
+- Google, USA, Cloud infrastructure for our Website & Services
+- Loops.so, USA, Email Delivery
+- Mailchimp, USA, Email Delivery
+- Plausible, EU, Website Analytics
+- Redis Labs, USA, Cloud infrastructure for our Services
+- Sentry, USA, Website Error Reporting
 - Stripe, USA, Payment processing
