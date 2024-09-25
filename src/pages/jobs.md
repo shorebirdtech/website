@@ -19,7 +19,7 @@ where Google can. We're on a mission to help the world "stop writing everything
 twice".
 
 We need smart, hard-working people, who want to work on start-up problems. We
-have thousands of monthly active users, and more to do our current team can keep
+have thousands of monthly active users, and more to do than our current team can keep
 up with. No two days will be the same. You need to be strongly autonomous and
 self-directing.
 
