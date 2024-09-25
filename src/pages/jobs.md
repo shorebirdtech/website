@@ -35,7 +35,7 @@ Most of our code is open source. We run a small cloud, serving 200+ requests per
 second across several providers to millions of users around the globe.
 
 We raised a seed round from great investors and have hundreds of paying
-customers, 10k+ monthly revenue and 2+ years of runway. We're happy to put you
+customers, $10k+ monthly revenue and 2+ years of runway. We're happy to put you
 in touch with any references you should you wish.
 
 In short, this is an awesome team and we'd like you on it.
