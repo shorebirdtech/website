@@ -16,7 +16,7 @@ workflow guide](https://docs.shorebird.dev/guides/development-workflow) which
 includes:
 
 - 🪵 Branching and tagging strategy
-- ✅ Automated continous integration checks
+- ✅ Automated continuous integration checks
 - 🚀 Automated releases for iOS and Android
 - 🧩 Automated patches for iOS and Android
 - 👀 Staged patches that are ready to promote to production with 1 click
