@@ -4,32 +4,41 @@ title: Jobs
 description: Shorebird openings
 ---
 
+We're hiring
+
+- [Systems Engineer](#systems-engineer)
+- [Go-to-market lead](#go-to-market-lead)
+
+---
+
 # Work at Shorebird
 
-Shorebird is building "the Flutter company".  Eric founded and led Flutter while
+Shorebird is building "the Flutter company". Eric founded and led Flutter while
 at Google, and now together we are building a company to take Flutter beyond
-where Google can.  We're on a mission to help the world "stop writing everything
-twice". Join us and help us make high-quality multi-platform apps the default
-way for all businesses to develop for any screen.
+where Google can. We're on a mission to help the world "stop writing everything
+twice".
 
-We need smart, hard-working people, who want to work on start-up problems.  We
-have lots of customers, and more to do than just the 3 of us can.  No two days
-will be the same.  You need to be strongly autonomous and self-directing.  Our
-engineering work is *building* Flutter, but don't really get to use it much.
-Shorebird engineers should have some familiarity with Dart and Flutter is
-helpful, but mostly we need people who want to talk to customers and then build
-things to solve their problems (whether by writing code, docs, or whatever).
+We need smart, hard-working people, who want to work on start-up problems. We
+have thousands of monthly active users, and more to do our current team can keep
+up with. No two days will be the same. You need to be strongly autonomous and
+self-directing.
 
-We hang out with our customers all day, every day, on Discord.  Most of our
+Our engineering work is _building_ Flutter, but don't really
+get to use it much. Shorebird engineers should have some familiarity with Dart
+and Flutter is helpful, but mostly we need people who want to talk to customers
+and then build things to solve their problems (whether by writing code, docs, or
+whatever).
+
+We hang out with our customers all day, every day, on Discord. Most of our
 stack is written in Dart, but we also have bits of JSX, Rust and C++ thrown in.
-Most of our code is open source. We run a decent sized cloud, serving over 200
-requests per second across several providers to millions of users around the
-globe.
+Most of our code is open source. We run a small cloud, serving 200+ requests per
+second across several providers to millions of users around the globe.
 
-We raised a seed round back in Jan 2023 from great investors. We have hundreds
-of paying customers, 10k+ monthly revenue and 2+ years of runway. We're happy
-to put you in touch with any references you should need to verify we're the real
-deal. This is an awesome team and we'd like you on it.
+We raised a seed round from great investors and have hundreds of paying
+customers, 10k+ monthly revenue and 2+ years of runway. We're happy to put you
+in touch with any references you should you wish.
+
+In short, this is an awesome team and we'd like you on it.
 
 ## About Shorebird
 
@@ -63,10 +72,12 @@ all remote, distributed team.
 More information about the company we're trying to build can be found in our
 [public handbook](https://github.com/shorebirdtech/handbook)
 
-# Founding Engineer
+---
+
+# Systems Engineer
 
 We write the tools others will use to build Flutter apps, including the compiler
-used to build them and runtime used to execute them.  The ideal candidate is
+used to build them and runtime used to execute them. The ideal candidate is
 comfortable in the "lower" levels of our stack, including C++ programming on
 mobile.
 
@@ -140,15 +151,16 @@ also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
 and chat with us there. We do pretty much everything in the public so you can
 very much see what we're like without even needing to apply.
 
+---
 
 # Go-To-Market Lead
 
-Shorebird currently consists of 3 software engineers.  We're great at what we
-do, but we have little "business experience".  The most pressing issues facing
+Shorebird currently consists of 3 software engineers. We're great at what we
+do, but we have little "business experience". The most pressing issues facing
 the company are no longer "can we build it", but "how do we build a company
-around this".  We're learning on the job, but are also looking for someone with
+around this". We're learning on the job, but are also looking for someone with
 experience and desire to work on the many non-technical aspects of the business
-with Eric (CEO).  We're looking for someone to join us and help us better reach
+with Eric (CEO). We're looking for someone to join us and help us better reach
 and serve an influx of customers in capacities other than writing software.
 
 ## Location
@@ -165,13 +177,12 @@ We get together 3-4x per year as a company, all flying to some US city.
 Listing a salary range for compliance, we will calibrate compensation to the
 individuals applying. We target 75% of market with our base pay. I see this as a
 career/senior (3-5 years experience) role, involving involving nearly unbounded
-growth potential.  This will be salary/equity compensated, not commission.  Our
+growth potential. This will be salary/equity compensated, not commission. Our
 incentives should be aligned to build/grow the business over a long time
 horizon.
 
 130-175k USD salary, 1.5% equity, and
 [benefits](https://handbook.shorebird.dev/benefits/).
-
 
 ## Requirements
 
@@ -192,8 +203,8 @@ horizon.
 - Community management experience
 
 This is a very broad role description, since we have so many different things
-to do!  You're not expected to do everything, but you will have nearly unbounded
-opportunity to be engaged in the business.  We'll work together to figure out
+to do! You're not expected to do everything, but you will have nearly unbounded
+opportunity to be engaged in the business. We'll work together to figure out
 what the business needs most, figure out who's going to do it, figure out
 how to do it (most things I do I've never done before) and then execute.
 
@@ -203,7 +214,7 @@ We're most interested in your past projects/accomplishments (do you ship
 stuff?), your desire to work at a startup (on this mission in particular), and
 your ability to communicate clearly. Since I am not a "business" expert, you
 will probably also meet with one of our investors or other other startup
-founders as well as our team.  The process can be very quick.  If it's a mutual
+founders as well as our team. The process can be very quick. If it's a mutual
 fit, we'll make you an offer.
 
 ## Reach out
