@@ -14,7 +14,7 @@ We're hiring
 # Work at Shorebird
 
 Shorebird is building "the Flutter company". Eric founded and led Flutter while
-at Google, and now together we are building a company to take Flutter beyond
+at Google, and now we are building a company to take Flutter beyond
 where Google can. We're on a mission to help the world "stop writing everything
 twice".
 
