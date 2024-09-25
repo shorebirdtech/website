@@ -13,6 +13,7 @@ import { PromoVideo } from '../components/PromoVideo';
 import { ScrollToTopButton } from '../components/ScrollToTopButton';
 import { Team } from '../components/Team';
 import MainLayout from '../layouts/MainLayout.astro';
+import { JobsBanner } from '../components/JobsBanner';
 
 import '../styles/Theme.css';
 import '../styles/Shapes.css';
@@ -20,6 +21,7 @@ import '../styles/Shapes.css';
 
 <MainLayout title={config.app}>
   <Navbar links={config.navLinks} client:load />
+  <JobsBanner client:load />
   <Hero client:load />
   <ProductsCodePush client:load />
   <PromoVideo client:load />
