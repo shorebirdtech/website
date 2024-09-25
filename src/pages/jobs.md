@@ -74,6 +74,22 @@ all remote, distributed team.
 More information about the company we're trying to build can be found in our
 [public handbook](https://github.com/shorebirdtech/handbook)
 
+## Location
+
+We're fully remote. Current team members are located in California, Illinois, and
+New York (GMT-8 through GMT-5). We are happy to consider anyone in GMT-10 through GMT-3. We
+communicate exclusively through Discord (both in public and private), including
+often leaving video calls open in the background while we work independently.
+
+We get together 3-4x per year as a company, all flying to some US city.
+
+## Reach out
+
+If you're interested in joining us, please email eric@shorebird.dev. You can
+also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
+and chat with us there. We do pretty much everything in the public so you can
+very much see what we're like without even needing to apply.
+
 ---
 
 # Systems Engineer
@@ -87,7 +103,12 @@ As one of our first engineers, you will wear many hats and work across many
 systems over time. You will work with a diverse and distributed team of
 exceptional engineers to build the future of development for _any screen_.
 
-## Responsibilities
+## Compensation
+
+180-210k USD salary, 1.5% equity, and
+[benefits](https://handbook.shorebird.dev/benefits/).
+
+## About You
 
 You will be responsible for many of the "lowest levels” of the product, working
 on the C++/C/Rust code that powers Dart VM and compiler, Flutter’s engine and
@@ -95,38 +116,24 @@ Shorebird’s updater. This will include working on performance at these layers
 and working with the rest of the team to maintain our forks of millions of lines
 of C++ code.
 
-You will be responsible for many design decisions within the product, and will
-be expected to be able to make tradeoffs between different approaches. You will
-be expected to be able to work within a distributed team of engineers to build a
-product that is easy to use, performant, secure and delightful to developers.
-That starts of course by building something we ourselves want to use.
+You
 
-## Location
+- Want to work at a startup
+- Work well independently, remotely and without supervision
+- Speak and write excellent English
+- Have some experience (ideally open source) with C++, C, or Rust
+- Live within in GMT-10 to GMT-3 (US timezones +/- 2)
+- Enjoy regularly learning/teaching yourself new skills
+- Want to work on a small, distributed team
+- Feel excited about our mission of making high-quality multi-platform the default
+- Like creating excellent developer experiences
+- Have experience building and shipping production software
 
-We're fully remote. Current team members are located in California, Illinois, and
-New York (GMT-8 through GMT-5). We are happy to consider anyone in GMT-10 through GMT-3. We
-communicate exclusively through Discord (both in public and private), including
-often leaving video calls open in the background while we work independently.
+You will
 
-We get together 3-4x per year as a company, all flying to some US city.
-
-## Compensation
-
-180-210k USD salary, 1.5% equity, and
-[benefits](https://handbook.shorebird.dev/benefits/).
-
-## Requirements
-
-- Wants to work at a startup
-- Autonomous, able to work well independently, remotely and without supervision
-- Excellent English spoken and written communication skills
-- Some experience (ideally open source) with C++, C, or Rust
-- Located in GMT-10 through GMT-3
-- Ability and desire to learn/teach yourself new skills as we go
-- Interest/willingness to work on a small, distributed team
-- Excited about our mission of making high-quality multi-platform the default
-- Likes creating excellent developer experiences
-- Experience building and shipping production software
+- make (many) design decisions within the product including tradeoffs between different approaches
+- work with us to build a product that is easy to use, performant, secure and delightful to developers
+- build something we all ourselves want to use
 
 ## Nice to haves
 
@@ -146,13 +153,6 @@ involves writing code together (e.g. write a small Dart command line app to do
 X). You'll talk to all 3 of us and check mutual references. If it's a mutual
 fit, we'll make you an offer.
 
-## Reach out
-
-If you're interested in joining us, please email eric@shorebird.dev. You can
-also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
-and chat with us there. We do pretty much everything in the public so you can
-very much see what we're like without even needing to apply.
-
 ---
 
 # Go-To-Market Lead
@@ -165,22 +165,13 @@ experience and desire to work on the many non-technical aspects of the business
 with Eric (CEO). We're looking for someone to join us and help us better reach
 and serve an influx of customers in capacities other than writing software.
 
-## Location
-
-We're all-remote, current team members are located in California, Illinois and
-New York (GMT-8 through GMT-5). Will consider GMT-10 through GMT-3. We
-communicate exclusively through Discord (both in public and private) including
-often leaving video calls open in the background while we work independently.
-
-We get together 3-4x per year as a company, all flying to some US city.
-
 ## Compensation
 
 Listing a salary range for compliance, we will calibrate compensation to the
 individuals applying. We target 75% of market with our base pay. I see this as a
 career/senior (3-5 years experience) role, involving involving nearly unbounded
-growth potential. This will be salary/equity compensated, not commission. Our
-incentives should be aligned to build/grow the business over a long time
+growth potential. This role will be salary/equity compensated, not commission.
+Our incentives should be aligned to build/grow the business over a long time
 horizon.
 
 130-175k USD salary, 1.5% equity, and
@@ -188,15 +179,17 @@ horizon.
 
 ## Requirements
 
-- Wants to work at a startup
-- Autonomous, able to work well independently, remotely and without supervision
-- Excellent English spoken and written communication skills
-- Experience with product, design, sales OR go-to-market roles
-- Located in GMT-10 through GMT-3
-- Ability and desire to learn/teach yourself new skills as we go
-- Interest/willingness to work on a small, distributed team
-- Excited about our mission of making high-quality multi-platform the default
-- Interest/experience working with developer products
+You
+
+- Want to work at a startup
+- Work well independently, remotely and without supervision
+- Speak and write excellent English
+- Have experience in a product, design, sales OR go-to-market role
+- Live/work within GMT-10 to GMT-3
+- Enjoy regularly learning/teaching yourself new skills
+- Want to work on a small, distributed team
+- Feel excited about our mission of saving people time and making apps better
+- Have experience with and interest in developer products
 
 ## Nice to haves
 
@@ -210,6 +203,14 @@ opportunity to be engaged in the business. We'll work together to figure out
 what the business needs most, figure out who's going to do it, figure out
 how to do it (most things I do I've never done before) and then execute.
 
+You will be responsible for as much of the "business side" of Shorebird as you
+want. There is simply too much for Eric to do alone. You will be _building_
+out our business capabilities (not managing existing processes), including
+figuring out how best to reach customers, writing content, debugging our funnel,
+improving our website, deciding marketing/events/communications strategy, etc.
+I expect someone successful in this role to have a lot of opinions and we will
+figure out what to do and learn together how to grow Shorebird's business.
+
 ## Interview Process
 
 We're most interested in your past projects/accomplishments (do you ship
@@ -218,10 +219,3 @@ your ability to communicate clearly. Since I am not a "business" expert, you
 will probably also meet with one of our investors or other other startup
 founders as well as our team. The process can be very quick. If it's a mutual
 fit, we'll make you an offer.
-
-## Reach out
-
-If you're interested in joining us, please email eric@shorebird.dev. You can
-also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
-and chat with us there. We do pretty much everything in the public so you can
-very much see what we're like without even needing to apply.
