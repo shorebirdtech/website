@@ -101,9 +101,9 @@ That starts of course by building something we ourselves want to use.
 
 ## Location
 
-We're all-remote, current team members are located in California, Illinois and
-New York (GMT-8 through GMT-5). Will consider GMT-10 through GMT-3. We
-communicate exclusively through Discord (both in public and private) including
+We're fully remote. Current team members are located in California, Illinois, and
+New York (GMT-8 through GMT-5). We are happy to consider anyone in GMT-10 through GMT-3. We
+communicate exclusively through Discord (both in public and private), including
 often leaving video calls open in the background while we work independently.
 
 We get together 3-4x per year as a company, all flying to some US city.
