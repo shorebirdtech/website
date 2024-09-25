@@ -14,7 +14,7 @@ interface Price {
   quantity: string;
 }
 
-export const Pricing = () => {
+export const PricingOverview = () => {
   return (
     <section className="relative flex w-screen justify-center bg-shorebirdBg2">
       <div className="absolute -top-16" id="pricing" />
