@@ -23,8 +23,8 @@ have thousands of monthly active users, and more to do than our current team can
 up with. No two days will be the same. You need to be strongly autonomous and
 self-directing.
 
-Our engineering work is _building_ Flutter, but don't really
-get to use it much. Shorebird engineers should have some familiarity with Dart
+Our engineering work is _building_ Flutter itself, not _with_ Flutter.
+Some familiarity with Dart
 and Flutter, but mostly we need people who want to talk to customers
 and then build things to solve their problems (whether by writing code, docs, or
 whatever).
