@@ -7,7 +7,7 @@ description: Shorebird openings
 We're hiring
 
 - [Systems Engineer](#systems-engineer)
-- [Go-to-market lead](#go-to-market-lead)
+- [Go-to-market Lead](#go-to-market-lead)
 
 ---
 
