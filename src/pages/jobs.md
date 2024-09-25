@@ -25,7 +25,7 @@ self-directing.
 
 Our engineering work is _building_ Flutter, but don't really
 get to use it much. Shorebird engineers should have some familiarity with Dart
-and Flutter is helpful, but mostly we need people who want to talk to customers
+and Flutter, but mostly we need people who want to talk to customers
 and then build things to solve their problems (whether by writing code, docs, or
 whatever).
 
