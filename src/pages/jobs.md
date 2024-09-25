@@ -4,6 +4,8 @@ title: Jobs
 description: Shorebird openings
 ---
 
+# Open Positions
+
 We're hiring
 
 - [Systems Engineer](#systems-engineer)
