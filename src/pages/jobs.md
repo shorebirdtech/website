@@ -30,7 +30,7 @@ and then build things to solve their problems (whether by writing code, docs, or
 whatever).
 
 We hang out with our customers all day, every day, on Discord. Most of our
-stack is written in Dart, but we also have bits of JSX, Rust and C++ thrown in.
+stack is written in Dart, but we also have bits of TypeScript, Rust and C++ thrown in.
 Most of our code is open source. We run a small cloud, serving 200+ requests per
 second across several providers to millions of users around the globe.
 
