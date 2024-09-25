@@ -46,7 +46,10 @@ export const Brands = () => (
           <div className="mx-auto w-2/3 sm:w-[620px] lg:mx-0 lg:w-1/2 lg:pl-10">
             <div className="-m-4 flex flex-col flex-wrap items-center lg:flex-row">
               {brands.map((brand) => (
-                <div className="flex w-1/2 justify-center py-6 sm:w-1/3">
+                <div
+                  className="flex w-1/2 justify-center py-6 sm:w-1/3"
+                  key={brand.name}
+                >
                   <a target="_blank" href={brand.url}>
                     <img src={brand.image.src} alt={brand.name} />
                   </a>
