@@ -1,13 +1,13 @@
 ---
-title: Development Workflow
+title: How to integrate Shorebird into your development workflow
 author: felangel
-description: Announcing our recommended approach for integrating Shorebird into your development workflow.
+description: Announcing our opinionated development workflow guide.
 date: 2024-09-25
 cover: /blog/development-workflow-cover.png
 coverAlt: Development Workflow Cover Image
 ---
 
-Many of our customers have been asking for an opinionated development workflow
+Our customers have been asking for an opinionated development workflow
 which integrates Shorebird so that they can spend more time shipping and less
 time defining and building a release/patch pipeline that integrates Shorebird.
 
