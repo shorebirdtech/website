@@ -27,9 +27,9 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={cover} />
+    <meta property="og:image" content={cover ? cover : '/open-graph.png'} />
     <meta property="og:url" content={Astro.site} />
-    <meta name="twitter:image" content={cover} />
+    <meta name="twitter:image" content={cover ? cover : '/open-graph.png'} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <script
