@@ -3,7 +3,7 @@ import { CheckArrowIcon } from '~/assets/icons/CheckArrowIcon';
 
 interface Feature {
   title: string;
-  hobby?: string;
+  free?: string;
   pro?: string;
   teams?: string;
   enterprise?: string;
@@ -12,39 +12,39 @@ interface Feature {
 const features: Feature[] = [
   {
     title: 'Unlimited Apps, Releases and Patches',
-    hobby: '✓',
+    free: '✓',
     pro: '✓',
     teams: '✓',
     enterprise: '✓',
   },
-  { title: 'Console', hobby: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
-  { title: 'Rollbacks', hobby: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
-  { title: 'Notifications', hobby: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
-  { title: 'Staging', hobby: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
+  { title: 'Console', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
+  { title: 'Rollbacks', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
+  { title: 'Notifications', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
+  { title: 'Staging', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
   // {
   //   title: 'Storage',
-  //   hobby: '1 Month',
+  //   free: '1 Month',
   //   pro: '1 Year',
   //   teams: 'Unlimited',
   //   enterprise: 'Unlimited',
   // },
   {
     title: 'Analytics',
-    hobby: 'Basic',
+    free: 'Basic',
     pro: 'Basic',
     teams: 'Advanced',
     enterprise: 'Advanced',
   },
   {
     title: 'Support',
-    hobby: 'Community',
+    free: 'Community',
     pro: 'Semi-Private',
     teams: 'Private',
     enterprise: 'Personal',
   },
   // {
   //   title: 'Assets',
-  //   hobby: '1mb',
+  //   free: '1mb',
   //   pro: '10mb',
   //   teams: 'Unlimited',
   //   enterprise: 'Unlimited',
@@ -57,7 +57,7 @@ const features: Feature[] = [
   // },
   {
     title: 'User Roles',
-    hobby: 'Admin, Developer',
+    free: 'Admin, Developer',
     pro: 'Admin, Developer',
     teams: 'Admin, Developer, Billing, View-Only',
     enterprise: 'Custom',
@@ -66,7 +66,7 @@ const features: Feature[] = [
   // { title: 'White-Label Support', teams: '✓', enterprise: '✓' },
   {
     title: 'Signed Patches',
-    hobby: '✓',
+    free: '✓',
     pro: '✓',
     teams: '✓',
     enterprise: '✓',
@@ -77,7 +77,7 @@ const features: Feature[] = [
 export const PricingDetails = () => {
   const plans = [
     {
-      name: 'Hobby',
+      name: 'Free',
       price: '$0',
       description: 'For small apps and demos.',
       cta: { link: config.consoleUrl, title: 'Get Started' },

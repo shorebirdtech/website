@@ -30,7 +30,7 @@ export const PricingOverview = () => {
               </p>
             </div>
             <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
-              <HobbyPlan />
+              <FreePlan />
               <ProPlan />
               <EnterprisePlan />
             </div>
@@ -63,7 +63,7 @@ function PricesNote() {
   );
 }
 
-function HobbyPlan() {
+function FreePlan() {
   const features: Feature[] = [
     { title: 'Unlimited apps' },
     { title: '1 developer' },
@@ -74,7 +74,7 @@ function HobbyPlan() {
     <div className="mb-8 w-[325px] px-1 lg:mb-0">
       <div>
         <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
-          <p className="mb-2 text-left text-xl font-bold text-white">Hobby</p>
+          <p className="mb-2 text-left text-xl font-bold text-white">Free</p>
           <div className="flex items-end justify-start">
             <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
               $0
