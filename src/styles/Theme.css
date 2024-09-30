@@ -11,7 +11,7 @@
   @apply text-5xl font-bold tracking-normal text-shorebirdPrimary xl:text-6xl;
 }
 .shorebird-block-subtitle {
-  @apply text-xs font-bold  uppercase tracking-wider text-shorebirdSecondary;
+  @apply text-xs font-bold uppercase tracking-wider text-shorebirdSecondary;
 }
 .shorebird-content-title {
   @apply text-lg font-bold tracking-normal text-white;
@@ -20,13 +20,13 @@
 /* Backgrounds */
 
 .shorebird-bg1 {
-  @apply bg-shorebirdBg1  fill-shorebirdBg1;
+  @apply bg-shorebirdBg1 fill-shorebirdBg1;
 }
 .shorebird-bg2 {
-  @apply bg-shorebirdBg2  fill-shorebirdBg2;
+  @apply bg-shorebirdBg2 fill-shorebirdBg2;
 }
 .shorebird-bg3 {
-  @apply bg-shorebirdBg3  fill-shorebirdBg3;
+  @apply bg-shorebirdBg3 fill-shorebirdBg3;
 }
 body,
 html {

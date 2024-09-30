@@ -10,7 +10,7 @@ export const config = {
   contactEmail: 'contact@shorebird.dev',
   navLinks: [
     { label: 'Products', href: '/#products-code-push', ariaLabel: 'Products' },
-    { label: 'Pricing', href: '/#pricing', ariaLabel: 'Pricing' },
+    { label: 'Pricing', href: '/pricing', ariaLabel: 'Pricing' },
     { label: 'Team', href: '/#team', ariaLabel: 'Team' },
     { label: 'FAQ', href: '/#faq', ariaLabel: 'FAQ' },
     {

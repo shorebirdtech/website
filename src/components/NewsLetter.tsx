@@ -4,7 +4,7 @@ export const NewsLetter = () => {
   return (
     <section className="relative flex w-screen justify-center bg-shorebirdBg1">
       <div className="absolute -top-16" id="newsletter" />
-      <div className="bg-shorebirdBg1 pb-20 pt-12  md:w-4/5 lg:w-[1050px]  2xl:w-[1150px] ">
+      <div className="bg-shorebirdBg1 pb-20 pt-12 md:w-4/5 lg:w-[1050px] 2xl:w-[1150px]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -35,7 +35,7 @@ export const NewsLetter = () => {
                     </label>
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                       <svg
-                        className="h-5 w-5  text-gray-400"
+                        className="h-5 w-5 text-gray-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export const NewsLetter = () => {
                       </svg>
                     </div>
                     <input
-                      className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 block  w-full rounded-lg border border-gray-600 bg-gray-700 p-3 pl-10 text-sm text-white placeholder-gray-400 sm:rounded-none sm:rounded-l-lg"
+                      className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-600 bg-gray-700 p-3 pl-10 text-sm text-white placeholder-gray-400 sm:rounded-none sm:rounded-l-lg"
                       placeholder="Enter your email"
                       type="email"
                       name="EMAIL"
