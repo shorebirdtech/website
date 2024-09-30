@@ -96,11 +96,11 @@ const FAQBox = ({ defaultOpen, title, content }) => {
 
   return (
     <div
-      className="shorebird-border-gray-darker relative mb-4 cursor-pointer rounded-3xl  bg-shorebirdBg3 px-3 pb-2 pt-2 hover:bg-shorebirdBg3Hover sm:px-8 sm:pt-6"
+      className="shorebird-border-gray-darker relative mb-4 cursor-pointer rounded-3xl bg-shorebirdBg3 px-3 pb-2 pt-2 hover:bg-shorebirdBg3Hover sm:px-8 sm:pt-6"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex flex-col items-start  justify-center p-2">
-        <h3 className=" shorebird-content-title pr-8 pt-3 sm:pr-0 sm:pt-0">
+      <div className="flex flex-col items-start justify-center p-2">
+        <h3 className="shorebird-content-title pr-8 pt-3 sm:pr-0 sm:pt-0">
           {title}
         </h3>
         <ReactMarkdown
@@ -117,7 +117,7 @@ const FAQBox = ({ defaultOpen, title, content }) => {
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`transition-all duration-500  ${
+          className={`transition-all duration-500 ${
             isOpen ? 'rotate-[180deg]' : 'rotate-[270deg]'
           }`}
         >

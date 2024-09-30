@@ -2,23 +2,17 @@ import { motion } from 'framer-motion';
 
 import { config } from '../config';
 import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
-import { useState } from 'react';
 
 interface Feature {
   title: string;
   caption?: string;
 }
 
-interface Price {
-  amount: string;
-  quantity: string;
-}
-
 export const PricingOverview = () => {
   return (
     <section className="relative flex w-screen justify-center bg-shorebirdBg2">
       <div className="absolute -top-16" id="pricing" />
-      <div className="bg-shorebirdBg2 pb-20 pt-12 md:w-4/5 lg:w-[1050px] 2xl:w-[1150px] ">
+      <div className="bg-shorebirdBg2 pb-20 pt-12 md:w-4/5 lg:w-[1050px] 2xl:w-[1150px]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -57,6 +51,14 @@ function PricesNote() {
         pushed to 10 devices is 10 installs. 2 patches pushed to 5 devices is
         also 10 installs.
       </p>
+      <div className="mx-auto max-w-sm">
+        <a
+          href="/pricing"
+          className="shorebird-button-secondary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+        >
+          See Pricing Table
+        </a>
+      </div>
     </div>
   );
 }

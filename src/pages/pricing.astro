@@ -2,7 +2,6 @@
 import { config } from '../config';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
-import { PricingOverview } from '../components/PricingOverview';
 import { PricingDetails } from '../components/PricingDetails';
 import { ScrollToTopButton } from '../components/ScrollToTopButton';
 import MainLayout from '../layouts/MainLayout.astro';
@@ -13,7 +12,6 @@ import '../styles/Shapes.css';
 
 <MainLayout title={config.app}>
   <Navbar links={config.navLinks} client:load />
-  <PricingOverview client:load />
   <PricingDetails client:load />
   <Footer />
   <ScrollToTopButton client:load />

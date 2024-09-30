@@ -10,7 +10,7 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="radius-for-skewed bg-shorebirdBg1 pt-10 lg:pb-12 lg:pt-20 ">
+      <div className="radius-for-skewed bg-shorebirdBg1 pt-10 lg:pb-12 lg:pt-20">
         <div className="container mx-auto w-4/5 px-4 md:w-11/12 lg:w-10/12 xl:w-4/5 2xl:w-2/3">
           <div className="flex flex-wrap">
             <div className="mb-16 w-full lg:mb-0 lg:w-1/3">

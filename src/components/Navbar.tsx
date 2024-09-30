@@ -67,8 +67,7 @@ export const Navbar = (props: NavbarProps) => {
         >
           <div className="hidden grow basis-0 items-center justify-end lg:flex">
             <a
-              className="flex rounded-xl
-           bg-shorebirdBg2 text-sm text-white"
+              className="flex rounded-xl bg-shorebirdBg2 text-sm text-white"
               href={config.discordUrl}
               target="_blank"
               aria-label="discord"
@@ -76,8 +75,7 @@ export const Navbar = (props: NavbarProps) => {
               <DiscordIcon />
             </a>
             <a
-              className="ml-4 flex
-           rounded-xl bg-shorebirdBg2 text-sm text-white"
+              className="ml-4 flex rounded-xl bg-shorebirdBg2 text-sm text-white"
               href={config.twitterUrl}
               target="_blank"
               aria-label="twitter"
@@ -85,8 +83,7 @@ export const Navbar = (props: NavbarProps) => {
               <TwitterIcon />
             </a>
             <a
-              className="ml-4 flex
-           rounded-xl bg-shorebirdBg2 text-sm text-white"
+              className="ml-4 flex rounded-xl bg-shorebirdBg2 text-sm text-white"
               href={config.githubUrl}
               target="_blank"
               aria-label="source code"
@@ -105,12 +102,12 @@ export const Navbar = (props: NavbarProps) => {
         </motion.div>
         {props.links ? (
           <div
-            className="flex cursor-pointer flex-col  rounded-md border border-solid border-gray-600 px-2 py-3 hover:bg-shorebirdBg2 lg:hidden"
+            className="flex cursor-pointer flex-col rounded-md border border-solid border-gray-600 px-2 py-3 hover:bg-shorebirdBg2 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <div className="mb-1 h-0.5 w-5  bg-gray-500"></div>
-            <div className="mb-1 h-0.5 w-5  bg-gray-500"></div>
-            <div className="h-0.5 w-5 bg-gray-500 "></div>
+            <div className="mb-1 h-0.5 w-5 bg-gray-500"></div>
+            <div className="mb-1 h-0.5 w-5 bg-gray-500"></div>
+            <div className="h-0.5 w-5 bg-gray-500"></div>
           </div>
         ) : (
           <></>
@@ -125,11 +122,7 @@ export const Navbar = (props: NavbarProps) => {
             transition={{ duration: 0.3 }}
             exit={{ opacity: 0 }}
           >
-            <div
-              className="absolute left-0 top-4 z-50 mt-16 flex w-full  flex-col items-center gap-10 
-        border-y border-solid border-shorebirdBg3 bg-shorebirdBg1 pb-10 pt-10 lg:hidden
-        "
-            >
+            <div className="absolute left-0 top-4 z-50 mt-16 flex w-full flex-col items-center gap-10 border-y border-solid border-shorebirdBg3 bg-shorebirdBg1 pb-10 pt-10 lg:hidden">
               <a
                 className="navbar-link"
                 href={config.consoleUrl}
