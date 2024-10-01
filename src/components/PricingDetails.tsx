@@ -184,7 +184,7 @@ export const PricingDetails = () => {
           </p>
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-lg bg-shorebirdBg3 shadow">
+        <div className="mt-16 overflow-x-auto rounded-lg bg-shorebirdBg3 shadow">
           <table className="w-full">
             <thead>
               <tr className="bg-shorebirdBg1">
