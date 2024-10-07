@@ -65,9 +65,9 @@ function PricesNote() {
 
 function FreePlan() {
   const features: Feature[] = [
-    { title: 'Unlimited apps' },
-    { title: '1 developer' },
     { title: '5K patch installs/month' },
+    { title: '1 developer' },
+    { title: 'Unlimited apps' },
     { title: 'Community support' },
   ];
   return (
@@ -111,8 +111,8 @@ function ProPlan() {
       title: '50K patch installs/month',
       caption: 'then $1 per 2,500 patch installs.',
     },
-    { title: 'Unlimited apps' },
     { title: 'Unlimited developers' },
+    { title: 'Unlimited apps' },
     { title: 'Community support' },
   ];
   return (
@@ -153,9 +153,9 @@ function ProPlan() {
 
 function EnterprisePlan() {
   const features: Feature[] = [
-    { title: 'Unlimited apps' },
+    { title: 'Volume discounts' },
     { title: 'Unlimited developers' },
-    { title: 'High volume discounts' },
+    { title: 'Unlimited apps' },
     { title: 'Private Support' },
   ];
   return (
@@ -171,7 +171,7 @@ function EnterprisePlan() {
             </div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
-            For very large apps.
+            For large apps with custom needs.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (

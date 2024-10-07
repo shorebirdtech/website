@@ -101,6 +101,7 @@ const features: Feature[] = [
     teams: 'Admin, Developer, Billing, View-Only',
     custom: 'Custom',
   },
+  { title: 'Invoice Billing', custom: '✓' },
   { title: 'Annual Billing', teams: '✓', custom: '✓' },
   // { title: 'White-Label Support', teams: '✓', enterprise: '✓' },
   { title: 'SAML', custom: 'Custom' },
@@ -126,7 +127,7 @@ export const PricingDetails = () => {
       name: 'Custom',
       price: 'Custom',
       description: 'For large apps with custom needs.',
-      cta: { link: config.contactSales, title: 'Schedule a Call' },
+      cta: { link: config.contactSales, title: 'Talk to Sales' },
     },
   ];
 
