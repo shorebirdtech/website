@@ -15,31 +15,28 @@ We're hiring
 
 # About Shorebird
 
-## Why work at Shorebird?
+## Why should I work at Shorebird?
 
-You want to work at a startup. You want every day to be a bit different, full of
-tons of things to learn and do. You want to work on making the world a little
-better through Flutter.
+_You want to work at a startup._ You want to work on a small team where every
+day is different and full of things to learn and do. You want to work on making
+the world a little better through Flutter.
 
-You agree that app development is broken. You think the world would be better if
+_You think app development is broken._ You believe the world could be better if
 developers wrote for users, not platforms, and thus that the code they write
 could work great on any screen it was needed on. Flutter might be the solution
 that finally makes multi-platform the default, and you're interested in working
 with us to make that happen.
 
-You're excited to work with smart people who also are in on this mission, who
-want to collaborate with you and teach you things and learn from you.
-
-You want to work at a place that treats you fairly. We work hard, but not crazy
-hours. We all have lots of responsibility (there are only 3 of us). We pay
+_You want to work at a place that treats you fairly._ We work hard, but not
+crazy hours. We all have lots of responsibility (there are only 3 of us). We pay
 market wages, with good benefits and great equity.
 
-You like working remotely. You know how to self-direct and set yourself up to
-succeed and community with others, even over distances. You like working on
+_You like working remotely._ You know how to self-direct and set yourself up to
+succeed and communicate with others, even over distances. You like working on
 open source, where we get to hang out with our customers all-day, everyday on
 Discord.
 
-## Where we're at.
+## Where we're at
 
 Shorebird incorporated January 2023. We've shipped our first product (code
 push) and now support around 2000 monthly active users, with about 300 paying
@@ -53,7 +50,7 @@ another full-stack engineer to help us scale to even larger customers. We're
 also seeking to hire a "business person" to work with Eric to build out all the
 non-software parts of the business.
 
-## What we do every day.
+## What we do every day
 
 Recently we've focused on growing monthly active users. During our latest
 in-person summit in NYC, we did planning for next
@@ -97,7 +94,7 @@ challenging since the default offerings from Google are sometimes an ill fit or
 incomplete for non-Google teams. Shorebird is filling in the gaps businesses
 need to be successful with Flutter development, starting with code push.
 
-## The Flutter Company
+## Building the Flutter Company
 
 We aspire to be "the Flutter company". That means building an economic entity
 whose success is tied to Flutter, to finally help the world stop writing
@@ -108,7 +105,7 @@ own incentives, which don't always align with that of Flutter's millions of
 customers outside of Google. We're trying to build a company whose success is
 aligned with the success of the businesses and developers using Flutter. A
 company trusted to provide high quality services around Flutter, and eventually
-fund the development of Flutter itself, if ever necessary.
+fund the development of Flutter itself, if necessary.
 
 If we're successful, Shorebird will eventually be synonymous with Flutter. We
 hope to support every one of the millions of Flutter developers and the
@@ -127,8 +124,11 @@ More information about the company we're trying to build can be found in our
 
 ## Location
 
-We're fully remote. Current team members are located in California, Illinois, and
-New York (GMT-8 through GMT-5). We are happy to consider anyone in GMT-10 through GMT-3. We
+We're fully remote. Current team members are located in California, Illinois,
+and New York (GMT-8 through GMT-5).
+
+Our hiring is currently focused in the US, but we hope to expand globally over
+time. We are willing to consider candidates in GMT-10 through GMT-3. We
 communicate exclusively through Discord (both in public and private), including
 often leaving video calls open in the background while we work independently.
 
