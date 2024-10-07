@@ -84,8 +84,8 @@ and a small Flutter package. Some of us prefer certain layers to others, but
 ideally you should want to work on most of the above and more as you help us add
 more products!
 
-3-4 times a year we all get together in person for a week.  We occasionally
-attend meetups or fly to visit customers.  Engineers aren't expected to attend
+3-4 times a year we all get together in person for a week. We occasionally
+attend meetups or fly to visit customers. Engineers aren't expected to attend
 any meetings, Eric has several customer meetings a week (and sometimes per day).
 
 ## The problem
