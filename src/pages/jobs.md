@@ -73,7 +73,7 @@ Discord for private company chats and calls, private large-customer support
 channels, and our public community, which makes it very easy to talk to
 customers anytime we want to.
 
-Engineers work across the whole stack. Our websites are in React (Apollo), our
+Engineers work across the whole stack. Our websites are in React (Astro), our
 backend and command-line tool are in Dart, our Database is postgres. We use
 Google Cloud, Redis and Cloudflare. We have our own fork of the Dart runtime
 and compiler (C++) and Flutter engine (C++) as well as an updater library (Rust)
