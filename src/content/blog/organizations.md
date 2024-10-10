@@ -1,8 +1,10 @@
 ---
 title: Using Shorebird with your Team
 author: shorebirdtech
-description: Announcing "Organizations" support
+description: Announcing "Organizations" support for improved collaboration within teams
 date: 2024-10-10
+cover: /blog/organizations-cover.png
+coverAlt: Organizations header image
 ---
 
 _Shorebird Code Push allows developers to deploy fixes to Flutter apps
