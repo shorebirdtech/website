@@ -92,8 +92,8 @@ one or two at Flutter conferences, so I know it's a thing.
 
 Contacting a Flutter-specific recruiter might help you find some jobs you might
 have otherwise missed. Recruiters are literally _paid_ to find you (they get
-paid a percentage of your first year of salary as a finders fee), so they are
-typically very happy to know you exist.
+paid a percentage of your first year of salary as a finders fee by the company),
+so they are typically very happy to know you exist.
 
 #### Portfolios
 
