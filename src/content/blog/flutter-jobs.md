@@ -5,7 +5,7 @@ description: How to get a Flutter Job
 date: 2024-10-10
 ---
 
-I founded the Flutter project 10 years ago, and lead the Flutter team at Google
+I founded the Flutter project 10 years ago, and led the Flutter team at Google
 for 8 years. I'm reasonably well known in the Flutter community and receive a
 lot of email from both job-seekers and job-posters regarding Flutter.
 
