@@ -54,9 +54,10 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
           </>
         )
       }
-      <hr class="mt-8 mb-8" />
+      <hr class="my-8" />
       <slot />
       <BlogFooterPitch />
+      <hr class="my-8" />
       <BlogSubscribe />
     </div>
     <Footer client:load />
