@@ -15,7 +15,7 @@ export const BlogFooterPitch = () => {
       <a
         target="_blank"
         href={config.consoleUrl}
-        className="plausible-event-name=Blog+Footer+Get+Started+Button+Clicked shorebird-button-primary mt-6 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+        className="plausible-event-name=Blog+Footer+Get+Started+Button+Clicked shorebird-button-primary mt-6 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose no-underline"
       >
         Get Started With Shorebird
       </a>
