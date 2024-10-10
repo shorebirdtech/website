@@ -9,7 +9,7 @@ I founded the Flutter project 10 years ago, and led the Flutter team at Google
 for 8 years. I'm reasonably well known in the Flutter community and receive a
 lot of email from both job-seekers and job-posters regarding Flutter.
 
-I've also been a manager for a decade and can tell you, hiring is hard. From
+I've also been a manager for a decade and can tell you, hiring is hard—from
 both sides. It's hard for companies to find candidates, and it's hard for
 candidates to find companies.
 
@@ -20,16 +20,16 @@ I generally try to dissuade both job-seekers and job-posters to search
 specifically for Flutter, under the belief that Flutter is a tool -- a means to
 an end -- and like other tools will come and go in popularity over time and what
 we all (ideally) focus on in our jobs is solving customer problems. As
-technologists of course, we learn whatever tools we need to do accomplish that
+technologists, we learn whatever tools we need to do accomplish that
 goal including Flutter.
 
 The difference is subtle, but I believe important. Most places that should be
-using Flutter, may not know they should be using Flutter (because they haven't
-hired the person to make that choice yet). Similarly many developers who will be
-successful with Flutter, may not be using it yet, because they're using whatever
+using Flutter may not know they should be using Flutter (because they haven't
+hired the person to make that choice yet). Similarly, many developers who will be
+successful with Flutter may not be using it yet, because they're using whatever
 technology is required by their current role to solve current problems.
 
-That said, people do, understandably search for and advertise for "flutter jobs"
+That said, people understandably search for and advertise for "flutter jobs"
 and so here are some tips I give to be successful with such.
 
 ### A as a Job Seeker
@@ -41,18 +41,18 @@ Two tips:
    over traditional mobile development, but the recruiter isn't a technology
    expert, you are. The business likely knows "we need an iOS app", but might
    not realize "we need a Flutter app". There are lots of jobs looking for your
-   skills, who don't know how to hire you, and as the technologist, YOU will be
+   skills who don't know how to hire you. As the technologist, YOU will be
    making (or at least influencing) the decisions as to what tech stack to use.
 
 2. Consider small companies first. The larger macro-economy changes over time,
-   but at time of writing (October 2024) I see a _lot_ of activity and hiring
+   but at time of writing (October 2024), I see a _lot_ of activity and hiring
    for small companies, and only a beginning of a resurgence in hiring for
    larger ones. I'm not an economist, but that's my sense.
 
 #### Startups
 
 - https://workatastartup.com/ -- Y-Combinator's Startup Job board.
-- Every large venture capitalist firm (VC) has a job board for their portfolio
+- Every large venture capital firm (VC) has a job board for their portfolio
   companies. You can simply Google "top 10 VCs" or "top 10 VCs in Europe" (or
   whatever your region) and find VCs and through that find startup jobs, e.g.
   https://jobs.accel.com/jobs https://jobs.sequoiacap.com/jobs
@@ -83,7 +83,7 @@ keeps a list of good consultancies:
 
 #### Recruiters
 
-There are, increasingly, Flutter-specific recruiters. I don't know any off-hand
+There are increasingly Flutter-specific recruiters. I don't know any off-hand
 (you're welcome to email me at eric@shorebird.dev if you are one), but I've met
 one or two at Flutter conferences, so I know it's a thing. Finding a
 Flutter-specific recruiter might help you find some jobs you might have
@@ -97,12 +97,12 @@ Yes, you need a place for someone to see what you've built.
 
 No, it doesn't need to be a fancy portfolio. (But that doesn't hurt.)
 
-It's just like a resume (or a website for some business), people want to be able
+It's just like a resume (or a website for some business). People want to be able
 to understand that you've successfully done stuff before (implying you are
 likely to do stuff for them too if hired), and they want to be able to browse
 through such on their own (e.g. a resume, portfolio site, GitHub, etc.)
 
-I would encourage focusing ones efforts on _doing things_ and letting them be
+I would encourage focusing one's efforts on _doing things_ and letting them be
 publicly visible if possible, rather than making the presentation of such
 amazing. Substance over form (unless you're applying for a job like Design
 Engineer, where someone cares deeply about your design presentation).
