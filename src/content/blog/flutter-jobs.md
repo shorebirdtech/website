@@ -143,18 +143,18 @@ potential.
 
 In terms of posting jobs, my suggestions are similar to the above:
 
-1. Mention Flutter.  A lot of devs *want* to work with Flutter, if you want to
+1. Mention Flutter. A lot of devs _want_ to work with Flutter, if you want to
    hire Flutter-aware devs or are at least considering Flutter as a possible
    technology, mention it.
-2. Get your job on the web.  A publicly-accessible URL is key (and may be
+2. Get your job on the web. A publicly-accessible URL is key (and may be
    legally required for some jobs), if you have that (and not buried behind
    sign-in, etc.) others can share it.
-3. Get your network to share it!  LinkedIn is great, but there are millions of
-   Flutter devs, and most are not on LinkedIn.  https://flutter.dev/community
-   lists some Slack channels and Discord channels.  You can also simply tweet at
+3. Get your network to share it! LinkedIn is great, but there are millions of
+   Flutter devs, and most are not on LinkedIn. https://flutter.dev/community
+   lists some Slack channels and Discord channels. You can also simply tweet at
    me (or tag me on LinkedIn) and I'm happy to share your job wider.
-4. If you can, hire remote.  There are so many amazing Flutter Devs all over the
-   world.  Many of them are very capable adults who work well remotely.
+4. If you can, hire remote. There are so many amazing Flutter Devs all over the
+   world. Many of them are very capable adults who work well remotely.
 
 If I've missed something, let me know.
 
