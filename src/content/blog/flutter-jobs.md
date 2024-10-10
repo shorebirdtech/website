@@ -1,7 +1,7 @@
 ---
 title: Getting a Flutter Job
 author: eseidel
-description: How to get a Flutter Job
+description: How to find or hire for a "Flutter job"
 date: 2024-10-10
 ---
 
