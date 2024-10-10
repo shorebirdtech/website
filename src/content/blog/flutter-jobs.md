@@ -64,17 +64,20 @@ Two tips:
 There are 10s (if not 100s?) of Flutter-specialized consultancies. This is
 typical for a new technology, that often "outside expertise" is hired before
 hiring might be done in-house. If you like having a variety of app work, Google
-keeps a list of good consultancies:
+keeps a list of good consultancies, many of which may be hiring:
 
-- https://flutter.dev/consultants I've personally worked with:
+- https://flutter.dev/consultants
+
+I've personally worked with, and can attest to being excellent:
+
 - https://verygood.ventures
-- https://gskinner.com/ And can attest to them being excellent.
+- https://gskinner.com/
 
 #### General
 
 - https://hnhiring.com/ -- A site which aggregates "Who's hiring" posts from
   Hacker News.
-- https://job.zip/jobs/flutter -- Someone's small job searching startup, but
+- https://job.zip/jobs/flutter -- Some job-aggregation startup, but
   also the best technology-based jobs aggregator I've found.
 - LinkedIn. I've not found a lot of success personally on LinkedIn, but there is
   a lot of volume there.
@@ -85,11 +88,12 @@ keeps a list of good consultancies:
 
 There are increasingly Flutter-specific recruiters. I don't know any off-hand
 (you're welcome to email me at eric@shorebird.dev if you are one), but I've met
-one or two at Flutter conferences, so I know it's a thing. Finding a
-Flutter-specific recruiter might help you find some jobs you might have
-otherwise missed. Recruiters are literally _paid_ to find you (they get paid a
-percentage of your first year of salary as a finders fee), so they are typically
-very happy to know you exist.
+one or two at Flutter conferences, so I know it's a thing.
+
+Contacting a Flutter-specific recruiter might help you find some jobs you might
+have otherwise missed. Recruiters are literally _paid_ to find you (they get
+paid a percentage of your first year of salary as a finders fee), so they are
+typically very happy to know you exist.
 
 #### Portfolios
 
@@ -115,10 +119,11 @@ be convinced that you are a low-risk hire. Two of the ways to help with such is
 simply old-fashioned networking. Meeting people, and talking to people you
 already know about your problems/questions, in this case job seeking. Knowing
 someone, or having them be a friend-of-a-friend, eliminates both the factors of
-awareness and risk, so work your network as much as you can. When I'm hiring (or
-trying to be hired), I literally keep a spreadsheet of all the people I know and
-when I last talked to them, etc. You don't have to go that far, but working your
-network will help.
+awareness and risk, so work your network as much as you can.
+
+When I'm hiring (or job seeking), I keep a spreadsheet of relevant people I know
+and when I last talked to them, etc. You don't have to go that far, but working
+your network will help.
 
 #### Cold Outreach
 
@@ -138,6 +143,26 @@ opening can be useful. _If_ I were to engage in such I would probably do so
 focused on my own personal learnings (e.g. I want to learn the Stripe API so
 I'll build a demo of a great Stripe package) to maximize my own upside
 potential.
+
+#### Get Noticed
+
+This is related to having a portfolio, and cold out-reach, but a technique
+that has worked for me in finding jobs is simply doing something a company
+is already trying to do, just better. For example, you could re-build an app
+or a screen from an app, post it on GitHub and Tweet it (nicely) at the original
+company as a way of potentially catching attention both from the original
+company, or others in the Flutter community.
+
+From the company's perspective, if they're considering hiring, you've already
+dramatically de-risked yourself. You clearly want to work on what they're
+working on, and you have the skills to do it. So long as you were nice about
+your outreach, you're also demonstrating you're communication ability and
+ability to present your self. Win, Win, Win.
+
+As with earlier discussions, I would encourage you to engage in any such
+exercise _for you_. There is a low chance the company will be hiring at that
+exact moment on that exact team, but _you_ still walk away with more fodder for
+your portfolio and more skills under your belt.
 
 ### As a Job Poster
 
