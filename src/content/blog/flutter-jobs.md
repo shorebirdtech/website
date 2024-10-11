@@ -158,7 +158,7 @@ company, or others in the Flutter community.
 From the company's perspective, if they're considering hiring, you've already
 dramatically de-risked yourself. You clearly want to work on what they're
 working on, and you have the skills to do it. So long as you were nice about
-your outreach, you're also demonstrating you're communication ability and
+your outreach, you're also demonstrating your communication ability and
 ability to present your self. Win, Win, Win.
 
 As with earlier discussions, I would encourage you to engage in any such
