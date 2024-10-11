@@ -138,7 +138,7 @@ problems with your skills.
 
 As an example, Flutter is still a "new" technology. There are many companies
 that _could_ sell services into the Flutter ecosystem (millions of devs!) but
-don't yet. A (still low-percentage) tact could be to reach out to one of these
+don't yet. A (still low-percentage) tactic could be to reach out to one of these
 and pitch working on Flutter support for their product. Most of these companies
 are easily reachable on Twitter and LinkedIn, and even if they don't have an
 opening can be useful. _If_ I were to engage in such I would probably do so
