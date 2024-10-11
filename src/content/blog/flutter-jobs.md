@@ -144,7 +144,7 @@ are easily reachable on Twitter and LinkedIn, and even if they don't have an
 opening can be useful. _If_ I were to engage in such I would probably do so
 focused on my own personal learnings (e.g. I want to learn the Stripe API so
 I'll build a demo of a great Stripe package) to maximize my own upside
-potential.
+regardless of job outcome.
 
 #### Get Noticed
 
