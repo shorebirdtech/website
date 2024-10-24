@@ -16,7 +16,7 @@ We're hiring
 # About Shorebird
 
 Shorebird is a small, venture-funded startup (est Jan 2023) trying to make
-Flutter the default way to write apps.  So far we've built and shipped Code Push
+Flutter the default way to write apps. So far we've built and shipped Code Push
 for Flutter to let businesses over the air update their apps instantly on users
 phones.
 
@@ -31,7 +31,7 @@ Working at a startup means:
 - (Growth)[https://www.paulgraham.com/growth.html]. We are trying to
   grow quickly (revenues, customers, products, people, etc). Growth means
   opportunity, variety and challenge.
-- Ambition. Hard work is needed and rewarded.  Your colleagues are highly
+- Ambition. Hard work is needed and rewarded. Your colleagues are highly
   engaged, want to be here, want to work hard, and want to learn with and from
   you.
 - Big upside. We pay well relative to other startups, but less (cash) than Big
@@ -41,7 +41,7 @@ Working at a startup means:
   us is doing it. If you're going to do, you get to decide. Want to be our CDN
   expert or marketing expert or Dart compiler ninja? More than you could ever
   want to own, you will.
-- No layers. Direct access to customers.  Direct access to management (the CEO
+- No layers. Direct access to customers. Direct access to management (the CEO
   is the only manager). Nothing between you and direct action.
 - Few distractions. Engineers don't have meetings. There are no perf reviews. We
   show up and do.
@@ -60,7 +60,7 @@ run so much better/worse than my copy of the app?). We're wasting countless
 years of human life on this problem, for bad reasons.
 
 I (and many others) tried to make the Web (PWAs, etc) solve "write once; run
-anywhere" a decade ago and failed.  Hence we built Flutter to let Google and
+anywhere" a decade ago and failed. Hence we built Flutter to let Google and
 everyone write high-quality app experiences and have them go everywhere.
 
 Flutter is now the most popular solution for writing multi-platform apps. Over
@@ -266,7 +266,7 @@ Listing a salary range for compliance, we will calibrate compensation to the
 individuals applying. We target 75% of market with our base pay. I see this as a
 at minimum an early-career role (3+ years experience), involving involving
 nearly unbounded growth potential. More experience applicants are welcome, there
-is plenty to do.  This role will be salary/equity compensated, not commission.
+is plenty to do. This role will be salary/equity compensated, not commission.
 Our incentives should be aligned to build/grow the business over a long time
 horizon.
 
