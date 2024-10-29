@@ -37,6 +37,20 @@ const faqs = [
     answer:
       'We accept any method of payment Stripe accepts in your region.  Enterprise customers can also pay by invoice.',
   },
+  {
+    question: 'When am I charged for patch installs?',
+    answer:
+      'At the start of each billing period, you are billed for your pre-paid patches. \
+       In the case of a Pro plan, this includes 50,000 pre-paid patch installs. \
+      "Overage" patch installs are billed at the end of each billing period. \
+      The initial invoice (month 1) will only include the prepaid patches, however successive months will include \
+      overage bills as well.  For example, if you are using the Pro plan \
+      (includes 50,000 pre-paid patches), and you use 100,000 patch installs each month, \
+      you will be charged $20 when you sign up, and then $40 at the beginning of month 2 \
+      ($20 for the 50,000 overage, and $20 for Month 2\'s Pro plan). \
+      You can always check the status of your account and billing at \
+      https://console.shorebird.dev/account.',
+  },
 ];
 
 export const PricingFAQ = () => (
