@@ -67,7 +67,7 @@ Future<void> _checkForUpdate() async {
   final status = await updater.checkForUpdate();
   if (!mounted) return;
   // If there is an update available, show a banner.
-  if (status == UpdateStatus.outdated) _showUpdateAvailableBanner();
+  if (status == UpdateStatus.outdated) showUpdateAvailableBanner();
 }
 ```
 
@@ -106,14 +106,14 @@ Finally, if an update is available you can use the `update` API to perform the u
 Future<void> _downloadUpdate() async {
   try {
     // Perform the update (e.g download the latest patch).
-    await _updater.update();
+    await updater.update();
     if (!mounted) return;
     // Show a banner to inform the user that the update is ready and that they
     // need to restart the app.
-    _showRestartBanner();
+    showRestartBanner();
   } on UpdateException catch (error) {
     // We now have much better insights into why an update fail.
-    _showErrorBanner(error.message);
+    showErrorBanner(error.message);
   }
 }
 ```
