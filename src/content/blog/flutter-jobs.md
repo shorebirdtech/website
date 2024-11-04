@@ -1,7 +1,7 @@
 ---
 title: Getting a Flutter Job
 author: eseidel
-description: How to find or hire for a "Flutter job"
+description: Advice on how to find or hire for a "Flutter job"
 date: 2024-10-10
 cover: /blog/flutter-jobs-cover.png
 coverAlt: Flutter Jobs Cover Image
