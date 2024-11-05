@@ -9,7 +9,7 @@ coverAlt: Improved Patch Delivery Cover Image
 
 We're excited to announce a pre-release of version 2.0 of the
 [`shorebird_code_push`
-package](https://pub.dev/packages/shorebird_code_push/versions/2.0.0-dev.1).
+package](https://pub.dev/packages/shorebird_code_push/versions/2.0.0-dev.2).
 
 ## What's New
 
@@ -153,11 +153,8 @@ revision of Flutter 3.24.4.
 
 ```yaml
 dependencies:
-  shorebird_code_push: ^2.0.0-dev.1
+  shorebird_code_push: ^2.0.0-dev.2
 ```
-
-The complete public API documentation can be found on
-[pub.dev](https://pub.dev/documentation/shorebird_code_push/2.0.0-dev.1/shorebird_code_push/shorebird_code_push-library.html).
 
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
 or improved, please [let us know by filing an
