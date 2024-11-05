@@ -79,7 +79,6 @@ To check for updates, you can use the `checkForUpdate` API:
 Future<void> _checkForUpdate() async {
   // Check if there's an update available.
   final status = await updater.checkForUpdate();
-  if (!mounted) return;
   // If there is an update available, show a banner.
   if (status == UpdateStatus.outdated) showUpdateAvailableBanner();
 }
@@ -121,7 +120,6 @@ Future<void> _downloadUpdate() async {
   try {
     // Perform the update (e.g download the latest patch).
     await updater.update();
-    if (!mounted) return;
     // Show a banner to inform the user that the update is ready and that they
     // need to restart the app.
     showRestartBanner();
