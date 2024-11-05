@@ -140,16 +140,24 @@ enum UpdateFailureReason {
 }
 ```
 
-To see the latest version in action, check out the [Shorebird Code Push Example](https://github.com/shorebirdtech/updater/tree/main/shorebird_code_push/example).
+To see the latest version in action, check out the [Shorebird Code Push
+Example](https://github.com/shorebirdtech/updater/tree/main/shorebird_code_push/example)
+or the [Flutter & Friends Conference
+App](https://github.com/felangel/flutter_and_friends).
 
 ## Get Started
 
-You can try out the new version now by adjusting your `pubspec.yaml` to use the pre-release and re-releasing a new version of your application using the revision of Flutter 3.24.4.
+You can try out the new version now by adjusting your `pubspec.yaml` to use the
+pre-release and re-releasing a new version of your application using the
+revision of Flutter 3.24.4.
 
 ```yaml
 dependencies:
   shorebird_code_push: ^2.0.0-dev.1
 ```
+
+The complete public API documentation can be found on
+[pub.dev](https://pub.dev/documentation/shorebird_code_push/2.0.0-dev.1/shorebird_code_push/shorebird_code_push-library.html).
 
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
 or improved, please [let us know by filing an
