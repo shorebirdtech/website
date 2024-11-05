@@ -7,6 +7,13 @@ cover: /blog/shorebird-code-push-v2-cover.png
 coverAlt: Improved Patch Delivery Cover Image
 ---
 
+The `shorebird_code_push` package is a completely optional package that allows
+developers to customize the user experience of downloading and installing over
+the air updates with Shorebird. By default, Shorebird auto updates in the
+background but teams that want more control over when updates are downloaded and
+installed can use the `shorebird_code_push` package to programmatically interact
+with Shorebird's updater.
+
 We're excited to announce a pre-release of version 2.0 of the
 [`shorebird_code_push`
 package](https://pub.dev/packages/shorebird_code_push/versions/2.0.0-dev.2).
