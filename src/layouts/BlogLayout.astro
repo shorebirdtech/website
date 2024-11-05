@@ -10,7 +10,6 @@ import Author from '~/components/Author.astro';
 import FormattedDate from '~/components/FormattedDate.astro';
 import { Navbar } from '~/components/Navbar';
 import { Footer } from '~/components/Footer';
-import { BlogSubscribe } from '~/components/BlogSubscribe';
 import { BlogFooterPitch } from '~/components/BlogFooterPitch';
 
 import '../styles/Theme.css';
@@ -56,9 +55,7 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
       }
       <hr class="my-8" />
       <slot />
-      <BlogFooterPitch />
-      <hr class="my-8" />
-      <BlogSubscribe />
+      <BlogFooterPitch />      
     </div>
     <Footer client:load />
     <style is:global>
