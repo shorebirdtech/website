@@ -185,6 +185,8 @@ export const PricingDetails = () => {
           </p>
         </div>
 
+        <WhichPlan />
+
         <div className="mt-16 overflow-x-auto rounded-lg bg-shorebirdBg3 shadow">
           <table className="w-full">
             <thead>
@@ -234,3 +236,46 @@ export const PricingDetails = () => {
     </div>
   );
 };
+
+
+
+function WhichPlan() {
+  return (
+    <div className="text-left text-sm text-shorebirdTextGray">
+      <div className="text-2xl font-bold text-white">Which plan is right for me?</div>
+
+      <p>
+        If you're just starting out, either on a hobby app or building a proof
+        of concept with Shorebird, the Free plan is a great way to get
+        started. You can always upgrade to Pro or Enterprise later.
+      </p>
+
+      <p>
+        If you're an established business or have a high volume of patch
+        installs, the Pro plan is the best choice. You get more installs and
+        unlimited developers.  The pro plan will scale to any number of patch
+        installs.  Patches are billed at $1 per 2,500 installs after the first
+        50,000.
+
+        For example if you have 90,000 MAU and plan to send one patch a month,
+        you would pay $20 for the first 50,000 installs, and $12 for the
+        remaining 40,000 installs for a total of $32 per month.
+
+        Similarly if you have an app with bursty traffic, you only pay for
+        what you use with the Pro plan.  If we installed no patches for you one
+        month, you only pay the $20 base fee.  If we installed 1,000,000 for you
+        the next next, you would pay $20 for the first 50,000 installs, and $400
+        for the remaining 950,000 installs for a total of $420 for the month.
+
+        Most customers start with the Pro plan.
+      </p>
+
+      <p>
+        For users with high volume needs, or who need a custom solution, the
+        Enterprise plan is the best choice.  We offer volume discounts starting
+        at 1M patch installs per month.  We also offer private support
+        and custom solutions for those spending over $2,000 per month.
+      </p>
+    </div>
+  )
+}
