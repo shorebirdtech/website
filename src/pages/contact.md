@@ -23,7 +23,7 @@ You're also welcome to [email us](mailto:contact@shorebird.dev).
 
 ## 🐌 Mail
 
-Shorebird is globally remote, we have no physical office.  Contracts or physical mail should use:
+Shorebird is globally remote, we have no physical office. Contracts or physical mail should use:
 
 ```
 2261 Market Street #5112
