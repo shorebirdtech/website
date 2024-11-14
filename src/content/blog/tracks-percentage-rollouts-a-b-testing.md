@@ -70,7 +70,6 @@ dependencies:
   shorebird_code_push: ^2.0.0
 ```
 
-
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
 or improved, please [let us know by filing an
 issue](https://github.com/shorebirdtech/updater/issues/new).
