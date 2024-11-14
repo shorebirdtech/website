@@ -4,7 +4,7 @@ author: felangel
 description: Announcing the pre-release of pkg:shorebird_code_push v2.0
 date: 2024-11-05
 cover: /blog/shorebird-code-push-v2-cover.png
-coverAlt: Improved Patch Delivery Cover Image
+coverAlt: Shorebird Code Push Package v2 Cover Image
 ---
 
 We're excited to announce a pre-release of version 2.0 of the
