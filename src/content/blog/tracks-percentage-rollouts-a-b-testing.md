@@ -48,7 +48,7 @@ to all users.
 
 Similar to groups, it is now possible to implement percentage rollouts of
 patches with Shorebird. Currently we do not provide UI for controlling
-rollouts, but rather the tools to allow sophisticated customers to do so on
+rollouts, but rather the tools to allow customers to do so on
 their own. We've written a guide demonstrating how this can be accomplished:
 https://docs.shorebird.dev/guides/percentage-based-rollouts/
 
