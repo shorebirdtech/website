@@ -70,12 +70,6 @@ dependencies:
   shorebird_code_push: ^2.0.0
 ```
 
-### Further work
-
-For now we've decided to expose these lower-level APIs to allow sophisticated
-customers to implement their own custom rollout flows. We may eventually
-decide to also add Console support for controlling rollout percentages,
-A/B testing, etc.
 
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
 or improved, please [let us know by filing an
