@@ -9,7 +9,7 @@ coverAlt: Improved Patch Delivery Cover Image
 
 Building on the success of our brand-new [`shorebird_code_push`
 package](https://pub.dev/packages/shorebird_code_push/versions/2.0.0) 2.0, we're
-announcing release tracks, which can be used to support percentage-based
+announcing patch tracks, which can be used to support percentage-based
 rollouts and A/B testing within Shorebird.
 
 The `shorebird_code_push` package is a completely optional package that allows
@@ -24,7 +24,7 @@ able to offer patch rollout options that target specific users.
 
 However, with the updated package:shorebird_code_push, we've provided the API
 tools to make it easy for you to provide your own group-based control over who
-gets what updates when. With release tracks, you can support QA testing, a
+gets what updates when. With patch tracks, you can support QA testing, a
 public beta, or even for controlled percentage-based rollout across your
 userbase.
 
