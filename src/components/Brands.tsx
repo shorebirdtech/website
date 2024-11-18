@@ -3,8 +3,12 @@ import { motion } from 'framer-motion';
 import JungleeLogo from '../assets/brands/junglee.png';
 import KijijiLogo from '../assets/brands/kijiji.png';
 import TrackerLogo from '../assets/brands/tracker.png';
-
-import Marquee from 'react-fast-marquee';
+import ChaiLogo from '../assets/brands/chai-logo.svg';
+import KalshiLogo from '../assets/brands/kalshi.webp';
+import ApnaKlubLogo from '../assets/brands/apnaklub.webp';
+import FlashCoLogo from '../assets/brands/flash_co.webp';
+import TradelingLogo from '../assets/brands/tradeling.svg';
+import InvoiceHomeLogo from '../assets/brands/invoice_home.webp';
 
 const brands = [
   {
@@ -22,7 +26,45 @@ const brands = [
     url: 'https://tracker.fi',
     image: TrackerLogo,
   },
+  {
+    name: 'CHAI',
+    url: 'https://chai-research.com/',
+    image: ChaiLogo,
+  },
+  {
+    name: 'Kalshi',
+    url: 'https://kalshi.com',
+    icon: KalshiLogo,
+  },
+  {
+    name: 'ApnaKlub',
+    url: 'https://www.apnaklub.com',
+    icon: ApnaKlubLogo,
+    includeName: true,
+  },
+  {
+    name: "Flash.co",
+    url: "https://flash.co",
+    icon: FlashCoLogo,
+    includeName: true,
+  },
+  {
+    name: "Tradeling",
+    url: "https://www.tradeling.com",
+    image: TradelingLogo,
+  },
+  {
+    name: "Invoice Home",
+    url: "https://invoicehome.com",
+    icon: InvoiceHomeLogo,
+  }
 ];
+
+const Marquee = ({ children }) => (
+  <div className="overflow-hidden w-full">
+    <div className="flex w-full">{children}</div>
+  </div>
+);
 
 export const Brands = () => (
   <section className="mb-8 w-full bg-shorebirdBg3 py-12 sm:py-24 lg:mb-16 lg:mt-16">
@@ -53,8 +95,26 @@ export const Brands = () => (
                     className="flex w-1/2 justify-center py-6 sm:w-1/3"
                     key={brand.name}
                   >
+                    <style>
+                      {`
+.app-icon {
+  width: 57px;
+  height: 57px;
+  border-radius: 9px; /* Adjust the radius as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+                      `}
+                    </style>
                     <a target="_blank" href={brand.url}>
-                      <img src={brand.image.src} alt={brand.name} />
+                      {brand.icon ? (
+                        <div>
+                        <img src={brand.icon.src} alt={brand.name} className='app-icon' />
+                        {brand.includeName && <div className=''>{brand.name}</div>}
+                        </div>
+                      ) : (
+                        <img src={brand.image.src} alt={brand.name} />
+                      )}
                     </a>
                   </div>
                 ))}
