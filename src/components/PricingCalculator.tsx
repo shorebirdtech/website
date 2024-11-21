@@ -30,7 +30,7 @@ export function PricingCalculator() {
         'Pro',
         <span>
           Our Pro plan includes {formatNumber(proPlanIncludedPatches)} patch
-          installs.
+          installs.{' '}
           <a className="link underline" href="https://console.shorebird.dev">
             Sign up
           </a>{' '}
