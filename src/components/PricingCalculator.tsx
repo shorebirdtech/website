@@ -151,8 +151,7 @@ export function PricingCalculator() {
 
         <div className="mt-12 block">
           <div className="text-2xl">
-            We recommend the{' '}
-            <span className="font-bold">{recommendedPlan}</span> plan
+            Use the <span className="font-bold">{recommendedPlan}</span> plan
             {cost !== null && (
               <span className="ml-2 text-sm">
                 (
