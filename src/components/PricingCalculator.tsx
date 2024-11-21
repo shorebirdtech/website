@@ -10,17 +10,12 @@ export function PricingCalculator() {
     initialNumPatchesPerMonth,
   );
   const totalPatchInstalls = mauCount * numPatchesPerMonth;
-  const [recommendedPlan, helpText, cost] = (() => {
+  const [recommendedPlan, helpText, cta, cost] = (() => {
     if (totalPatchInstalls <= 5_000) {
       return [
         'Free',
-        <span>
-          Our free tier has everything you need.{' '}
-          <a className="link underline" href="https://console.shorebird.dev">
-            Sign up
-          </a>{' '}
-          here.
-        </span>,
+        <span>Our free tier has everything you need. </span>,
+        <NonEnterpriseCta />,
         0,
       ];
     }
@@ -30,12 +25,9 @@ export function PricingCalculator() {
         'Pro',
         <span>
           Our Pro plan includes {formatNumber(proPlanIncludedPatches)} patch
-          installs.{' '}
-          <a className="link underline" href="https://console.shorebird.dev">
-            Sign up
-          </a>{' '}
-          here.
+          installs.
         </span>,
+        <NonEnterpriseCta />,
         2000,
       ];
     }
@@ -53,26 +45,14 @@ export function PricingCalculator() {
           >
             configurable overages
           </a>{' '}
-          at $1 per 2,500 patch installs.{' '}
-          <a className="link underline" href="https://console.shorebird.dev">
-            Sign up
-          </a>{' '}
-          here.
+          at $1 per 2,500 patch installs.
         </span>,
+        <NonEnterpriseCta />,
         2000 + numOverageInstalls * 0.04,
       ];
     }
 
-    return [
-      'Enterprise',
-      <span>
-        <a className="link underline" href="contact#sales">
-          Contact us
-        </a>{' '}
-        for a discounted quote.
-      </span>,
-      null,
-    ];
+    return ['Enterprise', <div></div>, <EnterpriseCTA />, null];
   })();
 
   return (
@@ -154,10 +134,7 @@ export function PricingCalculator() {
             Use the <span className="font-bold">{recommendedPlan}</span> plan
             {cost !== null && (
               <span className="ml-2 text-sm">
-                (
-                {numPatchesPerMonth * totalPatchInstalls > 50_000
-                  ? 'Up to '
-                  : ''}
+                ({totalPatchInstalls > 50_000 ? 'Up to ' : ''}
                 {formatMoney(cost)} per month)
               </span>
             )}
@@ -168,9 +145,32 @@ export function PricingCalculator() {
               {formatNumber(totalPatchInstalls)}
             </span>{' '}
             patch installs per month. {helpText}
+            <div className="pt-2">{cta}</div>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function NonEnterpriseCta() {
+  return (
+    <div>
+      <a className="link underline" href="https://console.shorebird.dev">
+        Sign up
+      </a>{' '}
+      here.
+    </div>
+  );
+}
+
+function EnterpriseCTA() {
+  return (
+    <span>
+      <a className="link underline" href="contact#sales">
+        Contact us
+      </a>{' '}
+      for a discounted quote.
+    </span>
   );
 }
