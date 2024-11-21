@@ -161,7 +161,7 @@ export function PricingCalculator() {
             )}
           </div>
           <div className="text-m mt-2 max-w-2xl">
-            You need a plan with{' '}
+            You will want a plan with{' '}
             <span className="size-2 font-bold">
               {formatNumber(totalPatchInstalls)}
             </span>{' '}
