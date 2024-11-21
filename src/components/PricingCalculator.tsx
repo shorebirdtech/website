@@ -78,8 +78,7 @@ export function PricingCalculator() {
   return (
     <div className="mt-8 flex flex-col items-center text-white">
       <div className="mt-4 text-center text-2xl font-semibold">
-        Not sure which plan you should choose? Use our pricing calculator to
-        find out.
+        Not sure which plan you should choose?
       </div>
       <div className="mx-auto mb-8 mt-2 min-w-full px-8 text-center text-sm text-shorebirdTextGray"></div>
       <div className="min-w-full items-start px-28">
