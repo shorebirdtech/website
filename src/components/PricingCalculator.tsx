@@ -85,7 +85,7 @@ export function PricingCalculator() {
         <div className="flex flex-col text-lg">
           <div className="">
             <span className="text-sm font-bold text-shorebirdTextGray">
-              How many monthly active users do you have?
+              Approximate Monthly Active Users (MAUs)
             </span>
             <div className="relative">
               <input
@@ -101,7 +101,7 @@ export function PricingCalculator() {
               />
 
               <span className="absolute -bottom-6 start-0 text-sm text-gray-500 dark:text-gray-400">
-                5,000
+                5,000 or fewer
               </span>
               <span className="absolute -bottom-6 start-1/4 -translate-x-1/2 text-sm text-gray-500 rtl:translate-x-1/2 dark:text-gray-400">
                 500,000
@@ -119,7 +119,7 @@ export function PricingCalculator() {
           </div>
           <div className="w-full pt-12">
             <span className="text-sm font-bold text-shorebirdTextGray">
-              How many times will you patch each month?
+              Patches per Month
             </span>
             <div className="relative">
               <input
