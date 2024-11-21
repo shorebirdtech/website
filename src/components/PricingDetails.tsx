@@ -1,5 +1,6 @@
 import { config } from '../config';
 import { CheckArrowIcon } from '~/assets/icons/CheckArrowIcon';
+import { PricingCalculator } from './PricingCalculator';
 
 interface Feature {
   title: string;
@@ -176,7 +177,9 @@ export const PricingDetails = () => {
           ))}
         </div>
 
-        <div className="mx-auto mb-8 mt-6 px-8 text-sm text-shorebirdTextGray">
+        <PricingCalculator />
+
+        <div className="mx-auto mb-8 mt-12 px-8 text-sm text-shorebirdTextGray">
           <p>
             *Prices are quoted in USD and sold as "patch installs per month",
             reflecting successful installs of a given patch. For example, 1
