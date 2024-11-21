@@ -31,6 +31,10 @@ export function PricingCalculator() {
         <span>
           Our Pro plan includes {formatNumber(proPlanIncludedPatches)} patch
           installs.
+          <a className="link underline" href="https://console.shorebird.dev">
+            Sign up
+          </a>{' '}
+          here.
         </span>,
         2000,
       ];
@@ -41,7 +45,19 @@ export function PricingCalculator() {
       return [
         'Pro',
         <span>
-          {`Our Pro plan includes ${formatNumber(proPlanIncludedPatches)} patches and supports overages at $1 per 2,500 patch installs.`}
+          Our Pro plan includes ${formatNumber(proPlanIncludedPatches)} patches
+          and supports{' '}
+          <a
+            className="link underline"
+            href="https://shorebird.dev/blog/simplified-pricing/"
+          >
+            configurable overages
+          </a>{' '}
+          at $1 per 2,500 patch installs.{' '}
+          <a className="link underline" href="https://console.shorebird.dev">
+            Sign up
+          </a>{' '}
+          here.
         </span>,
         2000 + numOverageInstalls * 0.04,
       ];
