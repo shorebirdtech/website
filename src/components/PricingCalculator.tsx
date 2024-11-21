@@ -113,7 +113,7 @@ export function PricingCalculator() {
                 1,500,000
               </span>
               <span className="absolute -bottom-6 end-0 text-sm text-gray-500 dark:text-gray-400">
-                2,000,000+
+                2,000,000 or more
               </span>
             </div>
           </div>
