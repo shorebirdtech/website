@@ -5,7 +5,7 @@ export function PricingCalculator() {
   const proPlanIncludedPatches = 50_000;
   const initialMauCount = 10_000;
   const [mauCount, setMauCount] = useState(initialMauCount);
-  const initialNumPatchesPerMonth = 2;
+  const initialNumPatchesPerMonth = 1;
   const [numPatchesPerMonth, setNumPatchesPerMonth] = useState(
     initialNumPatchesPerMonth,
   );
@@ -69,7 +69,7 @@ export function PricingCalculator() {
         <a className="link underline" href="contact#sales">
           Contact us
         </a>{' '}
-        for a quote.
+        for a discounted quote.
       </span>,
       null,
     ];
