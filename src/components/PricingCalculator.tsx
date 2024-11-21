@@ -155,7 +155,11 @@ export function PricingCalculator() {
             <span className="font-bold">{recommendedPlan}</span> plan
             {cost !== null && (
               <span className="ml-2 text-sm">
-                ({formatMoney(cost)} per month)
+                (
+                {numPatchesPerMonth * totalPatchInstalls > 50_000
+                  ? 'Up to '
+                  : ''}
+                {formatMoney(cost)} per month)
               </span>
             )}
           </div>
