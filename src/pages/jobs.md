@@ -77,7 +77,7 @@ of Android, Ads and Chrome) and long term would benefit from an economic entity
 wholly aligned with Flutter's goals (not just trying to use it to sell Ads or
 Cloud).
 
-All these problems are why after taking Flutter as far as I could within
+All these problems are why, after taking Flutter as far as I could within
 Google, I left to build a company around Flutter: Shorebird.
 
 ## Solution: The Flutter Company
