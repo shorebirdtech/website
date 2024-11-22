@@ -22,7 +22,7 @@ phones.
 
 ## Why work at a startup?
 
-Having worked at both, I can tell you, startups feel very different from big
+Having worked at both large and small companies, I can tell you, startups feel very different from big
 companies and big teams.
 
 Working at a startup means:
