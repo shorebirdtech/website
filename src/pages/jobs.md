@@ -49,7 +49,7 @@ Working at a startup means:
 ## Problem: App Development is Broken
 
 App development is broken. The default answer to "write an app" is write it once
-for iOS, once for Android and once for the web (possibly more places).
+for iOS, once for Android, and once for the web (possibly more places).
 Businesses write the same app at least twice at 2x the necessary costs, with
 redundant code-bases, teams, bug lists.
 
