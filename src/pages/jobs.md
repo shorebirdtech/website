@@ -36,7 +36,7 @@ Working at a startup means:
   you.
 - Big upside. We pay well relative to other startups, but less (cash) than Big
   Tech. Instead we offer lots of equity. Equity means you own a percentage of
-  Shorebird, and have a significant financial share in the company's success.
+  Shorebird, and have a significant financial stake in the company's success.
 - Ownership. Team is very small. For anything to be done, that means one of
   us is doing it. If you're going to do, you get to decide. Want to be our CDN
   expert or marketing expert or Dart compiler ninja? More than you could ever
