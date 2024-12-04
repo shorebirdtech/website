@@ -8,8 +8,8 @@ description: Shorebird openings
 
 We're hiring
 
-- [Founding Full Stack Engineer](#founding-full-stack-engineer)
-- [Go-to-market Lead](#go-to-market-lead)
+- [Founding Engineer](#founding-engineer)
+- [Founding Product Manager](#founding-product-manager)
 
 ---
 
@@ -191,7 +191,7 @@ very much see what we're like without even needing to apply.
 
 ---
 
-# Founding Full Stack Engineer
+# Founding Engineer
 
 We write the tools others will use to build Flutter apps, including the compiler
 used to build them and runtime used to execute them. The ideal candidate
@@ -200,7 +200,7 @@ including using a systems-language (like C++) doing programming on mobile.
 
 ## Compensation
 
-180-210k USD salary, 1.5% equity, and
+180-220k USD salary, 1.5% equity, and
 [benefits](https://handbook.shorebird.dev/benefits/).
 
 ## About You
@@ -249,7 +249,17 @@ fit, we'll make you an offer.
 
 ---
 
-# Go-To-Market Lead
+# Founding Product Manager
+
+What we need is a "business person". Someone who gets up every day and wants
+to move the company forward, in ways other than writing code. This person will
+contribute in _many_ different ways over time.
+
+This is a doer-role (as all startup roles are). There won't be people to
+manage, or really a product to "manage", there will be a product to build and
+customers to serve, and more to do than any of us can. You'll get to roll up
+your sleeves with the rest of us and just "do" whatever you believe is the
+most impactful thing to move the business forward.
 
 Shorebird currently consists of 3 software engineers. We're great at what we do,
 but we have little "business experience". The most pressing issues facing the
@@ -280,7 +290,7 @@ You
 - Want to work at a startup
 - Work well independently, remotely and without supervision
 - Speak and write excellent English
-- Have experience in a product, design, sales OR go-to-market role
+- Have experience in a product, design, sales or go-to-market role
 - Live/work within GMT-10 to GMT-3
 - Enjoy regularly learning/teaching yourself new skills
 - Want to work on a small, distributed team
