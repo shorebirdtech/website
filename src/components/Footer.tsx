@@ -95,7 +95,7 @@ export const Footer = () => {
                   <li className="mb-4">
                     <a
                       className="text-gray-400 hover:text-gray-300"
-                      href={`mailto:${config.contactEmail}`}
+                      href="/contact"
                       aria-label="contact us"
                     >
                       Contact Us
