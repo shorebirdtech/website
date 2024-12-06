@@ -270,15 +270,43 @@ experience and desire to work on the many non-technical aspects of the business
 with Eric (CEO). We're looking for someone to join us and help us better reach
 and serve an influx of customers in capacities other than writing software.
 
+## Scope
+
+We have way more to do than people to do. There is essentially unbounded scope
+for those interested in taking such, including working with the team to define
+our entire product suite, build/debug our sales pipeline, plan/organize (large)
+events, build community programs, eventually hire a team, etc.
+
+There are many different backgrounds that could be successful in this role and
+each person is likely to want to wear different hats. For now everything
+not-writing-code falls to Eric (CEO), when you join, essentially as many hats as
+you wanted to wear, are yours since you'd be the first person on the team not
+responsible for writing code.
+
+Our current focus for early 2025 is to grow revenues. If you started tomorrow
+I'd ask you first to join me (or lead) 10+ customer calls and review our
+customer notes and (years of) Discord chat logs with customers and then we'd
+probably spend time brainstorming areas of most impact. My guess is that
+working together to refine our narrative, expand our website copy and debug
+buying friction would be top of that list.
+
+You and I would have to figure out how we as an org are going to organize
+customer support and coordinated sales outreach over time, what of our product
+suite we should do next in our path to "the flutter company" and of course to
+define that product suite itself!
+
+There will be no people management in the near term.
+
 ## Compensation
 
 Listing a salary range for compliance, we will calibrate compensation to the
-individuals applying. We target 75% of market with our base pay. I see this as a
-at minimum an early-career role (3+ years experience), involving involving
+individuals applying. We target 75% of market with our base pay. This is
+at-minimum an early-career role (3+ years experience), involving involving
 nearly unbounded growth potential. More experience applicants are welcome, there
-is plenty to do. This role will be salary/equity compensated, not commission.
-Our incentives should be aligned to build/grow the business over a long time
-horizon.
+is plenty to do and the role and compensation can flex to accommodate a variety
+of experience levels. This role will be salary/equity compensated, not
+commission. Our incentives should be aligned to build/grow the business over a
+long time horizon.
 
 170-220k USD salary, 1.5% equity, and
 [benefits](https://handbook.shorebird.dev/benefits/).
@@ -290,7 +318,7 @@ You
 - Want to work at a startup
 - Work well independently, remotely and without supervision
 - Speak and write excellent English
-- Have experience in a product, design, sales or go-to-market role
+- Have experience in a product, design, dev-rel, sales, go-to-market or similar
 - Live/work within GMT-10 to GMT-3
 - Enjoy regularly learning/teaching yourself new skills
 - Want to work on a small, distributed team
