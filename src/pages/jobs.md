@@ -283,7 +283,7 @@ not-writing-code falls to Eric (CEO), when you join, essentially as many hats as
 you wanted to wear, are yours since you'd be the first person on the team not
 responsible for writing code.
 
-Our current focus for early 2025 is to grow revenues. If you started tomorrow
+Our current focus for early 2025 is to grow revenue. If you started tomorrow
 I'd ask you first to join me (or lead) 10+ customer calls and review our
 customer notes and (years of) Discord chat logs with customers and then we'd
 probably spend time brainstorming areas of most impact. My guess is that
