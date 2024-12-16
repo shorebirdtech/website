@@ -9,7 +9,7 @@ description: Shorebird openings
 We're hiring
 
 - [Founding Engineer](#founding-engineer)
-- [Founding Product Manager](#founding-product-manager)
+- [Founding "Business Generalist"](#founding-business-generalist)
 
 ---
 
@@ -22,8 +22,8 @@ phones.
 
 ## Why work at a startup?
 
-Having worked at both large and small companies, I can tell you, startups feel very different from big
-companies and big teams.
+Having worked at both large and small companies, I can tell you, startups feel
+very different from big companies and big teams.
 
 Working at a startup means:
 
@@ -115,8 +115,8 @@ have two years of cash on hand.
 We're only 3 people right now. All of us have engineering backgrounds. As our
 customers have grown, so has our engineering load and we're seeking to hire
 another full-stack engineer to help us scale to even larger customers. We're
-also seeking to hire a "business person" to work with Eric to build out all the
-non-software parts of the business.
+also seeking to hire a "business generalist" to work with Eric in building out
+the non-software parts of the business.
 
 In comparison to two years ago, we've dramatically de-risked the product and
 market -- we have a working thing, that people want to buy. But there is still
@@ -249,93 +249,174 @@ fit, we'll make you an offer.
 
 ---
 
-# Founding Product Manager
+# Founding "Business Generalist"
 
-What we need is a "business person". Someone who gets up every day and wants
-to move the company forward, in ways other than writing code. This person will
-contribute in _many_ different ways over time.
+Shorebird is currently 3 software engineers. The most pressing issues facing
+Shorebird are no longer "can we build it", but "can we build a business around
+this", which involves "can we market, package, sell in a way that the market
+understands." I'm looking for someone to partner with in solving some of the
+non-coding challenges of the business.
 
-This is a doer-role (as all startup roles are). There won't be people to
-manage, or really a product to "manage", there will be a product to build and
-customers to serve, and more to do than any of us can. You'll get to roll up
-your sleeves with the rest of us and just "do" whatever you believe is the
-most impactful thing to move the business forward.
+We've done alright so far. Shorebird has had over 20k sign-ups in the last year,
+resulting in ~2000 monthly active users and over 300 paying customers. Revenues
+have been growing over 10% month over month for the last year, but could grow
+much faster with your help.
 
-Shorebird currently consists of 3 software engineers. We're great at what we do,
-but we have little "business experience". The most pressing issues facing the
-company are no longer "can we build it", but "can we build a business around
-this", which is a lot of "can we market, package, sell in a way that the market
-understands." We're learning on the job, but are also looking for someone with
-experience and desire to work on the many non-technical aspects of the business
-with Eric (CEO). We're looking for someone to join us and help us better reach
-and serve an influx of customers in capacities other than writing software.
+The biggest bottleneck for Shorebird that we do not have anyone consistently
+moving the non-code parts of the company forward every day. I (Eric, Founder)
+try, but I have a lot of responsibilities to track. I need someone to brainstorm
+with me on what would be our most impactful non-coding work, divide it up with
+me, and then go run!
 
-## Scope
+### What I'm looking for
 
-We have way more to do than people to do. There is essentially unbounded scope
-for those interested in taking such, including working with the team to define
-our entire product suite, build/debug our sales pipeline, plan/organize (large)
-events, build community programs, eventually hire a team, etc.
+I need someone who wants to work at a small startup, is comfortable working
+across many areas, and while able to talk to developers and care about
+developers & Flutter-using-businesses as customers, does not want to focus on
+writing code as their day-job.
 
-There are many different backgrounds that could be successful in this role and
-each person is likely to want to wear different hats. For now everything
-not-writing-code falls to Eric (CEO), when you join, essentially as many hats as
-you wanted to wear, are yours since you'd be the first person on the team not
-responsible for writing code.
+Individuals with a variety of backgrounds and ambitions could be successful in
+this role. There are more things to do than you will want to do. That's fine.
+The rest falls to me. Over time we'll hire more specialists and divide the
+responsibility space, but to start it's just you and I making the biggest
+impacts where we can.
 
-Our current focus for early 2025 is to grow revenue. If you started tomorrow
-I'd ask you first to join me (or lead) 10+ customer calls and review our
-customer notes and (years of) Discord chat logs with customers and then we'd
-probably spend time brainstorming areas of most impact. My guess is that
-working together to refine our narrative, expand our website copy and debug
-buying friction would be top of that list.
+This is an fantastic opportunity for someone eager and ambitious: we have
+thousands of customers, lots of inbound interest, a working product and great
+team. You'll move the business tremendously just by picking the low hanging
+fruit.
 
-You and I would have to figure out how we as an org are going to organize
-customer support and coordinated sales outreach over time, what of our product
-suite we should do next in our path to "the flutter company" and of course to
-define that product suite itself!
+### Where we are (financially)
 
-There will be no people management in the near term.
+Shorebird raised a seed round (from a top-tier VC and fancy angel investors)
+funding back in Jan 2023. We're currently 3, with plans to grow by 2 people in
+early 2025. We have ~18 months of runway with that growth. I expect we'll raise
+a Series A early 2026.
+
+Shorebird currently makes ~200k AAR. Our goal is to at least 5x revenues in
+2025 (+15% month) to ~1M ARR. We've seen consistent organic growth at ~10% per
+month the last year (3.2x y/y) even though our product was “beta” and
+Android-only until March 2024. 5x growth in 2025 seems very achievable, and you
+will have a _huge_ impact on us doing that.
+
+### What we'd do together
+
+If you were to show up tomorrow, you'd talk to customers, skim through our
+(extensive) customer support logs, and sales call notes. Then you and I would
+brainstorm about what's most impactful to work on, divide it up and go do.
+
+I expect you'll tell me we should focus on these 3 first:
+
+- Product positioning
+  - Are we articulating our best pitch to our customers? Do we even have our
+    value props all written down? Which one is most impactful? Do our various
+    resources all clearly articulate that pitch?
+- Pricing/packaging
+  - We have a ton of buying friction. I get lots of needless sales calls
+    because of pricing confusion, lack of “Business”-targeted subscription plan
+    (fixed monthly price, fancier support guarantees, annual billing, etc.).
+    What should our pricing/packaging be?
+- Communication
+  - Do we look enough like a typical Saas to meet buyers where they are? Have
+    we explained our value proposition? Have we done so for all the necessary
+    constituencies? Are we providing our advocates enough information to make
+    their internal sales? Are we easy for our customers to find?
+
+#### Where we'll go
+
+We're building a company to serve millions of developers and businesses all
+over the world with a suite of Flutter-associated products. We will have plenty
+to do over time.
+
+Other things I expect we'll work on together:
+
+- Debugging our sales motion
+  - How can we better utilize our large inbound customer stream (currently 30+
+    sign-ups a day)? How do we get better at procurement? How can we make our
+    sales process repeatable? This is not a “sales” role, but at a startup this
+    size, we're all involved in “selling” to some extent.
+- Outreach/marketing/events strategy and implementation
+  - Where should we be meeting our customers? How should we be marketing? Do we
+    need an advocates/experts program? How do we empower our users to be
+    advocates?
+- Product Strategy
+  - We're trying to build “the Flutter company” not just “the code push company”
+    so as we run out of useful additions to our first product (code push), what
+    should we build next? In a company this small, so I'm not looking for a
+    “product owner” in the same way a big company would, but you'll still play a
+    huge role in defining our strategy for our current and future products.
+- Support strategy
+  - How should we be handling support? How should we be charging for it? What
+    tools should we use to scale?
+- Responding to “Enterprise” interest
+  - I've said “no” to a handful of very-large (e.g. Fortune 1000) customers, for
+    which we've seemed too small to engage with yet. Maybe you've dealt with
+    enterprise sales/deals before and have a sense as to how we can say “yes”
+    without wasting our time with companies we're too little to serve?
+- Many, many more areas that I'm not thinking of, but I suspect you see.
+
+Regardless we will sit down together, figure out what's most impactful and start
+there, and over time figure out what all needs doing to reach our 2025 goals and
+beyond.
 
 ## Compensation
 
-Listing a salary range for compliance, we will calibrate compensation to the
-individuals applying. We target 75% of market with our base pay. This is
-at-minimum an early-career role (3+ years experience), involving involving
-nearly unbounded growth potential. More experience applicants are welcome, there
-is plenty to do and the role and compensation can flex to accommodate a variety
-of experience levels. This role will be salary/equity compensated, not
-commission. Our incentives should be aligned to build/grow the business over a
-long time horizon.
+We target 75th percentile All-US/Small-Companies market with our base pay and
+are able to offer very strong equity incentives.
+
+This is at-minimum an early-career role (3+ years experience), involving
+involving nearly unbounded growth potential. More experience applicants are
+welcome, there is plenty to do and the role and compensation can flex to
+accommodate a variety of experience levels.
+
+This role will be salary/equity compensated, not commission. Our incentives
+should be aligned to build/grow the business over a long time horizon.
 
 170-220k USD salary, 1.5% equity, and
 [benefits](https://handbook.shorebird.dev/benefits/).
 
+## Expectations
+
+- High drive and initiative, with a very “roll up your sleeves” mentality and
+  work ethic
+- Want to work at a startup
+- Want to work on a small, distributed team (we currently work from Palo Alto,
+  Brooklyn and Chicago, all remotely)
+- Work well independently, remotely and without supervision
+- Enjoy regularly learning/teaching yourself new skills
+- Willing to travel at least 3x per year to all-company summits
+- Enjoy variable/occasional travel to conferences and summits, presenting and
+  networking
+- Monitor and optimize our customer acquisition funnel
+- Work closely with our CEO and our software engineers
+- Identify, curate, and analyze our product and business metrics and KPIs
+- Deliver a compelling narrative and sales pitch to technical and non-technical
+  folks
+- Drive our marketing strategy to identify new customers
+- Comfortable working with our customers' software engineers, CTOs, and business
+  professionals
+
 ## Requirements
 
-You
-
-- Want to work at a startup
-- Work well independently, remotely and without supervision
 - Speak and write excellent English
-- Have experience in a product, design, dev-rel, sales, go-to-market or similar
+- Have experience in a product, design, developer relations, sales, go-to-market or similar
 - Live/work within GMT-10 to GMT-3
-- Enjoy regularly learning/teaching yourself new skills
-- Want to work on a small, distributed team
 - Feel excited about our mission of saving people time and making apps better
 - Have experience with and interest in developer products
 
 ## Nice to haves
 
-- Marketing, particularly content writing experience
+- Experience with the Flutter ecosystem
+- Experience with the needs of professional app developers and teams
+- Marketing experience, particularly content writing experience
 - UX design experience
 - Community management experience
 
-This is a very broad role description, since we have so many different things
-to do! You're not expected to do everything, but you will have nearly unbounded
-opportunity to be engaged in the business. We'll work together to figure out
-what the business needs most, figure out who's going to do it, figure out
-how to do it (most things I do I've never done before) and then execute.
+You're not expected fill all our gaps (even everything listed above) but you
+will have nearly unbounded opportunity to be engaged in the business. We'll work
+together to figure out what the business needs most, figure out who's going to
+do it, figure out how to do it (most things I do I've never done before) and
+then execute.
 
 You will be responsible for as much of the "business side" of Shorebird as you
 want. There is simply too much for Eric to do alone. You will be _building_
@@ -351,5 +432,5 @@ We're most interested in your past projects/accomplishments (do you ship
 stuff?), your desire to work at a startup (on this mission in particular), and
 your ability to communicate clearly. Since I am not a "business" expert, you
 will probably also meet with one of our investors or other other startup
-founders as well as our team. The process can be very quick. If it's a mutual
-fit, we'll make you an offer.
+founders as well as our team. The process can be very quick (days, not weeks).
+If it's a mutual fit, we'll make you an offer.
