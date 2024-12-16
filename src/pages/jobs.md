@@ -9,7 +9,7 @@ description: Shorebird openings
 We're hiring
 
 - [Founding Engineer](#founding-engineer)
-- [Founding "Business Person"](#founding-business-person)
+- [Founding "Business Generalist"](#founding-business-generalist)
 
 ---
 
@@ -115,7 +115,7 @@ have two years of cash on hand.
 We're only 3 people right now. All of us have engineering backgrounds. As our
 customers have grown, so has our engineering load and we're seeking to hire
 another full-stack engineer to help us scale to even larger customers. We're
-also seeking to hire a "business person" to work with Eric to build out all the
+also seeking to hire a "business generalist" to work with Eric to build out all the
 non-software parts of the business.
 
 In comparison to two years ago, we've dramatically de-risked the product and
@@ -249,21 +249,21 @@ fit, we'll make you an offer.
 
 ---
 
-# Founding "Business Person"
+# Founding "Business Generalist"
 
-Shorebird is currently 3 software engineers. We're great at what we do, but we
-have little "business experience". The most pressing issues facing Shorebird
-are no longer "can we build it", but "can we build a business around this",
-which involves "can we market, package, sell in a way that the market
-understands."
+Shorebird is currently 3 software engineers. The most pressing issues facing
+Shorebird are no longer "can we build it", but "can we build a business around
+this", which involves "can we market, package, sell in a way that the market
+understands." I'm looking for someone to partner with in solving some of the
+non-coding challenges of the business.
 
 We've done alright so far. Shorebird has had over 20k sign-ups in the last year,
-resulting in ~2000 monthly active users and over 300 paying customers.  Revenues
+resulting in ~2000 monthly active users and over 300 paying customers. Revenues
 have been growing over 10% month over month for the last year, but could grow
 much faster with your help.
 
 The biggest bottleneck for Shorebird that we do not have anyone consistently
-moving the non-code parts of the company forward every day.  I (Eric, Founder)
+moving the non-code parts of the company forward every day. I (Eric, Founder)
 try, but I have a lot of responsibilities to track. I need someone to brainstorm
 with me on what would be our most impactful non-coding work, divide it up with
 me, and then go run!
