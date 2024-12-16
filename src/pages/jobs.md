@@ -115,8 +115,8 @@ have two years of cash on hand.
 We're only 3 people right now. All of us have engineering backgrounds. As our
 customers have grown, so has our engineering load and we're seeking to hire
 another full-stack engineer to help us scale to even larger customers. We're
-also seeking to hire a "business generalist" to work with Eric to build out all the
-non-software parts of the business.
+also seeking to hire a "business generalist" to work with Eric in building out
+the non-software parts of the business.
 
 In comparison to two years ago, we've dramatically de-risked the product and
 market -- we have a working thing, that people want to buy. But there is still
