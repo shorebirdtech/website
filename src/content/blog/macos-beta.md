@@ -9,7 +9,8 @@ Shorebird now supports updating Flutter apps built for Mac desktop.
 
 This support is in beta and only supports Arm (Apple Silicon) macs at this time.
 We intend to support Intel macs in the future, but that may still be several
-weeks away.  We're beginning Windows desktop support next and you can follow our progress [on GitHub](https://github.com/shorebirdtech/shorebird/issues/397).
+weeks away. We're beginning Windows desktop support next and you can follow our
+progress [on GitHub](https://github.com/shorebirdtech/shorebird/issues/397).
 
 The release and patch flow is the same as you’re used to with iOS and Android:
 
