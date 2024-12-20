@@ -1,176 +1,95 @@
-import { useState } from 'react';
-import { formatMoney, formatNumber } from '~/utils/formatters';
+'use client';
 
-export function PricingCalculator() {
-  const proPlanIncludedPatches = 50_000;
-  const initialMauCount = 10_000;
-  const [mauCount, setMauCount] = useState(initialMauCount);
-  const initialNumPatchesPerMonth = 1;
-  const [numPatchesPerMonth, setNumPatchesPerMonth] = useState(
-    initialNumPatchesPerMonth,
-  );
-  const totalPatchInstalls = mauCount * numPatchesPerMonth;
-  const [recommendedPlan, helpText, cta, cost] = (() => {
-    if (totalPatchInstalls <= 5_000) {
-      return [
-        'Free',
-        <span>Our free tier has everything you need. </span>,
-        <NonEnterpriseCta />,
-        0,
-      ];
-    }
+import * as React from 'react';
+import { Calculator } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '~/components/ui/card';
+import { Label } from '~/components/ui/label';
+import { Slider } from '~/components/ui/slider';
+import { config } from '~/config';
 
-    if (totalPatchInstalls <= 50_000) {
-      return [
-        'Pro',
-        <span>
-          Our Pro plan includes {formatNumber(proPlanIncludedPatches)} patch
-          installs.
-        </span>,
-        <NonEnterpriseCta />,
-        2000,
-      ];
-    }
+const clamp = (n, min, max) => Math.min(Math.max(n, min), max);
 
-    if (totalPatchInstalls < 2_000_000) {
-      const numOverageInstalls = totalPatchInstalls - proPlanIncludedPatches;
-      return [
-        'Pro',
-        <span>
-          Our Pro plan includes ${formatNumber(proPlanIncludedPatches)} patches
-          and supports{' '}
-          <a
-            className="link underline"
-            href="https://shorebird.dev/blog/simplified-pricing/"
-          >
-            configurable overages
-          </a>{' '}
-          at $1 per 2,500 patch installs.
-        </span>,
-        <NonEnterpriseCta />,
-        2000 + numOverageInstalls * 0.04,
-      ];
-    }
+export const PricingCalculator = () => {
+  const [activeUsers, setActiveUsers] = React.useState(5000);
 
-    return ['Enterprise', <div></div>, <EnterpriseCTA />, null];
-  })();
+  const calculatePrice = () => {
+    const totalPatches = 1 * activeUsers; // Assume 1 patch per active user
+    const plan = totalPatches > 5000 ? 'Pro' : 'Free';
+    const platformFee = totalPatches > 5000 ? 20 : 0;
+    const includedPatchInstalls = plan === 'Pro' ? 50000 : 5000;
+    const overages = clamp(
+      Math.ceil((totalPatches - includedPatchInstalls) * (1 / 2500)),
+      0,
+      Infinity,
+    );
+
+    return {
+      total:
+        activeUsers > 2000000
+          ? null
+          : `$${(platformFee + overages).toLocaleString()}`,
+    };
+  };
+
+  const pricing = calculatePrice();
+  const displayActiveUsers =
+    activeUsers > 2000000 ? '2,000,000+' : activeUsers.toLocaleString();
 
   return (
-    <div className="mt-8 flex flex-col items-center text-white">
-      <div className="mt-4 text-center text-2xl font-semibold">
-        Not sure which plan you should choose?
-      </div>
-      <div className="mx-auto mb-8 mt-2 min-w-full px-8 text-center text-sm text-shorebirdTextGray"></div>
-      <div className="min-w-full items-start px-28">
-        <div className="flex flex-col text-lg">
-          <div className="">
-            <span className="text-sm font-bold text-shorebirdTextGray">
-              Approximate Monthly Active Users (MAUs)
-            </span>
-            <div className="relative">
-              <input
-                type="range"
-                onChange={(e) => {
-                  setMauCount(+e.target.value);
-                }}
-                value={mauCount}
-                min="5000"
-                max="2000000"
-                step="5000"
-                className="w-full"
-              />
-
-              <span className="absolute -bottom-6 start-0 text-sm text-gray-500 dark:text-gray-400">
-                5,000 or fewer
-              </span>
-              <span className="absolute -bottom-6 start-1/4 -translate-x-1/2 text-sm text-gray-500 rtl:translate-x-1/2 dark:text-gray-400">
-                500,000
-              </span>
-              <span className="absolute -bottom-6 start-2/4 -translate-x-1/2 text-sm text-gray-500 rtl:translate-x-1/2 dark:text-gray-400">
-                1,000,000
-              </span>
-              <span className="absolute -bottom-6 start-3/4 -translate-x-1/2 text-sm text-gray-500 rtl:translate-x-1/2 dark:text-gray-400">
-                1,500,000
-              </span>
-              <span className="absolute -bottom-6 end-0 text-sm text-gray-500 dark:text-gray-400">
-                2,000,000 or more
-              </span>
-            </div>
-          </div>
-          <div className="w-full pt-12">
-            <span className="text-sm font-bold text-shorebirdTextGray">
-              Patches per Month
-            </span>
-            <div className="relative">
-              <input
-                type="range"
-                onChange={(e) => {
-                  setNumPatchesPerMonth(+e.target.value);
-                }}
-                value={numPatchesPerMonth}
-                className="w-full"
-                min="1"
-                max="20"
-              />
-
-              <span className="absolute -bottom-6 start-0 text-sm text-gray-500 dark:text-gray-400">
-                1
-              </span>
-              <span className="absolute -bottom-6 start-1/3 -translate-x-1/2 text-sm text-gray-500 rtl:translate-x-1/2 dark:text-gray-400">
-                5
-              </span>
-              <span className="absolute -bottom-6 start-2/3 -translate-x-1/2 text-sm text-gray-500 rtl:translate-x-1/2 dark:text-gray-400">
-                10
-              </span>
-              <span className="absolute -bottom-6 end-0 text-sm text-gray-500 dark:text-gray-400">
-                20
-              </span>
-            </div>
-          </div>
+    <Card className="mx-auto mt-8 w-full border-zinc-800 bg-shorebirdBg3">
+      <CardHeader>
+        <div className="flex items-center gap-2">
+          <Calculator className="h-5 w-5 text-white" />
+          <CardTitle className="text-xl text-white">Cost Per Patch</CardTitle>
         </div>
+        <CardDescription className="text-zinc-400">
+          Estimate the cost to send a patch to your users.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-6">
+        <div className="space-y-2">
+          <Label htmlFor="users" className="text-lg font-bold text-white">
+            Active Users: {displayActiveUsers}
+          </Label>
+          <Slider
+            id="users"
+            min={0}
+            max={2000001}
+            step={1000}
+            value={[activeUsers]}
+            onValueChange={(value) => setActiveUsers(value[0])}
+            className="py-2 [&>.relative]:h-2 [&>.relative]:rounded-full [&>.relative]:bg-zinc-800 [&_[role=slider]]:h-4 [&_[role=slider]]:w-4 [&_[role=slider]]:bg-shorebirdPrimary"
+          />
+        </div>
+        <div className="border-t border-zinc-800 pt-2">
+          <div className="mb-2 mt-2 flex items-center justify-between">
+            <span className="text-lg font-bold text-white">
+              Estimated Cost:
+            </span>
 
-        <div className="mt-12 block">
-          <div className="text-2xl">
-            Use the <span className="font-bold">{recommendedPlan}</span> plan
-            {cost !== null && (
-              <span className="ml-2 text-sm">
-                ({totalPatchInstalls > 50_000 ? 'Up to ' : ''}
-                {formatMoney(cost)} per month)
+            {pricing.total && (
+              <span className="text-2xl font-extrabold text-white">
+                {pricing.total}
+                <span className="ml-1 text-sm text-zinc-400"></span>
               </span>
             )}
-          </div>
-          <div className="text-m mt-2 max-w-2xl">
-            You will want a plan with{' '}
-            <span className="size-2 font-bold">
-              {formatNumber(totalPatchInstalls)}
-            </span>{' '}
-            patch installs per month. {helpText}
-            <div className="pt-2">{cta}</div>
+            {pricing.total === null && (
+              <a
+                className="text-xl font-extrabold text-white hover:text-[#0196C0] hover:underline hover:underline-offset-2"
+                href={config.contactSales}
+              >
+                Contact Us
+              </a>
+            )}
           </div>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
-}
-
-function NonEnterpriseCta() {
-  return (
-    <div>
-      <a className="link underline" href="https://console.shorebird.dev">
-        Sign up
-      </a>{' '}
-      here.
-    </div>
-  );
-}
-
-function EnterpriseCTA() {
-  return (
-    <span>
-      <a className="link underline" href="contact#sales">
-        Contact us
-      </a>{' '}
-      for a discounted quote.
-    </span>
-  );
-}
+};
