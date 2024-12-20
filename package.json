@@ -22,6 +22,7 @@
     "astro": "^5.1.1",
     "framer-motion": "^11.0.24",
     "react-markdown": "^9.0.0",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
