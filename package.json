@@ -36,5 +36,8 @@
     "react": "^18.2.0",
     "react-compiler-runtime": "^19.0.0-beta-201e55d-20241215",
     "react-dom": "^18.2.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-musl": "^4.24.0"
   }
 }
