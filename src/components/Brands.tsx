@@ -86,7 +86,10 @@ export const Brands = () => (
             <div className="-m-4 flex flex-col flex-wrap items-center lg:flex-row">
               <Marquee fade={true} direction="left" reverse={false}>
                 {brands.map((brand) => (
-                  <div className="flex justify-center py-6" key={brand.name}>
+                  <div
+                    className="flex max-w-32 justify-center py-6 md:max-w-48"
+                    key={brand.name}
+                  >
                     <a target="_blank" href={brand.url}>
                       <img src={brand.image.src} alt={brand.name} />
                     </a>
