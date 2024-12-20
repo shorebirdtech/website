@@ -2,29 +2,34 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: '0.2'
 ignorePaths: ['dist', 'node_modules']
 words:
-  - BIGL
-  - FOUC
-  - ITAR
   - angelov
+  - apna
   - araujo
   - astro
   - astrojs
+  - BIGL
   - bryanoltman
   - cancelbots
   - codemagic
+  - devnomic
   - eseidel
   - felangel
   - findstr
   - fontsource
+  - FOUC
   - frontmatter
   - headshot
+  - ITAR
   - jsxs
   - junglee
+  - kalshi
   - kijiji
+  - klub
   - logcat
   - mailchimp
   - oltman
   - onclick
+  - Palo
   - pubspec
   - renan
   - rollout
@@ -35,8 +40,8 @@ words:
   - superlist
   - taha
   - tesser
+  - tradeling
   - tsconfigs
-  - userbase
   - upvoted
+  - userbase
   - xlink
-  - Palo

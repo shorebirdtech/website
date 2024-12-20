@@ -1,8 +1,17 @@
 import { motion } from 'framer-motion';
 
+import { Marquee } from '@devnomic/marquee';
+import '@devnomic/marquee/dist/index.css';
+
+import ApnaKlubLogo from '../assets/brands/apna-klub.png';
+import ChaiLogo from '../assets/brands/chai.png';
+import FlashCoLogo from '../assets/brands/flash-co.png';
+import InvoiceHomeLogo from '../assets/brands/invoice-home.png';
 import JungleeLogo from '../assets/brands/junglee.png';
+import KalshiLogo from '../assets/brands/kalshi.png';
 import KijijiLogo from '../assets/brands/kijiji.png';
 import TrackerLogo from '../assets/brands/tracker.png';
+import TradelingLogo from '../assets/brands/tradeling.png';
 
 const brands = [
   {
@@ -19,6 +28,36 @@ const brands = [
     name: 'Tracker',
     url: 'https://tracker.fi',
     image: TrackerLogo,
+  },
+  {
+    name: 'CHAI',
+    url: 'https://chai-research.com/',
+    image: ChaiLogo,
+  },
+  {
+    name: 'Kalshi',
+    url: 'https://kalshi.com',
+    image: KalshiLogo,
+  },
+  {
+    name: 'ApnaKlub',
+    url: 'https://www.apnaklub.com',
+    image: ApnaKlubLogo,
+  },
+  {
+    name: 'Flash.co',
+    url: 'https://flash.co',
+    image: FlashCoLogo,
+  },
+  {
+    name: 'Tradeling',
+    url: 'https://www.tradeling.com',
+    image: TradelingLogo,
+  },
+  {
+    name: 'Invoice Home',
+    url: 'https://invoicehome.com',
+    image: InvoiceHomeLogo,
   },
 ];
 
@@ -45,16 +84,15 @@ export const Brands = () => (
           </div>
           <div className="mx-auto w-2/3 sm:w-[620px] lg:mx-0 lg:w-1/2 lg:pl-10">
             <div className="-m-4 flex flex-col flex-wrap items-center lg:flex-row">
-              {brands.map((brand) => (
-                <div
-                  className="flex w-1/2 justify-center py-6 sm:w-1/3"
-                  key={brand.name}
-                >
-                  <a target="_blank" href={brand.url}>
-                    <img src={brand.image.src} alt={brand.name} />
-                  </a>
-                </div>
-              ))}
+              <Marquee fade={true} direction="left" reverse={false}>
+                {brands.map((brand) => (
+                  <div className="flex justify-center py-6" key={brand.name}>
+                    <a target="_blank" href={brand.url}>
+                      <img src={brand.image.src} alt={brand.name} />
+                    </a>
+                  </div>
+                ))}
+              </Marquee>
             </div>
           </div>
         </div>
