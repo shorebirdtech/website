@@ -1,4 +1,3 @@
-// cspell:words devnomic Apna Klub Kalshi Tradeling
 import { motion } from 'framer-motion';
 
 import { Marquee } from '@devnomic/marquee';
