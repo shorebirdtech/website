@@ -34,10 +34,7 @@ jobs:
         run: npm run cspell "**"
 
       - name: 👷 Build website
-        run: |
-          # Required for image optimizations to work
-          npm i sharp --ignore-engines
-          npm run build
+        run: npm run build
 
   deploy:
     needs: build
@@ -70,10 +67,7 @@ jobs:
         run: npm run cspell
 
       - name: 👷 Build website
-        run: |
-          # Required for image optimizations to work
-          npm i sharp --ignore-engines
-          npm run build
+        run: npm run build
 
       - name: ☁️ Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
