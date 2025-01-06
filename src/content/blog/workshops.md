@@ -12,11 +12,11 @@ online workshops for getting started with Shorebird.
 
 You can register now at https://shorebird.dev/workshops
 
-Our first workshop of the year will be on **Monday January 13th at 1pm CST** but we hope
-to have more dates in the future.
+Our first workshop of the year will be on **Monday January 13th at 7:30pm CST**
+but we hope to have more dates in the future.
 
-We've capped the workshop size to a maximum of 15 attendees so be sure to sign
-up as soon as possible to ensure a spot.
+In order to provide a high quality experience, we've limited the number of
+available spots so be sure to sign up as soon as possible to ensure a spot.
 
 In these workshops we’ll walk through all the steps needed to get Shorebird
 working on a Flutter app of your choice. Either follow along with a provided
