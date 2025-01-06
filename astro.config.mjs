@@ -17,5 +17,6 @@ export default defineConfig({
     '/blogs/1.0/': '/blog/1.0',
     '/blogs/ios-beta/': '/blog/ios-beta',
     '/security': 'https://handbook.shorebird.dev/security',
+    '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
   },
 });
