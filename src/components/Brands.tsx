@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 
-import { Marquee } from '@devnomic/marquee';
-import '@devnomic/marquee/dist/index.css';
+import { Marquee } from '../components/ui/marquee';
 
 import ApnaKlubLogo from '../assets/brands/apna-klub.png';
 import ChaiLogo from '../assets/brands/chai.png';
