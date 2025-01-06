@@ -34,7 +34,10 @@ jobs:
         run: npm run cspell "**"
 
       - name: 👷 Build website
-        run: npm run build
+        run: |
+          # Required for image optimizations to work
+          npm i -g sharp --ignore-engines
+          npm run build
 
   deploy:
     needs: build
