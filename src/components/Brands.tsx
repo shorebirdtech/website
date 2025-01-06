@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import { Marquee } from '~/components/ui/Marquee';
+import { Marquee } from '../components/ui/marquee';
 
 import ApnaKlubLogo from '../assets/brands/apna-klub.png';
 import ChaiLogo from '../assets/brands/chai.png';
