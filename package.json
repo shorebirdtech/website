@@ -17,7 +17,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.4",
-    "@devnomic/marquee": "^1.0.2",
     "@fontsource/inter": "^5.1.1",
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-slider": "^1.2.2",

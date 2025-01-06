@@ -76,6 +76,8 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+        'marquee-left': 'marquee-left var(--duration, 40s) linear infinite',
+        'marquee-up': 'marquee-up var(--duration, 40s) linear infinite',
       },
       keyframes: {
         'gradient-y': {
@@ -107,6 +109,14 @@ module.exports = {
             'background-size': '200% 200%',
             'background-position': 'right center',
           },
+        },
+        'marquee-left': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+        },
+        'marquee-up': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(calc(-100% - var(--gap)))' },
         },
       },
       borderRadius: {
