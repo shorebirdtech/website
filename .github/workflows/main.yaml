@@ -36,7 +36,7 @@ jobs:
       - name: 👷 Build website
         run: |
           # Required for image optimizations to work
-          npm i -g sharp --ignore-engines
+          npm i sharp --ignore-engines
           npm run build
 
   deploy:
@@ -72,7 +72,7 @@ jobs:
       - name: 👷 Build website
         run: |
           # Required for image optimizations to work
-          npm i -g sharp --ignore-engines
+          npm i sharp --ignore-engines
           npm run build
 
       - name: ☁️ Deploy to GitHub Pages
