@@ -12,8 +12,12 @@ online workshops for getting started with Shorebird.
 
 You can register now at https://shorebird.dev/workshops
 
-Our first workshop of the year will be on **Monday January 13th at 7:30pm CST**
-but we hope to have more dates in the future.
+Our first workshops of the year will be on:
+
+- **Monday January 13th at 7:30pm CST**
+- **Wednesday February 5th at 7:30pm CST**
+
+We hope to have more dates in the future based on interest from the community.
 
 In order to provide a high quality experience, we've limited the number of
 available spots so be sure to sign up as soon as possible to ensure a spot.
