@@ -82,7 +82,19 @@ const features: Feature[] = [
     teams: 'Private',
     custom: 'Personal',
   },
-
+  // {
+  //   title: 'Assets',
+  //   free: '1mb',
+  //   pro: '10mb',
+  //   teams: 'Unlimited',
+  //   enterprise: 'Unlimited',
+  // },
+  // {
+  //   title: 'Organizations',
+  //   pro: 'Basic',
+  //   teams: 'Advanced',
+  //   enterprise: 'Custom',
+  // },
   {
     title: 'User Roles',
     free: 'Admin, Developer',
@@ -92,6 +104,7 @@ const features: Feature[] = [
   },
   { title: 'Invoice Billing', custom: '✓' },
   { title: 'Annual Billing', teams: '✓', custom: '✓' },
+  // { title: 'White-Label Support', teams: '✓', enterprise: '✓' },
   { title: 'SAML', custom: 'Custom' },
 ];
 
@@ -109,6 +122,8 @@ export const PricingDetails = () => {
       description: 'For apps that can scale.',
       cta: { link: config.proPlanCheckoutUrl, title: 'Get Started' },
     },
+    //
+    // { name: 'Teams', price: '$250', description: 'For teams that need more.' },
     {
       name: 'Custom',
       price: 'Custom',
