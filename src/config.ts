@@ -6,6 +6,7 @@ export const config = {
   githubUrl: 'https://github.com/shorebirdtech/shorebird',
   twitterUrl: 'https://twitter.com/shorebirddev',
   consoleUrl: 'https://console.shorebird.dev',
+  proPlanCheckoutUrl: 'https://console.shorebird.dev/subscriptions/create',
   contactSales: 'https://calendly.com/eseidel/shorebird-sales',
   contactEmail: 'contact@shorebird.dev',
   navLinks: [
