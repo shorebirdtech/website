@@ -46,8 +46,7 @@ export const ProductsCodePush = () => {
             </ul>
             <div className="flex flex-col sm:flex-row">
               <a
-                target="_blank"
-                href={config.consoleUrl}
+                href="#pricing"
                 className="plausible-event-name=Top+Get+Started+Button+Clicked shorebird-button-primary mb-2 mr-0 h-12 w-full sm:mb-0 sm:mr-4 lg:mr-4"
               >
                 Get Started

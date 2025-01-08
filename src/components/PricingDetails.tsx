@@ -114,13 +114,13 @@ export const PricingDetails = () => {
       name: 'Free',
       price: 'Free',
       description: 'For small apps and demos.',
-      cta: { link: config.consoleUrl, title: 'Get Started' },
+      cta: { link: config.consoleUrl, title: 'Try It' },
     },
     {
       name: 'Pro',
       price: '$20',
-      description: 'For apps that scale.',
-      cta: { link: config.consoleUrl, title: 'Get Started' },
+      description: 'For apps that can scale.',
+      cta: { link: config.proPlanCheckoutUrl, title: 'Get Started' },
     },
     //
     // { name: 'Teams', price: '$250', description: 'For teams that need more.' },

@@ -56,7 +56,7 @@ function PricesNote() {
           href="/pricing"
           className="shorebird-button-secondary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
         >
-          See Pricing Table
+          See Pricing Details
         </a>
       </div>
     </div>
@@ -97,7 +97,7 @@ function FreePlan() {
             href={config.consoleUrl}
             className="plausible-event-name=Hobby+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
-            Get Started
+            Try It
           </a>
         </div>
       </div>
@@ -140,7 +140,7 @@ function ProPlan() {
           </ul>
           <a
             target="_blank"
-            href={config.consoleUrl}
+            href={config.proPlanCheckoutUrl}
             className="plausible-event-name=Pro+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
             Get Started
@@ -186,7 +186,7 @@ function EnterprisePlan() {
             href={config.contactSales}
             className="plausible-event-name=Enterprise+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
-            Schedule a Call
+            Talk to Sales
           </a>
         </div>
       </div>
