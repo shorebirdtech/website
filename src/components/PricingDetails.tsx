@@ -7,7 +7,7 @@ interface Feature {
   free?: string;
   pro?: string;
   teams?: string;
-  custom?: string;
+  enterprise?: string;
 }
 
 const features: Feature[] = [
@@ -16,96 +16,81 @@ const features: Feature[] = [
     free: 'Free',
     pro: '$20',
     teams: '$250',
-    custom: 'Custom',
+    enterprise: 'Custom',
   },
   {
     title: 'Included Patch Installs',
     free: '5,000',
     pro: '50,000',
     teams: '500,000',
-    custom: 'Custom',
+    enterprise: 'Custom',
   },
   {
     title: 'Overage Billing',
     pro: '$1 per 2,500 installs',
     teams: '$1 per 2,500 installs',
-    custom: 'Custom',
+    enterprise: 'Custom',
   },
   {
     title: 'Unlimited Apps & Releases',
     free: '✓',
     pro: '✓',
     teams: '✓',
-    custom: '✓',
+    enterprise: '✓',
   },
-  { title: 'Console', free: '✓', pro: '✓', teams: '✓', custom: '✓' },
+  { title: 'Console', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
   {
     title: 'Collaboration',
     pro: '✓',
     teams: '✓',
-    custom: '✓',
+    enterprise: '✓',
   },
-  { title: 'Patch Rollbacks', free: '✓', pro: '✓', teams: '✓', custom: '✓' },
+  {
+    title: 'Patch Rollbacks',
+    free: '✓',
+    pro: '✓',
+    teams: '✓',
+    enterprise: '✓',
+  },
   {
     title: 'Signed Patches',
     free: '✓',
     pro: '✓',
     teams: '✓',
-    custom: '✓',
+    enterprise: '✓',
   },
   {
     title: 'Usage Notifications',
     free: '✓',
     pro: '✓',
     teams: '✓',
-    custom: '✓',
+    enterprise: '✓',
   },
-  { title: 'Staging', free: '✓', pro: '✓', teams: '✓', custom: '✓' },
-  // {
-  //   title: 'Storage',
-  //   free: '1 Month',
-  //   pro: '1 Year',
-  //   teams: 'Unlimited',
-  //   enterprise: 'Unlimited',
-  // },
+  { title: 'Staging', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
   {
     title: 'Analytics',
     free: 'Basic',
     pro: 'Basic',
     teams: 'Advanced',
-    custom: 'Advanced',
+    enterprise: 'Advanced',
   },
   {
     title: 'Support',
     free: 'Community Discord',
     pro: 'Semi-Private',
     teams: 'Private',
-    custom: 'Personal',
+    enterprise: 'Personal',
   },
-  // {
-  //   title: 'Assets',
-  //   free: '1mb',
-  //   pro: '10mb',
-  //   teams: 'Unlimited',
-  //   enterprise: 'Unlimited',
-  // },
-  // {
-  //   title: 'Organizations',
-  //   pro: 'Basic',
-  //   teams: 'Advanced',
-  //   enterprise: 'Custom',
-  // },
   {
     title: 'User Roles',
     free: 'Admin, Developer',
     pro: 'Admin, Developer',
     teams: 'Admin, Developer, Billing, View-Only',
-    custom: 'Custom',
+    enterprise: 'Custom',
   },
-  { title: 'Invoice Billing', custom: '✓' },
-  { title: 'Annual Billing', teams: '✓', custom: '✓' },
-  // { title: 'White-Label Support', teams: '✓', enterprise: '✓' },
-  { title: 'SAML', custom: 'Custom' },
+  { title: 'Invoice Billing', enterprise: '✓' },
+  { title: 'Annual Billing', teams: '✓', enterprise: '✓' },
+  { title: 'SAML', enterprise: 'Custom' },
 ];
 
 export const PricingDetails = () => {
@@ -122,10 +107,8 @@ export const PricingDetails = () => {
       description: 'For apps that can scale.',
       cta: { link: config.proPlanCheckoutUrl, title: 'Get Started' },
     },
-    //
-    // { name: 'Teams', price: '$250', description: 'For teams that need more.' },
     {
-      name: 'Custom',
+      name: 'Enterprise',
       price: 'Custom',
       description: 'For large apps with custom needs.',
       cta: { link: config.contactSales, title: 'Talk to Sales' },
