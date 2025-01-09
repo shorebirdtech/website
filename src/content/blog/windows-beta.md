@@ -1,20 +1,19 @@
 ---
 title: Windows Desktop Support (beta)
-author: bryanoltman
+author: eseidel
 description: Announcing the beta release of Windows desktop support
 date: 2025-01-09
 ---
 
 Shorebird now supports updating Flutter apps built for Windows desktop.
 
-This support is in beta and only supports Windows x64 at this time.
-We intend to support Windows Arm64 in the future, but that may still be several
-weeks away.
+This support is in beta and only supports Windows x64 at this time. We intend
+to add support for Windows arm64 as well once we receive a request for such.
 
 The release and patch flow is the same as iOS, Android and Mac:
 
 ```sh
-# Creates a new Windows release
+# Creates a new windows release
 shorebird release windows
 ```
 
