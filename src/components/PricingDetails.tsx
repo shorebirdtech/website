@@ -6,7 +6,7 @@ interface Feature {
   title: string;
   free?: string;
   pro?: string;
-  teams?: string;
+  business?: string;
   enterprise?: string;
 }
 
@@ -15,81 +15,81 @@ const features: Feature[] = [
     title: 'Monthly Base Cost',
     free: 'Free',
     pro: '$20',
-    teams: '$250',
+    business: '$400',
     enterprise: 'Custom',
   },
   {
     title: 'Included Patch Installs',
     free: '5,000',
     pro: '50,000',
-    teams: '500,000',
+    business: '1,000,000',
     enterprise: 'Custom',
   },
   {
     title: 'Overage Billing',
     pro: '$1 per 2,500 installs',
-    teams: '$1 per 2,500 installs',
+    business: '$1 per 2,500 installs',
     enterprise: 'Custom',
   },
   {
     title: 'Unlimited Apps & Releases',
     free: '✓',
     pro: '✓',
-    teams: '✓',
+    business: '✓',
     enterprise: '✓',
   },
-  { title: 'Console', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
+  { title: 'Console', free: '✓', pro: '✓', business: '✓', enterprise: '✓' },
   {
     title: 'Collaboration',
     pro: '✓',
-    teams: '✓',
+    business: '✓',
     enterprise: '✓',
   },
   {
     title: 'Patch Rollbacks',
     free: '✓',
     pro: '✓',
-    teams: '✓',
+    business: '✓',
     enterprise: '✓',
   },
   {
     title: 'Signed Patches',
     free: '✓',
     pro: '✓',
-    teams: '✓',
+    business: '✓',
     enterprise: '✓',
   },
   {
     title: 'Usage Notifications',
     free: '✓',
     pro: '✓',
-    teams: '✓',
+    business: '✓',
     enterprise: '✓',
   },
-  { title: 'Staging', free: '✓', pro: '✓', teams: '✓', enterprise: '✓' },
+  { title: 'Staging', free: '✓', pro: '✓', business: '✓', enterprise: '✓' },
   {
     title: 'Analytics',
     free: 'Basic',
     pro: 'Basic',
-    teams: 'Advanced',
+    business: 'Advanced',
     enterprise: 'Advanced',
   },
   {
     title: 'Support',
     free: 'Community Discord',
     pro: 'Semi-Private',
-    teams: 'Private',
+    business: 'Private',
     enterprise: 'Personal',
   },
   {
     title: 'User Roles',
     free: 'Admin, Developer',
     pro: 'Admin, Developer',
-    teams: 'Admin, Developer, Billing, View-Only',
+    business: 'Admin, Developer, Billing, View-Only',
     enterprise: 'Custom',
   },
   { title: 'Invoice Billing', enterprise: '✓' },
-  { title: 'Annual Billing', teams: '✓', enterprise: '✓' },
+  { title: 'Annual Billing', business: '✓', enterprise: '✓' },
   { title: 'SAML', enterprise: 'Custom' },
 ];
 
@@ -98,19 +98,25 @@ export const PricingDetails = () => {
     {
       name: 'Free',
       price: 'Free',
-      description: 'For small apps and demos.',
+      description: 'Great for hobbiests, small apps, and demos.',
       cta: { link: config.consoleUrl, title: 'Try It' },
     },
     {
       name: 'Pro',
       price: '$20',
-      description: 'For apps that can scale.',
-      cta: { link: config.proPlanCheckoutUrl, title: 'Get Started' },
+      description: 'Great for medium sized apps with scalable pricing.',
+      cta: { link: config.proPlanCheckoutUrl, title: 'Buy Now' },
+    },
+    {
+      name: 'Business',
+      price: '$400',
+      description: 'Great for large apps with advanced needs.',
+      cta: { link: config.businessPlanCheckoutUrl, title: 'Buy Now' },
     },
     {
       name: 'Enterprise',
       price: 'Custom',
-      description: 'For large apps with custom needs.',
+      description: 'Great for enterprise apps with custom needs.',
       cta: { link: config.contactSales, title: 'Talk to Sales' },
     },
   ];
@@ -128,7 +134,7 @@ export const PricingDetails = () => {
           </p>
         </div>
 
-        <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:max-w-none xl:grid-cols-3">
+        <div className="mx-auto my-auto mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:max-w-4xl xl:max-w-none xl:grid-cols-4">
           {plans.map((plan) => (
             <div
               key={plan.name}
