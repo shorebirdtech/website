@@ -12,7 +12,7 @@ export const PricingOverview = () => {
   return (
     <section className="relative flex w-screen justify-center bg-shorebirdBg2">
       <div className="absolute -top-16" id="pricing" />
-      <div className="bg-shorebirdBg2 pb-20 pt-12 md:w-4/5 lg:w-[1050px] 2xl:w-[1150px]">
+      <div className="bg-shorebirdBg2 pb-20 pt-12 md:w-4/5 lg:w-[1050px] 2xl:w-full">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -20,7 +20,7 @@ export const PricingOverview = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="container mx-auto px-4">
-            <div className="mx-auto mb-16 max-w-2xl text-center">
+            <div className="mx-auto mb-16 max-w-3xl text-center">
               <h2 className="mb-6 mt-6 text-4xl font-bold text-white lg:text-5xl">
                 Join the flock
               </h2>
@@ -32,6 +32,7 @@ export const PricingOverview = () => {
             <div className="mt-20 flex flex-col flex-wrap items-center justify-center gap-4 lg:flex-row">
               <FreePlan />
               <ProPlan />
+              <BusinessPlan />
               <EnterprisePlan />
             </div>
           </div>
@@ -82,7 +83,7 @@ function FreePlan() {
             <div className="text-gray-500">{'/ month'}</div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
-            For small apps and demos.
+            Great for hobbyists, small apps, and demos.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
@@ -127,7 +128,7 @@ function ProPlan() {
             <div className="text-gray-500">{'/ month'}</div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
-            For apps that can scale.
+            Great for medium sized apps with scalable pricing.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
@@ -143,7 +144,55 @@ function ProPlan() {
             href={config.proPlanCheckoutUrl}
             className="plausible-event-name=Pro+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
           >
-            Get Started
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BusinessPlan() {
+  const features: Feature[] = [
+    {
+      title: '1M patch installs/month',
+      caption: 'then $1 per 2,500 patch installs.',
+    },
+    { title: 'Unlimited developers' },
+    { title: 'Unlimited apps' },
+    { title: 'Private support' },
+  ];
+  return (
+    <div className="mb-8 w-[325px] px-1 lg:mb-0">
+      <div>
+        <div className="h-full rounded-3xl bg-shorebirdBg3 p-6">
+          <p className="mb-2 text-left text-xl font-bold text-white">
+            Business
+          </p>
+          <div className="flex items-end justify-start">
+            <div className="mr-2 mt-4 text-left text-4xl font-bold text-white sm:text-5xl">
+              $400
+            </div>
+            <div className="text-gray-500">{'/ month'}</div>
+          </div>
+          <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
+            Great for large apps with scalable pricing, and advanced needs.
+          </p>
+          <ul className="mb-2 text-white 2xl:mb-6">
+            {features.map((feature, index) => (
+              <FeatureListItem
+                key={`business-feature-${index}`}
+                title={feature.title}
+                caption={feature.caption}
+              />
+            ))}
+          </ul>
+          <a
+            target="_blank"
+            href={config.businessPlanCheckoutUrl}
+            className="plausible-event-name=Business+Get+Started+Button+Clicked shorebird-button-primary mt-8 inline-block w-full rounded-xl rounded-t-xl px-4 py-2 text-center font-bold leading-loose"
+          >
+            Buy Now
           </a>
         </div>
       </div>
@@ -171,7 +220,7 @@ function EnterprisePlan() {
             </div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
-            For large apps with custom needs.
+            Great for enterprise apps with custom needs.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
