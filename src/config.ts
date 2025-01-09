@@ -7,7 +7,8 @@ export const config = {
   twitterUrl: 'https://twitter.com/shorebirddev',
   consoleUrl: 'https://console.shorebird.dev',
   proPlanCheckoutUrl: 'https://console.shorebird.dev/subscriptions/pro/create',
-  businessPlanCheckoutUrl: 'https://console.shorebird.dev/subscriptions/business/create',
+  businessPlanCheckoutUrl:
+    'https://console.shorebird.dev/subscriptions/business/create',
   contactSales: 'https://calendly.com/eseidel/shorebird-sales',
   contactEmail: 'contact@shorebird.dev',
   navLinks: [
