@@ -176,7 +176,7 @@ function BusinessPlan() {
             <div className="text-gray-500">{'/ month'}</div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
-            Great for large apps with scalable pricing and advanced needs.
+            Great for large apps with advanced needs and scalable pricing.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
