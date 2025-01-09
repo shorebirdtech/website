@@ -98,7 +98,7 @@ export const PricingDetails = () => {
     {
       name: 'Free',
       price: 'Free',
-      description: 'Great for hobbiests, small apps, and demos.',
+      description: 'Great for hobbyists, small apps, and demos.',
       cta: { link: config.consoleUrl, title: 'Try It' },
     },
     {

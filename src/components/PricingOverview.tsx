@@ -83,7 +83,7 @@ function FreePlan() {
             <div className="text-gray-500">{'/ month'}</div>
           </div>
           <p className="mb-4 mt-4 text-left leading-loose text-gray-500">
-            Great for hobbiests, small apps, and demos.
+            Great for hobbyists, small apps, and demos.
           </p>
           <ul className="mb-2 text-white 2xl:mb-6">
             {features.map((feature, index) => (
