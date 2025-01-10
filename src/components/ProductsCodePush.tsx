@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 
 import ios from '../assets/images/patch_ios.png';
 import android from '../assets/images/patch_android.png';
-import { config } from '../config';
 import { CheckArrowIcon } from '../assets/icons/CheckArrowIcon';
 
 export const ProductsCodePush = () => {
