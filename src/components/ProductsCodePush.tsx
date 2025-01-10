@@ -36,7 +36,7 @@ export const ProductsCodePush = () => {
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Supports Android, iOS, Windows, and macOS</span>
+                <span>Supports Android, iOS, macOS, and Windows</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
