@@ -16,6 +16,7 @@ Our first workshops of the year will be on:
 
 - **Monday January 13th at 7:30pm CST**
 - **Wednesday February 5th at 7:30pm CST**
+- **Wednesday February 19th at 8:00am CST**
 
 We hope to have more dates in the future based on interest from the community.
 
