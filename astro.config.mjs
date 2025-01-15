@@ -16,6 +16,8 @@ export default defineConfig({
     '/blogs/how-we-built-code-push': '/blog/how-we-built-code-push',
     '/blogs/1.0/': '/blog/1.0',
     '/blogs/ios-beta/': '/blog/ios-beta',
+    // Eric sent an email with the wrong link to a few people:
+    '/blog/mac-beta/': '/blog/macos-beta',
     '/security': 'https://handbook.shorebird.dev/security',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
   },
