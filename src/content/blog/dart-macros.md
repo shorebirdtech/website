@@ -23,7 +23,7 @@ Today, Google's Dart team announced they are [stopping their work on "macros"
 Macros was planned as a new language feature to make it easier for Flutter and
 Dart developers to express ideas requiring repetitive code (for example data
 serialization) from simple syntax. C++, Rust, etc. all have variants of a
-(macros)[https://en.wikipedia.org/wiki/Macro_(computer_science)] feature with
+[macros](https://en.wikipedia.org/wiki/Macro_(computer_science)) feature with
 various different tradeoffs. Dart took a particularly ambitious flavor that
 ultimately proved unwieldy to implement to the Google team's satisfaction.
 
