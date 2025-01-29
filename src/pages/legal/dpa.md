@@ -5,7 +5,8 @@ description: Shorebird Data Processing Addendum
 last_updated: 09-09-2024
 ---
 
-DPA
+# DPA
+
 We have a long-standing commitment to customer privacy and data protection, and
 as part of that commitment we have prepared a Data Processing Addendum ("DPA").
 
