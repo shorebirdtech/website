@@ -8,17 +8,18 @@ Distribute App Updates, instantly, safely, with Shorebird.
 
 # Why Shorebird?
 
-Shorebird supports over two thousand businesses in shipping tens of millions of updates every month.
+Shorebird supports thousands of businesses in shipping tens of millions of updates every month.
 
-The biggest use cases we see from clients are:
+Most common use cases we see are:
 
 1. Insurance -- knowing you can always fix any part of your app at any time if needed.
 2. Team acceleration -- simplify your shipping schedule, ship to all users simultaneously, instantaneously no mater what device they use to interface with your business.
 
-- Your business moves quickly.
-- Don’t get stuck waiting for users or stores to press an “update” button.
+In short, your business moves quickly. You shouldn't feel stuck waiting for users or stores to press an “update” button.
 
 ## Never wait on your mobile teams
+
+Many businesses already feel pain in the divergent shipping schedules between platforms. Especially Web vs. mobile teams.
 
 - Ship on your schedule.
 - When you change your app on the web, all your users update, instantly.
@@ -27,20 +28,24 @@ The biggest use cases we see from clients are:
 
 ## Easy to set up.
 
+Shorebird takes very little time to add or remove.
+
 - Set up Shorebird in under 10 minutes.
 - No code changes required.
 - If you use Codemagic, you can even set up from your browser.
 
 ## Code Push is safe.
 
-- Open Source
-- Built by the founder of Flutter
-- Used by 1000s of companies around the world.
-
-## Code Push is common
+There are thousands of companies already using Shorebird's code push, and millions more using other forms (e.g. Microsoft's for React Native, Cordova's, etc.)
 
 - Update just like YouTube, FaceBook, TikTok do.
 - Finally Flutter has a commercial solution just like ReactNative, Cordova,
+
+Shorebird's code push is
+
+- Open Source
+- Built by the founder of Flutter
+- Used by 1000s of companies around the world.
 
 ## Avoid app downtime (e.g. Deploy with Confidence)
 
@@ -48,38 +53,37 @@ You can’t predict where bugs happen. But you can fix them fast with Shorebird.
 
 ## No waiting, just shipping.
 
-- Works well
+- Immediately distributed globally
 - Tiny updates
-- Automatic Rollback
-- Controlled rollouts
-- Update Analytics
+- Automatic instant rollback (including uninstalling from devices)
+- Controlled/configurable rollouts
+- Analytics to see how your updates went
 
 ## Built For Teams
 
-- Pay for what you use
 - Share apps across any number of people
 - Control access on a per-app or per-group basis
-- Manage multiple apps, organizations, members, permissions, and more…
+- Manage multiple apps, organizations, members, permissions
+- Pay only for what you use
 
 ## Secure
 
 - SSO only using your existing SSO provider
 - Signed updates (including using your own private keys so even _Shorebird_ can't change your app)
-- Open Source
 - Hosted on Google's modern public cloud infrastructure, no Shorebird servers.
+- Open Source so your sec team can review it all themselves
 
 ## Private
 
-- Privacy-first policies, including DPA available
 - Shorebird never sees your source code.
 - Shorebird never knows anything about your users.
+- Privacy-first policies, including DPA available
 
 ## Built by experts
 
 - Creators of Flutter and Bloc
-- Open Source
-- Runs the same testing Google does and more.
-- Regular releases and bug fixes (maybe link to changelog)
+- Built in the open (we run our company publicly on Discord)
+- Regular releases and bug fixes
 
 ## Cost Effective
 
@@ -89,13 +93,9 @@ You can’t predict where bugs happen. But you can fix them fast with Shorebird.
 
 ## Great Support
 
-- Active community with over 5000 customers
-- Support directly from engineers
-
-## Fix Fast
-
-- Know you can always fix any code in your app
-- Rollback changes in production
+- Active community with thousands of customers on chat
+- Direct support from the engineers
+- Private support available for businesses and enterprises
 
 ## Ship everywhere
 
@@ -105,9 +105,10 @@ You can’t predict where bugs happen. But you can fix them fast with Shorebird.
 
 ## Ship Confidently
 
+- Know you can always fix any code in your app
 - Stage and validate updates before going live with groups of any size
 - Incrementally roll out updates
-- Rollback updates immediately
+- Instant rollback available if needed
 
 ## Great Defaults; Full control
 
@@ -117,27 +118,27 @@ You can’t predict where bugs happen. But you can fix them fast with Shorebird.
 
 ## Updates your users will like
 
-- Update silently, never disturbing the user.
-  Update sizes are smaller than a text file.
-  Build custom update user experiences
+- By default, updates silently, never disturbing the user
+- Updates downloads are typically smaller than a text file
+- Full API available for building custom update experiences
 
 ## A level playing field
 
-- Update iOS and Android simultaneously
-- Update all users at once – everyone has equal access to the latest code and features.
-- Update even users with older store-installed versions.
+- Update all users at once across all platforms
+- Even update multiple older versions to the same new code
+- Everyone has equal access to the latest code and features, no separate support docs needed
 
 ## Ship Safely
 
 - Store compliant
 - Support at your fingertips
-- Used by 1000s of teams globally
+- Used by thousands of teams globally
 
 ## Use Cases
 
-- Avoid feature flags overload (ship when you’re ready)
-- Ship with confidence, knowing it’s simple to ship again (just like the web).
-- Use the same tech all the biggest apps use.
+- Avoid feature flags overload and ship and rollback on your schedule
+- Ship with confidence, knowing it’s simple to ship again, just like the web
+- Use the same update tech all the biggest apps use.
 
 # Advantages
 
