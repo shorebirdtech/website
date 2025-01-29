@@ -8,7 +8,7 @@ date: 2025-01-29
 Brace yourselves. We may be in for another round of “Flutter is dying” and “Dart
 is dying” hot takes across the blog-o-sphere.
 
-But again, maybe at this point I’m used to it. I co-founded the Flutter project
+But again, maybe at this point I’m used to it? I co-founded the Flutter project
 at Google in 2014 and led the Flutter (and later Dart) teams at Google until
 2022 when leaving to found this company, Shorebird. Shorebird sells products to
 teams using Flutter and I remain deeply involved and invested in Flutter and
@@ -16,7 +16,7 @@ Dart's success. Flutter has been “dying” or “about to be canceled by Googl
 since we started the project 10 years ago. So I guess if "accounting for (1/3rd
 of app submissions to
 AppStore)[https://medium.com/flutter/flutter-in-production-f9418261d8e1] or
-Play” is what "dying" looks like, I’m here for it. :slightly_smiling_face: 
+Play” is what "dying" looks like, I’m here for it. 🙂
 
 Today, Google's Dart team announced they are [stopping their work on "macros"
 ](https://medium.com/dartlang/an-update-on-dart-macros-data-serialization-06d3037d4f12).
