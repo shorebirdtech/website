@@ -10,12 +10,12 @@ is dying” hot takes across the blog-o-sphere.
 
 But again, maybe at this point I’m used to it? I co-founded the Flutter project
 at Google in 2014 and led the Flutter (and later Dart) teams at Google until
-2022 when leaving to found this company, Shorebird. Shorebird sells products to
+2022 when I left to found this company, Shorebird. Shorebird sells products to
 teams using Flutter and I remain deeply involved and invested in Flutter and
 Dart's success. Flutter has been “dying” or “about to be canceled by Google”
-since we started the project 10 years ago. So I guess if "accounting for (1/3rd
+since we started the project 10 years ago. So I guess if "accounting for [1/3rd
 of app submissions to
-AppStore)[https://medium.com/flutter/flutter-in-production-f9418261d8e1] or
+AppStore](https://medium.com/flutter/flutter-in-production-f9418261d8e1) or
 Play” is what "dying" looks like, I’m here for it. 🙂
 
 Today, Google's Dart team announced they are [stopping their work on "macros"
