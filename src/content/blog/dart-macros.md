@@ -8,9 +8,9 @@ date: 2025-01-29
 Brace yourselves. We may be in for another round of “Flutter is dying” and “Dart
 is dying” hot takes across the blog-o-sphere.
 
-But again, maybe at this point I’m used to it.  I co-founded the Flutter project
+But again, maybe at this point I’m used to it. I co-founded the Flutter project
 at Google in 2014 and led the Flutter (and later Dart) teams at Google until
-2022 when leaving to found this company, Shorebird.  Shorebird sells products to
+2022 when leaving to found this company, Shorebird. Shorebird sells products to
 teams using Flutter and I remain deeply involved and invested in Flutter and
 Dart's success. Flutter has been “dying” or “about to be canceled by Google”
 since we started the project 10 years ago. So I guess if "accounting for (1/3rd
@@ -24,14 +24,15 @@ Macros was planned as a new language feature to make it easier for Flutter and
 Dart developers to express ideas requiring repetitive code (for example data
 serialization) from simple syntax. C++, Rust, etc. all have variants of a
 (macros)[https://en.wikipedia.org/wiki/Macro_(computer_science)] feature with
-various different tradeoffs.  Dart took a particularly ambitious flavor that
+various different tradeoffs. Dart took a particularly ambitious flavor that
 ultimately proved unwieldy to implement to the Google team's satisfaction.
 
 Two reasons Google took this step:
+
 1. They’ve realized they can’t make macros pass their performance goals (without
-other even larger changes to the ecosystem or language).
-2.  The years of prototyping macros (with it's ambitious scope), hasn’t been
-worth the effort/reward tradeoff.
+   other even larger changes to the ecosystem or language).
+2. The years of prototyping macros (with it's ambitious scope), hasn’t been
+   worth the effort/reward tradeoff.
 
 Google is now breaking macros into smaller features and shipping those, and then
 throwing out the parts of macros that they couldn’t make perform well enough to
