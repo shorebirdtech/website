@@ -18,8 +18,8 @@ of app submissions to
 AppStore)[https://medium.com/flutter/flutter-in-production-f9418261d8e1] or
 Play” is what "dying" looks like, I’m here for it. :slightly_smiling_face: 
 
-Today, Google's Dart team announced they are (stopping their work on "macros"
-)[https://medium.com/dartlang/an-update-on-dart-macros-data-serialization-06d3037d4f12].
+Today, Google's Dart team announced they are [stopping their work on "macros"
+](https://medium.com/dartlang/an-update-on-dart-macros-data-serialization-06d3037d4f12).
 Macros was planned as a new language feature to make it easier for Flutter and
 Dart developers to express ideas requiring repetitive code (for example data
 serialization) from simple syntax. C++, Rust, etc. all have variants of a
