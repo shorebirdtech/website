@@ -16,7 +16,7 @@ Dart's success. Flutter has been “dying” or “about to be canceled by Googl
 since we started the project 10 years ago. So I guess if "accounting for (1/3rd
 of app submissions to
 AppStore)[https://medium.com/flutter/flutter-in-production-f9418261d8e1] or
-Play” is what "dying" looks like, I’m here for it. 🤣
+Play” is what "dying" looks like, I’m here for it. :slightly_smiling_face: 
 
 Today, Google's Dart team announced they are (stopping their work on "macros"
 )[https://medium.com/dartlang/an-update-on-dart-macros-data-serialization-06d3037d4f12].
