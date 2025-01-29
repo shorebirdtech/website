@@ -31,7 +31,7 @@ Two reasons Google took this step:
 
 1. They’ve realized they can’t make macros pass their performance goals (without
    other even larger changes to the ecosystem or language).
-2. The years of prototyping macros (with it's ambitious scope), hasn’t been
+2. The years of prototyping macros (with its ambitious scope), hasn’t been
    worth the effort/reward tradeoff.
 
 Google is now breaking macros into smaller features and shipping those, and then
