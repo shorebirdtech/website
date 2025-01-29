@@ -57,7 +57,7 @@ long development cycle (and public discussion thereof) has allowed macros grow
 in the public consciousness to be seen as Dart’s coming magic bullet, here
 to solve all our problems at once. It never was, and never could be.
 
-Obviously, I would have wished the team to have reached a go/no-go earlier, but
+Obviously, I wish the team had reached a go/no-go earlier, but
 I’m glad they have now. Hopefully now we get a bunch of interesting smaller
 things this year as a result. We’ll see.
 
