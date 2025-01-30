@@ -1,4 +1,5 @@
 ---
+// cspell:words shorebirddev
 import '@fontsource/inter';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
@@ -20,6 +21,10 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
 const coverUrl = new URL(cover ? cover : '/open-graph.png', Astro.url.origin);
 // Always use Astro.site (production url) rather than a test domain.
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+// See also https://ogp.me/#type_article
+// Could also add og:tags here if we added them to the frontmatter for the
+// individual blog posts.  I'm not sure what, if any, sites crawl for the
+// og:tags property.
 ---
 
 <!doctype html>
@@ -48,7 +53,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
         <meta name="twitter:creator" content={authors[author].twitter} />
       )
     }
-    <!--  Could add tags here if we add them to the blog props -->
     <script
       defer
       data-domain="shorebird.dev"
