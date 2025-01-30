@@ -6,7 +6,7 @@ import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/inter/900.css';
 import { config } from '~/config';
-import Author from '~/components/Author.astro';
+import  Author, { authors } from '~/components/Author.astro';
 import FormattedDate from '~/components/FormattedDate.astro';
 import { Navbar } from '~/components/Navbar';
 import { Footer } from '~/components/Footer';
@@ -33,6 +33,13 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
     <meta name="twitter:image" content={cover ? cover : '/open-graph.png'} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content={date} />
+    <meta property="article:author" content={author} />
+    <meta property="article:section" content="Technology" />
+    <meta name="twitter:site" content="@shorebirddev" />
+    {authors[author].twitter && <meta name="twitter:creator" content={authors[author].twitter} />}
+    <!--  Could add tags here if we add them to the blog props -->
     <script
       defer
       data-domain="shorebird.dev"
