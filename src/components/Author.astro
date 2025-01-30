@@ -4,31 +4,37 @@ import felixHeadshot from '../assets/images/felix-headshot.jpeg';
 import bryanHeadshot from '../assets/images/bryan-headshot.png';
 import shorebirdHeadshot from '../assets/images/shorebird-headshot.png';
 
+// cspell:words shorebirddev felangelov
+
 interface Author {
   name: string;
   title: string;
   avatar: ImageMetadata;
   github: string;
+  twitter?: string;
 }
 
-const authors: Record<string, Author> = {
+export const authors: Record<string, Author> = {
   shorebirdtech: {
     name: 'Shorebird',
     title: 'The Shorebird Team',
     avatar: shorebirdHeadshot,
     github: 'shorebirdtech',
+    twitter: '@shorebirddev',
   },
   eseidel: {
     name: 'Eric Seidel',
     title: 'Founder & CEO',
     avatar: ericHeadshot,
     github: 'eseidel',
+    twitter: '@_eseidel',
   },
   felangel: {
     name: 'Felix Angelov',
     title: 'Founding Engineer',
     avatar: felixHeadshot,
     github: 'felangel',
+    twitter: '@felangelov',
   },
   bryanoltman: {
     name: 'Bryan Oltman',
@@ -40,6 +46,7 @@ const authors: Record<string, Author> = {
 
 const { handle } = Astro.props;
 const author = authors[handle];
+
 ---
 
 <div class="flex items-center">
