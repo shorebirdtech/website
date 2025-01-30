@@ -6,7 +6,7 @@ import '@fontsource/inter/700.css';
 import '@fontsource/inter/800.css';
 import '@fontsource/inter/900.css';
 import { config } from '~/config';
-import  Author, { authors } from '~/components/Author.astro';
+import Author, { authors } from '~/components/Author.astro';
 import FormattedDate from '~/components/FormattedDate.astro';
 import { Navbar } from '~/components/Navbar';
 import { Footer } from '~/components/Footer';
@@ -15,6 +15,11 @@ import { BlogFooterPitch } from '~/components/BlogFooterPitch';
 import '../styles/Theme.css';
 
 const { title, description, author, date, cover, coverAlt } = Astro.props;
+
+// og:image is expected to be an absolute url beginning with http or https
+const coverUrl = new URL(cover ? cover : '/open-graph.png', Astro.url.origin);
+// Always use Astro.site (production url) rather than a test domain.
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -27,18 +32,22 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={cover ? cover : '/open-graph.png'} />
+    <meta property="og:image" content={coverUrl} />
     <meta property="og:url" content={Astro.site} />
     <meta property="og:title" content={title} />
-    <meta name="twitter:image" content={cover ? cover : '/open-graph.png'} />
+    <meta name="twitter:image" content={coverUrl} />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content={date} />
     <meta property="article:author" content={author} />
     <meta property="article:section" content="Technology" />
     <meta name="twitter:site" content="@shorebirddev" />
-    {authors[author].twitter && <meta name="twitter:creator" content={authors[author].twitter} />}
+    {
+      authors[author].twitter && (
+        <meta name="twitter:creator" content={authors[author].twitter} />
+      )
+    }
     <!--  Could add tags here if we add them to the blog props -->
     <script
       defer
@@ -63,7 +72,7 @@ const { title, description, author, date, cover, coverAlt } = Astro.props;
       }
       <hr class="my-8" />
       <slot />
-      <BlogFooterPitch />      
+      <BlogFooterPitch />
     </div>
     <Footer client:load />
     <style is:global>
