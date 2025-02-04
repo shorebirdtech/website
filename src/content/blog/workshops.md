@@ -7,7 +7,7 @@ cover: /blog/shorebird-workshop-cover.png
 coverAlt: Workshops header image
 ---
 
-We're exited to announce the team at Shorebird will be hosting free 1 hour long
+We're excited to announce the team at Shorebird will be hosting free 1 hour long
 online workshops for getting started with Shorebird.
 
 You can register now at https://shorebird.dev/workshops
