@@ -36,8 +36,8 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={coverUrl} />
+    <meta name="description" property="og:description" content={description} />
+    <meta name="image" property="og:image" content={coverUrl} />
     <meta property="og:url" content={Astro.site} />
     <meta property="og:title" content={title} />
     <meta name="twitter:image" content={coverUrl} />

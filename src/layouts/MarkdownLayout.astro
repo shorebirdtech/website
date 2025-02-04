@@ -23,8 +23,8 @@ const { frontmatter } = Astro.props;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={frontmatter.description} />
-    <meta property="og:description" content={frontmatter.description} />
-    <meta property="og:image" content="/open-graph.png" />
+    <meta name="description" property="og:description" content={frontmatter.description} />
+    <meta name="image" property="og:image" content="/open-graph.png" />
     <meta property="og:url" content={Astro.site} />
     <meta name="twitter:image" content="/open-graph.png" />
     <meta name="twitter:card" content="summary_large_image" />
