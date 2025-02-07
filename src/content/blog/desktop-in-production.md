@@ -2,7 +2,7 @@
 title: Production Desktop Support
 author: bryanoltman
 description: Announcing that desktop platforms are now production-ready
-date: 2025-02-08
+date: 2025-02-07
 ---
 
 ![](../../../public/blog/stable-desktop-cover.png)
