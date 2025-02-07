@@ -12,6 +12,9 @@ import { Footer } from '../components/Footer.jsx';
 import '../styles/Theme.css';
 
 const { frontmatter } = Astro.props;
+
+// Always use Astro.site (production url) rather than a test domain.
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -25,10 +28,10 @@ const { frontmatter } = Astro.props;
     <meta name="description" content={frontmatter.description} />
     <meta name="description" property="og:description" content={frontmatter.description} />
     <meta name="image" property="og:image" content="/open-graph.png" />
-    <meta property="og:url" content={Astro.site} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:image" content="/open-graph.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonicalUrl} />
     <script
       defer
       data-domain="shorebird.dev"

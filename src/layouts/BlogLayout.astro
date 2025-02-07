@@ -38,7 +38,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <meta name="description" property="og:description" content={description} />
     <meta name="image" property="og:image" content={coverUrl} />
-    <meta property="og:url" content={Astro.site} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta name="twitter:image" content={coverUrl} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -48,6 +48,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta property="article:author" content={author} />
     <meta property="article:section" content="Technology" />
     <meta name="twitter:site" content="@shorebirddev" />
+    <meta name="author" content={author} />
     {
       authors[author].twitter && (
         <meta name="twitter:creator" content={authors[author].twitter} />
