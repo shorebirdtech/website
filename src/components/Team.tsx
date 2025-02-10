@@ -29,7 +29,7 @@ const team = [
   {
     name: 'Tom Arra',
     title: 'Founding Operations Lead',
-    bio: "Former Director of Product Development at [Very Good Ventures](https://verygood.ventures).",
+    bio: 'Former Director of Product Development at [Very Good Ventures](https://verygood.ventures).',
     headshot: tomHeadshot,
   },
 ];
