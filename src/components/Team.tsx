@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import ericHeadshot from '../assets/images/eric-headshot.jpeg';
 import felixHeadshot from '../assets/images/felix-headshot.jpeg';
 import bryanHeadshot from '../assets/images/bryan-headshot.png';
+import tomHeadshot from '../assets/images/tom-headshot.jpg';
 
 const team = [
   {
@@ -24,6 +25,12 @@ const team = [
     title: 'Founding Engineer',
     bio: "Former architecture lead for Google's internal-facing enterprise [Flutter](https://flutter.dev) team.",
     headshot: bryanHeadshot,
+  },
+  {
+    name: 'Tom Arra',
+    title: 'Founding Operations Lead',
+    bio: "Former Director of Product Development at [Very Good Ventures](https://verygood.ventures).",
+    headshot: tomHeadshot,
   },
 ];
 
