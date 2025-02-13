@@ -10,7 +10,7 @@ export const config = {
     'https://console.shorebird.dev/subscriptions/create?plan=pro',
   businessPlanCheckoutUrl:
     'https://console.shorebird.dev/subscriptions/create?plan=business',
-  contactSales: 'https://calendly.com/eseidel/shorebird-sales',
+  contactSales: 'https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales',
   contactEmail: 'contact@shorebird.dev',
   navLinks: [
     { label: 'Products', href: '/#products-code-push', ariaLabel: 'Products' },
