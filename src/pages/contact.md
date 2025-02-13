@@ -19,7 +19,7 @@ You're also welcome to [email us](mailto:contact@shorebird.dev).
 
 ## 🏷️ Sales
 
-[Email](mailto:contact@shorebird.dev) our sales team or [schedule a call](https://calendly.com/eseidel/shorebird-sales).
+[Email](mailto:contact@shorebird.dev) our sales team or [schedule a call](https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales).
 
 ## 🐌 Mail
 
