@@ -53,15 +53,17 @@ function PricingCalculator({ hideCTA }: { hideCTA?: boolean }) {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="flex w-full flex-row gap-8">
+        <div className="flex w-full flex-row gap-4 md:gap-8">
           <div className="flex flex-col">
             <p className="text-text-2 text-sm">Users</p>
-            <p className="text-text-1 text-3xl">{monthlyActiveUsers}</p>
+            <p className="text-text-1 text-xl md:text-2xl">
+              {monthlyActiveUsers}
+            </p>
           </div>
           <div className="flex flex-col">
             <p className="text-text-2 text-sm">Estimated Cost</p>
-            <p className="text-text-1 text-3xl">
-              {pricing.total ?? 'Contact Us'}
+            <p className="text-text-1 text-xl md:text-2xl">
+              {pricing.total ?? 'Contact Us '}
             </p>
           </div>
         </div>
