@@ -1,23 +1,21 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
-
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://shorebird.dev',
-  integrations: [react(), tailwind(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  integrations: [react(), sitemap()],
   redirects: {
     // Some old docs may still point to .html urls for terms and privacy.
     '/terms.html': '/terms',
     '/privacy.html': '/privacy',
-    '/blogs': '/blog',
-    '/blogs/how-we-built-code-push': '/blog/how-we-built-code-push',
-    '/blogs/1.0/': '/blog/1.0',
-    '/blogs/ios-beta/': '/blog/ios-beta',
-    // Eric sent an email with the wrong link to a few people:
-    '/blog/mac-beta/': '/blog/macos-beta',
+    '/faq': 'https://docs.shorebird.dev/faq',
     '/security': 'https://handbook.shorebird.dev/security',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
   },

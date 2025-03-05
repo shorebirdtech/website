@@ -3,8 +3,7 @@ title: Tracks, Percentage Rollouts and A/B testing
 author: eseidel
 description: Announcing Tracks, Percentage Rollouts and A/B testing
 date: 2024-11-14
-cover: /blog/shorebird-code-push-v2-cover.png
-coverAlt: Improved Patch Delivery Cover Image
+cover: tracks-cover.png
 ---
 
 Building on the success of our brand-new [`shorebird_code_push`

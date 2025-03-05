@@ -1,0 +1,131 @@
+---
+import config from '@/config';
+import { GradientOutlineButton } from '@/components/ui/button';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { Ellipse } from '@/components/ellipse';
+import { Spacer } from '@/components/spacer';
+import {
+  ArrowRight,
+  Lightning,
+  CheckCircle,
+  ClockCountdown,
+  CalendarDots,
+  Tag,
+  Queue,
+  HandPeace,
+  ArrowCounterClockwise,
+} from '@phosphor-icons/react';
+---
+
+<section
+  class="mx-auto flex flex-col w-10/12 items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <h1 class="text-text-1 text-4xl">
+    Give your team <span class="gradient-text">superpowers</span>
+  </h1>
+  <Spacer />
+  <div
+    class="flex flex-col md:flex-row justify-between items-start w-full gap-6"
+  >
+    <h3 class="text-text-2 text-lg lg:text-center">
+      Deliver the best possible experience to your users, regardless of
+      platform.
+    </h3>
+    <a href={config.docsUrl} class="md:w-auto w-full">
+      <GradientOutlineButton className="font-light w-full">
+        Learn more <ArrowRight className="size-5" weight="bold" />
+      </GradientOutlineButton>
+    </a>
+  </div>
+  <Spacer className="h-10" />
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <Card>
+      <CardHeader
+        ><Lightning className="text-accent-primary-1 size-10" /></CardHeader
+      >
+      <CardTitle>Ship Faster</CardTitle>
+      <CardContent>
+        Get fixes in customers hands on your schedule.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><ArrowCounterClockwise
+          className="text-accent-primary-1 size-10"
+        /></CardHeader
+      >
+      <CardTitle>Roll Back</CardTitle>
+      <CardContent>
+        Roll back any updates with the click of a button.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><ClockCountdown
+          className="text-accent-primary-1 size-10"
+        /></CardHeader
+      >
+      <CardTitle>Hyper-frequent Updates</CardTitle>
+      <CardContent> Ship multiple times a day with confidence. </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><CheckCircle className="text-accent-primary-1 size-10" /></CardHeader
+      >
+      <CardTitle>Level Playing Field</CardTitle>
+      <CardContent>
+        Provide a consistent experience to all users, regardless of platform.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><CalendarDots className="text-accent-primary-1 size-10" /></CardHeader
+      >
+      <CardTitle>Seasonal Events</CardTitle>
+      <CardContent>
+        Instantly deploy updates during critical times of the year.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader><Tag className="text-accent-primary-1 size-10" /></CardHeader>
+      <CardTitle>White-label</CardTitle>
+      <CardContent>
+        Ship to thousands of apps directly from your CI.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><Queue className="text-accent-primary-1 size-10" /></CardHeader
+      >
+      <CardTitle>Seamless Collaboration</CardTitle>
+      <CardContent>
+        Provide instant access to the latest iterations to all collaborators.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><HandPeace className="text-accent-primary-1 size-10" /></CardHeader
+      >
+      <CardTitle>Peace of Mind</CardTitle>
+      <CardContent> Rest easy knowing a fix is just a click away.</CardContent>
+    </Card>
+
+    <Card>
+      <CardTitle>Get started today!</CardTitle>
+      <CardContent>Setup Shorebird in minutes for free! </CardContent>
+      <CardFooter>
+        <a href={config.consoleUrl}>
+          <GradientOutlineButton className="font-light">
+            <Ellipse /> Try it now
+          </GradientOutlineButton>
+        </a>
+      </CardFooter>
+    </Card>
+  </div>
+</section>

@@ -1,0 +1,307 @@
+---
+import config from '@/config';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { PricingCalculator } from '@/components/pricing-calculator';
+import { PricingFaq } from '@/components/pricing-faq';
+import { Spacer } from '@/components/spacer';
+import { ArrowRight, Check, Minus } from '@phosphor-icons/react';
+
+interface Feature {
+  title: string;
+  free?: string;
+  pro?: string;
+  business?: string;
+  enterprise?: string;
+}
+
+const features: Feature[] = [
+  {
+    title: 'Monthly Base Cost',
+    free: '$0',
+    pro: '$20',
+    business: '$400',
+    enterprise: 'Custom',
+  },
+  {
+    title: 'Included Patch Installs',
+    free: '5,000',
+    pro: '50,000',
+    business: '1,000,000',
+    enterprise: 'Custom',
+  },
+  {
+    title: 'Overage Billing',
+    pro: '$1 per 2,500 installs',
+    business: '$1 per 2,500 installs',
+    enterprise: 'Custom',
+  },
+  {
+    title: 'Unlimited Apps & Releases',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  { title: 'Console', free: '✓', pro: '✓', business: '✓', enterprise: '✓' },
+  {
+    title: 'Collaboration',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  {
+    title: 'Patch Rollbacks',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  {
+    title: 'Signed Patches',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  {
+    title: 'Usage Notifications',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  { title: 'Staging', free: '✓', pro: '✓', business: '✓', enterprise: '✓' },
+  {
+    title: 'Analytics',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: 'Custom',
+  },
+  {
+    title: 'Support',
+    free: 'Community Discord',
+    pro: 'Semi-Private',
+    business: 'Private',
+    enterprise: 'Private',
+  },
+  {
+    title: 'User Roles',
+    free: 'Admin, Developer',
+    pro: 'Admin, Developer',
+    business: 'Admin, Developer',
+    enterprise: 'Custom',
+  },
+  { title: 'Invoice Billing', enterprise: '✓' },
+  { title: 'Annual Billing', enterprise: '✓' },
+  { title: 'SAML', enterprise: 'Custom' },
+];
+
+const plans = [
+  {
+    name: 'Free',
+    price: 'Free',
+    description: 'Made for hobbyists, small apps, and demos.',
+    cta: { link: config.consoleUrl, title: 'Try It' },
+  },
+  {
+    name: 'Pro',
+    price: '$20',
+    description:
+      'Sized for usage from medium sized apps with scalable pricing.',
+    cta: { link: config.proPlanCheckoutUrl, title: 'Buy Now' },
+  },
+  {
+    name: 'Business',
+    price: '$400',
+    description: 'Great for large apps with advanced needs.',
+    cta: { link: config.businessPlanCheckoutUrl, title: 'Buy Now' },
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    description: 'Build a custom plan for enterprise apps & needs.',
+    cta: { link: config.contactSales, title: 'Talk to Sales' },
+  },
+];
+---
+
+<section
+  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-text-1 text-5xl font-semibold">
+      Pay as you <span class="gradient-text">grow</span>
+    </h1>
+    <Spacer />
+    <h3 class="text-text-2 text-center text-lg">
+      Deliver instant updates with pricing that scales as you grow.
+    </h3>
+    <Spacer className="h-10" />
+    <PricingCalculator hideCTA={true} client:load />
+    <Spacer className="h-10" />
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <Card>
+        <CardHeader>
+          <div class="flex w-full flex-col gap-3">
+            <p class="text-lg">Free</p>
+            <p class="text-text-2 text-sm">
+              Made for hobbyists, small apps, and demos.
+            </p>
+            <hr class="text-border-1 mt-2" />
+          </div>
+        </CardHeader>
+        <CardContent className="flex w-full flex-col justify-center gap-6">
+          <h2 class="text-text-1 text-3xl">Free</h2>
+          <a href={config.consoleUrl}>
+            <GradientOutlineButton className="w-full px-8 font-light">
+              Get started <ArrowRight className="size-5" weight="bold" />
+            </GradientOutlineButton>
+          </a>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>
+          <div class="flex w-full flex-col gap-3">
+            <p class="text-lg">Pro</p>
+            <p class="text-text-2 text-sm">
+              Sized for usage from medium sized apps with scalable pricing.
+            </p>
+            <hr class="text-border-1 mt-2" />
+          </div>
+        </CardHeader>
+        <CardContent className="flex w-full flex-col justify-center gap-6">
+          <h2 class="text-text-1 text-3xl">
+            $20 <span class="text-text-2 text-sm">/month</span>
+          </h2>
+          <a href={config.proPlanCheckoutUrl}>
+            <GradientOutlineButton className="w-full px-8 font-light">
+              Buy now <ArrowRight className="size-5" weight="bold" />
+            </GradientOutlineButton>
+          </a>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>
+          <div class="flex w-full flex-col gap-3">
+            <p class="text-lg">Business</p>
+            <p class="text-text-2 text-sm">
+              Great for large apps with advanced needs.
+            </p>
+            <hr class="text-border-1 mt-2" />
+          </div>
+        </CardHeader>
+        <CardContent className="flex w-full flex-col justify-center gap-6">
+          <h2 class="text-text-1 text-3xl">
+            $400 <span class="text-text-2 text-sm">/month</span>
+          </h2>
+          <a href={config.businessPlanCheckoutUrl}>
+            <GradientOutlineButton className="w-full px-8 font-light">
+              Buy now <ArrowRight className="size-5" weight="bold" />
+            </GradientOutlineButton>
+          </a>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>
+          <div class="flex w-full flex-col gap-3">
+            <p class="text-lg">Enterprise</p>
+            <p class="text-text-2 text-sm">
+              Build a custom plan for enterprise apps & needs.
+            </p>
+            <hr class="text-border-1 mt-2" />
+          </div>
+        </CardHeader>
+        <CardContent className="flex w-full flex-col justify-center gap-6">
+          <h2 class="text-text-1 text-3xl">Custom</h2>
+          <a href={config.contactSales}>
+            <Button variant="outline" className="w-full px-8 font-light">
+              Book a demo <ArrowRight className="size-5" weight="bold" />
+            </Button>
+          </a>
+        </CardContent>
+      </Card>
+    </div>
+    <div class="w-full pt-18">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="text-lg font-light">
+              PLAN COMPARISON
+            </TableHead>
+            {
+              plans.map((plan) => (
+                <TableHead
+                  className="text-center text-lg font-normal"
+                  key={plan.name}
+                >
+                  {plan.name}
+                </TableHead>
+              ))
+            }
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {
+            features.map((feature) => (
+              <TableRow key={feature.title}>
+                <TableCell className="text-normal">{feature.title}</TableCell>
+                {plans.map((plan) => (
+                  <TableCell
+                    key={`${feature.title}-${plan.name}`}
+                    className="text-center"
+                  >
+                    {feature[plan.name.toLowerCase() as keyof Feature] ? (
+                      feature[plan.name.toLowerCase() as keyof Feature] ===
+                      '✓' ? (
+                        <Check
+                          weight="bold"
+                          className="inline h-5 w-5 text-accent-primary-1"
+                        />
+                      ) : (
+                        feature[plan.name.toLowerCase() as keyof Feature]
+                      )
+                    ) : (
+                      <Minus
+                        weight="bold"
+                        className="inline h-5 w-5 text-gray-500"
+                      />
+                    )}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))
+          }
+        </TableBody>
+      </Table>
+    </div>
+    <div class="w-full pt-18">
+      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-16">
+        <div class="flex flex-col items-start gap-6">
+          <h2 class="text-4xl font-medium">FAQ</h2>
+          <span class="text-text-2">
+            Check out the top frequently asked questions regarding pricing. If
+            you still have questions, please contact us.
+          </span>
+          <a href={config.contactSales} class="w-full md:w-auto">
+            <GradientOutlineButton className="w-full font-light">
+              Contact us <ArrowRight className="size-5" weight="bold" />
+            </GradientOutlineButton>
+          </a>
+        </div>
+        <div class="col-span-2">
+          <PricingFaq client:load />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

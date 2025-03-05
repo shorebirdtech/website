@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
+layout: '@/layouts/markdown.astro'
 title: Data Processing Addendum
 description: Shorebird Data Processing Addendum
 last_updated: 09-09-2024

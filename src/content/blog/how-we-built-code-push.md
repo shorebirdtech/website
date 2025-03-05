@@ -3,8 +3,7 @@ title: How we built Flutter code push
 author: eseidel
 description: Walk through of the changes made to Dart and Flutter in order to make code push work.
 date: 2024-05-17
-cover: /blog/how-code-push-works-cover.png
-coverAlt: How code push works header image
+cover: how-we-built-code-push-cover.png
 ---
 
 One of the most common questions we get, is "how does Shorebird work?". This

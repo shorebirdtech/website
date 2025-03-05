@@ -1,151 +1,104 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { DiscordLogo } from '@/components/discord-logo';
+import { GitHubLogo } from '@/components/github-logo';
+import { LogoFull } from '@/components/logo-full';
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import config from '@/config';
+import {
+  ArrowRight,
+  Bookmark,
+  Books,
+  Building,
+  List,
+  Money,
+  Question,
+} from '@phosphor-icons/react';
 
-import { config } from '../config';
-import { ShorebirdLogo } from '../assets/logos/ShorebirdLogo';
-import { GitHubIcon } from '../assets/icons/GitHubIcon';
-import { DiscordIcon } from '../assets/icons/DiscordIcon';
-import { TwitterIcon } from '../assets/icons/TwitterIcon';
-
-export interface NavbarLink {
-  label: string;
-  href: string;
-  ariaLabel: string;
-}
-
-export interface NavbarProps {
-  links?: NavbarLink[];
-}
-
-export const Navbar = (props: NavbarProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+function Navbar() {
   return (
-    <nav className="fixed z-40 flex h-20 w-full flex-col items-center justify-center bg-shorebirdBg1 lg:bg-shorebirdBgTransparent lg:backdrop-blur-xl">
-      <div className="relative flex w-11/12 items-center justify-between xl:w-10/12 2xl:w-[1280px]">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          exit={{ opacity: 0 }}
-        >
-          <a className="navbar-link" href="/" aria-label="Home">
-            <div className="flex grow basis-0 items-center justify-start">
-              <div className="mr-2 text-6xl text-white">
-                <ShorebirdLogo />
-              </div>
-              <div className="font-['Inter'] text-xl font-bold text-white">
-                {config.app}
-              </div>
+    <Sheet>
+      <nav className="border-border-1 flex items-center justify-between border-t-[1px] border-b-[1px] py-5">
+        <div className="mx-auto flex w-11/12 items-center justify-between xl:w-10/12 2xl:w-[1280px]">
+          <div className="flex w-full flex-row items-center gap-8 lg:gap-12">
+            <a className="transition hover:scale-105" href="/">
+              <LogoFull className="w-36" />
+            </a>
+            <div className="hidden flex-row gap-4 md:flex lg:gap-8">
+              <a href="/pricing">Pricing</a>
+              <a href="/about">About</a>
+              <a href="/blog">Blog</a>
+              <a href={config.docsUrl}>Docs</a>
+              <a href="/faq">FAQs</a>
             </div>
-          </a>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          exit={{ opacity: 0 }}
-        >
-          <div className="hidden h-full pb-2 pl-12 lg:flex">
-            {props.links?.map(({ href, label, ariaLabel }) => (
-              <a
-                className="navbar-link"
-                href={href}
-                aria-label={ariaLabel}
-                key={label}
-              >
-                {label}
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <a className="hidden lg:block" href={config.discordUrl}>
+              <Button variant="outline" size="sm" className="font-light">
+                <DiscordLogo className="size-5" />
+                Support
+              </Button>
+            </a>
+            <a className="hidden lg:block" href={config.githubUrl}>
+              <Button variant="outline" size="sm" className="font-light">
+                <GitHubLogo className="size-5" />
+                2.5k
+              </Button>
+            </a>
+            <a href={config.consoleUrl}>
+              <GradientOutlineButton className="h-9 gap-1.5 rounded-full px-3 font-light">
+                Get started <ArrowRight className="size-5" weight="bold" />
+              </GradientOutlineButton>
+            </a>
+            <SheetTrigger asChild>
+              <Button size="icon" className="md:hidden">
+                <List className="size-6" />
+              </Button>
+            </SheetTrigger>
+          </div>
+        </div>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle className="border-border-1 border-b-2 py-4">
+              <a href="/">
+                <LogoFull className="w-36" />
               </a>
-            ))}
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          exit={{ opacity: 0 }}
-        >
-          <div className="hidden grow basis-0 items-center justify-end lg:flex">
-            <a
-              className="flex rounded-xl bg-shorebirdBg2 text-sm text-white"
-              href={config.discordUrl}
-              target="_blank"
-              aria-label="discord"
-            >
-              <DiscordIcon />
+            </SheetTitle>
+          </SheetHeader>
+          <div className="flex flex-col gap-6 px-6 text-lg">
+            <a className="flex flex-row items-center gap-2" href="/pricing">
+              <Money className="text-accent-primary-1 size-6" />
+              Pricing
+            </a>
+            <a className="flex flex-row items-center gap-2" href="/about">
+              <Building className="text-accent-primary-1 size-6" />
+              About
+            </a>
+            <a className="flex flex-row items-center gap-2" href="/blog">
+              <Bookmark className="text-accent-primary-1 size-6" />
+              Blog
             </a>
             <a
-              className="ml-4 flex rounded-xl bg-shorebirdBg2 text-sm text-white"
-              href={config.twitterUrl}
-              target="_blank"
-              aria-label="twitter"
+              className="flex flex-row items-center gap-2"
+              href={config.docsUrl}
             >
-              <TwitterIcon />
+              <Books className="text-accent-primary-1 size-6" />
+              Docs
             </a>
-            <a
-              className="ml-4 flex rounded-xl bg-shorebirdBg2 text-sm text-white"
-              href={config.githubUrl}
-              target="_blank"
-              aria-label="source code"
-            >
-              <GitHubIcon />
-            </a>
-            <a
-              className="ml-4 rounded-md border-2 border-slate-600 p-2 text-white hover:border-slate-400"
-              href={config.consoleUrl}
-              target="_blank"
-              aria-label="source code"
-            >
-              Console
+            <a className="flex flex-row items-center gap-2" href="/faq">
+              <Question className="text-accent-primary-1 size-6" />
+              FAQs
             </a>
           </div>
-        </motion.div>
-        {props.links ? (
-          <div
-            className="flex cursor-pointer flex-col rounded-md border border-solid border-gray-600 px-2 py-3 hover:bg-shorebirdBg2 lg:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <div className="mb-1 h-0.5 w-5 bg-gray-500"></div>
-            <div className="mb-1 h-0.5 w-5 bg-gray-500"></div>
-            <div className="h-0.5 w-5 bg-gray-500"></div>
-          </div>
-        ) : (
-          <></>
-        )}
-      </div>
-      {/* Mobile navbar */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            exit={{ opacity: 0 }}
-          >
-            <div className="absolute left-0 top-4 z-50 mt-16 flex w-full flex-col items-center gap-10 border-y border-solid border-shorebirdBg3 bg-shorebirdBg1 pb-10 pt-10 lg:hidden">
-              <a
-                className="navbar-link"
-                href={config.consoleUrl}
-                target="_blank"
-                aria-label="source code"
-              >
-                Console
-              </a>
-              {props.links?.map(({ label, href, ariaLabel }) => (
-                <a
-                  key={href}
-                  className="navbar-link"
-                  href={href}
-                  onClick={() => setIsOpen(false)}
-                  aria-label={ariaLabel}
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+        </SheetContent>
+      </nav>
+    </Sheet>
   );
-};
+}
+
+export { Navbar };

@@ -1,3 +1,4 @@
+import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 const convertDateToUTC = (date: Date) =>
@@ -12,14 +13,13 @@ const convertDateToUTC = (date: Date) =>
   );
 
 const blogCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
     author: z.string(),
     date: z.date().transform(convertDateToUTC),
-    cover: z.string().optional(),
-    coverAlt: z.string().optional(),
+    cover: z.string(),
   }),
 });
 

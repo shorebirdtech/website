@@ -3,8 +3,7 @@ title: Simplified, Flexible Pricing
 author: shorebirdtech
 description: Announcing simplified pricing for Shorebird
 date: 2024-08-27
-cover: /blog/simplified-pricing-cover.png
-coverAlt: Simplified pricing header image
+cover: simplified-pricing-cover.png
 ---
 
 Today we’re announcing simplified pricing for Shorebird. We offer two plans:
@@ -32,14 +31,14 @@ With Pro, your only commitment is to the $20 monthly platform fee, which
 includes 50,000 patches delivered. Use as much or as little beyond that as you
 want, and only get billed for what you use.
 
-![Pro Plan](../../assets/images/blog/simplified-pricing/ProPlan.png)
+![Pro Plan](../../assets/blog/simplified-pricing/ProPlan.png)
 
 Customers can control their spending limit from the [Shorebird
 Console](https://console.shorebird.dev). Your spending limit defaults to $0 and
 we will automatically notify you via email once when you’re close to your limit
 and again when you’ve reached your limit.
 
-![Usage Limit](../../assets/images/blog/simplified-pricing/UsageLimit.png)
+![Usage Limit](../../assets/blog/simplified-pricing/UsageLimit.png)
 
 Existing Shorebird customers with “Hobby” or “Teams” will see no changes. You
 can keep your plan as it exists today, or you’re welcome to transition to this

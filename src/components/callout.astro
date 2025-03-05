@@ -1,0 +1,35 @@
+---
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Ellipse } from '@/components/ellipse';
+import config from '@/config';
+---
+
+<div
+  class="mx-auto flex w-11/12 justify-center items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <Card
+    className="w-full p-6 lg:p-16 flex flex-col items-center justify-center"
+  >
+    <h2 class="text-text-1 text-4xl text-center">
+      Start shipping fast, <span class="gradient-text">today!</span>
+    </h2>
+    <p class="text-text-2 text-center">
+      It takes less than 5 minutes to integrate with your current codebase.
+    </p>
+    <div
+      class="flex w-full items-center justify-center flex-col md:flex-row gap-4 mt-6"
+    >
+      <a href={config.consoleUrl} class="w-full md:w-auto">
+        <GradientOutlineButton className="font-light w-full">
+          <Ellipse /> Try it now
+        </GradientOutlineButton>
+      </a>
+      <a href={config.newsletterSubscriptionUrl} class="w-full md:w-auto">
+        <Button variant="outline" className="font-light w-full">
+          Subscribe to our newsletter
+        </Button>
+      </a>
+    </div>
+  </Card>
+</div>

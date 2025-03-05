@@ -3,8 +3,7 @@ title: Patch Signing Beta
 author: bryanoltman
 description: Announcing Patch Signing for Shorebird Code Push.
 date: 2024-06-05
-cover: /blog/patch-signing-cover.png
-coverAlt: Patch signing header image
+cover: patch-signing-cover.png
 ---
 
 Shorebird’s code push allows developers to update their Flutter apps instantly,

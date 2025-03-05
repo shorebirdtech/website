@@ -1,36 +1,40 @@
 ---
-import { config } from '../config';
-import { FAQ } from '../components/FAQ';
-import { Footer } from '../components/Footer';
-import { Hero } from '../components/Hero';
-import { Navbar } from '../components/Navbar';
-import { Brands } from '../components/Brands';
-import { NewsLetter } from '../components/NewsLetter';
-import { Testimonials } from '../components/Testimonials';
-import { PricingOverview } from '../components/PricingOverview';
-import { ProductsCodePush } from '../components/ProductsCodePush';
-import { PromoVideo } from '../components/PromoVideo';
-import { ScrollToTopButton } from '../components/ScrollToTopButton';
-import { Team } from '../components/Team';
-import MainLayout from '../layouts/MainLayout.astro';
-import { Banner } from '../components/Banner';
-
-import '../styles/Theme.css';
-import '../styles/Shapes.css';
+import { Navbar } from '@/components/navbar';
+import { ScrollToTopButton } from '@/components/scroll-to-top-button';
+import Banner from '@/components/banner.astro';
+import BlogOverview from '@/components/blog-overview.astro';
+import Brands from '@/components/brands.astro';
+import Callout from '@/components/callout.astro';
+import DeliverInstantUpdates from '@/components/deliver-instant-updates.astro';
+import FAQ from '@/components/faq.astro';
+import Features from '@/components/features.astro';
+import Footer from '@/components/footer.astro';
+import ForDevelopers from '@/components/for-developers.astro';
+import ForTeams from '@/components/for-teams.astro';
+import Hero from '@/components/hero.astro';
+import MainLayout from '@/layouts/main.astro';
+import PricingOverview from '@/components/pricing-overview.astro';
+import Problem from '@/components/problem.astro';
+import Resources from '@/components/resources.astro';
+import Testimonials from '@/components/testimonials.astro';
 ---
 
-<MainLayout title={config.app}>
-  <Navbar links={config.navLinks} client:load />
-  <Banner client:load />
-  <Hero client:load />
-  <ProductsCodePush client:load />
-  <PromoVideo client:load />
-  <Brands client:load />
-  <Testimonials client:load />
-  <PricingOverview client:load />
-  <Team client:load />
-  <NewsLetter client:load />
-  <FAQ client:load />
+<MainLayout title="Home">
+  <Banner />
+  <Navbar client:load />
+  <Hero />
+  <Brands />
+  <Problem />
+  <DeliverInstantUpdates />
+  <ForTeams />
+  <ForDevelopers />
+  <Features />
+  <PricingOverview />
+  <FAQ />
+  <Testimonials />
+  <Resources />
+  <BlogOverview />
+  <Callout />
   <Footer />
   <ScrollToTopButton client:load />
 </MainLayout>

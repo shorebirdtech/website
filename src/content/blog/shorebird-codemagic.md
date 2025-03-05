@@ -3,8 +3,7 @@ title: Shorebird & Codemagic Integration
 author: felangel
 description: Announcing Shorebird Integration in Codemagic
 date: 2025-02-04
-cover: /blog/shorebird-codemagic-cover.png
-coverAlt: Shorebird & Codemagic header image
+cover: codemagic-cover.png
 ---
 
 We're very excited to announce that we've been working with the folks at

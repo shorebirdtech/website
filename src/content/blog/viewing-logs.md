@@ -3,6 +3,7 @@ title: Viewing logs in released apps
 author: bryanoltman
 description: How to view logs for an app without a debugger attached.
 date: 2024-08-20
+cover: viewing-logs-cover.png
 ---
 
 Whether you're using a logging framework or the humble `print` function, logs
@@ -32,7 +33,7 @@ Without any filtering, `adb logcat` is _very_ noisy. To show just the output for
 your Flutter app, you can filter the output using `adb logcat | grep flutter` on
 macOS/Linux or `adb logcat | findstr flutter` on Windows.
 
-![](../../assets/images/blog/release-logs/TerminalLogcat.png)
+![](../../assets/blog/release-logs/TerminalLogcat.png)
 
 ## Console.app for iOS
 
@@ -49,15 +50,15 @@ for your iPhone, iPad, Apple Watch, etc.
 To see system logs, connect your device to your Mac via USB, select it in the
 left column, and press the "Start" button in the top toolbar.
 
-![](../../assets/images/blog/release-logs/EmptyConsoleStartButtonArrow.png)
+![](../../assets/blog/release-logs/EmptyConsoleStartButtonArrow.png)
 
 Without filtering, these logs are _very_ noisy. To filter out logs that are not
 from your app, type your app's name in the search bar and press enter (for
 Flutter apps, this defaults to "Runner"). You can then right-click on "Runner"
 in the Process column and select "Show Process 'Runner'"
 
-![](../../assets/images/blog/release-logs/ConsoleShowProcessMenu.png)
+![](../../assets/blog/release-logs/ConsoleShowProcessMenu.png)
 
 With this filter applied, we are only shown logs that apply to our app.
 
-![](../../assets/images/blog/release-logs/ConsolePatchCheckResponse.png)
+![](../../assets/blog/release-logs/ConsolePatchCheckResponse.png)

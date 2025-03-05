@@ -1,20 +1,14 @@
 ---
-import { config } from '../config';
-import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
-import { PricingDetails } from '../components/PricingDetails';
-import { PricingFAQ } from '../components/PricingFAQ';
-import { ScrollToTopButton } from '../components/ScrollToTopButton';
-import MainLayout from '../layouts/MainLayout.astro';
-
-import '../styles/Theme.css';
-import '../styles/Shapes.css';
+import MainLayout from '@/layouts/main.astro';
+import Banner from '@/components/banner.astro';
+import { Navbar } from '@/components/navbar';
+import PricingDetails from '@/components/pricing-details.astro';
+import Footer from '@/components/footer.astro';
 ---
 
-<MainLayout title={config.app}>
-  <Navbar links={config.navLinks} client:load />
-  <PricingDetails client:load />
-  <PricingFAQ client:load />
+<MainLayout title="Pricing">
+  <Banner />
+  <Navbar client:load />
+  <PricingDetails />
   <Footer />
-  <ScrollToTopButton client:load />
 </MainLayout>

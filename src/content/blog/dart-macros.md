@@ -3,8 +3,7 @@ title: On Focus and Dart Macros
 author: eseidel
 description: Reacting to Google's decision to cancel Dart's "macros" feature
 date: 2025-01-29
-cover: /blog/dart-macros-cover.png
-coverAlt: Dart Macros Cover Image
+cover: dart-macros-cover.png
 ---
 
 Brace yourselves. We may be in for another round of “Flutter is dying” and “Dart
