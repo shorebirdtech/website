@@ -34,22 +34,22 @@ const testimonials = [
 <section
   class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
-  <div class="flex flex-col justify-center items-center">
-    <h1 class="text-text-1 text-4xl">Testimonals</h1>
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-text-1 text-4xl">Testimonials</h1>
     <Spacer />
-    <h3 class="text-text-2 text-lg text-center">
+    <h3 class="text-text-2 text-center text-lg">
       See what the community has to say about Shorebird.
     </h3>
     <Spacer className="h-10" />
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
       {
         testimonials.map((testimonial, index) => {
           return (
             <Card>
               <CardHeader>
-                <div class="flex flex-row gap-2 items-center">
+                <div class="flex flex-row items-center gap-2">
                   <Image
-                    class="rounded-full size-10"
+                    class="size-10 rounded-full"
                     src={testimonial.image}
                     alt={testimonial.name}
                   />

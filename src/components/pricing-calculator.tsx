@@ -29,7 +29,7 @@ function PricingCalculator({ hideCTA }: { hideCTA?: boolean }) {
     };
   };
   const pricing = calculatePrice();
-  const monthyActiveUsers =
+  const monthlyActiveUsers =
     activeUsers > 2000000 ? '2,000,000+' : activeUsers.toLocaleString();
 
   return (
@@ -56,7 +56,7 @@ function PricingCalculator({ hideCTA }: { hideCTA?: boolean }) {
         <div className="flex w-full flex-row gap-8">
           <div className="flex flex-col">
             <p className="text-text-2 text-sm">Users</p>
-            <p className="text-text-1 text-3xl">{monthyActiveUsers}</p>
+            <p className="text-text-1 text-3xl">{monthlyActiveUsers}</p>
           </div>
           <div className="flex flex-col">
             <p className="text-text-2 text-sm">Estimated Cost</p>

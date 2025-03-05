@@ -6,6 +6,8 @@ date: 2025-02-24
 cover: buy-dont-build-cover.png
 ---
 
+<!-- cSpell:ignore dont -->
+
 Sometimes, the best engineering solution isn’t to build—it’s to buy.
 
 That’s a lesson many companies learn the hard way when tackling the problem of mobile app updates. For companies that rely on fast iteration cycles, the limitations of the App Store and Google Play’s release process can be a major bottleneck. Engineering teams often invest months—or even years—developing internal solutions to push updates dynamically, only to find that maintaining these systems is just as challenging as building them. But what if you didn’t have to build your own solution? What if you could buy it?
