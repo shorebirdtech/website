@@ -19,7 +19,7 @@ const sortByDate = (a: any, b: any) =>
   new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
 const posts = (await getCollection('blog')).sort(sortByDate);
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif}',
+  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif}'
 );
 const postImages = posts.map((post) => {
   const cover = post.data.cover ?? 'default-cover.png';
@@ -34,26 +34,26 @@ const postImages = posts.map((post) => {
   <Banner />
   <Navbar client:load />
   <section
-    class="mx-auto flex flex-col w-10/12 items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+    class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
   >
-    <h1 class="text-text-1 text-5xl font-semibold">
+    <h1 class="text-text-1 text-center text-5xl font-semibold">
       Our latest <span class="gradient-text">news</span>
     </h1>
     <Spacer />
     <div
-      class="flex flex-col md:flex-row justify-between items-start w-full gap-6"
+      class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
     >
-      <h3 class="text-text-2 text-lg lg:text-center">
+      <h3 class="text-text-2 text-center text-lg">
         Stay up to date on all things Shorebird with our latest blog posts.
       </h3>
-      <a href={config.newsletterSubscriptionUrl} class="md:w-auto w-full">
-        <Button variant="outline" className="font-light w-full">
+      <a href={config.newsletterSubscriptionUrl} class="w-full md:w-auto">
+        <Button variant="outline" className="w-full font-light">
           Join our newsletter <ArrowRight className="size-5" weight="bold" />
         </Button>
       </a>
     </div>
     <Spacer className="h-10" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
       {
         posts.map((post, index) => (
           <a href={`/blog/${post.id}`} class="hover:no-underline">
@@ -62,19 +62,19 @@ const postImages = posts.map((post) => {
                 <Image
                   src={postImages[index]()}
                   alt={`${post.data.title} cover image`}
-                  class="w-full object-cover rounded-xl"
+                  class="w-full rounded-xl object-cover"
                 />
               </CardHeader>
               <CardContent className="p-4">
                 <div class="flex flex-col gap-3">
-                  <p class="text-sm text-text-2">
+                  <p class="text-text-2 text-sm">
                     <FormattedDate date={post.data.date} />
                   </p>
-                  <h1 class="text-xl text-text-1 hover:underline">
+                  <h1 class="text-text-1 text-xl hover:underline">
                     {post.data.title}
                   </h1>
                 </div>
-                <p class="text-text-2 whitespace-nowrap overflow-hidden text-ellipsis">
+                <p class="text-text-2 overflow-hidden text-ellipsis whitespace-nowrap">
                   {post.data.description}
                 </p>
               </CardContent>
