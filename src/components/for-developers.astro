@@ -1,0 +1,53 @@
+---
+import { ArrowRight, Check } from '@phosphor-icons/react';
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { Image } from 'astro:assets';
+import config from '@/config';
+import QuickFix from '@/assets/features/quick-fix.png';
+import SocialProof from '@/assets/features/social-proof.png';
+---
+
+<section
+  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <Image class="rounded-xl" src={QuickFix} alt="Fix bugs quickly" />
+    <div class="flex flex-col justify-center gap-6 lg:items-start">
+      <div class="flex flex-row gap-4 items-center">
+        <Image height={36} src={SocialProof} alt="Social proof" />
+        <span class="text-text-1 md:text-lg">2,000+ teams use us</span>
+      </div>
+      <h2 class="text-4xl font-medium">For Developers</h2>
+      <span class="text-text-2">
+        With Shorebird, development teams can quickly deploy fixes instead of
+        waiting for full app releases.
+      </span>
+      <ul class="flex flex-col gap-4">
+        <li class="flex flex-row gap-2 items-start">
+          <Check className="size-6 text-accent-primary-1" /> Iterate quickly and
+          confidently
+        </li>
+        <li class="flex flex-row gap-2 items-start">
+          <Check className="size-6 text-accent-primary-1" />Hotfix in seconds,
+          not days
+        </li>
+        <li class="flex flex-row gap-2 items-start">
+          <Check className="size-6 text-accent-primary-1" />No need for legacy
+          code path maintenance
+        </li>
+        <div class="flex w-full flex-row gap-4 mt-6 items-start">
+          <a href={config.consoleUrl}>
+            <GradientOutlineButton className="font-light">
+              Get started <ArrowRight className="size-5" weight="bold" />
+            </GradientOutlineButton>
+          </a>
+          <a href="/blog">
+            <Button variant="outline" className="font-light">
+              Learn more <ArrowRight className="size-5" weight="bold" /></Button
+            >
+          </a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -2,9 +2,8 @@
 title: Production Desktop Support
 author: bryanoltman
 description: Announcing that desktop platforms are now production-ready
-cover: /blog/stable-desktop-cover.png
-coverAlt: Stable desktop header image
 date: 2025-02-07
+cover: stable-desktop-cover.png
 ---
 
 We’re excited to announce that, as of today, our desktop (Windows, Linux, and

@@ -1,0 +1,78 @@
+---
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { FlutterLogo } from '@/components/flutter-logo';
+import { Image } from 'astro:assets';
+import { Spacer } from '@/components/spacer';
+import AllPlatforms from '@/assets/features/all-platforms.png';
+import AnyCode from '@/assets/features/any-code.png';
+import Compliance from '@/assets/features/compliance.png';
+import Rollback from '@/assets/features/rollback.png';
+---
+
+<section
+  class="mx-auto flex flex-col w-10/12 items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <div
+    class="mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center"
+  >
+    <FlutterLogo className="inline h-6 w-6" />
+    <span class="text-text-1">
+      Built by the same people who built Flutter
+    </span>
+  </div>
+  <Spacer />
+  <h1 class="text-text-1 text-4xl text-center">Deliver instant updates</h1>
+  <Spacer />
+  <h3 class="text-text-2 text-lg text-center">
+    Fix critical issues on your schedule by pushing updates directly to users'
+    devices.
+  </h3>
+  <Spacer className="h-10" />
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <Card>
+      <CardHeader
+        ><Image src={AllPlatforms} alt="Works on all platforms" /></CardHeader
+      >
+      <CardTitle className="flex items-center justify-center"
+        >Works everywhere Flutter does</CardTitle
+      >
+      <CardContent className="text-center">
+        Build for users, not platforms. Shorebird allows you to push updates
+        everywhere your users are.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader><Image src={AnyCode} alt="Update any Dart code" /></CardHeader
+      >
+      <CardTitle className="flex items-center justify-center"
+        >Change any Dart code</CardTitle
+      >
+      <CardContent className="text-center">
+        No need to plan ahead. Setup Shorebird in minutes and push updates to
+        any Dart code.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader><Image src={Rollback} alt="Rollback changes" /></CardHeader>
+      <CardTitle className="flex items-center justify-center"
+        >Rollback changes with no impact</CardTitle
+      >
+      <CardContent className="text-center">
+        Roll changes back instead of rushing the next build through the release
+        process.
+      </CardContent>
+    </Card>
+    <Card>
+      <CardHeader
+        ><Image src={Compliance} alt="Works on all platforms" />
+      </CardHeader>
+      <CardTitle className="flex items-center justify-center"
+        >Designed for store compliance</CardTitle
+      >
+      <CardContent className="text-center">
+        Shorebird adheres to all store guidelines to ensure your app is always
+        compliant.
+      </CardContent>
+    </Card>
+  </div>
+</section>

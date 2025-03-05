@@ -3,8 +3,7 @@ title: Improved Patch Delivery
 author: felangel
 description: Announcing improved global patch delivery, availability, and performance.
 date: 2024-09-05
-cover: /blog/improved-patch-delivery-cover.png
-coverAlt: Improved Patch Delivery Cover Image
+cover: improved-patch-delivery-cover.png
 ---
 
 We're excited to announce some improvements to cloud infrastructure which
@@ -29,7 +28,7 @@ We've made some changes to our cloud infrastructure to enable Shorebird to
 deliver patches to more regions around the world. You may now find that users
 are able to download patches in regions that were previously unavailable.
 
-![China Patch availability image](../../assets/images/blog/improved-patch-delivery/china-availability.png)
+![China Patch availability image](../../assets/blog/improved-patch-delivery/china-availability.png)
 
 ## Faster Downloads
 

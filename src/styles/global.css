@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans/GeneralSans-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans/GeneralSans-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans/GeneralSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans/GeneralSans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans/GeneralSans-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin 'tailwindcss-animate';
+
+:root {
+  --foreground: #ffffff;
+
+  --surface-1: #151518;
+  --surface-2: #1f1f24;
+  --surface-3: #3f3f47;
+  --surface-overlay: #000000;
+
+  --border-1: #3a3a42;
+  --border-2: #1a1a1a;
+
+  --text-1: #f0f0ee;
+  --text-2: #b8b8b7;
+  --text-3: #6d6d7a;
+  --text-gradient-1: #46ceff;
+  --text-gradient-2: #17ffcd;
+
+  --accent-primary-1: #2de8e5;
+  --accent-primary-2: #f0f0ee;
+  --accent-secondary-1: #2de8e5;
+  --accent-secondary-2: #f0f0ee;
+
+  --button-primary-surface: #3edcba;
+  --button-primary-surface-hover: #23c2a0;
+  --button-primary-border: #ffffff;
+  --button-primary-text: #f0f0ee;
+
+  --button-secondary-surface: #161619;
+  --button-secondary-surface-hover: #161619;
+  --button-secondary-border: #3a3a42;
+  --button-secondary-text: #f0f0ee;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--text-gradient-1),
+    var(--text-gradient-2)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.markdown {
+  a {
+    @apply underline;
+  }
+}
+
+@theme inline {
+  --font-sans: 'GeneralSans', 'sans-serif';
+  --color-background: var(--surface-1);
+  --color-foreground: var(--foreground);
+  --color-accent-secondary-1: var(--accent-secondary-1);
+  --color-border-1: var(--border-1);
+  --color-border-2: var(--border-2);
+
+  --color-text-1: var(--text-1);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-text-gradient-1: var(--text-gradient-1);
+  --color-text-gradient-2: var(--text-gradient-2);
+
+  --color-card: var(--surface-2);
+  --color-card-foreground: var(--text-1);
+  --color-accent-primary-1: var(--accent-primary-1);
+
+  --color-button-primary-text: var(--button-primary-text);
+  --color-button-secondary-text: var(--button-secondary-text);
+
+  --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
+  --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  a {
+    @apply hover:text-text-1 text-text-2 cursor-pointer hover:underline;
+  }
+
+  ::selection {
+    @apply bg-accent-primary-1/60 text-text-1;
+  }
+
+  ::-moz-selection {
+    @apply bg-accent-primary-1/60 text-text-1;
+  }
+
+  ::-o-selection {
+    @apply bg-accent-primary-1/60 text-text-1;
+  }
+
+  ::-ms-selection {
+    @apply bg-accent-primary-1/60 text-text-1;
+  }
+
+  ::-webkit-selection {
+    @apply bg-accent-primary-1/60 text-text-1;
+  }
+}

@@ -1,0 +1,27 @@
+---
+import { ArrowRight } from '@phosphor-icons/react';
+import { FaqOverview } from '@/components/faq-overview';
+import { GradientOutlineButton } from '@/components/ui/button';
+---
+
+<section
+  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16">
+    <div class="flex flex-col gap-6 items-start">
+      <h2 class="text-4xl font-medium">FAQ</h2>
+      <span class="text-text-2">
+        Check out the top frequently asked questions. For a more comprehensive
+        list, head to our documentation site.
+      </span>
+      <a href="https://docs.shorebird.dev/faq" class="w-full md:w-auto">
+        <GradientOutlineButton className="font-light w-full">
+          Go to Docs <ArrowRight className="size-5" weight="bold" />
+        </GradientOutlineButton>
+      </a>
+    </div>
+    <div class="col-span-2">
+      <FaqOverview client:load />
+    </div>
+  </div>
+</section>

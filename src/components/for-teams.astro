@@ -1,0 +1,49 @@
+---
+import { ArrowRight, Check } from '@phosphor-icons/react';
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { Image } from 'astro:assets';
+import config from '@/config';
+import Releases from '@/assets/features/releases.png';
+---
+
+<section
+  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div class="flex flex-col justify-center gap-6 lg:items-start">
+      <h2 class="text-4xl font-medium">For Teams</h2>
+      <span class="text-text-2">
+        Adding Shorebird to your application allows product teams to make
+        impactful decisions quickly instead of having to wait for the next app
+        review cycle.
+      </span>
+      <ul class="flex flex-col gap-4">
+        <li class="flex flex-row gap-2 items-start">
+          <Check className="size-6 text-accent-primary-1" /> Respond to customer
+          issues and complaints quickly
+        </li>
+        <li class="flex flex-row gap-2 items-start">
+          <Check className="size-6 text-accent-primary-1" />Easily phase out
+          support for older app versions
+        </li>
+        <li class="flex flex-row gap-2 items-start">
+          <Check className="size-6 text-accent-primary-1" />Fix customer
+          complaints in seconds, not days
+        </li>
+        <div class="flex w-full flex-row gap-4 mt-6 items-start">
+          <a href={config.consoleUrl}>
+            <GradientOutlineButton className="font-light">
+              Get started <ArrowRight className="size-5" weight="bold" />
+            </GradientOutlineButton>
+          </a>
+          <a href={config.docsUrl}>
+            <Button variant="outline" className="font-light">
+              Learn more <ArrowRight className="size-5" weight="bold" /></Button
+            >
+          </a>
+        </div>
+      </ul>
+    </div>
+    <Image class="rounded-xl" src={Releases} alt="Patch multiple releases" />
+  </div>
+</section>

@@ -3,6 +3,7 @@ title: macOS Desktop Support (beta)
 author: bryanoltman
 description: Announcing the beta release of macOS desktop support
 date: 2024-12-16
+cover: macos-beta-cover.png
 ---
 
 Shorebird now supports updating Flutter apps built for Mac desktop.

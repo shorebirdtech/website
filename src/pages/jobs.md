@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
+layout: '@/layouts/markdown.astro'
 title: Jobs
 description: Shorebird openings
 ---

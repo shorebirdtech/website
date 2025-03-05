@@ -3,6 +3,7 @@ title: The Smarter Way to Ship Flutter Updates
 author: tomarra
 description: Learning from enterprise players that custom code deployment systems are valuable but a lot to maintain.
 date: 2025-02-24
+cover: buy-dont-build-cover.png
 ---
 
 Sometimes, the best engineering solution isn’t to build—it’s to buy.

@@ -1,0 +1,73 @@
+---
+import { ArrowRight } from '@phosphor-icons/react';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import { Spacer } from '@/components/spacer';
+import FormattedDate from '@/components/blog/formatted-date.astro';
+
+const sortByDate = (a: any, b: any) =>
+  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
+const posts = (await getCollection('blog')).sort(sortByDate).slice(0, 2);
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif}',
+);
+const postImages = posts.map((post) => {
+  const cover = post.data.cover ?? 'default-cover.png';
+  if (images[`/src/assets/blog/covers/${cover}`]) {
+    return images[`/src/assets/blog/covers/${cover}`];
+  }
+  return images['/src/assets/blog/covers/default-cover.png'];
+});
+---
+
+<section
+  class="mx-auto flex flex-col w-10/12 items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <h1 class="text-text-1 text-4xl">Read our blog</h1>
+  <Spacer />
+  <div
+    class="flex flex-col md:flex-row justify-between items-start w-full gap-6"
+  >
+    <h3 class="text-text-2 text-lg lg:text-center">
+      Stay up-to-date on all things Shorebird.
+    </h3>
+    <a href="/blog" class="md:w-auto w-full">
+      <Button variant="outline" className="font-light w-full">
+        View all blogs <ArrowRight className="size-5" weight="bold" />
+      </Button>
+    </a>
+  </div>
+  <Spacer className="h-10" />
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      posts.map((post, index) => (
+        <a href={`/blog/${post.id}`} class="hover:no-underline">
+          <Card className="gap-2 py-0 cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1">
+            <CardHeader className="p-0">
+              <Image
+                src={postImages[index]()}
+                alt={`${post.data.title} cover image`}
+                class="w-full object-cover rounded-xl"
+              />
+            </CardHeader>
+            <CardContent className="p-4">
+              <div class="flex flex-col gap-3">
+                <p class="text-sm text-text-2">
+                  <FormattedDate date={post.data.date} />
+                </p>
+                <h1 class="text-xl text-text-1 hover:underline">
+                  {post.data.title}
+                </h1>
+              </div>
+              <p class="text-text-2 whitespace-nowrap overflow-hidden text-ellipsis">
+                {post.data.description}
+              </p>
+            </CardContent>
+          </Card>
+        </a>
+      ))
+    }
+  </div>
+</section>

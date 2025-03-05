@@ -3,8 +3,7 @@ title: How to integrate Shorebird into your development workflow
 author: felangel
 description: Announcing our opinionated development workflow guide.
 date: 2024-09-25
-cover: /blog/development-workflow-cover.png
-coverAlt: Development Workflow Cover Image
+cover: development-workflow-cover.png
 ---
 
 Our customers have been asking for an opinionated development workflow

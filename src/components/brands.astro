@@ -1,0 +1,79 @@
+---
+import { Marquee } from '@/components/marquee';
+import ApnaKlubLogo from '@/assets/brands/apna-klub.png';
+import ChaiLogo from '@/assets/brands/chai.png';
+import FlashCoLogo from '@/assets/brands/flash-co.png';
+import InvoiceHomeLogo from '@/assets/brands/invoice-home.png';
+import JungleeLogo from '@/assets/brands/junglee.png';
+import KalshiLogo from '@/assets/brands/kalshi.png';
+import KijijiLogo from '@/assets/brands/kijiji.png';
+import TrackerLogo from '@/assets/brands/tracker.png';
+import TradelingLogo from '@/assets/brands/tradeling.png';
+
+const brands = [
+  {
+    name: 'Junglee Games',
+    url: 'https://www.jungleegames.com',
+    image: JungleeLogo,
+  },
+  {
+    name: 'Kijiji',
+    url: 'https://www.kijiji.ca',
+    image: KijijiLogo,
+  },
+  {
+    name: 'Tracker',
+    url: 'https://tracker.fi',
+    image: TrackerLogo,
+  },
+  {
+    name: 'CHAI',
+    url: 'https://chai-research.com/',
+    image: ChaiLogo,
+  },
+  {
+    name: 'Kalshi',
+    url: 'https://kalshi.com',
+    image: KalshiLogo,
+  },
+  {
+    name: 'ApnaKlub',
+    url: 'https://www.apnaklub.com',
+    image: ApnaKlubLogo,
+  },
+  {
+    name: 'Flash.co',
+    url: 'https://flash.co',
+    image: FlashCoLogo,
+  },
+  {
+    name: 'Tradeling',
+    url: 'https://www.tradeling.com',
+    image: TradelingLogo,
+  },
+  {
+    name: 'Invoice Home',
+    url: 'https://invoicehome.com',
+    image: InvoiceHomeLogo,
+  },
+];
+---
+
+<section class="mx-auto flex w-full flex-col xl:w-10/12 2xl:w-[1280px]">
+  <div class="flex items-center m-auto justify-center flex-row">
+    <Marquee fade={true} direction="left" reverse={false}>
+      {
+        brands.map((brand) => (
+          <div
+            id={brand.name}
+            class="flex max-w-32 items-center contrast grayscale saturate justify-center py-6"
+          >
+            <a target="_blank" href={brand.url}>
+              <img src={brand.image.src} alt={brand.name} />
+            </a>
+          </div>
+        ))
+      }
+    </Marquee>
+  </div>
+</section>

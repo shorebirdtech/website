@@ -1,0 +1,69 @@
+---
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import { Image } from 'astro:assets';
+import { Spacer } from '@/components/spacer';
+import JasonRai from '@/assets/testimonials/jason-rai.png';
+import RenanAraujo from '@/assets/testimonials/renan-araujo.png';
+import TahaTesser from '@/assets/testimonials/taha-tesser.png';
+
+const testimonials = [
+  {
+    name: 'Jason Rai',
+    title: 'Head of Frontend Engineering, Kijiji',
+    quote:
+      "We use Shorebird at Kijiji on Android and it's been awesome. Working well at a very large scale.",
+    image: JasonRai,
+  },
+  {
+    name: 'Renan Araujo',
+    title: 'Senior Engineer, Superlist',
+    quote:
+      'Shorebird was very useful for distributing updates to my Flame game with over 10k players. Works like a charm.',
+    image: RenanAraujo,
+  },
+  {
+    name: 'Taha Tesser',
+    title: 'Engineer, Codemagic',
+    quote:
+      'Shorebird solves one of the biggest challenges: bringing over-the-air updates instantly to your users. Backed by an amazing team.',
+    image: TahaTesser,
+  },
+];
+---
+
+<section
+  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+>
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-text-1 text-4xl">Testimonals</h1>
+    <Spacer />
+    <h3 class="text-text-2 text-lg text-center">
+      See what the community has to say about Shorebird.
+    </h3>
+    <Spacer className="h-10" />
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {
+        testimonials.map((testimonial, index) => {
+          return (
+            <Card>
+              <CardHeader>
+                <div class="flex flex-row gap-2 items-center">
+                  <Image
+                    class="rounded-full size-10"
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                  />
+                  <div class="flex flex-col">
+                    <p>{testimonial.name}</p>
+                    <p class="text-text-2 text-sm">{testimonial.title}</p>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>{testimonial.quote}</CardContent>
+            </Card>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

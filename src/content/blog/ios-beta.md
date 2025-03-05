@@ -3,9 +3,8 @@ title: iOS Beta
 author: shorebirdtech
 description: Shorebird Code Push for iOS beta announcement
 date: 2024-02-01
+cover: ios-beta-cover.png
 ---
-
-# Announcing Code Push iOS beta 🥳
 
 Shorebird Code Push allows you to update your Flutter app instantly over the air
 and deploy fixes directly to end users' devices.

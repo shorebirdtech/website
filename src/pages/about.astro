@@ -1,0 +1,159 @@
+---
+import '@/styles/global.css';
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Ellipse } from '@/components/ellipse';
+import { FlutterLogo } from '@/components/flutter-logo';
+import { Image } from 'astro:assets';
+import { LinkedInLogo } from '@/components/linkedin-logo';
+import { Markdown } from '@/components/markdown';
+import { Navbar } from '@/components/navbar';
+import { Spacer } from '@/components/spacer';
+import Banner from '@/components/banner.astro';
+import bryanHeadshot from '@/assets/team/bryan-headshot.png';
+import config from '@/config';
+import ericHeadshot from '@/assets/team/eric-headshot.jpeg';
+import felixHeadshot from '@/assets/team/felix-headshot.jpeg';
+import Footer from '@/components/footer.astro';
+import MainLayout from '@/layouts/main.astro';
+import tomHeadshot from '@/assets/team/tom-headshot.jpg';
+
+const team = [
+  {
+    name: 'Eric Seidel',
+    title: 'Founder',
+    bio: 'Founder of [Flutter](https://flutter.dev) & former Director of Engineering for Flutter/Dart at Google.',
+    linkedIn: 'https://www.linkedin.com/in/ericseidel',
+    headshot: ericHeadshot,
+  },
+  {
+    name: 'Felix Angelov',
+    title: 'Founding Engineer',
+    bio: 'Creator of [Bloc](https://github.com/felangel/bloc) & [Mason](https://github.com/felangel/mason). Former Principal Engineer at [Very Good Ventures](https://verygood.ventures).',
+    linkedIn: 'https://www.linkedin.com/in/felix-angelov',
+    headshot: felixHeadshot,
+  },
+  {
+    name: 'Bryan Oltman',
+    title: 'Founding Engineer',
+    bio: "Former architecture lead for Google's internal-facing enterprise [Flutter](https://flutter.dev) team.",
+    linkedIn: 'https://www.linkedin.com/in/bryanoltman',
+    headshot: bryanHeadshot,
+  },
+  {
+    name: 'Tom Arra',
+    title: 'Founding Operations Lead',
+    bio: 'Former Director of Product Development at [Very Good Ventures](https://verygood.ventures).',
+    linkedIn: 'https://www.linkedin.com/in/tomarra',
+    headshot: tomHeadshot,
+  },
+];
+---
+
+<MainLayout title="About Us">
+  <Banner />
+  <Navbar client:load />
+  <section
+    class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  >
+    <h1
+      class="text-text-1 text-center text-5xl md:px-24 lg:px-40 font-semibold"
+    >
+      We help businesses <span class="gradient-text">succeed</span>
+      with <span class="inline-block"
+        ><FlutterLogo className="size-10 inline" /> Flutter</span
+      >
+    </h1>
+    <Spacer className="h-18 md:h-24" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl">Our Mission</h2>
+        <p class="text-text-2">
+          Shorebird was started to solve problems others can't or won't solve
+          with Flutter and to bring the benefits of multi-platform development
+          to the many millions of developers who are still stuck on
+          single-platform toolchains. Every interactive pane of glass should
+          deliver great user experiences, and to do that, Flutter is the best
+          tool we have so far. Shorebird is here to help.
+        </p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl">Why Shorebird</h2>
+        <p class="text-text-2">
+          Shorebird exists because we're frustrated that the world wastes years
+          of human life, writing the same thing multiple times. It's important
+          that Shorebird is a company. We're exploiting capitalism to align
+          incentives behind the world adopting multi-platform. Flutter and other
+          multi-platform solutions have suffered from a lack of economic
+          incentives. Shorebird is here to change that.
+        </p>
+      </div>
+    </div>
+    <Spacer className="h-18" />
+    <div
+      class="mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center"
+    >
+      <FlutterLogo className="inline h-6 w-6" />
+      <span class="text-text-1">
+        Built by the same people who built Flutter
+      </span>
+    </div>
+    <Spacer />
+    <h1 class="text-text-1 text-4xl text-center">Our Team</h1>
+    <Spacer className="h-8" />
+    <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+      {
+        team.map((member, index) => (
+          <div
+            id={`member-${index}`}
+            class="flex flex-col items-center mx-auto justify-center gap-1 max-w-[200px]"
+          >
+            <Image
+              class="object-cover rounded-xl"
+              src={member.headshot}
+              alt={`${member.name} headshot`}
+            />
+            <Spacer className="h-2" />
+            <div class="flex flex-row w-full justify-between">
+              <p>{member.name}</p>
+              <a href={member.linkedIn}>
+                <LinkedInLogo className="text-text-2 size-4" />
+              </a>
+            </div>
+            <div class="flex flex-row w-full justify-between text-text-2 text-sm">
+              <Markdown content={member.bio} />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <Spacer className="h-18" />
+    <div class="mx-auto flex justify-center items-center py-6 md:py-12 w-full">
+      <Card
+        className="w-full p-6 lg:p-16 flex flex-col items-center justify-center"
+      >
+        <h2 class="text-text-1 text-4xl text-center">
+          Build for <span class="gradient-text">users</span>, not platforms.
+        </h2>
+        <p class="text-text-2 text-center">
+          Shaping the future of multi-platform, one solution at a time.
+        </p>
+        <div
+          class="flex w-full items-center justify-center flex-col md:flex-row gap-4 mt-6"
+        >
+          <a href={config.consoleUrl} class="w-full md:w-auto">
+            <GradientOutlineButton className="font-light w-full">
+              <Ellipse /> Try it now
+            </GradientOutlineButton>
+          </a>
+          <a href="/jobs" class="w-full md:w-auto">
+            <Button variant="outline" className="font-light w-full">
+              View open positions
+            </Button>
+          </a>
+        </div>
+      </Card>
+    </div>
+  </section>
+  <Footer />
+</MainLayout>
