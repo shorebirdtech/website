@@ -57,6 +57,14 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
           <span class="text-text-2">
             Highlights
           </span>
+          <Spacer />
+            {
+            highlights.map((highlight, index) => (
+              <ul>
+                <li>{highlight}</li>
+              </ul>
+            ))
+          }
         </div>
         <div class="col-span-2">
           <!--<Image src={images[storyImg]} alt={title} />-->

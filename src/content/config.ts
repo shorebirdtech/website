@@ -29,6 +29,7 @@ const successStoriesCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     cover: z.string(),
+    highlights: z.array(z.string()),
   }),
 });
 
