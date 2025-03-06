@@ -6,6 +6,8 @@ cover: easyspend-cover.png
 highlights: ['Over 1,000 monthly active users']
 ---
 
+<!-- cSpell:ignore easyspend -->
+
 EasySpend is a next-generation fintech company based in Lagos, Nigeria, with a mission to transform financial transactions for individuals and businesses. Offering a suite of services including virtual cards, bill payments, and seamless NGN-USD transactions, EasySpend is solving some of Africa’s biggest financial challenges. From providing reliable virtual dollar cards for freelancers and remote workers to enabling businesses with bulk payment solutions, EasySpend is redefining how people move money.
 
 In creating the mobile applications for EasySpend they turned to Flutter to ensure that their customer base of over 100,000 active users have a consistent experience no matter what device they are using. For many Flutter developers, targeting multiple platforms is a key advantage of the framework. However, building and deploying iOS apps typically requires access to macOS, creating a barrier for developers who don’t own a Mac. This was the challenge faced by the team at EasySpend.

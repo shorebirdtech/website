@@ -11,6 +11,8 @@ highlights:
   ]
 ---
 
+<!-- cSpell:ignore dougall -->
+
 Kijiji, a leading Canadian online marketplace, has been connecting millions of users for over a decade. With a focus on buying and selling new and used items, Kijiji has grown to host many wide-ranging product sections and boast a diverse user base, from power users to occasional buyers. With a large, dedicated user base, it’s critical that Kijiji’s website and mobile app remain user-friendly and maintain a high level of quality.
 
 **Transition to Flutter**
