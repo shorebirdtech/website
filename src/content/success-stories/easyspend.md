@@ -2,6 +2,7 @@
 title: EasySpend
 description: Next generation fintech companies turn to cloud services like Shorebird to help them easily deploy and stay up to date across all of their platforms.
 cover: easyspend.png
+highlights: ['Over 1,000 monthly active users']
 ---
 
 EasySpend is a next-generation fintech company based in Lagos, Nigeria, with a mission to transform financial transactions for individuals and businesses. Offering a suite of services including virtual cards, bill payments, and seamless NGN-USD transactions, EasySpend is solving some of Africa’s biggest financial challenges. From providing reliable virtual dollar cards for freelancers and remote workers to enabling businesses with bulk payment solutions, EasySpend is redefining how people move money.
