@@ -6,6 +6,7 @@ export interface Props {
 }
 const { title } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const coverUrl = new URL('/open-graph.png', Astro.url.origin);
 ---
 
 <!doctype html>
@@ -17,12 +18,18 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={config.tagline} />
-    <meta property="og:description" content={config.tagline} />
-    <meta property="og:image" content="/open-graph.png" />
+    <meta
+      name="description"
+      property="og:description"
+      content={config.tagline}
+    />
+    <meta name="image" property="og:image" content={coverUrl} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta name="twitter:image" content="/open-graph.png" />
+    <meta property="og:title" content={title} />
+    <meta name="twitter:image" content={coverUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonicalUrl} />
+    <meta name="twitter:site" content="@shorebirddev" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script
       defer
