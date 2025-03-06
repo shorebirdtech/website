@@ -10,6 +10,7 @@ const images = import.meta.glob("../assets/success-stories/*");
 const storyImg = Astro.props.cover;
 const title = Astro.props.title;
 const description = Astro.props.description;
+const highlights = Astro.props.highlights;
 
 const coverUrl = new URL('/blog/open-graph.png', Astro.url.origin);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
@@ -54,7 +55,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
           </span>
           <Spacer />
           <span class="text-text-2">
-          Hightlights
+            Highlights
           </span>
         </div>
         <div class="col-span-2">

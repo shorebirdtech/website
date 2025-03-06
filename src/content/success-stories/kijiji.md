@@ -2,6 +2,12 @@
 title: Kijiji
 description: The leading Canadian online marketplace turned to Shorebird to ensure their customer base was up to date all the time.
 cover: kijiji.jpg
+highlights:
+  [
+    'Over 10 Million active users of the Kijiji mobile apps worldwide',
+    '12 Million+ Shorebird patches installed to users in 2024',
+    'Approximately 68 days of review time saved in application deployment in 2024 by using Shorebird',
+  ]
 ---
 
 Kijiji, a leading Canadian online marketplace, has been connecting millions of users for over a decade. With a focus on buying and selling new and used items, Kijiji has grown to host many wide-ranging product sections and boast a diverse user base, from power users to occasional buyers. With a large, dedicated user base, it’s critical that Kijiji’s website and mobile app remain user-friendly and maintain a high level of quality.
@@ -27,10 +33,3 @@ Kijiji's partnership with Shorebird exemplifies how strategic tech integration c
 > Over time, we have realized that we could Shorebird a fix quickly to all of our users, which made an enormous impact on customer satisfaction. That’s now become a default phrase in our development team, as it’s a great tool to have in our toolbox.
 
 Scott MacDougall, Head of Engineering, Mobile at Kijiji
-
-**By the Numbers**
-
-- 10M+ Monthly Active Users of the Kijiji mobile apps
-- 12M+ Shorebird Patches installed to users in 2024
-- 68 days\* of review time saved in deployment during 2024 by using Shorebird
-  - \*Based on an average of 24 hours for a hotfix release though mobile app stores

@@ -34,5 +34,5 @@ const successStoriesCollection = defineCollection({
 
 export const collections = {
   blog: blogCollection,
-  sucessStories: successStoriesCollection
+  sucessStories: successStoriesCollection,
 };
