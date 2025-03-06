@@ -7,7 +7,7 @@ cover: 'brand-refresh-cover.png'
 ---
 
 Shorebird has been around for just over 2 years and we felt it was time for a
-much needed brand refresh!
+much-needed brand refresh!
 
 ### Redesigned Website
 
@@ -16,15 +16,14 @@ We're super excited to announce the next iteration of [shorebird.dev](https://sh
 ![New Site Design](../../assets/blog/brand-refresh/new-site-design.png)
 
 Our previous site was very minimal and tailored specifically for developers. One
-of our main goals for the site redesign was to clearly (and more visually)
-communicate the value of Shorebird's solutions, making it more accessible to
-both developers and non-technical folks.
+of our main goals for the site redesign was to clearly (and visually)
+communicate the value of Shorebird's solutions to both developers and
+non-technical folks.
 
 ### Brand Refresh
 
 We also took this as an opportunity to refresh our logo. Our goal was to polish
-and simplify where possible while still maintaining the same essence of a
-playful sandpiper.
+and simplify where possible while still maintaining the cute, playful sandpiper.
 
 _Fun Fact: Did you know the name Shorebird is the name of the street on which Flutter was created?_
 
