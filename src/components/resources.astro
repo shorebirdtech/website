@@ -5,47 +5,55 @@ import { Spacer } from '@/components/spacer';
 import config from '@/config';
 import Discord from '@/assets/resources/discord.png';
 import Shorebird from '@/assets/resources/shorebird.png';
+
+const resources = [
+  {
+    image: Shorebird,
+    title: 'Read the docs',
+    description:
+      'Learn everything you need to get started with Shorebird in just a few minutes from core concepts to detailed tutorials.',
+    url: config.docsUrl,
+  },
+  {
+    image: Discord,
+    title: 'Chat with the community',
+    description:
+      "Ask questions, share what you're building, and participate in discussions with the Shorebird community.",
+    url: config.discordUrl,
+  },
+];
 ---
 
 <section
-  class="mx-auto flex flex-col w-11/12 items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  class="mx-auto flex w-11/12 flex-col items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
   <h1 class="text-text-1 text-4xl">Resources</h1>
   <Spacer />
-  <h3 class="text-text-2 text-lg text-center">
+  <h3 class="text-text-2 text-center text-lg">
     Learn more about Shorebird and chat with the community.
   </h3>
   <Spacer className="h-10" />
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <a href={config.docsUrl} class="hover:no-underline">
-      <Card
-        className="cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1"
-      >
-        <CardHeader><Image src={Shorebird} alt="View our docs" /></CardHeader>
-        <CardTitle className="flex items-center justify-center"
-          >Read the docs</CardTitle
-        >
-        <CardContent className="text-center">
-          Learn everything you need to get started with Shorebird in just a few
-          minutes from core concepts to detailed tutorials.
-        </CardContent>
-      </Card>
-    </a>
-    <a href="https://discord.gg/shorebird" class="hover:no-underline">
-      <Card
-        className="cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1"
-      >
-        <CardHeader
-          ><Image src={Discord} alt="Chat with the community" /></CardHeader
-        >
-        <CardTitle className="flex items-center justify-center"
-          >Chat with the community</CardTitle
-        >
-        <CardContent className="text-center">
-          Ask questions, share what you're building, and participate in
-          discussions with the Shorebird community.
-        </CardContent>
-      </Card>
-    </a>
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    {
+      resources.map((resource) => (
+        <a href={resource.url} class="hover:no-underline">
+          <Card className="gap-2 pt-0 cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1">
+            <CardHeader className="p-0">
+              <Image
+                src={resource.image}
+                alt={resource.title}
+                class="w-full rounded-xl object-cover"
+              />
+            </CardHeader>
+            <CardTitle className="flex items-center justify-center">
+              {resource.title}
+            </CardTitle>
+            <CardContent className="text-center">
+              {resource.description}
+            </CardContent>
+          </Card>
+        </a>
+      ))
+    }
   </div>
 </section>

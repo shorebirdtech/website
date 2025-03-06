@@ -2,53 +2,53 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { ClockCountdown, ChartLine, MoneyWavy } from '@phosphor-icons/react';
 import { Spacer } from '@/components/spacer';
+
+const problems = [
+  {
+    title: 'App updates are slow',
+    description:
+      'It can take days, or even weeks, to get updates deployed to all users and platforms.',
+    icon: ClockCountdown,
+  },
+  {
+    title: 'Releasing is expensive',
+    description:
+      'Automating and coordinating releases takes valuable time away from delivering customer value.',
+    icon: MoneyWavy,
+  },
+  {
+    title: 'Deployments are unpredictable',
+    description:
+      'Traditional release processes make it very difficult to estimate when an update will be available to users.',
+    icon: ChartLine,
+  },
+];
 ---
 
 <section
   class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
-  <div class="flex flex-col justify-center items-center">
-    <h1 class="text-text-1 text-4xl text-center">Shipping updates is hard</h1>
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-text-1 text-center text-4xl">Shipping updates is hard</h1>
     <Spacer />
-    <h3 class="text-text-2 text-lg text-center">
+    <h3 class="text-text-2 text-center text-lg">
       Building an app is only half the battle. Delivering and coordinating
       releases across multiple platforms is a huge source of friction and
       complexity.
     </h3>
     <Spacer className="h-10" />
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <Card>
-        <CardHeader
-          ><ClockCountdown
-            className="text-accent-primary-1 size-10"
-          /></CardHeader
-        >
-        <CardTitle>App updates are slow</CardTitle>
-        <CardContent>
-          It can take days, or even weeks, to get updates deployed to all users
-          and platforms.
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader
-          ><MoneyWavy className="text-accent-primary-1 size-10" /></CardHeader
-        >
-        <CardTitle>Releasing is expensive</CardTitle>
-        <CardContent>
-          Automating and coordinating releases takes valuable time away from
-          delivering customer value.
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader
-          ><ChartLine className="text-accent-primary-1 size-10" /></CardHeader
-        >
-        <CardTitle>Deployments are unpredictable</CardTitle>
-        <CardContent>
-          Traditional release processes make it very difficult to estimate when
-          an update will be available to users.
-        </CardContent>
-      </Card>
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      {
+        problems.map((problem) => (
+          <Card>
+            <CardHeader>
+              <problem.icon className="text-accent-primary-1 size-10" />
+            </CardHeader>
+            <CardTitle>{problem.title}</CardTitle>
+            <CardContent>{problem.description}</CardContent>
+          </Card>
+        ))
+      }
     </div>
   </div>
 </section>

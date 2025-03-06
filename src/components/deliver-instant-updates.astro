@@ -7,13 +7,40 @@ import AllPlatforms from '@/assets/features/all-platforms.png';
 import AnyCode from '@/assets/features/any-code.png';
 import Compliance from '@/assets/features/compliance.png';
 import Rollback from '@/assets/features/rollback.png';
+
+const features = [
+  {
+    image: AllPlatforms,
+    title: 'Works everywhere Flutter does',
+    description:
+      'Build for users, not platforms. Shorebird allows you to push updates everywhere your users are.',
+  },
+  {
+    image: AnyCode,
+    title: 'Change any Dart code',
+    description:
+      'No need to plan ahead. Setup Shorebird in minutes and push updates to any Dart code.',
+  },
+  {
+    image: Rollback,
+    title: 'Rollback changes with no impact',
+    description:
+      'Roll changes back instead of rushing the next build through the release process.',
+  },
+  {
+    image: Compliance,
+    title: 'Designed for store compliance',
+    description:
+      'Shorebird adheres to all store guidelines to ensure your app is always compliant.',
+  },
+];
 ---
 
 <section
-  class="mx-auto flex flex-col w-10/12 items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  class="mx-auto flex w-10/12 flex-col items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
   <div
-    class="mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center"
+    class="mx-auto flex flex-col items-center justify-center gap-2 text-center md:flex-row"
   >
     <FlutterLogo className="inline h-6 w-6" />
     <span class="text-text-1">
@@ -21,58 +48,32 @@ import Rollback from '@/assets/features/rollback.png';
     </span>
   </div>
   <Spacer />
-  <h1 class="text-text-1 text-4xl text-center">Deliver instant updates</h1>
+  <h1 class="text-text-1 text-center text-4xl">Deliver instant updates</h1>
   <Spacer />
-  <h3 class="text-text-2 text-lg text-center">
+  <h3 class="text-text-2 text-center text-lg">
     Fix critical issues on your schedule by pushing updates directly to users'
     devices.
   </h3>
   <Spacer className="h-10" />
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <Card>
-      <CardHeader
-        ><Image src={AllPlatforms} alt="Works on all platforms" /></CardHeader
-      >
-      <CardTitle className="flex items-center justify-center"
-        >Works everywhere Flutter does</CardTitle
-      >
-      <CardContent className="text-center">
-        Build for users, not platforms. Shorebird allows you to push updates
-        everywhere your users are.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader><Image src={AnyCode} alt="Update any Dart code" /></CardHeader
-      >
-      <CardTitle className="flex items-center justify-center"
-        >Change any Dart code</CardTitle
-      >
-      <CardContent className="text-center">
-        No need to plan ahead. Setup Shorebird in minutes and push updates to
-        any Dart code.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader><Image src={Rollback} alt="Rollback changes" /></CardHeader>
-      <CardTitle className="flex items-center justify-center"
-        >Rollback changes with no impact</CardTitle
-      >
-      <CardContent className="text-center">
-        Roll changes back instead of rushing the next build through the release
-        process.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><Image src={Compliance} alt="Works on all platforms" />
-      </CardHeader>
-      <CardTitle className="flex items-center justify-center"
-        >Designed for store compliance</CardTitle
-      >
-      <CardContent className="text-center">
-        Shorebird adheres to all store guidelines to ensure your app is always
-        compliant.
-      </CardContent>
-    </Card>
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    {
+      features.map((feature) => (
+        <Card className="gap-2 pt-0 cursor-pointer border-2 border-border-1">
+          <CardHeader className="p-0">
+            <Image
+              src={feature.image}
+              alt={feature.title}
+              class="w-full rounded-xl object-cover"
+            />
+          </CardHeader>
+          <CardTitle className="flex items-center justify-center">
+            {feature.title}
+          </CardTitle>
+          <CardContent className="text-center">
+            {feature.description}
+          </CardContent>
+        </Card>
+      ))
+    }
   </div>
 </section>

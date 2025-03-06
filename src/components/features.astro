@@ -21,101 +21,86 @@ import {
   HandPeace,
   ArrowCounterClockwise,
 } from '@phosphor-icons/react';
+
+const features = [
+  {
+    title: 'Ship Faster',
+    description: 'Get fixes in customers hands on your schedule.',
+    icon: Lightning,
+  },
+  {
+    title: 'Roll Back',
+    description: 'Roll back any updates with the click of a button.',
+    icon: ArrowCounterClockwise,
+  },
+  {
+    title: 'Hyper-frequent Updates',
+    description: 'Ship multiple times a day with confidence.',
+    icon: ClockCountdown,
+  },
+  {
+    title: 'Level Playing Field',
+    description:
+      'Provide a consistent experience to all users, regardless of platform.',
+    icon: CheckCircle,
+  },
+  {
+    title: 'Seasonal Events',
+    description: 'Instantly deploy updates during critical times of the year.',
+    icon: CalendarDots,
+  },
+  {
+    title: 'White-label',
+    description: 'Ship to thousands of apps directly from your CI.',
+    icon: Tag,
+  },
+  {
+    title: 'Seamless Collaboration',
+    description:
+      'Provide instant access to the latest iterations to all collaborators.',
+    icon: Queue,
+  },
+  {
+    title: 'Peace of Mind',
+    description: 'Rest easy knowing a fix is just a click away.',
+    icon: HandPeace,
+  },
+];
 ---
 
 <section
-  class="mx-auto flex flex-col w-10/12 items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
   <h1 class="text-text-1 text-4xl">
     Give your team <span class="gradient-text">superpowers</span>
   </h1>
   <Spacer />
   <div
-    class="flex flex-col md:flex-row justify-between items-start w-full gap-6"
+    class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
   >
     <h3 class="text-text-2 text-lg lg:text-center">
       Deliver the best possible experience to your users, regardless of
       platform.
     </h3>
-    <a href={config.docsUrl} class="md:w-auto w-full">
-      <GradientOutlineButton className="font-light w-full">
+    <a href={config.docsUrl} class="w-full md:w-auto">
+      <GradientOutlineButton className="w-full font-light">
         Learn more <ArrowRight className="size-5" weight="bold" />
       </GradientOutlineButton>
     </a>
   </div>
   <Spacer className="h-10" />
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <Card>
-      <CardHeader
-        ><Lightning className="text-accent-primary-1 size-10" /></CardHeader
-      >
-      <CardTitle>Ship Faster</CardTitle>
-      <CardContent>
-        Get fixes in customers hands on your schedule.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><ArrowCounterClockwise
-          className="text-accent-primary-1 size-10"
-        /></CardHeader
-      >
-      <CardTitle>Roll Back</CardTitle>
-      <CardContent>
-        Roll back any updates with the click of a button.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><ClockCountdown
-          className="text-accent-primary-1 size-10"
-        /></CardHeader
-      >
-      <CardTitle>Hyper-frequent Updates</CardTitle>
-      <CardContent> Ship multiple times a day with confidence. </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><CheckCircle className="text-accent-primary-1 size-10" /></CardHeader
-      >
-      <CardTitle>Level Playing Field</CardTitle>
-      <CardContent>
-        Provide a consistent experience to all users, regardless of platform.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><CalendarDots className="text-accent-primary-1 size-10" /></CardHeader
-      >
-      <CardTitle>Seasonal Events</CardTitle>
-      <CardContent>
-        Instantly deploy updates during critical times of the year.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader><Tag className="text-accent-primary-1 size-10" /></CardHeader>
-      <CardTitle>White-label</CardTitle>
-      <CardContent>
-        Ship to thousands of apps directly from your CI.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><Queue className="text-accent-primary-1 size-10" /></CardHeader
-      >
-      <CardTitle>Seamless Collaboration</CardTitle>
-      <CardContent>
-        Provide instant access to the latest iterations to all collaborators.
-      </CardContent>
-    </Card>
-    <Card>
-      <CardHeader
-        ><HandPeace className="text-accent-primary-1 size-10" /></CardHeader
-      >
-      <CardTitle>Peace of Mind</CardTitle>
-      <CardContent> Rest easy knowing a fix is just a click away.</CardContent>
-    </Card>
-
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map((feature) => (
+        <Card>
+          <CardHeader>
+            <feature.icon className="text-accent-primary-1 size-10" />
+          </CardHeader>
+          <CardTitle>{feature.title}</CardTitle>
+          <CardContent>{feature.description}</CardContent>
+        </Card>
+      ))
+    }
     <Card>
       <CardTitle>Get started today!</CardTitle>
       <CardContent>Setup Shorebird in minutes for free! </CardContent>
