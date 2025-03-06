@@ -14,23 +14,38 @@ const coverUrl = new URL('/open-graph.png', Astro.url.origin);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>Shorebird | {title}</title>
     <meta name="description" content={config.tagline} />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`Shorebird | ${title}`} />
+    <meta property="og:description" content={config.tagline} />
     <meta
       name="description"
       property="og:description"
       content={config.tagline}
     />
+    <meta property="og:image" content={coverUrl} />
     <meta name="image" property="og:image" content={coverUrl} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta name="twitter:image" content={coverUrl} />
+
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href={canonicalUrl} />
+    <meta property="twitter:domain" content="shorebird.dev" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={`Shorebird | ${title}`} />
+    <meta name="twitter:description" content={config.tagline} />
+    <meta name="twitter:image" content={coverUrl} />
     <meta name="twitter:site" content="@shorebirddev" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <script
       defer
       data-domain="shorebird.dev"
