@@ -6,6 +6,8 @@ date: 2025-03-06
 cover: 'brand-refresh-cover.png'
 ---
 
+<!-- cspell:ignore Enuma  -->
+
 Shorebird has been around for just over 2 years and we felt it was time for a
 much-needed brand refresh!
 
