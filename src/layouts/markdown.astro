@@ -4,9 +4,9 @@ import { Navbar } from '@/components/navbar';
 import Footer from '@/components/footer.astro';
 
 const { frontmatter } = Astro.props;
-
-// Always use Astro.site (production url) rather than a test domain.
+const { title, description } = frontmatter;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const coverUrl = new URL('/open-graph.png', Astro.url.origin);
 ---
 
 <!doctype html>
@@ -14,25 +14,39 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={frontmatter.description} />
-    <meta
-      name="description"
-      property="og:description"
-      content={frontmatter.description}
-    />
-    <meta name="image" property="og:image" content="/open-graph.png" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta name="twitter:image" content="/open-graph.png" />
-    <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>Shorebird | {title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="description" property="og:description" content={description} />
+    <meta property="og:image" content={coverUrl} />
+    <meta name="image" property="og:image" content={coverUrl} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="shorebird.dev" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={coverUrl} />
+    <meta name="twitter:site" content="@shorebirddev" />
+
+    <!-- Analytics -->
     <script
       defer
       data-domain="shorebird.dev"
       src="https://plausible.io/js/script.js"></script>
-    <title>Shorebird | {frontmatter.title}</title>
   </head>
   <body>
     <Navbar client:load />

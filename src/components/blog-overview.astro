@@ -5,7 +5,7 @@ import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import { Spacer } from '@/components/spacer';
-import FormattedDate from '@/components/blog/formatted-date.astro';
+import FormattedDate from '@/components/formatted-date.astro';
 
 const sortByDate = (a: any, b: any) =>
   new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();

@@ -46,11 +46,11 @@ const coverUrl = new URL('/open-graph.png', Astro.url.origin);
     <meta name="twitter:image" content={coverUrl} />
     <meta name="twitter:site" content="@shorebirddev" />
 
+    <!-- Analytics -->
     <script
       defer
       data-domain="shorebird.dev"
       src="https://plausible.io/js/script.js"></script>
-    <title>Shorebird | {title}</title>
   </head>
   <body>
     <slot />

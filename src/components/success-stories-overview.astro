@@ -5,7 +5,7 @@ import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import { Spacer } from '@/components/spacer';
-import FormattedDate from '@/components/blog/formatted-date.astro';
+import FormattedDate from '@/components/formatted-date.astro';
 
 const stories = await getCollection('successStories');
 const images = import.meta.glob<{ default: ImageMetadata }>(

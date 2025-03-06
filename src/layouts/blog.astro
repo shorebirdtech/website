@@ -1,6 +1,6 @@
 ---
 import '@/styles/global.css';
-import { BlogCallout } from '@/components/blog/blog-callout';
+import { BlogCallout } from '@/components/blog-callout';
 import { ClockCountdown } from '@phosphor-icons/react';
 import { Image } from 'astro:assets';
 import { Navbar } from '@/components/navbar';
@@ -9,7 +9,7 @@ import bryanHeadshot from '@/assets/blog/headshots/bryan-headshot.png';
 import ericHeadshot from '@/assets/blog/headshots/eric-headshot.jpeg';
 import felixHeadshot from '@/assets/blog/headshots/felix-headshot.jpeg';
 import Footer from '@/components/footer.astro';
-import FormattedDate from '@/components/blog/formatted-date.astro';
+import FormattedDate from '@/components/formatted-date.astro';
 import shorebirdHeadshot from '@/assets/blog/headshots/shorebird-headshot.png';
 import tomHeadshot from '@/assets/blog/headshots/tom-headshot.jpg';
 
@@ -67,33 +67,48 @@ const authors: Record<string, Author> = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <meta name="description" property="og:description" content={description} />
-    <meta name="image" property="og:image" content={coverUrl} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta name="twitter:image" content={coverUrl} />
-    <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="description" property="og:description" content={description} />
+    <meta property="og:image" content={coverUrl} />
+    <meta name="image" property="og:image" content={coverUrl} />
     <meta property="article:published_time" content={date} />
     <meta property="article:author" content={author} />
     <meta property="article:section" content="Technology" />
-    <meta name="twitter:site" content="@shorebirddev" />
     <meta name="author" content={author} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="shorebird.dev" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={coverUrl} />
+    <meta name="twitter:site" content="@shorebirddev" />
     {
       authors[author].twitter && (
         <meta name="twitter:creator" content={authors[author].twitter} />
       )
     }
+
+    <!-- Analytics -->
     <script
       defer
       data-domain="shorebird.dev"
       src="https://plausible.io/js/script.js"></script>
-    <title>{`${title}`}</title>
   </head>
   <body>
     <Navbar client:load />

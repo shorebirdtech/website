@@ -13,7 +13,7 @@ import Banner from '@/components/banner.astro';
 import Footer from '@/components/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import type { ImageMetadata } from 'astro';
-import FormattedDate from '@/components/blog/formatted-date.astro';
+import FormattedDate from '@/components/formatted-date.astro';
 
 const stories = await getCollection('successStories');
 const images = import.meta.glob<{ default: ImageMetadata }>(
