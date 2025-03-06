@@ -69,7 +69,6 @@ function PricingCalculator({ hideCTA }: { hideCTA?: boolean }) {
         </div>
         <div className="py-6">
           <Slider
-            id="users"
             min={0}
             max={2000001}
             step={1000}
