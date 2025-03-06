@@ -50,3 +50,6 @@ non-technical folks alike, this redesign includes:
 We'd love to hear your thoughts on the refresh! If you'd like to give feedback,
 ask questions, or just say hi you can reach us on
 [Discord](https://discord.gg/shorebird).
+
+A huge thank you to [Enuma](https://www.enuma-collective.com) for helping make
+this redesign a reality 💙
