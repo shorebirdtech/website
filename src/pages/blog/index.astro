@@ -22,11 +22,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/blog/covers/*.{jpeg,jpg,png,gif}'
 );
 const postImages = posts.map((post) => {
-  const cover = post.data.cover ?? 'default-cover.png';
+  const cover = post.data.cover;
   if (images[`/src/assets/blog/covers/${cover}`]) {
     return images[`/src/assets/blog/covers/${cover}`];
   }
-  return images['/src/assets/blog/covers/default-cover.png'];
+  throw new Error(`Cover image for blog ${post.data.title} not found`);
 });
 ---
 

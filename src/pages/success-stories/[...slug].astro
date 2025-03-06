@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import SuccessStoryLayout from '@/layouts/success-story.astro';
 
 export async function getStaticPaths() {
-  const stories = await getCollection('sucessStories');
+  const stories = await getCollection('successStories');
   return stories.map((story) => ({
     params: { slug: story.id },
     props: { story },
@@ -14,6 +14,6 @@ const { story } = Astro.props;
 const { Content } = await render(story);
 ---
 
-<SuccessStoryLayout {...story.data}>
+<SuccessStoryLayout {...story.data} id={story.id}>
   <Content />
 </SuccessStoryLayout>

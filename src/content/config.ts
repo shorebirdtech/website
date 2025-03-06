@@ -29,11 +29,12 @@ const successStoriesCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     cover: z.string(),
+    date: z.date().transform(convertDateToUTC),
     highlights: z.array(z.string()),
   }),
 });
 
 export const collections = {
   blog: blogCollection,
-  sucessStories: successStoriesCollection,
+  successStories: successStoriesCollection,
 };

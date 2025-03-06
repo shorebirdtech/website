@@ -1,7 +1,8 @@
 ---
 title: Kijiji
 description: The leading Canadian online marketplace turned to Shorebird to ensure their customer base was up to date all the time.
-cover: kijiji.jpg
+date: 2025-03-06
+cover: kijiji-cover.png
 highlights:
   [
     'Over 10 Million active users of the Kijiji mobile apps worldwide',

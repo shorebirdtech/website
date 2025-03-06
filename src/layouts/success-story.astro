@@ -1,19 +1,32 @@
 ---
 import '@/styles/global.css';
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { BlogCallout } from '@/components/blog/blog-callout';
 import { Navbar } from '@/components/navbar';
-import { Spacer } from '@/components/spacer';
 import Footer from '@/components/footer.astro';
+import FormattedDate from '@/components/blog/formatted-date.astro';
+import { ClockCountdown } from '@phosphor-icons/react';
 
-const images = import.meta.glob("../assets/success-stories/*");
-
-const storyImg = Astro.props.cover;
-const title = Astro.props.title;
-const description = Astro.props.description;
-const highlights = Astro.props.highlights;
-
-const coverUrl = new URL('/blog/open-graph.png', Astro.url.origin);
+const { title, date, description, highlights, id } = Astro.props;
+const coverUrl = new URL('/success-stories/open-graph.png', Astro.url.origin);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+
+const stories = await getCollection('successStories');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/success-stories/covers/*.{jpeg,jpg,png,gif}'
+);
+const story = stories.find((story) => story.id === id);
+if (!story) {
+  throw new Error(`Success story with id ${id} not found`);
+}
+const coverImage =
+  images[`/src/assets/success-stories/covers/${story.data.cover}`];
+if (!coverImage) {
+  throw new Error(
+    `Cover image for success story ${story.data.title} not found`
+  );
+}
 ---
 
 <!doctype html>
@@ -21,64 +34,87 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <meta name="description" property="og:description" content={description} />
-    <meta name="image" property="og:image" content={coverUrl} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta name="twitter:image" content={coverUrl} />
-    <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:type" content="article" />
-    <meta property="article:section" content="Technology" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="description" property="og:description" content={description} />
+    <meta property="og:image" content={coverUrl} />
+    <meta name="image" property="og:image" content={coverUrl} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="shorebird.dev" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={coverUrl} />
     <meta name="twitter:site" content="@shorebirddev" />
 
     <script
       defer
       data-domain="shorebird.dev"
-      src="https://plausible.io/js/script.tagged-events.js"></script>
-    <title>{`${title}`}</title>
+      src="https://plausible.io/js/script.js"></script>
+    <title>{title}</title>
   </head>
   <body>
     <Navbar client:load />
     <section
       class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
     >
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16">
-        <div class="flex flex-col gap-6 items-start">
+      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-16">
+        <div class="flex flex-col items-start gap-6">
           <h2 class="text-4xl font-medium">{title}</h2>
           <span class="text-text-2">
             {description}
           </span>
-          <Spacer />
-          <span class="text-text-2">
-            Highlights
-          </span>
-          <Spacer />
+          <div class="flex flex-col gap-4">
+            <span class="text-text-2 text-xl">Highlights</span>
             {
-            highlights.map((highlight, index) => (
-              <ul>
-                <li>{highlight}</li>
-              </ul>
-            ))
-          }
+              highlights.map((highlight: string, index: number) => (
+                <p>{highlight}</p>
+              ))
+            }
+          </div>
         </div>
         <div class="col-span-2">
-          <!--<Image src={images[storyImg]} alt={title} />-->
-          <div class="text-text-2">
-            <article
-              class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
-            >
-              <slot />
-            </article>
-          </div>
+          <article class="prose prose-invert mx-auto w-full py-9 lg:py-0">
+            <Image
+              src={coverImage()}
+              alt={`${story.data.title} cover image`}
+              class="w-full rounded-xl object-cover"
+            />
+            <div class="flex flex-row items-center justify-between">
+              <span
+                class="text-text-2 m-0! flex flex-row items-center justify-center gap-1 text-sm"
+                ><ClockCountdown className="inline size-4" /> 1 min read</span
+              >
+              <span class="text-text-2 m-0! text-sm"
+                ><FormattedDate date={date} /></span
+              >
+            </div>
+            <slot />
+            <BlogCallout />
+          </article>
         </div>
       </div>
     </section>
-
     <Footer />
+    <style is:global>
+      .prose {
+        max-width: 80ch;
+      }
+    </style>
   </body>
 </html>

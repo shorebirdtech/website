@@ -13,7 +13,7 @@ function BlogCallout() {
       <a
         target="_blank"
         href={config.consoleUrl}
-        className="plausible-event-name=Blog+Footer+Get+Started+Button+Clicked mt-4 inline-block w-full px-4 py-2"
+        className="mt-4 inline-block w-full px-4 py-2"
       >
         <GradientOutlineButton className="w-full">
           <Ellipse /> Get started
