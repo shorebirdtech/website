@@ -1,10 +1,7 @@
 ---
-import { ArrowRight } from '@phosphor-icons/react';
-import { Button, GradientOutlineButton } from '@/components/ui/button';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { PricingCalculator } from '@/components/pricing-calculator';
+import PricingPlans from '@/components/pricing-plans.astro';
 import { Spacer } from '@/components/spacer';
-import config from '@/config';
 ---
 
 <section
@@ -19,87 +16,6 @@ import config from '@/config';
     <Spacer className="h-10" />
     <PricingCalculator client:load />
     <Spacer className="h-10" />
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Free</p>
-            <p class="text-text-2 text-sm">
-              Made for hobbyists, small apps, and demos.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">Free</h2>
-          <a href={config.consoleUrl}>
-            <GradientOutlineButton className="w-full px-8 font-light">
-              Get started <ArrowRight className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Pro</p>
-            <p class="text-text-2 text-sm">
-              Sized for usage from medium sized apps with scalable pricing.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">
-            $20 <span class="text-text-2 text-sm">/month</span>
-          </h2>
-          <a href={config.proPlanCheckoutUrl}>
-            <GradientOutlineButton className="w-full px-8 font-light">
-              Buy now <ArrowRight className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Business</p>
-            <p class="text-text-2 text-sm">
-              Great for large apps with advanced needs.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">
-            $400 <span class="text-text-2 text-sm">/month</span>
-          </h2>
-          <a href={config.businessPlanCheckoutUrl}>
-            <GradientOutlineButton className="w-full px-8 font-light">
-              Buy now <ArrowRight className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Enterprise</p>
-            <p class="text-text-2 text-sm">
-              Build a custom plan for enterprise apps & needs.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">Custom</h2>
-          <a href={config.contactSales}>
-            <Button variant="outline" className="w-full px-8 font-light">
-              Book a demo <ArrowRight className="size-5" weight="bold" />
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-    </div>
+    <PricingPlans />
   </div>
 </section>

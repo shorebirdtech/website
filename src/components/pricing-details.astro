@@ -1,6 +1,5 @@
 ---
 import config from '@/config';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import {
   Table,
   TableBody,
@@ -9,8 +8,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { GradientOutlineButton } from '@/components/ui/button';
 import { PricingCalculator } from '@/components/pricing-calculator';
+import PricingPlans from '@/components/pricing-plans.astro';
 import { PricingFaq } from '@/components/pricing-faq';
 import { Spacer } from '@/components/spacer';
 import { ArrowRight, Check, Minus } from '@phosphor-icons/react';
@@ -139,7 +139,7 @@ const plans = [
   class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
   <div class="flex flex-col items-center justify-center">
-    <h1 class="text-text-1 text-5xl text-center font-semibold">
+    <h1 class="text-text-1 text-center text-5xl font-semibold">
       Pay as you <span class="gradient-text">grow</span>
     </h1>
     <Spacer />
@@ -149,88 +149,7 @@ const plans = [
     <Spacer className="h-10" />
     <PricingCalculator hideCTA={true} client:load />
     <Spacer className="h-10" />
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Free</p>
-            <p class="text-text-2 text-sm">
-              Made for hobbyists, small apps, and demos.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">Free</h2>
-          <a href={config.consoleUrl}>
-            <GradientOutlineButton className="w-full px-8 font-light">
-              Get started <ArrowRight className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Pro</p>
-            <p class="text-text-2 text-sm">
-              Sized for usage from medium sized apps with scalable pricing.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">
-            $20 <span class="text-text-2 text-sm">/month</span>
-          </h2>
-          <a href={config.proPlanCheckoutUrl}>
-            <GradientOutlineButton className="w-full px-8 font-light">
-              Buy now <ArrowRight className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Business</p>
-            <p class="text-text-2 text-sm">
-              Great for large apps with advanced needs.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">
-            $400 <span class="text-text-2 text-sm">/month</span>
-          </h2>
-          <a href={config.businessPlanCheckoutUrl}>
-            <GradientOutlineButton className="w-full px-8 font-light">
-              Buy now <ArrowRight className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <div class="flex w-full flex-col gap-3">
-            <p class="text-lg">Enterprise</p>
-            <p class="text-text-2 text-sm">
-              Build a custom plan for enterprise apps & needs.
-            </p>
-            <hr class="text-border-1 mt-2" />
-          </div>
-        </CardHeader>
-        <CardContent className="flex w-full flex-col justify-center gap-6">
-          <h2 class="text-text-1 text-3xl">Custom</h2>
-          <a href={config.contactSales}>
-            <Button variant="outline" className="w-full px-8 font-light">
-              Book a demo <ArrowRight className="size-5" weight="bold" />
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-    </div>
+    <PricingPlans />
     <div class="w-full pt-18">
       <Table>
         <TableHeader>
