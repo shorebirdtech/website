@@ -70,10 +70,10 @@ function PricingCalculator({ hideCTA }: { hideCTA?: boolean }) {
         <div className="py-6">
           <Slider
             min={0}
-            max={2000001}
+            max={2001000}
             step={1000}
-            value={[activeUsers]}
-            onValueChange={(value) => setActiveUsers(value[0])}
+            value={activeUsers}
+            onValueChange={(value, _, __) => setActiveUsers(value as number)}
           />
         </div>
         <div>
