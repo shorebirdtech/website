@@ -7,47 +7,46 @@ import { Image } from 'astro:assets';
 import { Spacer } from '@/components/spacer';
 import FormattedDate from '@/components/blog/formatted-date.astro';
 
-const sortByDate = (a: any, b: any) =>
-  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
-const posts = (await getCollection('blog')).sort(sortByDate).slice(0, 2);
+const stories = await getCollection('successStories');
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif}'
+  '/src/assets/success-stories/covers/*.{jpeg,jpg,png,gif}'
 );
-const postImages = posts.map((post) => {
-  const cover = post.data.cover;
-  if (images[`/src/assets/blog/covers/${cover}`]) {
-    return images[`/src/assets/blog/covers/${cover}`];
+const coverImages = stories.map((story) => {
+  const cover = story.data.cover;
+  if (images[`/src/assets/success-stories/covers/${cover}`]) {
+    return images[`/src/assets/success-stories/covers/${cover}`];
   }
-  throw new Error(`Cover image for blog ${post.data.title} not found`);
+  throw new Error(`Cover image for story ${story.data.title} not found`);
 });
 ---
 
 <section
   class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
-  <h1 class="text-text-1 text-4xl">Read our blog</h1>
+  <h1 class="text-text-1 text-4xl">Success stories</h1>
   <Spacer />
   <div
     class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
   >
     <h3 class="text-text-2 text-lg lg:text-center">
-      Stay up-to-date on all things Shorebird.
+      See how everyone from small teams to global companies are using Shorebird
+      today.
     </h3>
-    <a href="/blog" class="w-full md:w-auto">
+    <a href="/success-stories" class="w-full md:w-auto">
       <Button variant="outline" className="w-full font-light">
-        View all blogs <ArrowRight className="size-5" weight="bold" />
+        View all stories <ArrowRight className="size-5" weight="bold" />
       </Button>
     </a>
   </div>
   <Spacer className="h-10" />
   <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
     {
-      posts.map((post, index) => (
-        <a href={`/blog/${post.id}`} class="hover:no-underline">
+      stories.map((post, index) => (
+        <a href={`/success-stories/${post.id}`} class="hover:no-underline">
           <Card className="gap-2 py-0 cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1">
             <CardHeader className="p-0">
               <Image
-                src={postImages[index]()}
+                src={coverImages[index]()}
                 alt={`${post.data.title} cover image`}
                 class="w-full rounded-xl object-cover"
               />

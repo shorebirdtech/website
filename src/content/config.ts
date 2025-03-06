@@ -23,6 +23,18 @@ const blogCollection = defineCollection({
   }),
 });
 
+const successStoriesCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/success-stories' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    cover: z.string(),
+    date: z.date().transform(convertDateToUTC),
+    highlights: z.array(z.string()),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
+  successStories: successStoriesCollection,
 };
