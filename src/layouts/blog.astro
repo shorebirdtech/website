@@ -102,13 +102,13 @@ const authors: Record<string, Author> = {
     >
       <h1 class="m-0! text-center">{title}</h1>
       <Spacer className="h-4" />
-      <div class="flex flex-row w-full items-center justify-center gap-2">
+      <div class="flex w-full flex-row items-center justify-center gap-2">
         <Image
           src={authors[author].avatar}
           alt={authors[author].name}
           class="m-0! size-6 rounded-full"
         />
-        <p class="m-0! text-text-1 text-sm">
+        <p class="text-text-1 m-0! text-sm">
           <a
             class="no-underline hover:underline"
             href={`https://github.com/${authors[author].github}`}
@@ -116,15 +116,15 @@ const authors: Record<string, Author> = {
             {authors[author].name}
           </a>
         </p>
-        <p class="text-sm m-0!">{authors[author].title}</p>
+        <p class="m-0! text-sm">{authors[author].title}</p>
       </div>
       <Spacer className="h-12" />
-      <div class="flex flex-row justify-between items-center">
+      <div class="flex flex-row items-center justify-between">
         <span
-          class="flex flex-row m-0! gap-1 text-sm text-text-2 justify-center items-center"
+          class="text-text-2 m-0! flex flex-row items-center justify-center gap-1 text-sm"
           ><ClockCountdown className="inline size-4" /> 1 min read</span
         >
-        <span class="m-0! text-sm text-text-2"
+        <span class="text-text-2 m-0! text-sm"
           ><FormattedDate date={date} /></span
         >
       </div>
