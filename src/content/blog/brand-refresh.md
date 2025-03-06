@@ -15,8 +15,8 @@ We're super excited to announce the next iteration of [shorebird.dev](https://sh
 
 ![New Site Design](../../assets/blog/brand-refresh/new-site-design.png)
 
-Our previous site was very minimal and tailored specifically for the developer
-audience. One of our main goals for the site redesign was to clearly (and more visually)
+Our previous site was very minimal and tailored specifically for developers. One
+of our main goals for the site redesign was to clearly (and more visually)
 communicate the value of Shorebird's solutions, making it more accessible to
 both developers and non-technical folks.
 
