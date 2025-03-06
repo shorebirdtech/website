@@ -1,0 +1,91 @@
+---
+import config from '@/config';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { ArrowRight } from '@phosphor-icons/react';
+---
+
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+  <Card>
+    <CardHeader>
+      <div class="flex w-full flex-col gap-3">
+        <p class="text-lg">Free</p>
+        <p class="text-text-2 text-sm">
+          The perfect plan to kickstart your projects, no credit card needed.
+        </p>
+        <hr class="text-border-1 mt-2" />
+      </div>
+    </CardHeader>
+    <CardContent className="flex w-full flex-col justify-center gap-6">
+      <h2 class="text-text-1 text-3xl">
+        $0 <span class="text-text-2 text-sm">/month</span>
+      </h2>
+      <a href={config.consoleUrl}>
+        <GradientOutlineButton className="w-full px-8 font-light">
+          Get started <ArrowRight className="size-5" weight="bold" />
+        </GradientOutlineButton>
+      </a>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader>
+      <div class="flex w-full flex-col gap-3">
+        <p class="text-lg">Pro</p>
+        <p class="text-text-2 text-sm">
+          The usage, features, and support you need to go to production.
+        </p>
+        <hr class="text-border-1 mt-2" />
+      </div>
+    </CardHeader>
+    <CardContent className="flex w-full flex-col justify-center gap-6">
+      <h2 class="text-text-1 text-3xl">
+        $20 <span class="text-text-2 text-sm">/month</span>
+      </h2>
+      <a href={config.proPlanCheckoutUrl}>
+        <GradientOutlineButton className="w-full px-8 font-light">
+          Buy now <ArrowRight className="size-5" weight="bold" />
+        </GradientOutlineButton>
+      </a>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader>
+      <div class="flex w-full flex-col gap-3">
+        <p class="text-lg">Business</p>
+        <p class="text-text-2 text-sm">
+          Higher usage limits, advanced features, and dedicated support.
+        </p>
+        <hr class="text-border-1 mt-2" />
+      </div>
+    </CardHeader>
+    <CardContent className="flex w-full flex-col justify-center gap-6">
+      <h2 class="text-text-1 text-3xl">
+        $400 <span class="text-text-2 text-sm">/month</span>
+      </h2>
+      <a href={config.businessPlanCheckoutUrl}>
+        <GradientOutlineButton className="w-full px-8 font-light">
+          Buy now <ArrowRight className="size-5" weight="bold" />
+        </GradientOutlineButton>
+      </a>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader>
+      <div class="flex w-full flex-col gap-3">
+        <p class="text-lg">Enterprise</p>
+        <p class="text-text-2 text-sm">
+          Custom requirements, volume discounts, and more.
+        </p>
+        <hr class="text-border-1 mt-2" />
+      </div>
+    </CardHeader>
+    <CardContent className="flex w-full flex-col justify-center gap-6">
+      <h2 class="text-text-1 text-3xl">Custom</h2>
+      <a href={config.contactSales}>
+        <Button variant="outline" className="w-full px-8 font-light">
+          Book a demo <ArrowRight className="size-5" weight="bold" />
+        </Button>
+      </a>
+    </CardContent>
+  </Card>
+</div>
