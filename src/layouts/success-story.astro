@@ -1,17 +1,18 @@
 ---
 import '@/styles/global.css';
-import { BlogCallout } from '@/components/blog/blog-callout';
-import { ClockCountdown } from '@phosphor-icons/react';
 import { Image } from 'astro:assets';
 import { Navbar } from '@/components/navbar';
 import { Spacer } from '@/components/spacer';
 import Footer from '@/components/footer.astro';
-const { title, description, cover } = Astro.props;
+
+const images = import.meta.glob("../assets/success-stories/*");
+
+const storyImg = Astro.props.cover;
+const title = Astro.props.title;
+const description = Astro.props.description;
+
 const coverUrl = new URL('/blog/open-graph.png', Astro.url.origin);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
-
-
-
 ---
 
 <!doctype html>
@@ -42,27 +43,33 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <Navbar client:load />
-    <article
-      class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
+    <section
+      class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
     >
-      <h1 class="text-text-1 text-center text-5xl md:px-24 lg:px-40 font-semibold">{title}</h1>
-      <h2 class="text-3xl">{description}</h2>
-      <Spacer className="h-4" />
-      <img src="/assets/success-stories/{cover}" class="m-0!" />
-      <div class="flex flex-row w-full items-center justify-center gap-2">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16">
+        <div class="flex flex-col gap-6 items-start">
+          <h2 class="text-4xl font-medium">{title}</h2>
+          <span class="text-text-2">
+            {description}
+          </span>
+          <Spacer />
+          <span class="text-text-2">
+          Hightlights
+          </span>
+        </div>
+        <div class="col-span-2">
+          <!--<Image src={images[storyImg]} alt={title} />-->
+          <div class="text-text-2">
+            <article
+              class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
+            >
+              <slot />
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      </div>
-      <Spacer className="h-12" />
-      <div class="text-text-2">
-        <slot />
-      </div>
-      <BlogCallout />
-    </article>
     <Footer />
-    <style is:global>
-      .prose {
-        max-width: 80ch;
-      }
-    </style>
   </body>
 </html>
