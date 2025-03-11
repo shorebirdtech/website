@@ -1,0 +1,133 @@
+---
+import MainLayout from '@/layouts/main.astro';
+import Banner from '@/components/banner.astro';
+import { Navbar } from '@/components/navbar';
+
+import Footer from '@/components/footer.astro';
+import { Spacer } from '@/components/spacer';
+import { Image } from 'astro:assets';
+import Releases from '@/assets/features/releases.png';
+
+const features = [
+  {
+    title: 'Ship Faster',
+    description: 'Get fixes in customers hands on your schedule.',
+    details: [
+      'Traditional mobile app updates require navigating app store approvals and waiting for users to update manually. This process can be slow and frustrating, especially when a critical issue arises that needs an immediate fix.',
+      'With Shorebird, you gain an alternative path that allows you to deploy updates quickly and seamlessly. Instead of bundling small fixes into large, time-consuming updates, you can push critical bug fixes and performance improvements instantly. This significantly reduces downtime, enhances user satisfaction, and helps maintain a flawless app experience. Whether it\'s a typo, a crashing bug, or an urgent security patch, Shorebird ensures your users always have the best version of your app.'
+    ],
+    //icon: Lightning,
+  },
+  {
+    title: 'Roll Back',
+    description: 'Roll back any updates with the click of a button.',
+    details: [
+      'A first in the mobile industry: true rollback capability for app deployments. Mistakes happen, but they shouldn\'t be permanent.',
+      'Shorebird allows you to instantly revert to a previous version of your app if a new update introduces issues. This means you can experiment with confidence, knowing that if something goes wrong, you can quickly restore the last working version without requiring users to take action.'
+    ],
+    //icon: ArrowCounterClockwise,
+  },
+  {
+    title: 'Hyper-frequent Updates',
+    description: 'Ship multiple times a day with confidence.',
+    details: [
+      'The traditional mobile app store model forces developers to bundle changes, submit updates, and wait for approvals, which can slow down iteration and innovation.',
+      'With Shorebird, you gain the ability to deploy updates in real time without these bottlenecks, giving you full control over your app’s evolution. Developers can iterate quickly, fix issues immediately, and push updates as frequently as needed without forcing users to manually download new versions. This means you can respond to feedback faster, A/B test features in real-time, and create a more agile development cycle.'
+    ],
+    //icon: ClockCountdown,
+  },
+  {
+    title: 'Level Playing Field',
+    description:
+      'Provide a consistent experience to all users, regardless of platform.',
+      details: [
+        'In industries like gaming, marketplaces, and social apps, fragmented versions create user friction and inconsistent experiences. When users operate on different versions, it can cause compatibility issues, unexpected bugs, and customer support challenges.',
+        'Shorebird eliminates these issues by providing a mechanism to ensure all users always have the latest code. With real-time updates, you can reduce discrepancies, enhance feature adoption, and provide a smooth, reliable experience for your entire user base. This ensures consistency across your ecosystem, reducing support headaches and fostering a more cohesive and predictable user journey.'
+      ],
+    //icon: CheckCircle,
+  },
+  {
+    title: 'Seasonal Events',
+    description: 'Instantly deploy updates during critical times of the year.',
+    details: [
+      'Peak usage times require peak performance. Whether you\'re running a holiday sale, a major gaming event, or a live-streamed experience, the last thing you want is an unexpected bug disrupting user engagement.',
+      'Store submission processes make it risky to push changes during crucial periods, but Shorebird allows you to no longer worry about these delays by deploying fixes instantly. This means you can resolve last-minute issues, optimize performance on the fly, and ensure a seamless experience during high-traffic events, keeping your users engaged and satisfied.'
+    ],
+    //icon: CalendarDots,
+  },
+  {
+    title: 'White-label',
+    description: 'Ship to thousands of apps directly from your CI.',
+    details: [
+      'Effortlessly deploy fixes to many applications without the hassle of individual store submissions. If you operate a white-label platform that serves numerous branded applications, keeping them all updated can be a logistical nightmare.',
+      'Shorebird streamlines this process by allowing you to push updates simultaneously across all white-labeled apps. Instead of individually submitting updates for each app, you can automate deployments at scale, ensuring consistency, reducing workload, and maintaining compliance. This is especially valuable for SaaS platforms, franchises, and large enterprises that manage multiple branded experiences.'
+    ],
+    //icon: Tag,
+  },
+  {
+    title: 'Seamless Collaboration',
+    description:
+      'Provide instant access to the latest iterations to all collaborators.',
+      details: [
+        'No more waiting for collaborators to update their apps. Whether you\'re working with designers, testers, or product managers, Shorebird ensures everyone has immediate access to the latest version.',
+        'Delays in updating can slow down feedback loops and hinder development progress, but with Shorebird, updates are pushed in real-time, allowing teams to collaborate efficiently and iterate faster. This means quicker design refinements, streamlined QA processes, and better team alignment.'
+      ],
+    //icon: Queue,
+  },
+  {
+    title: 'Peace of Mind',
+    description: 'Rest easy knowing a fix is just a click away.',
+    details: [
+      'Always have an update path available. When an issue arises, waiting for an app store approval can feel like an eternity.',
+      'Shorebird gives you the confidence to move quickly, ensuring that any unexpected problem can be addressed immediately. Whether it’s a critical bug, security vulnerability, or compliance requirement, you can push updates instantly and rest assured that your app remains functional and up to date.'
+    ],
+    //icon: HandPeace,
+  },
+];
+---
+
+<MainLayout title="Features">
+  <Banner />
+  <Navbar client:load />
+  <section
+    class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  >
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="text-text-1 text-center text-5xl font-semibold">
+        Put your <span class="gradient-text">release workflow</span> back in your hands
+      </h1>
+      <Spacer />
+      <h3 class="text-text-2 text-center text-lg">
+        App updates on your terms without the red tape. Keep your app running smoothly for your user base in minutes, not days for deployments.
+      </h3>
+      <Spacer className="h-10" />
+    </div>
+  </section>
+  <section
+    class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  >
+  {
+    features.map((feature) => (
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="flex flex-col justify-center gap-6 lg:items-start">
+          <h2 class="text-4xl font-medium">{feature.title}</h2>
+          <span class="text-text-2">
+            {feature.description}
+          </span>
+          
+          {
+            feature.details.map((featureDetail) => (
+            <span>
+              {featureDetail}
+            </span>
+            ))
+          }
+        </div>
+        <Image class="rounded-xl" src={Releases} alt="Patch multiple releases" />
+      </div>
+    ))
+  }
+    
+  </section>
+  <Footer />
+</MainLayout>
