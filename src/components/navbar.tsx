@@ -31,6 +31,7 @@ function Navbar() {
             </a>
             <div className="hidden flex-row gap-4 md:flex lg:gap-8">
               <a href="/pricing">Pricing</a>
+              <a href="/features">Features</a>
               <a href="/about">About</a>
               <a href="/blog">Blog</a>
               <a href={config.docsUrl}>Docs</a>

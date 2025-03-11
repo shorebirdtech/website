@@ -107,7 +107,7 @@ const features = [
     class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
   >
   {
-    features.map((feature) => (
+    features.map((feature, index) => (      
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div class="flex flex-col justify-center gap-6 lg:items-start">
           <h2 class="text-4xl font-medium">{feature.title}</h2>
