@@ -1,7 +1,7 @@
 ---
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Image } from 'astro:assets';
-import { Spacer } from '@/components/spacer';
+import { Spacer } from '@/components/ui/spacer';
 import JasonRai from '@/assets/testimonials/jason-rai.png';
 import RenanAraujo from '@/assets/testimonials/renan-araujo.png';
 import TahaTesser from '@/assets/testimonials/taha-tesser.png';
@@ -41,19 +41,22 @@ const testimonials = [
   {
     name: 'Scott MacDougall',
     title: 'Head of Engineering, Mobile at Kijiji',
-    quote: 'Over time, we have realized that we could Shorebird a fix quickly to all of our users, which made an enormous impact on customer satisfaction. That’s now become a default phrase in our development team, as it’s a great tool to have in our toolbox.',
-    image: ScottMacDougall
+    quote:
+      'Over time, we have realized that we could Shorebird a fix quickly to all of our users, which made an enormous impact on customer satisfaction. That’s now become a default phrase in our development team, as it’s a great tool to have in our toolbox.',
+    image: ScottMacDougall,
   },
   {
     name: 'David Sylvester-Paul',
     title: 'CTO at EasySpend',
-    quote: 'In the past, we often wondered how other highly rated mobile apps updated their features without forcing users to manually download an update from the store. That curiosity led us to Shorebird, and ever since, we have implemented it in all of our applications.',
-    image: DavidPaul
-  }
+    quote:
+      'In the past, we often wondered how other highly rated mobile apps updated their features without forcing users to manually download an update from the store. That curiosity led us to Shorebird, and ever since, we have implemented it in all of our applications.',
+    image: DavidPaul,
+  },
 ];
 ---
 
 <section
+  id="testimonials"
   class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
   <div class="flex flex-col items-center justify-center">

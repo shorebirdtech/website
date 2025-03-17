@@ -1,5 +1,5 @@
 ---
-import { Marquee } from '@/components/marquee';
+import { Marquee } from '@/components/ui/marquee';
 import ApnaKlubLogo from '@/assets/brands/apna-klub.png';
 import ChaiLogo from '@/assets/brands/chai.png';
 import FlashCoLogo from '@/assets/brands/flash-co.png';
@@ -59,14 +59,17 @@ const brands = [
 ];
 ---
 
-<section class="mx-auto flex w-full flex-col xl:w-10/12 2xl:w-[1280px]">
-  <div class="flex items-center m-auto justify-center flex-row">
+<section
+  id="brands"
+  class="mx-auto flex w-full flex-col xl:w-10/12 2xl:w-[1280px]"
+>
+  <div class="m-auto flex flex-row items-center justify-center">
     <Marquee fade={true} direction="left" reverse={false}>
       {
         brands.map((brand) => (
           <div
             id={brand.name}
-            class="flex max-w-32 items-center contrast grayscale saturate justify-center py-6"
+            class="contrast saturate flex max-w-32 items-center justify-center py-6 grayscale"
           >
             <a target="_blank" href={brand.url}>
               <img src={brand.image.src} alt={brand.name} />

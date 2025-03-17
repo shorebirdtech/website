@@ -1,8 +1,8 @@
 ---
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { FlutterLogo } from '@/components/flutter-logo';
+import { FlutterLogo } from '@/components/logos/flutter-logo';
 import { Image } from 'astro:assets';
-import { Spacer } from '@/components/spacer';
+import { Spacer } from '@/components/ui/spacer';
 import AllPlatforms from '@/assets/features/all-platforms.png';
 import AnyCode from '@/assets/features/any-code.png';
 import Compliance from '@/assets/features/compliance.png';
@@ -37,6 +37,7 @@ const features = [
 ---
 
 <section
+  id="solution"
   class="mx-auto flex w-10/12 flex-col items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
 >
   <div
