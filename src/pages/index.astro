@@ -1,24 +1,24 @@
 ---
 import config from '@/config';
-import { Navbar } from '@/components/navbar';
+import { Navbar } from '@/components/ui/navbar';
 import { ScrollToTopButton } from '@/components/scroll-to-top-button';
 import Banner from '@/components/banner.astro';
-import BlogOverview from '@/components/blog-overview.astro';
-import SuccessStoriesOverview from '@/components/success-stories-overview.astro';
-import Brands from '@/components/brands.astro';
-import Callout from '@/components/callout.astro';
-import DeliverInstantUpdates from '@/components/deliver-instant-updates.astro';
-import FAQ from '@/components/faq.astro';
-import Features from '@/components/features.astro';
-import Footer from '@/components/footer.astro';
-import ForDevelopers from '@/components/for-developers.astro';
-import ForTeams from '@/components/for-teams.astro';
-import Hero from '@/components/hero.astro';
+import BlogOverview from '@/components/home/blog-overview.astro';
+import SuccessStoriesOverview from '@/components/home/success-stories-overview.astro';
+import Brands from '@/components/home/brands.astro';
+import Callout from '@/components/home/callout.astro';
+import Solution from '@/components/home/solution.astro';
+import FAQ from '@/components/home/faq.astro';
+import Features from '@/components/home/features.astro';
+import Footer from '@/components/ui/footer.astro';
+import ForDevelopers from '@/components/home/for-developers.astro';
+import ForTeams from '@/components/home/for-teams.astro';
+import Hero from '@/components/home/hero.astro';
 import MainLayout from '@/layouts/main.astro';
-import PricingOverview from '@/components/pricing-overview.astro';
-import Problem from '@/components/problem.astro';
-import Resources from '@/components/resources.astro';
-import Testimonials from '@/components/testimonials.astro';
+import PricingOverview from '@/components/home/pricing-overview.astro';
+import Problem from '@/components/home/problem.astro';
+import Resources from '@/components/home/resources.astro';
+import Testimonials from '@/components/home/testimonials.astro';
 ---
 
 <MainLayout title={config.app}>
@@ -27,7 +27,7 @@ import Testimonials from '@/components/testimonials.astro';
   <Hero />
   <Brands />
   <Problem />
-  <DeliverInstantUpdates />
+  <Solution />
   <ForTeams />
   <ForDevelopers />
   <Features />

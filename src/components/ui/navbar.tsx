@@ -1,6 +1,6 @@
-import { DiscordLogo } from '@/components/discord-logo';
-import { GitHubLogo } from '@/components/github-logo';
-import { LogoFull } from '@/components/logo-full';
+import { DiscordLogo } from '@/components/logos/discord-logo';
+import { GitHubLogo } from '@/components/logos/github-logo';
+import { LogoFull } from '@/components/logos/logo-full';
 import { Button, GradientOutlineButton } from '@/components/ui/button';
 import {
   Sheet,

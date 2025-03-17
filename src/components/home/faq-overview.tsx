@@ -1,4 +1,4 @@
-import { Markdown } from '@/components/markdown';
+import { Markdown } from '@/components/ui/markdown';
 import {
   Accordion,
   AccordionContent,

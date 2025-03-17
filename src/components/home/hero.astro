@@ -1,21 +1,24 @@
 ---
 import { Button, GradientOutlineButton } from '@/components/ui/button';
 import { Ellipse } from '@/components/ellipse';
-import { FlutterLogo } from '@/components/flutter-logo';
-import { HeroMotion } from '@/components/hero-motion';
-import { Spacer } from '@/components/spacer';
+import { FlutterLogo } from '@/components/logos/flutter-logo';
+import { HeroMotion } from '@/components/home/hero-motion';
+import { Spacer } from '@/components/ui/spacer';
 import config from '@/config';
 ---
 
-<section class="mx-auto flex w-11/12 flex-col py-5 xl:w-10/12 2xl:w-[1280px]">
+<section
+  id="hero"
+  class="mx-auto flex w-11/12 flex-col py-5 xl:w-10/12 2xl:w-[1280px]"
+>
   <div class="flex flex-col justify-center gap-4 lg:flex-row">
     <div
       class="flex shrink-0 flex-col items-center justify-center gap-1 lg:items-start"
     >
-      <h1 class="text-6xl font-medium text-center">
+      <h1 class="text-center text-6xl font-medium">
         Ship <span class="gradient-text">fast.</span>
       </h1>
-      <h1 class="text-text-3 text-6xl font-medium line-through text-center">
+      <h1 class="text-text-3 text-center text-6xl font-medium line-through">
         Break things.
       </h1>
       <Spacer />
@@ -42,7 +45,7 @@ import config from '@/config';
         </a>
       </div>
     </div>
-    <div class="flex w-auto h-auto lg:w-[777px] lg:h-[663px]">
+    <div class="flex h-auto w-auto lg:h-[663px] lg:w-[777px]">
       <HeroMotion client:only />
     </div>
   </div>
