@@ -2,10 +2,10 @@
 import '@/styles/global.css';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import { BlogCallout } from '@/components/blog-callout';
-import { Navbar } from '@/components/navbar';
-import Footer from '@/components/footer.astro';
-import FormattedDate from '@/components/formatted-date.astro';
+import { BlogCallout } from '@/components/blog/blog-callout';
+import { Navbar } from '@/components/ui/navbar';
+import Footer from '@/components/ui/footer.astro';
+import FormattedDate from '@/components/blog/formatted-date.astro';
 import { ClockCountdown } from '@phosphor-icons/react';
 
 const { title, date, description, highlights, id } = Astro.props;
