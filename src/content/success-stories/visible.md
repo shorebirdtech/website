@@ -39,7 +39,7 @@ Visible integrated Shorebird into their CI pipeline to streamline their releases
 
 “Shorebird was a life changer for us,” said Roszkowski. “Now we can iterate much quicker. From the developer perspective, it’s really seamless. We created a set of CI jobs that makes publishing and patching with Shorebird incredibly easy.”
 
-By having Shorebird as a new tool in their development toolbox the Engineering team at Visibile is able to stay ahead of their customers needs. By combining their analytics that they already track in Mixpanel and Intercom they are able to react to customer issues in as close to real time as possible and allows them to see the delivery and adoption of their patches.
+By having Shorebird as a new tool in their development toolbox the Engineering team at Visible is able to stay ahead of their customers needs. By combining their analytics that they already track in Mixpanel and Intercom they are able to react to customer issues in as close to real time as possible and allows them to see the delivery and adoption of their patches.
 
 > Shorebird helped us tremendously and became a verb in our team—‘let’s shorebird it’ is a normal term for us now.
 >
@@ -47,6 +47,6 @@ By having Shorebird as a new tool in their development toolbox the Engineering t
 
 **The Impact: Speed, Reliability, and Empathy-Driven Development**
 
-With Shorebird, Visible can move at the pace of its mission. They’re delivering updates faster, addressing user needs more responsively, and avoiding the unnecessary delays around review cycles for simple fixes. That agility is essential when building tools for a medically underserved population—especially when many team members are also patients themselves.
+With Shorebird, Visible can move at the pace of its mission. They’re delivering updates faster, addressing user needs more responsively, and avoiding the unnecessary delays around review cycles for simple fixes. That agility is essential when building tools for a medically under served population—especially when many team members are also patients themselves.
 
 Visible is more than a health tech startup—it’s a movement. And Shorebird helps them keep that movement in motion.
