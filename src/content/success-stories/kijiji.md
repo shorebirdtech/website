@@ -24,8 +24,7 @@ Transitioning from a native app to Flutter three years ago, Kijiji’s revamped 
 Kijiji integrated Shorebird into their development & deployment process, primarily for emergency "break glass" situations and critical fixes. The integration was straightforward, thanks to a collaboration with the Shorebird team. Kijiji’s implementation of Shorebird enabled a smooth deployment process for all of their mobile products. Shorebird empowered Kijiji to address user feedback and bugs swiftly, without disrupting their phased rollout schedule.
 
 > Our overall percentage of users running a buggy release is much lower after incorporating Shorebird into our deployment process. Rather than waiting on the stores to approve a release, and an operating system to actually execute an update, we can know that our fixes are rolling out the second that we push the button to deploy in Shorebird.
-
-Scott MacDougall, Head of Engineering, Mobile at Kijiji
+> - Scott MacDougall, Head of Engineering, Mobile at Kijiji
 
 **Results**
 
@@ -34,5 +33,4 @@ The adoption of Shorebird has been transformative for Kijiji’s mobile app team
 Kijiji's partnership with Shorebird exemplifies how strategic tech integration can safeguard revenue and improve user satisfaction. As Kijiji looks to the future, Shorebird remains a pivotal part of their development strategy, ensuring they can continue to serve their vast user base effectively.
 
 > Over time, we have realized that we could Shorebird a fix quickly to all of our users, which made an enormous impact on customer satisfaction. That’s now become a default phrase in our development team, as it’s a great tool to have in our toolbox.
-
-Scott MacDougall, Head of Engineering, Mobile at Kijiji
+> - Scott MacDougall, Head of Engineering, Mobile at Kijiji

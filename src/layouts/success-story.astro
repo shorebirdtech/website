@@ -96,15 +96,6 @@ if (!coverImage) {
               alt={`${story.data.title} cover image`}
               class="w-full rounded-xl object-cover"
             />
-            <div class="flex flex-row items-center justify-between">
-              <span
-                class="text-text-2 m-0! flex flex-row items-center justify-center gap-1 text-sm"
-                ><ClockCountdown className="inline size-4" />1 min read</span
-              >
-              <span class="text-text-2 m-0! text-sm"
-                ><FormattedDate date={date} /></span
-              >
-            </div>
             <slot />
             <BlogCallout />
           </article>
