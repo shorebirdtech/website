@@ -33,6 +33,11 @@ Beyond new features, quick bug fixes were equally important—especially in a he
 >
 > - Dominik Roszkowski, Lead Engineer at Visible
 
+<p align="center">
+  <img alt="Light" src="/src/assets/success-stories/visible-screenshot.png" align="left" style="max-width: 50%;max-height:100%;padding-right:10px;">
+  <img alt="Dark" src="/src/assets/success-stories/visible-screenshot-2.png" align="right" style="max-width: 50%;max-height:100%;padding-left:10px;">
+</p>
+
 **The Solution: Seamless Over-the-Air Updates with Shorebird**
 
 Visible integrated Shorebird into their CI pipeline to streamline their releases. With Shorebird, the team can push updates—both features and fixes—directly to users, bypassing the delays of traditional app store deployments.
