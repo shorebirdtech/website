@@ -7,7 +7,9 @@ import { Image } from 'astro:assets';
 import { Spacer } from '@/components/ui/spacer';
 import FormattedDate from '@/components/blog/formatted-date.astro';
 
-const stories = await getCollection('successStories');
+const sortByDate = (a: any, b: any) =>
+  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
+const stories = (await getCollection('successStories')).sort(sortByDate).slice(0, 2);
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/success-stories/covers/*.{jpeg,jpg,png,gif}'
 );
