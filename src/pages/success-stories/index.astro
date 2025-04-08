@@ -72,14 +72,11 @@ const coverImages = stories.map((story) => {
               </CardHeader>
               <CardContent className="p-4">
                 <div class="flex flex-col gap-3">
-                  <p class="text-text-2 text-sm">
-                    <FormattedDate date={story.data.date} />
-                  </p>
                   <h1 class="text-text-1 text-xl hover:underline">
                     {story.data.title}
                   </h1>
                 </div>
-                <p class="text-text-2 overflow-hidden text-ellipsis whitespace-nowrap">
+                <p class="text-text-2 text-ellipsis line-clamp-2">
                   {story.data.description}
                 </p>
               </CardContent>
