@@ -1,7 +1,7 @@
 ---
 title: EasySpend
 description: Next generation fintech companies turn to cloud services like Shorebird to help them easily deploy and stay up to date across all of their platforms.
-date: 2025-03-06
+date: 2025-03-07
 cover: easyspend-cover.png
 highlights: ['Over 1,000 monthly active users']
 ---
