@@ -24,7 +24,7 @@ Junglee Games discovered Shorebird shortly after its launch and quickly integrat
 
 > With Shorebird OTA updates we are sure that if a user is launching the app that they have the latest patch and fixes available.
 >
-> - Bhavesh Patel, Engineering Manager at Junglee Games
+> - Bhavesh Patel, Associate Director of Engineering at Junglee Games
 
 With Shorebird, Junglee Games achieved remarkable improvements in their deployment strategy:
 
@@ -36,4 +36,4 @@ Junglee Games’ partnership with Shorebird has been a game changer for their pr
 
 > After integrating Shorebird into our release flow we no longer were afraid to experiment with features in our application. If an issue arises you can just rollback a patch easily instead of having to rush an emergency fix out the door.
 >
-> - Bhavesh Patel, Engineering Manager at Junglee Games
+> - Bhavesh Patel, Associate Director of Engineering at Junglee Games
