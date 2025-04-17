@@ -33,10 +33,11 @@ devices worldwide are constantly checking for new patches whereas our console
 and CLI usage is orders of magnitude lower.
 
 Just to give you a sense of the discrepancy, over the last 2 weeks, the update
-check endpoints received ~1k reqs/sec whereas customer facing endpoints received
-~0.5 reqs/sec. Furthermore, the traffic to our updater endpoints is very bursty
-in nature, we normally see rapid spikes of up to 10k req/sec for a period of
-several minutes, whereas traffic to customer facing APIs is relatively consistent.
+check endpoints received ~1k requests/sec whereas customer facing endpoints
+received ~0.5 requests/sec. Furthermore, the traffic to our updater endpoints
+comes in bursts. We regularly see sudden spikes of up to 10k requests/sec for a
+period of several minutes, whereas traffic to customer facing APIs is relatively
+consistent.
 
 ![traffic comparison](../../assets/blog/improved-cloud-infra/traffic-comparison.png)
 
@@ -44,12 +45,12 @@ We were able to gracefully decouple the two services without any downtime or
 outages with the help of external application load balancers and some benefits
 we immediately noticed included:
 
-- Reduced blast radius: any performance degredation in update check endpoints
+- Reduced blast radius: any performance degradation in update check endpoints
   would not affect the customer facing services and vice-versa
 - Reduced costs: we were able to cut costs by selectively upgrading hardware and
   scaling for updater facing services
 - Improved visibility: monitoring and alerting was much easier because we were
-  able to have more granualar alerts and health checks for each service
+  able to have more granular alerts and health checks for each service
 
 You can clearly see the difference in request volume and CPU usage of our
 customer facing services before and after we decoupled them from the updater
@@ -63,7 +64,7 @@ Once we had split out the updater endpoints from the customer facing endpoints
 it became clear that we still had some work to do in terms of optimizing
 response times for patch checks. We already had a layer of caching in place but
 it wasn't enough at the current scale. Our patch check service was frequently
-having to invalidate the cache and perform expensive comutations to determine
+having to invalidate the cache and perform expensive computations to determine
 things like whether an account had exceeded the patch install limit for the
 respective billing period or what the latest available patch was for a given
 app.
