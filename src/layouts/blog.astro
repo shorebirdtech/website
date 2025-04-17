@@ -13,7 +13,14 @@ import FormattedDate from '@/components/blog/formatted-date.astro';
 import shorebirdHeadshot from '@/assets/blog/headshots/shorebird-headshot.png';
 import tomHeadshot from '@/assets/blog/headshots/tom-headshot.jpg';
 
-const { title, description, author, date } = Astro.props;
+function getReadingTime(wordCount: number) {
+  const wordsPerMinute = 250;
+  const numMinutes = Math.max(Math.ceil(wordCount / wordsPerMinute), 1);
+  return `${numMinutes} min read`;
+}
+
+const { title, description, author, date, wordCount } = Astro.props;
+const readingTime = getReadingTime(wordCount);
 const coverUrl = new URL('/blog/open-graph.png', Astro.url.origin);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
@@ -137,7 +144,7 @@ const authors: Record<string, Author> = {
       <div class="flex flex-row items-center justify-between">
         <span
           class="text-text-2 m-0! flex flex-row items-center justify-center gap-1 text-sm"
-          ><ClockCountdown className="inline size-4" />1 min read</span
+          ><ClockCountdown className="inline size-4" />{readingTime}</span
         >
         <span class="text-text-2 m-0! text-sm"
           ><FormattedDate date={date} /></span
