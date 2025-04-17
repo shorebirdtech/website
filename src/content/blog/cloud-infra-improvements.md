@@ -84,8 +84,8 @@ request volume to 99% of our request completing in <300ms.
 ## Introducing a Time Series Database
 
 The last major area I want to touch on is our insights tab within the Shorebird
-console. It was responsible for surfacing graphs of patch install and download
-usage over time.
+console. It is responsible for surfacing patch install and download metrics over
+time.
 
 ![insights tab](../../assets/blog/improved-cloud-infra/insights-tab.png)
 
