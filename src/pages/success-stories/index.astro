@@ -9,7 +9,6 @@ import { Image } from 'astro:assets';
 import { Navbar } from '@/components/ui/navbar';
 import { ScrollToTopButton } from '@/components/scroll-to-top-button';
 import { Spacer } from '@/components/ui/spacer';
-import Banner from '@/components/banner.astro';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import type { ImageMetadata } from 'astro';
@@ -33,7 +32,6 @@ const coverImages = stories.map((story) => {
 ---
 
 <MainLayout title="Success Stories">
-  <Banner />
   <Navbar client:load />
   <section
     class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"

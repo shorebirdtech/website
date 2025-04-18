@@ -2,7 +2,6 @@
 import config from '@/config';
 import { Navbar } from '@/components/ui/navbar';
 import { ScrollToTopButton } from '@/components/scroll-to-top-button';
-import Banner from '@/components/banner.astro';
 import BlogOverview from '@/components/home/blog-overview.astro';
 import SuccessStoriesOverview from '@/components/home/success-stories-overview.astro';
 import Brands from '@/components/home/brands.astro';
@@ -22,7 +21,6 @@ import Testimonials from '@/components/home/testimonials.astro';
 ---
 
 <MainLayout title={config.app}>
-  <Banner />
   <Navbar client:load />
   <Hero />
   <Brands />

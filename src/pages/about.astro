@@ -9,7 +9,6 @@ import { LinkedInLogo } from '@/components/logos/linkedin-logo';
 import { Markdown } from '@/components/ui/markdown';
 import { Navbar } from '@/components/ui/navbar';
 import { Spacer } from '@/components/ui/spacer';
-import Banner from '@/components/banner.astro';
 import bryanHeadshot from '@/assets/team/bryan-headshot.png';
 import config from '@/config';
 import ericHeadshot from '@/assets/team/eric-headshot.jpeg';
@@ -51,7 +50,6 @@ const team = [
 ---
 
 <MainLayout title="About Us">
-  <Banner />
   <Navbar client:load />
   <section
     class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
