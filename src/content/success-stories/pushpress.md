@@ -1,5 +1,5 @@
 ---
-title: Push Press
+title: PushPress
 description: Delivering updates faster across 1,500+ white-labeled apps powered by Shorebird
 date: 2025-04-21
 cover: pushpress-cover.png
