@@ -20,5 +20,7 @@ export default defineConfig({
     '/security': 'https://handbook.shorebird.dev/security',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/newsletter-signup': config.newsletterSubscriptionUrl,
+    // Initially tweeted the wrong link:
+    '/success-stories/pushpress/': '/success-stories/push-press',
   },
 });
