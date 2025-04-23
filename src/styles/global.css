@@ -106,6 +106,9 @@
   --color-card-foreground: var(--text-1);
   --color-accent-primary-1: var(--accent-primary-1);
 
+  --color-segmented-control-background: var(--surface-2);
+  --color-segmented-control-foreground: var(--surface-3);
+
   --color-button-primary-text: var(--button-primary-text);
   --color-button-secondary-text: var(--button-secondary-text);
 
