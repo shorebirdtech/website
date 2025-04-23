@@ -44,7 +44,8 @@ With our new yearly option, these issues are a thing of the past.
 - **Overages stay in your control** Just like with our monthly plans, you’re
   always in charge of overages. They start at $0 by default—so you’ll never get
   hit with surprise bills. If you need to go beyond your yearly patch allotment,
-  you can enable spending limits when you’re ready.
+  you can enable spending limits when you’re ready and they will be billed
+  monthly only as needed.
 
 ## Who’s This For?
 
