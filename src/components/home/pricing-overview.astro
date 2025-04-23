@@ -1,6 +1,6 @@
 ---
 import { PricingCalculator } from '@/components/pricing/pricing-calculator';
-import PricingPlans from '@/components/pricing/pricing-plans.astro';
+import { PricingPlans } from '@/components/pricing/pricing-plans';
 import { Spacer } from '@/components/ui/spacer';
 ---
 
@@ -17,6 +17,6 @@ import { Spacer } from '@/components/ui/spacer';
     <Spacer className="h-10" />
     <PricingCalculator client:load />
     <Spacer className="h-10" />
-    <PricingPlans />
+    <PricingPlans client:load />
   </div>
 </section>
