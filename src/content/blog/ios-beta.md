@@ -20,19 +20,19 @@ stable version of Flutter (`3.16.9`).
 
 ## 🚀 Get Started
 
-Get started now with our [Quick Start
-Guide](https://docs.shorebird.dev/guides/code_push_quickstart) and join the
-Shorebird community on [Discord](https://discord.gg/shorebird)!
+Get started now with our
+[Quick Start Guide](https://docs.shorebird.dev/guides/code_push_quickstart) and
+join the Shorebird community on [Discord](https://discord.gg/shorebird)!
 
 ## 🚦 Status
 
 Code Push for iOS is now beta and safe for production apps. If you've been
 waiting to try Shorebird until there was stable iOS support, now is the time!
 
-If you encounter any problems, [please file an
-issue](https://github.com/shorebirdtech/shorebird/issues/new/choose) or reach
-out over [Discord](https://discord.gg/shorebird) we will work with you to
-address it immediately!
+If you encounter any problems,
+[please file an issue](https://github.com/shorebirdtech/shorebird/issues/new/choose)
+or reach out over [Discord](https://discord.gg/shorebird) we will work with you
+to address it immediately!
 
 ## 🔥 iOS improvements from alpha
 
@@ -60,9 +60,9 @@ patched and unpatched.
 
 ## 🐦 Try Shorebird
 
-Please [try adding Shorebird to your
-app](https://docs.shorebird.dev/guides/code_push_quickstart) on iOS and let us
-know what you think!
+Please
+[try adding Shorebird to your app](https://docs.shorebird.dev/guides/code_push_quickstart)
+on iOS and let us know what you think!
 
 See you on [Discord](https://discord.gg/shorebird) 👋
 

@@ -11,7 +11,8 @@ We're very excited to announce that we've been working with the folks at
 directly integrated into Codemagic's CI/CD 🥳
 
 You can configure release and patch workflows directly within Codemagic's UI
-allowing you to integrate Code Push into your Flutter app with just a few clicks ✨
+allowing you to integrate Code Push into your Flutter app with just a few clicks
+✨
 
 Watch our full walkthrough below ↓
 

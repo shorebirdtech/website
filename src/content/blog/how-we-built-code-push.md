@@ -1,32 +1,34 @@
 ---
 title: How we built Flutter code push
 author: eseidel
-description: Walk through of the changes made to Dart and Flutter in order to make code push work.
+description:
+  Walk through of the changes made to Dart and Flutter in order to make code
+  push work.
 date: 2024-05-17
 cover: how-we-built-code-push-cover.png
 ---
 
 One of the most common questions we get, is "how does Shorebird work?". This
 article describes some of the changes we made to Dart and Flutter in order to
-make code push work. If you have more questions, [send us an
-email](mailto:contact@shorebird.dev) or [ask on
-Discord](https://discord.gg/shorebird) and we’ll be happy to answer them or
-include them in a future article.
+make code push work. If you have more questions,
+[send us an email](mailto:contact@shorebird.dev) or
+[ask on Discord](https://discord.gg/shorebird) and we’ll be happy to answer them
+or include them in a future article.
 
 ## Code Push
 
 Code push, sometimes called "over the air updates", is a way of updating
 application code in production so that all your users are always running the
-latest code – just like how a web application works. [Code push for
-Flutter](https://github.com/flutter/flutter/issues/14330) is one of the top 50
-most upvoted issues across all of GitHub. Code push is a helpful tool to allow
-developers to push small updates to their applications without having to force
-all your users to download a new version of your app.
+latest code – just like how a web application works.
+[Code push for Flutter](https://github.com/flutter/flutter/issues/14330) is one
+of the top 50 most upvoted issues across all of GitHub. Code push is a helpful
+tool to allow developers to push small updates to their applications without
+having to force all your users to download a new version of your app.
 
 This blog takes a closer look at how we built a custom Dart toolchain and
 runtime to make apps updatable in production. For more information on the
-architecture of Shorebird Code Push, [check out our
-docs](https://docs.shorebird.dev/architecture/).
+architecture of Shorebird Code Push,
+[check out our docs](https://docs.shorebird.dev/architecture/).
 
 ## How Does Code Push Work?
 
@@ -66,8 +68,8 @@ not use Dart’s JIT. Instead we use a custom interpreter we built. An
 [interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)>) is code
 that is used to execute logic from source code directly, without "compiling" it
 (translating it to machine code). This is important in the context of updates,
-because use of an interpreter is required by [Apple’s developer
-agreement](https://developer.apple.com/support/terms/apple-developer-program-license-agreement/#b331)
+because use of an interpreter is required by
+[Apple’s developer agreement](https://developer.apple.com/support/terms/apple-developer-program-license-agreement/#b331)
 when updating applications. Dart did not have a production-ready interpreter,
 but was designed in such a way that adding one was possible, so we did.
 
@@ -97,8 +99,8 @@ enabled what Shorebird has done.
 Functions within a JIT runtime need to be aware they could have different
 compiled representations (e.g. one simple compile and one later optimized
 compile for the same function). Shorebird takes advantage of this quirk of
-Dart’s architecture to insert a new interpreter as an alternative mechanism
-for a function to use to execute. This allows us to effectively replace parts of
+Dart’s architecture to insert a new interpreter as an alternative mechanism for
+a function to use to execute. This allows us to effectively replace parts of
 your application at runtime without needing to compile new code on the device.
 
 ## Building a Custom Interpreter for Dart
@@ -126,11 +128,10 @@ was hard. To do this we invented a new phase of Dart compilation we called the
 "linker". The linker’s job is to analyze two (similar) Dart programs and find
 the maximal similarity between them and then decide what would be necessary to
 update in the first one in order to make it run like the second. We still have a
-[couple missing
-optimizations](https://github.com/shorebirdtech/shorebird/issues/1892) in this
-part of our system, but when it works well, developers see 99% of their code run
-on the CPU (even for large changes). Teaching the linker how to figure this out
-however required significant changes to Dart’s compiler toolchain.
+[couple missing optimizations](https://github.com/shorebirdtech/shorebird/issues/1892)
+in this part of our system, but when it works well, developers see 99% of their
+code run on the CPU (even for large changes). Teaching the linker how to figure
+this out however required significant changes to Dart’s compiler toolchain.
 
 ## Changes to Dart’s Toolchain
 
@@ -159,8 +160,8 @@ hold constant references used within that function (e.g. strings, integers).
 Dart’s AOT combines all of these "Object Pools" into one global object pool and
 updates all parts of your program accordingly to reference slots in this global
 object pool. Objects in this pool are referenced by index, so the string "hello"
-mentioned above might be at index 1234 in the object pool and thus code
-compiled for your program would reference "hello" by the number 1234.
+mentioned above might be at index 1234 in the object pool and thus code compiled
+for your program would reference "hello" by the number 1234.
 
 So why does this matter? This matters because when we’re trying to update your
 program if the new version of your code uses new constants (a very common
@@ -228,6 +229,6 @@ your app in only a few minutes – with _no code changes required_.
 Shorebird is free to use for small applications, with
 [pricing](https://shorebird.dev/#pricing) that scales with your business needs.
 
-Learn more at our website: https://shorebird.dev. See most of our source code
-on GitHub: https://github.com/shorebirdtech/shorebird. If you ever have
-questions, our entire team is on Discord: https://discord.gg/shorebird.
+Learn more at our website: https://shorebird.dev. See most of our source code on
+GitHub: https://github.com/shorebirdtech/shorebird. If you ever have questions,
+our entire team is on Discord: https://discord.gg/shorebird.

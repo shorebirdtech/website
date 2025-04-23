@@ -102,14 +102,14 @@ worldwide, royalty-free, license to use, reproduce, distribute, perform and
 display the Application and/or User Data solely for the purposes of providing
 the Services. You further agree Shorebird has the perpetual license and right to
 copy, analyze and use any of Your User Data solely in anonymized and aggregated
-format for Shorebird’s business purposes. For the avoidance of doubt,
-Shorebird will not; (i) reverse engineer, de-compile, translate, disassemble, or
-attempt to discover the source code of any Application or any part thereof; or
-(ii) distribute the Application or any part thereof to any third party other
-than solely as part of providing the Services. Shorebird does not pre-screen
-User Data, but Shorebird and its designee have the right (but not the
-obligation) in their sole discretion to refuse or remove any User Data that is
-available via the Services.
+format for Shorebird’s business purposes. For the avoidance of doubt, Shorebird
+will not; (i) reverse engineer, de-compile, translate, disassemble, or attempt
+to discover the source code of any Application or any part thereof; or (ii)
+distribute the Application or any part thereof to any third party other than
+solely as part of providing the Services. Shorebird does not pre-screen User
+Data, but Shorebird and its designee have the right (but not the obligation) in
+their sole discretion to refuse or remove any User Data that is available via
+the Services.
 
 ## E. License Grant and Restrictions While Using the Services.
 

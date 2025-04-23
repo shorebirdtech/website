@@ -7,8 +7,7 @@ cover: code-push-v2-cover.png
 ---
 
 We're excited to announce a pre-release of version 2.0 of the
-[`shorebird_code_push`
-package](https://pub.dev/packages/shorebird_code_push/versions/2.0.0-dev.2).
+[`shorebird_code_push` package](https://pub.dev/packages/shorebird_code_push/versions/2.0.0-dev.2).
 
 The `shorebird_code_push` package is a completely optional package that allows
 developers to customize the user experience of downloading and installing over
@@ -27,8 +26,8 @@ Some common use cases for using `shorebird_code_push` are:
 ## What's New
 
 We've taken some time to re-imagine what the Dart API should look like when
-interfacing with the Shorebird updater and we've re-written the Dart API from the
-ground up.
+interfacing with the Shorebird updater and we've re-written the Dart API from
+the ground up.
 
 The two main areas we focused on were:
 
@@ -112,7 +111,8 @@ enum UpdateStatus {
 
 ### Performing Updates
 
-Finally, if an update is available you can use the `update` API to perform the update.
+Finally, if an update is available you can use the `update` API to perform the
+update.
 
 ```dart
 Future<void> _downloadUpdate() async {
@@ -129,10 +129,11 @@ Future<void> _downloadUpdate() async {
 }
 ```
 
-If the update was unsuccessful, you can now programmatically catch the `UpdateException`
-and have much more information about what went wrong.
+If the update was unsuccessful, you can now programmatically catch the
+`UpdateException` and have much more information about what went wrong.
 
-The `UpdateException` includes a human-readable `message` describing the error as well as an `UpdateFailureReason`:
+The `UpdateException` includes a human-readable `message` describing the error
+as well as an `UpdateFailureReason`:
 
 ```dart
 /// The reason a call to [ShorebirdUpdater.update] failed.
@@ -151,10 +152,10 @@ enum UpdateFailureReason {
 }
 ```
 
-To see the latest version in action, check out the [Shorebird Code Push
-Example](https://github.com/shorebirdtech/updater/tree/main/shorebird_code_push/example)
-or the [Flutter & Friends Conference
-App](https://github.com/felangel/flutter_and_friends).
+To see the latest version in action, check out the
+[Shorebird Code Push Example](https://github.com/shorebirdtech/updater/tree/main/shorebird_code_push/example)
+or the
+[Flutter & Friends Conference App](https://github.com/felangel/flutter_and_friends).
 
 ## Get Started
 
@@ -168,5 +169,5 @@ dependencies:
 ```
 
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
-or improved, please [let us know by filing an
-issue](https://github.com/shorebirdtech/updater/issues/new).
+or improved, please
+[let us know by filing an issue](https://github.com/shorebirdtech/updater/issues/new).
