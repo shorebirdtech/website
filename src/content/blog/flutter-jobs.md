@@ -10,9 +10,9 @@ I founded the Flutter project 10 years ago, and led the Flutter team at Google
 for 8 years. I'm reasonably well known in the Flutter community and receive a
 lot of email from both job-seekers and job-posters regarding Flutter.
 
-I've also been a manager for a decade and can tell you, hiring is hard—from
-both sides. It's hard for companies to find candidates, and it's hard for
-candidates to find companies.
+I've also been a manager for a decade and can tell you, hiring is hard—from both
+sides. It's hard for companies to find candidates, and it's hard for candidates
+to find companies.
 
 This can be made extra-hard when trying to search for a subset of jobs which
 include a specific technology choice, like Flutter.
@@ -21,17 +21,17 @@ I generally try to dissuade both job-seekers and job-posters to search
 specifically for Flutter, under the belief that Flutter is a tool -- a means to
 an end -- and like other tools will come and go in popularity over time and what
 we all (ideally) focus on in our jobs is solving customer problems. As
-technologists, we learn whatever tools we need to do accomplish that
-goal including Flutter.
+technologists, we learn whatever tools we need to do accomplish that goal
+including Flutter.
 
 The difference is subtle, but I believe important. Most places that should be
 using Flutter may not know they should be using Flutter (because they haven't
-hired the person to make that choice yet). Similarly, many developers who will be
-successful with Flutter may not be using it yet, because they're using whatever
-technology is required by their current role to solve current problems.
+hired the person to make that choice yet). Similarly, many developers who will
+be successful with Flutter may not be using it yet, because they're using
+whatever technology is required by their current role to solve current problems.
 
-That said, people understandably search for and advertise for "flutter jobs"
-and so here are some tips I give to be successful with such.
+That said, people understandably search for and advertise for "flutter jobs" and
+so here are some tips I give to be successful with such.
 
 ### A as a Job Seeker
 
@@ -78,8 +78,8 @@ I've personally worked with, and can attest to being excellent:
 
 - https://hnhiring.com/ -- A site which aggregates "Who's hiring" posts from
   Hacker News.
-- https://job.zip/jobs/flutter -- Some job-aggregation startup, but
-  also the best technology-based jobs aggregator I've found.
+- https://job.zip/jobs/flutter -- Some job-aggregation startup, but also the
+  best technology-based jobs aggregator I've found.
 - LinkedIn. I've not found a lot of success personally on LinkedIn, but there is
   a lot of volume there.
 - Twitter. I (https://x.com/@_eseidel) post about jobs involving Flutter when
@@ -147,18 +147,18 @@ regardless of job outcome.
 
 #### Get Noticed
 
-This is related to having a portfolio, and cold out-reach, but a technique
-that has worked for me in finding jobs is simply doing something a company
-is already trying to do, just better. For example, you could re-build an app
-or a screen from an app, post it on GitHub and Tweet it (nicely) at the original
-company as a way of potentially catching attention both from the original
-company, or others in the Flutter community.
+This is related to having a portfolio, and cold out-reach, but a technique that
+has worked for me in finding jobs is simply doing something a company is already
+trying to do, just better. For example, you could re-build an app or a screen
+from an app, post it on GitHub and Tweet it (nicely) at the original company as
+a way of potentially catching attention both from the original company, or
+others in the Flutter community.
 
 From the company's perspective, if they're considering hiring, you've already
 dramatically de-risked yourself. You clearly want to work on what they're
 working on, and you have the skills to do it. So long as you were nice about
-your outreach, you're also demonstrating your communication ability and
-ability to present your self. Win, Win, Win.
+your outreach, you're also demonstrating your communication ability and ability
+to present your self. Win, Win, Win.
 
 As with earlier discussions, I would encourage you to engage in any such
 exercise _for you_. There is a low chance the company will be hiring at that
@@ -172,9 +172,9 @@ In terms of posting jobs, my suggestions are similar to the above:
 1. Mention Flutter. A lot of devs _want_ to work with Flutter, if you want to
    hire Flutter-aware devs or are at least considering Flutter as a possible
    technology, mention it.
-2. Get your job on the web. A publicly-accessible URL is key (and may be
-   legally required for some jobs), if you have that (and not buried behind
-   sign-in, etc.) others can share it.
+2. Get your job on the web. A publicly-accessible URL is key (and may be legally
+   required for some jobs), if you have that (and not buried behind sign-in,
+   etc.) others can share it.
 3. Get your network to share it! LinkedIn is great, but there are millions of
    Flutter devs, and most are not on LinkedIn. https://flutter.dev/community
    lists some Slack channels and Discord channels. You can also simply tweet at

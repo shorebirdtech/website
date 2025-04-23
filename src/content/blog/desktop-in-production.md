@@ -29,6 +29,6 @@ The patching mechanism for each of these platforms does not use a simulator, so
 there is no performance penalty when running patched code.
 
 If you’re using Flutter on desktop, we’d love to hear from you! Let us know if
-you run into any issues or have ideas for new features by creating a [new GitHub
-issue](https://github.com/shorebirdtech/shorebird/issues/new?template=Blank+issue).
+you run into any issues or have ideas for new features by creating a
+[new GitHub issue](https://github.com/shorebirdtech/shorebird/issues/new?template=Blank+issue).
 You can also reach us on [Discord](https://discord.gg/shorebird).

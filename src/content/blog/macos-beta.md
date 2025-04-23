@@ -27,5 +27,5 @@ shorebird patch macos --release-version=1.2.3+4
 
 As always, we want your feedback! We'd love for you to try this out and let us
 know what you think. Let us know if you run into any issues or have ideas for
-new features by [creating a new GitHub
-issue](https://github.com/shorebirdtech/shorebird/issues/new/choose)
+new features by
+[creating a new GitHub issue](https://github.com/shorebirdtech/shorebird/issues/new/choose)

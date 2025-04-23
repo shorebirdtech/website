@@ -18,13 +18,13 @@ can also see logs for release apps without needing to attach a debugger?
 
 All Android system output can be viewed using the
 [`logcat`](https://developer.android.com/tools/logcat) command line tool. You
-can try this out by connecting your Android device via USB and running `adb
-logcat` in your terminal.
+can try this out by connecting your Android device via USB and running
+`adb logcat` in your terminal.
 
 Note: adb will need to be on your path for this to work. If you see an error
-like `command not found: adb` or `'adb' is not recognized as an internal or
-external command`, you will need to add `adb` to your PATH. StackOverflow has
-good answers to help with this for
+like `command not found: adb` or
+`'adb' is not recognized as an internal or external command`, you will need to
+add `adb` to your PATH. StackOverflow has good answers to help with this for
 [macOS/Linux](https://stackoverflow.com/questions/10303639/adb-command-not-found)
 and
 [Windows](https://stackoverflow.com/questions/20564514/adb-is-not-recognized-as-an-internal-or-external-command-operable-program-or)

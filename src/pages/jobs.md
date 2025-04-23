@@ -27,8 +27,8 @@ very different from big companies and big teams.
 Working at a startup means:
 
 - Shipping. We ship 5 times a day, not 5 times a year.
-- (Growth)[https://www.paulgraham.com/growth.html]. We are trying to
-  grow quickly (revenues, customers, products, people, etc). Growth means
+- (Growth)[https://www.paulgraham.com/growth.html]. We are trying to grow
+  quickly (revenues, customers, products, people, etc). Growth means
   opportunity, variety and challenge.
 - Ambition. Hard work is needed and rewarded. Your colleagues are highly
   engaged, want to be here, want to work hard, and want to learn with and from
@@ -40,8 +40,8 @@ Working at a startup means:
   us is doing it. If you're going to do, you get to decide. Want to be our CDN
   expert or marketing expert or Dart compiler ninja? More than you could ever
   want to own, you will.
-- No layers. Direct access to customers. Direct access to management (the CEO
-  is the only manager). Nothing between you and direct action.
+- No layers. Direct access to customers. Direct access to management (the CEO is
+  the only manager). Nothing between you and direct action.
 - Few distractions. Engineers don't have meetings. There are no perf reviews. We
   show up and do.
 
@@ -62,9 +62,9 @@ I (and many others) tried to make the Web (PWAs, etc) solve "write once; run
 anywhere" a decade ago and failed. Hence we built Flutter to let Google and
 everyone write high-quality app experiences and have them go everywhere.
 
-Flutter is now the most popular solution for writing multi-platform apps. Over
-a million developers use Flutter every month, and growing. Flutter has proven
-that high-quality multi-platform is possible.
+Flutter is now the most popular solution for writing multi-platform apps. Over a
+million developers use Flutter every month, and growing. Flutter has proven that
+high-quality multi-platform is possible.
 
 However, still most apps don't use Flutter. And even some that do, sometimes
 struggle. Adopting Flutter can be challenging since the default offerings from
@@ -105,8 +105,8 @@ businesses behind them.
 
 ## Where we're at
 
-Shorebird incorporated January 2023. We've shipped our first product (code
-push) and now support around 2000 monthly active users, with about 300 paying
+Shorebird incorporated January 2023. We've shipped our first product (code push)
+and now support around 2000 monthly active users, with about 300 paying
 customers and strong growth. We raised several million dollars from a top-5 VC
 and great investors who care about our mission. We're not profitable yet, but
 have two years of cash on hand.
@@ -136,22 +136,22 @@ learning enterprise sales.
 
 The first hour or so every morning is spent working through the support queue
 which often results in small changes to the website, docs or code to avoid
-future customers hitting the same issues. The rest of the day is spent
-building. We have no meetings, no calendars, no perf reviews.
+future customers hitting the same issues. The rest of the day is spent building.
+We have no meetings, no calendars, no perf reviews.
 
 Most of the time we hang out on Discord video calls, but sometimes someone drops
-off to jam out to their music, get coffee or lunch, etc. We use the same
-Discord for private company chats and calls, private large-customer support
-channels, and our public community, which makes it very easy to talk to
-customers anytime we want to.
+off to jam out to their music, get coffee or lunch, etc. We use the same Discord
+for private company chats and calls, private large-customer support channels,
+and our public community, which makes it very easy to talk to customers anytime
+we want to.
 
 Engineers work across the whole stack. Our websites are in React (Astro), our
 backend and command-line tool are in Dart, our Database is postgres. We use
-Google Cloud, Redis and Cloudflare. We have our own fork of the Dart runtime
-and compiler (C++) and Flutter engine (C++) as well as an updater library (Rust)
-and a small Flutter package. Some of us prefer certain layers to others, but
-ideally you should want to work on most of the above and more as you help us add
-more products!
+Google Cloud, Redis and Cloudflare. We have our own fork of the Dart runtime and
+compiler (C++) and Flutter engine (C++) as well as an updater library (Rust) and
+a small Flutter package. Some of us prefer certain layers to others, but ideally
+you should want to work on most of the above and more as you help us add more
+products!
 
 3-4 times a year we all get together in person for a week. We occasionally
 attend meetups or fly to visit customers. Engineers aren't expected to attend
@@ -159,8 +159,8 @@ any meetings, Eric has several customer meetings a week (and sometimes per day).
 
 ## Learn more
 
-We're a default-public organization, we operate on a [public
-discord](https://discord.gg/shorebird), our
+We're a default-public organization, we operate on a
+[public discord](https://discord.gg/shorebird), our
 [source](https://github.com/shorebirdtech/) and
 [planning](https://github.com/orgs/shorebirdtech/projects) are public. We're an
 all remote, distributed team.
@@ -193,9 +193,9 @@ very much see what we're like without even needing to apply.
 # Founding Engineer
 
 We write the tools others will use to build Flutter apps, including the compiler
-used to build them and runtime used to execute them. The ideal candidate
-should have at least passing familiarity with the "lower" levels of our stack
-including using a systems-language (like C++) doing programming on mobile.
+used to build them and runtime used to execute them. The ideal candidate should
+have at least passing familiarity with the "lower" levels of our stack including
+using a systems-language (like C++) doing programming on mobile.
 
 ## Compensation
 
@@ -216,7 +216,8 @@ You
 - Live within in GMT-10 to GMT-3 (US timezones +/- 2)
 - Enjoy regularly learning/teaching yourself new skills
 - Want to work on a small, distributed team
-- Feel excited about our mission of making high-quality multi-platform the default
+- Feel excited about our mission of making high-quality multi-platform the
+  default
 - Like creating excellent developer experiences
 - Have experience building and shipping production software
 

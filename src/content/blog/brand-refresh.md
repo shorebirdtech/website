@@ -13,7 +13,8 @@ much-needed brand refresh!
 
 ### Redesigned Website
 
-We're super excited to announce the next iteration of [shorebird.dev](https://shorebird.dev) 🥳
+We're super excited to announce the next iteration of
+[shorebird.dev](https://shorebird.dev) 🥳
 
 ![New Site Design](../../assets/blog/brand-refresh/new-site-design.png)
 
@@ -27,10 +28,11 @@ non-technical folks.
 We also took this as an opportunity to refresh our logo. Our goal was to polish
 and simplify where possible while still maintaining the cute, playful sandpiper.
 
-_Fun Fact: Did you know the name Shorebird is the name of the street on which Flutter was created?_
+_Fun Fact: Did you know the name Shorebird is the name of the street on which
+Flutter was created?_
 
-![Refreshed Logo](../../assets/blog/brand-refresh/refreshed-logo.png)
-_Old Logo (left), Refreshed Logo (right)_
+![Refreshed Logo](../../assets/blog/brand-refresh/refreshed-logo.png) _Old Logo
+(left), Refreshed Logo (right)_
 
 We also revisited and adjusted our core brand assets including our typography,
 color palette, and more.

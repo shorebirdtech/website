@@ -6,13 +6,13 @@ date: 2024-09-25
 cover: development-workflow-cover.png
 ---
 
-Our customers have been asking for an opinionated development workflow
-which integrates Shorebird so that they can spend more time shipping and less
-time defining and building a release/patch pipeline that integrates Shorebird.
+Our customers have been asking for an opinionated development workflow which
+integrates Shorebird so that they can spend more time shipping and less time
+defining and building a release/patch pipeline that integrates Shorebird.
 
-We're excited to announce that we've put together a [development
-workflow guide](https://docs.shorebird.dev/guides/development-workflow) which
-includes:
+We're excited to announce that we've put together a
+[development workflow guide](https://docs.shorebird.dev/guides/development-workflow)
+which includes:
 
 - 🪵 Branching and tagging strategy
 - ✅ Automated continuous integration checks
