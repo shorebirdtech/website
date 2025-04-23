@@ -23,7 +23,7 @@ interface Feature {
 
 const monthlyFeatures: Feature[] = [
   {
-    title: 'Monthly Base Cost',
+    title: 'Base Cost',
     free: '$0',
     pro: '$20',
     business: '$400',
@@ -106,7 +106,7 @@ const monthlyFeatures: Feature[] = [
 
 const yearlyFeatures: Feature[] = [
   {
-    title: 'Yearly Base Cost',
+    title: 'Base Cost',
     free: '$0',
     pro: '$240',
     business: '$4,800',
@@ -121,8 +121,6 @@ const yearlyFeatures: Feature[] = [
   },
   {
     title: 'Overage Billing',
-    pro: '$1 per 2,500 installs',
-    business: '$1 per 2,500 installs',
     enterprise: 'Custom',
   },
   {
