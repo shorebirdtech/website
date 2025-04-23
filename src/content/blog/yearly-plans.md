@@ -39,14 +39,13 @@ With our new yearly option, these issues are a thing of the past.
   payment systems.
 - **Patches credited upfront.** You’ll receive your entire year’s worth of
   patches on day one. Use them when you need them—whether you’re shipping daily
-  or ramping up after a big launch. You can go beyond our typical monthly limits
-  without worrying about overages, as long as you stay within your annual total.
-  That means freedom to move fast when it matters most.
-- **Overages stay in your control** Just like with our monthly plans, you’re
-  always in charge of overages. They start at $0 by default—so you’ll never get
-  hit with surprise bills. If you need to go beyond your yearly patch allotment,
-  you can enable spending limits when you’re ready and they will be billed
-  monthly only as needed.
+  or ramping up after a big launch. You can go beyond our typical monthly
+  limits, as long as you stay within your new annual total. That means freedom
+  to move fast when it matters most.
+- **No overages, no surprises** With our yearly plans, what you pay upfront is
+  it. No surprise charges. This means you can scale your patch usage during busy
+  times and slow down during quieter periods all without worrying about trigging
+  unexpected fees.
 
 ## Who’s This For?
 
