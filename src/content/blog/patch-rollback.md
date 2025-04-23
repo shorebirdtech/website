@@ -16,16 +16,16 @@ and Google store policies._
 Shorebird already has many systems in place to make sure your patches are always
 improving your app for users. This includes providing you with
 [staging](https://docs.shorebird.dev/guides/staging-patches/) and testing
-facilities for your own QA, [on-device
-automatic-rollback](https://docs.shorebird.dev/architecture/) if a patch fails
-to load, and patch-install failure reporting. Until now, it has been possible to
-disable new installs of patches, or send new patches to users. Today, it’s now
-possible to issue global roll-backs of patches to all users.
+facilities for your own QA,
+[on-device automatic-rollback](https://docs.shorebird.dev/architecture/) if a
+patch fails to load, and patch-install failure reporting. Until now, it has been
+possible to disable new installs of patches, or send new patches to users.
+Today, it’s now possible to issue global roll-backs of patches to all users.
 
 Patches made with Shorebird Flutter 3.22.3 or later support global rollback.
-Rollbacks can be initiated from the [Shorebird
-Console](https://console.shorebird.dev/). See our [rollback
-docs](https://docs.shorebird.dev/code-push/rollback/) for more info.
+Rollbacks can be initiated from the
+[Shorebird Console](https://console.shorebird.dev/). See our
+[rollback docs](https://docs.shorebird.dev/code-push/rollback/) for more info.
 
 There is no charge for the use of the rollback service, since a rollback is a
 patch removal rather than install. When rolling back from one patch to another,

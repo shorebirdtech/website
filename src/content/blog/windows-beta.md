@@ -26,5 +26,5 @@ Windows support is in beta and only supports Windows x64 at this time. Let us
 know if you require Windows arm64 support.
 
 Try this out and let us know what you think. Let us know if you run into any
-issues or have ideas for new features by [creating a new GitHub
-issue](https://github.com/shorebirdtech/shorebird/issues/new/choose)
+issues or have ideas for new features by
+[creating a new GitHub issue](https://github.com/shorebirdtech/shorebird/issues/new/choose)

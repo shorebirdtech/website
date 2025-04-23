@@ -7,11 +7,11 @@ cover: dart-3.5-cover.png
 slug: 'dart-3.5.0'
 ---
 
-One of the big features of [Flutter
-3.24.0](https://medium.com/flutter/whats-new-in-flutter-3-24-6c040f87d1e4) is an
-upgrade to Dart 3.5.0, which comes with a whole bunch of [nice
-changes](https://medium.com/dartlang/dart-3-5-6ca36259fa2f). Unfortunately, like
-all software releases, it also came with some bugs.
+One of the big features of
+[Flutter 3.24.0](https://medium.com/flutter/whats-new-in-flutter-3-24-6c040f87d1e4)
+is an upgrade to Dart 3.5.0, which comes with a whole bunch of
+[nice changes](https://medium.com/dartlang/dart-3-5-6ca36259fa2f).
+Unfortunately, like all software releases, it also came with some bugs.
 
 We encountered some bugs when upgrading our projects at Shorebird and have
 listed the problems and workarounds we found here:

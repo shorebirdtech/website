@@ -1,7 +1,9 @@
 ---
 title: Improved Cloud Infrastructure
 author: felangel
-description: A deep dive into some of the recent backend infrastructure improvements we've made.
+description:
+  A deep dive into some of the recent backend infrastructure improvements we've
+  made.
 date: 2025-04-17
 cover: improved-cloud-infra-cover.png
 ---
@@ -76,9 +78,9 @@ topic, and various subscribers performing the expensive computations
 asynchronously and caching the results for the patch check service to consume
 directly.
 
-This dramatically reduced the latency and overall compute needed per update check
-request. We went from requests occasionally taking >1s during sudden spikes in
-request volume to 99% of our request completing in <300ms.
+This dramatically reduced the latency and overall compute needed per update
+check request. We went from requests occasionally taking >1s during sudden
+spikes in request volume to 99% of our request completing in <300ms.
 
 ![patch check latency improvements](../../assets/blog/improved-cloud-infra/patch-check-latency-improvements.png)
 
@@ -108,8 +110,8 @@ reduced pageload time by up to 10x.
 ![insights page loads](../../assets/blog/improved-cloud-infra/insights-page-loads.png)
 
 We also adjusted all other jobs which previously read directly from BigQuery to
-instead query the time series database and observed significant improvements
-in the time to complete each job.
+instead query the time series database and observed significant improvements in
+the time to complete each job.
 
 | Job             |   Before   |   After   |
 | --------------- | :--------: | :-------: |
@@ -123,5 +125,5 @@ That's all for now!
 These infrastructure improvements are already rolled out to all Shorebird
 customers around the world. 🥳
 
-If you're new to Shorebird and want to get started, head over to the [Shorebird
-Console](https://console.shorebird.dev).
+If you're new to Shorebird and want to get started, head over to the
+[Shorebird Console](https://console.shorebird.dev).

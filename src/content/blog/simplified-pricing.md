@@ -33,19 +33,18 @@ want, and only get billed for what you use.
 
 ![Pro Plan](../../assets/blog/simplified-pricing/ProPlan.png)
 
-Customers can control their spending limit from the [Shorebird
-Console](https://console.shorebird.dev). Your spending limit defaults to $0 and
-we will automatically notify you via email once when you’re close to your limit
-and again when you’ve reached your limit.
+Customers can control their spending limit from the
+[Shorebird Console](https://console.shorebird.dev). Your spending limit defaults
+to $0 and we will automatically notify you via email once when you’re close to
+your limit and again when you’ve reached your limit.
 
 ![Usage Limit](../../assets/blog/simplified-pricing/UsageLimit.png)
 
 Existing Shorebird customers with “Hobby” or “Teams” will see no changes. You
 can keep your plan as it exists today, or you’re welcome to transition to this
-new usage-based billing at any time on the [Shorebird
-Console](https://console.shorebird.dev).
+new usage-based billing at any time on the
+[Shorebird Console](https://console.shorebird.dev).
 
 We made a bunch of improvements behind the scenes to make this happen. If you
 have any questions about billing, or would like to purchase Shorebird in a
-different way, please don’t hesitate to reach
-out at contact@shorebird.dev.
+different way, please don’t hesitate to reach out at contact@shorebird.dev.

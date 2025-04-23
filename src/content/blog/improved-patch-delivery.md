@@ -1,7 +1,8 @@
 ---
 title: Improved Patch Delivery
 author: felangel
-description: Announcing improved global patch delivery, availability, and performance.
+description:
+  Announcing improved global patch delivery, availability, and performance.
 date: 2024-09-05
 cover: improved-patch-delivery-cover.png
 ---
