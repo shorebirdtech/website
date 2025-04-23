@@ -100,7 +100,6 @@ const monthlyFeatures: Feature[] = [
     enterprise: 'Custom',
   },
   { title: 'Invoice Billing', enterprise: '✓' },
-  { title: 'Annual Billing', enterprise: '✓' },
   { title: 'SAML', enterprise: 'Custom' },
 ];
 
@@ -181,7 +180,6 @@ const yearlyFeatures: Feature[] = [
     enterprise: 'Custom',
   },
   { title: 'Invoice Billing', enterprise: '✓' },
-  { title: 'Annual Billing', enterprise: '✓' },
   { title: 'SAML', enterprise: 'Custom' },
 ];
 

@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'Can I pay annually?',
     answer:
-      'Customers using committed use discounts can choose to pay annually.  We do not offer annual billing for self-service plans.',
+      'Yes, all paid plans support annual billing in addition to monthly billing.',
   },
   {
     question: 'What payment methods do you accept?',
