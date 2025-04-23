@@ -8,8 +8,8 @@ date: 2025-04-23
 cover: 'yearly-plans-cover.png'
 ---
 
-We’re excited to roll out Yearly Plans for Shorebird designed to give you more
-flexibility and predictability as you build and scale your apps.
+We’re excited to roll out Yearly Plans for Shorebird. These plans are designed
+to give you more flexibility and predictability as you build and scale your apps.
 
 ## Why Yearly Plans?
 
