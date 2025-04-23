@@ -2,7 +2,7 @@
 title: Introducing Yearly Plans
 author: shorebirdtech
 description:
-  We’re excited to roll out Yearly Plans for Shorebird—designed to give you more
+  We’re excited to roll out Yearly Plans for Shorebird designed to give you more
   flexibility and predictability as you build and scale your apps.
 date: 2025-04-23
 cover: 'yearly-plans-cover.png'
