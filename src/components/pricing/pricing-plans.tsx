@@ -24,9 +24,9 @@ interface Feature {
 const monthlyFeatures: Feature[] = [
   {
     title: 'Base Cost',
-    free: '$0',
-    pro: '$20',
-    business: '$400',
+    free: '$0/month',
+    pro: '$20/month',
+    business: '$400/month',
     enterprise: 'Custom',
   },
   {
@@ -106,9 +106,9 @@ const monthlyFeatures: Feature[] = [
 const yearlyFeatures: Feature[] = [
   {
     title: 'Base Cost',
-    free: '$0',
-    pro: '$240',
-    business: '$4,800',
+    free: '$0/year',
+    pro: '$240/year',
+    business: '$4,800/year',
     enterprise: 'Custom',
   },
   {

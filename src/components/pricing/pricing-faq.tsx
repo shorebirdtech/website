@@ -32,8 +32,7 @@ const faqs = [
   },
   {
     question: 'Can I pay annually?',
-    answer:
-      'Yes, all paid plans support annual billing in addition to monthly billing.',
+    answer: 'Yes, all paid plans support annual or monthly billing.',
   },
   {
     question: 'What payment methods do you accept?',
