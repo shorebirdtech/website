@@ -1,7 +1,7 @@
 ---
 title: Solides
 description:
-  Hotfixes in minutes, not weeks. Learn how Solides transformed their mobile
+  Hot fixes in minutes, not weeks. Learn how Solides transformed their mobile
   delivery with Shorebird.
 date: 2025-05-01
 cover:
@@ -24,10 +24,10 @@ better.
 But as Solides grew, so did the pressure on their mobile release process. With
 hundreds of thousands of users relying on their flagship Solides App — a
 comprehensive “super app” for feedback, evaluations, and goal tracking — the
-traditional pace of app store reviews simply couldn’t keep up. Critical hotfixes
-could take days, sometimes even weeks, to reach users. In the fast-moving world
-of HR, that kind of delay wasn’t just inconvenient — it risked damaging user
-trust.
+traditional pace of app store reviews simply couldn’t keep up. Critical hot
+fixes could take days, sometimes even weeks, to reach users. In the fast-moving
+world of HR, that kind of delay wasn’t just inconvenient — it risked damaging
+user trust.
 
 “We were growing quickly, but the app release control over app stores was
 becoming slower and more complex,” said Solides’ Engineering Coordinator Pedro
