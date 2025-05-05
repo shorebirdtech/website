@@ -20,7 +20,7 @@ forefront of the mobile gaming sector. To maintain their competitive edge,
 Junglee Games turned to Shorebird to enhance their app deployment and patching
 capabilities.
 
-**Moving fast for changing requirements**
+## Moving fast for changing requirements
 
 Facing the challenge of rapid feature deployment and bug fixes, especially
 during high-traffic events like the Indian Premier League (IPL), Junglee Games
@@ -36,7 +36,7 @@ level playing field, regardless of the platform or whether their device has
 automatically updated their app that day. This made the waiting game with the
 review even harder for them to manage.
 
-**Shorebird Integration and Results**
+## Shorebird Integration and Results
 
 Junglee Games discovered Shorebird shortly after its launch and quickly
 integrated it into their Android platform. This integration enabled them to

@@ -31,7 +31,7 @@ team at EasySpend.
 >
 > - David Sylvester-Paul, CTO at EasySpend
 
-**A Fully Remote Flutter Workflow**
+## A Fully Remote Flutter Workflow
 
 By using services including Shorebird, David Sylvester-Paul, CTO at EasySpend,
 and his team have been able to deploy their Flutter application to iOS devices
@@ -40,7 +40,7 @@ capabilities alongside other cloud-based tools, they bypassed the traditional
 Apple development constraints and successfully shipped their app across all the
 platforms that their customers are using.
 
-**Seamless Multi-Platform Deployment**
+## Seamless Multi-Platform Deployment
 
 By spending the engineering effort to integrate Codemagic with Shorebird they
 were able to create a mobile CI/CD pipeline that automatically pushes new

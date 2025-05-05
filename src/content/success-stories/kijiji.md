@@ -23,7 +23,7 @@ user base, from power users to occasional buyers. With a large, dedicated user
 base, it’s critical that Kijiji’s website and mobile app remain user-friendly
 and maintain a high level of quality.
 
-**Transition to Flutter**
+## Transition to Flutter
 
 Transitioning from a native app to Flutter three years ago, Kijiji’s revamped
 app launch went well, but the need for rapid and reliable updates became
@@ -33,7 +33,7 @@ rigid release schedule with phased rollouts added complexity to addressing these
 urgent needs. This led the engineering team to look for a new tool to help solve
 their issues.
 
-**Using Shorebird**
+## Using Shorebird
 
 Kijiji integrated Shorebird into their development & deployment process,
 primarily for emergency "break glass" situations and critical fixes. The
@@ -50,7 +50,7 @@ feedback and bugs swiftly, without disrupting their phased rollout schedule.
 >
 > - Scott MacDougall, Head of Engineering, Mobile at Kijiji
 
-**Results**
+## Results
 
 The adoption of Shorebird has been transformative for Kijiji’s mobile app teams.
 The platform acts as a "code push insurance policy," allowing for rapid

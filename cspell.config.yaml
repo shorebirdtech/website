@@ -2,6 +2,7 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: '0.2'
 ignorePaths: ['dist', 'node_modules']
 words:
+  - afonso
   - angelov
   - apna
   - araujo
@@ -43,6 +44,7 @@ words:
   - logcat
   - macdougall
   - mailchimp
+  - mairramer
   - nubank
   - oltman
   - onclick
@@ -57,6 +59,8 @@ words:
   - shorebirddev
   - shorebirdtech
   - signups
+  - solides
+  - souza
   - superlist
   - taha
   - tesser
@@ -66,4 +70,5 @@ words:
   - tsconfigs
   - upvoted
   - userbase
+  - veloso
   - xlink
