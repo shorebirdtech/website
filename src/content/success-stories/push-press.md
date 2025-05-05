@@ -28,7 +28,7 @@ white-labeled mobile apps, each customized for individual fitness
 businesses—PushPress was spending too much time maintaining and updating their
 Branded Apps. That all changed when they integrated Shorebird.
 
-**The challenge of scaling white-labeled apps**
+## The challenge of scaling white-labeled apps
 
 PushPress provides gym owners with fully branded mobile apps. These apps let
 members book classes, make purchases, and engage with their gym community. But
@@ -46,7 +46,7 @@ calendar issues for gym owners—right before a long holiday weekend.
 said Wright. “I couldn’t fix it fast enough. That bug lit the fire to look for
 some kind of code push solution to be integrated into our release flow.”
 
-**Fast, reliable updates with Shorebird**
+## Fast, reliable updates with Shorebird
 
 PushPress adopted Flutter in 2021 after a tough start with React Native. After
 completing the rewrite and getting it released across their customers they
@@ -68,7 +68,7 @@ App Store documents,” said Wright. “With Shorebird, we can do that. Clients 
 thrilled they’re still getting new features and fixes without any extra work on
 their end.”
 
-**Technical wins and team enthusiasm**
+## Technical wins and team enthusiasm
 
 Integrating Shorebird across PushPress’ three main apps—including their
 “Screens” App, which displays class attendance and gym workout information on a

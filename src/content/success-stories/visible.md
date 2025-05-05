@@ -30,7 +30,7 @@ real change in healthcare.
 >
 > - Visible Team
 
-**The Challenge: Rapid Iteration in a High-Need Health Context**
+## The Challenge: Rapid Iteration in a High-Need Health Context
 
 When you’re building technology for people managing chronic illness,
 responsiveness matters. The team at Visible moves quickly to learn from users,
@@ -56,7 +56,7 @@ health context where users depend on the app to track vital information.
 >
 > - Dominik Roszkowski, Lead Engineer at Visible
 
-**The Solution: Seamless Over-the-Air Updates with Shorebird**
+## The Solution: Seamless Over-the-Air Updates with Shorebird
 
 Visible integrated Shorebird into their CI pipeline to streamline their
 releases. With Shorebird, the team can push updates—both features and
@@ -78,7 +78,7 @@ to see the delivery and adoption of their patches.
 >
 > - Dominik Roszkowski, Lead Engineer at Visible
 
-**The Impact: Speed, Reliability, and Empathy-Driven Development**
+## The Impact: Speed, Reliability, and Empathy-Driven Development
 
 With Shorebird, Visible can move at the pace of its mission. They’re delivering
 updates faster, addressing user needs more responsively, and avoiding the
