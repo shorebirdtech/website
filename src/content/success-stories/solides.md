@@ -4,7 +4,7 @@ description:
   Hot fixes in minutes, not weeks. Learn how Solides transformed their mobile
   delivery with Shorebird.
 date: 2025-05-01
-cover:
+cover: solides-cover.png
 highlights:
   [
     'Over 500,000 active users on the Solides Super App',
