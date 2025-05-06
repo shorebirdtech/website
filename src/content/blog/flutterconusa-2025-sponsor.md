@@ -30,6 +30,8 @@ for Principal Engineers, Senior Developers & Managers to be able to talk about
 scaling teams, fostering culture and how to drive impact from the team
 management side of things.
 
+![Fluttercon USA 2025 Register Now Banner](../../assets/blog/flutterconusa-2025-sponsor/register-now-banner.jpg)
+
 If you were already looking at attending Fluttercon but haven't pulled the
 trigger just yet we have something for you.
 
