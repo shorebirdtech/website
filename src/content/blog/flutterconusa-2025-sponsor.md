@@ -37,7 +37,7 @@ trigger just yet we have something for you.
 Register now at [https://www.flutterconusa.dev](https://www.flutterconusa.dev).
 But be sure to act fast, the coupon code is valid now through the end of May.
 
-We’ll be there sharing how Shorebird helps you
+We’ll be there to share how Shorebird helps you
 
 - Ship Flutter app updates instantly with no app store review delay
 - Deploy fixes and features daily with confidence
