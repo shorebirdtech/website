@@ -11,7 +11,7 @@ It’s been a year full of in person conferences and meetups for us and we are
 just getting started. It’s amazing to be able to get out into the community and
 see how Shorebird is being used but also hearing feedback from current and
 prospective customers. It seems like once developers realize the tools that
-Shorebird adds into your Flutter toolbox they can’t help but want to get it
+Shorebird adds to their Flutter toolbox they can’t help but want to get it
 integrated into their current project.
 
 So with that knowledge we’re setting sights on the largest Flutter conference in
@@ -39,7 +39,7 @@ trigger just yet we have something for you.
 Register now at [https://www.flutterconusa.dev](https://www.flutterconusa.dev).
 But be sure to act fast, the coupon code is valid now through the end of May.
 
-We’ll be there sharing how Shorebird helps you
+We’ll be there to share how Shorebird helps you
 
 - Ship Flutter app updates instantly with no app store review delay
 - Deploy fixes and features daily with confidence
