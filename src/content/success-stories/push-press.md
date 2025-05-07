@@ -2,7 +2,7 @@
 title: PushPress
 description:
   Delivering updates faster across 1,500+ white-labeled apps powered by
-  Shorebird
+  Shorebird saves lots of tedious manual work.
 date: 2025-04-21
 cover: pushpress-cover.png
 highlights:
