@@ -6,9 +6,7 @@ description: Shorebird openings
 
 # Open Positions
 
-We're hiring
-
-- [Founding Engineer](#founding-engineer)
+Shorebird is not actively recruiting at this time.
 
 ---
 
@@ -187,62 +185,3 @@ If you're interested in joining us, please email eric@shorebird.dev. You can
 also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
 and chat with us there. We do pretty much everything in the public so you can
 very much see what we're like without even needing to apply.
-
----
-
-# Founding Engineer
-
-We write the tools others will use to build Flutter apps, including the compiler
-used to build them and runtime used to execute them. The ideal candidate should
-have at least passing familiarity with the "lower" levels of our stack including
-using a systems-language (like C++) doing programming on mobile.
-
-## Compensation
-
-180-220k USD salary, 1.5% equity, and
-[benefits](https://handbook.shorebird.dev/benefits/).
-
-## About You
-
-As one of our first engineers, you will wear many hats and work across many
-systems over time.
-
-You
-
-- Want to work at a startup
-- Work well independently, remotely and without supervision
-- Speak and write excellent English
-- Have some experience (ideally open source) with C++, C, or Rust
-- Live within in GMT-10 to GMT-3 (US timezones +/- 2)
-- Enjoy regularly learning/teaching yourself new skills
-- Want to work on a small, distributed team
-- Feel excited about our mission of making high-quality multi-platform the
-  default
-- Like creating excellent developer experiences
-- Have experience building and shipping production software
-
-You will
-
-- make (many) design decisions within the product including tradeoffs between
-  different approaches
-- work with us to build a product that is easy to use, performant, secure and
-  delightful to developers
-- build something we all ourselves want to use
-
-## Nice to haves
-
-- Familiarity with Compilers and/or Linkers
-- Familiarity with Assembly, ideally ARM64
-
-Experience working on reused code (e.g. APIs, libraries, tools, build systems)
-or in systems which are too large for any single person to understand would
-serve you well in this role.
-
-## Interview Process
-
-We're most interested in your past projects/accomplishments (do you ship
-stuff?), your desire to work at a startup (on this mission in particular), and
-your ability to communicate clearly. We will do a technical screen, which
-involves writing code together (e.g. write a small Dart command line app to do
-X). You'll talk to all 3 of us and check mutual references. If it's a mutual
-fit, we'll make you an offer.
