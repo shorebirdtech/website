@@ -13,14 +13,14 @@ export default defineConfig({
   },
   integrations: [react(), sitemap()],
   redirects: {
-    // Some old docs may still point to .html urls for terms and privacy.
-    '/terms.html': '/terms',
-    '/privacy.html': '/privacy',
     '/faq': 'https://docs.shorebird.dev/faq',
-    '/security': 'https://handbook.shorebird.dev/security',
-    '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/newsletter-signup': config.newsletterSubscriptionUrl,
+    '/privacy.html': '/privacy',
+    '/security': 'https://handbook.shorebird.dev/security',
     // Initially tweeted the wrong link:
     '/success-stories/pushpress/': '/success-stories/push-press',
+    '/talk-to-sales': config.contactSales,
+    '/terms.html': '/terms',
+    '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
   },
 });
