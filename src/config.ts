@@ -18,6 +18,6 @@ export default {
     'https://console.shorebird.dev/subscriptions/create?plan=business&billed=monthly',
   yearlyBusinessPlanCheckoutUrl:
     'https://console.shorebird.dev/subscriptions/create?plan=business&billed=yearly',
-  contactSales: 'https://calendly.com/eseidel/shorebird-sales',
+  contactSales: 'https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales',
   contactEmail: 'contact@shorebird.dev',
 };
