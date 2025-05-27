@@ -14,7 +14,6 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   redirects: {
     '/faq': 'https://docs.shorebird.dev/faq',
-    '/newsletter-signup': config.newsletterSubscriptionUrl,
     '/privacy.html': '/privacy',
     '/security': 'https://handbook.shorebird.dev/security',
     // Initially tweeted the wrong link:
