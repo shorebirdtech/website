@@ -64,7 +64,7 @@ or Linux machines. If you’re working with embedded devices this is a huge leap
 forward. You no longer need to compile directly on the target device.
 
 This is just the beginning of Dart’s cross-compilation journey. While this
-release focuses on Dart-level capabilities, we’re excited about the future
+release focuses on Dart-level capabilities, we’re excited about the
 potential for Flutter-level cross-compilation, such as building iOS apps from
 Windows. Thanks to Shorebird and our partners at
 [Codemagic](https://codemagic.io/), Flutter developers are already simulating
