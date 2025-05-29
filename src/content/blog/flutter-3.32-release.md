@@ -61,7 +61,7 @@ This one may only apply to a subset of Dart and Flutter developers, but it’s
 _extremely_ exciting for those it does. Dart 3.8 introduces cross-compilation
 capabilities, allowing you to compile native Linux binaries from Windows, macOS,
 or Linux machines. If you’re working with embedded devices this is a huge leap
-forward. You no longer do you need to compile directly on the target device.
+forward. You no longer need to compile directly on the target device.
 
 This is just the beginning of Dart’s cross-compilation journey. While this
 release focuses on Dart-level capabilities, we’re excited about the future
