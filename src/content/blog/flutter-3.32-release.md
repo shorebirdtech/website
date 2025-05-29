@@ -15,7 +15,7 @@ upgrade to Shorebird v1.6.39 and you’ll be good to go. All it takes is a quick
 
 We also wanted to take a moment to share our thoughts on these new releases.
 They bring significant enhancements that streamline cross-platform development
-and improve performance—not just for our customers, but for the entire Flutter
+and improve performance — not just for our customers, but for the entire Flutter
 community. While we won’t rehash everything (you can read the official
 [Flutter](https://medium.com/flutter/whats-new-in-flutter-3-32-40c1086bab6e) and
 [Dart](https://medium.com/dartlang/announcing-dart-3-8-724eaaec9f47) posts for
