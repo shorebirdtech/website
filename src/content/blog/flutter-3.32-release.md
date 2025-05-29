@@ -38,9 +38,30 @@ its visual fidelity is always music to our ears.
 
 Dart 3.8 includes updates to the code formatter, which now intelligently manages
 trailing commas and line breaks. This results in cleaner diffs and more
-consistent code formatting across all of your projects. Developers can opt into
-these changes by updating their pubspec.yaml to specify the new language
-version. To opt in, simply update your environment SDK constraints:
+consistent code formatting across all of your projects.
+
+```dart
+// Previously released formatter (functions)
+function(
+  name:
+      (param) => another(
+        argument1,
+        argument2,
+      ),
+);
+
+// Dart 3.8 formatter (functions)
+function(
+  name: (param) => another(
+    argument1,
+    argument2,
+  ),
+);
+```
+
+Developers can opt into these changes by updating their pubspec.yaml to specify
+the new language version. To opt in, simply update your environment SDK
+constraints:
 
 ```yaml
 environment:
@@ -51,6 +72,11 @@ While Dart 3.7 also included some of these changes, they were not configurable,
 prompting some developers to skip the upgrade. With Dart 3.8, you now have full
 control.
 
+```yaml
+formatter:
+  trailing_commas: preserve
+```
+
 We’ve navigated these formatting changes internally as well. It’s great to see
 the Dart team improving tooling while giving developers the flexibility to adopt
 changes on their own timeline.
@@ -59,9 +85,9 @@ changes on their own timeline.
 
 This one may only apply to a subset of Dart and Flutter developers, but it’s
 _extremely_ exciting for those it does. Dart 3.8 introduces cross-compilation
-capabilities, allowing you to compile native Linux binaries from Windows, macOS,
-or Linux machines. If you’re working with embedded devices this is a huge leap
-forward. You no longer need to compile directly on the target device.
+capabilities, allowing you to compile native binaries for any device from any
+device. If you’re working with embedded devices this is a huge leap forward. You
+no longer need to compile directly on the target device.
 
 This is just the beginning of Dart’s cross-compilation journey. While this
 release focuses on Dart-level capabilities, we’re excited about the potential
