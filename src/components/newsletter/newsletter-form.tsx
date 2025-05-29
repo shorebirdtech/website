@@ -93,7 +93,7 @@ export default function NewsletterSignupForm() {
   switch (formState) {
     case SUCCESS:
       return (
-        <div className="flex w-full items-center justify-center rounded-lg bg-green-300 p-8">
+        <div className="flex w-full items-center justify-center rounded-lg bg-green-300 p-3">
           <p className="text-center text-xl text-green-800">
             Thanks, we'll be in touch!
           </p>
@@ -111,12 +111,13 @@ export default function NewsletterSignupForm() {
         <>
           <form
             onSubmit={handleSubmit}
-            className="flex w-full max-w-md flex-col items-center gap-2 space-x-2 sm:flex-row"
+            className="mx-auto flex w-full flex-col items-center justify-center gap-2 space-x-2 sm:flex-row"
           >
             <Input
+              className="border-border-1"
               type="email"
               name="email"
-              placeholder="you@example.com"
+              placeholder="Subscribe to our newsletter"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required={true}
@@ -129,7 +130,7 @@ export default function NewsletterSignupForm() {
 
   function SignUpFormError() {
     return (
-      <div className="flex w-full items-center justify-center rounded-lg bg-red-300 p-8">
+      <div className="flex w-full items-center justify-center rounded-lg bg-red-300 p-3">
         <p className="text-center text-xl text-red-800">
           {errorMessage || 'Oops! Something went wrong, please try again'}
         </p>
@@ -147,7 +148,12 @@ export default function NewsletterSignupForm() {
 
   function SignUpFormButton() {
     return (
-      <Button variant="outline" className="w-full sm:w-min" type="submit">
+      <Button
+        variant="outline"
+        size="sm"
+        className="w-full sm:w-min"
+        type="submit"
+      >
         {formState === SUBMITTING ? 'Please wait...' : 'Subscribe'}
       </Button>
     );
