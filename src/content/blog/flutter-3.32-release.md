@@ -9,7 +9,7 @@ cover: flutter-3.32-cover.png
 ---
 
 We’re excited to announce that Shorebird now fully supports Flutter 3.32.0 and
-Dart 3.8! f you’re looking to update your Flutter apps with Shorebird, just
+Dart 3.8! If you’re looking to update your Flutter apps with Shorebird, just
 upgrade to Shorebird v1.6.39 and you’ll be good to go. All it takes is a quick
 `shorebird upgrade` to ensure you’re running the latest version.
 
