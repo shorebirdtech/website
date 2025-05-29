@@ -15,22 +15,14 @@ import NewsletterSignupForm from '@/components/newsletter/newsletter-form';
     <Card
       className="flex w-full flex-col items-center justify-center p-6 lg:p-16"
     >
-      <h2 class="text-text-1 text-center text-4xl">
-        Newsletter Signup
-      </h2>
+      <h2 class="text-text-1 text-center text-4xl">Newsletter Signup</h2>
       <p class="text-text-2 text-center">
         We're on a mission to make businesses successful with Flutter, and we're
-        thrilled to have you on board.
+        thrilled to have you on board. <br /> By signing up, you'll be the first
+        to know about new tools, updates, and insights to help you build and iterate
+        faster.
       </p>
-      <p class="text-text-2 text-center">
-        By signing up, you'll be the first to know about new tools, updates, and
-        insights to help you build and iterate faster.
-      </p>
-      <div
-        class="flex w-full flex-col items-center justify-center gap-4 md:flex-row"
-      >
-        <NewsletterSignupForm client:load />
-      </div>
+      <NewsletterSignupForm client:load />
     </Card>
   </div>
   <Footer />
