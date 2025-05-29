@@ -29,6 +29,10 @@ Flutter apps. While some of these changes are subtle, they’re crucial for apps
 to look and feel their best. If you’re targeting iOS, your apps should feel even
 more polished for your users.
 
+![Apple Squircle](../../assets/blog/flutter-3.32-release/apple-squircle.jpg)
+_Source credit -
+[Arthur Van Siclen](https://medium.com/@arthurofbabylon/a-smooth-corner-radius-in-ios-54b80aa2d372)_
+
 Similarly, the Flutter team has made a wide range of improvements to Material
 components, ensuring your apps shine on Android as well. Flutter was created to
 help developers bring any design to life, and seeing the team continue to refine
