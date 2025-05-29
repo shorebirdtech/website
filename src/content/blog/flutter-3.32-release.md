@@ -40,16 +40,16 @@ Dart 3.8 includes updates to the code formatter, which now intelligently manages
 trailing commas and line breaks. This results in cleaner diffs and more
 consistent code formatting across all of your projects. Developers can opt into
 these changes by updating their pubspec.yaml to specify the new language
-version.
-
-While Dart 3.7 also included some of these changes, they were not configurable,
-prompting some developers to skip the upgrade. With Dart 3.8, you now have full
-control. To opt in, simply update your environment SDK constraints:
+version. To opt in, simply update your environment SDK constraints:
 
 ```yaml
 environment:
   sdk: ^3.8.0
 ```
+
+While Dart 3.7 also included some of these changes, they were not configurable,
+prompting some developers to skip the upgrade. With Dart 3.8, you now have full
+control.
 
 We’ve navigated these formatting changes internally as well. It’s great to see
 the Dart team improving tooling while giving developers the flexibility to adopt
@@ -64,11 +64,10 @@ or Linux machines. If you’re working with embedded devices this is a huge leap
 forward. You no longer need to compile directly on the target device.
 
 This is just the beginning of Dart’s cross-compilation journey. While this
-release focuses on Dart-level capabilities, we’re excited about the
-potential for Flutter-level cross-compilation, such as building iOS apps from
-Windows. Thanks to Shorebird and our partners at
-[Codemagic](https://codemagic.io/), Flutter developers are already simulating
-aspects of this today.
+release focuses on Dart-level capabilities, we’re excited about the potential
+for Flutter-level cross-compilation, such as building iOS apps from Windows.
+Thanks to Shorebird and our partners at [Codemagic](https://codemagic.io/),
+Flutter developers are already simulating aspects of this today.
 
 One of our customers,
 [EasySpend](https://shorebird.dev/success-stories/easyspend/), specifically
