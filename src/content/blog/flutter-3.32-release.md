@@ -78,7 +78,7 @@ development without changing your host OS.
 
 ## Merging UI and Platform Threads
 
-While this last one is is mostly under the hood and unlikely to affect your app,
+While this last one is mostly under the hood and unlikely to affect your app,
 you should be aware that there has been a large internal change in how Flutter
 operates. Flutter 3.32.0 merges the UI (Dart) and Platform (Swift/Kotlin)
 threads to reduce latency and improve performance. This internal re-architecture
