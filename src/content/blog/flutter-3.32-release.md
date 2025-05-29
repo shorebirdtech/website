@@ -31,7 +31,7 @@ more polished for your users.
 
 Similarly, the Flutter team has made a wide range of improvements to Material
 components, ensuring your apps shine on Android as well. Flutter was created to
-help developers bring any design to life—and seeing the team continue to refine
+help developers bring any design to life, and seeing the team continue to refine
 its visual fidelity is always music to our ears.
 
 ## Enhanced Formatting
