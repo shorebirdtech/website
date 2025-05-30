@@ -56,7 +56,12 @@ Or for example if your app is required to change or disable a behavior within a
 specific region (e.g. as part of legal or compliance changes):
 
 ```dart
-final track = user.requiresLegalUpdates ? UpdateTrack('legal-update') : UpdateTrack.stable;
+final UpdateTrack updateTrack;
+if (user.requiresLegalUpdates) {
+  updateTrack = UpdateTrack('legal-update');
+} else {
+  updateTrack = UpdateTrack.stable;
+}
 ```
 
 Note that the name “stable” is still special in the sense that it is the
