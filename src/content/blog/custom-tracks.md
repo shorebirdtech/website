@@ -30,8 +30,8 @@ dependencies:
 ```
 
 Once that’s done, `Updater.checkForUpdate` now can receive any string as an
-UpdateTrack:
-https://pub.dev/documentation/shorebird_code_push/2.0.4/shorebird_code_push/ShorebirdUpdater/checkForUpdate.html
+UpdateTrack
+([source](https://pub.dev/documentation/shorebird_code_push/2.0.4/shorebird_code_push/UpdateTrack-extension-type.html)).
 
 For example if your organization has a longer multi-track approval process, or
 your own custom update process you might need more tracks:
