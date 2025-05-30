@@ -13,13 +13,14 @@ patches before deploying them to users. However, now we have added the ability
 to create an unlimited number of tracks with custom names.
 
 Shorebird does not collect any information about your users. As a result of our
-privacy-forward design, Shorebird has no ability to provide region-based, or
-group-based rollouts of patches, group-based A/B testing, etc. However, we
-provide a rich API set to enable you to implement all of these from within your
-own apps. Previously, these APIs were limited to operating on a fixed number of
-tracks (“staging”, “beta”, and “stable”), but now you can use an arbitrary
-number of tracks and push separate patches to each one should you wish. This can
-allow you to roll out updates with as much precision as you would like.
+privacy-forward design, Shorebird has no ability to provide things like region-
+or group-based rollouts of patches, A/B testing, etc. out-of-the-box. However,
+we provide a rich API set to enable you to implement all of these from within
+your own apps. Previously, these APIs were limited to operating on a fixed
+number of tracks (“staging”, “beta”, and “stable”), but now you can use an
+arbitrary number of tracks and push separate patches to each one should you
+wish. This can allow you to roll out updates with as much precision as you would
+like.
 
 To use these new features, first ensure you’re using package:shorebird_code_push
 version 2.0.4 or later. Update your pubspec:
