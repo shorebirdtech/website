@@ -10,7 +10,7 @@ Shorebird now supports custom update tracks!
 
 Shorebird has long supported “staging” and “beta” environments for testing your
 patches before deploying them to users. However, now we have added the ability
-to have tracks with arbitrary names.
+to create an unlimited number of tracks with custom names.
 
 Shorebird does not collect any information about your users. As a result of our
 privacy-forward design, Shorebird has no ability to provide region-based, or
