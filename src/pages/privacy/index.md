@@ -147,6 +147,7 @@ via email at privacy@shorebird.dev.
 - Loops.so, USA, Email Delivery
 - Mailchimp, USA, Email Delivery
 - Plausible, EU, Website Analytics
+- Posthog, USA, User Analytics
 - Redis Labs, USA, Cloud infrastructure for our Services
 - Sentry, USA, Website Error Reporting
 - Stripe, USA, Payment processing
