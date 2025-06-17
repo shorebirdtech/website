@@ -12,9 +12,8 @@ Today we’re excited to announce a new addition to the Shorebird CLI: the
 `shorebird create` command.
 
 This new command helps you spin up production-ready Flutter apps with one simple
-line. Under the hood, `shorebird create` runs `flutter create` followed by
-`shorebird init`, so you get a brand new Flutter project and it’s immediately
-configured to work with Shorebird Code Push.
+line. If you want to take a look under the hood on how this works then jump over
+to our [docs to find out more](https://docs.shorebird.dev/code-push/create/).
 
 No more forgetting to configure your project. No more context switching. No more
 setup steps later on.
