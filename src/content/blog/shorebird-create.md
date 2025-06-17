@@ -3,7 +3,7 @@ title: Introducing Shorebird Create
 author: shorebirdtech
 description: The easy way to start your next project with Shorebird
 date: 2025-06-17
-cover: codemagic-cover.png
+cover: shorebird-create-cover.png
 ---
 
 Starting a new Flutter project? We just made that a whole lot easier.
