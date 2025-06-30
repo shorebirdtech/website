@@ -1,7 +1,7 @@
 ---
 layout: '@/layouts/markdown.astro'
-title: Terms of Use
-description: Shorebird Terms of Use
+title: Terms of Service
+description: Shorebird Terms of Service
 last_updated: 03-04-2024
 ---
 
