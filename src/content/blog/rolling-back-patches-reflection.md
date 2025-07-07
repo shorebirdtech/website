@@ -74,7 +74,7 @@ What I’ve realized from talking to teams is that mobile developers expect a
 certain amount of pain. They’re used to the delays, the limitations, the lack of
 control once something is out in the wild.
 
-But it doesn’t have to be that way anymore.
+But it doesn’t have to be that way.
 
 With Shorebird, you get the same kind of control and flexibility you expect from
 any modern deployment workflow — including the ability to undo.
