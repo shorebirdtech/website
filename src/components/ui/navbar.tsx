@@ -47,7 +47,7 @@ function Navbar() {
             <a className="hidden lg:block" href={config.githubUrl}>
               <Button variant="outline" size="sm" className="font-light">
                 <GitHubLogo className="size-5" />
-                2.6k
+                2.7k
               </Button>
             </a>
             <a href={config.consoleUrl}>
