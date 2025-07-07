@@ -81,5 +81,3 @@ any modern deployment workflow — including the ability to undo.
 
 So the next time you ship a patch, know this: if something breaks, you don’t
 have to fix it right away. You can roll back. Instantly.
-
-And that changes the game.
