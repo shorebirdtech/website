@@ -1,7 +1,9 @@
 ---
 title: Rolling Back Patches - Why It Matters More Than You Think
 author: tomarra
-description: test
+description:
+  Why this overlooked superpower gives Flutter teams the control they’ve been
+  missing.
 date: 2025-07-07
 cover: patch-rollback-cover.png
 ---
