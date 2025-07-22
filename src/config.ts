@@ -19,4 +19,5 @@ export default {
     'https://console.shorebird.dev/subscriptions/create?plan=business&billed=yearly',
   contactSales: 'https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales',
   contactEmail: 'contact@shorebird.dev',
+  complianceUrl: 'https://handbook.shorebird.dev/compliance',
 };
