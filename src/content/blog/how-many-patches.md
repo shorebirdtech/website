@@ -15,17 +15,20 @@ One of the most common questions we hear from teams considering Shorebird is:
 It’s a fair question and one we designed our pricing model to make easy to
 answer.
 
-Unlike traditional tooling that charges you just for using the system, Shorebird
-only charges based on patch installs. That means you can:
+Our pricing is simple: a flat monthly rate based on the number of patch installs
+you think you need. That’s it.
 
-- Build and test releases and patches
-- Set up custom deployment tracks (like internal or staging)
-- Iterate as much as you want inside your team
+You can:
 
-Without paying anything until you push a patch to your users.
+- Push as many releases and patches to the Shorebird system as you want
+- Set up staging, internal, or testing tracks
+- Generate patches for every commit
 
-This structure gives you flexibility and control—whether you’re pushing
-mission-critical hot fixes or staging daily internal builds.
+All without triggering any billable usage.
+
+You’re usage is only tracked when a patch is actually installed on a user’s
+device. That means you can build Shorebird into your workflow without worrying
+about surprises or hidden fees.
 
 ## A Simple Starting Point
 
