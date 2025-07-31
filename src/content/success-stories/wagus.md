@@ -4,7 +4,7 @@ description:
   How WAGUS Uses Shorebird to move as fast as the crypto world does in order to
   keep their users at the front of the market.
 date: 2025-08-01
-cover: visible-cover.png
+cover: wagus-cover.png
 highlights:
   [
     'Over 150+ patches pushed out to users over a 2 month period',
