@@ -39,7 +39,7 @@ just weren’t fast enough compared to how fast the rest of the market moves.
 With users actively requesting features, and with the real-time nature of
 blockchain data, waiting days for a new release to be approved was a nonstarter.
 
-On top of that, WAGUS’s rapid development pace, often driven by AI-generated
+On top of that, the app's rapid development pace, often driven by AI-generated
 agents, meant that every day brought new code that needed testing, tweaking, and
 deployment.
 
