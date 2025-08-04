@@ -1,8 +1,8 @@
 ---
 title: WAGUS
 description:
-  How WAGUS Uses Shorebird to move as fast as the crypto world does in order to
-  keep their users at the front of the market.
+  Learn how WAGUS uses Shorebird to move as fast as the crypto world does in
+  order to keep their users at the front of the market.
 date: 2025-08-01
 cover: wagus-cover.png
 highlights:
