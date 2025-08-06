@@ -220,7 +220,7 @@ no one else is here to do things if one of us doesn’t.
 ### What You’ll Do
 
 - Grow developer awareness. Craft and execute strategies to get Shorebird in
-  front of more Flutter developers.
+  front of every Flutter developer.
 
 - Grow our social presence. Own and operate Shorebird’s social presence across
   all channels.
