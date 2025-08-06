@@ -6,182 +6,144 @@ description: Shorebird openings
 
 # Open Positions
 
-Shorebird is not actively recruiting at this time.
+- [Developer Relations / Marketing Lead](#developer-relations--marketing-lead)
+- [Full Stack Software Engineer](#full-stack-software-engineer)
 
 ---
 
-# About Shorebird
+See [Shorebird's Public Handbook](https://handbook.shorebird.dev/) to learn more
+about us. Shorebird is a default-public company. Lurk on our Discord, read our
+GitHub issues/code/project plans, and public company handbook -- most of what we
+do is public.
 
-Shorebird is a small, venture-funded startup (est Jan 2023) trying to make
-Flutter the default way to write apps. So far we've built and shipped Code Push
-for Flutter to let businesses over the air update their apps instantly on users
-phones.
+## Developer Relations / Marketing Lead
 
-## Why work at a startup?
+Location: Remote (North America)
 
-Having worked at both large and small companies, I can tell you, startups feel
-very different from big companies and big teams.
+Type: Full-time or contract
 
-Working at a startup means:
+Equity: Yes — Early-stage ownership opportunity
 
-- Shipping. We ship 5 times a day, not 5 times a year.
-- (Growth)[https://www.paulgraham.com/growth.html]. We are trying to grow
-  quickly (revenues, customers, products, people, etc). Growth means
-  opportunity, variety and challenge.
-- Ambition. Hard work is needed and rewarded. Your colleagues are highly
-  engaged, want to be here, want to work hard, and want to learn with and from
-  you.
-- Big upside. We pay well relative to other startups, but less (cash) than Big
-  Tech. Instead we offer lots of equity. Equity means you own a percentage of
-  Shorebird, and have a significant financial stake in the company's success.
-- Ownership. The team is very small. For anything to be done, that means one of
-  us is doing it. If you're going to do, you get to decide. Want to be our CDN
-  expert or marketing expert or Dart compiler ninja? More than you could ever
-  want to own, you will.
-- No layers. Direct access to customers. Direct access to management (the CEO is
-  the only manager). Nothing between you and direct action.
-- Few distractions. Engineers don't have meetings. There are no perf reviews. We
-  show up and do.
+### The problem
 
-## Problem: App Development is Broken
+Shorebird is building “the Flutter company”. Our founder started/led Flutter,
+and now we’re building a company to drive Flutter forward, even if Google
+can’t/won’t. We’re starting by filling in the gaps in the Flutter ecosystem,
+starting with Code Push (over the air updates). Our first product has been a
+success, but only a small fraction of Flutter developers know what we do.
 
-App development is broken. The default answer to "write an app" is write it once
-for iOS, once for Android, and once for the web (possibly more places).
-Businesses write the same app at least twice at 2x the necessary costs, with
-redundant code-bases, teams, bug lists.
+Your job is to help us reach _all_ Flutter developers. We’re so far 3 engineers
+and an operations lead. None of us love marketing like you do. You will help us
+craft our story and tell it widely. You love talking to developers, you love
+writing content, giving talks etc and you’ll have full support to do what it
+takes to raise awareness.
 
-This is bonkers. Not only is bad for businesses (lots of waste) and developers
-(headaches in re-implementation and coordination), but also users (why can't my
-friend install your app because their phone has a different brand or why does it
-run so much better/worse than my copy of the app?). We're wasting countless
-years of human life on this problem, for bad reasons.
+### What You’ll Do
 
-I (and many others) tried to make the Web (PWAs, etc) solve "write once; run
-anywhere" a decade ago and failed. Hence we built Flutter to let Google and
-everyone write high-quality app experiences and have them go everywhere.
+- Own marketing. From website content to email campaigns to positioning, you’ll
+  shape how we tell the Shorebird story.
 
-Flutter is now the most popular solution for writing multi-platform apps. Over a
-million developers use Flutter every month, and growing. Flutter has proven that
-high-quality multi-platform is possible.
+- Grow developer awareness. Craft and execute strategies to get Shorebird in
+  front of every Flutter developer.
 
-However, still most apps don't use Flutter. And even some that do, sometimes
-struggle. Adopting Flutter can be challenging since the default offerings from
-Google are sometimes an ill fit or incomplete for those operating outside
-Google.
+- Grow our social presence. Own and operate Shorebird’s social presence across
+  all channels.
 
-The Flutter project itself is also sometimes a funny fit inside Google (the home
-of Android, Ads and Chrome) and long term would benefit from an economic entity
-wholly aligned with Flutter's goals (not just trying to use it to sell Ads or
-Cloud).
+- Write and speak. Publish technical blog posts, create videos or live demos,
+  speak at conferences, and engage with the community on X, GitHub, Reddit, and
+  beyond.
 
-All these problems are why, after taking Flutter as far as I could within
-Google, I left to build a company around Flutter: Shorebird.
+- Advocate for Flutter and Shorebird. Shorebird only succeeds if Flutter does.
+  You get to tell both stories to customers at all phases of their adoption
+  journey.
 
-## Solution: The Flutter Company
+- Build relationships. Identify and support influential Flutter developers and
+  early adopters.
 
-Shorebird is filling in the gaps businesses need to be successful with Flutter
-development. Just like how businesses "buy" Linux with Redhat, most businesses
-will chose to buy Flutter solutions from Shorebird rather than cobbling together
-Flutter solutions themselves. That means we'll offer a suite of products to
-ensure you have a GREAT experience delivering apps to your users. The first
-problem we've solved is code push.
+- Close the loop. Bring insights from the community back to the team to inform
+  product direction.
 
-Aspiring to be "the Flutter company" means building an economic entity whose
-success is tied to Flutter, to finally help the world stop writing everything
-twice.
+### What We’re Looking For
 
-Google has been great to Flutter, but Flutter within Google is bound by Google's
-own incentives, which don't always align with that of Flutter's millions of
-customers outside of Google. We're trying to build a company whose success is
-aligned with the success of the businesses and developers using Flutter. A
-company trusted to provide high quality services around Flutter, and eventually
-fund the development of Flutter itself, if necessary.
+- Mission alignment. You care about helping the world stop writing everything
+  twice. Flutter is our tool for that and Shorebird aims to take Flutter beyond
+  where Google can.
 
-If we're successful, Shorebird will eventually be synonymous with Flutter. We
-hope to support every one of the millions of Flutter developers and the
-businesses behind them.
+- Strong desire to work at a startup. We’re a tiny team. All remote. You’ll be
+  the first person fulltime driving awareness and will get to define our
+  strategy and approach.
 
-## Where we're at
+- Scrappy and self-driven. You are the marketing department. You are our DevRel
+  org. You’ll have lots of help, but you’ll have to want to make your own
+  decisions and own them. You’ll also (likely) be fully remote which means you
+  need to be great at self motivation and self-direction.
 
-Shorebird incorporated January 2023. We've shipped our first product (code push)
-and now support around 2000 monthly active users, with about 300 paying
-customers and strong growth. We raised several million dollars from a top-5 VC
-and great investors who care about our mission. We're not profitable yet, but
-have two years of cash on hand.
+- Experience working in Developer Relations, Product Marketing, or Technical
+  Advocacy — or strong proof you can do the job.
 
-We're only 3 people right now. All of us have engineering backgrounds. As our
-customers have grown, so has our engineering load and we're seeking to hire
-another full-stack engineer to help us scale to even larger customers. We're
-also seeking to hire a "business generalist" to work with Eric in building out
-the non-software parts of the business.
+- Strong writing and communication skills. You enjoy breaking down complex
+  topics for different audiences.
 
-In comparison to two years ago, we've dramatically de-risked the product and
-market -- we have a working thing, that people want to buy. But there is still
-much to do, so many choices to make, and so much to grow. That's where you come
-in.
+- Comfort with code. You don’t need to be an expert Flutter dev, but you can
+  read docs, run sample apps, and maybe write a working blog demo.
 
-## What we do every day
+- Bonus: experience in startups, open-source communities, or the Flutter
+  ecosystem.
 
-Recently we've focused on growing monthly active users. During our latest
-in-person summit in NYC, we did planning for next big features and products and
-now that we're back to our respective cities, we're burning through that list
-while supporting incoming customers.
+### Why Join
 
-We see about 40 new accounts sign up per day, about 3 of those become "active"
-(create a release/patch every month) and 1 of those buys a plan. We also get a
-couple of inbound SMB/enterprise sales calls per week through which Eric is
-learning enterprise sales.
+- Work directly with a small, senior team solving hard, high-impact problems.
 
-The first hour or so every morning is spent working through the support queue
-which often results in small changes to the website, docs or code to avoid
-future customers hitting the same issues. The rest of the day is spent building.
-We have no meetings, no calendars, no perf reviews.
+- Influence product, messaging, and strategy from the ground up.
 
-Most of the time we hang out on Discord video calls, but sometimes someone drops
-off to jam out to their music, get coffee or lunch, etc. We use the same Discord
-for private company chats and calls, private large-customer support channels,
-and our public community, which makes it very easy to talk to customers anytime
-we want to.
+- Competitive compensation \+ early equity.
 
-Engineers work across the whole stack. Our websites are in React (Astro), our
-backend and command-line tool are in Dart, our Database is postgres. We use
-Google Cloud, Redis and Cloudflare. We have our own fork of the Dart runtime and
-compiler (C++) and Flutter engine (C++) as well as an updater library (Rust) and
-a small Flutter package. Some of us prefer certain layers to others, but ideally
-you should want to work on most of the above and more as you help us add more
-products!
+- Shape the future of how mobile apps are built and shipped.
 
-3-4 times a year we all get together in person for a week. We occasionally
-attend meetups or fly to visit customers. Engineers aren't expected to attend
-any meetings, Eric has several customer meetings a week (and sometimes per day).
+## Generalist Software Engineer
 
-## Learn more
+We’re looking for a generalist software engineer to join us early. You’ll work
+across the stack: cloud infrastructure, backend APIs, web UI, and maybe even
+native C++ or Flutter internals. We primarily write in Dart, but are also
+comfortable with Typescript, C++, and bash scripting.
 
-We're a default-public organization, we operate on a
-[public discord](https://discord.gg/shorebird), our
-[source](https://github.com/shorebirdtech/) and
-[planning](https://github.com/orgs/shorebirdtech/projects) are public. We're an
-all remote, distributed team.
+### What You’ll Do
 
-More information about the company we're trying to build can be found in our
-[public handbook](https://github.com/shorebirdtech/handbook)
+- Build backend infrastructure (mostly in Dart) that powers developer tools used
+  in production apps
 
-## Location
+- Contribute to frontend web tooling and developer UX
 
-We're fully remote. Current team members are located in California, Illinois,
-and New York (GMT-8 through GMT-5).
+- Depending on interests, may dip into native code (like our C++ fork of Dart’s
+  compiler) when needed
 
-Our hiring is currently focused in the US, but we hope to expand globally over
-time. We are willing to consider candidates in GMT-10 through GMT-3. We
-communicate exclusively through Discord (both in public and private), including
-often leaving video calls open in the background while we work independently.
+- Work independently and own projects end-to-end
 
-We get together 3-4x per year as a company, all flying to some US city for a
-week.
+- Help shape our culture, processes, and product direction
 
-## Reach out
+### About You
 
-If you're interested in joining us, please email eric@shorebird.dev. You can
-also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
-and chat with us there. We do pretty much everything in the public so you can
-very much see what we're like without even needing to apply.
+- You're a strong generalist who can jump into unfamiliar systems and figure
+  things out
+
+- You're a self-starter — you work well with little oversight and thrive in
+  ambiguous environments
+
+- You’re excited about Flutter and want to help it succeed
+
+- You care about product quality and developer experience
+
+- You have solid experience with at least one part of the stack — backend,
+  infra, frontend, or native — and are eager to learn the rest starting with
+  Code Push (over the air updates).
+
+- Experience with build systems, deployment pipelines, or developer tools
+
+- Startup experience or contributions to open source projects
+
+### Location
+
+- Remote (North America)
+
+- OR in-person Chicago, New York City, or Palo Alto — junior candidates must be
+  in person.
