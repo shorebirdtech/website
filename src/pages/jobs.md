@@ -11,76 +11,10 @@ description: Shorebird openings
 
 ---
 
-See [About Shorebird] for more information about what we're doing and why.
-
-## Why work at a startup?
-
-Having worked at both large and small companies, I can tell you, startups feel
-very different from big companies and big teams.
-
-Working at a startup means:
-
-- Shipping. We ship 5 times a day, not 5 times a year.
-- [Growth](https://www.paulgraham.com/growth.html). We are trying to grow
-  quickly (revenues, customers, products, people, etc). Growth means
-  opportunity, variety and challenge.
-- Ambition. Hard work is needed and rewarded. Your colleagues are highly
-  engaged, want to be here, want to work hard, and want to learn with and from
-  you.
-- Big upside. We pay well relative to other startups, but less (cash) than Big
-  Tech. Instead we offer lots of equity. Equity means you own a percentage of
-  Shorebird, and have a significant financial stake in the company's success.
-- Ownership. The team is very small. For anything to be done, that means one of
-  us is doing it. If you're going to do, you get to decide. Want to be our CDN
-  expert or marketing expert or Dart compiler ninja? More than you could ever
-  want to own, you will.
-- No layers. Direct access to customers. Direct access to management (the CEO is
-  the only manager). Nothing between you and direct action.
-- Few distractions. Engineers don't have meetings. There are no perf reviews. We
-  show up and do.
-
-## What we do every day
-
-Recently we've focused on growing monthly active users. During our latest
-in-person summit in Chicago, we focused on hammering out plans for our second
-product, continuous integration, and now that we're back in our respective homes
-we're just burning through the issue list and supporting early users.
-
-We see about 40 new accounts sign up per day, about 3 of those become "active"
-(create a release/patch every month) and 1 of those buys a plan. We also get a
-few of inbound SMB/enterprise sales calls per week through which Eric and Tom
-are learning enterprise sales.
-
-The first hour or so every morning is spent working through the support queue
-which often results in small changes to the website, docs or code to avoid
-future customers hitting the same issues. The rest of the day is spent building.
-We have no meetings, no calendars, no perf reviews.
-
-Most of the time we hang out on Discord video calls, but sometimes someone drops
-off to jam out to their music, get coffee or lunch, etc. We use the same Discord
-for private company chats and calls, private large-customer support channels,
-and our public community, which makes it very easy to talk to customers anytime
-we want to.
-
-Engineers work across the whole stack. Our websites are in React (Astro), our
-backend and command-line tool are in Dart, our Database is postgres. We use
-Google Cloud, Redis and Cloudflare. We have our own fork of the Dart runtime and
-compiler (C++) and Flutter engine (C++) as well as an updater library (Rust) and
-a small Flutter package. Some of us prefer certain layers to others, but ideally
-you should want to work on most of the above and more as you help us add more
-products!
-
-3-4 times a year we all get together in person for a week. We occasionally
-attend meetups or fly to visit customers. Engineers aren't expected to attend
-any meetings, Eric or Tom have several customer meetings a week (and sometimes
-per day).
-
-## Reach out
-
-If you're interested in joining us, please email eric@shorebird.dev. You can
-also (and are encouraged to) hop on our [Discord](https://discord.gg/shorebird)
-and chat with us there. We do pretty much everything in the public so you can
-very much see what we're like without even needing to apply.
+See [Shorebird's Public Handbook](https://handbook.shorebird.dev/) to learn more
+about us. Shorebird is a default-public company. Lurk on our Discord, read our
+GitHub issues/code/project plans, and public company handbook -- most of what we
+do is public.
 
 ## Developer Relations / Marketing Lead
 
@@ -98,15 +32,16 @@ can’t/won’t. We’re starting by filling in the gaps in the Flutter ecosyste
 starting with Code Push (over the air updates). Our first product has been a
 success, but only a small fraction of Flutter developers know what we do.
 
-Your job is to help us reach _all_ Flutter developers. We’re so far 3 engineers and
-an operations lead. None of us love marketing like you do. You will help us
+Your job is to help us reach _all_ Flutter developers. We’re so far 3 engineers
+and an operations lead. None of us love marketing like you do. You will help us
 craft our story and tell it widely. You love talking to developers, you love
 writing content, giving talks etc and you’ll have full support to do what it
-takes to raise awareness. At a small company this is a generalist role. You
-don’t have to be amazing at all parts of developer relations or marketing, but
-no one else is here to do things if one of us doesn’t.
+takes to raise awareness.
 
 ### What You’ll Do
+
+- Own marketing. From website content to email campaigns to positioning, you’ll
+  shape how we tell the Shorebird story.
 
 - Grow developer awareness. Craft and execute strategies to get Shorebird in
   front of every Flutter developer.
@@ -127,9 +62,6 @@ no one else is here to do things if one of us doesn’t.
 
 - Close the loop. Bring insights from the community back to the team to inform
   product direction.
-
-- Own marketing. From website content to email campaigns to positioning, you’ll
-  shape how we tell the Shorebird story.
 
 ### What We’re Looking For
 
@@ -170,8 +102,6 @@ no one else is here to do things if one of us doesn’t.
 
 ## Generalist Software Engineer
 
-Location: Remote or Chicago / Brooklyn / Palo Alto
-
 We’re looking for a generalist software engineer to join us early. You’ll work
 across the stack: cloud infrastructure, backend APIs, web UI, and maybe even
 native C++ or Flutter internals. We primarily write in Dart, but are also
@@ -204,12 +134,9 @@ comfortable with Typescript, C++, and bash scripting.
 - You care about product quality and developer experience
 
 - You have solid experience with at least one part of the stack — backend,
-  infra, frontend, or native — and are eager to learn the rest
-starting with Code Push (over the air updates). Our first product has been a
-success, but only a small fraction of Flutter developers know what we do.
+  infra, frontend, or native — and are eager to learn the rest starting with
+  Code Push (over the air updates).
 
-Your job is to help us reach _all_ Flutter developers. We’re so far 3 engineers and
-an operations lead. None of us love marketing like you do. You will help us
 - Experience with build systems, deployment pipelines, or developer tools
 
 - Startup experience or contributions to open source projects
@@ -218,7 +145,5 @@ an operations lead. None of us love marketing like you do. You will help us
 
 - Remote (North America)
 
-- OR in-person Chicago, Brooklyn, or Palo Alto — junior candidates must be in
-- Grow developer awareness. Craft and execute strategies to get Shorebird in
-  front of every Flutter developer.
-  by partnering with you daily.)
+- OR in-person Chicago, New York City, or Palo Alto — junior candidates must be
+  in person.
