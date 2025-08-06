@@ -316,7 +316,7 @@ Flutter itself.
 - You care about product quality and developer experience
 
 - You have solid experience with at least one part of the stack — backend,
-  infra, frontend, or native — and are eager to learn the rest
+  cloud infrastructure, frontend, or native — and are eager to learn the rest
 
 - You’re comfortable working remotely and asynchronously
 
