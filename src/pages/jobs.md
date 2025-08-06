@@ -331,7 +331,7 @@ comfortable with Typescript, C++, and bash scripting.
 
 - Remote (North America)
 
-- OR in-person Chicago, Brooklyn, or Palo Alto — junior candidates must be in
+- OR in-person Chicago, NYC, or Palo Alto — junior candidates must be in
   one of these locations for in-person mentorship. (We're a remote-first
   culture, but if you're early in your career we want to set you up to succeed
   by partnering with you daily.)
