@@ -285,8 +285,8 @@ Location: Remote or Chicago / Brooklyn / Palo Alto
 
 We’re looking for a generalist software engineer to join us early. You’ll work
 across the stack: cloud infrastructure, backend APIs, web UI, and maybe even
-native C++ or Flutter internals. We write almost everything in Dart, just like
-Flutter itself.
+native C++ or Flutter internals. We primarily write in Dart, but are also
+comfortable with Typescript, C++, and bash scripting.
 
 ### What You’ll Do
 
