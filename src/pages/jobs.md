@@ -207,10 +207,9 @@ Shorebird is building “the Flutter company”. Our founder started/led Flutter
 and now we’re building a company to drive Flutter forward, even if Google
 can’t/won’t. We’re starting by filling in the gaps in the Flutter ecosystem,
 starting with Code Push (over the air updates). Our first product has been a
-success, but we estimate only maybe 10% of the 1M+ monthly active Flutter
-developers know what we do.
+success, but only a small fraction of Flutter developers know what we do.
 
-Your job is to help us reach those .9M developers. We’re so far 3 engineers and
+Your job is to help us reach _all_ Flutter developers. We’re so far 3 engineers and
 an operations lead. None of us love marketing like you do. You will help us
 craft our story and tell it widely. You love talking to developers, you love
 writing content, giving talks etc and you’ll have full support to do what it
