@@ -20,4 +20,6 @@ export default {
   contactSales: 'https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales',
   contactEmail: 'contact@shorebird.dev',
   complianceUrl: 'https://handbook.shorebird.dev/compliance',
+  handbookUrl: 'https://handbook.shorebird.dev',
+  hiringEmail: 'eric@shorebird.dev',
 };
