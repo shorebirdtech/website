@@ -6,7 +6,6 @@ description:
 location:
   Remote (North America) or in-person (Chicago, New York City, or Palo Alto)
 type: Full-time
-equity: true
 ---
 
 ### Overview

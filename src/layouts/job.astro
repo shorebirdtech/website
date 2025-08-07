@@ -4,7 +4,7 @@ import { Navbar } from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer.astro';
 import config from '@/config';
 
-const { title } = Astro.props;
+const { title, location, type } = Astro.props;
 ---
 
 <MainLayout title={title}>
@@ -13,10 +13,6 @@ const { title } = Astro.props;
     class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
   >
     <h1 class="m-0! text-center">{title}</h1>
-    <div class="text-text-2">
-        <p>Location: {Astro.props.location}</p>
-        <p>Type: {Astro.props.type}</p>
-    </div>
     <div class="py-8">
       <p>
         Shorebird is a default-public company, so nearly everything we do is in
@@ -28,6 +24,10 @@ const { title } = Astro.props;
           >public company handbook</a
         > to see how we work.
       </p>
+    </div>
+    <div class="text-text-2">
+      <p><strong>Location:</strong> {location}</p>
+      <p><strong>Type:</strong> {type}</p>
     </div>
     <slot />
     <div class="py-8">
