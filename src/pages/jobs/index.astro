@@ -1,0 +1,56 @@
+---
+import '@/styles/global.css';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import { getCollection } from 'astro:content';
+import { Navbar } from '@/components/ui/navbar';
+import { ScrollToTopButton } from '@/components/scroll-to-top-button';
+import { Spacer } from '@/components/ui/spacer';
+import Footer from '@/components/ui/footer.astro';
+import MainLayout from '@/layouts/main.astro';
+
+const jobs = (await getCollection('jobs')).filter((job) => !job.data.draft);
+---
+
+<MainLayout title="Jobs">
+  <Navbar client:load />
+  <section
+    class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  >
+    <h1
+      class="text-text-1 mx-auto text-center text-5xl font-semibold md:mx-0 md:text-start"
+    >
+      Open <span class="gradient-text">Positions</span>
+    </h1>
+    <Spacer />
+    <div
+      class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
+    >
+      <h3 class="text-text-2 mx-auto text-center text-lg md:mx-0 md:text-start">
+        Come work with us at Shorebird.
+      </h3>
+    </div>
+    <Spacer className="h-10" />
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      {
+        jobs.map((job) => (
+          <a href={`/jobs/${job.id}`} class="hover:no-underline">
+            <Card className="gap-2 py-0 cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1">
+              <CardContent className="p-4">
+                <div class="flex flex-col gap-3">
+                  <h1 class="text-text-1 text-xl hover:underline">
+                    {job.data.title}
+                  </h1>
+                </div>
+                <p class="text-text-2 overflow-hidden text-ellipsis whitespace-nowrap">
+                  {job.data.description}
+                </p>
+              </CardContent>
+            </Card>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+  <Footer />
+  <ScrollToTopButton client:load />
+</MainLayout>

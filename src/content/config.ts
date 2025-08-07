@@ -34,7 +34,20 @@ const successStoriesCollection = defineCollection({
   }),
 });
 
+const jobsCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/jobs' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    location: z.string(),
+    type: z.string(),
+    equity: z.boolean(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
   successStories: successStoriesCollection,
+  jobs: jobsCollection,
 };
