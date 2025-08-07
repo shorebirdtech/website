@@ -24,7 +24,6 @@ We collect the following categories of information when you use our Services:
 
 - Information you provide directly to us: Contact Information, like name and
   email address.
-
   - Sign-In Information, including your username, password, and site
     registrations.
   - Transaction and Billing Data, including your bank account and payment card
