@@ -4,7 +4,7 @@ title: Jobs
 description: Shorebird openings
 ---
 
-# Open Positions
+## Open Positions
 
 - [Developer Relations / Marketing Lead](#developer-relations--marketing-lead)
 - [Full Stack Software Engineer](#full-stack-software-engineer)
@@ -12,11 +12,12 @@ description: Shorebird openings
 ---
 
 See [Shorebird's Public Handbook](https://handbook.shorebird.dev/) to learn more
-about us. Shorebird is a default-public company. Lurk on our Discord, read our
-GitHub issues/code/project plans, and public company handbook -- most of what we
-do is public.
+about us. Shorebird is a default-public company, so nearly everything is open.
+You're always welcome to lurk on our [Discord](https://discord.gg/shorebird),
+read our [GitHub issues/code/project plans](https://github.com/shorebirdtech),
+and [public company handbook](https://handbook.shorebird.dev/).
 
-## Developer Relations / Marketing Lead
+### Developer Relations / Marketing Lead
 
 Location: Remote (North America)
 
@@ -24,7 +25,7 @@ Type: Full-time or contract
 
 Equity: Yes — Early-stage ownership opportunity
 
-### The problem
+#### The problem
 
 Shorebird is building “the Flutter company”. Our founder started/led Flutter,
 and now we’re building a company to drive Flutter forward, even if Google
@@ -38,7 +39,7 @@ craft our story and tell it widely. You love talking to developers, you love
 writing content, giving talks etc and you’ll have full support to do what it
 takes to raise awareness.
 
-### What You’ll Do
+#### What You’ll Do
 
 - Own marketing. From website content to email campaigns to positioning, you’ll
   shape how we tell the Shorebird story.
@@ -63,7 +64,7 @@ takes to raise awareness.
 - Close the loop. Bring insights from the community back to the team to inform
   product direction.
 
-### What We’re Looking For
+#### What We’re Looking For
 
 - Mission alignment. You care about helping the world stop writing everything
   twice. Flutter is our tool for that and Shorebird aims to take Flutter beyond
@@ -90,7 +91,7 @@ takes to raise awareness.
 - Bonus: experience in startups, open-source communities, or the Flutter
   ecosystem.
 
-### Why Join
+#### Why Join
 
 - Work directly with a small, senior team solving hard, high-impact problems.
 
@@ -100,50 +101,64 @@ takes to raise awareness.
 
 - Shape the future of how mobile apps are built and shipped.
 
-## Generalist Software Engineer
+### Full Stack Software Engineer
 
-We’re looking for a generalist software engineer to join us early. You’ll work
-across the stack: cloud infrastructure, backend APIs, web UI, and maybe even
-native C++ or Flutter internals. We primarily write in Dart, but are also
-comfortable with Typescript, C++, and bash scripting.
+Location: Remote (North America) or in-person (Chicago, New York City, or Palo
+Alto)
 
-### What You’ll Do
+Type: Full-time
 
-- Build backend infrastructure (mostly in Dart) that powers developer tools used
-  in production apps
+Equity: Yes — Early-stage ownership opportunity
 
-- Contribute to frontend web tooling and developer UX
+#### The problem
 
-- Depending on interests, may dip into native code (like our C++ fork of Dart’s
-  compiler) when needed
+We have one successful product with thousands of monthly users, delivering 10s
+of millions of updates around the globe, every month. We built this all with 2
+engineers. We also recently launched a second product. We simply need more
+engineers to keep up with our growing user base an ambition.
 
-- Work independently and own projects end-to-end
+#### What You’ll Do
 
-- Help shape our culture, processes, and product direction
+- Build and maintain backend infrastructure (mostly in Dart) that powers
+  developer tools used in production apps.
 
-### About You
+- Contribute to our open source command line tools and native C++ code.
+
+- Own and ship features end-to-end, from our web UI to our backend APIs.
+
+- Help shape our culture, processes, and product direction.
+
+#### What We’re Looking For
+
+- Mission alignment. You care about helping the world stop writing everything
+  twice. Flutter is our tool for that and Shorebird aims to take Flutter beyond
+  where Google can.
+
+- Strong desire to work at a startup. We’re a tiny team. All remote. You’ll have
+  to want to make your own decisions and own them.
 
 - You're a strong generalist who can jump into unfamiliar systems and figure
-  things out
+  things out.
 
 - You're a self-starter — you work well with little oversight and thrive in
-  ambiguous environments
+  ambiguous environments.
 
-- You’re excited about Flutter and want to help it succeed
+- You’re excited about Flutter and want to help it succeed.
 
-- You care about product quality and developer experience
+- You care about product quality and developer experience.
 
-- You have solid experience with at least one part of the stack — backend,
-  infra, frontend, or native — and are eager to learn the rest starting with
-  Code Push (over the air updates).
+- You have solid experience with at least one part of the stack — cloud,
+  developer tools, or compilers/runtimes — and are eager to learn the rest.
 
-- Experience with build systems, deployment pipelines, or developer tools
+- Bonus: experience with build systems, deployment pipelines, or developer
+  tools.
 
-- Startup experience or contributions to open source projects
+- Bonus: startup experience or contributions to open source projects.
 
-### Location
+#### Why Join
 
-- Remote (North America)
+- Work directly with a small, senior team solving hard, high-impact problems.
 
-- OR in-person Chicago, New York City, or Palo Alto — junior candidates must be
-  in person.
+- Competitive compensation + early equity.
+
+- Shape the future of how mobile apps are built and shipped.
