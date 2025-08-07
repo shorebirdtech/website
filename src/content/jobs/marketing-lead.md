@@ -1,5 +1,5 @@
 ---
-title: 'Developer Relations / Marketing Lead'
+title: 'Marketing Lead'
 description: 'Help us reach all Flutter developers.'
 location: 'Remote (North America)'
 type: 'Full-time or contract'
