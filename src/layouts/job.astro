@@ -13,6 +13,9 @@ const { title } = Astro.props;
     class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
   >
     <h1 class="m-0! text-center">{title}</h1>
+    <div class="text-center text-text-2">
+        <p>{Astro.props.location} / {Astro.props.type}</p>
+    </div>
     <div class="py-8">
       <p>
         Shorebird is a default-public company, so nearly everything we do is in

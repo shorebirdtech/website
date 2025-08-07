@@ -41,8 +41,6 @@ const jobsCollection = defineCollection({
     description: z.string(),
     location: z.string(),
     type: z.string(),
-    equity: z.boolean(),
-    draft: z.boolean().default(false),
   }),
 });
 
