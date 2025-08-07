@@ -1,82 +1,44 @@
 ---
-import '@/styles/global.css';
+import MainLayout from '@/layouts/main.astro';
 import { Navbar } from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer.astro';
 
 const { title, description } = Astro.props;
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <title>{title}</title>
-    <meta name="description" content={description} />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta name="description" property="og:description" content={description} />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="shorebird.dev" />
-    <meta property="twitter:url" content={canonicalUrl} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:site" content="@shorebirddev" />
-
-    <!-- Analytics -->
-    <script
-      defer
-      data-domain="shorebird.dev"
-      src="https://plausible.io/js/script.js"></script>
-  </head>
-  <body>
-    <Navbar client:load />
-    <article
-      class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
-    >
-      <h1 class="m-0! text-center">{title}</h1>
-      <div class="py-8 text-center">
-        <p>
-          See <a href="https://handbook.shorebird.dev/"
-            >Shorebird's Public Handbook</a
-          > to learn more about us. Shorebird is a default-public company, so nearly
-          everything is open. You're always welcome to lurk on our <a
-            href="https://discord.gg/shorebird">Discord</a
-          >, read our <a href="https://github.com/shorebirdtech"
-            >GitHub issues/code/project plans</a
-          >, and <a href="https://handbook.shorebird.dev/"
-            >public company handbook</a
-          >.
-        </p>
-      </div>
-      <slot />
-      <div class="py-8 text-center">
-        <p>
-          To apply, please email <a href="mailto:eric@shorebird.dev"
-            >eric@shorebird.dev</a
-          >. Please include your resume or LinkedIn profile.
-        </p>
-      </div>
-    </article>
-    <Footer />
-    <style is:global>
-      .prose {
-        max-width: 80ch;
-      }
-    </style>
-  </body>
-</html>
+<MainLayout title={title} description={description}>
+  <Navbar client:load />
+  <article
+    class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
+  >
+    <h1 class="m-0! text-center">{title}</h1>
+    <div class="py-8 text-center">
+      <p>
+        See <a href="https://handbook.shorebird.dev/"
+          >Shorebird's Public Handbook</a
+        > to learn more about us. Shorebird is a default-public company, so nearly
+        everything is open. You're always welcome to lurk on our <a
+          href="https://discord.gg/shorebird">Discord</a
+        >, read our <a href="https://github.com/shorebirdtech"
+          >GitHub issues/code/project plans</a
+        >, and <a href="https://handbook.shorebird.dev/"
+          >public company handbook</a
+        >.
+      </p>
+    </div>
+    <slot />
+    <div class="py-8 text-center">
+      <p>
+        To apply, please email <a href="mailto:eric@shorebird.dev"
+          >eric@shorebird.dev</a
+        >. Please include your resume or LinkedIn profile.
+      </p>
+    </div>
+  </article>
+  <Footer />
+  <style is:global>
+    .prose {
+      max-width: 80ch;
+    }
+  </style>
+</MainLayout>
