@@ -1,8 +1,8 @@
 ---
 title: Full Stack Software Engineer
 description:
-  Build and maintain backend infrastructure that powers developer tools used in
-  production apps.
+  Build and maintain developer tools and cloud infrastructure used developers
+  around the globe.
 location:
   Remote (North America) or in-person (Chicago, New York City, or Palo Alto)
 type: Full-time
@@ -13,8 +13,8 @@ equity: true
 
 We have one successful product with thousands of monthly users, delivering 10s
 of millions of updates around the globe, every month. We built this all with 2
-engineers. We also recently launched a second product. We simply need more
-engineers to keep up with our growing user base an ambition.
+engineers. We also recently launched a second product which is also growing. We
+simply need more engineers to keep up with our growing user base an ambition.
 
 ### What You’ll Do
 
