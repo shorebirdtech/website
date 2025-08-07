@@ -6,7 +6,7 @@ type: 'Full-time or contract'
 equity: true
 ---
 
-### The problem
+### Overview
 
 Shorebird is building “the Flutter company”. Our founder started/led Flutter,
 and now we’re building a company to drive Flutter forward, even if Google

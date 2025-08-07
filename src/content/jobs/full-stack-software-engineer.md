@@ -9,7 +9,7 @@ type: 'Full-time'
 equity: true
 ---
 
-### The problem
+### Overview
 
 We have one successful product with thousands of monthly users, delivering 10s
 of millions of updates around the globe, every month. We built this all with 2
