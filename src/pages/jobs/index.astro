@@ -41,7 +41,7 @@ const jobs = (await getCollection('jobs')).filter((job) => !job.data.draft);
                     {job.data.title}
                   </h1>
                 </div>
-                <p class="text-text-2 overflow-hidden text-ellipsis whitespace-nowrap">
+                <p class="text-text-2 overflow-hidden text-ellipsis">
                   {job.data.description}
                 </p>
               </CardContent>
