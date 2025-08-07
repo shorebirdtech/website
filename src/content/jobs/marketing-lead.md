@@ -1,8 +1,8 @@
 ---
-title: 'Marketing Lead'
-description: 'Help us reach all Flutter developers.'
-location: 'Remote (North America)'
-type: 'Full-time or contract'
+title: Marketing Lead
+description: Help us reach all Flutter developers.
+location: Remote (North America)
+type: Full-time or contract
 equity: true
 ---
 

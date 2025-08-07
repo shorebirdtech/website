@@ -1,11 +1,11 @@
 ---
-title: 'Full Stack Software Engineer'
+title: Full Stack Software Engineer
 description:
-  'Build and maintain backend infrastructure that powers developer tools used in
-  production apps.'
+  Build and maintain backend infrastructure that powers developer tools used in
+  production apps.
 location:
-  'Remote (North America) or in-person (Chicago, New York City, or Palo Alto)'
-type: 'Full-time'
+  Remote (North America) or in-person (Chicago, New York City, or Palo Alto)
+type: Full-time
 equity: true
 ---
 
