@@ -112,10 +112,10 @@ Equity: Yes — Early-stage ownership opportunity
 
 #### The problem
 
-We have one successful product with thousands of monthly users, delivering
-10s of millions of updates around the globe, every month.  We built this all
-with 2 engineers.  We also recently launched a second product.  We simply
-need more engineers to keep up with our growing user base an ambition.
+We have one successful product with thousands of monthly users, delivering 10s
+of millions of updates around the globe, every month. We built this all with 2
+engineers. We also recently launched a second product. We simply need more
+engineers to keep up with our growing user base an ambition.
 
 #### What You’ll Do
 
