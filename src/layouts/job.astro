@@ -3,10 +3,10 @@ import MainLayout from '@/layouts/main.astro';
 import { Navbar } from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer.astro';
 
-const { title, description } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title}>
   <Navbar client:load />
   <article
     class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
@@ -21,9 +21,7 @@ const { title, description } = Astro.props;
           href="https://discord.gg/shorebird">Discord</a
         >, read our <a href="https://github.com/shorebirdtech"
           >GitHub issues/code/project plans</a
-        >, and <a href="https://handbook.shorebird.dev/"
-          >public company handbook</a
-        >.
+        >, and public company handbook.
       </p>
     </div>
     <slot />
