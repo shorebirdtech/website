@@ -1,0 +1,47 @@
+---
+import MainLayout from '@/layouts/main.astro';
+import { Navbar } from '@/components/ui/navbar';
+import Footer from '@/components/ui/footer.astro';
+import config from '@/config';
+
+const { title, location, type } = Astro.props;
+---
+
+<MainLayout title={title}>
+  <Navbar client:load />
+  <article
+    class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
+  >
+    <h1 class="m-0! text-center">{title}</h1>
+    <div class="py-8">
+      <p>
+        Shorebird is a default-public company, so nearly everything we do is in
+        the open. You're always welcome to lurk on our <a
+          href={config.discordUrl}>Discord</a
+        >, read our <a href={config.githubUrl}
+          >GitHub issues/code/project plans</a
+        >, and <a href={config.handbookUrl}
+          >public company handbook</a
+        > to see how we work.
+      </p>
+    </div>
+    <div class="text-text-2">
+      <p><strong>Location:</strong> {location}</p>
+      <p><strong>Type:</strong> {type}</p>
+    </div>
+    <slot />
+    <div class="py-8">
+      <p>
+        To apply, please email <a href={`mailto:${config.hiringEmail}`}
+          >{config.hiringEmail}</a
+        >. Please include your resume or LinkedIn profile.
+      </p>
+    </div>
+  </article>
+  <Footer />
+  <style is:global>
+    .prose {
+      max-width: 80ch;
+    }
+  </style>
+</MainLayout>
