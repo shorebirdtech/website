@@ -9,7 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { ArrowRight, Check, Minus } from '@phosphor-icons/react';
+import { ArrowRightIcon, CheckIcon, MinusIcon } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -306,7 +306,7 @@ function PricingPlans({ includeTable }: { includeTable?: boolean }) {
                 <a href={plan.cta.link}>
                   <GradientOutlineButton className="w-full px-8 font-light">
                     {plan.cta.title}{' '}
-                    <ArrowRight className="size-5" weight="bold" />
+                    <ArrowRightIcon className="size-5" weight="bold" />
                   </GradientOutlineButton>
                 </a>
               </CardContent>
@@ -353,7 +353,7 @@ function PricingTable({ isAnnual }: { isAnnual: boolean }) {
                   {feature[plan.name.toLowerCase() as keyof Feature] ? (
                     feature[plan.name.toLowerCase() as keyof Feature] ===
                     '✓' ? (
-                      <Check
+                      <CheckIcon
                         weight="bold"
                         className="text-accent-primary-1 inline h-5 w-5"
                       />
@@ -361,7 +361,7 @@ function PricingTable({ isAnnual }: { isAnnual: boolean }) {
                       feature[plan.name.toLowerCase() as keyof Feature]
                     )
                   ) : (
-                    <Minus
+                    <MinusIcon
                       weight="bold"
                       className="inline h-5 w-5 text-gray-500"
                     />

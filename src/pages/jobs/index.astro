@@ -1,6 +1,6 @@
 ---
 import '@/styles/global.css';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { getCollection } from 'astro:content';
 import { Navbar } from '@/components/ui/navbar';
 import { ScrollToTopButton } from '@/components/scroll-to-top-button';
@@ -8,7 +8,7 @@ import { Spacer } from '@/components/ui/spacer';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 
-const jobs = (await getCollection('jobs')).filter((job) => !job.data.draft);
+const jobs = await getCollection('jobs');
 ---
 
 <MainLayout title="Jobs">

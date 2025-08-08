@@ -1,7 +1,7 @@
 ---
 import '@/styles/global.css';
 import { BlogCallout } from '@/components/blog/blog-callout';
-import { ClockCountdown } from '@phosphor-icons/react';
+import { ClockCountdownIcon } from '@phosphor-icons/react';
 import { Image } from 'astro:assets';
 import { Navbar } from '@/components/ui/navbar';
 import { Spacer } from '@/components/ui/spacer';
@@ -144,7 +144,7 @@ const authors: Record<string, Author> = {
       <div class="flex flex-row items-center justify-between">
         <span
           class="text-text-2 m-0! flex flex-row items-center justify-center gap-1 text-sm"
-          ><ClockCountdown className="inline size-4" />{readingTime}</span
+          ><ClockCountdownIcon className="inline size-4" />{readingTime}</span
         >
         <span class="text-text-2 m-0! text-sm"
           ><FormattedDate date={date} /></span

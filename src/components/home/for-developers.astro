@@ -1,5 +1,5 @@
 ---
-import { ArrowRight, Check } from '@phosphor-icons/react';
+import { ArrowRightIcon, CheckIcon } from '@phosphor-icons/react';
 import { Button, GradientOutlineButton } from '@/components/ui/button';
 import { Image } from 'astro:assets';
 import config from '@/config';
@@ -25,26 +25,29 @@ import SocialProof from '@/assets/features/social-proof.png';
       </span>
       <ul class="flex flex-col gap-4">
         <li class="flex flex-row items-start gap-2">
-          <Check className="text-accent-primary-1 size-6" /> Iterate quickly and
-          confidently
+          <CheckIcon className="text-accent-primary-1 size-6" /> Iterate quickly
+          and confidently
         </li>
         <li class="flex flex-row items-start gap-2">
-          <Check className="text-accent-primary-1 size-6" />Hotfix in seconds,
-          not days
+          <CheckIcon className="text-accent-primary-1 size-6" />Hotfix in
+          seconds, not days
         </li>
         <li class="flex flex-row items-start gap-2">
-          <Check className="text-accent-primary-1 size-6" />No need for legacy
-          code path maintenance
+          <CheckIcon className="text-accent-primary-1 size-6" />No need for
+          legacy code path maintenance
         </li>
         <div class="mt-6 flex w-full flex-row items-start gap-4">
           <a href={config.consoleUrl}>
             <GradientOutlineButton className="font-light">
-              Get started <ArrowRight className="size-5" weight="bold" />
+              Get started <ArrowRightIcon className="size-5" weight="bold" />
             </GradientOutlineButton>
           </a>
           <a href="/blog">
             <Button variant="outline" className="font-light">
-              Learn more <ArrowRight className="size-5" weight="bold" /></Button
+              Learn more <ArrowRightIcon
+                className="size-5"
+                weight="bold"
+              /></Button
             >
           </a>
         </div>

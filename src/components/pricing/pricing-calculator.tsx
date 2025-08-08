@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
-import { ArrowRight } from '@phosphor-icons/react';
+import { ArrowRightIcon } from '@phosphor-icons/react';
 import React from 'react';
 
 const clamp = (n: number, min: number, max: number) =>
@@ -46,7 +46,7 @@ function PricingCalculator({ hideCTA }: { hideCTA?: boolean }) {
             <a href="/pricing" className="items-start">
               <Button variant="outline" className="w-full font-light">
                 View full pricing{' '}
-                <ArrowRight className="size-5" weight="bold" />
+                <ArrowRightIcon className="size-5" weight="bold" />
               </Button>
             </a>
           )}
