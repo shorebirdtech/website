@@ -41,6 +41,7 @@ const jobsCollection = defineCollection({
     description: z.string(),
     location: z.string(),
     type: z.string(),
+    cover: z.string(),
   }),
 });
 

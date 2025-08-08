@@ -1,11 +1,11 @@
 ---
 title: Full Stack Software Engineer
 description:
-  Build and maintain developer tools and cloud infrastructure used developers
-  around the globe.
+  Build and maintain developer tools and cloud infrastructure used globally.
 location:
   Remote (North America) or in-person (Chicago, New York City, or Palo Alto)
 type: Full-time
+cover: engineer-cover.png
 ---
 
 ### Overview
