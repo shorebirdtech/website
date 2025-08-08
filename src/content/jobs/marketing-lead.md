@@ -1,8 +1,11 @@
 ---
 title: Marketing Lead
-description: Help us reach all Flutter developers.
+description:
+  Help us reach all Flutter developers and shape how we tell the Shorebird
+  story.
 location: Remote (North America)
 type: Full-time or contract
+cover: marketing-cover.png
 ---
 
 ### Overview
