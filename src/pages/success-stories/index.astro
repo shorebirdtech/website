@@ -12,7 +12,6 @@ import { Spacer } from '@/components/ui/spacer';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import type { ImageMetadata } from 'astro';
-import FormattedDate from '@/components/blog/formatted-date.astro';
 
 const sortByDate = (a: any, b: any) =>
   new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
@@ -74,7 +73,7 @@ const coverImages = stories.map((story) => {
                     {story.data.title}
                   </h1>
                 </div>
-                <p class="text-text-2 text-ellipsis line-clamp-2">
+                <p class="text-text-2 line-clamp-2 text-ellipsis">
                   {story.data.description}
                 </p>
               </CardContent>
