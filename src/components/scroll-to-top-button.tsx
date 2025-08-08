@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { CaretUp } from '@phosphor-icons/react';
+import { CaretUpIcon } from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
 
 function ScrollToTopButton() {
@@ -34,7 +34,7 @@ function ScrollToTopButton() {
           className="fixed right-6 bottom-6 z-50 flex size-12 cursor-pointer items-center justify-center transition"
           onClick={scrollToTop}
         >
-          <CaretUp weight="bold" className="text-accent-primary-1 size-8" />
+          <CaretUpIcon weight="bold" className="text-accent-primary-1 size-8" />
         </Button>
       )}
     </>

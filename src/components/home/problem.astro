@@ -1,6 +1,10 @@
 ---
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { ClockCountdown, ChartLine, MoneyWavy } from '@phosphor-icons/react';
+import {
+  ClockCountdownIcon,
+  ChartLineIcon,
+  MoneyWavyIcon,
+} from '@phosphor-icons/react';
 import { Spacer } from '@/components/ui/spacer';
 
 const problems = [
@@ -8,19 +12,19 @@ const problems = [
     title: 'App updates are slow',
     description:
       'It can take days, or even weeks, to get updates deployed to all users and platforms.',
-    icon: ClockCountdown,
+    icon: ClockCountdownIcon,
   },
   {
     title: 'Releasing is expensive',
     description:
       'Automating and coordinating releases takes valuable time away from delivering customer value.',
-    icon: MoneyWavy,
+    icon: MoneyWavyIcon,
   },
   {
     title: 'Deployments are unpredictable',
     description:
       'Traditional release processes make it very difficult to estimate when an update will be available to users.',
-    icon: ChartLine,
+    icon: ChartLineIcon,
   },
 ];
 ---
