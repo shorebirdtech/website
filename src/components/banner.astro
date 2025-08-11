@@ -2,19 +2,19 @@
 import { InfoIcon } from '@phosphor-icons/react';
 import { Button } from '@/components/ui/button';
 
-const { url, cta, message } = Astro.props;
+const { link, title, description } = Astro.props;
 ---
 
 <div
   class="mx-auto flex w-11/12 items-center gap-4 py-3 xl:w-10/12 2xl:w-[1280px]"
 >
-  <a href={url}>
+  <a href={link}>
     <Button variant="outline" size="sm" className="font-light">
       <span class="text-accent-secondary-1">
         <InfoIcon />
       </span>
-      {cta}
+      {title}
     </Button>
   </a>
-  <p class="text-text-2 text-sm">{message}</p>
+  <p class="text-text-2 text-sm">{description}</p>
 </div>
