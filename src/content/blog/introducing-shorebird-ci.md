@@ -37,7 +37,8 @@ pipelines.
 In building Shorebird CI we focused on 5 key points.
 
 - **Blazingly Fast** - In our tests, moving to Shorebird CI delivered up to 5×
-  faster pipelines compared to typical Flutter builds.
+  faster pipelines compared to typical pipelines. This is based off of our quick
+  startup times and automatic parallelization.
 - **Zero-Config Setup** - Forget giant YAML files and bash scripts. By
   statically analyzing your project, Shorebird CI can infer most of your config
   automatically.
