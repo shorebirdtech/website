@@ -2,21 +2,21 @@
 layout: '@/layouts/markdown.astro'
 title: Privacy Policy
 description: Shorebird Privacy Policy
-last_updated: 09-19-2024
+last_updated: 08-13-2025
 ---
 
 # Privacy Policy
 
-_Last updated Sept 10, 2024._
+_Last updated August 13, 2025._
 
 ### General Information
 
-Code Town, Inc. (d/b/a “Shorebird”) is committed to protecting the privacy and
+Code Town, Inc. (d/b/a "Shorebird") is committed to protecting the privacy and
 security of the information we collect and to being transparent about the ways
-in which we collect and process your information. This statement (the “Privacy
-Policy”) sets forth our policies and practices for handling the information we
+in which we collect and process your information. This statement (the "Privacy
+Policy") sets forth our policies and practices for handling the information we
 collect from or about you. It applies to the websites and services that we
-operate and that link to this Privacy Policy (the “Services”).
+operate and that link to this Privacy Policy (the "Services").
 
 ### Collection of Information
 
@@ -80,7 +80,17 @@ covered by this Privacy Policy.
 
 ### Cookies
 
-Shorebird does not use any cookies at this time.
+We use a single session cookie to maintain your login session while you navigate
+our Services. This cookie is strictly necessary for the operation of the
+Services. It allows us to keep you logged in while you move between pages and
+use the features of the Services. This cookie expires automatically when you log
+out or close your browser.
+
+We do not use any cookies for advertising, analytics, or tracking purposes.
+
+By using the Services, you consent to our use of this essential cookie. If you
+do not agree to the use of this session cookie, you should not use the Services
+or log in to your account, as the service cannot function properly without it.
 
 ### International Transfers
 
