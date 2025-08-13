@@ -76,6 +76,7 @@ From there, Shorebird CI automatically runs checks for:
 - Formatting
 - Analyzer
 - Unit tests
+- Widget tests
 - Spell check
 - Code coverage
 
