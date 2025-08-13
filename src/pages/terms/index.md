@@ -7,5 +7,5 @@ last_updated: 03-04-2024
 
 # Terms of Service
 
-- [Code Push](/terms/code-push)
 - [CI](/terms/ci)
+- [Code Push](/terms/code-push)

@@ -1,8 +1,8 @@
 ---
 layout: '@/layouts/markdown.astro'
-title: Terms of Service
-description: Shorebird Terms of Service
-last_updated: 03-04-2024
+title: Terms of Service - Shorebird CI
+description: Terms of Service for Shorebird CI
+last_updated: 08-14-2025
 ---
 
 # Terms of Service - Shorebird CI
