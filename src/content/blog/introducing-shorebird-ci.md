@@ -38,8 +38,7 @@ In building Shorebird CI we focused on 5 key points.
 
 - **Blazingly Fast** - In our tests, moving to Shorebird CI delivered up to 5×
   faster pipelines compared to typical Flutter builds.
-- **Zero-Config Setup** - Forget giant YAML files. By building directly on top
-  of the Flutter framework, we can infer most of your config automatically.
+- **Zero-Config Setup** - Forget giant YAML files and bash scripts. By statically analyzing your project, Shorebird CI can infer most of your config automatically.
 - **Dart-Native** - Works with any Dart or Flutter project. Always up to date
   with the latest Dart and Flutter changes so you’re never blocked from adopting
   new features.
