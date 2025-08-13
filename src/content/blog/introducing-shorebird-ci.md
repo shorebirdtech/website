@@ -55,8 +55,8 @@ make CI faster, simpler, and more reliable for everyone.
 ## Pricing
 
 - Open Source — Free to use for public repos.
-- Private Repos — $20/month for all features, plus a secure, private tenant to
-  keep your code safe.
+- Private Repos — $20/month for 100 hours of compute per month, plus a secure,
+  private tenant to keep your code safe.
 
 Simple. Transparent. Scales with you.
 
