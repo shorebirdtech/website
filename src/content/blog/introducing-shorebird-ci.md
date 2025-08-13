@@ -71,7 +71,7 @@ steps:
 
 Yep, that's really it.
 
-SCREENSHOT GOES HERE
+![Showing Shorebird CI in GitHub Checks in a PR](../../assets/blog/introducing-shorebird-ci/shorebird_ci_in_github_checks.png)
 
 From there, Shorebird CI automatically runs checks for:
 
@@ -81,6 +81,8 @@ From there, Shorebird CI automatically runs checks for:
 - Widget tests
 - Spell check
 - Code coverage
+
+![Output of Shorebird CI](../../assets/blog/introducing-shorebird-ci/shorebird_ci_output.png)
 
 Already have other checks you depend on? Let us know — we’re adding more soon
 and prioritizing the ones our customers rely on most.
