@@ -179,8 +179,8 @@ distribute, or create derivative works of the source code to Your Application;
 (c) retain or store the source code to Your Application; (d) use the source code
 to the Your for machine learning or artificial intelligence model training; or
 (e) disclose the source code to Your Application to third parties, except to
-subprocessors or infrastructure providers subject to appropriate confidentiality
-obligations.
+sub-processors or infrastructure providers subject to appropriate
+confidentiality obligations.
 
 ## G. Fees and Billing
 
