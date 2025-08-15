@@ -14,8 +14,9 @@ system built exclusively for Flutter and Dart by the very people who created
 Flutter.
 
 You’ve got a product to deliver. Who wants to wrestle with YAML? Or spend hours
-fiddling with CI pipelines that weren’t built with Flutter in mind? Why isn’t
-there a CI solution that just works out of the box and enforces best practices?
+fiddling with CI pipelines that weren’t built with Dart and Flutter in mind? Why
+isn’t there a CI solution that just works out of the box and enforces best
+practices?
 
 While building Code Push, we kept running into those same questions and realized
 there wasn’t anything available that met our needs. So we built it.
