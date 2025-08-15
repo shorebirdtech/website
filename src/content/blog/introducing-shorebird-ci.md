@@ -34,7 +34,7 @@ pipelines.
 
 ## Our Focus
 
-In building Shorebird CI we focused on 5 key points.
+In building Shorebird CI we focused on 4 key points.
 
 - **Blazingly Fast** - In our tests, moving to Shorebird CI delivered up to 5×
   faster pipelines compared to typical pipelines. This is based off of our quick
@@ -47,8 +47,6 @@ In building Shorebird CI we focused on 5 key points.
   new features.
 - **Mono-repo Aware** - Growing into a mono-repo? We handle it out of the box,
   so you can start small and scale without painful migrations.
-- **Truly Multi-Platform** - Build for any platform Flutter supports. Your
-  customers aren’t on one device, and your CI shouldn’t be either.
 
 From indie apps to Fortune 500 enterprises moving to Flutter, these principles
 make CI faster, simpler, and more reliable for everyone.
