@@ -17,7 +17,8 @@ You’ve got a product to deliver. Who wants to wrestle with YAML? Or spend hour
 fiddling with CI pipelines that weren’t built with Flutter in mind? Why isn’t
 there a CI solution that just works out of the box and enforces best practices?
 
-There wasn’t one, so we built it.
+While building Code Push, we kept running into those same questions and realized
+there wasn’t anything available that met our needs. So we built it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMMV418Dt80?si=Ec4cphd4vm1WFBEI" style="display:block;margin: 0 auto;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
