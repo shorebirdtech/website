@@ -5,7 +5,7 @@ description:
   Our take on Flutter 3.35 and Dart 3.9. What’s new, why it matters, and how
   Shorebird is getting ready for it.
 date: 2025-08-15
-cover: flutter-3.32-cover.png
+cover: flutter-3.35-cover.png
 ---
 
 Flutter turns 11 next month! Over the past decade plus of development, it’s gone
