@@ -73,5 +73,8 @@ extra work on our side to reapply our changes on top of the new release, but we
 expect full Flutter 3.35 + Dart 3.9 support in Shorebird during the week of
 August 18th.
 
-Follow us on X, BlueSky, or LinkedIn to know when that new release is ready.
-Then all it takes is a quick `shorebird upgrade` to ensure you’re up to date.
+Follow us on [X](https://twitter.com/shorebirddev),
+[BlueSky](https://bsky.app/profile/shorebird.dev), or
+[LinkedIn](https://www.linkedin.com/company/shorebirddev) to know when that new
+release is ready. Then all it takes is a quick `shorebird upgrade` to ensure
+you’re up to date.
