@@ -38,9 +38,10 @@ pipelines.
 
 In building Shorebird CI we focused on 4 key points.
 
-- **Blazingly Fast** - In our tests, moving to Shorebird CI delivered up to 5×
-  faster pipelines compared to typical pipelines. This is based off of our quick
-  startup times and automatic parallelization.
+- **Blazingly Fast** — In our tests, Shorebird CI delivered up to 5× faster
+  pipelines compared to typical setups. Thanks to quick startup times and
+  reliable change detection, we run only the affected packages and automatically
+  parallelize builds for maximum speed.
 - **Zero-Config Setup** - Forget giant YAML files and bash scripts. By
   statically analyzing your project, Shorebird CI can infer most of your config
   automatically.
