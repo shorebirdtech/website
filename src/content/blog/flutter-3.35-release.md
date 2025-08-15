@@ -8,12 +8,12 @@ date: 2025-08-15
 cover: flutter-3.35-cover.png
 ---
 
-Flutter turns 11 next month! Over the past decade, it’s gone
-from an ambitious experiment to one of the most widely used cross-platform
-frameworks in the world. Today, Flutter is well established in the industry,
-seeing strong adoption across startups and enterprise teams alike. Earlier this
-year, Google shared that Flutter now powers nearly 30% of all free iOS app
-submissions and monthly active Flutter developers passed 1 million long ago.
+Flutter turns 11 next month! Over the past decade, it’s gone from an ambitious
+experiment to one of the most widely used cross-platform frameworks in the
+world. Today, Flutter is well established in the industry, seeing strong
+adoption across startups and enterprise teams alike. Earlier this year, Google
+shared that Flutter now powers nearly 30% of all free iOS app submissions and
+monthly active Flutter developers passed 1 million long ago.
 
 ## The scale of Flutter
 
