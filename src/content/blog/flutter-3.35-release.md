@@ -66,7 +66,7 @@ announcements for the full details.
 
 We’re excited about this release, and we’ve been working closely with Google to
 make sure Shorebird’s Code Push product is ready for it. In fact, some of our
-changes have been upstreamed into the Dart VM itself. That does mean a bit of
+changes have been pulled up into the Dart VM itself. That does mean a bit of
 extra work on our side to reapply our changes on top of the new release, but we
 expect full Flutter 3.35 + Dart 3.9 support in Shorebird during the week of
 August 18th.
