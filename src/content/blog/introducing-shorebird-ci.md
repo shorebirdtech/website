@@ -13,7 +13,7 @@ We’re thrilled to announce our newest product:
 system built exclusively for Flutter and Dart by the very people who created
 Flutter.
 
-You’ve got an app to ship. Who wants to wrestle with YAML? Or spend hours
+You’ve got a product to deliver. Who wants to wrestle with YAML? Or spend hours
 fiddling with CI pipelines that weren’t built with Flutter in mind? Why isn’t
 there a CI solution that just works out of the box and enforces best practices?
 
