@@ -1,5 +1,5 @@
 ---
-title: Looking at Flutter 3.35 & Dart 3.9 and Shorebird Support
+title: Looking at Flutter 3.35 & Dart 3.9
 author: eseidel
 description:
   Our take on Flutter 3.35 and Dart 3.9. What’s new, why it matters, and how
