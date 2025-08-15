@@ -77,12 +77,14 @@ Yep, that's really it.
 
 From there, Shorebird CI automatically runs checks for:
 
-- Formatting
-- Analyzer
-- Unit tests
-- Widget tests
-- Spell check
-- Code coverage
+- **Consistent formatting with the Dart formatter** — No more nit-picky style
+  debates.
+- **Clean analysis reports powered by your own analysis_options.yaml** — Catch
+  issues before they ship.
+- **Passing unit & widget tests** — Because your users shouldn’t be your QA
+  team.
+- **Spell check (via cspell)** — Protect your UI from embarrassing typos.
+- **Code coverage (via codecov)** — Know exactly what’s tested and what’s not.
 
 ![Output of Shorebird CI](../../assets/blog/introducing-shorebird-ci/shorebird_ci_output.png)
 
