@@ -56,9 +56,13 @@ make CI faster, simpler, and more reliable for everyone.
 
 ## Pricing
 
-- Open Source — Free to use for public repos.
-- Private Repos — $20/month for 100 hours of compute per month, plus a secure,
-  private tenant to keep your code safe.
+- Open Source - Free during this beta period for public repositories. This
+  includes all Shorebird CI features so you can run fast, zero-config pipelines
+  for your community projects.
+- Private Repos — $20/month beta pricing you can lock in now. Includes up to 100
+  hours of compute per month in a secure, private tenant to keep your code safe.
+  Pricing may change after beta as we learn more about customer usage and move
+  toward general availability.
 
 Simple. Transparent. Scales with you.
 
