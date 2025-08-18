@@ -2,12 +2,12 @@
 layout: '@/layouts/markdown.astro'
 title: Terms of Service - Shorebird Code Push
 description: Terms of Service for Shorebird Code Push
-last_updated: 03-04-2024
+last_updated: 08-15-2025
 ---
 
 # Terms of Service - Shorebird Code Push
 
-Last updated and Effective as of March 4th, 2024.
+Last updated and Effective as of August 15th, 2025.
 
 THESE TERMS OF SERVICE (“TERMS OF SERVICE” OR “AGREEMENT”) GOVERN YOUR USE OF
 THE SHOREBIRD.DEV WEBSITE AND/OR ANY OF THE SERVICES OFFERED BY CODE TOWN, INC.

@@ -2,12 +2,12 @@
 layout: '@/layouts/markdown.astro'
 title: Terms of Service - Shorebird CI
 description: Terms of Service for Shorebird CI
-last_updated: 08-14-2025
+last_updated: 08-15-2025
 ---
 
 # Terms of Service - Shorebird CI
 
-Last updated and Effective as of August 13, 2025
+Last updated and Effective as of August 15th, 2025
 
 THESE TERMS OF SERVICE (“TERMS OF SERVICE” OR “AGREEMENT”) GOVERN YOUR USE OF
 THE SHOREBIRD CI PRODUCT OFFERED BY CODE TOWN, INC. (D/B/A “SHOREBIRD”) THROUGH
