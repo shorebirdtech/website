@@ -282,7 +282,27 @@ IF SHOREBIRD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE FOREGOING
 LIMITATION OF LIABILITY SHALL APPLY TO THE FULLEST EXTENT PERMITTED BY LAW IN
 THE APPLICABLE JURISDICTION.
 
-## M. General Conditions.
+## M. Publicity.
+
+You agree that We may identify You as a customer and use Your name, logo, and
+trademark in Our promotional materials, including but not limited to Our
+website, press releases, and customer presentations. Any such use will be in
+accordance with Your standard trademark usage guidelines, as provided by You or
+otherwise made publicly available on Your website.
+
+## N. Cookies and Session Tracking.
+
+When you access your account or log in to use the Services, we use a single
+session cookie to authenticate your session and maintain your logged-in state
+while you navigate the site. This session cookie is essential to the
+functionality and security of the Services and expires automatically when you
+log out or close your browser. By accessing or using the Services, you
+acknowledge and agree that this session cookie is necessary for the operation of
+the Services. If you do not consent to our use of this session cookie, you may
+not use the Services. We do not use cookies for advertising, analytics, or
+tracking.
+
+## O. General Conditions.
 
 - You acknowledge and agree that the Services may be subject to export controls
   and regulations imposed by the United States government or other relevant
