@@ -24,8 +24,6 @@ simply need more engineers to keep up with our growing user base and ambition.
   hosted on Google Cloud, frontends in React, and client software in Dart and
   C++.
 
-- Own and ship features end-to-end, from our web UI to our backend APIs.
-
 - Help shape our culture, processes, and product direction.
 
 - Note: We typically don't use Flutter for our day to day work. We build Flutter
