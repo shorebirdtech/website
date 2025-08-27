@@ -4,7 +4,7 @@ description:
   Own all our C++ code, including our Flutter Engine and Dart forks, and work on
   systems used globally.
 location: Remote (North America)
-type: Full-time
+type: Full-time or contracting
 cover: engineer-cover.png
 ---
 
