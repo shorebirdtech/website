@@ -53,7 +53,8 @@ simply need more engineers to keep up with our growing user base and ambition.
 - Experience with at least one of compilers, runtimes, browsers, game engines,
   or low-level mobile software.
 
-- Nice to have: Experience working on V8, Dart, the Flutter Engine, WebKit, or any other large open source C++ project.
+- Nice to have: Experience working on V8, Dart, the Flutter Engine, WebKit, or
+  any other large open source C++ project.
 
 - You're a self-starter — you work well with little oversight and thrive in
   ambiguous environments.
