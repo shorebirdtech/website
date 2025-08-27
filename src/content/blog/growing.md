@@ -1,5 +1,5 @@
 ---
-title: Working at Shorebird
+title: Expanding the Shorebird Team
 author: eseidel
 description: A quick look back to see how we got to today and how we are building for tomorrow.
 date: 2025-08-27
