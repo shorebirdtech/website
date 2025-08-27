@@ -40,22 +40,22 @@ focused home for Flutter is what lies in our future.
 Shorebird's revenues have tripled since the start of this year, and our userbase
 has grown similarly. So much so that our tiny team now struggles to keep up with
 it all. We're even about to launch a
-[second product](https://ci.shorebird.dev/), which surely will stretch our team
-thinner. It's time for Shorebird to grow. We're well funded from a top-5 VC and
-excellent angel investors and on a path to cross into profitability early next
-year. But we're still small enough (only 4 of us!) that there is vast amounts of
-opportunity available to anyone joining us to chart the future of Shorebird and
-Flutter.
+[second product](https://docs.shorebird.dev/ci), which surely will stretch our
+team thinner. It's time for Shorebird to grow. We're well funded from a top-5 VC
+and excellent angel investors and on a path to cross into profitability early
+next year. But we're still small enough (only 4 of us!) that there is vast
+amounts of opportunity available to anyone joining us to chart the future of
+Shorebird and Flutter.
 
 We're hiring for a range of engineering roles, including a web-specialist
 (including potentially early-career candidates), a senior full-stack/generalist
 and a senior C++ specialist (to own our custom compiler and runtime). We're also
 hiring someone to lead our marketing efforts and teach this group of engineers
-how to the millions of Flutter developers who haven't even heart of us yet.
-We're fully remote, able to hire anywhere in North America with existing team
-members near San Francisco, Chicago and New York City. We pay well (including a
-large equity stake), with good benefits and are looking for great folks like
-yourself to join us.
+how to get the attention of the millions of Flutter developers who haven't even
+heard of us yet. We're fully remote, able to hire anywhere in North America with
+existing team members near San Francisco, Chicago and New York City. We pay well
+(including a large equity stake), with good benefits and are looking for great
+folks like yourself to join us.
 
 Come work with us and build the future of development!
 
