@@ -4,7 +4,7 @@ author: eseidel
 description: Shorebird is growing!
 date: 2025-08-27
 cover: '1.0-cover.png'
-slug: '1.0'
+slug: 'shorebird-is-growing'
 ---
 <!-- cspell:words janky -->
 
