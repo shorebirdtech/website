@@ -1,9 +1,9 @@
 ---
 title: Full Stack Engineer
 description:
-  Build and ship new services for Flutter developers and businesses from beginning to end.
-location:
-  Remote (North America)
+  Build and ship new services for Flutter developers and businesses from
+  beginning to end.
+location: Remote (North America)
 type: Full-time
 cover: engineer-cover.png
 ---
@@ -17,9 +17,11 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Build and ship new services for Flutter developers and businesses (e.g. crash reporting, CI/CD, hosting) from beginning to end.
+- Build and ship new services for Flutter developers and businesses (e.g. crash
+  reporting, CI/CD, hosting) from beginning to end.
 
-- Work across our stack (our backends in Dart hosted on Google Cloud, client software in Dart and C++, frontends in React).
+- Work across our stack (our backends in Dart hosted on Google Cloud, frontends
+  in React, client software in Dart and C++).
 
 - Own and ship features end-to-end, from our web UI to our backend APIs.
 
@@ -53,9 +55,6 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - You're a self-starter — you work well with little oversight and thrive in
   ambiguous environments.
-
-- You're excited about Flutter and want to help it succeed.
-
 - You care about product quality and developer experience.
 
 - Bonus: experience with build systems, deployment pipelines, or developer
@@ -71,8 +70,11 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Shape the future of how mobile apps are built and shipped.
 
-- You will be the 3rd engineer to join us, with huge opportunity to work across a broad range of tech, collaborate with a senior team, and interface as directly as you want with customers around the globe.
+- You will be the 3rd engineer to join us, with huge opportunity to work across
+  a broad range of tech, collaborate with a senior team, and interface as
+  directly as you want with customers around the globe.
 
 - Access to 1000s of customers via our Discord if you need to ask one something.
 
-- We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize as a team for a week.
+- We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize
+  as a team for a week.

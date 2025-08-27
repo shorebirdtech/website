@@ -1,7 +1,8 @@
 ---
 title: Web Software Engineer
 description:
-  Own our front-ends and work with designers to optimize user experience for Flutter developers.
+  Own our front-ends and work with designers to optimize user experience for
+  Flutter developers.
 location:
   Remote (North America) or in-person (Chicago, New York City, or San Francisco)
 type: Full-time
@@ -19,7 +20,12 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Own our front-ends (website, console, etc.).
 
-- Work with other engineers to implement the front-end parts of new features and products.
+- Work with other engineers to implement the front-end parts of new features and
+  products.
+
+- Build the user experience for all the cloud parts that a Flutter developer
+  needs, but doesn't want to build themselves (e.g. anything Firebase offers,
+  various GitHub-adjacent services, etc.).
 
 - Contract with designers to optimize for user experience.
 
@@ -40,27 +46,20 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - 2+ years of experience shipping production web apps.
 
-- Experience with React, TypeScript, Postgres and (ideally) Dart (what our backend is written in).
+- Experience with React, TypeScript, Postgres and (ideally) Dart (what our
+  backend is written in).
 
 - Nice to have: Startup experience, ideally B2B SaaS.
 
-- You're a strong generalist who can jump into unfamiliar systems and figure
-  things out.
-
 - You're a self-starter — you work well with little oversight and thrive in
-  ambiguous environments.
-
-- You're excited about Flutter and want to help it succeed.
+  ambiguous environments. You'll have support as the most junior member of our
+  team, but this still won't be like working at a big tech job with formal
+  training or processes, you'll have to learn and teach yourself most things
+  (with help).
 
 - You care about product quality and developer experience.
 
-- You have solid experience with at least one part of the stack — cloud,
-  developer tools, or compilers/runtimes — and are eager to learn the rest.
-
-- Bonus: experience with build systems, deployment pipelines, or developer
-  tools.
-
-- Bonus: startup experience or contributions to open source projects.
+- Bonus: startup experience or contributions to large open source projects.
 
 ### Why Join
 
@@ -70,8 +69,11 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Shape the future of how mobile apps are built and shipped.
 
-- This job is a great opportunity for someone who wants to work at a startup, has done some frontend but is generally interested in the opportunities that come from working on such a small and senior team.
+- This job is a great opportunity for someone who wants to work at a startup,
+  has done some frontend but is generally interested in the opportunities that
+  come from working on such a small and senior team.
 
 - Access to 1000s of customers via our Discord if you need to ask one something.
 
-- We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize as a team for a week.
+- We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize
+  as a team for a week.

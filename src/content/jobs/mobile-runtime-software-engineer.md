@@ -1,9 +1,9 @@
 ---
 title: Mobile Runtime Software Engineer
 description:
-  Own all our C++ code, including our Flutter Engine and Dart forks, and work on systems used by billions.
-location:
-  Remote (North America)
+  Own all our C++ code, including our Flutter Engine and Dart forks, and work on
+  systems used by billions.
+location: Remote (North America)
 type: Full-time
 cover: engineer-cover.png
 ---
@@ -21,13 +21,20 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Work with Google Flutter team to upstream changes from our C++ forks.
 
-- Build out your own infrastructure and tooling for maintaining a large code base.
+- Add new features to our custom Dart and Flutter (e.g. asset push support, dart
+  code obfuscation, port Flutter to new platforms, optimize our interpreter,
+  etc.)
 
-- Write up a design for a new product or feature.
+- Build out your own infrastructure and tooling for maintaining a large code
+  base.
 
-- Work with a customer (or data they've authorized us to use for product improvements) to analyze a failure or improve execution for the entire Flutter ecosystem.
+- Write up a designs for a new products or features.
 
-- Help shape our culture, processes, and product direction.
+- Work with a customers (and data they've authorized us to use for product
+  improvements) to analyze a failure or improve execution for the entire Flutter
+  ecosystem.
+
+- Help shape our company culture, processes, and product direction.
 
 - Note: We don't use Flutter, we build Flutter itself and services for Flutter.
 
@@ -44,22 +51,15 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - 5+ years working on shipping software. At least 2+ years with C++.
 
-- Experience with compilers, runtimes, browsers, game engines, mobile software.
+- Experience with at least one of compilers, runtimes, browsers, game engines,
+  or low-level mobile software.
 
 - Nice to have: Experience working on V8, Dart, the Flutter Engine or WebKit.
-
-- You're a strong generalist who can jump into unfamiliar systems and figure
-  things out.
 
 - You're a self-starter — you work well with little oversight and thrive in
   ambiguous environments.
 
-- You're excited about Flutter and want to help it succeed.
-
 - You care about product quality and developer experience.
-
-- You have solid experience with at least one part of the stack — cloud,
-  developer tools, or compilers/runtimes — and are eager to learn the rest.
 
 - Bonus: experience with build systems, deployment pipelines, or developer
   tools.
@@ -74,10 +74,20 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Shape the future of how mobile apps are built and shipped.
 
-- You'll do a lot of what Google's Flutter Engine and platform teams do (including work on C++ code used by billions every day), however unlike at a big tech, you will have direct (financial) incentives to improve outcomes for businesses using Flutter and very direct access to those customers and (when appropriate authorizations are in place) code, build systems, usage patterns, etc, and autonomy and resources to dramatically improve those outcomes.
+- You'll do a lot of what Google's Flutter Engine and platform teams do
+  (including work on C++ code used by billions every day), however unlike at a
+  big tech, you will have direct (financial) incentives to improve outcomes for
+  businesses using Flutter and very direct access to those customers and (when
+  appropriate authorizations are in place) code, build systems, usage patterns,
+  etc, and autonomy and resources to dramatically improve those outcomes.
 
-- This job requires a lot of low-level experience and is much more broad than working on similarly specialized systems at a very large company, but has incredible rewards of being able to directly affect so many customers so quickly (and be thusly compensated through a large ownership stake in the company) in ways similar jobs inside big-tech are generally insulated from.
+- This job requires a lot of low-level experience and is much more broad than
+  working on similarly specialized systems at a very large company, but has
+  incredible rewards of being able to directly affect so many customers so
+  quickly (and be thusly compensated through a large ownership stake in the
+  company) in ways similar jobs inside big-tech are generally insulated from.
 
 - Access to 1000s of customers via our Discord if you need to ask one something.
 
-- We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize as a team for a week.
+- We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize
+  as a team for a week.
