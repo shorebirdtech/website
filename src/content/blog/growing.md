@@ -6,6 +6,7 @@ date: 2025-08-27
 cover: '1.0-cover.png'
 slug: '1.0'
 ---
+<!-- cspell:words janky -->
 
 11 years ago, a group of us left the Chrome team believing there had to be
 something better than janky web pages, or complicated Java apps to build for
