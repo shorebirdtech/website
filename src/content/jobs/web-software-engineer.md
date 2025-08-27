@@ -60,8 +60,6 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - You care about product quality and developer experience.
 
-- Bonus: startup experience or contributions to large open source projects.
-
 ### Why Join
 
 - Work directly with a small, senior team solving hard, high-impact problems.
