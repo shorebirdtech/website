@@ -1,5 +1,5 @@
 ---
-title: Work at Shorebird
+title: Working at Shorebird
 author: eseidel
 description: Shorebird is growing!
 date: 2025-08-27
