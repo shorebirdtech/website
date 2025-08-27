@@ -21,7 +21,7 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Work with the Google Flutter team to upstream changes from our C++ forks.
 
-- Add new features to our custom Dart and Flutter (e.g. asset push support, dart
+- Add new features to our custom Dart and Flutter (e.g. asset push support, Dart
   code obfuscation, port Flutter to new platforms, optimize our interpreter,
   etc.)
 
