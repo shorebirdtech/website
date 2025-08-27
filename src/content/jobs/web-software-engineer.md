@@ -2,7 +2,7 @@
 title: Web Software Engineer
 description:
   Own our front-ends and work with designers to optimize user experience for
-  Flutter developers.
+  Shorebird customers.
 location:
   Remote (North America) or in-person (Chicago, New York City, or San Francisco)
 type: Full-time
@@ -18,16 +18,16 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Own our front-ends (website, console, etc.).
+- Own our front-ends. This includes our website, web console, admin panel, and other projects.
 
-- Work with other engineers to implement the front-end parts of new features and
+- Work with other engineers to implement the front-end of new features and
   products.
 
-- Build the user experience for all the cloud parts that a Flutter developer
+- Build the user experience for all the cloud parts that a Shorebird customer
   needs, but doesn't want to build themselves (e.g. anything Firebase offers,
   various GitHub-adjacent services, etc.).
 
-- Contract with designers to optimize for user experience.
+- Work with designers to optimize for user experience.
 
 - Help shape our culture, processes, and product direction.
 
@@ -52,7 +52,7 @@ simply need more engineers to keep up with our growing user base and ambition.
 - Nice to have: Startup experience, ideally B2B SaaS.
 
 - You're a self-starter — you work well with little oversight and thrive in
-  ambiguous environments. You'll have support as the most junior member of our
+  ambiguous environments. You'll have support as a member of our engineering
   team, but this still won't be like working at a big tech job with formal
   training or processes, you'll have to learn and teach yourself most things
   (with help).

@@ -2,7 +2,7 @@
 title: Mobile Runtime Software Engineer
 description:
   Own all our C++ code, including our Flutter Engine and Dart forks, and work on
-  systems used by billions.
+  systems used globally.
 location: Remote (North America)
 type: Full-time
 cover: engineer-cover.png
@@ -19,19 +19,19 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Own all our C++ code, including our Flutter Engine and Dart forks.
 
-- Work with Google Flutter team to upstream changes from our C++ forks.
+- Work with the Google Flutter team to upstream changes from our C++ forks.
 
 - Add new features to our custom Dart and Flutter (e.g. asset push support, dart
   code obfuscation, port Flutter to new platforms, optimize our interpreter,
   etc.)
 
-- Build out your own infrastructure and tooling for maintaining a large code
+- Build out our infrastructure and tooling for maintaining a large code
   base.
 
-- Write up a designs for a new products or features.
+- Write up design documents for a new products or features.
 
 - Work with a customers (and data they've authorized us to use for product
-  improvements) to analyze a failure or improve execution for the entire Flutter
+  improvements) to analyze a failure or improve execution with the goal of upstreaming changes for the Flutter
   ecosystem.
 
 - Help shape our company culture, processes, and product direction.
