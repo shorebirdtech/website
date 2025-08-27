@@ -18,7 +18,8 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Own our front-ends. This includes our website, web console, admin panel, and other projects.
+- Own our front-ends. This includes our website, web console, admin panel, and
+  other projects.
 
 - Work with other engineers to implement the front-end of new features and
   products.

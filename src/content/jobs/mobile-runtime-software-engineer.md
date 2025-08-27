@@ -25,14 +25,13 @@ simply need more engineers to keep up with our growing user base and ambition.
   code obfuscation, port Flutter to new platforms, optimize our interpreter,
   etc.)
 
-- Build out our infrastructure and tooling for maintaining a large code
-  base.
+- Build out our infrastructure and tooling for maintaining a large code base.
 
 - Write up design documents for a new products or features.
 
 - Work with a customers (and data they've authorized us to use for product
-  improvements) to analyze a failure or improve execution with the goal of upstreaming changes for the Flutter
-  ecosystem.
+  improvements) to analyze a failure or improve execution with the goal of
+  upstreaming changes for the Flutter ecosystem.
 
 - Help shape our company culture, processes, and product direction.
 

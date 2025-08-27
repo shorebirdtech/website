@@ -17,17 +17,19 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Build, ship, and maintain new and current services for Flutter developers and businesses (e.g. crash
-  reporting, CI/CD, hosting) from beginning to end.
+- Build, ship, and maintain new and current services for Flutter developers and
+  businesses (e.g. crash reporting, CI/CD, hosting) from beginning to end.
 
-- Work across our entire software stack. This includes our backends in Dart hosted on Google Cloud, frontends
-  in React, and client software in Dart and C++.
+- Work across our entire software stack. This includes our backends in Dart
+  hosted on Google Cloud, frontends in React, and client software in Dart and
+  C++.
 
 - Own and ship features end-to-end, from our web UI to our backend APIs.
 
 - Help shape our culture, processes, and product direction.
 
-- Note: We typically don't use Flutter for our day to day work. We build Flutter itself and services for Flutter.
+- Note: We typically don't use Flutter for our day to day work. We build Flutter
+  itself and services for Flutter.
 
 ### What We're Looking For
 
@@ -70,9 +72,9 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Shape the future of how mobile apps are built and shipped.
 
-- You will be joining a very small engineering team with a huge opportunity to work across
-  a broad range of tech, collaborate with a senior team, and interface as
-  directly as you want with customers around the globe.
+- You will be joining a very small engineering team with a huge opportunity to
+  work across a broad range of tech, collaborate with a senior team, and
+  interface as directly as you want with customers around the globe.
 
 - Access to 1000s of customers via our Discord if you need to ask one something.
 
