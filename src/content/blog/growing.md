@@ -23,8 +23,8 @@ by a company wholly focused on Flutter. I set out to build that company.
 
 Flutter over those 11 years has thrived. It saw early public success with the
 Hamilton App, NuBank, Toyota, Tencent, Alibaba, ByteDance, and Google's wide
-deployments across Assistant, GPay, Classroom, Earth, and more. Flutter now accounts
-for
+deployments across Assistant, GPay, Classroom, Earth, and more. Flutter now
+accounts for
 [almost a 3rd of all free app submissions on iOS](https://developers.googleblog.com/en/celebrating-flutters-production-era/)
 and is used around the globe by millions of developers and businesses of
 [all shapes and sizes](https://flutter.dev/showcase).
@@ -53,8 +53,7 @@ and a senior C++ specialist (to own our custom compiler and runtime). We're also
 hiring someone to lead our marketing efforts and teach this group of engineers
 how to the millions of Flutter developers who haven't even heart of us yet.
 We're fully remote, able to hire anywhere in North America with existing team
-members near San Francisco, Chicago and New York City. We're a senior team, all
-well-functioning adults who know how to get stuff done. We pay well (including a
+members near San Francisco, Chicago and New York City. We pay well (including a
 large equity stake), with good benefits and are looking for great folks like
 yourself to join us.
 
