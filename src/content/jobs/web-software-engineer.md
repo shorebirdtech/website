@@ -1,9 +1,9 @@
 ---
-title: Full Stack Engineer
+title: Web Software Engineer
 description:
-  Build and ship new services for Flutter developers and businesses from beginning to end.
+  Own our front-ends and work with designers to optimize user experience for Flutter developers.
 location:
-  Remote (North America)
+  Remote (North America) or in-person (Chicago, New York City, or San Francisco)
 type: Full-time
 cover: engineer-cover.png
 ---
@@ -17,11 +17,11 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Build and ship new services for Flutter developers and businesses (e.g. crash reporting, CI/CD, hosting) from beginning to end.
+- Own our front-ends (website, console, etc.).
 
-- Work across our stack (our backends in Dart hosted on Google Cloud, client software in Dart and C++, frontends in React).
+- Work with other engineers to implement the front-end parts of new features and products.
 
-- Own and ship features end-to-end, from our web UI to our backend APIs.
+- Contract with designers to optimize for user experience.
 
 - Help shape our culture, processes, and product direction.
 
@@ -36,17 +36,13 @@ simply need more engineers to keep up with our growing user base and ambition.
 - Strong desire to work at a startup. We're a tiny team. All remote. You'll have
   to want to make your own decisions and own them.
 
-- Located in North America (remote).
+- Located in North America, ideally Chicago, New York City or San Francisco.
 
-- 5+ years of experience shipping production (ideally SaaS) applications.
+- 2+ years of experience shipping production web apps.
 
-- Experience with public cloud APIs (e.g. GCP, AWS, Cloudflare).
+- Experience with React, TypeScript, Postgres and (ideally) Dart (what our backend is written in).
 
-- Experience with Dart or TypeScript.
-
-- Experience with Postgres.
-
-- Nice to have: Experience with C++, Rust or a systems-level language.
+- Nice to have: Startup experience, ideally B2B SaaS.
 
 - You're a strong generalist who can jump into unfamiliar systems and figure
   things out.
@@ -57,6 +53,9 @@ simply need more engineers to keep up with our growing user base and ambition.
 - You're excited about Flutter and want to help it succeed.
 
 - You care about product quality and developer experience.
+
+- You have solid experience with at least one part of the stack — cloud,
+  developer tools, or compilers/runtimes — and are eager to learn the rest.
 
 - Bonus: experience with build systems, deployment pipelines, or developer
   tools.
@@ -71,7 +70,7 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Shape the future of how mobile apps are built and shipped.
 
-- You will be the 3rd engineer to join us, with huge opportunity to work across a broad range of tech, collaborate with a senior team, and interface as directly as you want with customers around the globe.
+- This job is a great opportunity for someone who wants to work at a startup, has done some frontend but is generally interested in the opportunities that come from working on such a small and senior team.
 
 - Access to 1000s of customers via our Discord if you need to ask one something.
 

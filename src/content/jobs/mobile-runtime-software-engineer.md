@@ -1,7 +1,7 @@
 ---
-title: Full Stack Engineer
+title: Mobile Runtime Software Engineer
 description:
-  Build and ship new services for Flutter developers and businesses from beginning to end.
+  Own all our C++ code, including our Flutter Engine and Dart forks, and work on systems used by billions.
 location:
   Remote (North America)
 type: Full-time
@@ -17,11 +17,15 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Build and ship new services for Flutter developers and businesses (e.g. crash reporting, CI/CD, hosting) from beginning to end.
+- Own all our C++ code, including our Flutter Engine and Dart forks.
 
-- Work across our stack (our backends in Dart hosted on Google Cloud, client software in Dart and C++, frontends in React).
+- Work with Google Flutter team to upstream changes from our C++ forks.
 
-- Own and ship features end-to-end, from our web UI to our backend APIs.
+- Build out your own infrastructure and tooling for maintaining a large code base.
+
+- Write up a design for a new product or feature.
+
+- Work with a customer (or data they've authorized us to use for product improvements) to analyze a failure or improve execution for the entire Flutter ecosystem.
 
 - Help shape our culture, processes, and product direction.
 
@@ -38,15 +42,11 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Located in North America (remote).
 
-- 5+ years of experience shipping production (ideally SaaS) applications.
+- 5+ years working on shipping software. At least 2+ years with C++.
 
-- Experience with public cloud APIs (e.g. GCP, AWS, Cloudflare).
+- Experience with compilers, runtimes, browsers, game engines, mobile software.
 
-- Experience with Dart or TypeScript.
-
-- Experience with Postgres.
-
-- Nice to have: Experience with C++, Rust or a systems-level language.
+- Nice to have: Experience working on V8, Dart, the Flutter Engine or WebKit.
 
 - You're a strong generalist who can jump into unfamiliar systems and figure
   things out.
@@ -57,6 +57,9 @@ simply need more engineers to keep up with our growing user base and ambition.
 - You're excited about Flutter and want to help it succeed.
 
 - You care about product quality and developer experience.
+
+- You have solid experience with at least one part of the stack — cloud,
+  developer tools, or compilers/runtimes — and are eager to learn the rest.
 
 - Bonus: experience with build systems, deployment pipelines, or developer
   tools.
@@ -71,7 +74,9 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Shape the future of how mobile apps are built and shipped.
 
-- You will be the 3rd engineer to join us, with huge opportunity to work across a broad range of tech, collaborate with a senior team, and interface as directly as you want with customers around the globe.
+- You'll do a lot of what Google's Flutter Engine and platform teams do (including work on C++ code used by billions every day), however unlike at a big tech, you will have direct (financial) incentives to improve outcomes for businesses using Flutter and very direct access to those customers and (when appropriate authorizations are in place) code, build systems, usage patterns, etc, and autonomy and resources to dramatically improve those outcomes.
+
+- This job requires a lot of low-level experience and is much more broad than working on similarly specialized systems at a very large company, but has incredible rewards of being able to directly affect so many customers so quickly (and be thusly compensated through a large ownership stake in the company) in ways similar jobs inside big-tech are generally insulated from.
 
 - Access to 1000s of customers via our Discord if you need to ask one something.
 
