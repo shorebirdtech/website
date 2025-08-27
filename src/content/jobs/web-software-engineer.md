@@ -74,7 +74,7 @@ simply need more engineers to keep up with our growing user base and ambition.
   has done some frontend but is generally interested in the opportunities that
   come from working on such a small and senior team.
 
-- Access to 1000s of customers via our Discord if you need to ask one something.
+- Direct access to 1000s of customers via our Discord.
 
 - We travel 3-4x per year to a central location (e.g. Chicago) to work/socialize
   as a team for a week.
