@@ -23,7 +23,7 @@ by a company wholly focused on Flutter. I set out to build that company.
 
 Flutter over those 11 years has thrived. It saw early public success with the
 Hamilton App, NuBank, Toyota, Tencent, Alibaba, ByteDance, and Google's wide
-deployments across Assistant, GPay, Classroom, Earth, etc. Flutter now accounts
+deployments across Assistant, GPay, Classroom, Earth, and more. Flutter now accounts
 for
 [almost a 3rd of all free app submissions on iOS](https://developers.googleblog.com/en/celebrating-flutters-production-era/)
 and is used around the globe by millions of developers and businesses of
