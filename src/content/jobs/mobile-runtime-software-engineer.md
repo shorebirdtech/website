@@ -31,7 +31,7 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - Work with a customers (and data they've authorized us to use for product
   improvements) to analyze a failure or improve execution with the goal of
-  upstreaming changes for the Flutter ecosystem.
+  fixing issues and contributing changes back to the Flutter ecosystem.
 
 - Help shape our company culture, processes, and product direction.
 
