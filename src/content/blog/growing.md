@@ -1,7 +1,7 @@
 ---
 title: Working at Shorebird
 author: eseidel
-description: Shorebird is growing!
+description: A quick look back to see how we got to today and how we are building for tomorrow.
 date: 2025-08-27
 cover: '1.0-cover.png'
 slug: 'shorebird-is-growing'
