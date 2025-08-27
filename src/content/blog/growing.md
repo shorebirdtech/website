@@ -12,7 +12,7 @@ slug: 'shorebird-is-growing'
 something better than janky web pages, or complicated Java apps to build for
 mobile, and began
 [the journey that would yield Flutter](https://www.youtube.com/watch?v=xqGAC5QCYuQ).
-I would come to lead to lead and grow the Flutter (and eventually Dart) teams at
+I would come to lead and grow the Flutter (and eventually Dart) teams at
 Google until leaving in 2022 to start Shorebird. I left Google in part because I
 realized there were problems I wanted to solve for Flutter that couldn't be
 solved within Google and felt that in the long-term Flutter would be best served
