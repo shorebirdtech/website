@@ -21,5 +21,5 @@ export default {
   contactEmail: 'contact@shorebird.dev',
   complianceUrl: 'https://handbook.shorebird.dev/compliance',
   handbookUrl: 'https://handbook.shorebird.dev',
-  hiringEmail: 'eric@shorebird.dev',
+  hiringEmail: 'hiring@shorebird.dev',
 };
