@@ -20,10 +20,12 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Own our front-ends. This includes our shorebird.dev, console.shorebird.dev, admin.shorebird.dev (private), and
-  other projects.
+- Own our front-ends. This includes our shorebird.dev, console.shorebird.dev,
+  admin.shorebird.dev (private), and other projects.
 
-- Implement web-facing features end-to-end.  We use small "backends for frontend" written in React, talking through to other apis or (in a few cases) our Postgres database directly with prisma.
+- Implement web-facing features end-to-end. We use small "backends for frontend"
+  written in React, talking through to other apis or (in a few cases) our
+  Postgres database directly with prisma.
 
 - Help us build all the web/cloud parts for services that Flutter developers
   need, but don't want to build themselves (e.g. anything Firebase offers,
@@ -34,8 +36,9 @@ simply need more engineers to keep up with our growing user base and ambition.
 - Help shape our culture, processes, and product direction.
 
 - Note: We do not use Flutter Web (or Jaspr) and don't write raw CSS or HTML.
-  UX/UI design skills are welcome (and valued), but you will also have designers on
-  contract to support you.  Ability to deliver end-to-end features is critical.
+  UX/UI design skills are welcome (and valued), but you will also have designers
+  on contract to support you. Ability to deliver end-to-end features is
+  critical.
 
 ### What We're Looking For
 
@@ -50,11 +53,11 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - 2+ years of experience shipping production web apps.
 
-- At least one year with Remix, React Router, Vue, Next.js, Svelte or
-  similar full stack TypeScript framework (we use Remix/React Router).
+- At least one year with Remix, React Router, Vue, Next.js, Svelte or similar
+  full stack TypeScript framework (we use Remix/React Router).
 
 - Experience with React, TypeScript, Postgres and (ideally) Dart (what our
-  backend is written in).  You should be able to look at
+  backend is written in). You should be able to look at
   https://console.shorebird.dev and say "sure, I could build that".
 
 - Experience testing code and code coverage.
@@ -67,7 +70,8 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 - You care about product quality and developer experience.
 
-- Nice to have: Experience with Tailwind, ShadCN, Vite, TurboRepo (all of which we use).
+- Nice to have: Experience with Tailwind, ShadCN, Vite, TurboRepo (all of which
+  we use).
 
 - Nice to have: Startup experience, ideally B2B SaaS.
 
