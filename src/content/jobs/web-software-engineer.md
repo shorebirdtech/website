@@ -24,7 +24,7 @@ simply need more engineers to keep up with our growing user base and ambition.
   admin.shorebird.dev (private), and other projects.
 
 - Implement web-facing features end-to-end. We use small "backends for frontend"
-  written in React, talking through to other apis or (in a few cases) our
+  written in React, which talk to our backend APIs or (in a few cases) our
   Postgres database directly with prisma.
 
 - Help us build all the web/cloud parts for services that Flutter developers
