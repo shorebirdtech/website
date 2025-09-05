@@ -78,7 +78,7 @@ transparent, and scale with your need pricing.
 Zero-config really means zero-config. With just a few quick steps, you’ll have
 your account linked and be up and running.
 
-1. Log into the [Shorebird Web Console](https://console.shorebird.dev) and and
+1. Log into the [Shorebird Web Console](https://console.shorebird.dev) and
    select CI from the navigation panel.
 2. Sign in with your GitHub account to grant access to your repositories.
 3. In the Web Console, enable access for your organization and choose the
