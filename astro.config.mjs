@@ -21,5 +21,6 @@ export default defineConfig({
     '/talk-to-sales': config.contactSales,
     '/terms.html': '/terms',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
+    '/jobs/full-stack-software-engineer': '/jobs/web-software-engineer',
   },
 });

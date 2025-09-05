@@ -1,5 +1,5 @@
 ---
-title: Web Software Engineer
+title: Full Stack Web Software Engineer
 description:
   Own our front-ends and work with designers to optimize user experience for
   Shorebird customers.
@@ -8,6 +8,8 @@ location:
 type: Full-time
 cover: engineer-cover.png
 ---
+
+<!-- cspell:words jaspr -->
 
 ### Overview
 
@@ -18,39 +20,44 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Own our front-ends. This includes our website, web console, admin panel, and
+- Own our front-ends. This includes our shorebird.dev, console.shorebird.dev, admin.shorebird.dev (private), and
   other projects.
 
-- Work with other engineers to implement the front-end of new features and
-  products.
+- Implement web-facing features end-to-end.  We use small "backends for frontend" written in React, talking through to other apis or (in a few cases) our Postgres database directly with prisma.
 
-- Build the user experience for all the cloud parts that a Shorebird customer
-  needs, but doesn't want to build themselves (e.g. anything Firebase offers,
-  various GitHub-adjacent services, etc.).
+- Help us build all the web/cloud parts for services that Flutter developers
+  need, but don't want to build themselves (e.g. anything Firebase offers,
+  various GitHub-adjacent services, etc).
 
 - Work with designers to optimize for user experience.
 
 - Help shape our culture, processes, and product direction.
 
-- Note: We don't use Flutter, we build Flutter itself and services for Flutter.
+- Note: We do not use Flutter Web (or Jaspr) and don't write raw CSS or HTML.
+  UX/UI design skills are welcome (and valued), but you will also have designers on
+  contract to support you.  Ability to deliver end-to-end features is critical.
 
 ### What We're Looking For
+
+- Located in North America, ideally Chicago, New York City or San Francisco.
+
+- Strong desire to work at a startup. We're a tiny team. All remote. You'll have
+  to want to make your own decisions and own them.
 
 - Mission alignment. You care about helping the world stop writing everything
   twice. Flutter is our tool for that and Shorebird aims to take Flutter beyond
   where Google can.
 
-- Strong desire to work at a startup. We're a tiny team. All remote. You'll have
-  to want to make your own decisions and own them.
-
-- Located in North America, ideally Chicago, New York City or San Francisco.
-
 - 2+ years of experience shipping production web apps.
 
-- Experience with React, TypeScript, Postgres and (ideally) Dart (what our
-  backend is written in).
+- At least one year with Remix, React Router, Vue, Next.js, Svelte or
+  similar full stack TypeScript framework (we use Remix/React Router).
 
-- Nice to have: Startup experience, ideally B2B SaaS.
+- Experience with React, TypeScript, Postgres and (ideally) Dart (what our
+  backend is written in).  You should be able to look at
+  https://console.shorebird.dev and say "sure, I could build that".
+
+- Experience testing code and code coverage.
 
 - You're a self-starter — you work well with little oversight and thrive in
   ambiguous environments. You'll have support as a member of our engineering
@@ -59,6 +66,10 @@ simply need more engineers to keep up with our growing user base and ambition.
   (with help).
 
 - You care about product quality and developer experience.
+
+- Nice to have: Experience with Tailwind, ShadCN, Vite, TurboRepo (all of which we use).
+
+- Nice to have: Startup experience, ideally B2B SaaS.
 
 ### Why Join
 
