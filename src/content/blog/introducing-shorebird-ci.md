@@ -81,7 +81,7 @@ your account linked and be up and running.
 1. Log into the [Shorebird Web Console](https://console.shorebird.dev) and
    select CI from the navigation panel.
 2. Sign in with your GitHub account to grant access to your repositories.
-3. In the Web Console, enable access for your organization and choose the
+3. In the Web Console, enable access for your GitHub organization and choose the
    repositories you want to connect.
 4. Open a pull request.
 
