@@ -20,7 +20,7 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Own our front-ends. This includes our shorebird.dev, console.shorebird.dev,
+- Own our front-ends. This includes shorebird.dev, console.shorebird.dev,
   admin.shorebird.dev (private), and other projects.
 
 - Implement web-facing features end-to-end. We use small "backends for frontend"
