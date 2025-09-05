@@ -47,11 +47,11 @@ In building Shorebird CI we focused on 4 key points.
 - **Zero-Config Setup** - Forget giant YAML files and bash scripts. By
   statically analyzing your project, Shorebird CI can infer most of your config
   automatically.
-- **Dart-Native** - Works with any Dart or Flutter project. It's always up to date
-  with the latest Dart and Flutter changes so you’re never blocked from adopting
-  new features.
-- **Monorepo Aware** - Growing into a monorepo? We handle it out of the box,
-  so you can start small and scale without painful migrations.
+- **Dart-Native** - Works with any Dart or Flutter project. It's always up to
+  date with the latest Dart and Flutter changes so you’re never blocked from
+  adopting new features.
+- **Monorepo Aware** - Growing into a monorepo? We handle it out of the box, so
+  you can start small and scale without painful migrations.
 
 From indie apps to Fortune 500 enterprises moving to Flutter, these principles
 make CI faster, simpler, and more reliable for everyone.
@@ -89,8 +89,8 @@ Yep, that's really it.
 
 ![Showing Shorebird CI in GitHub Checks in a PR](../../assets/blog/introducing-shorebird-ci/shorebird_ci_in_github_checks.png)
 
-From there, Shorebird CI automatically runs tests, checks for analysis and formatting warnings,
-misspelled words, and more.
+From there, Shorebird CI automatically runs tests, checks for analysis and
+formatting warnings, misspelled words, and more.
 
 ![Output of Shorebird CI](../../assets/blog/introducing-shorebird-ci/shorebird_ci_output.png)
 
