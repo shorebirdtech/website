@@ -20,8 +20,8 @@ simply need more engineers to keep up with our growing user base and ambition.
 
 ### What You'll Do
 
-- Own our front-ends. This includes shorebird.dev, console.shorebird.dev,
-  admin.shorebird.dev (private), and other projects.
+- Own our web front-ends. This includes our shorebird.dev,
+  console.shorebird.dev, admin.shorebird.dev (private), and other projects.
 
 - Implement web-facing features end-to-end. We use small "backends for frontend"
   written in React, which talk to our backend APIs or (in a few cases) our
