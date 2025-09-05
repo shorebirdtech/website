@@ -50,7 +50,7 @@ In building Shorebird CI we focused on 4 key points.
 - **Dart-Native** - Works with any Dart or Flutter project. It's always up to date
   with the latest Dart and Flutter changes so you’re never blocked from adopting
   new features.
-- **Mono-repo Aware** - Growing into a mono-repo? We handle it out of the box,
+- **Monorepo Aware** - Growing into a monorepo? We handle it out of the box,
   so you can start small and scale without painful migrations.
 
 From indie apps to Fortune 500 enterprises moving to Flutter, these principles
