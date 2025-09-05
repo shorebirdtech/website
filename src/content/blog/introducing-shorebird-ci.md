@@ -47,7 +47,7 @@ In building Shorebird CI we focused on 4 key points.
 - **Zero-Config Setup** - Forget giant YAML files and bash scripts. By
   statically analyzing your project, Shorebird CI can infer most of your config
   automatically.
-- **Dart-Native** - Works with any Dart or Flutter project. Always up to date
+- **Dart-Native** - Works with any Dart or Flutter project. It's always up to date
   with the latest Dart and Flutter changes so you’re never blocked from adopting
   new features.
 - **Mono-repo Aware** - Growing into a mono-repo? We handle it out of the box,
