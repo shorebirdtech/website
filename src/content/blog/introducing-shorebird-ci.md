@@ -89,8 +89,8 @@ Yep, that's really it.
 
 ![Showing Shorebird CI in GitHub Checks in a PR](../../assets/blog/introducing-shorebird-ci/shorebird_ci_in_github_checks.png)
 
-From there, Shorebird CI automatically runs checks for analysis warnings,
-misspelled words, ensuring your tests are passing and more.
+From there, Shorebird CI automatically runs tests, checks for analysis and formatting warnings,
+misspelled words, and more.
 
 ![Output of Shorebird CI](../../assets/blog/introducing-shorebird-ci/shorebird_ci_output.png)
 
