@@ -62,7 +62,7 @@ takes to raise awareness.
   decisions and own them. You’ll also (likely) be fully remote which means you
   need to be great at self motivation and self-direction.
 
-- Experience working in Developer Relations, Product Marketing, or Technical
+- Experience working in Product Marketing, Developer Relations, or Technical
   Advocacy — or strong proof you can do the job.
 
 - Strong writing and communication skills. You enjoy breaking down complex
