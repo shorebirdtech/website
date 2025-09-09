@@ -86,8 +86,8 @@ than a minute.
 
 ![Showing Shorebird CI in GitHub Checks in a PR](../../assets/blog/introducing-shorebird-ci/shorebird_ci_in_github_checks.png)
 
-Once integrated, Shorebird CI automatically detected analysis warnings,
-inconsistent formatting, failing tests, misspelled words, and more.
+Once integrated, Shorebird CI automatically detects analysis warnings,
+inconsistent formatting, failing tests, misspelled words, and more!
 
 ![Output of Shorebird CI](../../assets/blog/introducing-shorebird-ci/shorebird_ci_output.png)
 
