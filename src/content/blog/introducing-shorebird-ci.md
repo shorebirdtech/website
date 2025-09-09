@@ -53,7 +53,7 @@ Shorebird CI focuses on several key points:
   best practices and catch bugs and inconsistencies during development to help
   you ship with confidence.
 - **🚀 Performant** — Thanks to quick startup times and reliable change
-  detection, we run only the affected packages and automatically parallelize
+  detection, we only run checks on affected code and automatically parallelize
   builds for maximum speed.
 
 From indie apps to Fortune 500 enterprises moving to Flutter, Shorebird CI aims
