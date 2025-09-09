@@ -4,14 +4,14 @@ author: shorebirdtech
 description:
   Announcing a new service from Shorebird, zero config CI for Flutter and Dart
   applications.
-date: 2025-08-15
+date: 2025-09-09
 cover: 'introducing-shorebird-ci-cover.png'
 ---
 
 We’re thrilled to announce our newest product:
-[Shorebird CI](https://ci.shorebird.dev) — a zero-config continuous integration
-system built exclusively for Flutter and Dart by the very people who created
-Flutter. We opened this up for a small preview in
+[Shorebird CI](https://docs.shorebird.dev/ci/) — a zero-config continuous
+integration system built exclusively for Flutter and Dart by the very people who
+created Flutter. We opened this up for a small preview in
 [early August](https://x.com/shorebirddev/status/1950593850965459226) and are
 ready to officially launch it in Beta today.
 
