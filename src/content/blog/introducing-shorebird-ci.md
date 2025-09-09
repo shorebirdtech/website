@@ -104,7 +104,7 @@ even faster and simpler for teams of all sizes.
 
 Over the coming months we plan to add to our growing list of automated checks,
 deliver smarter scaling for even better performance, and refine our pricing
-model based on real world usage. We want your feedback so please don't hesistate
+model based on real world usage. We want your feedback so please don't hesitate
 to provide input to help shape the future of Shorebird CI.
 
 This beta is just the beginning and we’re very excited to build with you.
