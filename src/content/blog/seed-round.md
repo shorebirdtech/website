@@ -28,9 +28,10 @@ receive updates powered by Shorebird every day.
 
 With this round, Shorebird has been able to accelerate product development,
 start its team, and expand its platform beyond Code Push. Most recently, the
-company launched their second product Shorebird CI, a zero-config continuous
-integration system built exclusively for Flutter and Dart. They are now [hiring
-for a few new roles](Link to Jobs page), and are excited to bring more talented
+company launched their second product
+[Shorebird CI](/blog/introducing-shorebird-ci), a zero-config continuous
+integration system built exclusively for Flutter and Dart. They are now
+[hiring for a few new roles](/jobs), and are excited to bring more talented
 people into the team to help build faster, support more customers, and invest
 even more in the Flutter ecosystem.
 
@@ -42,10 +43,11 @@ iteration,” said Eric Seidel, CEO of Shorebird and creator of Flutter.
 making Flutter development faster, more reliable, and better aligned with how
 modern teams build software.”
 
-“We’re excited to back Shorebird at this very early stage,” said Dan Levine,
-Partner at Accel. “Eric and the team bring unmatched expertise as the original
-builders of Flutter. Shorebird is solving a critical challenge for millions of
-developers and companies, and the early traction they have proves this is a
+“We’re excited to back Shorebird at this very early stage,” said
+[Dan Levine, Partner at Accel](https://www.accel.com/people/daniel-levine#bay-area).
+“Eric and the team bring unmatched expertise as the original builders of
+Flutter. Shorebird is solving a critical challenge for millions of developers
+and companies, and the early traction they have proves this is a
 category-defining opportunity.”
 
 ## About Shorebird
