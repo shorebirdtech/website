@@ -1,9 +1,12 @@
 ---
 title: Accel Leads $3M Seed Round in Shorebird
 author: shorebirdtech
-description: TBD
+description:
+  Shorebird has raised $3M to expand its suite of Flutter developer tools,
+  including Code Push and Shorebird CI, making mobile iteration faster than
+  ever.
 date: 2025-09-23
-cover: 'introducing-shorebird-ci-cover.png'
+cover: 'seed-round-cover.png'
 ---
 
 Shorebird, a developer tools company founded by the creators of Flutter, has
@@ -53,4 +56,4 @@ instant app updates without app store delays. Shorebird was founded by Eric
 Seidel, creator of Flutter, alongside Felix Angelov (creator of Bloc and Mason)
 and a small team of influential Flutter contributors.
 
-(Picture of team here)
+![The Shorebird Team](../../assets/blog/seed-round/shorebird-team.jpeg)
