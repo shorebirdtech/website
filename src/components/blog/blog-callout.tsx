@@ -7,9 +7,9 @@ function BlogCallout() {
   return (
     <div className="border-border-1 max-w-screen-md rounded-xl border p-5">
       <span className="text-text-2 my-0 font-light">
-        Shorebird is helping businesses succeed with Flutter allowing you to
-        deliver updates faster, with confidence, and keep growing without
-        slowing down.
+        Shorebird empowers Flutter teams to focus on building great apps by
+        handling the hard parts like zero-config CI or instant over-the-air
+        updates.
       </span>
       <a
         target="_blank"
