@@ -214,26 +214,26 @@ const monthlyPlans = [
     name: 'Free',
     price: '$0',
     description: 'Made for hobbyists, small apps, and demos.',
-    cta: { link: config.consoleUrl, title: 'Get Started' },
+    cta: { link: config.consoleUrl, title: 'Get started' },
   },
   {
     name: 'Pro',
     price: '$20',
     description:
       'Sized for usage from medium sized apps with scalable pricing.',
-    cta: { link: config.monthlyProPlanCheckoutUrl, title: 'Buy Now' },
+    cta: { link: config.monthlyProPlanCheckoutUrl, title: 'Buy now' },
   },
   {
     name: 'Business',
     price: '$400',
     description: 'Great for large apps with advanced needs.',
-    cta: { link: config.monthlyBusinessPlanCheckoutUrl, title: 'Buy Now' },
+    cta: { link: config.monthlyBusinessPlanCheckoutUrl, title: 'Buy now' },
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     description: 'Build a custom plan for enterprise apps & needs.',
-    cta: { link: config.contactSales, title: 'Talk to Sales' },
+    cta: { link: config.contactSales, title: 'Talk to sales' },
   },
 ];
 
@@ -242,26 +242,26 @@ const yearlyPlans = [
     name: 'Free',
     price: '$0',
     description: 'Made for hobbyists, small apps, and demos.',
-    cta: { link: config.consoleUrl, title: 'Get Started' },
+    cta: { link: config.consoleUrl, title: 'Get started' },
   },
   {
     name: 'Pro',
     price: '$240',
     description:
       'Sized for usage from medium sized apps with scalable pricing.',
-    cta: { link: config.yearlyProPlanCheckoutUrl, title: 'Buy Now' },
+    cta: { link: config.yearlyProPlanCheckoutUrl, title: 'Buy now' },
   },
   {
     name: 'Business',
     price: '$4,800',
     description: 'Great for large apps with advanced needs.',
-    cta: { link: config.yearlyBusinessPlanCheckoutUrl, title: 'Buy Now' },
+    cta: { link: config.yearlyBusinessPlanCheckoutUrl, title: 'Buy now' },
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     description: 'Build a custom plan for enterprise apps & needs.',
-    cta: { link: config.contactSales, title: 'Talk to Sales' },
+    cta: { link: config.contactSales, title: 'Talk to sales' },
   },
 ];
 
