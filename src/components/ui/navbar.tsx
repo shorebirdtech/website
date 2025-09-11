@@ -18,6 +18,7 @@ import {
   ListIcon,
   MoneyIcon,
   QuestionIcon,
+  RssIcon,
 } from '@phosphor-icons/react';
 
 function Navbar() {
@@ -38,16 +39,20 @@ function Navbar() {
             </div>
           </div>
           <div className="flex flex-row items-center gap-2">
-            <a className="hidden lg:block" href={config.discordUrl}>
-              <Button variant="outline" size="sm" className="font-light">
-                <DiscordLogo className="size-5" />
-                Support
-              </Button>
-            </a>
             <a className="hidden lg:block" href={config.githubUrl}>
               <Button variant="outline" size="sm" className="font-light">
                 <GitHubLogo className="size-5" />
                 2.8k
+              </Button>
+            </a>
+            <a className="hidden lg:block" href={config.discordUrl}>
+              <Button variant="outline" size="sm" className="font-light">
+                <DiscordLogo className="size-5" />
+              </Button>
+            </a>
+            <a className="hidden lg:block" href={'/rss.xml'}>
+              <Button variant="outline" size="sm" className="font-light">
+                <RssIcon className="size-5" />
               </Button>
             </a>
             <a href={config.consoleUrl}>
@@ -93,6 +98,10 @@ function Navbar() {
             <a className="flex flex-row items-center gap-2" href="/faq">
               <QuestionIcon className="text-accent-primary-1 size-6" />
               FAQs
+            </a>
+            <a className="flex flex-row items-center gap-2" href="/rss.xml">
+              <RssIcon className="text-accent-primary-1 size-6" />
+              RSS
             </a>
           </div>
         </SheetContent>
