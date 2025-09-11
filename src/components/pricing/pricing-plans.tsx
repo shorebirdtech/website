@@ -49,6 +49,19 @@ const monthlyFeatures: Feature[] = [
     business: '✓',
     enterprise: '✓',
   },
+  {
+    title: 'CI for public repositories',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  {
+    title: 'CI for private repositories',
+    pro: '100 build hours',
+    business: '100 build hours',
+    enterprise: 'Custom',
+  },
   { title: 'Console', free: '✓', pro: '✓', business: '✓', enterprise: '✓' },
   {
     title: 'Collaboration',
@@ -128,6 +141,19 @@ const yearlyFeatures: Feature[] = [
     pro: '✓',
     business: '✓',
     enterprise: '✓',
+  },
+  {
+    title: 'CI for public repositories',
+    free: '✓',
+    pro: '✓',
+    business: '✓',
+    enterprise: '✓',
+  },
+  {
+    title: 'CI for private repositories',
+    pro: '1,200 build hours',
+    business: '1,200 build hours',
+    enterprise: 'Custom',
   },
   { title: 'Console', free: '✓', pro: '✓', business: '✓', enterprise: '✓' },
   {
