@@ -37,7 +37,7 @@
   Website &#x2192; </a>
           </header>
           <h2>Blog Posts</h2>
-          <xsl:for-each select="/rss/channel/item[position()]">
+          <xsl:for-each select="/rss/channel/item">
             <div>
               <h3>
                 <a target="_blank">
