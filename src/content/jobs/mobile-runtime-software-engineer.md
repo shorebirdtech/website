@@ -112,8 +112,8 @@ simply need more engineers to keep up with our growing user base and ambition.
 #### First Week
 
 - We'll go through our backlog together, and might try starting with something
-  like up-streaming part of our diffs from our Flutter or Dart forks, to acquaint
-  you with the code and the projects that we're forking.
+  like up-streaming part of our diffs from our Flutter or Dart forks, to
+  acquaint you with the code and the projects that we're forking.
 - Early on, we'll spend a few days together updating our build infrastructure to
   be better/faster to make it easier for you to be productive down in this code.
   Our current build infra was written 3 years ago and could trivially be made
