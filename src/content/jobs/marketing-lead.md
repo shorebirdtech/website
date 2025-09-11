@@ -33,34 +33,33 @@ takes to raise awareness.
 - Grow our social presence. Own and operate Shorebird’s social presence across
   all channels.
 
-- Write and speak. Publish technical blog posts, create videos or live demos,
-  speak at conferences, and engage with the community on X, GitHub, Reddit, and
-  beyond.
+- Write, maybe speak. Publish blog posts, possibly create videos or live demos,
+  and engage with the community on X, GitHub, Reddit, and beyond.
 
-- Advocate for Flutter and Shorebird. Shorebird only succeeds if Flutter does.
-  You get to tell both stories to customers at all phases of their adoption
-  journey.
+- Advocate for Shorebird and eventually Flutter. Shorebird only succeeds if
+  Flutter does. Our near-term is selling Shorebird products to those already
+  using Flutter, but our long-term is selling a story to all developers.
 
 - Build relationships. Identify and support influential Flutter developers and
   early adopters.
 
-- Close the loop. Bring insights from the community back to the team to inform
-  product direction.
+- Close the loop. Bring insights from the community and customers back to the
+  team to inform product direction.
 
 ### What We’re Looking For
 
-- Mission alignment. You care about helping the world stop writing everything
-  twice. Flutter is our tool for that and Shorebird aims to take Flutter beyond
-  where Google can.
+- Mission alignment. You care the benefits of being able to deliver high-quality
+  products across any screen. Flutter is our tool for that and Shorebird aims to
+  take Flutter beyond where Google can.
 
 - Strong desire to work at a startup. We’re a tiny team. All remote. You’ll be
-  the first person fulltime driving awareness and will get to define our
-  strategy and approach.
+  the first person fulltime driving marketing and awareness and will get to
+  define our strategy and approach.
 
-- Scrappy and self-driven. You are the marketing department. You are our DevRel
-  org. You’ll have lots of help, but you’ll have to want to make your own
-  decisions and own them. You’ll also (likely) be fully remote which means you
-  need to be great at self motivation and self-direction.
+- Scrappy and self-driven. You are the marketing department. You’ll have lots of
+  help, but you’ll have to want to make your own decisions and own them. You’ll
+  also (likely) be fully remote which means you need to be great at self
+  motivation and self-direction.
 
 - Experience working in Product Marketing, Developer Relations, or Technical
   Advocacy — or strong proof you can do the job.
@@ -68,8 +67,10 @@ takes to raise awareness.
 - Strong writing and communication skills. You enjoy breaking down complex
   topics for different audiences.
 
-- Comfort with code. You don’t need to be an expert Flutter dev, but you can
-  read docs, run sample apps, and maybe write a working blog demo.
+- Comfort with developers and code. You don’t need to be an expert Flutter dev,
+  but you can read docs, ideally run sample code and maybe even write a demo.
+  Coding skills are not required, but are welcome. Empathy with and desire to
+  market to developers is required.
 
 - Bonus: experience in startups, open-source communities, or the Flutter
   ecosystem.
@@ -88,7 +89,7 @@ takes to raise awareness.
 
 #### First Day
 
-- I've never onboarded as a marketer before, but my guess is we'll spend a lot
+- We've never onboarded as a marketer before, but my guess is we'll spend a lot
   of time together talking about the product, the competition and our goals as a
   company.
 - You'll set up your machine (we'll provide whatever setup makes you productive)
@@ -106,36 +107,50 @@ takes to raise awareness.
 
 #### First Week
 
-- Depending on when you join, we may try to be in person that week, but
-  otherwise we'll all get together within the first month or two of your
-  joining.
-- You'll work with as many of our team as you need to learn our story from as
-  many perspectives as you need.
-- You'll probably draft up an audit of what's working/not across the marketing
-  we've done so far.
+- Depending on when you join, Eric (CEO) might fly out to be in person that week
+  (we'll find co-working near you), or we'll time your joining with our
+  quarterly team-gathering. Regardless we'll all get together within the first
+  month or two of your joining so you can meet the team.
+- You'll talk to (video or in person) as many of our team as you need to learn
+  our story from as many perspectives as you need.
+- You'll draft up thoughts on what's working/not across the marketing we've done
+  so far.
 - And you'll ship your first few changes to our website, blog, or socials. At
   minimum a "I joined Shorebird" post for a blog, and announce it across our
   socials so we know we've given you all the access you need.
 
 #### First Month
 
-- Build the first version of a marketing plan — a living doc that says, “Here’s
-  where we’ll focus and how we’ll measure progress.” The goal of this role is to
-  increase awareness (and thus top of funnel). We're here to help, but you're
-  our entire "marketing department", so we will lean on your experience to set
-  the plans.
-- Set up the basic toolkit you need (analytics, mailing list, editorial
-  calendar) — we’ll buy or build the things you need.
-- Run one end-to-end initiative (a blog series, launch announcement, or
-  developer story) and reflect with us on how it landed.
+- The goal of this role is to increase awareness (and thus top of funnel). We're
+  here to help, but you're our entire "marketing department", so we will lean on
+  your experience to set the plans.
+- You'll build the first version of a marketing plan — a living doc that says,
+  “Here’s where we’ll focus and how we’ll measure progress.”
+- We'll probably work on a more formal ideal customer profile (ICP) together.
+- We'll make sure you're set up the basic toolkit you need (analytics, mailing
+  list, editorial calendar) or we’ll buy or build the things you need.
+- You'll run one end-to-end initiative (a blog series, launch announcement,
+  developer story, newsletter, etc).
 
 #### First Quarter
 
-- Establish a repeatable rhythm — e.g. blog posts, tweets, newsletter, community
-  moments — that feels natural for our size and voice.
-- Lead 2–3 higher-impact campaigns (conference presence, product launch support,
-  community spotlight) with full founder backing.
-- Share insights from early experiments — what messages resonate, what channels
-  work — and shape the next quarter’s bets.
-- Define the beginnings of Shorebird’s marketing culture: how we tell our story,
-  how we show up, and what we’ll need as we grow.
+- You'll establish a repeatable rhythm — e.g. blog posts, tweets, newsletter,
+  community moments.
+- You'll design and execute various higher-impact campaigns (conference
+  presence, product launch support, community spotlight).
+- We'll introduce you to partners across our space and hopefully begin
+  collaborations with companies much further invested in their marketing
+  efforts.
+- You'll help us take marketing insights — what messages resonate, what channels
+  work -- back to our product and change what we build to market next.
+- You'll lay the beginnings of Shorebird’s marketing culture: how we tell our
+  story, how we show up, and what we’ll need as we grow.
+
+We're small, and you're the first marketer. You don't have to have been
+officially a "marketer" before (lots of roles could be successful here), but the
+primary number you're driving is awareness (probably measured by visits to our
+website?). First and foremost you're employee #5 at a small company, which means
+you'll wear many hats and your days will vary. You'll learn a lot, and we'll
+learn a lot, and hopefully together we'll reach and delight the millions of
+Flutter developers who don't yet know their lives could be better with
+Shorebird.
