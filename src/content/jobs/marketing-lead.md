@@ -83,3 +83,59 @@ takes to raise awareness.
 - Competitive compensation + early equity.
 
 - Shape the future of how mobile apps are built and shipped.
+
+### What will your days look like?
+
+#### First Day
+
+- I've never onboarded as a marketer before, but my guess is we'll spend a lot
+  of time together talking about the product, the competition and our goals as a
+  company.
+- You'll set up your machine (we'll provide whatever setup makes you productive)
+  and we'll probably go through our past marketing efforts, social accounts,
+  partners, etc.
+- You'll join our [Discord](https://discord.gg/shorebird) our entire team is on
+  there (with 1000s of our customers) all day. Some of us hang out on video
+  channels, some just communicate via text, either way we'll be there to make
+  sure you're supported.
+- Sit down with me (CEO) to hear our story: why we started, who we serve, where
+  we're going. You and I will update anything I've missed on our public
+  [Handbook](https://handbook.shorebird.dev/).
+- We'll do a tour of what marketing we've done so far (site, blog, socials) and
+  ask for your first impressions.
+
+#### First Week
+
+- Depending on when you join, we may try to be in person that week, but
+  otherwise we'll all get together within the first month or two of your
+  joining.
+- You'll work with as many of our team as you need to learn our story from as
+  many perspectives as you need.
+- You'll probably draft up an audit of what's working/not across the marketing
+  we've done so far.
+- And you'll ship your first few changes to our website, blog, or socials. At
+  minimum a "I joined Shorebird" post for a blog, and announce it across our
+  socials so we know we've given you all the access you need.
+
+#### First Month
+
+- Build the first version of a marketing plan — a living doc that says, “Here’s
+  where we’ll focus and how we’ll measure progress.” The goal of this role is to
+  increase awareness (and thus top of funnel). We're here to help, but you're
+  our entire "marketing department", so we will lean on your experience to set
+  the plans.
+- Set up the basic toolkit you need (analytics, mailing list, editorial
+  calendar) — we’ll buy or build the things you need.
+- Run one end-to-end initiative (a blog series, launch announcement, or
+  developer story) and reflect with us on how it landed.
+
+#### First Quarter
+
+- Establish a repeatable rhythm — e.g. blog posts, tweets, newsletter, community
+  moments — that feels natural for our size and voice.
+- Lead 2–3 higher-impact campaigns (conference presence, product launch support,
+  community spotlight) with full founder backing.
+- Share insights from early experiments — what messages resonate, what channels
+  work — and shape the next quarter’s bets.
+- Define the beginnings of Shorebird’s marketing culture: how we tell our story,
+  how we show up, and what we’ll need as we grow.
