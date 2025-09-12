@@ -12,11 +12,9 @@ cover: 'seed-round-cover.png'
 We at Shorebird, a developer tools company founded by the creators of Flutter,
 have raised a $3M seed round led by
 [Dan Levine of Accel](https://www.accel.com), with participation from leading
-founders and operators across the ecosystem. Investors include Yuri Sagalov
-(AeroFS), Linus Upson (former Flutter VP), Neha Narkhede (Confluent), Jessica
-McKellar (Pilot.co), Andrew Lee (Firebase), Chris McKillop (former Flutter
-Manager), Miguel de Icaza (Xamarin), Paul Copplestone (Supabase), and Andrew
-Miklas (PagerDuty).
+founders and operators across the ecosystem. Investors include Yuri Sagalov,
+Linus Upson, Neha Narkhede, Jessica McKellar, Andrew Lee, Chris McKillop, Miguel
+de Icaza, Paul Copplestone, and Andrew Miklas.
 
 Shorebird helps businesses succeed with Flutter. We started this journey by
 solving one of the biggest pain points in mobile development: slow release
