@@ -9,7 +9,7 @@ date: 2025-09-23
 cover: 'seed-round-cover.png'
 ---
 
-Shorebird, a developer tools company founded by the creators of Flutter, has
+We at Shorebird, a developer tools company founded by the creators of Flutter, have
 raised a $3M seed round led by [Accel](https://www.accel.com), with
 participation from leading founders and operators across the ecosystem.
 Investors include Yuri Sagalov (AeroFS), Linus Upson (former Flutter VP), Neha
