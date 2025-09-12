@@ -17,7 +17,7 @@ Narkhede (Confluent), Jessica McKellar (Pilot.co), Andrew Lee (Firebase), Chris
 McKillop (former Flutter Manager), Miguel de Icaza (Xamarin), Paul Copplestone
 (Supabase), and Andrew Miklas (PagerDuty).
 
-Shorebird helps businesses succeed with Flutter. They have started this journey
+Shorebird helps businesses succeed with Flutter. We started this journey
 by solving one of the biggest pain points in mobile development: slow release
 cycles. Our first product, Code Push, enables developers to deliver instant
 over-the-air updates to Flutter apps across iOS, Android, and Desktop Systems,
