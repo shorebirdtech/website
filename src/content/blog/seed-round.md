@@ -19,7 +19,7 @@ McKillop (former Flutter Manager), Miguel de Icaza (Xamarin), Paul Copplestone
 
 Shorebird helps businesses succeed with Flutter. They have started this journey
 by solving one of the biggest pain points in mobile development: slow release
-cycles. Its first product, Code Push, enables developers to deliver instant
+cycles. Our first product, Code Push, enables developers to deliver instant
 over-the-air updates to Flutter apps across iOS, Android, and Desktop Systems,
 bypassing traditional app store review bottlenecks. Already, millions of users
 receive updates powered by Shorebird every day.
