@@ -9,16 +9,16 @@ date: 2025-09-23
 cover: 'seed-round-cover.png'
 ---
 
-We at Shorebird, a developer tools company founded by the creators of Flutter, have
-raised a $3M seed round led by [Accel](https://www.accel.com), with
+We at Shorebird, a developer tools company founded by the creators of Flutter,
+have raised a $3M seed round led by [Accel](https://www.accel.com), with
 participation from leading founders and operators across the ecosystem.
 Investors include Yuri Sagalov (AeroFS), Linus Upson (former Flutter VP), Neha
 Narkhede (Confluent), Jessica McKellar (Pilot.co), Andrew Lee (Firebase), Chris
 McKillop (former Flutter Manager), Miguel de Icaza (Xamarin), Paul Copplestone
 (Supabase), and Andrew Miklas (PagerDuty).
 
-Shorebird helps businesses succeed with Flutter. We started this journey
-by solving one of the biggest pain points in mobile development: slow release
+Shorebird helps businesses succeed with Flutter. We started this journey by
+solving one of the biggest pain points in mobile development: slow release
 cycles. Our first product, Code Push, enables developers to deliver instant
 over-the-air updates to Flutter apps across iOS, Android, and Desktop Systems,
 bypassing traditional app store review bottlenecks. Already, millions of users
@@ -27,12 +27,12 @@ receive updates powered by Shorebird every day.
 ## Expanding Products and People
 
 With this round, Shorebird has been able to accelerate product development,
-start its team, and expand its platform beyond Code Push. Most recently, we launched our second product
-[Shorebird CI](/blog/introducing-shorebird-ci), a zero-config continuous
-integration system built exclusively for Flutter and Dart. We are currently
-[hiring for a few new roles](/jobs), and are excited to bring more talented
-people into the team to help build faster, support more customers, and invest
-even more in the Flutter ecosystem.
+start its team, and expand its platform beyond Code Push. Most recently, we
+launched our second product [Shorebird CI](/blog/introducing-shorebird-ci), a
+zero-config continuous integration system built exclusively for Flutter and
+Dart. We are currently [hiring for a few new roles](/jobs), and are excited to
+bring more talented people into the team to help build faster, support more
+customers, and invest even more in the Flutter ecosystem.
 
 (Picture of Eric and Dan here)
 
