@@ -29,7 +29,7 @@ receive updates powered by Shorebird every day.
 With this round, Shorebird has been able to accelerate product development,
 start its team, and expand its platform beyond Code Push. Most recently, we launched our second product
 [Shorebird CI](/blog/introducing-shorebird-ci), a zero-config continuous
-integration system built exclusively for Flutter and Dart. They are now
+integration system built exclusively for Flutter and Dart. We are currently
 [hiring for a few new roles](/jobs), and are excited to bring more talented
 people into the team to help build faster, support more customers, and invest
 even more in the Flutter ecosystem.
