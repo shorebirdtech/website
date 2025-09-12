@@ -27,8 +27,7 @@ receive updates powered by Shorebird every day.
 ## Expanding Products and People
 
 With this round, Shorebird has been able to accelerate product development,
-start its team, and expand its platform beyond Code Push. Most recently, the
-company launched their second product
+start its team, and expand its platform beyond Code Push. Most recently, we launched our second product
 [Shorebird CI](/blog/introducing-shorebird-ci), a zero-config continuous
 integration system built exclusively for Flutter and Dart. They are now
 [hiring for a few new roles](/jobs), and are excited to bring more talented
