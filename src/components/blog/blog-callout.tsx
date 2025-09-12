@@ -7,9 +7,9 @@ function BlogCallout() {
   return (
     <div className="border-border-1 max-w-screen-md rounded-xl border p-5">
       <span className="text-text-2 my-0 font-light">
-        Shorebird allows you update your Flutter apps instantly, over the air.
-        It takes less than 5 minutes to integrate and complies with Apple and
-        Google store policies.
+        Shorebird empowers Flutter teams to focus on building great apps by
+        handling the hard parts like zero-config CI or instant over-the-air
+        updates.
       </span>
       <a
         target="_blank"

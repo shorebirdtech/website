@@ -7,6 +7,7 @@ import { LogoFull } from '@/components/logos/logo-full';
 import { Spacer } from '@/components/ui/spacer';
 import { TwitterLogo } from '@/components/logos/twitter-logo';
 import config from '@/config';
+import { RssIcon } from '@phosphor-icons/react';
 ---
 
 <footer
@@ -37,6 +38,11 @@ import config from '@/config';
           <a href={config.linkedInUrl}>
             <Button variant="outline" size="icon">
               <LinkedInLogo className="size-5" />
+            </Button>
+          </a>
+          <a href="/rss.xml">
+            <Button variant="outline" size="icon">
+              <RssIcon className="size-5" />
             </Button>
           </a>
         </div>
