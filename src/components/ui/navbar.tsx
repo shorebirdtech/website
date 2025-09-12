@@ -11,13 +11,14 @@ import {
 } from '@/components/ui/sheet';
 import config from '@/config';
 import {
-  ArrowRight,
-  Bookmark,
-  Books,
-  Building,
-  List,
-  Money,
-  Question,
+  ArrowRightIcon,
+  BookmarkIcon,
+  BooksIcon,
+  BuildingIcon,
+  ListIcon,
+  MoneyIcon,
+  QuestionIcon,
+  RssIcon,
 } from '@phosphor-icons/react';
 
 function Navbar() {
@@ -38,26 +39,30 @@ function Navbar() {
             </div>
           </div>
           <div className="flex flex-row items-center gap-2">
-            <a className="hidden lg:block" href={config.discordUrl}>
-              <Button variant="outline" size="sm" className="font-light">
-                <DiscordLogo className="size-5" />
-                Support
-              </Button>
-            </a>
             <a className="hidden lg:block" href={config.githubUrl}>
               <Button variant="outline" size="sm" className="font-light">
                 <GitHubLogo className="size-5" />
-                2.7k
+                2.8k
+              </Button>
+            </a>
+            <a className="hidden lg:block" href={config.discordUrl}>
+              <Button variant="outline" size="sm" className="font-light">
+                <DiscordLogo className="size-5" />
+              </Button>
+            </a>
+            <a className="hidden lg:block" href={'/rss.xml'}>
+              <Button variant="outline" size="sm" className="font-light">
+                <RssIcon className="size-5" />
               </Button>
             </a>
             <a href={config.consoleUrl}>
               <GradientOutlineButton className="h-9 gap-1.5 rounded-full px-3 font-light">
-                Get started <ArrowRight className="size-5" weight="bold" />
+                Get started <ArrowRightIcon className="size-5" weight="bold" />
               </GradientOutlineButton>
             </a>
             <SheetTrigger asChild>
               <Button size="icon" className="md:hidden">
-                <List className="size-6" />
+                <ListIcon className="size-6" />
               </Button>
             </SheetTrigger>
           </div>
@@ -72,27 +77,31 @@ function Navbar() {
           </SheetHeader>
           <div className="flex flex-col gap-6 px-6 text-lg">
             <a className="flex flex-row items-center gap-2" href="/pricing">
-              <Money className="text-accent-primary-1 size-6" />
+              <MoneyIcon className="text-accent-primary-1 size-6" />
               Pricing
             </a>
             <a className="flex flex-row items-center gap-2" href="/about">
-              <Building className="text-accent-primary-1 size-6" />
+              <BuildingIcon className="text-accent-primary-1 size-6" />
               About
             </a>
             <a className="flex flex-row items-center gap-2" href="/blog">
-              <Bookmark className="text-accent-primary-1 size-6" />
+              <BookmarkIcon className="text-accent-primary-1 size-6" />
               Blog
             </a>
             <a
               className="flex flex-row items-center gap-2"
               href={config.docsUrl}
             >
-              <Books className="text-accent-primary-1 size-6" />
+              <BooksIcon className="text-accent-primary-1 size-6" />
               Docs
             </a>
             <a className="flex flex-row items-center gap-2" href="/faq">
-              <Question className="text-accent-primary-1 size-6" />
+              <QuestionIcon className="text-accent-primary-1 size-6" />
               FAQs
+            </a>
+            <a className="flex flex-row items-center gap-2" href="/rss.xml">
+              <RssIcon className="text-accent-primary-1 size-6" />
+              RSS
             </a>
           </div>
         </SheetContent>

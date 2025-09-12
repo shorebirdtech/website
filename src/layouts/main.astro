@@ -20,6 +20,12 @@ const coverUrl = new URL('/open-graph.png', Astro.url.origin);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={title}
+      href={new URL('rss.xml', Astro.site)}
+    />
 
     <title>{title}</title>
     <meta name="description" content={config.tagline} />

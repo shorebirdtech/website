@@ -1,4 +1,5 @@
-import * as terms from './index.md';
+import * as code_push_terms from './code-push/index.md';
+import * as ci_terms from './ci/index.md';
 
 import type { APIRoute } from 'astro';
 
@@ -8,8 +9,14 @@ import type { APIRoute } from 'astro';
 export const GET: APIRoute = async () => {
   return new Response(
     JSON.stringify({
-      last_updated: terms.frontmatter.last_updated,
-      content: terms.rawContent(),
+      code_push: {
+        last_updated: code_push_terms.frontmatter.last_updated,
+        content: code_push_terms.rawContent(),
+      },
+      ci: {
+        last_updated: ci_terms.frontmatter.last_updated,
+        content: ci_terms.rawContent(),
+      },
     }),
     {
       headers: {
