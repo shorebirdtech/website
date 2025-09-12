@@ -52,7 +52,7 @@ category-defining opportunity.”
 ## About Shorebird
 
 Founded in 2023 and based in San Francisco, Shorebird builds products to help
-businesses succeed with Flutter. Its flagship service, Code Push, enables
+businesses succeed with Flutter. Our flagship service, Code Push, enables
 instant app updates without app store delays. Shorebird was founded by Eric
 Seidel, creator of Flutter, alongside Felix Angelov (creator of Bloc and Mason)
 and a small team of influential Flutter contributors.
