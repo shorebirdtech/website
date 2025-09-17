@@ -33,7 +33,7 @@ Dart. We are currently [hiring for a few new roles](/jobs), and are excited to
 bring more talented people into the team to help build faster, support more
 customers, and invest even more in the Flutter ecosystem.
 
-(Picture of Eric and Dan here)
+![Dan Levine and Eric Seidel](../../assets/blog/seed-round/eric-dan.jpg)
 
 “Mobile development has always lagged behind the web when it comes to speed of
 iteration,” said Eric Seidel, CEO of Shorebird and creator of Flutter.
