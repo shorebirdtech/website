@@ -42,6 +42,7 @@ const jobsCollection = defineCollection({
     location: z.string(),
     type: z.string(),
     cover: z.string(),
+    applicationUrl: z.string(),
   }),
 });
 

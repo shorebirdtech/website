@@ -4,7 +4,7 @@ import { Navbar } from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer.astro';
 import config from '@/config';
 
-const { title, location, type } = Astro.props;
+const { title, location, type, applicationUrl } = Astro.props;
 ---
 
 <MainLayout title={title}>
@@ -30,9 +30,7 @@ const { title, location, type } = Astro.props;
     <slot />
     <div class="py-8">
       <p>
-        To apply, please email <a href={`mailto:${config.hiringEmail}`}
-          >{config.hiringEmail}</a
-        >. Please include your resume or LinkedIn profile.
+        To apply, please fill out our <a href={applicationUrl}>application form</a>.
       </p>
     </div>
   </article>

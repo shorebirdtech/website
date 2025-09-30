@@ -6,6 +6,7 @@ description:
 location: Remote (North America)
 type: Full-time or contract
 cover: marketing-cover.png
+applicationUrl: https://forms.gle/JT7VjXAJCJXSuxqk7
 ---
 
 ### Overview
