@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
@@ -11,7 +12,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap()],
+  integrations: [react(), sitemap(), mdx()],
   redirects: {
     '/faq': 'https://docs.shorebird.dev/faq',
     '/privacy.html': '/privacy',

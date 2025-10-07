@@ -1,0 +1,93 @@
+---
+title: Flame
+description:
+  Learn how Flame, an open source game engine built for Flutter, reduced their
+  CI times by up to 7x with Shorebird CI.
+date: 2025-10-07
+cover: flame-cover.png
+highlights:
+  [
+    'Open source project with over 10,000 GitHub stars',
+    'Monorepo containing over 29 packages',
+    'Shorebird CI reduced check times by up to 7x',
+  ]
+---
+
+import { Image } from 'astro:assets';
+import removeConfiguration from '../../assets/success-stories/flame/remove-configuration.png';
+import shorebirdChecks from '../../assets/success-stories/flame/shorebird-checks.png';
+import performance from '../../assets/success-stories/flame/performance.png';
+import badge from '../../assets/success-stories/flame/badge.png';
+
+The [Flame Engine](https://flame-engine.org), is an open source game engine
+built for Flutter. It allows Flutter developers to write high quality games that
+run on mobile, desktop, and the web. Flame has over
+[10,000 stars on GitHub](https://github.com/flame-engine/flame) and is vital and
+widely used project within the Flutter community. With over 29 packages and
+heaps of examples, the Flame team had a fairly complex setup for running checks
+on pull requests and merges which was manually configured and regularly took
+between 7 and 8 minutes to run. The Flame team partnered with Shorebird to pilot
+Shorebird CI and improve their continuous integration (CI) setup so that they
+could spend less time waiting for checks to run and more time building the best
+game engine for Flutter.
+
+## No Configuration, No Problems
+
+With Shorebird's zero configuration CI solution, the Flame team was able to
+start using Shorebird's CI with
+[less than one minute of setup](https://docs.shorebird.dev/ci). In addition, the
+team was able to delete a handful of manual CI configuration and no longer had
+to worry about maintaining the workflows, versions of dependencies, etc.
+
+> We just threw out all of our CI config and replaced it with Shorebird CI and
+> it both covers all of our needs and does it better than our previous setup,
+> without needing any config at all!
+>
+> - [Lukas Klingsbo](https://github.com/spydon), Flame Maintainer
+
+<Image
+  src={removeConfiguration}
+  alt="Pull request to remove manual CI configuration"
+/>
+
+## Parallization and Performance Improvements
+
+Shorebird's CI statically analyzes the project and builds a dependency graph in
+order to only run checks on affected nodes of the graph. This means that if a
+contributor opens a pull request that fixes a bug in `package:flame_3d`,
+Shorebird CI will only perform checks against the `flame_3d` package (and its
+corresponding example project). Conversely, if a contributor made changes to
+`package:flame`, then checks will run against `package:flame` as well as every
+package that depends on `package:flame` (either directly or transitively).
+
+<Image src={shorebirdChecks} alt="An example of Shorebird checks" />
+
+In addition, Shorebird CI automatically runs checks for each node in the
+dependency graph in parallel which led to a significant decrease in the average
+time taken to perform CI checks. Before Shorebird, the Flame CI checks would
+always exercise all tests (among other checks) regardless of what changed in a
+pull request. This meant that their CI checks would regularly take between 7 and
+8 minutes. By parallelizing and only running checks for affected nodes,
+Shorebird was able to cut that time down by over 50% across the board and in
+some cases Shorebird CI reduced check times by as much as 95%. For the same set
+of code changes, checks that would previous take 7-8 minutes to run, now run in
+approximately 3 minutes. When a pull request does not contain code changes,
+Shorebird CI checks complete in approximately 20 seconds.
+
+<Image
+  src={performance}
+  alt="performance comparison before and after Shorebird CI"
+/>
+
+## Key Takeaways
+
+Shorebird CI was able to both provide significant speed ups in CI checks while
+also reducing the complexity of maintaining CI workflows for a large monorepo.
+We're very honored to have been able to work with the Flame team as they are a
+vital project within the Flutter ecosystem and we love any opportunities to give
+back to the open source Flutter & Dart communities 💙
+
+<Image src={badge} alt="Shorebird CI badge" />
+
+Shorebird CI is free for open source projects, so if you're interesting in
+learning more you can [get started here](https://docs.shorebird.dev/ci).

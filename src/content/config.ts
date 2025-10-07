@@ -24,7 +24,10 @@ const blogCollection = defineCollection({
 });
 
 const successStoriesCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/success-stories' }),
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/success-stories',
+  }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
