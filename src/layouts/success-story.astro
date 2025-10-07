@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import { BlogCallout } from '@/components/blog/blog-callout';
 import { Navbar } from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer.astro';
+import { Markdown } from '@/components/ui/markdown';
 
 const { title, date, description, highlights, id } = Astro.props;
 const coverUrl = new URL('/success-stories/open-graph.png', Astro.url.origin);
@@ -80,11 +81,16 @@ if (!coverImage) {
           </span>
           <div class="flex flex-col gap-4">
             <span class="text-text-2 text-xl">Highlights</span>
-            {
-              highlights.map((highlight: string, index: number) => (
-                <p>- {highlight}</p>
-              ))
-            }
+            <div class="flex flex-col items-center justify-start">
+              {
+                highlights.map((highlight: string, index: number) => (
+                  <div class="flex w-full flex-row items-start gap-2">
+                    <span>-</span>
+                    <Markdown content={highlight.trim()} />
+                  </div>
+                ))
+              }
+            </div>
           </div>
         </div>
         <div class="col-span-2">
