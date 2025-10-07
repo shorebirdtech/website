@@ -67,7 +67,7 @@ package that depends on `package:flame` (either directly or transitively).
 
 In addition, Shorebird CI automatically runs checks for each node in the
 dependency graph in parallel which led to a significant decrease in the average
-time taken to perform CI checks. Before Shorebird, the Flame CI checks would
+time taken to perform CI checks. Before Shorebird, the previous CI checks would
 always exercise all tests (among other checks) regardless of what changed in a
 pull request. This meant that their CI checks would regularly take between 7 and
 8 minutes. By parallelizing and only running checks for affected nodes,
