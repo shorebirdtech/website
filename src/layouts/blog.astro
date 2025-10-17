@@ -12,6 +12,7 @@ import Footer from '@/components/ui/footer.astro';
 import FormattedDate from '@/components/blog/formatted-date.astro';
 import shorebirdHeadshot from '@/assets/blog/headshots/shorebird-headshot.png';
 import tomHeadshot from '@/assets/blog/headshots/tom-headshot.jpg';
+import dawnHeadshot from '@/assets/blog/headshots/dawn-headshot.jpg';
 
 function getReadingTime(wordCount: number) {
   const wordsPerMinute = 250;
@@ -65,6 +66,12 @@ const authors: Record<string, Author> = {
     title: 'Founding Operations Lead',
     avatar: tomHeadshot,
     github: 'tomarra',
+  },
+  'ducky-dawn': {
+    name: 'Dawn Parzych',
+    title: 'Marketing Lead',
+    avatar: dawnHeadshot,
+    github: 'ducky-dawn',
   },
 };
 ---
