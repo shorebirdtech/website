@@ -1,0 +1,40 @@
+---
+import '@/styles/global.css';
+import { Image } from 'astro:assets';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { getCollection } from 'astro:content';
+import { Navbar } from '@/components/ui/navbar';
+import { ScrollToTopButton } from '@/components/scroll-to-top-button';
+import { Spacer } from '@/components/ui/spacer';
+import Footer from '@/components/ui/footer.astro';
+import MainLayout from '@/layouts/main.astro';
+import { Button } from '@/components/ui/button';
+import config from '@/config';
+import { ArrowRightIcon } from '@phosphor-icons/react';
+import type { ImageMetadata } from 'astro';
+
+---
+
+<MainLayout title="Open Positions">
+  <Navbar client:load />
+  <section
+    class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
+  >
+    <h1
+      class="text-text-1 mx-auto text-center text-5xl font-semibold md:mx-0 md:text-start"
+    >
+      Our open <span class="gradient-text">positions</span>
+    </h1>
+    <Spacer />
+    <div
+      class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
+    >
+      <h3 class="text-text-2 mx-auto text-center text-lg md:mx-0 md:text-start">
+        Learn about our open roles and apply to join the growing team at
+        Shorebird by visiting our job board at <a href={config.jobBoardUrl}>{config.jobBoardUrl}</a>.
+      </h3>
+    </div>
+  </section>
+  <Footer />
+  <ScrollToTopButton client:load />
+</MainLayout>
