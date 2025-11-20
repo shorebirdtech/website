@@ -9,6 +9,12 @@ cover: engineer-cover.png
 applicationUrl: https://forms.gle/zQwFZD23gcoUvKaC9
 ---
 
+### Video Walkthrough
+
+Eric (Founder, CEO) walks you through this application over video:
+https://www.loom.com/share/fc1de95fae9c49059b79800ffc656ff3
+
+
 ### Overview
 
 We have one successful product with thousands of monthly users, delivering 10s
