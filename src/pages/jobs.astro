@@ -29,10 +29,11 @@ import type { ImageMetadata } from 'astro';
     <div
       class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
     >
-      <h3 class="text-text-2 mx-auto text-center text-lg md:mx-0 md:text-start">
-        Learn about our open roles and apply to join the growing team at
-        Shorebird by visiting our job board at <a href={config.jobBoardUrl}>{config.jobBoardUrl}</a>.
-      </h3>
+    <div id="gem_job_board_embed" />
+    <script>
+      window.__gemJobBoardUrl = "https://jobs.gem.com/shorebird-dev"
+    </script>
+    <script src="https://jobs.gem.com/gem/embed"></script>
     </div>
   </section>
   <Footer />
