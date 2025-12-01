@@ -23,5 +23,6 @@ export default defineConfig({
     '/terms.html': '/terms',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/jobs/full-stack-software-engineer': '/jobs',
+    '/jobs': config.jobBoardUrl,
   },
 });
