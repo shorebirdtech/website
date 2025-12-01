@@ -12,7 +12,6 @@ import { Button } from '@/components/ui/button';
 import config from '@/config';
 import { ArrowRightIcon } from '@phosphor-icons/react';
 import type { ImageMetadata } from 'astro';
-
 ---
 
 <MainLayout title="Open Positions">
@@ -29,11 +28,15 @@ import type { ImageMetadata } from 'astro';
     <div
       class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
     >
-      <h3 class="text-text-2 mx-auto text-center text-lg md:mx-0 md:text-start">
-        Learn about our open roles and apply to join the growing team at
-        Shorebird by visiting our job board at <a href={config.jobBoardUrl}>{config.jobBoardUrl}</a>.
-      </h3>
-    </div>
+    
+    <div id="gem_job_board_embed" style="width: 100%;max-width: 900px;margin: 0 auto;padding: 
+    2rem 1rem;display: block;"/>
+    
+    <!-- Keep these scripts inline so it runs in the browser, not server side -->
+    <script is:inline>
+      window.__gemJobBoardUrl = "https://jobs.gem.com/shorebird-dev";
+    </script>
+    <script is:inline src="https://jobs.gem.com/gem/embed"></script>
   </section>
   <Footer />
   <ScrollToTopButton client:load />
