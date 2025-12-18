@@ -112,8 +112,8 @@ And here are some of the ways we’re doing this with Shorebird:
   up with simple and complex examples.
 - **Built for flexibility:** We don’t dictate how your release process works, we
   provide the plumbing to make your team successful. You can use the Shorebird
-  updater available on [pub.dev](https://pub.dev/packages/shorebird_code_push)
-  or
+  Code Push package available on
+  [pub.dev](https://pub.dev/packages/shorebird_code_push) or
   [GitHub](https://github.com/shorebirdtech/updater/tree/main/shorebird_code_push)
   to programmatically control when the Shorebird updater checks for and
   downloads patches.
