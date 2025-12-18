@@ -3,7 +3,7 @@ title: Shorebird 2025 year in review
 author: dawn-ducky
 description:
   2025 brought with it new products, new team members, and new customers.
-date: 2025-10-17
+date: 2025-12-21
 cover: '2025-year-in-review.png'
 ---
 
