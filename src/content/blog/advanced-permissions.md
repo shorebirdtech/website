@@ -58,7 +58,7 @@ If you were previously using “Collaborators” for per-app permissions this ha
 been integrated into this new model. No changes are necessary from you to take
 advantage of these capabilities.
 
-Companies of all sizes choose Shorebird to help them ship hotfixes and updates
+Companies of all sizes choose Shorebird to help them ship hot fixes and updates
 faster without compromising control. These new permission features extend that
 promise by providing the governance and flexibility that enterprise and IT
 compliance teams need.
