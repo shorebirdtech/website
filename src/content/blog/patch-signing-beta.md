@@ -48,7 +48,7 @@ We’re looking for companies to work with us in testing and improving patch
 signing over the next few weeks. If you are interested, please give it a try:
 https://docs.shorebird.dev/guides/patch-signing/ You can also reach out to us
 via [GitHub](https://github.com/shorebirdtech/shorebird/),
-[Discord](https://discord.gg/shorebird) or [email](contact@shorebird.dev) should
+[Discord](https://discord.gg/shorebird) or [email](mail:contact@shorebird.dev) should
 you have feedback or questions.
 
 We’d love to help you integrate Shorebird code push into your application.
@@ -56,4 +56,4 @@ Please [reach out](mail:contact@shorebird.dev) to us if you have any questions
 or need help getting started.
 
 If you're curious about what we had to change in Dart to make this all possible,
-check out our [previous post](how-we-built-code-push).
+check out our [previous post](https://shorebird.dev/how-we-built-code-push).
