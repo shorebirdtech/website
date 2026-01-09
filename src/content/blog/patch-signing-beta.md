@@ -56,4 +56,5 @@ Please [reach out](mail:contact@shorebird.dev) to us if you have any questions
 or need help getting started.
 
 If you're curious about what we had to change in Dart to make this all possible,
-check out our [previous post](https://shorebird.dev/how-we-built-code-push).
+check out our
+[previous post](https://shorebird.dev/blog/how-we-built-code-push).
