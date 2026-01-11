@@ -8,6 +8,7 @@ function LinkedInLogo({ className }: { className?: string }) {
       viewBox="0 0 20 20"
       fill="none"
     >
+      <title>LinkedIn</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
