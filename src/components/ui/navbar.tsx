@@ -51,13 +51,13 @@ function Navbar() {
               </Button>
             </a>
             <a className="hidden lg:block" href={'/rss.xml'}>
-              <Button variant="outline" size="sm" className="font-light">
-                <RssIcon className="size-5" />
+              <Button variant="outline" size="sm" className="font-light" aria-label="RSS feed">
+                <RssIcon className="size-5" aria-hidden="true" />
               </Button>
             </a>
             <a href={config.consoleUrl}>
               <GradientOutlineButton className="h-9 gap-1.5 rounded-full px-3 font-light">
-                Get started <ArrowRightIcon className="size-5" weight="bold" />
+                Get started <ArrowRightIcon className="size-5" weight="bold" aria-hidden="true" />
               </GradientOutlineButton>
             </a>
             <SheetTrigger asChild>
