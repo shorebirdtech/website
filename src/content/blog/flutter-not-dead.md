@@ -2,7 +2,7 @@
 title: Why Flutter isn’t Dead
 author: eseidel
 description: Flutter is inevitable and growing, here’s why you should use it
-date: 2026-1-15
+date: 2026-01-15
 cover: 'FlutterNotDeadYet.png'
 ---
 
