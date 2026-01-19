@@ -148,8 +148,8 @@ faster than core teams can. And we’re seeing strong promise there:
   reducing integration friction.
 - [Widgetbook](https://www.widgetbook.io/): Has become a serious tool for design
   systems and collaboration between design and engineering.
-- [Patrol](https://patrol.leancode.co/): An end-to-end testing
-  framework developed by LeanCode.
+- [Patrol](https://patrol.leancode.co/): An end-to-end testing framework
+  developed by LeanCode.
 - [Globe](https://globe.dev/): A Dart-specific cloud hosting solution developed
   by [Invertase](https://invertase.io/).
 - [Stac](https://stac.dev/): A server-push solution for Flutter
