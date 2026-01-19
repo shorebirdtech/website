@@ -148,13 +148,13 @@ faster than core teams can. And we’re seeing strong promise there:
   reducing integration friction.
 - [Widgetbook](https://www.widgetbook.io/): Has become a serious tool for design
   systems and collaboration between design and engineering.
-- [Patrol](https://patrol.leancode.co/): A commercial end-to-end testing
+- [Patrol](https://patrol.leancode.co/): An end-to-end testing
   framework developed by LeanCode.
 - [Globe](https://globe.dev/): A Dart-specific cloud hosting solution developed
   by [Invertase](https://invertase.io/).
-- [Stac](https://stac.dev/): A server-push solution for Flutter.
+- [Stac](https://stac.dev/): A server-push solution for Flutter
 - [Vyuh:](https://vyuh.tech/) CMS for Flutter
-- [DCM](https://dcm.dev/): sells an enhanced dart analyzer.
+- [DCM](https://dcm.dev/): An advanced code quality tool for Dart and Flutter
 - [OnePub](https://onepub.dev/): Private pub.dev hosting
 - [Codelessly](https://codelessly.com/), [Nowa](https://www.nowa.dev/), and
   [Vide](https://vide.dev/): Browser IDEs for Flutter apps
