@@ -15,8 +15,8 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
-    "@astrojs/rss": "^4.0.14",
-    "@astrojs/sitemap": "^3.6.1",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
     "@base-ui-components/react": "^1.0.0-rc.0",
     "@lavamoat/preinstall-always-fail": "^2.1.1",
     "@phosphor-icons/react": "^2.1.10",
@@ -26,7 +26,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.16.8",
+    "astro": "^5.16.11",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lottie-react": "^2.4.1",
@@ -42,8 +42,8 @@
   "devDependencies": {
     "@lavamoat/allow-scripts": "^3.4.1",
     "@tailwindcss/typography": "^0.5.19",
-    "cspell": "^9.4.0",
-    "prettier": "^3.7.4",
+    "cspell": "^9.6.0",
+    "prettier": "^3.8.0",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2"
   },
