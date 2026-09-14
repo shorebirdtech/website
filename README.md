@@ -49,8 +49,8 @@ Scripts (Python 3, stdlib only):
   Re-running regenerates every body that still carries the
   `<!-- Converted from the Webflow CMS export ... -->` marker and rewrites
   `src/data/*.json`, so hand edits made after the import are lost unless the
-  marker is removed first. Treat it as an archive of how the content got here,
-  not as a routine tool.
+  marker is removed first. It is kept for the final delta pull before cutover
+  (see `CUTOVER.md`); after that it is history, not a tool.
 - `scripts/check_links.py` — crawls `dist/**/*.html` and reports internal links,
   images, scripts and `og:image` URLs that do not resolve to a file.
   `npm run check:links` runs it against `dist/`.
