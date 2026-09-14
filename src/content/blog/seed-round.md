@@ -6,7 +6,7 @@ description:
   including Code Push and Shorebird CI, making mobile iteration faster than
   ever.
 date: 2025-09-23
-cover: seed-round-cover.png
+cover: seed-round.png
 intro:
   Shorebird has raised $3M to expand its suite of Flutter developer tools,
   including Code Push and Shorebird CI, making mobile iteration faster than

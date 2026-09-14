@@ -3,7 +3,7 @@ title: Online Shorebird workshops
 author: felangel
 description: Announcing online workshops to help you get started with Shorebird.
 date: 2025-01-06
-cover: workshops-cover.png
+cover: workshops.avif
 intro: Announcing online workshops to help you get started with Shorebird.
 readingTime: 1 min read
 ogImage: '/blog/og/workshops.png'

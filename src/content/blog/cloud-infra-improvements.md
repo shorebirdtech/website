@@ -5,7 +5,7 @@ description:
   A deep dive into some of the recent backend infrastructure improvements we've
   made.
 date: 2025-04-17
-cover: improved-cloud-infra-cover.png
+cover: cloud-infra-improvements.png
 intro:
   A deep dive into some of the recent backend infrastructure improvements we've
   made.

@@ -3,7 +3,7 @@ title: Production desktop support
 author: bryanoltman
 description: Announcing that desktop platforms are now production-ready.
 date: 2025-02-07
-cover: stable-desktop-cover.png
+cover: desktop-in-production.avif
 intro: Announcing that desktop platforms are now production-ready.
 readingTime: 1 min read
 ogImage: '/blog/og/desktop-in-production.png'

@@ -5,7 +5,7 @@ description:
   Learning from enterprise players that custom code deployment systems are
   valuable but a lot to maintain.
 date: 2025-02-24
-cover: buy-dont-build-cover.png
+cover: buy-dont-build.avif
 intro:
   Learning from enterprise players that custom code deployment systems are
   valuable but a lot to maintain.

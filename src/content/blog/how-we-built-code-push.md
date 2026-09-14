@@ -5,7 +5,7 @@ description:
   Walk through of the changes made to Dart and Flutter in order to make code
   push work.
 date: 2024-05-17
-cover: how-we-built-code-push-cover.png
+cover: how-we-built-code-push.png
 intro:
   Walk through of the changes made to Dart and Flutter in order to make code
   push work.

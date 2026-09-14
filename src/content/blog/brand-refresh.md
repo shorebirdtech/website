@@ -3,7 +3,7 @@ title: Website redesign & brand refresh
 author: felangel
 description: Announcing our redesigned site and refreshed branding.
 date: 2025-03-06
-cover: brand-refresh-cover.png
+cover: brand-refresh.png
 intro: Announcing our redesigned site and refreshed branding.
 readingTime: 1 min read
 ogImage: '/blog/og/brand-refresh.png'

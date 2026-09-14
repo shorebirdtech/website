@@ -5,7 +5,7 @@ description:
   Business and Enterprise plan customers now have access to advanced
   permissions.
 date: 2025-12-24
-cover: organizations-cover.png
+cover: advanced-permissions.png
 intro:
   Business and Enterprise plan customers now have access to advanced
   permissions.

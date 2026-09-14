@@ -3,7 +3,7 @@ title: macOS desktop support (beta)
 author: bryanoltman
 description: Announcing the beta release of macOS desktop support.
 date: 2024-12-16
-cover: macos-beta-cover.png
+cover: macos-beta.avif
 intro: Announcing the beta release of macOS desktop support.
 readingTime: 1 min read
 ogImage: '/blog/og/macos-beta.png'

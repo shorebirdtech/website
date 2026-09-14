@@ -3,7 +3,7 @@ title: Simplified flexible pricing
 author: shorebirdtech
 description: Announcing simplified pricing for Shorebird.
 date: 2024-08-27
-cover: simplified-pricing-cover.png
+cover: simplified-pricing.png
 intro: Announcing simplified pricing for Shorebird.
 readingTime: 1 min read
 ogImage: '/blog/og/simplified-pricing.png'

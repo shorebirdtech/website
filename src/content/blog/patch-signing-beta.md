@@ -3,7 +3,7 @@ title: Patch signing beta
 author: bryanoltman
 description: Announcing Patch Signing for Shorebird Code Push.
 date: 2024-06-05
-cover: patch-signing-cover.png
+cover: patch-signing-beta.avif
 intro: Announcing Patch Signing for Shorebird Code Push.
 readingTime: 2 min read
 ogImage: '/blog/og/patch-signing-beta.png'

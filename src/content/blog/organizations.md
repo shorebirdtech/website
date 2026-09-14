@@ -4,7 +4,7 @@ author: shorebirdtech
 description:
   'Announcing "Organizations" support for improved collaboration within teams.'
 date: 2024-10-10
-cover: organizations-cover.png
+cover: organizations.avif
 intro:
   'Announcing "Organizations" support for improved collaboration within teams.'
 readingTime: 1 min read

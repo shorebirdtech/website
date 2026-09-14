@@ -3,7 +3,7 @@ title: What's new in v2.0 of the Shorebird Code Push Package
 author: felangel
 description: 'Announcing the pre-release of pkg:shorebird_code_push v2.0.'
 date: 2024-11-05
-cover: code-push-v2-cover.png
+cover: shorebird-code-push-v2.avif
 intro: 'Announcing the pre-release of pkg:shorebird_code_push v2.0.'
 readingTime: 4 min read
 ogImage: '/blog/og/shorebird-code-push-v2.png'

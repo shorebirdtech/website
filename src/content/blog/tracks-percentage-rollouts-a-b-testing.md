@@ -3,7 +3,7 @@ title: Tracks, percentage rollouts and A/B testing
 author: eseidel
 description: Announcing Tracks, Percentage Rollouts and A/B testing.
 date: 2024-11-14
-cover: tracks-cover.png
+cover: tracks-percentage-rollouts-a-b-testing.avif
 intro: Announcing Tracks, Percentage Rollouts and A/B testing.
 readingTime: 2 min read
 ogImage: '/blog/og/tracks-percentage-rollouts-a-b-testing.png'

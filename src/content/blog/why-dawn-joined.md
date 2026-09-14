@@ -3,7 +3,7 @@ title: Expanding the flock - Dawn Parzych joins Shorebird
 author: dawn-ducky
 description: Introducing our new Marketing Lead.
 date: 2025-10-17
-cover: dawn-joins-shorebird-cover.png
+cover: why-dawn-joined.avif
 intro: Introducing our new Marketing Lead.
 readingTime: 4 min read
 ogImage: '/blog/og/why-dawn-joined.png'

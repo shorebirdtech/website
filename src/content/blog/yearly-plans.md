@@ -5,7 +5,7 @@ description:
   Yearly Plans for Shorebird designed to give you more flexibility and
   predictability as you build and scale your apps.
 date: 2025-04-23
-cover: yearly-plans-cover.png
+cover: yearly-plans.avif
 intro:
   Yearly Plans for Shorebird designed to give you more flexibility and
   predictability as you build and scale your apps.

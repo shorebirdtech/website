@@ -3,7 +3,7 @@ title: Surviving the upgrade to Dart 3.5.0
 author: bryanoltman
 description: Troubleshooting when upgrading to Dart 3.5.0.
 date: 2024-08-16
-cover: dart-3.5-cover.png
+cover: dart-3-5-0.avif
 intro: Troubleshooting when upgrading to Dart 3.5.0.
 readingTime: 2 min read
 ogImage: '/blog/og/dart-3-5-0.png'

@@ -4,7 +4,7 @@ author: dawn-ducky
 description:
   2025 brought with it new products, new team members, and new customers.
 date: 2025-12-21
-cover: 2025-year-in-review.png
+cover: 2025-year-in-review.avif
 intro: 2025 brought with it new products, new team members, and new customers.
 readingTime: 4 min read
 ogImage: '/blog/og/2025-year-in-review.png'

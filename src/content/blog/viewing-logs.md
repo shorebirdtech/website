@@ -3,7 +3,7 @@ title: Viewing logs in released apps
 author: bryanoltman
 description: How to view logs for an app without a debugger attached.
 date: 2024-08-20
-cover: viewing-logs-cover.png
+cover: viewing-logs.png
 intro: How to view logs for an app without a debugger attached.
 readingTime: 2 min read
 ogImage: '/blog/og/viewing-logs.png'

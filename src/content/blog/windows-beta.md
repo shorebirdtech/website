@@ -3,7 +3,7 @@ title: Windows desktop support (beta)
 author: eseidel
 description: Announcing the beta release of Windows desktop support.
 date: 2025-01-09
-cover: windows-beta-cover.png
+cover: windows-beta.png
 intro: Announcing the beta release of Windows desktop support.
 readingTime: 1 min read
 ogImage: '/blog/og/windows-beta.png'

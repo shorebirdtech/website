@@ -3,7 +3,7 @@ title: Introducing Shorebird Create
 author: shorebirdtech
 description: The easy way to start your next project with Shorebird.
 date: 2025-06-17
-cover: shorebird-create-cover.png
+cover: shorebird-create.avif
 intro: The easy way to start your next project with Shorebird.
 readingTime: 1 min read
 ogImage: '/blog/og/shorebird-create.png'

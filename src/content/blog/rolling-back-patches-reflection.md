@@ -5,7 +5,7 @@ description:
   Why this overlooked superpower gives Flutter teams the control they’ve been
   missing.
 date: 2025-07-07
-cover: patch-rollback-cover.png
+cover: rolling-back-patches-reflection.png
 intro:
   Why this overlooked superpower gives Flutter teams the control they’ve been
   missing.

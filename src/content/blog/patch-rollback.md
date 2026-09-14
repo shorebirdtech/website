@@ -3,7 +3,7 @@ title: Patch rollbacks
 author: shorebirdtech
 description: Announcing support for rolling back patches.
 date: 2024-08-09
-cover: patch-rollback-cover.png
+cover: patch-rollback.avif
 intro: Announcing support for rolling back patches.
 readingTime: 1 min read
 ogImage: '/blog/og/patch-rollback.png'

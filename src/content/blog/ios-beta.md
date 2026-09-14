@@ -3,7 +3,7 @@ title: iOS beta
 author: shorebirdtech
 description: Shorebird Code Push for iOS beta announcement.
 date: 2024-02-01
-cover: ios-beta-cover.png
+cover: ios-beta.avif
 intro: Shorebird Code Push for iOS beta announcement.
 readingTime: 2 min read
 ogImage: '/blog/og/ios-beta.png'

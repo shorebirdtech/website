@@ -3,7 +3,7 @@ title: Building the flock - Tom Arra joins Shorebird!
 author: tomarra
 description: Starting the growth outside of just Engineering.
 date: 2025-02-10
-cover: tom-joins-shorebird-cover.png
+cover: tom-joins-shorebird.avif
 intro: Starting the growth outside of just Engineering.
 readingTime: 2 min read
 ogImage: '/blog/og/tom-joins-shorebird.png'

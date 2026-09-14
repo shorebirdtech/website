@@ -4,7 +4,7 @@ author: shorebirdtech
 description:
   Join us June 25–26 to connect with the Flutter community in North America.
 date: 2025-05-06
-cover: flutterconusa-2025-cover.png
+cover: flutterconusa-2025-sponsor.png
 intro:
   Join us June 25–26 to connect with the Flutter community in North America.
 readingTime: 2 min read

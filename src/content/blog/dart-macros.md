@@ -4,7 +4,7 @@ author: eseidel
 description:
   'Reacting to Google''s decision to cancel Dart''s "macros" feature.'
 date: 2025-01-29
-cover: dart-macros-cover.png
+cover: dart-macros.avif
 intro: 'Reacting to Google''s decision to cancel Dart''s "macros" feature.'
 readingTime: 3 min read
 ogImage: '/blog/og/dart-macros.png'

@@ -5,7 +5,7 @@ description:
   Announcing a new service from Shorebird, zero config CI for Flutter and Dart
   applications.
 date: 2025-09-09
-cover: introducing-shorebird-ci-cover.png
+cover: introducing-shorebird-ci.png
 intro:
   Announcing a new service from Shorebird, zero config CI for Flutter and Dart
   applications.

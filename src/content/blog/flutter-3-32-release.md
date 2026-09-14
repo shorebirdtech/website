@@ -5,7 +5,7 @@ description:
   Updating Shorebird for the latest Flutter release and highlighting our
   favorite updates.
 date: 2025-05-28
-cover: flutter-3.32-cover.png
+cover: flutter-3-32-release.png
 intro:
   Updating Shorebird for the latest Flutter release and highlighting our
   favorite updates.

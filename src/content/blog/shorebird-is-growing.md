@@ -5,7 +5,7 @@ description:
   A quick look back to see how we got to today and how we are building for
   tomorrow.
 date: 2025-08-27
-cover: growing-cover.png
+cover: shorebird-is-growing.avif
 intro:
   A quick look back to see how we got to today and how we are building for
   tomorrow.

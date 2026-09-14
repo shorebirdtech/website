@@ -4,7 +4,7 @@ author: felangel
 description:
   Announcing improved global patch delivery, availability, and performance.
 date: 2024-09-05
-cover: improved-patch-delivery-cover.png
+cover: improved-patch-delivery.png
 intro: Announcing improved global patch delivery, availability, and performance.
 readingTime: 2 min read
 ogImage: '/blog/og/improved-patch-delivery.png'
