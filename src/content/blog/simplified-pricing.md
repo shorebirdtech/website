@@ -1,9 +1,16 @@
 ---
-title: Simplified, Flexible Pricing
+title: Simplified flexible pricing
 author: shorebirdtech
-description: Announcing simplified pricing for Shorebird
+description: Announcing simplified pricing for Shorebird.
 date: 2024-08-27
 cover: simplified-pricing-cover.png
+intro: Announcing simplified pricing for Shorebird.
+readingTime: 1 min read
+ogImage: '/blog/og/simplified-pricing.png'
+seoTitle: Simplified Flexible Pricing for Shorebird Users
+seoDescription:
+  Shorebird simplifies pricing into two plans, Free and Pro, replacing confusing
+  usage tiers with one straightforward option.
 ---
 
 Today we’re announcing simplified pricing for Shorebird. We offer two plans:

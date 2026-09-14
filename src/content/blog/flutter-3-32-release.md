@@ -1,11 +1,20 @@
 ---
-title: Flutter 3.32 Support and Review
+title: Flutter 3.32 support and review
 author: shorebirdtech
 description:
   Updating Shorebird for the latest Flutter release and highlighting our
   favorite updates.
 date: 2025-05-28
 cover: flutter-3.32-cover.png
+intro:
+  Updating Shorebird for the latest Flutter release and highlighting our
+  favorite updates.
+readingTime: 4 min read
+ogImage: '/blog/og/flutter-3-32-release.png'
+seoTitle: Flutter 3.32 Support and Review
+seoDescription:
+  Updating Shorebird for the latest Flutter release and highlighting our
+  favorite updates.
 ---
 
 We’re excited to announce that Shorebird now fully supports Flutter 3.32.0 and

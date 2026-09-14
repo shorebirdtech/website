@@ -1,10 +1,17 @@
 ---
-title: Shorebird Sponsors Fluttercon USA 2025
+title: Shorebird sponsors Fluttercon USA 2025
 author: shorebirdtech
 description:
   Join us June 25–26 to connect with the Flutter community in North America.
 date: 2025-05-06
 cover: flutterconusa-2025-cover.png
+intro:
+  Join us June 25–26 to connect with the Flutter community in North America.
+readingTime: 2 min read
+ogImage: '/blog/og/flutterconusa-2025-sponsor.png'
+seoTitle: Shorebird Sponsors Fluttercon USA 2025
+seoDescription:
+  Join us June 25–26 to connect with the Flutter community in North America.
 ---
 
 It’s been a year full of in person conferences and meetups for us and we are

@@ -1,10 +1,16 @@
 ---
-title: Improved Patch Delivery
+title: Improved patch delivery
 author: felangel
 description:
   Announcing improved global patch delivery, availability, and performance.
 date: 2024-09-05
 cover: improved-patch-delivery-cover.png
+intro: Announcing improved global patch delivery, availability, and performance.
+readingTime: 2 min read
+ogImage: '/blog/og/improved-patch-delivery.png'
+seoTitle: 'Improved Patch Delivery: Faster, More Reliable OTA'
+seoDescription:
+  Announcing improved global patch delivery, availability, and performance.
 ---
 
 We're excited to announce some improvements to cloud infrastructure which

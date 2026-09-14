@@ -1,9 +1,16 @@
 ---
-title: Tracks, Percentage Rollouts and A/B testing
+title: Tracks, percentage rollouts and A/B testing
 author: eseidel
-description: Announcing Tracks, Percentage Rollouts and A/B testing
+description: Announcing Tracks, Percentage Rollouts and A/B testing.
 date: 2024-11-14
 cover: tracks-cover.png
+intro: Announcing Tracks, Percentage Rollouts and A/B testing.
+readingTime: 2 min read
+ogImage: '/blog/og/tracks-percentage-rollouts-a-b-testing.png'
+seoTitle: Tracks, Percentage Rollouts and A/B testing
+seoDescription:
+  Shorebird introduces patch tracks for percentage-based rollouts and A/B
+  testing, giving Flutter teams more control over updates.
 ---
 
 Building on the success of our brand-new

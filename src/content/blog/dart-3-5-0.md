@@ -1,10 +1,16 @@
 ---
 title: Surviving the upgrade to Dart 3.5.0
 author: bryanoltman
-description: Troubleshooting when upgrading to Dart 3.5.0
+description: Troubleshooting when upgrading to Dart 3.5.0.
 date: 2024-08-16
 cover: dart-3.5-cover.png
-slug: 'dart-3.5.0'
+intro: Troubleshooting when upgrading to Dart 3.5.0.
+readingTime: 2 min read
+ogImage: '/blog/og/dart-3-5-0.png'
+seoTitle: Surviving the upgrade to Dart 3.5.0
+seoDescription:
+  Troubleshooting guide for common errors and fixes when upgrading Flutter apps
+  to Dart 3.5.0, based on issues we hit at Shorebird.
 ---
 
 One of the big features of

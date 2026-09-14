@@ -5,7 +5,16 @@ description:
   Business and Enterprise plan customers now have access to advanced
   permissions.
 date: 2025-12-24
-cover: 'organizations-cover.png'
+cover: organizations-cover.png
+intro:
+  Business and Enterprise plan customers now have access to advanced
+  permissions.
+readingTime: 2 min read
+ogImage: '/blog/og/advanced-permissions.png'
+seoTitle: Introducing advanced permissions
+seoDescription:
+  Business and Enterprise plan customers now have access to advanced
+  permissions.
 ---
 
 Enterprises rely on Shorebird to deliver Flutter updates fast and securely, and

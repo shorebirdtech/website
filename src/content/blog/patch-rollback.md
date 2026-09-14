@@ -1,9 +1,16 @@
 ---
-title: Patch Rollbacks
+title: Patch rollbacks
 author: shorebirdtech
 description: Announcing support for rolling back patches.
 date: 2024-08-09
 cover: patch-rollback-cover.png
+intro: Announcing support for rolling back patches.
+readingTime: 1 min read
+ogImage: '/blog/og/patch-rollback.png'
+seoTitle: 'Patch Rollbacks: Undo Flutter Updates Instantly'
+seoDescription:
+  Shorebird now supports rolling back patches instantly, giving you a safety net
+  when a Flutter over-the-air update needs undoing.
 ---
 
 _Shorebird Code Push allows developers to deploy fixes to Flutter apps

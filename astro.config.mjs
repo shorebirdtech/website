@@ -23,5 +23,12 @@ export default defineConfig({
     '/terms.html': '/terms',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/jobs/full-stack-software-engineer': '/jobs',
+    // Blog slugs were renamed when the site moved to Webflow; Webflow's slugs
+    // are canonical now.
+    '/blog/1.0': '/blog/1',
+    '/blog/dart-3.5.0': '/blog/dart-3-5-0',
+    '/blog/flutter-3.32-release': '/blog/flutter-3-32-release',
+    '/blog/growing': '/blog/shorebird-is-growing',
+    '/blog/building-great-developer-tools': '/blog/building-good-software',
   },
 });
