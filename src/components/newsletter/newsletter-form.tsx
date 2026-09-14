@@ -9,7 +9,19 @@ const ERROR = 'ERROR';
 const SUCCESS = 'SUCCESS';
 const formStates = [INIT, SUBMITTING, ERROR, SUCCESS] as const;
 
-export default function NewsletterSignupForm() {
+/**
+ * Loops newsletter signup.
+ *
+ * - `layout="inline"` (default): email field + outlined button on one row.
+ * - `layout="stacked"`: the Webflow `.c_newsletter--form` look used in the
+ *   blog sidebar — full-width field, gap, full-width primary button.
+ */
+export default function NewsletterSignupForm({
+  layout = 'inline',
+}: {
+  layout?: 'inline' | 'stacked';
+}) {
+  const stacked = layout === 'stacked';
   const [email, setEmail] = useState('');
   const [formState, setFormState] = useState<(typeof formStates)[number]>(INIT);
   const [errorMessage, setErrorMessage] = useState('');
@@ -111,13 +123,23 @@ export default function NewsletterSignupForm() {
         <>
           <form
             onSubmit={handleSubmit}
-            className="mx-auto flex w-full flex-col items-center justify-center gap-2 space-x-2 sm:flex-row"
+            className={
+              stacked
+                ? 'gap-section-xs flex w-full flex-col items-stretch'
+                : 'mx-auto flex w-full flex-col items-center justify-center gap-2 space-x-2 sm:flex-row'
+            }
           >
             <Input
-              className="border-border-1"
+              className={
+                stacked
+                  ? 'border-border bg-surface-1 text-text-1 placeholder:text-text-2 hover:bg-surface-3 text-body-s md:text-body-s h-14 rounded-xl px-6 font-medium shadow-none transition-colors'
+                  : 'border-border-1'
+              }
               type="email"
               name="email"
-              placeholder="Subscribe to our newsletter"
+              placeholder={
+                stacked ? 'Enter your email' : 'Subscribe to our newsletter'
+              }
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required={true}
@@ -147,6 +169,13 @@ export default function NewsletterSignupForm() {
   }
 
   function SignUpFormButton() {
+    if (stacked) {
+      return (
+        <Button variant="primary" className="w-full" type="submit">
+          {formState === SUBMITTING ? 'Please wait...' : 'Subscribe'}
+        </Button>
+      );
+    }
     return (
       <Button
         variant="outline"

@@ -10,15 +10,10 @@ export async function getStaticPaths() {
   }));
 }
 
-export function getWordCount(content: string | undefined) {
-  if (!content) return 0;
-  return content.split(/\s/g).length;
-}
-
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogLayout {...post.data} wordCount={getWordCount(post.body)}>
+<BlogLayout {...post.data}>
   <Content />
 </BlogLayout>

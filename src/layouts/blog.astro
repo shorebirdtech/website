@@ -1,15 +1,25 @@
 ---
-import '@/styles/global.css';
-import { BlogCallout } from '@/components/blog/blog-callout';
-import { ClockCountdownIcon } from '@phosphor-icons/react';
+/**
+ * Blog post layout (Webflow blog template). Light page: title + author /
+ * date / reading-time meta, the article rich text in an 8-column main
+ * column and a sticky 4-column aside ("In this article" intro, share
+ * buttons, newsletter card), then the CTA band and footer.
+ *
+ * Author metadata (name, title, headshot, handles) lives in the `authors`
+ * record below; `author` in a post's frontmatter is a key into it.
+ */
+import '@/styles/rich-text.css';
 import { Image } from 'astro:assets';
 import { Navbar } from '@/components/ui/navbar';
-import { Spacer } from '@/components/ui/spacer';
+import CtaBand from '@/components/ui/cta-band.astro';
+import Footer from '@/components/ui/footer.astro';
+import FormattedDate from '@/components/blog/formatted-date.astro';
+import MainLayout from '@/layouts/main.astro';
+import NewsletterCard from '@/components/blog/newsletter-card.astro';
+import Section from '@/components/ui/section.astro';
 import bryanHeadshot from '@/assets/blog/headshots/bryan-headshot.png';
 import ericHeadshot from '@/assets/blog/headshots/eric-headshot.jpeg';
 import felixHeadshot from '@/assets/blog/headshots/felix-headshot.jpeg';
-import Footer from '@/components/ui/footer.astro';
-import FormattedDate from '@/components/blog/formatted-date.astro';
 import shorebirdHeadshot from '@/assets/blog/headshots/shorebird-headshot.png';
 import tomHeadshot from '@/assets/blog/headshots/tom-headshot.jpg';
 import dawnHeadshot from '@/assets/blog/headshots/dawn-headshot.jpg';
@@ -19,16 +29,34 @@ import nickHeadshot from '@/assets/blog/headshots/nickweatherley.jpg';
 import macHeadshot from '@/assets/blog/headshots/maccarrithers.avif';
 import brandonHeadshot from '@/assets/blog/headshots/brandonderosier.png';
 
-function getReadingTime(wordCount: number) {
-  const wordsPerMinute = 250;
-  const numMinutes = Math.max(Math.ceil(wordCount / wordsPerMinute), 1);
-  return `${numMinutes} min read`;
+export interface Props {
+  title: string;
+  description: string;
+  author: string;
+  date: Date;
+  intro?: string;
+  readingTime?: string;
+  ogImage?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
-const { title, description, author, date, wordCount } = Astro.props;
-const readingTime = getReadingTime(wordCount);
-const coverUrl = new URL('/blog/open-graph.png', Astro.url.origin);
+const {
+  title,
+  description,
+  author,
+  date,
+  intro = description,
+  readingTime,
+  ogImage = '/blog/open-graph.png',
+  seoTitle = title,
+  seoDescription = description,
+} = Astro.props;
+
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const shareUrl = canonicalUrl.toString();
+const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+const xShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}`;
 
 interface Author {
   name: string;
@@ -109,97 +137,215 @@ const authors: Record<string, Author> = {
     github: 'bdero',
   },
 };
+
+const postAuthor = authors[author];
+if (!postAuthor) throw new Error(`Unknown blog author "${author}"`);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <title>{title}</title>
-    <meta name="description" content={description} />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta name="description" property="og:description" content={description} />
-    <meta property="og:image" content={coverUrl} />
-    <meta name="image" property="og:image" content={coverUrl} />
-    <meta property="article:published_time" content={date} />
-    <meta property="article:author" content={author} />
+<MainLayout title={seoTitle} description={seoDescription} image={ogImage}>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={date.toISOString()} />
+    <meta property="article:author" content={postAuthor.name} />
     <meta property="article:section" content="Technology" />
-    <meta name="author" content={author} />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="shorebird.dev" />
-    <meta property="twitter:url" content={canonicalUrl} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={coverUrl} />
-    <meta name="twitter:site" content="@shorebirddev" />
+    <meta name="author" content={postAuthor.name} />
     {
-      authors[author].twitter && (
-        <meta name="twitter:creator" content={authors[author].twitter} />
+      postAuthor.twitter && (
+        <meta name="twitter:creator" content={postAuthor.twitter} />
       )
     }
+  </Fragment>
 
-    <!-- Analytics -->
-    <script
-      defer
-      data-domain="shorebird.dev"
-      src="https://plausible.io/js/script.js"></script>
-  </head>
-  <body>
-    <Navbar client:load />
-    <article
-      class="prose prose-invert mx-auto w-11/12 py-9 lg:pt-20 xl:w-10/12 2xl:w-[1280px]"
-    >
-      <h1 class="m-0! text-center">{title}</h1>
-      <Spacer className="h-4" />
-      <div class="flex w-full flex-row items-center justify-center gap-2">
-        <Image
-          src={authors[author].avatar}
-          alt={authors[author].name}
-          class="m-0! size-6 rounded-full"
-        />
-        <p class="text-text-1 m-0! text-sm">
-          <a
-            class="no-underline hover:underline"
-            href={`https://github.com/${authors[author].github}`}
-          >
-            {authors[author].name}
-          </a>
-        </p>
-        <p class="m-0! text-sm">{authors[author].title}</p>
-      </div>
-      <Spacer className="h-12" />
-      <div class="flex flex-row items-center justify-between">
-        <span
-          class="text-text-2 m-0! flex flex-row items-center justify-center gap-1 text-sm"
-          ><ClockCountdownIcon className="inline size-4" />{readingTime}</span
+  <Navbar client:load initialTheme="light" />
+
+  <Section as="header" theme="light">
+    {/* Webflow `is--section_hero_xl` (10rem / 7.5rem); the live nav overlays
+        the page whereas ours is in flow, so subtract its height. */}
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <article class="col-span-12 flex flex-col lg:col-span-8">
+        <h1 class="title-l pb-text-m">{title}</h1>
+        <div
+          class="flex flex-wrap items-center justify-between gap-4"
         >
-        <span class="text-text-2 m-0! text-sm"
-          ><FormattedDate date={date} /></span
-        >
-      </div>
-      <slot />
-      <BlogCallout client:load />
-    </article>
-    <Footer />
-    <style is:global>
-      .prose {
-        max-width: 80ch;
-      }
-    </style>
-  </body>
-</html>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="flex items-center gap-2">
+              <Image
+                src={postAuthor.avatar}
+                alt={postAuthor.name}
+                width={48}
+                height={48}
+                class="size-6 rounded-full object-cover"
+              />
+              <div class="flex gap-2">
+                <span class="body-s text-text-1">{postAuthor.name}</span>
+                <span class="body-s">{postAuthor.title}</span>
+              </div>
+            </div>
+            <div class="body-s" aria-hidden="true">|</div>
+            <p class="body-s"><FormattedDate date={date} /></p>
+          </div>
+          {
+            readingTime && (
+              <div class="text-text-3 flex items-center gap-2">
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  class="block shrink-0"
+                >
+                  <path
+                    d="M16.2388 8.80369C16.106 10.3474 15.5351 11.8211 14.5932 13.0514C13.6513 14.2817 12.3777 15.2173 10.9221 15.7483C9.46648 16.2793 7.8895 16.3836 6.37668 16.0488C4.86385 15.714 3.47812 14.9541 2.3825 13.8584C1.28689 12.7628 0.526981 11.3771 0.192176 9.86427C-0.142629 8.35145 -0.0384007 6.77447 0.492599 5.31887C1.0236 3.86327 1.95928 2.5896 3.18956 1.64771C4.41984 0.705829 5.89353 0.134909 7.43726 0.00212339C7.51934 -0.00464789 7.60195 0.00481317 7.68036 0.0299665C7.75878 0.0551199 7.83148 0.0954729 7.89431 0.148721C7.95713 0.20197 8.00885 0.267071 8.04652 0.340309C8.08418 0.413546 8.10705 0.493485 8.11383 0.575561C8.1206 0.657637 8.11114 0.740243 8.08598 0.818663C8.06083 0.897083 8.02048 0.96978 7.96723 1.0326C7.91398 1.09543 7.84888 1.14715 7.77564 1.18482C7.7024 1.22248 7.62246 1.24535 7.54039 1.25212C6.23382 1.36438 4.98649 1.84749 3.94516 2.64459C2.90384 3.4417 2.11184 4.51965 1.66236 5.7516C1.21288 6.98355 1.12462 8.31825 1.40795 9.59866C1.69129 10.8791 2.33444 12.0519 3.26173 12.9792C4.18902 13.9065 5.36187 14.5497 6.64229 14.833C7.9227 15.1163 9.2574 15.0281 10.4894 14.5786C11.7213 14.1291 12.7992 13.3371 13.5964 12.2958C14.3935 11.2545 14.8766 10.0071 14.9888 8.70056C15.0025 8.5348 15.0815 8.38126 15.2083 8.27372C15.3352 8.16618 15.4996 8.11345 15.6654 8.12712C15.8311 8.1408 15.9847 8.21976 16.0922 8.34664C16.1998 8.47352 16.2525 8.63793 16.2388 8.80369ZM7.48883 3.75212V8.12712C7.48883 8.29288 7.55467 8.45186 7.67188 8.56907C7.78909 8.68628 7.94807 8.75212 8.11383 8.75212H12.4888C12.6546 8.75212 12.8136 8.68628 12.9308 8.56907C13.048 8.45186 13.1138 8.29288 13.1138 8.12712C13.1138 7.96136 13.048 7.80239 12.9308 7.68518C12.8136 7.56797 12.6546 7.50212 12.4888 7.50212H8.73883V3.75212C8.73883 3.58636 8.67298 3.42739 8.55577 3.31018C8.43856 3.19297 8.27959 3.12712 8.11383 3.12712C7.94807 3.12712 7.78909 3.19297 7.67188 3.31018C7.55467 3.42739 7.48883 3.58636 7.48883 3.75212ZM10.6138 1.87712C10.7992 1.87712 10.9805 1.82214 11.1347 1.71913C11.2888 1.61611 11.409 1.46969 11.48 1.29839C11.5509 1.12708 11.5695 0.938583 11.5333 0.756726C11.4971 0.574869 11.4078 0.407823 11.2767 0.276711C11.1456 0.145599 10.9786 0.0563109 10.7967 0.0201373C10.6149 -0.0160364 10.4264 0.00252924 10.2551 0.0734864C10.0838 0.144444 9.93734 0.264605 9.83432 0.418776C9.73131 0.572947 9.67633 0.754203 9.67633 0.939623C9.67633 1.18826 9.7751 1.42672 9.95091 1.60254C10.1267 1.77835 10.3652 1.87712 10.6138 1.87712ZM13.4263 3.75212C13.6117 3.75212 13.793 3.69714 13.9472 3.59413C14.1013 3.49111 14.2215 3.34469 14.2925 3.17339C14.3634 3.00208 14.382 2.81358 14.3458 2.63173C14.3096 2.44987 14.2203 2.28282 14.0892 2.15171C13.9581 2.0206 13.7911 1.93131 13.6092 1.89514C13.4274 1.85896 13.2389 1.87753 13.0676 1.94849C12.8963 2.01944 12.7498 2.13961 12.6468 2.29378C12.5438 2.44795 12.4888 2.6292 12.4888 2.81462C12.4888 3.06326 12.5876 3.30172 12.7634 3.47754C12.9392 3.65335 13.1777 3.75212 13.4263 3.75212ZM15.3013 6.56462C15.4867 6.56462 15.668 6.50964 15.8222 6.40663C15.9763 6.30361 16.0965 6.15719 16.1675 5.98589C16.2384 5.81458 16.257 5.62608 16.2208 5.44423C16.1846 5.26237 16.0953 5.09532 15.9642 4.96421C15.8331 4.8331 15.6661 4.74381 15.4842 4.70764C15.3024 4.67146 15.1139 4.69003 14.9426 4.76099C14.7713 4.83194 14.6248 4.95211 14.5218 5.10628C14.4188 5.26045 14.3638 5.4417 14.3638 5.62712C14.3638 5.87576 14.4626 6.11422 14.6384 6.29004C14.8142 6.46585 15.0527 6.56462 15.3013 6.56462Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="body-s text-text-3">{readingTime}</span>
+              </div>
+            )
+          }
+        </div>
+        <div class="pb-text-xl"></div>
+        <div class="prose rich-text">
+          <slot />
+        </div>
+      </article>
+
+      <aside class="col-span-12 lg:col-span-4">
+        <div class="lg:sticky lg:top-24">
+          <p class="body-m-strong pb-text-s">In this article</p>
+          <p class="body-m">{intro}</p>
+          <div class="pb-section-xs"></div>
+          <p class="body-m-strong pb-text-s">Share this article</p>
+          <div class="flex items-center gap-4">
+            <a
+              href={linkedInShareUrl}
+              target="_blank"
+              rel="noopener"
+              aria-label="Share on LinkedIn"
+              class="share-link"
+            >
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.97315 17.5V5.69217H0.221761V17.5H3.97315ZM2.09744 4.08002C3.40563 4.08002 4.21986 3.1733 4.21986 2.04018C4.19548 0.881552 3.40563 0 2.12226 0C0.839019 0 0 0.881552 0 2.04018C0 3.1733 0.814063 4.08002 2.07299 4.08002H2.09744Z"
+                  fill="currentColor"></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.04883 17.5H9.80018V10.906C9.80018 10.5531 9.82456 10.2006 9.92362 9.94829C10.1948 9.24319 10.8121 8.51293 11.8484 8.51293C13.2058 8.51293 13.7489 9.59574 13.7489 11.1831V17.5H17.4999V10.7296C17.4999 7.10273 15.6492 5.4151 13.1811 5.4151C11.1573 5.4151 10.2689 6.59853 9.77523 7.40461H9.80029V5.69217H6.04893C6.09816 6.80014 6.04883 17.5 6.04883 17.5Z"
+                  fill="currentColor"></path>
+              </svg>
+            </a>
+            <a
+              href={xShareUrl}
+              target="_blank"
+              rel="noopener"
+              aria-label="Share on X"
+              class="share-link"
+            >
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+              >
+                <path
+                  d="M7.73677 5.50461L12.5763 0H11.4295L7.22732 4.77958L3.87105 0H0L5.07533 7.22757L0 13H1.14688L5.58449 7.9526L9.12895 13H13L7.73648 5.50461H7.73677ZM6.16595 7.29124L5.65172 6.57154L1.56012 0.844792H3.32166L6.62363 5.46646L7.13787 6.18616L11.43 12.1936H9.66849L6.16595 7.29152V7.29124Z"
+                  fill="currentColor"></path>
+              </svg>
+            </a>
+            <button
+              type="button"
+              aria-label="Copy link"
+              data-copy-link={shareUrl}
+              class="share-link"
+            >
+              <svg
+                aria-hidden="true"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.7929 6.7929C12.1834 6.40237 12.8164 6.40237 13.207 6.7929C13.5975 7.18342 13.5975 7.81644 13.207 8.20696L8.20696 13.207C7.81644 13.5975 7.18342 13.5975 6.7929 13.207C6.40237 12.8164 6.40237 12.1834 6.7929 11.7929L11.7929 6.7929Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M13.748 1.52543C15.0009 1.53061 16.2009 2.03104 17.0868 2.91703C17.9728 3.80304 18.4733 5.00293 18.4784 6.2559C18.4835 7.50894 17.993 8.71324 17.1142 9.60648L17.1083 9.61332L14.7597 11.958C14.3688 12.3481 13.7358 12.3469 13.3456 11.9561C12.9555 11.5652 12.9558 10.9322 13.3466 10.542L15.6884 8.20316C16.1969 7.68617 16.4813 6.98983 16.4784 6.26469C16.4755 5.53925 16.1857 4.84407 15.6728 4.33109C15.1598 3.81811 14.4646 3.52838 13.7392 3.52543C13.0139 3.52257 12.3168 3.80676 11.7997 4.31547L11.7988 4.31449L9.45598 6.65336C9.06507 7.04349 8.43206 7.0433 8.04192 6.65238C7.65191 6.26146 7.653 5.62842 8.04387 5.23832L10.3915 2.89457L10.3974 2.88969C11.2906 2.0109 12.4949 1.52033 13.748 1.52543Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M5.23832 8.04387C5.62842 7.653 6.26146 7.65191 6.65238 8.04192C7.0433 8.43206 7.04349 9.06507 6.65336 9.45598L4.31449 11.7988C3.80579 12.3158 3.52257 13.0139 3.52543 13.7392C3.52838 14.4646 3.81811 15.1598 4.33109 15.6728C4.84407 16.1857 5.53925 16.4755 6.26469 16.4784C6.98998 16.4813 7.68711 16.1971 8.20414 15.6884L10.542 13.3466C10.9322 12.9558 11.5652 12.9555 11.9561 13.3456C12.3469 13.7358 12.3481 14.3688 11.958 14.7597L9.61332 17.1083L9.60648 17.1142C8.71324 17.993 7.50894 18.4835 6.2559 18.4784C5.00293 18.4733 3.80304 17.9728 2.91703 17.0868C2.03104 16.2009 1.53061 15.0009 1.52543 13.748C1.52033 12.4949 2.0109 11.2906 2.88969 10.3974L2.89457 10.3915L5.23832 8.04387Z"
+                  fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="pb-section-s"></div>
+          <NewsletterCard />
+        </div>
+      </aside>
+    </div>
+  </Section>
+
+  <CtaBand />
+  <Footer />
+</MainLayout>
+
+<style>
+  /* Webflow `.c_blog--social--link`: 2.5rem round outlined button. */
+  .share-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--border-1);
+    border-radius: 50%;
+    color: var(--text-3);
+    background: transparent;
+    transition:
+      background-color 0.25s,
+      color 0.25s;
+  }
+  .share-link:hover {
+    background-color: var(--border-1);
+    color: var(--text-1);
+  }
+  .share-link[data-copied] {
+    color: var(--text-1);
+  }
+</style>
+
+<script>
+  // "Copy link" share button (Webflow used Finsweet copy-to-clipboard).
+  document
+    .querySelectorAll<HTMLButtonElement>('button[data-copy-link]')
+    .forEach((button) => {
+      button.addEventListener('click', async () => {
+        const url = button.dataset.copyLink ?? window.location.href;
+        try {
+          await navigator.clipboard.writeText(url);
+          button.setAttribute('data-copied', '');
+          button.setAttribute('aria-label', 'Link copied');
+          window.setTimeout(() => {
+            button.removeAttribute('data-copied');
+            button.setAttribute('aria-label', 'Copy link');
+          }, 2000);
+        } catch {
+          window.prompt('Copy this link', url);
+        }
+      });
+    });
+</script>

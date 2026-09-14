@@ -1,26 +1,30 @@
-import { Ellipse } from '@/components/ellipse';
-import { GradientOutlineButton } from '@/components/ui/button';
+import { ButtonLink } from '@/components/ui/button';
 import config from '@/config';
 import NewsletterSignupForm from '../newsletter/newsletter-form';
 
+/**
+ * "Get started / or subscribe" callout. No longer used by the blog post
+ * layout (the live template puts the newsletter in the sidebar instead) but
+ * kept for other layouts that still render it.
+ */
 function BlogCallout() {
   return (
-    <div className="border-border-1 max-w-screen-md rounded-xl border p-5">
-      <span className="text-text-2 my-0 font-light">
+    <div className="border-border bg-surface-2 max-w-screen-md rounded-2xl border p-6">
+      <p className="body-s my-0">
         Shorebird empowers Flutter teams to focus on building great apps by
         handling the hard parts like zero-config CI or instant over-the-air
         updates.
-      </span>
-      <a
-        target="_blank"
+      </p>
+      <ButtonLink
+        variant="primary"
         href={config.consoleUrl}
-        className="mt-4 inline-block w-full px-4 py-2"
+        target="_blank"
+        rel="noopener"
+        className="mt-4 w-full"
       >
-        <GradientOutlineButton className="w-full">
-          <Ellipse /> Get started
-        </GradientOutlineButton>
-      </a>
-      <div className="text-text-2 before:border-border-1 after:border-border-1 flex items-center py-3 text-sm before:me-6 before:flex-1 before:border-t after:ms-6 after:flex-1 after:border-t">
+        Get started
+      </ButtonLink>
+      <div className="body-xs before:border-border after:border-border flex items-center py-3 before:me-6 before:flex-1 before:border-t after:ms-6 after:flex-1 after:border-t">
         OR
       </div>
       <NewsletterSignupForm />
