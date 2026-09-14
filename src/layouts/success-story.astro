@@ -41,9 +41,6 @@ const cover = coverFor(story);
 // Open Graph image: the cover, resized so the share card stays small.
 const ogImage = await getImage({ src: cover, width: 1200, format: 'jpg' });
 
-// Show the website as its host (`www.scapia.cards`), link to the full URL.
-const websiteHost = website ? new URL(website).host : undefined;
-
 const facts = [
   { label: 'Industry', value: industry },
   { label: 'Company size', value: companySize },
@@ -109,9 +106,9 @@ const facts = [
                       href={website}
                       target="_blank"
                       rel="noopener"
-                      class="font-medium hover:text-text-1"
+                      class="font-medium break-all hover:text-text-1"
                     >
-                      {websiteHost}
+                      {website}
                     </a>
                   </dd>
                 </div>
