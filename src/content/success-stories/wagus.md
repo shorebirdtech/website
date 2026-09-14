@@ -5,12 +5,23 @@ description:
   order to keep their users at the front of the market.
 date: 2025-08-01
 cover: wagus-cover.png
+industry: Crypto
+companySize: Startup
+website: 'https://www.wagus.app/'
+intro:
+  Learn how WAGUS uses Shorebird to move as fast as the crypto world does in
+  order to keep their users at the front of the market.
+seoTitle: WAGUS - Shorebird Success Story
+seoDescription:
+  WAGUS decreased user-request feature turaround to hours not weeks.
 highlights:
   [
     'Over 150+ patches pushed out to users over a 2 month period',
     'Shipped over 140,000 lines of code via Shorebird Patches',
   ]
 ---
+
+<!-- cSpell:ignore turaround -->
 
 [WAGUS](https://wagus.app/) — short for _We're All Gonna Use Solana_ — is a
 Solana-powered mobile platform that blends social chat, gaming, embedded crypto

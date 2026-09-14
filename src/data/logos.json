@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "solides",
+    "name": "Solides",
+    "logo": "/src/assets/brands/solides.svg"
+  },
+  {
+    "slug": "kalshi",
+    "name": "Kalshi",
+    "logo": "/src/assets/brands/kalshi.svg"
+  },
+  {
+    "slug": "jundlegames",
+    "name": "Junglee Games",
+    "logo": "/src/assets/brands/jundlegames.svg"
+  },
+  {
+    "slug": "deliveryhero",
+    "name": "Delivery Hero",
+    "logo": "/src/assets/brands/deliveryhero.svg"
+  },
+  {
+    "slug": "couchsurfing",
+    "name": "Couchsurfing",
+    "logo": "/src/assets/brands/couchsurfing.svg"
+  },
+  {
+    "slug": "cloudwalk",
+    "name": "Cloudwalk",
+    "logo": "/src/assets/brands/cloudwalk.svg"
+  },
+  {
+    "slug": "apnaklub",
+    "name": "Apnaklub",
+    "logo": "/src/assets/brands/apnaklub.svg"
+  },
+  {
+    "slug": "pushpress",
+    "name": "PushPress",
+    "logo": "/src/assets/brands/pushpress.png"
+  }
+]

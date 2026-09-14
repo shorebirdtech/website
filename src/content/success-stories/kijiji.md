@@ -5,6 +5,14 @@ description:
   customer base was up to date all the time.
 date: 2025-03-06
 cover: kijiji-cover.png
+industry: Marketplace
+companySize: Enterprise
+website: 'https://www.kijiji.ca'
+intro:
+  The leading Canadian online marketplace turned to Shorebird to ensure their
+  customer base was up to date all the time.
+seoTitle: Kijiji - Shorebird Success Story
+seoDescription: Code Push saved Kijiji 68 days of review time.
 highlights:
   [
     'Over 10 Million active users of the Kijiji mobile apps worldwide',
