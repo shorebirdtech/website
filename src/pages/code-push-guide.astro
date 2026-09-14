@@ -1,0 +1,109 @@
+---
+/**
+ * "The complete guide to Flutter Code Push" ebook landing page (Webflow
+ * `/code-push-guide`): title, intro rich text, the ebook cover and the
+ * download form. The live page has no CTA band, just the footer.
+ */
+import { Navbar } from '@/components/ui/navbar';
+import { GuideForm } from '@/components/product/guide-form';
+import Footer from '@/components/ui/footer.astro';
+import MainLayout from '@/layouts/main.astro';
+import ebookCover from '@/assets/product/code-push-ebook.png';
+import ogImage from '@/assets/product/code-push-ebook-og.jpg';
+---
+
+<MainLayout
+  title="Flutter Code Push Guide: Ship OTA Updates | Shorebird"
+  description="The complete technical guide to Flutter OTA updates. Discover how Shorebird Code Push lets your engineering team ship Dart patches in under 30 minutes."
+  image={ogImage.src}
+>
+  <Navbar client:load />
+  <main class="bg-surface-1 px-container pt-1 pb-5">
+    <div class="mx-auto w-full max-w-[940px]">
+      <h1 class="title-xxl mb-5 text-center">
+        The complete guide to Flutter Code Push
+      </h1>
+      <div class="guide-text">
+        <p>
+          A critical bug hits production. Your fix is committed and tested
+          within the hour — then App Store review makes you wait 24 to 48 hours
+          to ship it. This comprehensive technical guide explains exactly how
+          Shorebird's Code Push solves Flutter's AOT compilation constraints,
+          letting you bypass app store reviews and ship compliant, over-the-air
+          Dart patches to your users in under 30 minutes.
+        </p>
+        <p>
+          18-minute read · For Flutter &amp; mobile engineering teams · Beginner
+          → Advanced
+        </p>
+        <p><strong>What's inside:</strong></p>
+        <ul>
+          <li>
+            How Shorebird solves OTA and maintains compliance with the stores.
+          </li>
+          <li>The difference between Releases and Patches.</li>
+          <li>
+            Advanced concepts including staged rollouts, patch signing, and
+            audit logs.
+          </li>
+          <li>
+            The exact five-step CLI workflow — install, init, release, patch —
+            to ship your first over-the-air fix in under 30 minutes.
+          </li>
+        </ul>
+        <blockquote>
+          "Our speed to release updates has skyrocketed. It used to take four
+          days to two weeks depending on urgency. Now it's way faster. The
+          reliability of shipping fixes is night and day." — Allan Wright,
+          Senior Mobile Developer, PushPress
+        </blockquote>
+      </div>
+      <div
+        class="flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between"
+      >
+        <img
+          src={ebookCover.src}
+          width={ebookCover.width}
+          height={ebookCover.height}
+          alt="Shorebird Code Push Guide cover thumbnail"
+          class="h-auto w-full max-w-[293px] self-start"
+        />
+        <div class="w-full max-w-[350px] md:pt-10">
+          <GuideForm client:load />
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</MainLayout>
+
+<style>
+  /* Webflow `.rich-text-block.w-richtext` on the dark page: body-m at 150%
+     leading in text-2, default list indent, and the bold quote. */
+  .guide-text {
+    color: var(--text-2);
+    font-size: var(--font-size-body-m);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .guide-text p {
+    margin-bottom: 10px;
+  }
+  .guide-text strong {
+    font-weight: 700;
+  }
+  .guide-text ul {
+    margin-bottom: 20px;
+    padding-left: 40px;
+    list-style: disc;
+  }
+  .guide-text blockquote {
+    color: var(--text-1);
+    font-size: var(--font-size-title-s);
+    font-weight: 700;
+    line-height: 1.5;
+    border-left: 5px solid #e2e2e2;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+  }
+</style>
