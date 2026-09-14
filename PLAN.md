@@ -19,14 +19,14 @@ Rules for every agent:
 
 ## Ground truth (what differs between repo and live)
 
-| Area            | Repo (Jan 2026)                                                                            | Live Webflow (Sep 2026)                                                                                                                                |
-| --------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Blog posts      | 39 in `src/content/blog`                                                                   | 69 in CMS. 5 slugs renamed: `1.0→1`, `dart-3.5.0→dart-3-5-0`, `flutter-3.32-release→flutter-3-32-release`, `growing→shorebird-is-growing`, `building-great-developer-tools→building-good-software` |
-| Success stories | 8                                                                                          | 10 (`scapia`, `vetc` new). CMS adds `industry`, `company-size`, `website-url` fields                                                                   |
-| Pages           | `/`, `/about`, `/pricing`, `/jobs`, `/blog`, `/success-stories`, `/legal/dpa`, `/privacy`, `/terms/*`, `/contact`, `/newsletter-signup` | Same, plus **`/product/code-push`**, **`/product/shorebird-ci`**, **`/code-push-guide`**. `/legal/dpa` → `/dpa`. `/terms/ci`, `/terms/code-push` gone (verify) |
-| Homepage        | Old hero "Deliver instant updates"                                                         | New sections: "Build Flutter apps with confidence", "An opinionated platform for building", "Enterprise-scale infrastructure", customer quotes, etc. |
-| Design          | Old palette/layout                                                                          | New tokens (below), General Sans, dark base with light sections                                                                                       |
-| Blog metadata   | title/description/author/date/cover                                                        | + `article-intro`, `reading-time`, `shared-image` (OG), `seo---title`, `seo---meta-description`, `highlight-article`, Author is a reference           |
+| Area            | Repo (Jan 2026)                                                                                                                         | Live Webflow (Sep 2026)                                                                                                                                                                            |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blog posts      | 39 in `src/content/blog`                                                                                                                | 69 in CMS. 5 slugs renamed: `1.0→1`, `dart-3.5.0→dart-3-5-0`, `flutter-3.32-release→flutter-3-32-release`, `growing→shorebird-is-growing`, `building-great-developer-tools→building-good-software` |
+| Success stories | 8                                                                                                                                       | 10 (`scapia`, `vetc` new). CMS adds `industry`, `company-size`, `website-url` fields                                                                                                               |
+| Pages           | `/`, `/about`, `/pricing`, `/jobs`, `/blog`, `/success-stories`, `/legal/dpa`, `/privacy`, `/terms/*`, `/contact`, `/newsletter-signup` | Same, plus **`/product/code-push`**, **`/product/shorebird-ci`**, **`/code-push-guide`**. `/legal/dpa` → `/dpa`. `/terms/ci`, `/terms/code-push` gone (verify)                                     |
+| Homepage        | Old hero "Deliver instant updates"                                                                                                      | New sections: "Build Flutter apps with confidence", "An opinionated platform for building", "Enterprise-scale infrastructure", customer quotes, etc.                                               |
+| Design          | Old palette/layout                                                                                                                      | New tokens (below), General Sans, dark base with light sections                                                                                                                                    |
+| Blog metadata   | title/description/author/date/cover                                                                                                     | + `article-intro`, `reading-time`, `shared-image` (OG), `seo---title`, `seo---meta-description`, `highlight-article`, Author is a reference                                                        |
 
 Webflow design tokens (from `shorebird.webflow.shared.*.css`):
 
@@ -56,15 +56,15 @@ Produce `webflow-export/` in the repo (commit it; it's the source of truth):
   (home, about, pricing, jobs, blog index, success-stories index, product/\*,
   code-push-guide, dpa, privacy, terms, design-system/styleguide).
 - `css/shorebird.webflow.css` — the live stylesheet.
-- `screenshots/<slug>-{desktop,mobile}-NN.png` — tiled full-res screenshots
-  of each live page (1440px / 390px wide, 1600px tall tiles). These are the
-  visual targets.
+- `screenshots/<slug>-{desktop,mobile}-NN.png` — tiled full-res screenshots of
+  each live page (1440px / 390px wide, 1600px tall tiles). These are the visual
+  targets.
 - `assets/` — every image/svg/lottie/font the static pages reference.
 
 ## Phase 1 — Foundations (two agents, in parallel, on `main`)
 
-**1A. Content import** (script-driven; write `scripts/import_webflow.py`,
-stdlib only like the existing `blog_to_csv.py`)
+**1A. Content import** (script-driven; write `scripts/import_webflow.py`, stdlib
+only like the existing `blog_to_csv.py`)
 
 - Convert every blog item to `src/content/blog/<slug>.md`. HTML→Markdown
   (headings, paragraphs, lists, links, `<pre><code>` → fenced blocks, images,
@@ -122,15 +122,15 @@ Astro page/components to match, verify at desktop and ~400px widths with the
   `src/components/product/`.
 - **2C Blog** — `src/pages/blog/index.astro` (highlight article + grid + any
   category/filter UI Webflow has), `src/layouts/blog.astro` (author, reading
-  time, cover, prose styling via `@tailwindcss/typography`, code block
-  styling), `rss.xml.ts` fields.
+  time, cover, prose styling via `@tailwindcss/typography`, code block styling),
+  `rss.xml.ts` fields.
 - **2D Success stories** — index + `src/layouts/success-story.astro` with the
   new industry/company-size/website sidebar.
 - **2E Pricing, About, Jobs, legal** — `pricing.astro` (+ calculator/plans
-  components), `about.astro` (team from `team.json`), `jobs.astro`, `dpa`
-  (move from `/legal/dpa` to `/dpa`, redirect old), `privacy`, `terms`.
-  Verify whether `/terms/ci` and `/terms/code-push` still exist on Webflow; if
-  not, redirect them to `/terms`.
+  components), `about.astro` (team from `team.json`), `jobs.astro`, `dpa` (move
+  from `/legal/dpa` to `/dpa`, redirect old), `privacy`, `terms`. Verify whether
+  `/terms/ci` and `/terms/code-push` still exist on Webflow; if not, redirect
+  them to `/terms`.
 
 ## Phase 3 — Integration + QA (one agent, serial, on `main`)
 

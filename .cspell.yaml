@@ -1,8 +1,9 @@
 $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
 version: '0.2'
-ignorePaths: ['dist', 'node_modules', 'webflow-export']
+ignorePaths: ['dist', 'node_modules', 'webflow-export', 'blog_export.csv']
 words:
   - afonso
+  - allowfullscreen
   - angelov
   - apna
   - araujo
@@ -10,15 +11,18 @@ words:
   - astro
   - astrojs
   - autoplay
+  - behaviour
   - bhavesh
   - bigl
+  - blockquotes
   - bryanoltman
   - cancelbots
-  - codemagic
-  - codelessly
-  - copplestone
   - chromecast
+  - codelessly
+  - codemagic
+  - copplestone
   - cupertino
+  - cutover
   - devnomic
   - dominik
   - dougall
@@ -34,8 +38,8 @@ words:
   - fluttercon
   - flutterconusa
   - fontsource
-  - fouc
   - footguns
+  - fouc
   - frontends
   - frontmatter
   - gallego
@@ -44,6 +48,7 @@ words:
   - hackathon
   - headshot
   - headshots
+  - hotlinking
   - howzat
   - icaza
   - idris
@@ -65,9 +70,9 @@ words:
   - miklas
   - narkhede
   - neha
+  - nowa
   - nowrap
   - nubank
-  - nowa
   - oltman
   - onclick
   - pageload
@@ -77,27 +82,31 @@ words:
   - posthog
   - pubspec
   - pushpress
+  - referrerpolicy
   - renan
   - roadmaps
   - rollout
   - rollouts
   - roszkowski
   - sagalov
+  - scapia
   - seidel
   - shorebirddev
   - shorebirdtech
   - siclen
   - signup
   - signups
+  - snopes
   - solana
   - solides
   - souza
-  - sundar
-  - sunsetting
-  - snopes
-  - stac
   - squircle
   - squircles
+  - stac
+  - stdlib
+  - styleguide
+  - sundar
+  - sunsetting
   - superlist
   - taha
   - techlead
@@ -114,8 +123,12 @@ words:
   - upvoted
   - userbase
   - veloso
+  - vercel
+  - vetc
   - vyuh
   - wagus
+  - webflow
   - widgetbook
   - wolt
+  - worktree
   - xlink
