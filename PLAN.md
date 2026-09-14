@@ -25,7 +25,7 @@ Rules for every agent:
 | Success stories | 8                                                                                          | 10 (`scapia`, `vetc` new). CMS adds `industry`, `company-size`, `website-url` fields                                                                   |
 | Pages           | `/`, `/about`, `/pricing`, `/jobs`, `/blog`, `/success-stories`, `/legal/dpa`, `/privacy`, `/terms/*`, `/contact`, `/newsletter-signup` | Same, plus **`/product/code-push`**, **`/product/shorebird-ci`**, **`/code-push-guide`**. `/legal/dpa` → `/dpa`. `/terms/ci`, `/terms/code-push` gone (verify) |
 | Homepage        | Old hero "Deliver instant updates"                                                         | New sections: "Build Flutter apps with confidence", "An opinionated platform for building", "Enterprise-scale infrastructure", customer quotes, etc. |
-| Design          | Old palette/layout                                                                          | New tokens (below), General Sans, light + dark surfaces                                                                                                |
+| Design          | Old palette/layout                                                                          | New tokens (below), General Sans, dark base with light sections                                                                                       |
 | Blog metadata   | title/description/author/date/cover                                                        | + `article-intro`, `reading-time`, `shared-image` (OG), `seo---title`, `seo---meta-description`, `highlight-article`, Author is a reference           |
 
 Webflow design tokens (from `shorebird.webflow.shared.*.css`):
@@ -41,7 +41,7 @@ container padding 1.5rem mobile / 3.5rem desktop
 font: General Sans (public/fonts/GeneralSans)
 ```
 
-## Phase 0 — Export (run once, before agents start; needs Webflow MCP)
+## Phase 0 — Export (DONE 2026-09-13; see `webflow-export/README.md`)
 
 Produce `webflow-export/` in the repo (commit it; it's the source of truth):
 
@@ -56,8 +56,10 @@ Produce `webflow-export/` in the repo (commit it; it's the source of truth):
   (home, about, pricing, jobs, blog index, success-stories index, product/\*,
   code-push-guide, dpa, privacy, terms, design-system/styleguide).
 - `css/shorebird.webflow.css` — the live stylesheet.
-- `screenshots/<slug>-{desktop,mobile}.png` — full-page screenshots of each
-  live page (use the `browse` skill). These are the visual targets.
+- `screenshots/<slug>-{desktop,mobile}-NN.png` — tiled full-res screenshots
+  of each live page (1440px / 390px wide, 1600px tall tiles). These are the
+  visual targets.
+- `assets/` — every image/svg/lottie/font the static pages reference.
 
 ## Phase 1 — Foundations (two agents, in parallel, on `main`)
 
@@ -89,9 +91,12 @@ stdlib only like the existing `blog_to_csv.py`)
 `src/components/ui/navbar.tsx`, `src/components/ui/footer.astro`,
 `src/components/ui/button.tsx`, `src/layouts/main.astro`)
 
-- Encode the tokens above as CSS variables + Tailwind theme. Dark mode is
-  confirmed: the live site switches automatically on `prefers-color-scheme`,
-  so every page must look right in both. Screenshot both.
+- Encode the tokens above as CSS variables + Tailwind theme. Theme model
+  (verified, see `webflow-export/README.md`): the page is dark by default and
+  individual sections opt into light with a `.is--mode_1`-style class; the
+  sticky nav swaps dark/light to match the section under it. There is no
+  `prefers-color-scheme` switching. Implement it as a `data-theme="light"`
+  section wrapper that overrides the surface/text variables.
 - Restyle nav (links: Product ▾ [Code Push, Shorebird CI], Pricing, Success
   stories, Blog, About, Jobs; CTAs), footer, buttons, typography scale, section
   spacing, container widths to match the Webflow screenshots.
