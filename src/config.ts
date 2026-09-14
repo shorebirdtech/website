@@ -9,6 +9,10 @@ export default {
   newsletterSubscriptionUrl: 'https://shorebird.dev/newsletter-signup',
   consoleUrl: 'https://console.shorebird.dev',
   docsUrl: 'https://docs.shorebird.dev',
+  faqUrl: 'https://docs.shorebird.dev/code-push/faq/',
+  demoUrl: 'https://app.arcade.software/share/collections/h2367J6jhYVblPpSl4cN',
+  enterpriseDemoUrl:
+    'https://app.arcade.software/share/x5ifkvJ8yFZh63hYJF0g?ref=share-link',
   monthlyProPlanCheckoutUrl:
     'https://console.shorebird.dev/subscriptions/create?plan=pro&billed=monthly',
   yearlyProPlanCheckoutUrl:

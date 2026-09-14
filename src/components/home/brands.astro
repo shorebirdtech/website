@@ -1,94 +1,57 @@
 ---
+/**
+ * "Trusted by" logo marquee (Webflow `.c_logo_marquee`). Logos come from
+ * `src/data/logos.json` (the Webflow "Logos" CMS collection, in CMS order).
+ */
 import { Marquee } from '@/components/ui/marquee';
-import ApnaKlubLogo from '@/assets/brands/apna-klub.png';
-import ChaiLogo from '@/assets/brands/chai.png';
-import FlashCoLogo from '@/assets/brands/flash-co.png';
-import InvoiceHomeLogo from '@/assets/brands/invoice-home.png';
-import JungleeLogo from '@/assets/brands/junglee.png';
-import KalshiLogo from '@/assets/brands/kalshi.png';
-import KijijiLogo from '@/assets/brands/kijiji.png';
-import PushPressLogo from '@/assets/brands/pushpress.png';
-import SolidesLogo from '@/assets/brands/solides.png';
-import TrackerLogo from '@/assets/brands/tracker.png';
-import TradelingLogo from '@/assets/brands/tradeling.png';
+import logos from '@/data/logos.json';
 
-const brands = [
-  {
-    name: 'Junglee Games',
-    url: 'https://www.jungleegames.com',
-    image: JungleeLogo,
-  },
-  {
-    name: 'Kijiji',
-    url: 'https://www.kijiji.ca',
-    image: KijijiLogo,
-  },
-  {
-    name: 'Tracker',
-    url: 'https://tracker.fi',
-    image: TrackerLogo,
-  },
-  {
-    name: 'CHAI',
-    url: 'https://chai-research.com/',
-    image: ChaiLogo,
-  },
-  {
-    name: 'Kalshi',
-    url: 'https://kalshi.com',
-    image: KalshiLogo,
-  },
-  {
-    name: 'ApnaKlub',
-    url: 'https://www.apnaklub.com',
-    image: ApnaKlubLogo,
-  },
-  {
-    name: 'Flash.co',
-    url: 'https://flash.co',
-    image: FlashCoLogo,
-  },
-  {
-    name: 'Tradeling',
-    url: 'https://www.tradeling.com',
-    image: TradelingLogo,
-  },
-  {
-    name: 'Invoice Home',
-    url: 'https://invoicehome.com',
-    image: InvoiceHomeLogo,
-  },
-  {
-    name: 'PushPress',
-    url: 'https://pushpress.com',
-    image: PushPressLogo,
-  },
-  {
-    name: 'Solides',
-    url: 'https://solides.com.br',
-    image: SolidesLogo,
-  }
-];
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/brands/*.{svg,png,webp}',
+  { eager: true },
+);
+const brands = logos.map((logo) => {
+  const image = images[logo.logo];
+  if (!image) throw new Error(`Logo image ${logo.logo} not found`);
+  return { name: logo.name, image: image.default };
+});
 ---
 
-<section
-  id="brands"
-  class="mx-auto flex w-full flex-col xl:w-10/12 2xl:w-[1280px]"
+<div
+  class="page-container flex flex-col items-center gap-column-gap md:flex-row"
 >
-  <div class="m-auto flex flex-row items-center justify-center">
-    <Marquee fade={true} direction="left" reverse={false}>
+  <p class="body-s-strong shrink-0">Trusted by</p>
+  <div
+    class="relative w-full min-w-0 flex-1 overflow-hidden"
+    style="--duration: 15s"
+  >
+    <Marquee
+      className="gap-10"
+      innerClassName="gap-10 pr-0 [--gap:2.5rem]"
+      numberOfCopies={3}
+    >
       {
         brands.map((brand) => (
-          <div
-            id={brand.name}
-            class="contrast saturate flex max-w-32 items-center justify-center py-6 grayscale"
-          >
-            <a target="_blank" href={brand.url}>
-              <img src={brand.image.src} alt={brand.name} />
-            </a>
-          </div>
+          <img
+            src={brand.image.src}
+            width={brand.image.width}
+            height={brand.image.height}
+            alt={brand.name}
+            loading="lazy"
+            class="h-12 w-auto max-w-none"
+          />
         ))
       }
     </Marquee>
+    <div
+      aria-hidden="true"
+      class="from-surface-1 pointer-events-none absolute inset-y-0 left-0 w-16 bg-linear-to-r to-transparent"
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      class="from-surface-1 pointer-events-none absolute inset-y-0 right-0 w-16 bg-linear-to-l to-transparent"
+    >
+    </div>
   </div>
-</section>
+</div>

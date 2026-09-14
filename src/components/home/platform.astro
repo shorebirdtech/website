@@ -1,0 +1,104 @@
+---
+/**
+ * "An opinionated platform for building Flutter apps" (Webflow
+ * `.c_card_demo--s` + `.c_grid_2cols`): the gradient card with the terminal
+ * screenshot, then the Code Push / Shorebird CI columns.
+ */
+import { Image } from 'astro:assets';
+import { FastForwardIcon, LightningIcon } from '@phosphor-icons/react';
+import { ButtonLink } from '@/components/ui/button';
+import Section from '@/components/ui/section.astro';
+import terminalDemo from '@/assets/home/terminal-demo.webp';
+import flutterAppsLogo from '@/assets/home/flutter-apps-logo.svg';
+
+const products = [
+  {
+    icon: LightningIcon,
+    description:
+      'Maximize developer productivity by iterating rapidly with Code Push and optimized CI pipelines',
+    label: 'Explore Code Push',
+    href: '/product/code-push',
+  },
+  {
+    icon: FastForwardIcon,
+    description:
+      'Automate your testing and accelerate your release cycles with a zero-config Flutter CI system',
+    label: 'Explore Shorebird CI',
+    href: '/product/shorebird-ci',
+  },
+];
+---
+
+<Section theme="light" id="platform">
+  <div
+    class="soft-gradient relative flex flex-col items-center overflow-hidden rounded-2xl pt-10 text-center md:pt-16"
+  >
+    <div class="flex w-full flex-col items-center px-6 md:px-10">
+      <h2 class="title-l">An opinionated platform</h2>
+      <div class="flex flex-wrap items-center justify-center">
+        <h2 class="title-l">for building</h2>
+        {/* Webflow `.c_logo--flutter`: 18.125rem wide on desktop, 2rem/2.5rem tall on tablet/mobile. */}
+        <div
+          class="flex h-12 w-full max-w-48 justify-center pt-2 sm:h-8 sm:max-w-[9.5rem] sm:pt-0 sm:pl-2 md:h-auto md:max-w-[18.125rem] md:pl-4"
+        >
+          <img
+            src={flutterAppsLogo.src}
+            width={flutterAppsLogo.width}
+            height={flutterAppsLogo.height}
+            alt="Flutter logo"
+            class="h-full w-auto md:h-auto md:w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <Image
+      src={terminalDemo}
+      widths={[500, 800, 1080, 1424]}
+      sizes="(max-width: 767px) 100vw, 712px"
+      alt="Shorebird CLI creating a Flutter app project, showing dependency resolution, package downloads, and successful project setup"
+      class="w-full max-w-none md:max-w-[44.5rem]"
+    />
+  </div>
+  <div class="pb-section-xs"></div>
+  <div class="bg-border grid grid-cols-1 gap-px md:grid-cols-2">
+    {
+      products.map((product) => (
+        <div class="bg-surface-1 flex h-full flex-col items-center py-8 text-center md:py-10 md:pr-8 md:pl-10 md:text-left">
+          <span class="badge-icon mb-text-s">
+            <product.icon size={24} weight="fill" />
+          </span>
+          <p class="body-l text-text-1 pb-text-xl w-full">
+            {product.description}
+          </p>
+          <ButtonLink
+            variant="secondary"
+            href={product.href}
+            className="w-full md:w-auto"
+          >
+            {product.label}
+          </ButtonLink>
+        </div>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  /* Webflow page embed: `.c_overlay--gradient, .c_card_demo--s { background: ... }` */
+  .soft-gradient {
+    background:
+      radial-gradient(
+        137.79% 137.79% at 50% 17.7%,
+        rgba(255, 255, 255, 0.08) 4%,
+        rgba(255, 237, 217, 0.2) 15%,
+        rgba(212, 238, 255, 0.4) 37%,
+        rgba(177, 201, 255, 0.4) 64%
+      ),
+      radial-gradient(
+        170.15% 82.9% at 50% 100%,
+        rgba(255, 238, 226, 0.5) 0%,
+        rgba(241, 241, 241, 0) 100%
+      ),
+      #f9f9f9;
+  }
+</style>

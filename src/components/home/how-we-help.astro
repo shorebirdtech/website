@@ -1,0 +1,73 @@
+---
+/**
+ * "How Shorebird can help" list + bug-fix timeline illustration
+ * (Webflow `.c_how_shorebird--item`).
+ */
+import { Image } from 'astro:assets';
+import {
+  ArrowUUpLeftIcon,
+  ShieldCheckIcon,
+  TimerIcon,
+} from '@phosphor-icons/react';
+import Section from '@/components/ui/section.astro';
+import timeline from '@/assets/home/bug-fix-timeline.webp';
+
+const items = [
+  {
+    icon: TimerIcon,
+    title: 'Ship faster',
+    description: 'Deploy fixes in minutes, not days.',
+  },
+  {
+    icon: ArrowUUpLeftIcon,
+    title: 'Instant rollbacks',
+    description: 'Rollback any update with a click of a button.',
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'Deploy confidently',
+    description: 'Find issues before they reach production.',
+  },
+];
+---
+
+<Section theme="light" id="how-we-help">
+  <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="col-span-12 lg:col-span-6">
+      <div class="flex h-full flex-col items-start justify-center">
+        <h2 class="title-l pb-text-xl">How Shorebird can help</h2>
+        {
+          items.map((item, index) => (
+            <>
+              {index > 0 && <div class="divider" />}
+              <div class="flex w-full items-center gap-4 py-10">
+                <span class="badge-icon shrink-0">
+                  <item.icon size={24} weight="fill" />
+                </span>
+                <div class="flex flex-col items-start">
+                  <p class="body-l text-text-1 pb-text-xs">{item.title}</p>
+                  <p class="body-m">{item.description}</p>
+                </div>
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </div>
+    <div class="col-span-12 lg:col-span-6">
+      <div
+        class="flex h-full flex-col items-center justify-start lg:items-start lg:justify-center"
+      >
+        <div class="w-full overflow-hidden rounded-2xl">
+          <Image
+            src={timeline}
+            widths={[500, 800, 1080, 1740]}
+            sizes="(max-width: 1023px) 100vw, 604px"
+            alt="Shorebird deployment workflow showing bug reported to bug fixed process for Flutter apps with live version updates"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

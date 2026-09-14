@@ -1,60 +1,109 @@
 ---
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Image } from 'astro:assets';
-import { Spacer } from '@/components/ui/spacer';
+/**
+ * "Resources — Learn more about Shorebird and chat with the community"
+ * (Webflow `.g_card_resource` grid on a `.c_overlay--gradient` band).
+ */
+import Section from '@/components/ui/section.astro';
 import config from '@/config';
-import Discord from '@/assets/resources/discord.png';
-import Shorebird from '@/assets/resources/shorebird.png';
+import blogImage from '@/assets/home/resource-blog.png';
+import docsImage from '@/assets/home/resource-docs.png';
+import faqImage from '@/assets/home/resource-faq.png';
+import communityImage from '@/assets/home/resource-community.png';
 
 const resources = [
+  { image: blogImage, alt: 'Blog icon', title: 'Read our blog', href: '/blog' },
   {
-    image: Shorebird,
-    title: 'Read the docs',
-    description:
-      'Learn everything you need to get started with Shorebird in just a few minutes from core concepts to detailed tutorials.',
-    url: config.docsUrl,
+    image: docsImage,
+    alt: 'Documentation icon',
+    title: 'View our docs',
+    href: `${config.docsUrl}/`,
+    external: true,
   },
   {
-    image: Discord,
-    title: 'Chat with the community',
-    description:
-      "Ask questions, share what you're building, and participate in discussions with the Shorebird community.",
-    url: config.discordUrl,
+    image: faqImage,
+    alt: 'FAQ icon',
+    title: 'Read our FAQ',
+    href: config.faqUrl,
+    external: true,
+  },
+  {
+    image: communityImage,
+    alt: 'Community icon',
+    title: 'Join our community',
+    href: config.discordUrl,
+    external: true,
   },
 ];
 ---
 
-<section
-  id="resources"
-  class="mx-auto flex w-11/12 flex-col items-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
->
-  <h1 class="text-text-1 text-4xl">Resources</h1>
-  <Spacer />
-  <h3 class="text-text-2 text-center text-lg">
-    Learn more about Shorebird and chat with the community.
-  </h3>
-  <Spacer className="h-10" />
-  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+<Section theme="light" container="none" id="resources">
+  <div class="page-container">
+  <div class="relative z-20 grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="hidden lg:col-span-2 lg:block"></div>
+    <div
+      class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-8"
+    >
+      <p class="body-s-strong text-brand-primary pb-text-s">Resources</p>
+      <h2 class="title-l">
+        Learn more about Shorebird and chat with the community
+      </h2>
+    </div>
+  </div>
+  <div class="pb-section-s"></div>
+  <div
+    class="relative z-20 grid grid-cols-12 gap-x-column-gap gap-y-section-xs md:gap-y-row-gap"
+  >
     {
       resources.map((resource) => (
-        <a href={resource.url} class="hover:no-underline">
-          <Card className="gap-2 pt-0 cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1">
-            <CardHeader className="p-0">
-              <Image
-                src={resource.image}
-                alt={resource.title}
-                class="w-full rounded-xl object-cover"
+        <a
+          href={resource.href}
+          target={resource.external ? '_blank' : undefined}
+          rel={resource.external ? 'noopener' : undefined}
+          class="bg-surface-1 col-span-12 block h-full w-full rounded-2xl transition-shadow duration-[350ms] hover:no-underline hover:shadow-[0_8px_24px_-8px_#00000026] md:col-span-6 lg:col-span-3"
+        >
+          <div class="flex flex-col items-stretch">
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                src={resource.image.src}
+                width={resource.image.width}
+                height={resource.image.height}
+                alt={resource.alt}
+                loading="lazy"
+                class="h-auto w-full"
               />
-            </CardHeader>
-            <CardTitle className="flex items-center justify-center">
-              {resource.title}
-            </CardTitle>
-            <CardContent className="text-center">
-              {resource.description}
-            </CardContent>
-          </Card>
+            </div>
+            <div class="flex items-center justify-center p-6">
+              <p class="body-l text-text-1">{resource.title}</p>
+            </div>
+          </div>
         </a>
       ))
     }
   </div>
-</section>
+  </div>
+  <div
+    aria-hidden="true"
+    class="soft-gradient pointer-events-none absolute inset-0 z-[1]"
+  >
+  </div>
+</Section>
+
+<style>
+  /* Webflow page embed: `.c_overlay--gradient, .c_card_demo--s { background: ... }` */
+  .soft-gradient {
+    background:
+      radial-gradient(
+        137.79% 137.79% at 50% 17.7%,
+        rgba(255, 255, 255, 0.08) 4%,
+        rgba(255, 237, 217, 0.2) 15%,
+        rgba(212, 238, 255, 0.4) 37%,
+        rgba(177, 201, 255, 0.4) 64%
+      ),
+      radial-gradient(
+        170.15% 82.9% at 50% 100%,
+        rgba(255, 238, 226, 0.5) 0%,
+        rgba(241, 241, 241, 0) 100%
+      ),
+      #f9f9f9;
+  }
+</style>

@@ -33,10 +33,5 @@
     "slug": "apnaklub",
     "name": "Apnaklub",
     "logo": "/src/assets/brands/apnaklub.svg"
-  },
-  {
-    "slug": "pushpress",
-    "name": "PushPress",
-    "logo": "/src/assets/brands/pushpress.png"
   }
 ]

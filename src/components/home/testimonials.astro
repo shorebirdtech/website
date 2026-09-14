@@ -1,94 +1,187 @@
 ---
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { Image } from 'astro:assets';
-import { Spacer } from '@/components/ui/spacer';
-import JasonRai from '@/assets/testimonials/jason-rai.png';
-import RenanAraujo from '@/assets/testimonials/renan-araujo.png';
-import TahaTesser from '@/assets/testimonials/taha-tesser.png';
-import EsraKadah from '@/assets/testimonials/esra-kadah.png';
-import ScottMacDougall from '@/assets/testimonials/scott-macdougall.jpeg';
-import DavidPaul from '@/assets/testimonials/david-paul.jpg';
+/**
+ * "Testimonials — What our customers are saying" (Webflow `.c_slider_reviews`,
+ * a Swiper). Ported as a CSS scroll-snap row that bleeds to the viewport
+ * edges; the prev/next buttons scroll it by one card.
+ *
+ * Cards come from `src/data/reviews.json` (the Webflow "Reviews" CMS
+ * collection). The live homepage shows the reviews that have an avatar,
+ * newest CMS item first.
+ */
+import { CaretLeftIcon, CaretRightIcon } from '@phosphor-icons/react';
+import Section from '@/components/ui/section.astro';
+import reviews from '@/data/reviews.json';
 
-const testimonials = [
-  {
-    name: 'Jason Rai',
-    title: 'Head of Frontend Engineering, Kijiji',
-    quote:
-      "We use Shorebird at Kijiji on Android and it's been awesome. Working well at a very large scale.",
-    image: JasonRai,
-  },
-  {
-    name: 'Renan Araujo',
-    title: 'Senior Engineer, Superlist',
-    quote:
-      'Shorebird was very useful for distributing updates to my Flame game with over 10k players. Works like a charm.',
-    image: RenanAraujo,
-  },
-  {
-    name: 'Taha Tesser',
-    title: 'Engineer, Codemagic',
-    quote:
-      'Shorebird solves one of the biggest challenges: bringing over-the-air updates instantly to your users. Backed by an amazing team.',
-    image: TahaTesser,
-  },
-  {
-    name: 'Esra Kadah',
-    title: 'Senior Mobile App Developer, Antigua Mobile',
-    quote:
-      'With our client’s app dependency on real-time task management, waiting for app store approvals wasn’t an option. Any downtime could lead to lost revenue for their customers. Shorebird’s over-the-air patches saved us multiple times with critical fixes.',
-    image: EsraKadah,
-  },
-  {
-    name: 'Scott MacDougall',
-    title: 'Head of Engineering, Mobile at Kijiji',
-    quote:
-      'Over time, we have realized that we could Shorebird a fix quickly to all of our users, which made an enormous impact on customer satisfaction. That’s now become a default phrase in our development team, as it’s a great tool to have in our toolbox.',
-    image: ScottMacDougall,
-  },
-  {
-    name: 'David Sylvester-Paul',
-    title: 'CTO at EasySpend',
-    quote:
-      'In the past, we often wondered how other highly rated mobile apps updated their features without forcing users to manually download an update from the store. That curiosity led us to Shorebird, and ever since, we have implemented it in all of our applications.',
-    image: DavidPaul,
-  },
-];
+const avatars = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/testimonials/*.{webp,png,jpg,jpeg,avif}',
+  { eager: true },
+);
+const testimonials = reviews
+  .filter((review) => review.avatar)
+  .reverse()
+  .map((review) => {
+    const avatar = avatars[review.avatar!];
+    if (!avatar) throw new Error(`Avatar ${review.avatar} not found`);
+    return { ...review, image: avatar.default };
+  });
 ---
 
-<section
-  id="testimonials"
-  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
->
-  <div class="flex flex-col items-center justify-center">
-    <h1 class="text-text-1 text-4xl">Testimonials</h1>
-    <Spacer />
-    <h3 class="text-text-2 text-center text-lg">
-      See what the community has to say about Shorebird.
-    </h3>
-    <Spacer className="h-10" />
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+<Section theme="light" id="testimonials" class="overflow-x-clip">
+  <div data-reviews>
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="col-span-12 lg:col-span-8">
+        <div class="flex h-full flex-col items-start justify-center">
+          <p class="body-s-strong text-brand-secondary pb-text-s">
+            Testimonials
+          </p>
+          <h2 class="title-l pb-text-s">What our customers are saying</h2>
+          <p class="body-m">See what the community has to say about Shorebird.</p>
+        </div>
+      </div>
+      <div class="hidden lg:col-span-4 lg:block">
+        <div class="flex h-full items-end justify-end gap-2">
+          <button
+            type="button"
+            data-reviews-prev
+            aria-label="Previous testimonials"
+            class="reviews-nav"
+          >
+            <CaretLeftIcon size={20} />
+          </button>
+          <button
+            type="button"
+            data-reviews-next
+            aria-label="Next testimonials"
+            class="reviews-nav"
+          >
+            <CaretRightIcon size={20} />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="pb-section-xs"></div>
+    <div
+      data-reviews-track
+      class="reviews-track flex snap-x snap-mandatory gap-4 overflow-x-auto pb-[60px] md:gap-10"
+    >
       {
-        testimonials.map((testimonial, index) => {
-          return (
-            <Card>
-              <CardHeader>
-                <div class="flex flex-row items-center gap-2">
-                  <Image
-                    class="size-10 rounded-full"
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                  />
-                  <div class="flex flex-col">
-                    <p>{testimonial.name}</p>
-                    <p class="text-text-2 text-sm">{testimonial.title}</p>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>{testimonial.quote}</CardContent>
-            </Card>
-          );
-        })
+        testimonials.map((review) => (
+          <article class="reviews-card border-border flex shrink-0 snap-start flex-col justify-between rounded-3xl border p-5 md:p-10">
+            <div class="pt-text-xs pb-text-s">
+              <p class="body-m">{review.quote}</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <img
+                src={review.image.src}
+                width={review.image.width}
+                height={review.image.height}
+                alt={review.name}
+                loading="lazy"
+                class="size-10 shrink-0 rounded-full object-cover"
+              />
+              <div class="flex flex-col items-start justify-center">
+                <p class="body-m-strong text-text-1">{review.name}</p>
+                <p class="body-xs">{review.role}</p>
+              </div>
+            </div>
+          </article>
+        ))
       }
     </div>
+    <div class="flex items-end justify-center gap-2 pt-section-xs lg:hidden">
+      <button
+        type="button"
+        data-reviews-prev
+        aria-label="Previous testimonials"
+        class="reviews-nav"
+      >
+        <CaretLeftIcon size={20} />
+      </button>
+      <button
+        type="button"
+        data-reviews-next
+        aria-label="Next testimonials"
+        class="reviews-nav"
+      >
+        <CaretRightIcon size={20} />
+      </button>
+    </div>
   </div>
-</section>
+</Section>
+
+<style>
+  /* Webflow `.swiper.is--c_slider_reviews { overflow: visible }`: the row
+   * bleeds past the container to the viewport edges, but its cards still
+   * line up with the container. */
+  .reviews-track {
+    --bleed: calc(50vw - 50%);
+    margin-inline: calc(-1 * var(--bleed));
+    padding-inline: var(--bleed);
+    /* Same bleed, but percentages here resolve against the scrollport. */
+    scroll-padding-inline: calc(
+      (
+        100% -
+          (min(100%, var(--container-size)) - var(--container-padding) * 2)
+      ) / 2
+    );
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  .reviews-track::-webkit-scrollbar {
+    display: none;
+  }
+  /* `.swiper-slide.is--c_slider_reviews`: 3 per view, 77% tablet, 88% mobile. */
+  .reviews-card {
+    width: 88%;
+  }
+  @media (min-width: 768px) {
+    .reviews-card {
+      width: 77%;
+    }
+  }
+  @media (min-width: 992px) {
+    .reviews-card {
+      width: calc(33.3333% - 1.66667rem);
+    }
+  }
+  /* `.swiper-prev` / `.swiper-next` */
+  .reviews-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    border: 1px solid var(--button-secondary-border);
+    color: var(--text-3);
+    transition:
+      color 0.25s,
+      background-color 0.25s;
+  }
+  .reviews-nav:hover {
+    color: var(--text-1);
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-reviews]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('[data-reviews-track]');
+    if (!track) return;
+    const step = () => {
+      const card = track.firstElementChild as HTMLElement | null;
+      if (!card) return track.clientWidth;
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card.getBoundingClientRect().width + gap;
+    };
+    root.querySelectorAll('[data-reviews-prev]').forEach((button) =>
+      button.addEventListener('click', () =>
+        track.scrollBy({ left: -step(), behavior: 'smooth' }),
+      ),
+    );
+    root.querySelectorAll('[data-reviews-next]').forEach((button) =>
+      button.addEventListener('click', () =>
+        track.scrollBy({ left: step(), behavior: 'smooth' }),
+      ),
+    );
+  });
+</script>
