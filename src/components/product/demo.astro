@@ -1,0 +1,74 @@
+---
+/**
+ * "Experience our demo — How it works": the dark `.c_card_demo--xl` card
+ * inside a light band, framed by the purple radial + blurred glass
+ * (`.c_card_demo_frame`) with the Arcade walkthrough embedded in it.
+ */
+import Section from '@/components/ui/section.astro';
+
+export interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  /** Arcade embed URL (`https://demo.arcade.software/<id>?embed…`). */
+  src: string;
+  iframeTitle: string;
+}
+
+const { eyebrow, title, description, src, iframeTitle } = Astro.props;
+---
+
+<Section theme="light" container="large" id="demo">
+  <div class="pb-section-l"></div>
+  <div
+    data-theme="dark"
+    class="bg-surface-1 overflow-hidden rounded-3xl px-6 pt-10 md:px-10 lg:px-[7.5rem] lg:pt-24"
+  >
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-1 lg:block"></div>
+      <div
+        class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-10"
+      >
+        <p class="body-s-strong text-brand-secondary pb-text-s">{eyebrow}</p>
+        <h2 class="title-l pb-text-m">{title}</h2>
+        <p class="body-m">{description}</p>
+      </div>
+    </div>
+    <div class="pb-section-s"></div>
+    <div class="overflow-hidden">
+      <div class="demo-frame relative -mb-[0.8rem] aspect-video w-full">
+        <div class="demo-frame-bg absolute inset-0 z-[1] rounded-t-4xl"></div>
+        <div
+          class="absolute inset-0 z-[2] mx-2 mt-2 rounded-t-3xl bg-white/10 backdrop-blur-[10px] md:mx-8 md:mt-8"
+        >
+        </div>
+        <div
+          class="absolute inset-0 z-[3] mx-2 mt-2 overflow-hidden rounded-t-3xl md:mx-[2.875rem] md:mt-[2.875rem]"
+        >
+          <iframe
+            src={src}
+            title={iframeTitle}
+            loading="lazy"
+            allow="clipboard-write"
+            allowfullscreen
+            class="absolute inset-0 h-full w-full border-0"
+            style="color-scheme: light;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pb-section-l"></div>
+</Section>
+
+<style>
+  /* Webflow `.c_card_demo_frame--bg` */
+  .demo-frame-bg {
+    opacity: 0.68;
+    background-image: radial-gradient(
+      circle at 50% 0,
+      #ffedd9,
+      #b28cee 24%,
+      #142c5c 72%
+    );
+  }
+</style>

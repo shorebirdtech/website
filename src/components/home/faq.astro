@@ -7,7 +7,18 @@
 import { CaretRightIcon } from '@phosphor-icons/react';
 import Section from '@/components/ui/section.astro';
 
-const faqs = [
+export interface Faq {
+  question: string;
+  /** Plain text or a small HTML fragment (links). */
+  answer: string;
+}
+
+export interface Props {
+  /** Defaults to the homepage questions. */
+  faqs?: Faq[];
+}
+
+const defaultFaqs: Faq[] = [
   {
     question: 'How does Shorebird relate to Flutter?',
     answer:
@@ -24,6 +35,8 @@ const faqs = [
       'Shorebird is designed for privacy. We do not collect, process, or store any end-user data, nor do we ever see your source code. We only store the necessary built application archives (such as .xcarchive or .aab) and release metadata required to deliver patches.',
   },
 ];
+
+const { faqs = defaultFaqs } = Astro.props;
 ---
 
 <Section theme="light" container="none" id="faq">
@@ -41,7 +54,7 @@ const faqs = [
                 <CaretRightIcon size={18} weight="bold" />
               </span>
             </summary>
-            <p class="faq-answer body-m">{faq.answer}</p>
+            <p class="faq-answer body-m" set:html={faq.answer} />
           </details>
         ))
       }
@@ -149,5 +162,10 @@ const faqs = [
       max-width: 90%;
       font-size: var(--font-size-body-m);
     }
+  }
+  .faq-answer :global(a) {
+    color: #816aa8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 </style>

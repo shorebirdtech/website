@@ -1,0 +1,79 @@
+---
+/**
+ * "Code Push Overview — Finally a way to deliver instant updates"
+ * (Webflow `.c_grid_card--l` of four `.c_card_l`).
+ */
+import { Image } from 'astro:assets';
+import Section from '@/components/ui/section.astro';
+import productivity1 from '@/assets/product/productivity-1.webp';
+import productivity2 from '@/assets/product/productivity-2.webp';
+import productivity3 from '@/assets/product/productivity-3.webp';
+import productivity4 from '@/assets/product/productivity-4.webp';
+
+const cards = [
+  {
+    title: 'Works everywhere Flutter does',
+    description:
+      'Shorebird allows you to push updates everywhere your users are.',
+    image: productivity1,
+    alt: 'Shorebird pushing updates to Windows, Android, iOS and Linux',
+  },
+  {
+    title: 'Change any Dart code',
+    description: 'Setup Shorebird in minutes and push updates to any Dart code.',
+    image: productivity2,
+    alt: 'A Dart code diff replacing BrokenView with FixedView',
+  },
+  {
+    title: 'Rollback changes with no impact',
+    description:
+      'Roll changes back instead of rushing the next build through the release process.',
+    image: productivity3,
+    alt: 'Rolling back a release to the previous good version',
+  },
+  {
+    title: 'Designed for store compliance',
+    description:
+      'Shorebird adheres to all store guidelines to ensure your app is always compliant.',
+    image: productivity4,
+    alt: 'Open source shield with 1,200 contributions',
+  },
+];
+---
+
+<Section theme="light" id="overview">
+  <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="hidden lg:col-span-1 lg:block"></div>
+    <div
+      class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-10"
+    >
+      <p class="body-s-strong text-brand-primary pb-text-s">
+        Code Push Overview
+      </p>
+      <h2 class="title-l pb-text-m">Finally a way to deliver instant updates</h2>
+      <p class="body-m">Don’t let app store review times kill your productivity</p>
+    </div>
+  </div>
+  <div class="pb-section-s"></div>
+  <div class="bg-border grid grid-cols-1 gap-px md:grid-cols-2">
+    {
+      cards.map((card) => (
+        <div class="bg-surface-1 flex h-full flex-col justify-between py-8 md:py-16 lg:px-16">
+          <div>
+            <h3 class="title-m pb-text-s">{card.title}</h3>
+            <p class="body-s pb-text-xl">{card.description}</p>
+          </div>
+          <div class="overflow-hidden rounded-2xl">
+            <Image
+              src={card.image}
+              widths={[500, 800, 1080, 1416]}
+              sizes="(max-width: 767px) 100vw, 500px"
+              alt={card.alt}
+              class="w-full"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Section>

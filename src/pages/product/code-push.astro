@@ -1,0 +1,82 @@
+---
+import config from '@/config';
+import { Navbar } from '@/components/ui/navbar';
+import { CodePushMotion } from '@/components/product/code-push-motion';
+import Benefits from '@/components/product/benefits.astro';
+import CtaBand from '@/components/ui/cta-band.astro';
+import Customers from '@/components/product/customers.astro';
+import Demo from '@/components/product/demo.astro';
+import FAQ from '@/components/home/faq.astro';
+import Footer from '@/components/ui/footer.astro';
+import Hero from '@/components/product/hero.astro';
+import MainLayout from '@/layouts/main.astro';
+import Overview from '@/components/product/overview.astro';
+import PricingOverview from '@/components/product/pricing-overview.astro';
+import Resources from '@/components/home/resources.astro';
+import Testimonials from '@/components/home/testimonials.astro';
+
+const faqs = [
+  {
+    question: 'What is Code Push?',
+    answer:
+      'Code Push allows you to send over the air updates for Flutter applications bypassing lengthy app store review cycles. Shorebird supports Android, iOS, Mac, Windows, and Linux. It requires no code changes to your Flutter app. See our <a href="https://docs.shorebird.dev/guides/code_push_quickstart" target="_blank" rel="noopener">quick start guide</a> to learn more.',
+  },
+  {
+    question: 'When should I use Code Push?',
+    answer:
+      'Code Push can be used to update any line of Dart code when issues arise, add or remove a package, change back-end services, fix dependency issues.',
+  },
+  {
+    question: 'Is Code Push compliant with app and play store guidelines?',
+    answer:
+      'Yes. Code Push complies with App Store and Play Store guidelines. Changes to the app must not be deceptive. Refer to our <a href="https://docs.shorebird.dev/code-push/faq/#store-compliance" target="_blank" rel="noopener">docs</a> for more information.',
+  },
+  {
+    question: 'How does Shorebird handle app updates and restarts?',
+    answer:
+      'Shorebird handles app updates silently in the background to ensure a seamless user experience. Shorebird checks for updates when the application launches. If a patch is available it is downloaded and installed in the background without disrupting the user. Because the update process runs from within the app itself, the patch is not applied before launch. Users opening the app for the first time will use the base version while the patch downloads in the background.',
+  },
+  {
+    question: 'Can I use Shorebird to update native code?',
+    answer:
+      "No, Shorebird can only update Dart code. If you need to modify native build files (like build.gradle or Podfile), update a plugin's native code, or change app permissions, you must issue a full new release through the app stores. Shorebird's CLI will warn you if native changes are detected during the patching process.",
+  },
+];
+---
+
+<MainLayout
+  title="Instant App Updates for Flutter Apps | Shorebird Code Push"
+  description="Send over-the-air updates to Flutter apps. Fix bugs faster, roll back safely, and ship with confidence using Shorebird Code Push."
+>
+  <Navbar client:load />
+  <Hero
+    title="Deploy on your schedule"
+    description="Send over the air updates to quickly fix bugs and complaints because unfixed bugs are revenue leaks."
+    primaryLabel="Try for Free"
+    primaryHref={`${config.consoleUrl}/login`}
+    secondaryLabel="Learn more"
+    secondaryHref={`${config.docsUrl}/code-push/`}
+  >
+    <CodePushMotion client:only="react" />
+  </Hero>
+  <Benefits />
+  <Demo
+    eyebrow="Experience our demo"
+    title="How it works"
+    description="Once you’ve published a release of your app with Shorebird"
+    src="https://demo.arcade.software/x5ifkvJ8yFZh63hYJF0g?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true"
+    iframeTitle="Send over the air updates to Flutter app"
+  />
+  <Overview />
+  <Customers
+    eyebrow="Customers stories"
+    title="View our customers using Code Push"
+    stories={['scapia', 'vetc', 'flame']}
+  />
+  <PricingOverview />
+  <Testimonials />
+  <FAQ faqs={faqs} />
+  <Resources />
+  <CtaBand />
+  <Footer />
+</MainLayout>
