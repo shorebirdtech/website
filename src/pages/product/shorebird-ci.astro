@@ -1,0 +1,58 @@
+---
+import { Navbar } from '@/components/ui/navbar';
+import Footer from '@/components/ui/footer.astro';
+import MainLayout from '@/layouts/main.astro';
+import Section from '@/components/ui/section.astro';
+---
+
+<MainLayout
+  title="Shorebird CI for Flutter | Sunsetting August 8, 2026"
+  description="Shorebird CI is sunsetting on August 8, 2026. Please refer to the pub package instead https://pub.dev/packages/shorebird_ci"
+>
+  <Navbar client:load />
+  {/* The live page is just the sunset notice in the hero slot, no CTA band. */}
+  <Section as="header" theme="dark" id="hero">
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-2 lg:block"></div>
+      <div
+        class="col-span-12 flex flex-col items-center text-center lg:col-span-8"
+      >
+        <div class="pb-text-m"></div>
+        <p class="sunset-notice pb-text-xl">
+          Shorebird CI is sunsetting on <strong>August 8, 2026</strong>. After
+          that you will see hard failures in your CI pipeline. To avoid errors,
+          remove the hosted version of Shorebird CI from wherever you have
+          integrated it and switch to the <a
+            href="https://pub.dev/packages/shorebird_ci"
+            target="_blank"
+            rel="noopener">open source package</a
+          >.<br /><br />See the <a href="/blog/the-next-phase-of-shorebird-ci"
+            >May 20th blog</a
+          > for more information.
+        </p>
+      </div>
+    </div>
+    <div class="pb-section-xs"></div>
+  </Section>
+  <Footer />
+</MainLayout>
+
+<style>
+  /* Webflow's unstyled `<p>` inside the hero: body copy at 150% leading. */
+  .sunset-notice {
+    color: var(--text-2);
+    font-size: var(--font-size-title-m);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .sunset-notice strong,
+  .sunset-notice a {
+    color: var(--text-1);
+    font-weight: 600;
+  }
+  .sunset-notice a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+</style>
