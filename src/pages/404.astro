@@ -1,0 +1,38 @@
+---
+/**
+ * Custom 404, ported from the Webflow utility page: no nav or footer, a
+ * 633px card centered on the dark page with the flying bird floated left of
+ * the title, and a full-width primary button back to the homepage.
+ */
+import { Image } from 'astro:assets';
+import { ButtonLink } from '@/components/ui/button';
+import MainLayout from '@/layouts/main.astro';
+import flyingBird from '@/assets/404/flying-bird.png';
+---
+
+<MainLayout title="Not Found">
+  <main
+    class="px-container flex min-h-screen items-center justify-center py-16"
+  >
+    <div class="w-full max-w-[633px]">
+      <div class="flow-root">
+        <Image
+          src={flyingBird}
+          alt="Patch: a purple bird flying through the air."
+          width={317}
+          class="mx-auto mb-4 w-[317px] max-w-full sm:float-left sm:mr-0 sm:mb-0"
+          loading="eager"
+        />
+        <h1 class="title-l text-text-1 pt-5 text-center sm:text-left">
+          This page has flown the coop
+        </h1>
+        <p class="text-text-2 pt-2 text-center text-xl leading-7 sm:text-left">
+          We can push code instantly but we can't seem to push this page.
+        </p>
+      </div>
+      <ButtonLink href="/" variant="primary" className="mt-10 w-full">
+        Go to homepage
+      </ButtonLink>
+    </div>
+  </main>
+</MainLayout>
