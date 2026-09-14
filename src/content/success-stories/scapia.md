@@ -88,10 +88,10 @@ During a recent flash sale with limited inventory, a critical bug prevented
 users from seeing accurate stock availability. The sale would have been a
 write-off due to this issue and a big loss of revenue for the company. Instead,
 the team deployed a Shorebird patch, salvaged the event, and preserved the
-customer experience. **"**The whole sale we were promoting would have to come
-down with that bug in production," said Abdul. "So we used Shorebird to fix it,
-push it out to all of our users and we got a good amount of traffic to be able
-to still move our business goals forward."
+customer experience. "The whole sale we were promoting would have to come down
+with that bug in production," said Abdul. "So we used Shorebird to fix it, push
+it out to all of our users and we got a good amount of traffic to be able to
+still move our business goals forward."
 
 > _"Thanks to Shorebird, we were able to quickly fix our sales entry point,
 > ensuring we stayed on track to meet our primary sales objectives"\

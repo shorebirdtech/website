@@ -1,116 +1,130 @@
 ---
-import '@/styles/global.css';
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import { BlogCallout } from '@/components/blog/blog-callout';
+/**
+ * Success story layout (Webflow success-stories template). Dark page: the
+ * publish date, customer name and one-line summary, the cover, then the
+ * story rich text in an 8-column main column; a sticky 4-column aside with
+ * the "In this story" summary, the industry / company size / website facts
+ * and the newsletter card; then the CTA band and footer.
+ *
+ * The live template has no "highlights" block, so the frontmatter
+ * `highlights` field is kept in the schema but not rendered here.
+ */
+import '@/styles/rich-text.css';
+import { Image, getImage } from 'astro:assets';
 import { Navbar } from '@/components/ui/navbar';
+import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
-import { Markdown } from '@/components/ui/markdown';
+import FormattedDate from '@/components/blog/formatted-date.astro';
+import MainLayout from '@/layouts/main.astro';
+import NewsletterCard from '@/components/blog/newsletter-card.astro';
+import Section from '@/components/ui/section.astro';
+import { coverFor, type SuccessStory } from '@/lib/success-stories';
 
-const { title, date, description, highlights, id } = Astro.props;
-const coverUrl = new URL('/success-stories/open-graph.png', Astro.url.origin);
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+export interface Props {
+  story: SuccessStory;
+}
 
-const stories = await getCollection('successStories');
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/success-stories/covers/*.{jpeg,jpg,png,gif}'
-);
-const story = stories.find((story) => story.id === id);
-if (!story) {
-  throw new Error(`Success story with id ${id} not found`);
-}
-const coverImage =
-  images[`/src/assets/success-stories/covers/${story.data.cover}`];
-if (!coverImage) {
-  throw new Error(
-    `Cover image for success story ${story.data.title} not found`
-  );
-}
+const { story } = Astro.props;
+const {
+  title,
+  description,
+  date,
+  intro = description,
+  industry,
+  companySize,
+  website,
+  seoTitle = title,
+  seoDescription = description,
+} = story.data;
+
+const cover = coverFor(story);
+// Open Graph image: the cover, resized so the share card stays small.
+const ogImage = await getImage({ src: cover, width: 1200, format: 'jpg' });
+
+// Show the website as its host (`www.scapia.cards`), link to the full URL.
+const websiteHost = website ? new URL(website).host : undefined;
+
+const facts = [
+  { label: 'Industry', value: industry },
+  { label: 'Company size', value: companySize },
+].filter((fact) => fact.value);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+<MainLayout title={seoTitle} description={seoDescription} image={ogImage.src}>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={date.toISOString()} />
+  </Fragment>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+  <Navbar client:load initialTheme="dark" />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta name="description" property="og:description" content={description} />
-    <meta property="og:image" content={coverUrl} />
-    <meta name="image" property="og:image" content={coverUrl} />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="shorebird.dev" />
-    <meta property="twitter:url" content={canonicalUrl} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={coverUrl} />
-    <meta name="twitter:site" content="@shorebirddev" />
-
-    <!-- Analytics -->
-    <script
-      defer
-      data-domain="shorebird.dev"
-      src="https://plausible.io/js/script.js"></script>
-    <title>{title}</title>
-  </head>
-  <body>
-    <Navbar client:load />
-    <section
-      class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
-    >
-      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-16">
-        <div class="flex flex-col items-start gap-6">
-          <h2 class="text-4xl font-medium">{title}</h2>
-          <span class="text-text-2">
-            {description}
-          </span>
-          <div class="flex flex-col gap-4">
-            <span class="text-text-2 text-xl">Highlights</span>
-            <div class="flex flex-col items-center justify-start">
-              {
-                highlights.map((highlight: string, index: number) => (
-                  <div class="flex w-full flex-row items-start gap-2">
-                    <span>-</span>
-                    <Markdown content={highlight.trim()} />
-                  </div>
-                ))
-              }
-            </div>
-          </div>
+  <Section as="header" theme="dark">
+    {/* Webflow `is--section_hero_xl` (10rem / 7.5rem); the live nav overlays
+        the page whereas ours is in flow, so subtract its height. */}
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <article class="col-span-12 flex flex-col lg:col-span-8">
+        <p class="body-s pb-text-m"><FormattedDate date={date} /></p>
+        <h1 class="title-l pb-text-m">{title}</h1>
+        <p class="body-m">{description}</p>
+        {/* Webflow: `is--section_xs` spacer + the cover's own section_xs
+            margin-top, then two section_xs spacers before the rich text. */}
+        <div class="pb-section-xs"></div>
+        <div class="pb-section-xs"></div>
+        <Image
+          src={cover}
+          widths={[500, 800, 1080, 1600]}
+          sizes="(max-width: 1023px) 100vw, 820px"
+          alt={title}
+          class="w-full rounded-3xl object-cover"
+        />
+        <div class="pb-section-xs"></div>
+        <div class="pb-section-xs"></div>
+        <div class="prose rich-text">
+          <slot />
         </div>
-        <div class="col-span-2">
-          <article class="prose prose-invert mx-auto w-full py-9 lg:py-0">
-            <Image
-              src={coverImage()}
-              alt={`${story.data.title} cover image`}
-              class="w-full rounded-xl object-cover"
-            />
-            <slot />
-            <BlogCallout client:load />
-          </article>
+      </article>
+
+      <aside class="col-span-12 pt-section-xs lg:col-span-4 lg:pt-0">
+        <div class="lg:sticky lg:top-24">
+          <p class="body-s text-text-3 pb-text-m">In this story</p>
+          <p class="body-m">{intro}</p>
+          <div class="pb-section-xs"></div>
+          <div class="divider"></div>
+          <div class="pb-section-xs"></div>
+          <dl>
+            {
+              facts.map((fact) => (
+                <div class="flex items-end justify-between gap-4 pb-text-s">
+                  <dt class="body-m-strong text-text-1">{fact.label}</dt>
+                  <dd class="body-m text-right">{fact.value}</dd>
+                </div>
+              ))
+            }
+            {
+              website && (
+                <div class="flex items-end justify-between gap-4">
+                  <dt class="body-m-strong text-text-1">Website</dt>
+                  <dd class="body-m text-right">
+                    <a
+                      href={website}
+                      target="_blank"
+                      rel="noopener"
+                      class="font-medium hover:text-text-1"
+                    >
+                      {websiteHost}
+                    </a>
+                  </dd>
+                </div>
+              )
+            }
+          </dl>
+          <div class="pb-section-xs"></div>
+          <NewsletterCard />
         </div>
-      </div>
-    </section>
-    <Footer />
-    <style is:global>
-      .prose {
-        max-width: 80ch;
-      }
-    </style>
-  </body>
-</html>
+      </aside>
+    </div>
+  </Section>
+
+  <CtaBand />
+  <Footer />
+</MainLayout>

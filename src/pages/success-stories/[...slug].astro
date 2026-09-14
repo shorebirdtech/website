@@ -14,6 +14,6 @@ const { story } = Astro.props;
 const { Content } = await render(story);
 ---
 
-<SuccessStoryLayout {...story.data} id={story.id}>
+<SuccessStoryLayout story={story}>
   <Content />
 </SuccessStoryLayout>
