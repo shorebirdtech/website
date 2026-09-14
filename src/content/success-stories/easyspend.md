@@ -5,6 +5,16 @@ description:
   help them easily deploy and stay up to date across all of their platforms.
 date: 2025-03-07
 cover: easyspend-cover.png
+industry: Fintech
+companySize: SME
+website: 'https://www.easyspend.cc'
+intro:
+  Next generation fintech companies turn to cloud services like Shorebird to
+  help them easily deploy and stay up to date across all of their platforms.
+seoTitle: EasySpend - Shorebird Success Story
+seoDescription:
+  EasySpend supports multiple platforms without over investing in cost
+  prohibitive hardware.
 highlights: ['Over 1,000 monthly active users']
 ---
 

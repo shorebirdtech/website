@@ -13,6 +13,11 @@ import FormattedDate from '@/components/blog/formatted-date.astro';
 import shorebirdHeadshot from '@/assets/blog/headshots/shorebird-headshot.png';
 import tomHeadshot from '@/assets/blog/headshots/tom-headshot.jpg';
 import dawnHeadshot from '@/assets/blog/headshots/dawn-headshot.jpg';
+import wesleyHeadshot from '@/assets/blog/headshots/wesleypeck.png';
+import abhishekHeadshot from '@/assets/blog/headshots/abhishekdoshi.jpg';
+import nickHeadshot from '@/assets/blog/headshots/nickweatherley.jpg';
+import macHeadshot from '@/assets/blog/headshots/maccarrithers.avif';
+import brandonHeadshot from '@/assets/blog/headshots/brandonderosier.png';
 
 function getReadingTime(wordCount: number) {
   const wordsPerMinute = 250;
@@ -43,7 +48,7 @@ const authors: Record<string, Author> = {
   },
   eseidel: {
     name: 'Eric Seidel',
-    title: 'Founder & CEO',
+    title: 'CEO and Founder',
     avatar: ericHeadshot,
     github: 'eseidel',
     twitter: '@_eseidel',
@@ -63,15 +68,45 @@ const authors: Record<string, Author> = {
   },
   tomarra: {
     name: 'Tom Arra',
-    title: 'Founding Operations Lead',
+    title: 'Operations Lead',
     avatar: tomHeadshot,
     github: 'tomarra',
   },
   'dawn-ducky': {
     name: 'Dawn Parzych',
-    title: 'Marketing Lead',
+    title: 'Head of Marketing',
     avatar: dawnHeadshot,
     github: 'dawn-ducky',
+  },
+  wesleypeck: {
+    name: 'Wesley Peck',
+    title: 'Lead Product Manager',
+    avatar: wesleyHeadshot,
+    github: 'wesleypeck',
+  },
+  abhishekdoshi: {
+    name: 'Abhishek Doshi',
+    title: 'Developer Relations Engineer',
+    avatar: abhishekHeadshot,
+    github: 'AbhishekDoshi26',
+  },
+  nickweatherley: {
+    name: 'Nick Weatherley',
+    title: 'Software Engineer',
+    avatar: nickHeadshot,
+    github: 'nickshorebird',
+  },
+  maccarrithers: {
+    name: 'Mac Carrithers',
+    title: 'Software Engineer',
+    avatar: macHeadshot,
+    github: 'easymac',
+  },
+  brandonderosier: {
+    name: 'Brandon DeRosier',
+    title: 'Software Engineer',
+    avatar: brandonHeadshot,
+    github: 'bdero',
   },
 };
 ---

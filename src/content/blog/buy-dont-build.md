@@ -1,11 +1,20 @@
 ---
-title: The Smarter Way to Ship Flutter Updates
+title: The smarter way to ship Flutter updates
 author: tomarra
 description:
   Learning from enterprise players that custom code deployment systems are
   valuable but a lot to maintain.
 date: 2025-02-24
 cover: buy-dont-build-cover.png
+intro:
+  Learning from enterprise players that custom code deployment systems are
+  valuable but a lot to maintain.
+readingTime: 3 min read
+ogImage: '/blog/og/buy-dont-build.png'
+seoTitle: The Smarter Way to Ship Flutter Updates
+seoDescription:
+  Learning from enterprise players that custom code deployment systems are
+  valuable but a lot to maintain.
 ---
 
 <!-- cSpell:ignore dont -->

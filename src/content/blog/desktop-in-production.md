@@ -1,9 +1,16 @@
 ---
-title: Production Desktop Support
+title: Production desktop support
 author: bryanoltman
-description: Announcing that desktop platforms are now production-ready
+description: Announcing that desktop platforms are now production-ready.
 date: 2025-02-07
 cover: stable-desktop-cover.png
+intro: Announcing that desktop platforms are now production-ready.
+readingTime: 1 min read
+ogImage: '/blog/og/desktop-in-production.png'
+seoTitle: Production Desktop Support Now Available
+seoDescription:
+  Shorebird's Windows, Linux, and macOS support is now production-ready, with
+  full Code Push patching across all desktop platforms.
 ---
 
 We’re excited to announce that, as of today, our desktop (Windows, Linux, and

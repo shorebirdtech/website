@@ -1,11 +1,20 @@
 ---
-title: Introducing Yearly Plans
+title: Introducing yearly plans
 author: shorebirdtech
 description:
-  We’re excited to roll out Yearly Plans for Shorebird designed to give you more
-  flexibility and predictability as you build and scale your apps.
+  Yearly Plans for Shorebird designed to give you more flexibility and
+  predictability as you build and scale your apps.
 date: 2025-04-23
-cover: 'yearly-plans-cover.png'
+cover: yearly-plans-cover.png
+intro:
+  Yearly Plans for Shorebird designed to give you more flexibility and
+  predictability as you build and scale your apps.
+readingTime: 2 min read
+ogImage: '/blog/og/yearly-plans.png'
+seoTitle: Introducing Yearly Plans for Shorebird Customers
+seoDescription:
+  Yearly Plans for Shorebird designed to give you more flexibility and
+  predictability as you build and scale your apps.
 ---
 
 We’re excited to roll out Yearly Plans for Shorebird. These plans are designed

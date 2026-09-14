@@ -20,6 +20,13 @@ const blogCollection = defineCollection({
     author: z.string(),
     date: z.date().transform(convertDateToUTC),
     cover: z.string(),
+    // Fields imported from the Webflow CMS (scripts/import_webflow.py).
+    intro: z.string().optional(),
+    readingTime: z.string().optional(),
+    ogImage: z.string().optional(),
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
+    highlight: z.boolean().default(false),
   }),
 });
 
@@ -33,7 +40,14 @@ const successStoriesCollection = defineCollection({
     description: z.string(),
     cover: z.string(),
     date: z.date().transform(convertDateToUTC),
-    highlights: z.array(z.string()),
+    highlights: z.array(z.string()).default([]),
+    // Fields imported from the Webflow CMS (scripts/import_webflow.py).
+    industry: z.string().optional(),
+    companySize: z.string().optional(),
+    website: z.string().optional(),
+    intro: z.string().optional(),
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
   }),
 });
 

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "lukas-klingsbo",
+    "name": "Lukas Klingsbo",
+    "role": "Flame Maintainer",
+    "company": "Flame",
+    "quote": "We just threw out all of our CI config and replaced it with Shorebird CI and it both covers all of our needs and does it better than our previous setup, without needing any config at all!",
+    "avatar": null,
+    "logo": "/src/assets/testimonials/logos/flame.svg"
+  },
+  {
+    "slug": "allan-wright",
+    "name": "Allan Wright",
+    "role": "Senior Mobile Developer",
+    "company": "PushPress",
+    "quote": "Our speed to release updates has skyrocketed. It used to take four days to two weeks depending on urgency. Now it’s way faster. The reliability of shipping fixes is night and day.",
+    "avatar": null,
+    "logo": "/src/assets/testimonials/logos/pushpress.svg"
+  },
+  {
+    "slug": "david-sylvester-paul",
+    "name": "David Sylvester-Paul",
+    "role": "CTO at EasySpend",
+    "company": "EasySpend",
+    "quote": "In the past, we often wondered how other highly rated mobile apps updated their features without forcing users to manually download an update from the store. That curiosity led us to Shorebird, and ever since, we have implemented it in all of our applications.",
+    "avatar": "/src/assets/testimonials/david-sylvester-paul.webp",
+    "logo": "/src/assets/testimonials/logos/chai.svg"
+  },
+  {
+    "slug": "scott-macdougall",
+    "name": "Scott MacDougall",
+    "role": "Head of Engineering, Mobile at Kijiji",
+    "company": "Kijiji",
+    "quote": "Over time, we have realized that we could Shorebird a fix quickly to all of our users, which made an enormous impact on customer satisfaction. That’s now become a default phrase in our development team, as it’s a great tool to have in our toolbox.",
+    "avatar": "/src/assets/testimonials/scott-macdougall.webp",
+    "logo": "/src/assets/testimonials/logos/chai.svg"
+  },
+  {
+    "slug": "esra-kadah",
+    "name": "Esra Kadah",
+    "role": "Senior Mobile App Developer, Antigua Mobile",
+    "company": "Antigua Mobile",
+    "quote": "With our client’s app dependency on real-time task management, waiting for app store approvals wasn’t an option. Any downtime could lead to lost revenue for their customers. Shorebird’s over-the-air patches saved us multiple times with critical fixes.",
+    "avatar": "/src/assets/testimonials/esra-kadah.webp",
+    "logo": "/src/assets/testimonials/logos/chai.svg"
+  },
+  {
+    "slug": "taha-tesser",
+    "name": "Taha Tesser",
+    "role": "Engineer, Codemagic",
+    "company": "Codemagic",
+    "quote": "Shorebird solves one of the biggest challenges: bringing over-the-air updates instantly to your users. Backed by an amazing team.",
+    "avatar": "/src/assets/testimonials/taha-tesser.webp",
+    "logo": "/src/assets/testimonials/logos/chai.svg"
+  },
+  {
+    "slug": "renan-araujo",
+    "name": "Renan Araujo",
+    "role": "Senior Engineer, Superlist",
+    "company": "Superlist",
+    "quote": "Shorebird was very useful for distributing updates to my Flame game with over 10k players. Works like a charm.",
+    "avatar": "/src/assets/testimonials/renan-araujo.webp",
+    "logo": "/src/assets/testimonials/logos/chai.svg"
+  },
+  {
+    "slug": "jason-rai",
+    "name": "Jason Rai",
+    "role": "Head of Frontend Engineering, Kijiji",
+    "company": "Kijiji",
+    "quote": "We use Shorebird at Kijiji on Android and it's been awesome. Working well at a very large scale.",
+    "avatar": "/src/assets/testimonials/jason-rai.webp",
+    "logo": "/src/assets/testimonials/logos/chai.svg"
+  }
+]

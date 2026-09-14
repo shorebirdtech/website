@@ -1,9 +1,16 @@
 ---
-title: Shorebird & Codemagic Integration
+title: Shorebird & Codemagic integration
 author: felangel
-description: Announcing Shorebird Integration in Codemagic
+description: Announcing Shorebird Integration in Codemagic.
 date: 2025-02-04
 cover: codemagic-cover.png
+intro: Announcing Shorebird Integration in Codemagic.
+readingTime: 1 min read
+ogImage: '/blog/og/shorebird-codemagic.png'
+seoTitle: Shorebird & Codemagic Integration
+seoDescription:
+  Shorebird's Code Push is now integrated directly into Codemagic's CI/CD,
+  letting you configure release and patch workflows in a few clicks.
 ---
 
 We're very excited to announce that we've been working with the folks at

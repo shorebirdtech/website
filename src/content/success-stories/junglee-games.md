@@ -5,6 +5,15 @@ description:
   boost their apps reliability with Shorebird.
 date: 2025-04-02
 cover: junglee-games-cover.png
+industry: Gaming
+companySize: Enterprise
+website: 'https://www.jungleegames.com'
+intro:
+  To be able to deliver seamless gaming, even at scale, Junglee Games is able to
+  boost their apps reliability with Shorebird.
+seoTitle: Junglee Games - Shorebird Success Story
+seoDescription:
+  Junglee Games deployed over 18 releases in two months with Shorebird.
 highlights:
   [
     'Over 1M+ daily active users across Junglee Games applications utilizing

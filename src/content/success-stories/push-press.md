@@ -5,6 +5,14 @@ description:
   Shorebird saves lots of tedious manual work.
 date: 2025-04-21
 cover: pushpress-cover.png
+industry: Fitness Software
+companySize: Enterprise
+website: 'https://www.pushpress.com'
+intro:
+  Delivering updates faster across 1,500+ white-labeled apps powered by
+  Shorebird saves lots of tedious manual work.
+seoTitle: PushPress - Shorebird Success Story
+seoDescription: Shorebird saved PushPress over 100 days of release management.
 highlights:
   [
     '1,500+ white-labeled apps maintained through Shorebird',

@@ -6,6 +6,16 @@ description:
   smoother.
 date: 2025-04-01
 cover: visible-cover.png
+industry: HealthTech
+companySize: SME
+website: 'https://www.makevisible.com'
+intro:
+  When dealing with mobile apps and hardware devices which always need to be in
+  sync the team at Visible turned to Shorebird to help their release process go
+  smoother.
+seoTitle: Visible - Shorebird Success Story
+seoDescription:
+  Visible avoids the unnecessary delays around review cycles with Code Push.
 highlights:
   [
     'Over 200,000 patches deployed to the Visible customer base over a 4 month

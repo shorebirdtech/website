@@ -1,9 +1,16 @@
 ---
 title: Introducing Shorebird Create
 author: shorebirdtech
-description: The easy way to start your next project with Shorebird
+description: The easy way to start your next project with Shorebird.
 date: 2025-06-17
 cover: shorebird-create-cover.png
+intro: The easy way to start your next project with Shorebird.
+readingTime: 1 min read
+ogImage: '/blog/og/shorebird-create.png'
+seoTitle: 'Introducing Shorebird Create: Start Flutter Fast'
+seoDescription:
+  Shorebird Create spins up production-ready Flutter apps with one CLI command,
+  no manual setup, no context switching, ready to ship.
 ---
 
 Starting a new Flutter project? We just made that a whole lot easier.

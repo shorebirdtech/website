@@ -5,8 +5,16 @@ description:
   You shouldn't have to adapt your workflow for a tool. See what makes a great
   developer tool.
 date: 2025-12-18
-cover: 'building-good-software.png'
-slug: 'building-good-software'
+cover: building-good-software.png
+intro:
+  You shouldn't have to adapt your workflow for a tool. See what makes a great
+  developer tool.
+readingTime: 6 min read
+ogImage: '/blog/og/building-good-software.png'
+seoTitle: The difference between good and great developer tools
+seoDescription:
+  You shouldn't have to adapt your workflow for a tool. See what makes a great
+  developer tool.
 ---
 
 As a developer, I just want to ship good software.

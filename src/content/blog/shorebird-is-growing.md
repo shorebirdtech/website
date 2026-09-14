@@ -1,12 +1,20 @@
 ---
-title: Expanding the Shorebird Team
+title: Expanding the Shorebird team
 author: eseidel
 description:
   A quick look back to see how we got to today and how we are building for
   tomorrow.
 date: 2025-08-27
-cover: 'growing-cover.png'
-slug: 'shorebird-is-growing'
+cover: growing-cover.png
+intro:
+  A quick look back to see how we got to today and how we are building for
+  tomorrow.
+readingTime: 2 min read
+ogImage: '/blog/og/shorebird-is-growing.png'
+seoTitle: 'Expanding the Shorebird Team: Our Flutter Journey'
+seoDescription:
+  A quick look back to see how we got to today and how we are building for
+  tomorrow.
 ---
 
 <!-- cspell:words janky -->

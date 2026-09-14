@@ -1,9 +1,16 @@
 ---
 title: Expanding the flock - Dawn Parzych joins Shorebird
 author: dawn-ducky
-description: Introducing our new Marketing Lead
+description: Introducing our new Marketing Lead.
 date: 2025-10-17
-cover: 'dawn-joins-shorebird-cover.png'
+cover: dawn-joins-shorebird-cover.png
+intro: Introducing our new Marketing Lead.
+readingTime: 4 min read
+ogImage: '/blog/og/why-dawn-joined.png'
+seoTitle: Expanding the flock - Dawn Parzych joins Shorebird
+seoDescription:
+  Dawn Parzych joins Shorebird as Marketing Lead, bringing a background in
+  developer education and storytelling to Flutter.
 ---
 
 ## Introduction
