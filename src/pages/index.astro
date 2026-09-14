@@ -1,5 +1,4 @@
 ---
-import config from '@/config';
 import { Navbar } from '@/components/ui/navbar';
 import Benefits from '@/components/home/benefits.astro';
 import CtaBand from '@/components/ui/cta-band.astro';
@@ -15,7 +14,10 @@ import Security from '@/components/home/security.astro';
 import Testimonials from '@/components/home/testimonials.astro';
 ---
 
-<MainLayout title={config.app}>
+<MainLayout
+  title="Build Flutter Apps with Confidence | Shorebird"
+  description="Ship Flutter apps faster with Shorebird Code Push and CI. Deploy fixes instantly, reduce risk, and stay in control of releases."
+>
   <Navbar client:load />
   <Hero />
   <Platform />
