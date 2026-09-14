@@ -21,3 +21,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 .gstack/
+
+# agent worktrees / local one-off exports
+.claude/worktrees/
+blog_export.csv
