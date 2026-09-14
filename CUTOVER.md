@@ -18,6 +18,40 @@ here is done until its box is checked.
     static redirects are meta-refresh stubs, which search engines treat as
     weaker). Consider generating `_redirects` from the config so there is one
     source of truth.
+  - Then re-check the list once more on cutover day — anyone can add a rule in
+    Webflow between now and then.
+- [ ] **Everything else Webflow keeps in Site Settings rather than content.**
+      None of this is in the CMS/page export; it was inventoried on 2026-09-14
+      via the API where possible and must be re-checked by hand in the Webflow
+      dashboard on cutover day (Site settings → General, Publishing, Forms,
+      Custom code, SEO, Integrations):
+  - Custom code (verified via API): site-level head = Plausible
+    (`pa-KkCTgCak2h0t6JBTj3Tgm`) + Unify tag; footer = LinkedIn insight
+    (`8654276`) + HubSpot (`js-na2.hs-scripts.com/246912764.js`). Plausible +
+    LinkedIn are ported; Unify + HubSpot are a decision (below). No registered
+    scripts. Per-page custom code: not readable via API without page ids, but
+    the rendered HTML in `../webflow-migration/webflow-export/pages/` contains
+    whatever was there; re-fetch any page edited after 2026-09-13.
+  - Forms (verified via API): 15 form instances, all one of two shapes
+    (newsletter: `email` + `country` honeypot; guide: `firstName`, `lastName`,
+    `Email`, `country`), every one POSTing to
+    `https://app.loops.so/api/newsletter-form/clkle380400tojo0nmapdkds7` — the
+    same URL our forms use. No Webflow email notifications, no form webhooks, so
+    nothing to recreate; just confirm nobody added one later.
+  - Webhooks (verified via API): none registered.
+  - `robots.txt`: live is just `Sitemap: https://shorebird.dev/sitemap.xml`.
+    Added `public/robots.txt` pointing at Astro's `sitemap-index.xml`. Check the
+    dashboard for any disallow rules or `noindex` page settings added later.
+  - SEO per page: titles/descriptions/OG were taken from the rendered HTML; the
+    site-wide share image, favicon and webclip are ported. Any page-level
+    `noindex`/canonical overrides live only in the page settings panel — scan
+    the page list.
+  - Domain/SSL settings, password-protected pages, localization: none in use
+    (locales disabled; verify nothing was added).
+  - Assets served from `cdn.prod.website-files.com` that other properties link
+    to: docs and console reference none (checked). Grep marketing emails / Loops
+    templates / social posts for `website-files.com` before the Webflow site is
+    deleted — those URLs die with the site.
 - [ ] **Content freeze + final delta pull.** The port's snapshot is from
       2026-09-13. Anything published in Webflow after that must be re-imported
       (`scripts/import_webflow.py --only blog,stories` against a fresh CMS
@@ -80,7 +114,16 @@ here is done until its box is checked.
 
 ## 4. Cutover day
 
-- [ ] Content freeze in Webflow; final delta pull; deploy.
+- [ ] Content freeze in Webflow (tell whoever edits the blog).
+- [ ] **Final refresh, right before deploy:** re-export the CMS collections
+      (blogs `696386798ae9c71635fed478`, success stories
+      `696403bea4559c9c354e00a9`, authors, reviews, logos, teams) into
+      `../webflow-migration/webflow-export/cms/`, run
+      `python3 scripts/import_webflow.py --only blog,stories,data`, review the
+      diff (only new/changed CMS items should move), build, commit.
+- [ ] Re-check the Webflow 301 list and Site Settings against the section-1
+      inventory one last time.
+- [ ] Deploy.
 - [ ] Point `shorebird.dev` and `www` at Cloudflare. Watch for cert issuance.
 - [ ] Do **not** delete the Webflow site. Unpublish it (or leave it on the
       `webflow.io` subdomain) for 30 days as a rollback.
