@@ -147,7 +147,7 @@ Services to stay informed of our privacy practices.
 Any questions about this Privacy Policy or our practices should be sent to us
 via email at privacy@shorebird.dev.
 
-# Shorebird List of Vendors
+## Shorebird List of Vendors
 
 - Cloudflare, USA, Cloud infrastructure for our Services
 - Discord, USA, Customer support

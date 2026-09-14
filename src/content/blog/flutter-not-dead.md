@@ -13,8 +13,6 @@ seoDescription:
   and why developers shouldn't worry about its future.
 ---
 
-# Why Flutter Isn’t Dead
-
 For over 11 years now, my social media feed has been full of stories proclaiming
 "Flutter is dead.” I’m here to tell you it’s not, and why it won’t be.
 
