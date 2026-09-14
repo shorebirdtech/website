@@ -1,0 +1,69 @@
+---
+/**
+ * The "Start shipping fast, today!" call-to-action band that sits directly
+ * above the footer on the live site (Webflow `.c_cta_footer`). It is a page
+ * section, not part of the footer, so pages include it explicitly:
+ *
+ *   <CtaBand />
+ *   <Footer />
+ *
+ * Every string/href has a default matching the live copy.
+ */
+import { ButtonLink } from '@/components/ui/button';
+import config from '@/config';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  class?: string;
+}
+
+const {
+  title = 'Start shipping fast, today!',
+  description = 'Integrate with your current codebase in less than 5 minutes.',
+  primaryLabel = 'Try for Free',
+  primaryHref = `${config.consoleUrl}/login`,
+  secondaryLabel = 'Learn more',
+  secondaryHref = `${config.docsUrl}/getting-started/`,
+  class: className,
+} = Astro.props;
+---
+
+<section
+  data-theme="dark"
+  data-section
+  class:list={['bg-surface-1 relative py-2.5', className]}
+>
+  <div class="page-container">
+    <div
+      class="bg-cta-band border-border relative overflow-hidden rounded-4xl border px-6 py-16 md:p-16"
+    >
+      <div class="relative z-[2] flex flex-col items-center text-center">
+        <h2 class="title-l pb-text-s">{title}</h2>
+        <p class="body-m pb-text-xl">{description}</p>
+        <div class="flex w-full flex-col gap-4 md:w-auto md:flex-row">
+          <ButtonLink variant="primary" href={primaryHref} target="_blank">
+            {primaryLabel}
+          </ButtonLink>
+          <ButtonLink
+            variant="secondary"
+            href={secondaryHref}
+            target="_blank"
+          >
+            {secondaryLabel}
+          </ButtonLink>
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-[1] opacity-35"
+        style="background-image: radial-gradient(circle at 50% 100%, #3f618d, #212433);"
+      >
+      </div>
+    </div>
+  </div>
+</section>

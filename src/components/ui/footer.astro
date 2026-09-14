@@ -1,108 +1,142 @@
 ---
-import { Button } from '@/components/ui/button';
+/**
+ * Site footer (Webflow `.g_page--section.is--footer`).
+ *
+ * Always dark. Brand column (logo, tagline, social) spans 3/12 columns, the
+ * four link columns share the remaining 9/12. On mobile everything stacks and
+ * centers. The "Start shipping fast, today!" band above it is a separate page
+ * section: include `<CtaBand />` before `<Footer />` where the page needs it.
+ */
 import { DiscordLogo } from '@/components/logos/discord-logo';
 import { GitHubLogo } from '@/components/logos/github-logo';
 import { LinkedInLogo } from '@/components/logos/linkedin-logo';
 import { LogoFull } from '@/components/logos/logo-full';
-import { Spacer } from '@/components/ui/spacer';
-import { TwitterLogo } from '@/components/logos/twitter-logo';
 import config from '@/config';
 import { RssIcon } from '@phosphor-icons/react';
+
+const columns = [
+  {
+    label: 'Product',
+    links: [
+      { label: 'Code Push', href: '/product/code-push' },
+      { label: 'Shorebird CI', href: '/product/shorebird-ci' },
+      { label: 'Pricing', href: '/pricing' },
+    ],
+  },
+  {
+    label: 'Resources',
+    links: [
+      { label: 'Docs', href: config.docsUrl, external: true },
+      { label: 'Customers', href: '/success-stories' },
+      {
+        label: 'FAQ',
+        href: `${config.docsUrl}/code-push/faq/`,
+        external: true,
+      },
+      { label: 'Community', href: config.discordUrl, external: true },
+    ],
+  },
+  {
+    label: 'Company',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Careers', href: '/jobs' },
+      { label: 'Blog', href: '/blog' },
+    ],
+  },
+  {
+    label: 'Legal',
+    links: [
+      {
+        label: 'Trust & Safety',
+        href: 'https://trust.shorebird.dev/',
+        external: true,
+      },
+      { label: 'DPA', href: '/dpa' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+    ],
+  },
+];
+
+const social = [
+  { label: 'LinkedIn', href: config.linkedInUrl, Icon: LinkedInLogo },
+  { label: 'GitHub', href: config.githubUrl, Icon: GitHubLogo },
+  { label: 'Discord', href: config.discordUrl, Icon: DiscordLogo },
+  { label: 'RSS feed', href: '/rss.xml', Icon: RssIcon },
+];
 ---
 
 <footer
-  class="border-border-1 border-t-[1px] px-6 py-12 md:px-12 lg:px-16 lg:py-24"
+  data-theme="dark"
+  data-section
+  class="bg-surface-1 border-border pb-section-s border-t pt-3"
 >
-  <div class="mx-auto max-w-7xl">
-    <div class="flex flex-col md:flex-row md:justify-between">
-      <div class="mb-8 md:mb-0">
-        <LogoFull className="w-36" />
-        <Spacer />
-        <p class="text-text-2 mb-6">Helping businesses succeed with Flutter.</p>
-        <div class="mb-8 flex space-x-3">
-          <a href={config.discordUrl}>
-            <Button variant="outline" size="icon" aria-label="Discord">
-              <DiscordLogo className="size-5" />
-            </Button>
-          </a>
-          <a href={config.githubUrl}>
-            <Button variant="outline" size="icon" aria-label="GitHub">
-              <GitHubLogo className="size-5" />
-            </Button>
-          </a>
-          <a href={config.twitterUrl}>
-            <Button variant="outline" size="icon" aria-label="Twitter">
-              <TwitterLogo className="size-4" />
-            </Button>
-          </a>
-          <a href={config.linkedInUrl}>
-            <Button variant="outline" size="icon" aria-label="LinkedIn">
-              <LinkedInLogo className="size-5" />
-            </Button>
-          </a>
-          <a href="/rss.xml">
-            <Button variant="outline" size="icon" aria-label="RSS Feed">
-              <RssIcon className="size-5" title="RSS Feed" />
-            </Button>
-          </a>
+  <div class="page-container">
+    <div class="gap-x-column-gap gap-y-row-gap grid grid-cols-12">
+      <div class="col-span-12 lg:col-span-3">
+        <div
+          class="flex h-full flex-col items-center justify-center lg:items-start lg:justify-between"
+        >
+          <div class="pb-text-s">
+            <a
+              href="/"
+              aria-label="Shorebird home"
+              class="text-text-1 hover:text-text-1 inline-flex"
+            >
+              <LogoFull className="h-6 w-auto" />
+            </a>
+          </div>
+          <p class="body-s pb-button">Deploy on your schedule</p>
+          <ul class="flex items-center gap-4">
+            {
+              social.map(({ label, href, Icon }) => (
+                <li>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    class="border-border text-text-3 hover:bg-border hover:text-text-1 flex size-10 items-center justify-center rounded-full border transition-colors duration-300"
+                  >
+                    <Icon className="size-5" />
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
         </div>
-        <a href={config.complianceUrl}>
-          <img
-            alt="ISO 27001 in progress badge"
-            width="80"
-            src="https://badges.oneleet.com/badge/a912b4a6-eb01-4cfb-9bff-2eac8d8e5aec?dark=true"
-          />
-        </a>
       </div>
-      <div class="grid grid-cols-2 gap-x-12 gap-y-8 md:flex md:gap-x-24">
-        <div>
-          <h3 class="mb-4 text-sm font-light tracking-wider uppercase">
-            Website
-          </h3>
-          <ul class="space-y-3">
-            <li>
-              <a href="/"> Home </a>
-            </li>
-            <li>
-              <a href="/pricing"> Pricing </a>
-            </li>
-            <li>
-              <a href="/about"> About </a>
-            </li>
-            <li>
-              <a href="/jobs"> Jobs </a>
-            </li>
-            <li>
-              <a href="/blog"> Blog </a>
-            </li>
-            <li>
-              <a href={config.docsUrl}> Docs </a>
-            </li>
-            <li>
-              <a href="/faq"> FAQs </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="mb-4 text-sm font-light tracking-wider uppercase">
-            Legal
-          </h3>
-          <ul class="space-y-3">
-            <li>
-              <a href="/privacy"> Privacy Policy </a>
-            </li>
-            <li>
-              <a href="/terms"> Terms of Service </a>
-            </li>
-            <li>
-              <a href="/legal/dpa"> DPA </a>
-            </li>
-          </ul>
+      <div class="col-span-12 lg:col-span-9">
+        <div
+          class="gap-x-column-gap gap-y-row-gap grid grid-cols-1 lg:grid-cols-4"
+        >
+          {
+            columns.map((column) => (
+              <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+                <p class="label-xs pb-text-s">{column.label}</p>
+                <ul class="flex flex-col">
+                  {column.links.map((link) => (
+                    <li class="pb-text-xs">
+                      <a
+                        href={link.href}
+                        target={link.external ? '_blank' : undefined}
+                        rel={link.external ? 'noreferrer' : undefined}
+                        class="text-button-s text-text-2 hover:text-text-1 font-semibold"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>
-    <div class="mt-12 pt-4">
-      <p class="text-text-2">
+    <div class="pt-text-xs">
+      <p class="body-s text-center lg:text-left">
         Copyright @{new Date().getFullYear()}
       </p>
     </div>
