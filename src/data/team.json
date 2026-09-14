@@ -60,22 +60,22 @@
     "draft": true
   },
   {
-    "slug": "abhishek-doshi",
-    "name": "Abhishek Doshi",
-    "role": "Developer Relations Engineer",
-    "headshot": "/src/assets/team/abhishek-doshi.jpg",
-    "linkedin": "https://www.linkedin.com/in/abhishekdoshi26/",
-    "linkedinLabel": "View Abhishek Doshi on LinkedIn",
-    "order": 6,
-    "draft": false
-  },
-  {
     "slug": "nick-weatherley",
     "name": "Nick Weatherley",
     "role": "Software Engineer",
     "headshot": "/src/assets/team/nick-weatherley.jpg",
     "linkedin": "https://www.linkedin.com/in/nicholas-weatherley-508b73aa/",
     "linkedinLabel": "View Nick Weatherley on LinkedIn",
+    "order": 6,
+    "draft": false
+  },
+  {
+    "slug": "abhishek-doshi",
+    "name": "Abhishek Doshi",
+    "role": "Developer Relations Engineer",
+    "headshot": "/src/assets/team/abhishek-doshi.jpg",
+    "linkedin": "https://www.linkedin.com/in/abhishekdoshi26/",
+    "linkedinLabel": "View Abhishek Doshi on LinkedIn",
     "order": 6,
     "draft": false
   },
