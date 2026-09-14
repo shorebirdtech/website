@@ -8,7 +8,9 @@ islands, same as before.
 
 Rules for every agent:
 
-- Work only in this repo. Local commits are fine. **Never push.**
+- Work only in this repo, on the local `webflow-port` branch. One commit per
+  logical piece. **Never push** — this repo is public and archived; the port
+  stays local until Eric decides otherwise.
 - Don't touch Webflow (read-only API use only; never publish/update/delete).
 - Run `npm run build`, `npm run format`, `npm run cspell` before each commit.
 - Reference material lives in `webflow-export/` (see Phase 0). Prefer it over
@@ -87,8 +89,9 @@ stdlib only like the existing `blog_to_csv.py`)
 `src/components/ui/navbar.tsx`, `src/components/ui/footer.astro`,
 `src/components/ui/button.tsx`, `src/layouts/main.astro`)
 
-- Encode the tokens above as CSS variables + Tailwind theme (light + dark via
-  `prefers-color-scheme`, matching Webflow).
+- Encode the tokens above as CSS variables + Tailwind theme. Dark mode is
+  confirmed: the live site switches automatically on `prefers-color-scheme`,
+  so every page must look right in both. Screenshot both.
 - Restyle nav (links: Product ▾ [Code Push, Shorebird CI], Pricing, Success
   stories, Blog, About, Jobs; CTAs), footer, buttons, typography scale, section
   spacing, container widths to match the Webflow screenshots.
@@ -142,6 +145,4 @@ Astro page/components to match, verify at desktop and ~400px widths with the
 ## Out of scope tonight
 
 - Pixel-perfect animation parity, Swiper carousels (use `marquee` / CSS).
-- Dark mode if Webflow doesn't actually ship it on the live site (check
-  `prefers-color-scheme` in the exported CSS before spending time on it).
 - Any push, deploy, or DNS change.
