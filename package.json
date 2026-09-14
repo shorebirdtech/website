@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "",
-    "cspell": "cspell \"**\""
+    "cspell": "cspell \"**\"",
+    "check:links": "python3 scripts/check_links.py dist"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
