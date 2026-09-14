@@ -8,7 +8,7 @@ cover: organizations.avif
 intro:
   'Announcing "Organizations" support for improved collaboration within teams.'
 readingTime: 1 min read
-ogImage: '/blog/og/organizations.png'
+ogImage: '/blog/og/organizations.jpg'
 seoTitle: Using Shorebird with your Team
 seoDescription:
   'Announcing "Organizations" support for improved collaboration within teams'

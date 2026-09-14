@@ -6,7 +6,7 @@ date: 2024-11-14
 cover: tracks-percentage-rollouts-a-b-testing.avif
 intro: Announcing Tracks, Percentage Rollouts and A/B testing.
 readingTime: 2 min read
-ogImage: '/blog/og/tracks-percentage-rollouts-a-b-testing.png'
+ogImage: '/blog/og/tracks-percentage-rollouts-a-b-testing.jpg'
 seoTitle: Tracks, Percentage Rollouts and A/B testing
 seoDescription:
   Shorebird introduces patch tracks for percentage-based rollouts and A/B

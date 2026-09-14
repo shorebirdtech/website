@@ -12,7 +12,7 @@ intro:
   A clear look at Flutter vs .NET MAUI and the trade-offs that affect how your
   team builds and ships.
 readingTime: 9 min read
-ogImage: '/blog/og/flutter-vs-dotnet-maui-architecture-tooling-deployment.png'
+ogImage: '/blog/og/flutter-vs-dotnet-maui-architecture-tooling-deployment.jpg'
 seoTitle: 'Flutter vs .NET MAUI in 2026: Architecture & Tooling'
 seoDescription:
   Compare Flutter vs .NET MAUI in 2026 across architecture, tooling, CI/CD, and

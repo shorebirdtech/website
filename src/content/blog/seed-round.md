@@ -12,7 +12,7 @@ intro:
   including Code Push and Shorebird CI, making mobile iteration faster than
   ever.
 readingTime: 2 min read
-ogImage: '/blog/og/seed-round.png'
+ogImage: '/blog/og/seed-round.jpg'
 seoTitle: Accel Leads $3M Seed Round in Shorebird
 seoDescription:
   Shorebird has raised $3M to expand its suite of Flutter developer tools,

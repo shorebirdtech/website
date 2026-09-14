@@ -8,7 +8,7 @@ cover: flutterconusa-2025-sponsor.png
 intro:
   Join us June 25–26 to connect with the Flutter community in North America.
 readingTime: 2 min read
-ogImage: '/blog/og/flutterconusa-2025-sponsor.png'
+ogImage: '/blog/og/flutterconusa-2025-sponsor.jpg'
 seoTitle: Shorebird Sponsors Fluttercon USA 2025
 seoDescription:
   Join us June 25–26 to connect with the Flutter community in North America.

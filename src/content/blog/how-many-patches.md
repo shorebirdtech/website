@@ -10,7 +10,7 @@ intro:
   Here’s a simple way to estimate usage—whether you ship once a month or every
   commit.
 readingTime: 2 min read
-ogImage: '/blog/og/how-many-patches.png'
+ogImage: '/blog/og/how-many-patches.jpg'
 seoTitle: Estimating your patch needs with Shorebird
 seoDescription:
   Here’s a simple way to estimate usage—whether you ship once a month or every

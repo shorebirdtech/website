@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import the Webflow CMS export (webflow-export/cms/*.json) into the Astro site.
+"""Import the Webflow CMS export (../webflow-migration/webflow-export/cms/*.json) into the Astro site.
 
 Python 3 stdlib only. Run from anywhere:
 
@@ -13,7 +13,8 @@ What it does (idempotent; safe to re-run):
       body and local cover; only the frontmatter is regenerated from the CMS.
     - New posts get their HTML body converted to Markdown, body images
       downloaded to src/assets/blog/<slug>/, cover to src/assets/blog/covers/,
-      and the share (OG) image to public/blog/og/<slug>.png.
+      and the share (OG) image to public/blog/og/<slug>.jpg (converted with
+      `sips`; social crawlers want JPEG/PNG, and JPEG is ~8x smaller).
 * Success stories -> src/content/success-stories/<slug>.md (same rules).
 * Site data -> src/data/{reviews,logos,team}.json with images downloaded to
   src/assets/{testimonials,brands,team}/.
@@ -34,6 +35,7 @@ import html
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -41,7 +43,13 @@ from html.parser import HTMLParser
 from urllib.parse import unquote, urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-EXPORT = os.path.join(ROOT, 'webflow-export', 'cms')
+# The Webflow snapshot lives outside the repo (parallel to it) so that it never
+# ends up in git history. Override with WEBFLOW_EXPORT=/path/to/webflow-export.
+EXPORT_ROOT = os.environ.get(
+    'WEBFLOW_EXPORT',
+    os.path.join(os.path.dirname(ROOT), 'webflow-migration', 'webflow-export'),
+)
+EXPORT = os.path.join(EXPORT_ROOT, 'cms')
 CONTENT = os.path.join(ROOT, 'src', 'content')
 ASSETS = os.path.join(ROOT, 'src', 'assets')
 DATA = os.path.join(ROOT, 'src', 'data')
@@ -165,14 +173,23 @@ def url_ext(url):
 DOWNLOADS = {}  # dest path -> url
 
 
-def queue_download(url, dest):
-    """Register a download; the file is fetched later in run_downloads()."""
+CONVERT_TO_JPEG = set()
+
+
+def queue_download(url, dest, convert_to_jpeg=False):
+    """Register a download; the file is fetched later in run_downloads().
+
+    With convert_to_jpeg the downloaded file is re-encoded as JPEG (quality 85)
+    using macOS `sips`; if `sips` is unavailable the original bytes are kept.
+    """
     if os.path.exists(dest):
         return
     existing = DOWNLOADS.get(dest)
     if existing and existing != url:
         raise SystemExit(f'conflicting downloads for {dest}: {existing} vs {url}')
     DOWNLOADS[dest] = url
+    if convert_to_jpeg:
+        CONVERT_TO_JPEG.add(dest)
 
 
 def run_downloads(enabled=True):
@@ -193,6 +210,15 @@ def run_downloads(enabled=True):
             if os.path.exists(tmp):
                 os.remove(tmp)
             return False
+        if dest in CONVERT_TO_JPEG and shutil.which('sips'):
+            jpg = tmp + '.jpg'
+            r = subprocess.run(
+                ['sips', '-s', 'format', 'jpeg', '-s', 'formatOptions', '85', tmp, '--out', jpg],
+                capture_output=True,
+            )
+            if r.returncode == 0 and os.path.exists(jpg):
+                os.remove(tmp)
+                tmp = jpg
         os.replace(tmp, dest)
         return True
 
@@ -778,7 +804,7 @@ def live_code_blocks(kind, slug):
     """Code blocks from the rendered live page saved as
     webflow-export/pages/<kind>__<slug>.html (the CMS API exports rich-text
     code blocks as empty <pre></pre>). Returns [(language, code), ...]."""
-    path = os.path.join(ROOT, 'webflow-export', 'pages', f'{kind}__{slug}.html')
+    path = os.path.join(EXPORT_ROOT, 'pages', f'{kind}__{slug}.html')
     if not os.path.exists(path):
         return []
     with open(path, encoding='utf-8') as f:
@@ -886,8 +912,10 @@ def import_blog():
         og_url = (fd.get('shared-image') or {}).get('url')
         og_image = None
         if og_url:
-            og_name = f'{slug}.{url_ext(og_url)}'
-            queue_download(og_url, os.path.join(og_dir, og_name))
+            og_name = f'{slug}.jpg'
+            og_path = os.path.join(og_dir, og_name)
+            if not os.path.exists(og_path):
+                queue_download(og_url, og_path, convert_to_jpeg=True)
             og_image = f'/blog/og/{og_name}'
 
         generated = existing_body is None

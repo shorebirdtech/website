@@ -10,7 +10,7 @@ intro:
   Introducing the first group of Shorebird Community Ambassadors, Flutter
   developers recognized for their content, mentorship, and advocacy worldwide.
 readingTime: 2 min read
-ogImage: '/blog/og/meet-our-first-shorebird-community-ambassadors.png'
+ogImage: '/blog/og/meet-our-first-shorebird-community-ambassadors.jpg'
 seoTitle: Meet Shorebird's First Community Ambassadors
 seoDescription:
   'Meet the first five Shorebird Community Ambassadors: Flutter developers from

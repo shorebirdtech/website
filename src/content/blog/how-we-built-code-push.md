@@ -10,7 +10,7 @@ intro:
   Walk through of the changes made to Dart and Flutter in order to make code
   push work.
 readingTime: 9 min read
-ogImage: '/blog/og/how-we-built-code-push.png'
+ogImage: '/blog/og/how-we-built-code-push.jpg'
 seoTitle: How we built Flutter code push
 seoDescription:
   Walk through of the changes made to Dart and Flutter in order to make code

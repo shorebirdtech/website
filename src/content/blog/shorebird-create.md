@@ -6,7 +6,7 @@ date: 2025-06-17
 cover: shorebird-create.avif
 intro: The easy way to start your next project with Shorebird.
 readingTime: 1 min read
-ogImage: '/blog/og/shorebird-create.png'
+ogImage: '/blog/og/shorebird-create.jpg'
 seoTitle: 'Introducing Shorebird Create: Start Flutter Fast'
 seoDescription:
   Shorebird Create spins up production-ready Flutter apps with one CLI command,

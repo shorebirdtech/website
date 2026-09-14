@@ -6,7 +6,7 @@ date: 2024-08-20
 cover: viewing-logs.png
 intro: How to view logs for an app without a debugger attached.
 readingTime: 2 min read
-ogImage: '/blog/og/viewing-logs.png'
+ogImage: '/blog/og/viewing-logs.jpg'
 seoTitle: How to View Logs in Released Flutter Apps
 seoDescription:
   Learn how to view logcat and Console.app logs for released Flutter apps on

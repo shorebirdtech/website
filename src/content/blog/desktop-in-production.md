@@ -6,7 +6,7 @@ date: 2025-02-07
 cover: desktop-in-production.avif
 intro: Announcing that desktop platforms are now production-ready.
 readingTime: 1 min read
-ogImage: '/blog/og/desktop-in-production.png'
+ogImage: '/blog/og/desktop-in-production.jpg'
 seoTitle: Production Desktop Support Now Available
 seoDescription:
   Shorebird's Windows, Linux, and macOS support is now production-ready, with

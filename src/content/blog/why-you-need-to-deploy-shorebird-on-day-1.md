@@ -10,7 +10,7 @@ intro:
   Adding Shorebird Code Push to your Flutter app from day one changes how your
   team ships
 readingTime: 3 min read
-ogImage: '/blog/og/why-you-need-to-deploy-shorebird-on-day-1.png'
+ogImage: '/blog/og/why-you-need-to-deploy-shorebird-on-day-1.jpg'
 seoTitle: The Best Time to Add Code Push Is Day One
 seoDescription:
   'Adding Shorebird Code Push from day one changes how your team ships: fix bugs

@@ -10,7 +10,7 @@ intro:
   '7 characteristics of portable software: Why building once should be the
   default'
 readingTime: 5 min read
-ogImage: '/blog/og/characteristics-portable-software.png'
+ogImage: '/blog/og/characteristics-portable-software.jpg'
 seoTitle: 7 characteristics of portable software
 seoDescription:
   Learn the 7 characteristics of portable software and why building once for

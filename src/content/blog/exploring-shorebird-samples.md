@@ -11,7 +11,7 @@ intro:
   'A tour of the Shorebird Samples repository: real-world examples for flavors,
   progressive rollouts, add-to-app, and patchable business logic.'
 readingTime: 4 min read
-ogImage: '/blog/og/exploring-shorebird-samples.png'
+ogImage: '/blog/og/exploring-shorebird-samples.jpg'
 seoTitle: 'Shorebird Samples: Real-world OTA update examples'
 seoDescription:
   'Explore the Shorebird Samples repo: working examples for Flutter flavors,

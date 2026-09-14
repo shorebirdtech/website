@@ -10,7 +10,7 @@ intro:
   Flutter GDE and community voice Abhishek joins Shorebird full-time as
   Developer Relations Engineer.
 readingTime: 2 min read
-ogImage: '/blog/og/say-hello-to-abhishek-doshi-shorebirds-devrel-engineer.png'
+ogImage: '/blog/og/say-hello-to-abhishek-doshi-shorebirds-devrel-engineer.jpg'
 seoTitle: Say Hello to Abhishek Doshi, Shorebird's DevRel Engineer
 seoDescription:
   'Introducing Abhishek: Shorebird Welcomes Its First Developer Relations

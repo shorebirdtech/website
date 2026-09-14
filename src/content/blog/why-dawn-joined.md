@@ -6,7 +6,7 @@ date: 2025-10-17
 cover: why-dawn-joined.avif
 intro: Introducing our new Marketing Lead.
 readingTime: 4 min read
-ogImage: '/blog/og/why-dawn-joined.png'
+ogImage: '/blog/og/why-dawn-joined.jpg'
 seoTitle: Expanding the flock - Dawn Parzych joins Shorebird
 seoDescription:
   Dawn Parzych joins Shorebird as Marketing Lead, bringing a background in

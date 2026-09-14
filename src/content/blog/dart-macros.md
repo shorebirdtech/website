@@ -7,7 +7,7 @@ date: 2025-01-29
 cover: dart-macros.avif
 intro: 'Reacting to Google''s decision to cancel Dart''s "macros" feature.'
 readingTime: 3 min read
-ogImage: '/blog/og/dart-macros.png'
+ogImage: '/blog/og/dart-macros.jpg'
 seoTitle: On Focus and Google's Cancellation of Dart Macros
 seoDescription:
   Shorebird's founder reacts to Google canceling Dart's macros feature and what

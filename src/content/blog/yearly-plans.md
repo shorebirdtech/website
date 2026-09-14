@@ -10,7 +10,7 @@ intro:
   Yearly Plans for Shorebird designed to give you more flexibility and
   predictability as you build and scale your apps.
 readingTime: 2 min read
-ogImage: '/blog/og/yearly-plans.png'
+ogImage: '/blog/og/yearly-plans.jpg'
 seoTitle: Introducing Yearly Plans for Shorebird Customers
 seoDescription:
   Yearly Plans for Shorebird designed to give you more flexibility and

@@ -10,7 +10,7 @@ intro:
   Business and Enterprise plan customers now have access to advanced
   permissions.
 readingTime: 2 min read
-ogImage: '/blog/og/advanced-permissions.png'
+ogImage: '/blog/og/advanced-permissions.jpg'
 seoTitle: Introducing advanced permissions
 seoDescription:
   Business and Enterprise plan customers now have access to advanced

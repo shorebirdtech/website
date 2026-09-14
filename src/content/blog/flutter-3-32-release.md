@@ -10,7 +10,7 @@ intro:
   Updating Shorebird for the latest Flutter release and highlighting our
   favorite updates.
 readingTime: 4 min read
-ogImage: '/blog/og/flutter-3-32-release.png'
+ogImage: '/blog/og/flutter-3-32-release.jpg'
 seoTitle: Flutter 3.32 Support and Review
 seoDescription:
   Updating Shorebird for the latest Flutter release and highlighting our

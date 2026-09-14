@@ -10,7 +10,7 @@ intro:
   Learn how to disable Shorebird's automatic updates and take full manual
   control over when and how patches roll out to your users.
 readingTime: 5 min read
-ogImage: '/blog/og/manual-control-of-your-shorebird-updates.png'
+ogImage: '/blog/og/manual-control-of-your-shorebird-updates.jpg'
 seoTitle: Taking Manual Control of Your Shorebird Updates
 seoDescription:
   Learn how to disable automatic patching in Shorebird and control rollout

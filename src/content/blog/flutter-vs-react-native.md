@@ -6,7 +6,7 @@ date: 2026-02-16
 cover: flutter-vs-react-native.png
 intro: How Flutter and React Native compare in 2026
 readingTime: 10 min read
-ogImage: '/blog/og/flutter-vs-react-native.png'
+ogImage: '/blog/og/flutter-vs-react-native.jpg'
 seoTitle: Flutter vs React Native in 2026
 seoDescription:
   'A deep technical comparison of Flutter and React Native in 2026: Impeller vs

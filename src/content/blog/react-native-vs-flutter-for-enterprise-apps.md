@@ -10,7 +10,7 @@ intro:
   This guide breaks down the real trade-offs like scalability, maintenance,
   hiring, security, and long-term risk.
 readingTime: 10 min read
-ogImage: '/blog/og/react-native-vs-flutter-for-enterprise-apps.png'
+ogImage: '/blog/og/react-native-vs-flutter-for-enterprise-apps.jpg'
 seoTitle: React Native vs Flutter for Enterprise Apps
 seoDescription:
   This 2026 CTO guide breaks down the real trade-offs like scalability,

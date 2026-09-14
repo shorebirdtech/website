@@ -10,7 +10,7 @@ intro:
   Most frameworks optimize for the floor. Flutter optimized for the ceiling, and
   that changes everything.
 readingTime: 5 min read
-ogImage: '/blog/og/why-flutter-optimizes-for-the-ceiling-not-the-floor.png'
+ogImage: '/blog/og/why-flutter-optimizes-for-the-ceiling-not-the-floor.jpg'
 seoTitle: Why Flutter Optimizes for the Ceiling, Not the Floor
 seoDescription:
   ost cross-platform frameworks trade the ceiling for a faster floor. Flutter

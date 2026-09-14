@@ -10,7 +10,7 @@ intro:
   Announcing a new service from Shorebird, zero config CI for Flutter and Dart
   applications.
 readingTime: 2 min read
-ogImage: '/blog/og/introducing-shorebird-ci.png'
+ogImage: '/blog/og/introducing-shorebird-ci.jpg'
 seoTitle: Introducing Shorebird CI (Beta)
 seoDescription:
   Announcing a new service from Shorebird, zero config CI for Flutter and Dart

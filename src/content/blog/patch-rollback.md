@@ -6,7 +6,7 @@ date: 2024-08-09
 cover: patch-rollback.avif
 intro: Announcing support for rolling back patches.
 readingTime: 1 min read
-ogImage: '/blog/og/patch-rollback.png'
+ogImage: '/blog/og/patch-rollback.jpg'
 seoTitle: 'Patch Rollbacks: Undo Flutter Updates Instantly'
 seoDescription:
   Shorebird now supports rolling back patches instantly, giving you a safety net

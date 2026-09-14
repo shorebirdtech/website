@@ -6,7 +6,7 @@ date: 2026-03-04
 cover: predict-an-outage.png
 intro: How Shorebird can help you prepare in case of an outage.
 readingTime: 2 min read
-ogImage: '/blog/og/predict-an-outage.png'
+ogImage: '/blog/og/predict-an-outage.jpg'
 seoTitle: 'Mobile App Resilience: Surviving Cloud Outages with OTA'
 seoDescription:
   Cloud outages are unpredictable. See how Shorebird's OTA updates helped a

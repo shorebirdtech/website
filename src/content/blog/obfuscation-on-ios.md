@@ -8,7 +8,7 @@ date: 2026-02-27
 cover: obfuscation-on-ios.png
 intro: Protect your Flutter apps across all platforms with the --obfuscate flag.
 readingTime: 2 min read
-ogImage: '/blog/og/obfuscation-on-ios.png'
+ogImage: '/blog/og/obfuscation-on-ios.jpg'
 seoTitle: Protect your Flutter iOS apps with Shorebird Obfuscation
 seoDescription:
   Shorebird now supports code obfuscation for iOS. Protect your Flutter apps

@@ -29,7 +29,9 @@ docker compose up --build
   `cover`, plus the Webflow-era fields `intro`, `readingTime`, `ogImage`,
   `seoTitle`, `seoDescription`, `highlight`. Body images live in
   `src/assets/blog/<slug>/`, covers in `src/assets/blog/covers/`, share images
-  in `public/blog/og/`.
+  in `public/blog/og/` (JPEG on purpose: social crawlers don't reliably read
+  WebP/AVIF for `og:image`; everything shown on-site goes through Astro's image
+  pipeline, which emits WebP/AVIF itself).
 - `src/content/success-stories/*.md` — customer stories, with `industry`,
   `companySize`, `website` and `highlights` for the sidebar.
 - `src/data/{reviews,logos,team}.json` — the homepage testimonials, the "Trusted
@@ -37,15 +39,18 @@ docker compose up --build
   strings resolved with `import.meta.glob`.
 - `src/pages/{dpa,privacy,terms}` — legal pages as Markdown; `/privacy/raw` and
   `/terms/raw` expose the Markdown as JSON for the console.
-- `webflow-export/` — read-only snapshot of the Webflow site (CMS JSON, rendered
-  pages, CSS, assets, screenshots) taken when the site was ported back to Astro.
-  See its README; nothing in it ships.
 
 Scripts (Python 3, stdlib only):
 
-- `scripts/import_webflow.py` — one-time import of `webflow-export/cms/*.json`
-  into `src/content` and `src/data` (downloads images, converts HTML to
-  Markdown, keeps hand-written posts). Idempotent; safe to re-run.
+- `scripts/import_webflow.py` — one-time import of the Webflow CMS export into
+  `src/content` and `src/data` (downloads images, converts HTML to Markdown,
+  keeps hand-written posts). The snapshot it reads is kept outside the repo at
+  `../webflow-migration/webflow-export/` (override with `WEBFLOW_EXPORT=`).
+  Re-running regenerates every body that still carries the
+  `<!-- Converted from the Webflow CMS export ... -->` marker and rewrites
+  `src/data/*.json`, so hand edits made after the import are lost unless the
+  marker is removed first. Treat it as an archive of how the content got here,
+  not as a routine tool.
 - `scripts/check_links.py` — crawls `dist/**/*.html` and reports internal links,
   images, scripts and `og:image` URLs that do not resolve to a file.
   `npm run check:links` runs it against `dist/`.

@@ -6,7 +6,7 @@ date: 2024-08-16
 cover: dart-3-5-0.avif
 intro: Troubleshooting when upgrading to Dart 3.5.0.
 readingTime: 2 min read
-ogImage: '/blog/og/dart-3-5-0.png'
+ogImage: '/blog/og/dart-3-5-0.jpg'
 seoTitle: Surviving the upgrade to Dart 3.5.0
 seoDescription:
   Troubleshooting guide for common errors and fixes when upgrading Flutter apps

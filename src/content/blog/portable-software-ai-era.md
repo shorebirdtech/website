@@ -10,7 +10,7 @@ intro:
   AI is changing the economics of development. It's becoming cheaper to write
   code but more expensive to review and maintain.
 readingTime: 5 min read
-ogImage: '/blog/og/portable-software-ai-era.png'
+ogImage: '/blog/og/portable-software-ai-era.jpg'
 seoTitle: Why Portable Software Matters More in the AI Era
 seoDescription:
   Think AI will replace apps? Think again. Discover why falling build costs and

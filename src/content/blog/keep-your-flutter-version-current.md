@@ -10,7 +10,7 @@ intro:
   Learn why an N-1 upgrade strategy keeps your app secure, your dependencies
   healthy, and your team out of painful upgrade projects.
 readingTime: 5 min read
-ogImage: '/blog/og/keep-your-flutter-version-current.png'
+ogImage: '/blog/og/keep-your-flutter-version-current.jpg'
 seoTitle: 'Keep Your Flutter Version Current: The N-1 Strategy'
 seoDescription:
   Running an outdated Flutter version quietly compounds technical debt. Learn

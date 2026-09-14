@@ -7,7 +7,7 @@ date: 2024-09-05
 cover: improved-patch-delivery.png
 intro: Announcing improved global patch delivery, availability, and performance.
 readingTime: 2 min read
-ogImage: '/blog/og/improved-patch-delivery.png'
+ogImage: '/blog/og/improved-patch-delivery.jpg'
 seoTitle: 'Improved Patch Delivery: Faster, More Reliable OTA'
 seoDescription:
   Announcing improved global patch delivery, availability, and performance.

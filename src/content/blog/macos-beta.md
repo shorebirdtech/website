@@ -6,7 +6,7 @@ date: 2024-12-16
 cover: macos-beta.avif
 intro: Announcing the beta release of macOS desktop support.
 readingTime: 1 min read
-ogImage: '/blog/og/macos-beta.png'
+ogImage: '/blog/og/macos-beta.jpg'
 seoTitle: macOS Desktop Support Now in Beta for Shorebird
 seoDescription:
   Shorebird now supports updating Flutter apps built for macOS desktop, in beta

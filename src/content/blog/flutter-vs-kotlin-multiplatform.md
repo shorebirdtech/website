@@ -8,7 +8,7 @@ date: 2026-04-16
 cover: flutter-vs-kotlin-multiplatform.png
 intro: 'Flutter vs. Kotlin Multiplatform: 2026 Architecture Guide'
 readingTime: 5 min read
-ogImage: '/blog/og/flutter-vs-kotlin-multiplatform.png'
+ogImage: '/blog/og/flutter-vs-kotlin-multiplatform.jpg'
 seoTitle: 'Flutter vs. Kotlin Multiplatform: 2026 Architecture Guide'
 seoDescription:
   Compare Flutter and Kotlin Multiplatform in 2026. Explore rendering, native

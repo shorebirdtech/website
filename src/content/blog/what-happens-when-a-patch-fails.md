@@ -10,7 +10,7 @@ intro:
   A close look at how Shorebird patches fail, what your users experience when
   they do, and what you can do about it.
 readingTime: 6 min read
-ogImage: '/blog/og/what-happens-when-a-patch-fails.png'
+ogImage: '/blog/og/what-happens-when-a-patch-fails.jpg'
 seoTitle: What Happens When a Shorebird Patch Fails
 seoDescription:
   Learn why Shorebird patches fail to create or apply, what users actually see

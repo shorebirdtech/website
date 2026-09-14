@@ -8,7 +8,7 @@ date: 2026-08-24
 cover: wesley-intro-post.png
 intro: Say hello to Wesley, Shorebird's new Head of Product.
 readingTime: 2 min read
-ogImage: '/blog/og/wesley-intro-post.png'
+ogImage: '/blog/og/wesley-intro-post.jpg'
 seoTitle: Meet Wesley, Shorebird's New Head of Product
 seoDescription:
   Wesley joins Shorebird as Head of Product, bringing deep experience in

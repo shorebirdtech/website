@@ -10,7 +10,7 @@ intro:
   'Mission Control is a new home base for release and patch health: live rollout
   status, patch coverage, and fleet-wide adoption data in one view.'
 readingTime: 3 min read
-ogImage: '/blog/og/introducing-mission-control.png'
+ogImage: '/blog/og/introducing-mission-control.jpg'
 seoTitle: 'Introducing Mission Control: Ship and Patch with Confidence'
 seoDescription:
   "Mission Control gives you one view of your app's health: live rollout status,

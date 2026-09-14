@@ -10,7 +10,7 @@ intro:
   A deep dive into some of the recent backend infrastructure improvements we've
   made.
 readingTime: 4 min read
-ogImage: '/blog/og/cloud-infra-improvements.png'
+ogImage: '/blog/og/cloud-infra-improvements.jpg'
 seoTitle: Improved Cloud Infrastructure Behind Shorebird's Scale
 seoDescription:
   A deep dive into some of the recent backend infrastructure improvements we've

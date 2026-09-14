@@ -6,7 +6,7 @@ date: 2025-02-04
 cover: shorebird-codemagic.avif
 intro: Announcing Shorebird Integration in Codemagic.
 readingTime: 1 min read
-ogImage: '/blog/og/shorebird-codemagic.png'
+ogImage: '/blog/og/shorebird-codemagic.jpg'
 seoTitle: Shorebird & Codemagic Integration
 seoDescription:
   Shorebird's Code Push is now integrated directly into Codemagic's CI/CD,

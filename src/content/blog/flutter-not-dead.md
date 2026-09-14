@@ -6,7 +6,7 @@ date: 2026-01-15
 cover: flutter-not-dead.avif
 intro: Flutter is inevitable and growing, here’s why you should use it.
 readingTime: 6 min read
-ogImage: '/blog/og/flutter-not-dead.png'
+ogImage: '/blog/og/flutter-not-dead.jpg'
 seoTitle: "Why Flutter Isn't Dead: The Case for Longevity"
 seoDescription:
   Flutter's creator makes the case for why Flutter is inevitable and growing,

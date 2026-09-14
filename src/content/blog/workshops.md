@@ -6,7 +6,7 @@ date: 2025-01-06
 cover: workshops.avif
 intro: Announcing online workshops to help you get started with Shorebird.
 readingTime: 1 min read
-ogImage: '/blog/og/workshops.png'
+ogImage: '/blog/og/workshops.jpg'
 seoTitle: Online Shorebird Workshops
 seoDescription:
   Announcing online workshops to help you get started with Shorebird.

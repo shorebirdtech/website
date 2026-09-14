@@ -7,7 +7,7 @@ date: 2026-02-12
 cover: portability-is-the-new-productivity.png
 intro: A guide to smarter app development
 readingTime: 5 min read
-ogImage: '/blog/og/portability-is-the-new-productivity.png'
+ogImage: '/blog/og/portability-is-the-new-productivity.jpg'
 seoTitle: Portability is the new productivity
 seoDescription:
   Why portability, not raw speed, is the real driver of engineering

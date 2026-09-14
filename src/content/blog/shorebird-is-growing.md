@@ -10,7 +10,7 @@ intro:
   A quick look back to see how we got to today and how we are building for
   tomorrow.
 readingTime: 2 min read
-ogImage: '/blog/og/shorebird-is-growing.png'
+ogImage: '/blog/og/shorebird-is-growing.jpg'
 seoTitle: 'Expanding the Shorebird Team: Our Flutter Journey'
 seoDescription:
   A quick look back to see how we got to today and how we are building for

@@ -6,7 +6,7 @@ date: 2024-02-01
 cover: ios-beta.avif
 intro: Shorebird Code Push for iOS beta announcement.
 readingTime: 2 min read
-ogImage: '/blog/og/ios-beta.png'
+ogImage: '/blog/og/ios-beta.jpg'
 seoTitle: Shorebird Code Push Now in Beta for iOS
 seoDescription:
   Shorebird Code Push for Flutter is now in beta for iOS, letting you deploy

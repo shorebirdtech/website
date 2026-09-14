@@ -10,7 +10,7 @@ intro:
   New authentication service from Shorebird for flexible session management,
   scoped API keys, and audit logging.
 readingTime: 2 min read
-ogImage: '/blog/og/introducing-shorebirds-upgraded-auth-service.png'
+ogImage: '/blog/og/introducing-shorebirds-upgraded-auth-service.jpg'
 seoTitle: Inside Shorebird's upgraded auth service
 seoDescription:
   Take control of your app's security with Shorebird's new authentication

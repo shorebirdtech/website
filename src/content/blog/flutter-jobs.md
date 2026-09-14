@@ -6,7 +6,7 @@ date: 2024-10-10
 cover: flutter-jobs.avif
 intro: 'Advice on how to find or hire for a "Flutter job".'
 readingTime: 8 min read
-ogImage: '/blog/og/flutter-jobs.png'
+ogImage: '/blog/og/flutter-jobs.jpg'
 seoTitle: 'Getting a Flutter Job: Advice for Devs and Hiring Teams'
 seoDescription:
   Practical advice on finding or hiring for Flutter roles, from Flutter's

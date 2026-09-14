@@ -10,7 +10,7 @@ intro:
   'The gap between "we wrote the fix" and "our users have the fix" is real
   security exposure, learn how Shorebird fixes this.'
 readingTime: 5 min read
-ogImage: '/blog/og/code-push-makes-your-app-more-secure-not-less.png'
+ogImage: '/blog/og/code-push-makes-your-app-more-secure-not-less.jpg'
 seoTitle: How Code Push Makes Your Flutter App More Secure
 seoDescription:
   Shorebird patches ship in hours and can roll back instantly. See how OTA

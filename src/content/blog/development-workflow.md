@@ -6,7 +6,7 @@ date: 2024-09-25
 cover: development-workflow.avif
 intro: Announcing our opinionated development workflow guide.
 readingTime: 1 min read
-ogImage: '/blog/og/development-workflow.png'
+ogImage: '/blog/og/development-workflow.jpg'
 seoTitle: How to integrate Shorebird into your development workflow
 seoDescription:
   An opinionated development workflow guide covering branching, CI, automated

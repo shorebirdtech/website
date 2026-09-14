@@ -10,7 +10,7 @@ intro:
   How Shorebird improved patch linking for Flutter 3.44+, cutting worst-case iOS
   slowdowns while keeping full native speed.
 readingTime: 4 min read
-ogImage: '/blog/og/shorebirds-ongoing-performance-work.png'
+ogImage: '/blog/og/shorebirds-ongoing-performance-work.jpg'
 seoTitle: Shorebird's Ongoing Performance Work for Flutter 3.44+
 seoDescription:
   Shorebird cut worst-case iOS patch slowdowns in Flutter 3.44+ by improving

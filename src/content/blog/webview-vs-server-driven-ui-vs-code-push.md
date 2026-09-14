@@ -12,7 +12,7 @@ intro:
   WebView, server-driven UI, and Code Push all let you change your app without a
   new binary — but they solve different problems and fail in different ways.
 readingTime: 8 min read
-ogImage: '/blog/og/webview-vs-server-driven-ui-vs-code-push.png'
+ogImage: '/blog/og/webview-vs-server-driven-ui-vs-code-push.jpg'
 seoTitle: WebView vs Server-Driven UI vs Code Push
 seoDescription:
   Compare WebView, server-driven UI, and Code Push for updating Flutter apps

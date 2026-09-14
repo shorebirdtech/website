@@ -10,7 +10,7 @@ intro:
   Shorebird CI is evolving from a hosted service into an open-source Dart
   package that makes GitHub Actions fully Flutter and Dart aware.
 readingTime: 5 min read
-ogImage: '/blog/og/the-next-phase-of-shorebird-ci.png'
+ogImage: '/blog/og/the-next-phase-of-shorebird-ci.jpg'
 seoTitle: 'ShoThe Next Phase of Shorebird CI: Now Open Source'
 seoDescription:
   Shorebird CI is becoming an open-source Dart package that makes GitHub Actions

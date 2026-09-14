@@ -13,8 +13,9 @@ Rules for every agent:
   stays local until Eric decides otherwise.
 - Don't touch Webflow (read-only API use only; never publish/update/delete).
 - Run `npm run build`, `npm run format`, `npm run cspell` before each commit.
-- Reference material lives in `webflow-export/` (see Phase 0). Prefer it over
-  re-fetching. Live site is `https://shorebird.dev` if you need to look.
+- Reference material lives in `../webflow-migration/webflow-export/` (see Phase
+  0; it used to be in-repo). Prefer it over re-fetching. Live site is
+  `https://shorebird.dev` if you need to look.
 - Keep the existing component structure and file layout. Add, don't rewrite.
 
 ## Ground truth (what differs between repo and live)
@@ -43,7 +44,9 @@ font: General Sans (public/fonts/GeneralSans)
 
 ## Phase 0 — Export (DONE 2026-09-13; see `webflow-export/README.md`)
 
-Produce `webflow-export/` in the repo (commit it; it's the source of truth):
+Produce `webflow-export/`. It was committed to the repo during the port and
+later moved out to `../webflow-migration/webflow-export/` (history rewritten so
+it never landed) — 65MB of reference material has no business in a public repo:
 
 - `cms/blogs.json`, `cms/success-stories.json`, `cms/authors.json`,
   `cms/reviews.json`, `cms/logos.json`, `cms/teams.json` — raw

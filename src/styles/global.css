@@ -1,7 +1,7 @@
 /*
  * Shorebird design system.
  *
- * Tokens are ported from the Webflow site (webflow-export/css/shorebird.webflow.css).
+ * Tokens are ported from the Webflow site (shorebird.webflow.shared.*.css, kept in ../webflow-migration/webflow-export/css).
  * The page is DARK by default (`:root`). Individual sections opt into light with
  * `data-theme="light"` (alias: `.is--mode_1`), which re-assigns the surface/text
  * variables for everything inside. `data-theme="dark"` (alias: `.is--mode_0`)

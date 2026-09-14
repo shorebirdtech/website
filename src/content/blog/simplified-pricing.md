@@ -6,7 +6,7 @@ date: 2024-08-27
 cover: simplified-pricing.png
 intro: Announcing simplified pricing for Shorebird.
 readingTime: 1 min read
-ogImage: '/blog/og/simplified-pricing.png'
+ogImage: '/blog/og/simplified-pricing.jpg'
 seoTitle: Simplified Flexible Pricing for Shorebird Users
 seoDescription:
   Shorebird simplifies pricing into two plans, Free and Pro, replacing confusing

@@ -10,7 +10,7 @@ intro:
   'Shorebird CLI Is now agent-friendly: JSON Output, Read Commands &
   Non-Interactive Mode'
 readingTime: 3 min read
-ogImage: '/blog/og/making-the-shorebird-cli-agentic.png'
+ogImage: '/blog/og/making-the-shorebird-cli-agentic.jpg'
 seoTitle: The Shorebird CLI Is Now Built for AI Coding Agents
 seoDescription:
   The Shorebird CLI now supports JSON output, read commands, and non-interactive

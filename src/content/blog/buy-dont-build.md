@@ -10,7 +10,7 @@ intro:
   Learning from enterprise players that custom code deployment systems are
   valuable but a lot to maintain.
 readingTime: 3 min read
-ogImage: '/blog/og/buy-dont-build.png'
+ogImage: '/blog/og/buy-dont-build.jpg'
 seoTitle: The Smarter Way to Ship Flutter Updates
 seoDescription:
   Learning from enterprise players that custom code deployment systems are

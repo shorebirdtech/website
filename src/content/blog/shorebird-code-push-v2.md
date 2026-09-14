@@ -6,7 +6,7 @@ date: 2024-11-05
 cover: shorebird-code-push-v2.avif
 intro: 'Announcing the pre-release of pkg:shorebird_code_push v2.0.'
 readingTime: 4 min read
-ogImage: '/blog/og/shorebird-code-push-v2.png'
+ogImage: '/blog/og/shorebird-code-push-v2.jpg'
 seoTitle: What's New in v2.0 of the Shorebird Code Push Package
 seoDescription:
   Shorebird Code Push package v2.0 pre-release adds new ways to customize how

@@ -1,9 +1,10 @@
 # Webflow → Astro port report
 
-Branch `webflow-port` (35 commits over `main`, 2026-09-13/14). The Astro site in
-this repo now reproduces the live Webflow site (`webflow-export/` is the
-reference snapshot). `npm run build` emits 94 pages; `format:check`, `cspell`
-and `check:links` are green.
+Branch `webflow-port` (2026-09-13/14). The Astro site in this repo now
+reproduces the live Webflow site. The reference snapshot (CMS JSON, rendered
+pages, CSS, assets, screenshots) and the side-by-side comparison sheets live
+outside the repo in `../webflow-migration/`. `npm run build` emits 94 pages;
+`format:check`, `cspell` and `check:links` are green.
 
 ## How to run
 
@@ -33,10 +34,11 @@ npm run build && npm run check:links
 | `/rss.xml`, `/blog/rss.xml`, `/sitemap-index.xml` | `src/pages/*.ts`, `@astrojs/sitemap`                              | Done    | 69 RSS items, 94 sitemap URLs                                                                     |
 | `/design-system/styleguide`                       | —                                                                 | Dropped | Webflow-internal page                                                                             |
 
-Every URL in `webflow-export/live_urls.txt` resolves in `dist/` except the
-styleguide. Redirects (`astro.config.mjs`): 5 renamed blog slugs, `/legal/dpa`,
-`/terms/ci`, `/terms/code-push`, `/success-stories/pushpress/`, plus the
-pre-existing `/faq`, `/security`, `/talk-to-sales`, `/workshops`,
+Every URL in the live sitemap at export time
+(`webflow-migration/webflow-export/live_urls.txt`) resolves in `dist/` except
+the styleguide. Redirects (`astro.config.mjs`): 5 renamed blog slugs,
+`/legal/dpa`, `/terms/ci`, `/terms/code-push`, `/success-stories/pushpress/`,
+plus the pre-existing `/faq`, `/security`, `/talk-to-sales`, `/workshops`,
 `/privacy.html`, `/terms.html`, `/jobs/full-stack-software-engineer`.
 
 Head: `<title>`/description match the live pages; default share image is the
@@ -81,16 +83,18 @@ after-footer Loops block (home and guide only, as live).
    submitted end-to-end during the port.
 8. **Forms elsewhere** — Webflow form success/error blocks are reproduced in
    React; HubSpot chat widget (`js-na2.hs-scripts.com/246912764.js`) and the
-   Unify website tag (script and key in `webflow-export/pages/home.html`) were
-   intentionally not ported. Add to `src/layouts/main.astro` if wanted.
+   Unify website tag (script and key in
+   `webflow-migration/webflow-export/pages/home.html`) were intentionally not
+   ported. Add to `src/layouts/main.astro` if wanted.
 9. **`/terms` and `/privacy` on `astro preview`** — the pre-existing
    `/terms.html` → `/terms` redirect emits `dist/terms.html/index.html`, and
    Astro's preview server resolves `/terms` to that stub, producing a refresh
    loop. GitHub Pages resolves `/terms` to `dist/terms/index.html` (this config
    predates the Webflow move); use `/terms/` locally.
-10. **Repo size** — `public/blog/og` (42 MB of per-post share images from the
-    CMS), `src/assets` (66 MB) and `webflow-export/` (63 MB) roughly double the
-    repo. `webflow-export/` can be deleted once the port is accepted.
+10. **Repo size** — `src/assets` grew from 62 MB to 68 MB (new covers, product
+    and about imagery). Share images in `public/blog/og` are JPEG (6 MB, was 42
+    MB as PNG) and the 65 MB Webflow snapshot was moved out of the repo with the
+    branch history rewritten so neither ever landed in git.
 11. **Blog index on live** captures only ~7 tiles in the reference screenshots
     (lazy-loaded grid); the port renders all 69 posts statically — same content,
     longer page.
@@ -110,7 +114,8 @@ after-footer Loops block (home and guide only, as live).
    Loops newsletter forms should keep the Webflow-era `userGroup` values.
 5. Optionally submit the new sitemap in Search Console; the OG images and
    canonical URLs are unchanged in shape (`https://shorebird.dev/<path>/`).
-6. Delete `webflow-export/` when no longer needed as the reference.
+6. Archive `../webflow-migration/` somewhere durable (Drive) once the port is
+   accepted; nothing in the repo depends on it.
 
 ## Not resolved
 

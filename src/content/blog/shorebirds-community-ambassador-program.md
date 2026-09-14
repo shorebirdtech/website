@@ -7,7 +7,7 @@ date: 2026-06-09
 cover: shorebirds-community-ambassador-program.png
 intro: Applications now open for the Shorebird Community Ambassador program
 readingTime: 3 min read
-ogImage: '/blog/og/shorebirds-community-ambassador-program.png'
+ogImage: '/blog/og/shorebirds-community-ambassador-program.jpg'
 seoTitle: Introducing the Shorebird Community Ambassador Program
 seoDescription:
   Shorebird is launching a Community Ambassador program for Flutter developers

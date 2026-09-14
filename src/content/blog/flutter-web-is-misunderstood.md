@@ -10,7 +10,7 @@ intro:
   Discover the true purpose of Flutter Web, its history, and the best
   alternatives for Dart on the web.
 readingTime: 3 min read
-ogImage: '/blog/og/flutter-web-is-misunderstood.png'
+ogImage: '/blog/og/flutter-web-is-misunderstood.jpg'
 seoTitle: 'Flutter Web Explained: When to Use It (And When Not To)'
 seoDescription:
   Thinking about using Flutter Web? Read this first. Learn the pros, cons, and

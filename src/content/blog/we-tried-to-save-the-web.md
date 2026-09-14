@@ -10,7 +10,7 @@ intro:
   See why stripping down Chrome exposed the web's limits, and how owning the
   rendering stack gives you ultimate portability.
 readingTime: 5 min read
-ogImage: '/blog/og/we-tried-to-save-the-web.png'
+ogImage: '/blog/og/we-tried-to-save-the-web.jpg'
 seoTitle: 'Why Flutter exists: The problem with native app development'
 seoDescription:
   Ever wonder why Flutter exists? Discover how a failed experiment to fix Chrome

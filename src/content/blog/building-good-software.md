@@ -10,7 +10,7 @@ intro:
   You shouldn't have to adapt your workflow for a tool. See what makes a great
   developer tool.
 readingTime: 6 min read
-ogImage: '/blog/og/building-good-software.png'
+ogImage: '/blog/og/building-good-software.jpg'
 seoTitle: The difference between good and great developer tools
 seoDescription:
   You shouldn't have to adapt your workflow for a tool. See what makes a great

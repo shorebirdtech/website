@@ -10,7 +10,7 @@ intro:
   Shorebird's legacy CI tokens expire in September 2026, here's how to swap them
   for new API keys in five minutes.
 readingTime: 4 min read
-ogImage: '/blog/og/migrate-to-shorebird-api-keys.png'
+ogImage: '/blog/og/migrate-to-shorebird-api-keys.jpg'
 seoTitle: Upgrade to Shorebird API Keys Before September 2026
 seoDescription:
   'Legacy shorebird login:ci tokens stop working in September 2026. Learn how to

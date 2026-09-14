@@ -10,7 +10,7 @@ intro:
   Discover why your codebase is actually your organization's core memory and the
   true value of cross-platform development.
 readingTime: 5 min read
-ogImage: '/blog/og/ai-intent-cross-platform-app-development.png'
+ogImage: '/blog/og/ai-intent-cross-platform-app-development.jpg'
 seoTitle: Are Apps Dead? AI, Intent, and Cross-Platform Development
 seoDescription:
   Think AI means the end of apps? Discover why your codebase is your org's core
