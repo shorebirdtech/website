@@ -12,12 +12,73 @@ import Platform from '@/components/home/platform.astro';
 import Resources from '@/components/home/resources.astro';
 import Security from '@/components/home/security.astro';
 import Testimonials from '@/components/home/testimonials.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://shorebird.dev/#organization',
+      name: 'Shorebird',
+      url: 'https://shorebird.dev/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://shorebird.dev/shorebird-logo-wordmark.png',
+        width: 2568,
+        height: 560,
+      },
+      description:
+        'Shorebird builds developer tools for Flutter teams. Its flagship service, Code Push, delivers over-the-air Dart updates to released Flutter apps without waiting for app store review.',
+      foundingDate: '2023',
+      founder: {
+        '@type': 'Person',
+        name: 'Eric Seidel',
+        jobTitle: 'CEO and Founder',
+        description: 'Creator of Flutter.',
+      },
+      sameAs: [
+        'https://github.com/shorebirdtech',
+        'https://www.linkedin.com/company/shorebirddev/',
+        'https://discord.gg/shorebird',
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          url: 'https://shorebird.dev/pricing',
+        },
+        {
+          '@type': 'ContactPoint',
+          contactType: 'technical support',
+          url: 'https://discord.gg/shorebird',
+        },
+      ],
+      legalName: 'Code Town Inc',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://shorebird.dev/#website',
+      url: 'https://shorebird.dev/',
+      name: 'Shorebird',
+      publisher: { '@id': 'https://shorebird.dev/#organization' },
+      inLanguage: 'en-US',
+    },
+  ],
+};
 ---
 
 <MainLayout
   title="Build Flutter Apps with Confidence | Shorebird"
   description="Ship Flutter apps faster with Shorebird Code Push and CI. Deploy fixes instantly, reduce risk, and stay in control of releases."
 >
+  <Fragment slot="head">
+    {/* Organization / WebSite structured data, as on the live home page. */}
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  </Fragment>
   <Navbar client:load />
   <Hero />
   <Platform />
