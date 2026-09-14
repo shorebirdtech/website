@@ -1,11 +1,12 @@
-import * as code_push_terms from './code-push/index.md';
-import * as ci_terms from './ci/index.md';
+import * as code_push_terms from '@/legal/terms-code-push.md';
+import * as ci_terms from '@/legal/terms-ci.md';
 
 import type { APIRoute } from 'astro';
 
-// This is an API endpoint that returns a JSON object with the raw markdown content.
-// In the future, this can be consolidated with the `terms.md` page however it would
-// require enabling SSR and moving away from the static site generation model.
+// This is an API endpoint that returns a JSON object with the raw markdown content
+// of the per-product terms. The Markdown lives in `src/legal/` (not `src/pages/`)
+// because the live site no longer serves `/terms/ci` and `/terms/code-push` as
+// pages; `/terms` links the PDF versions instead.
 export const GET: APIRoute = async () => {
   return new Response(
     JSON.stringify({

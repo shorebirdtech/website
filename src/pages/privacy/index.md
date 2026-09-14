@@ -1,15 +1,15 @@
 ---
 layout: '@/layouts/markdown.astro'
 title: Privacy Policy
-description: Shorebird Privacy Policy
+seoTitle: Privacy Policy | Shorebird
+subtitle: Last update August 13, 2025.
+description:
+  Read Shorebird's Privacy Policy to learn how we collect, use, and protect your
+  information when using our Flutter development tools.
 last_updated: 08-13-2025
 ---
 
-# Privacy Policy
-
-_Last updated August 13, 2025._
-
-### General Information
+## General Information
 
 Code Town, Inc. (d/b/a "Shorebird") is committed to protecting the privacy and
 security of the information we collect and to being transparent about the ways
@@ -18,7 +18,7 @@ Policy") sets forth our policies and practices for handling the information we
 collect from or about you. It applies to the websites and services that we
 operate and that link to this Privacy Policy (the "Services").
 
-### Collection of Information
+## Collection of Information
 
 We collect the following categories of information when you use our Services:
 
@@ -49,7 +49,7 @@ the requested services, and any differences in services are related to your
 information. We may aggregate or de-identify the information described above.
 Aggregated or de-identified data is not subject to this Privacy Policy.
 
-### Disclosure of Information
+## Disclosure of Information
 
 We are committed to maintaining your trust, and we want you to understand when
 and with whom we may share the information we collect.
@@ -78,7 +78,7 @@ discloses such information with third parties for business purposes as described
 in this Privacy Policy. The information practices of these third parties are not
 covered by this Privacy Policy.
 
-### Cookies
+## Cookies
 
 We use a single session cookie to maintain your login session while you navigate
 our Services. This cookie is strictly necessary for the operation of the
@@ -92,7 +92,7 @@ By using the Services, you consent to our use of this essential cookie. If you
 do not agree to the use of this session cookie, you should not use the Services
 or log in to your account, as the service cannot function properly without it.
 
-### International Transfers
+## International Transfers
 
 We may transfer and store your information on servers located outside your
 resident jurisdiction. To the extent you are a resident of a country other than
@@ -103,7 +103,7 @@ We do not knowingly collect or sell any information from children, as defined by
 applicable law, without parental consent or as otherwise permitted by applicable
 law. The website is not directed at children.
 
-### Use of Information and Purpose of Data Processing
+## Use of Information and Purpose of Data Processing
 
 Information will be retained only for so long as reasonably necessary for the
 purposes set out above, in accordance with applicable laws. We maintain
@@ -119,7 +119,7 @@ by third parties may not have the same security protections as information you
 submit to us, and we are not responsible for protecting the security of such
 information. You can see a list of services we use below.
 
-### Data Retention, Security, and Integrity
+## Data Retention, Security, and Integrity
 
 Information will be retained only for so long as reasonably necessary for the
 purposes set out above, in accordance with applicable laws.
@@ -135,14 +135,14 @@ by third parties may not have the same security protections as information you
 submit to us, and we are not responsible for protecting the security of such
 information.
 
-### Changes to the Privacy Policy
+## Changes to the Privacy Policy
 
 Shorebird may periodically update this policy. When we update the Privacy
 Policy, we will revise the “Effective Date” date above and post the new Privacy
 Policy. We recommend that you review the Privacy Policy each time you visit the
 Services to stay informed of our privacy practices.
 
-### Questions
+## Questions
 
 Any questions about this Privacy Policy or our practices should be sent to us
 via email at privacy@shorebird.dev.

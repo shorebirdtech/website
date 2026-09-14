@@ -1,65 +1,43 @@
 ---
-import '@/styles/global.css';
+/**
+ * Layout for the Markdown pages (`/privacy`, `/terms`, `/dpa`, `/contact`):
+ * the live legal pages are a centered `title-xl` hero (optional subtitle),
+ * then the rich text in the middle 8 of 12 columns, then the CTA band.
+ *
+ * Frontmatter: `title` (hero + <title>), `seoTitle?` (overrides <title>),
+ * `subtitle?` (e.g. "Last update …"), `description`.
+ */
+import '@/styles/rich-text.css';
 import { Navbar } from '@/components/ui/navbar';
+import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
+import MainLayout from '@/layouts/main.astro';
+import Section from '@/components/ui/section.astro';
 
 const { frontmatter } = Astro.props;
-const { title, description } = frontmatter;
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
-const coverUrl = new URL('/open-graph.png', Astro.url.origin);
+const { title, seoTitle, subtitle, description } = frontmatter;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <title>{title}</title>
-    <meta name="description" content={description} />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta name="description" property="og:description" content={description} />
-    <meta property="og:image" content={coverUrl} />
-    <meta name="image" property="og:image" content={coverUrl} />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="shorebird.dev" />
-    <meta property="twitter:url" content={canonicalUrl} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={coverUrl} />
-    <meta name="twitter:site" content="@shorebirddev" />
-
-    <!-- Analytics -->
-    <script
-      defer
-      data-domain="shorebird.dev"
-      src="https://plausible.io/js/script.js"></script>
-  </head>
-  <body>
-    <Navbar client:load />
-    <article
-      class="prose prose-invert mx-auto w-11/12 py-6 xl:w-10/12 2xl:w-[1280px]"
-    >
-      <slot />
-    </article>
-    <Footer />
-    <style is:global>
-      .prose {
-        max-width: 80ch;
-      }
-    </style>
-  </body>
-</html>
+<MainLayout title={seoTitle ?? title} description={description}>
+  <Navbar client:load initialTheme="dark" />
+  <Section as="header" theme="dark">
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="pb-section-s"></div>
+    <div class="flex flex-col items-center text-center">
+      <h1 class:list={['title-xl', subtitle && 'pb-text-m']}>{title}</h1>
+      {subtitle && <p class="body-m">{subtitle}</p>}
+    </div>
+    <div class="pb-section-xs"></div>
+    <div class="pb-section-s"></div>
+  </Section>
+  <Section theme="dark">
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-2 lg:block"></div>
+      <article class="prose rich-text col-span-12 lg:col-span-8">
+        <slot />
+      </article>
+    </div>
+  </Section>
+  <CtaBand />
+  <Footer />
+</MainLayout>

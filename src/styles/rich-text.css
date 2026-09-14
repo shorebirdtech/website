@@ -124,6 +124,9 @@
 .prose.rich-text ul {
   list-style: disc;
 }
+.prose.rich-text ul ul {
+  list-style: circle;
+}
 .prose.rich-text ol {
   list-style: decimal;
 }

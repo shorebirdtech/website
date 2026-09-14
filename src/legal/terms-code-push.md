@@ -1,5 +1,4 @@
 ---
-layout: '@/layouts/markdown.astro'
 title: Terms of Service - Shorebird Code Push
 description: Terms of Service for Shorebird Code Push
 last_updated: 08-15-2025

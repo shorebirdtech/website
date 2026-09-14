@@ -23,6 +23,11 @@ export default defineConfig({
     '/terms.html': '/terms',
     '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/jobs/full-stack-software-engineer': '/jobs',
+    // Legal pages moved when the site moved to Webflow: the DPA lives at
+    // `/dpa` and the per-product terms are PDFs linked from `/terms`.
+    '/legal/dpa': '/dpa',
+    '/terms/ci': '/terms',
+    '/terms/code-push': '/terms',
     // Blog slugs were renamed when the site moved to Webflow; Webflow's slugs
     // are canonical now.
     '/blog/1.0': '/blog/1',

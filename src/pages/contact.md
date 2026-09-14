@@ -4,8 +4,6 @@ title: Contact us
 description: Contact Shorebird
 ---
 
-# Contact
-
 ## 🛟 Support
 
 Filing an issue on
