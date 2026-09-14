@@ -1,31 +1,50 @@
 ---
+/**
+ * Newsletter signup (linked from `config.newsletterSubscriptionUrl`). Not a
+ * page on the live Webflow site; styled like the legal pages, with the blog
+ * sidebar's newsletter form in a card.
+ */
 import config from '@/config';
-import MainLayout from '@/layouts/main.astro';
-import { Card } from '@/components/ui/card';
 import { Navbar } from '@/components/ui/navbar';
+import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
+import MainLayout from '@/layouts/main.astro';
 import NewsletterSignupForm from '@/components/newsletter/newsletter-form';
+import Section from '@/components/ui/section.astro';
 ---
 
-<MainLayout title={config.app}>
-  <Navbar client:load />
-  <div
-    class="mx-auto flex w-11/12 items-center justify-center py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
-  >
-    <Card
-      className="flex w-full flex-col items-center justify-center p-6 lg:p-16"
-    >
-      <h2 class="text-text-1 text-center text-4xl">Newsletter Signup</h2>
-      <p class="text-text-2 text-center">
-        We're on a mission to make businesses successful with Flutter, and we're
-        thrilled to have you on board. <br /> By signing up, you'll be the first
-        to know about new tools, updates, and insights to help you build and iterate
-        faster.
-      </p>
-      <div class="flex w-full max-w-lg">
-        <NewsletterSignupForm client:load />
+<MainLayout
+  title={`Newsletter Signup | ${config.app}`}
+  description="Stay up to date on Shorebird product releases and events."
+>
+  <Navbar client:load initialTheme="dark" />
+  <Section as="header" theme="dark">
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="pb-section-s"></div>
+    <div class="flex flex-col items-center text-center">
+      <h1 class="title-xl pb-text-m">Subscribe to our newsletter</h1>
+      <p class="body-m">Stay up to date on product releases and Shorebird events</p>
+    </div>
+    <div class="pb-section-xs"></div>
+    <div class="pb-section-s"></div>
+  </Section>
+  <Section theme="dark">
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-3 lg:block"></div>
+      <div class="col-span-12 lg:col-span-6">
+        <div class="bg-surface-2 border-border rounded-3xl border p-6 md:p-16">
+          <p class="body-m pb-section-xs text-center">
+            We're on a mission to make businesses successful with Flutter, and
+            we're thrilled to have you on board. By signing up, you'll be the
+            first to know about new tools, updates, and insights to help you
+            build and iterate faster.
+          </p>
+          <NewsletterSignupForm client:load layout="stacked" />
+        </div>
       </div>
-    </Card>
-  </div>
+    </div>
+    <div class="pb-section-m"></div>
+  </Section>
+  <CtaBand />
   <Footer />
 </MainLayout>
