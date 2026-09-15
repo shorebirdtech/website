@@ -78,4 +78,4 @@ dependencies:
 
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
 or improved, please
-[let us know by filing an issue](https://github.com/shorebirdtech/updater/issues/new).
+[let us know by filing an issue](https://github.com/shorebirdtech/shorebird/issues/new/choose).

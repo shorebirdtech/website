@@ -3,7 +3,8 @@
  * Blog post layout (Webflow blog template). Light page: title + author /
  * date / reading-time meta, the article rich text in an 8-column main
  * column and a sticky 4-column aside ("In this article" intro, share
- * buttons, newsletter card), then the CTA band and footer.
+ * buttons), then the CTA band and footer. The newsletter card that used to
+ * close the aside was dropped from the live site in September 2026.
  *
  * Author metadata (name, title, headshot, handles) lives in the `authors`
  * record below; `author` in a post's frontmatter is a key into it.
@@ -15,7 +16,6 @@ import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
 import FormattedDate from '@/components/blog/formatted-date.astro';
 import MainLayout from '@/layouts/main.astro';
-import NewsletterCard from '@/components/blog/newsletter-card.astro';
 import Section from '@/components/ui/section.astro';
 import bryanHeadshot from '@/assets/blog/headshots/bryan-headshot.png';
 import ericHeadshot from '@/assets/blog/headshots/eric-headshot.jpeg';
@@ -293,7 +293,6 @@ if (!postAuthor) throw new Error(`Unknown blog author "${author}"`);
             </button>
           </div>
           <div class="pb-section-s"></div>
-          <NewsletterCard />
         </div>
       </aside>
     </div>

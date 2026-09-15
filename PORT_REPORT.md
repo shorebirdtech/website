@@ -16,24 +16,24 @@ npm run build && npm run check:links
 
 ## What was ported
 
-| Route                                             | Source                                                            | Status  | Notes                                                                                              |
-| ------------------------------------------------- | ----------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------- |
-| `/`                                               | `src/pages/index.astro`, `src/components/home/*`                  | Done    | Hero Lottie, logo marquee, benefits, enterprise, security, testimonials, FAQ, JSON-LD, newsletter  |
-| `/product/code-push`                              | `src/pages/product/code-push.astro`, `src/components/product/*`   | Done    | Arcade demo embed, Lottie motion                                                                   |
-| `/product/shorebird-ci`                           | `src/pages/product/shorebird-ci.astro`                            | Done    | Sunset notice page, as live                                                                        |
-| `/code-push-guide`                                | `src/pages/code-push-guide.astro`, `product/guide-form.tsx`       | Done    | Form posts to the same Loops endpoint as live, PDF in `public/guides/`                             |
-| `/pricing`                                        | `src/pages/pricing.astro`, `src/components/pricing/*`             | Done    | Monthly/yearly toggle, comparison table, FAQ                                                       |
-| `/about`                                          | `src/pages/about.astro`, `src/data/team.json`                     | Done    | Team from CMS `teams`                                                                              |
-| `/jobs`                                           | `src/pages/jobs.astro`                                            | Done    | Gem job board iframe (blank on `http://localhost`, see diffs)                                      |
-| `/blog`                                           | `src/pages/blog/index.astro`                                      | Done    | Highlight + latest + all 69 posts                                                                  |
-| `/blog/<slug>` (69)                               | `src/content/blog/*.md`, `src/layouts/blog.astro`                 | Done    | 30 posts imported from CMS, 39 kept from repo (5 renamed to Webflow slugs), sidebar newsletter     |
-| `/success-stories`                                | `src/pages/success-stories/index.astro`                           | Done    |                                                                                                    |
-| `/success-stories/<slug>` (10)                    | `src/content/success-stories/*.md`, `layouts/success-story.astro` | Done    | `scapia`, `vetc` added; industry / company size / website sidebar                                  |
-| `/dpa`, `/privacy`, `/terms`                      | `src/pages/{dpa.md,privacy/,terms/}`, `layouts/markdown.astro`    | Done    | `/legal/dpa`, `/terms/ci`, `/terms/code-push` redirect here; PDFs in `public/legal/`               |
-| `/contact`, `/newsletter-signup`, `/demo`         | `src/pages/*`                                                     | Kept    | Not on Webflow; restyled with the shared layout (demo is a meta-refresh to Calendly)               |
-| `404`                                             | `src/pages/404.astro`                                             | Done    | Copy/bird/layout from the Webflow utility page; mobile stacks instead of copying the live overflow |
-| `/rss.xml`, `/blog/rss.xml`, `/sitemap-index.xml` | `src/pages/*.ts`, `@astrojs/sitemap`                              | Done    | 69 RSS items, 94 sitemap URLs                                                                      |
-| `/design-system/styleguide`                       | —                                                                 | Dropped | Webflow-internal page                                                                              |
+| Route                                             | Source                                                            | Status  | Notes                                                                                                                               |
+| ------------------------------------------------- | ----------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `/`                                               | `src/pages/index.astro`, `src/components/home/*`                  | Done    | Hero Lottie, logo marquee, benefits, enterprise, security, testimonials, FAQ, JSON-LD                                               |
+| `/product/code-push`                              | `src/pages/product/code-push.astro`, `src/components/product/*`   | Done    | Arcade demo embed, Lottie motion                                                                                                    |
+| `/product/shorebird-ci`                           | `src/pages/product/shorebird-ci.astro`                            | Done    | Sunset notice page, as live                                                                                                         |
+| `/code-push-guide`                                | `src/pages/code-push-guide.astro`, `product/guide-form.tsx`       | Done    | Form posts to the same Loops endpoint as live, PDF in `public/guides/`                                                              |
+| `/pricing`                                        | `src/pages/pricing.astro`, `src/components/pricing/*`             | Done    | Monthly/yearly toggle, comparison table, FAQ                                                                                        |
+| `/about`                                          | `src/pages/about.astro`, `src/data/team.json`                     | Done    | Team from CMS `teams`                                                                                                               |
+| `/jobs`                                           | `src/pages/jobs.astro`                                            | Done    | Gem job board iframe (blank on `http://localhost`, see diffs)                                                                       |
+| `/blog`                                           | `src/pages/blog/index.astro`                                      | Done    | Highlight + latest + all 69 posts                                                                                                   |
+| `/blog/<slug>` (69)                               | `src/content/blog/*.md`, `src/layouts/blog.astro`                 | Done    | 30 posts imported from CMS, 39 kept from repo (5 renamed to Webflow slugs), sidebar newsletter                                      |
+| `/success-stories`                                | `src/pages/success-stories/index.astro`                           | Done    |                                                                                                                                     |
+| `/success-stories/<slug>` (10)                    | `src/content/success-stories/*.md`, `layouts/success-story.astro` | Done    | `scapia`, `vetc` added; industry / company size / website sidebar                                                                   |
+| `/dpa`, `/privacy`, `/terms`                      | `src/pages/{dpa.md,privacy/,terms/}`, `layouts/markdown.astro`    | Done    | `/legal/dpa`, `/terms/ci`, `/terms/code-push` redirect here; PDFs in `public/legal/`                                                |
+| `/contact`, `/newsletter-signup`, `/demo`         | —                                                                 | Removed | Pre-Webflow pages nothing linked to; `/demo` pointed at a personal Calendly. Removed 2026-09-15 so the port does not resurrect them |
+| `404`                                             | `src/pages/404.astro`                                             | Done    | Copy/bird/layout from the Webflow utility page; mobile stacks instead of copying the live overflow                                  |
+| `/rss.xml`, `/blog/rss.xml`, `/sitemap-index.xml` | `src/pages/*.ts`, `@astrojs/sitemap`                              | Done    | 69 RSS items, 94 sitemap URLs                                                                                                       |
+| `/design-system/styleguide`                       | —                                                                 | Dropped | Webflow-internal page                                                                                                               |
 
 Every URL in the live sitemap at export time
 (`webflow-migration/webflow-export/live_urls.txt`) resolves in `dist/` except
@@ -55,8 +55,9 @@ full-bleed band, which redefines the surface/text/border tokens inside it
 bottom edge on scroll and swaps its own `data-theme` to match, like the Webflow
 `is--mode_0/1` toggling. No `prefers-color-scheme`. Pages whose first section is
 light pass `initialTheme="light"` to `<Navbar />` to avoid a flash.
-`<CtaBand />` + `<Footer />` are per-page; `<Footer newsletter />` adds the
-after-footer Loops block (home and guide only, as live).
+`<CtaBand />` + `<Footer />` are per-page. The after-footer newsletter block and
+the blog-sidebar newsletter card were removed from the live site in September
+2026 and are not in the port.
 
 ## Remaining differences vs Webflow (ranked)
 
@@ -113,4 +114,4 @@ real deploy, DNS inventory before moving the apex.
 ## Not resolved
 
 - No fallback for the Gem iframe when framing is blocked.
-- No end-to-end test of the Loops submissions (guide form, newsletter blocks).
+- No end-to-end test of the Loops submission (Code Push guide form).

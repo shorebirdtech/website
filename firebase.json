@@ -39,11 +39,6 @@
       },
       { "source": "/terms.html{,/}", "destination": "/terms", "type": 301 },
       {
-        "source": "/workshops{,/}",
-        "destination": "https://calendly.com/felix-shorebird/shorebird-workshop",
-        "type": 301
-      },
-      {
         "source": "/jobs/full-stack-software-engineer{,/}",
         "destination": "/jobs",
         "type": 301

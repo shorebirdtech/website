@@ -38,12 +38,14 @@ is done until its box is checked.
     scripts. Per-page custom code: not readable via API without page ids, but
     the rendered HTML in `../webflow-migration/webflow-export/pages/` contains
     whatever was there; re-fetch any page edited after 2026-09-13.
-  - Forms (verified via API): 15 form instances, all one of two shapes
-    (newsletter: `email` + `country` honeypot; guide: `firstName`, `lastName`,
-    `Email`, `country`), every one POSTing to
-    `https://app.loops.so/api/newsletter-form/clkle380400tojo0nmapdkds7` — the
-    same URL our forms use. No Webflow email notifications, no form webhooks, so
-    nothing to recreate; just confirm nobody added one later.
+  - Forms (verified via API 2026-09-14): 15 form instances, all one of two
+    shapes (newsletter: `email` + `country` honeypot; guide: `firstName`,
+    `lastName`, `Email`, `country`), every one POSTing to
+    `https://app.loops.so/api/newsletter-form/clkle380400tojo0nmapdkds7`. The
+    newsletter forms were removed from the live site on 2026-09-15 and are not
+    in the port; only the guide form remains, posting to the same URL. No
+    Webflow email notifications, no form webhooks, so nothing to recreate; just
+    confirm nobody added one later.
   - Webhooks (verified via API): none registered.
   - `robots.txt`: live is just `Sitemap: https://shorebird.dev/sitemap.xml`.
     Added `public/robots.txt` pointing at Astro's `sitemap-index.xml`. Check the
@@ -64,10 +66,10 @@ is done until its box is checked.
       export; it only regenerates bodies that still carry the "Converted from
       the Webflow CMS export" marker, so hand-edited posts are safe). Freeze
       Webflow edits the day of cutover.
-- [ ] **Test every form for real** on a preview deploy, with a test address:
-      footer newsletter (`/`, `/code-push-guide`), blog sidebar newsletter, Code
-      Push guide download. All post to the same Loops endpoint Webflow used;
-      confirm the contact shows up in Loops with the right `source`/`userGroup`.
+- [ ] **Test the Code Push guide form for real** on a preview deploy, with a
+      test address (the only form left after the newsletter was removed from the
+      live site). It posts to the same Loops endpoint Webflow used; confirm the
+      contact shows up in Loops with the right `source`/`userGroup`.
 - [ ] **Decide on HubSpot chat and the Unify website tag.** Both were on every
       Webflow page and were deliberately not ported. Plausible and the LinkedIn
       insight tag are ported. Script and keys are in

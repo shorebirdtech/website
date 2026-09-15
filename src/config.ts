@@ -6,7 +6,6 @@ export default {
   githubUrl: 'https://github.com/shorebirdtech/shorebird',
   twitterUrl: 'https://twitter.com/shorebirddev',
   linkedInUrl: 'https://www.linkedin.com/company/shorebirddev',
-  newsletterSubscriptionUrl: 'https://shorebird.dev/newsletter-signup',
   consoleUrl: 'https://console.shorebird.dev',
   docsUrl: 'https://docs.shorebird.dev',
   faqUrl: 'https://docs.shorebird.dev/code-push/faq/',

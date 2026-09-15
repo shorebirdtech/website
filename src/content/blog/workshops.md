@@ -15,7 +15,8 @@ seoDescription:
 We're excited to announce the team at Shorebird will be hosting free 1 hour long
 online workshops for getting started with Shorebird.
 
-You can register now at https://shorebird.dev/workshops
+_Update: we no longer run these workshops. The
+[docs](https://docs.shorebird.dev) are the best place to get started._
 
 Our first workshops of the year will be on:
 

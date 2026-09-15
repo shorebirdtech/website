@@ -22,7 +22,6 @@ export default defineConfig({
     '/success-stories/pushpress/': '/success-stories/push-press',
     '/talk-to-sales': config.contactSales,
     '/terms.html': '/terms',
-    '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/jobs/full-stack-software-engineer': '/jobs',
     // Legal pages moved when the site moved to Webflow: the DPA lives at
     // `/dpa` and the per-product terms are PDFs linked from `/terms`.

@@ -381,7 +381,7 @@ next steps based on your situation:
 - Review the [FAQ](https://docs.shorebird.dev/code-push/faq/) for common
   questions about transitioning to Flutter + Shorebird
 
-[Contact Shorebird](https://shorebird.dev/contact/) to discuss enterprise OTA
-requirements. We’ll walk through security compliance needs, integration with
-existing CI/CD pipelines, and actual cost models at your scale. The deployment
-story changed. Make sure your framework evaluation reflects reality.
+[Contact Shorebird](/talk-to-sales) to discuss enterprise OTA requirements.
+We’ll walk through security compliance needs, integration with existing CI/CD
+pipelines, and actual cost models at your scale. The deployment story changed.
+Make sure your framework evaluation reflects reality.

@@ -3,8 +3,8 @@
  * Success story layout (Webflow success-stories template). Dark page: the
  * publish date, customer name and one-line summary, the cover, then the
  * story rich text in an 8-column main column; a sticky 4-column aside with
- * the "In this story" summary, the industry / company size / website facts
- * and the newsletter card; then the CTA band and footer.
+ * the "In this story" summary and the industry / company size / website
+ * facts; then the CTA band and footer.
  *
  * The live template has no "highlights" block, so the frontmatter
  * `highlights` field is kept in the schema but not rendered here.
@@ -16,7 +16,6 @@ import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
 import FormattedDate from '@/components/blog/formatted-date.astro';
 import MainLayout from '@/layouts/main.astro';
-import NewsletterCard from '@/components/blog/newsletter-card.astro';
 import Section from '@/components/ui/section.astro';
 import { coverFor, type SuccessStory } from '@/lib/success-stories';
 
@@ -116,7 +115,6 @@ const facts = [
             }
           </dl>
           <div class="pb-section-xs"></div>
-          <NewsletterCard />
         </div>
       </aside>
     </div>

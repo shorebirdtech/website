@@ -6,21 +6,12 @@
  * four link columns share the remaining 9/12. On mobile everything stacks and
  * centers. The "Start shipping fast, today!" band above it is a separate page
  * section: include `<CtaBand />` before `<Footer />` where the page needs it.
- *
- * The live home page and Code Push guide render a full-bleed "Subscribe to
- * our newsletter" block (Webflow `.c_newsletter`, a Loops form) directly below
- * the footer; pass `newsletter` to reproduce it.
  */
-export interface Props {
-  newsletter?: boolean;
-}
-const { newsletter = false } = Astro.props;
 import { DiscordLogo } from '@/components/logos/discord-logo';
 import { GitHubLogo } from '@/components/logos/github-logo';
 import { LinkedInLogo } from '@/components/logos/linkedin-logo';
 import { LogoFull } from '@/components/logos/logo-full';
 import config from '@/config';
-import NewsletterSignupForm from '@/components/newsletter/newsletter-form';
 import { RssIcon } from '@phosphor-icons/react';
 
 const columns = [
@@ -79,10 +70,7 @@ const social = [
 <footer
   data-theme="dark"
   data-section
-  class:list={[
-    'bg-surface-1 border-border border-t pt-3',
-    !newsletter && 'pb-section-s',
-  ]}
+  class="bg-surface-1 border-border pb-section-s border-t pt-3"
 >
   <div class="page-container">
     <div class="gap-x-column-gap gap-y-row-gap grid grid-cols-12">
@@ -153,20 +141,4 @@ const social = [
       </p>
     </div>
   </div>
-  {
-    newsletter && (
-      <div class="pt-section-s">
-        <div class="bg-surface-2 rounded-2xl p-6">
-          <div class="flex flex-col items-stretch text-center">
-            <p class="title-m pb-text-s">Subscribe to our newsletter</p>
-            <p class="body-xs pb-section-xs">
-              Stay up to date on product releases <br />
-              and Shorebird events
-            </p>
-            <NewsletterSignupForm client:visible layout="stacked" />
-          </div>
-        </div>
-      </div>
-    )
-  }
 </footer>
