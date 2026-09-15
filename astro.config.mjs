@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import config from './src/config';
+import firebase from './src/integrations/firebase';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap(), mdx()],
+  integrations: [react(), sitemap(), mdx(), firebase()],
   redirects: {
     '/faq': 'https://docs.shorebird.dev/faq',
     '/privacy.html': '/privacy',

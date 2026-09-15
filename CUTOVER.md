@@ -1,9 +1,15 @@
 # Cutover checklist: Webflow → Astro
 
 Burn-down for taking `shorebird.dev` off Webflow and serving it from this repo.
-Hosting target is Cloudflare (Pages or Workers static assets — undecided);
-GitHub Pages is what the old CI workflow targets and is not the plan. Nothing
-here is done until its box is checked.
+Hosting is Firebase Hosting in its own GCP project, `shorebird-website`
+(`firebase.json`, `.firebaserc`), so the site's IAM is separate from every
+production project. Cloudflare was considered and rejected: serving the apex
+from Cloudflare requires moving the whole `shorebird.dev` DNS zone into one
+Cloudflare account, and Cloudflare's one real advantage (free egress) is
+irrelevant at this site's traffic. Firebase takes the apex via plain A records
+in Cloud DNS, so nothing else on `shorebird.dev` moves. CI deploys `main` and
+creates a preview channel per PR (`.github/workflows/main.yaml`). Nothing here
+is done until its box is checked.
 
 ## 1. Before we touch DNS
 
@@ -13,11 +19,11 @@ here is done until its box is checked.
   - Data API v2:
     `curl -H "Authorization: Bearer $WEBFLOW_TOKEN" https://api.webflow.com/v2/sites/694e589e299270321119525e/redirects`
     (needs a site token with `sites:read`).
-  - Add every rule to `astro.config.mjs` `redirects` **and** to a
-    `public/_redirects` file (Cloudflare reads it and returns real 301s; Astro's
-    static redirects are meta-refresh stubs, which search engines treat as
-    weaker). Consider generating `_redirects` from the config so there is one
-    source of truth.
+  - Add every rule to `redirects` in `astro.config.mjs` only. The build copies
+    them into `firebase.json` (`src/integrations/firebase.ts`), where Firebase
+    Hosting returns real 301s; Astro's own meta-refresh stubs are never reached
+    on the deployed site. Commit the regenerated `firebase.json` (CI fails if it
+    drifts).
   - Then re-check the list once more on cutover day — anyone can add a rule in
     Webflow between now and then.
 - [ ] **Everything else Webflow keeps in Site Settings rather than content.**
@@ -68,8 +74,8 @@ here is done until its box is checked.
       `../webflow-migration/webflow-export/pages/home.html` if we want them.
 - [ ] **Trailing slashes: decided, keep Astro's default** (`/blog/foo/`,
       canonical + `og:url` + sitemap already agree). Webflow served `/blog/foo`;
-      Cloudflare redirects the slash-less form to the slash form automatically,
-      so inbound links keep working. Verify one on the preview.
+      `"trailingSlash": true` in `firebase.json` 301s the slash-less form to the
+      slash form, so inbound links keep working. Verify one on the preview.
 - [ ] **Sitemap & robots.** `dist/sitemap-index.xml` is generated; confirm the
       deployed host serves it and that no `robots.txt`/`noindex` from the
       preview environment leaks to production.
@@ -77,25 +83,56 @@ here is done until its box is checked.
       JSON; confirm the console reads them from the new host (the `content`
       field of `/privacy/raw` no longer starts with the H1 — check nothing
       parses that).
-- [ ] **DNS inventory for the apex move.** If the apex is moving to Cloudflare
-      at the same time, list every record on `shorebird.dev` first (MX,
-      SPF/DKIM/DMARC TXT, `docs`, `console`, `api`, `handbook`, download CDN,
-      any verification TXTs) and recreate them before switching nameservers.
-      Email is the one that hurts if missed.
+- [ ] **DNS stays on Google Cloud DNS.** Firebase Hosting takes the apex with A
+      records (and `www` with a CNAME or A records — the console tells you
+      which) plus a one-time TXT for ownership verification, all added in the
+      existing zone. `api`, `console`, `admin`, `download`, `artifacts`,
+      `handbook`, `docs`, MX/SPF/DKIM/DMARC and the verification TXTs are not
+      touched. Note the zone is **not** in the `shorebird-gws` project (Cloud
+      DNS API is disabled there); find which project owns it before cutover day
+      so whoever flips the records has access.
+  - Firebase provisions the certificate after the A records point at it; that
+    can take up to a few hours on first setup. The verification TXT can be added
+    early, and the `www` → apex redirect is a setting in the same custom-domain
+    flow, so `www` needs no separate redirect machinery.
 
 ## 2. Repo & CI
 
 - [ ] Un-archive `shorebirdtech/website`; remove the archival notice (done in
       `README.md` on this branch).
-- [ ] Open the PR from `webflow-port` (38+ commits; squash or not, your call).
-      `npm run build`, `format:check`, `cspell`, `check:links` are green.
-- [ ] Replace the GitHub Pages deploy job in `.github/workflows/main.yaml` with
-      the Cloudflare deploy (Pages: `wrangler pages deploy dist`; Workers static
-      assets: `wrangler deploy` with an `assets` binding). Keep the
-      build/format/cspell/check-links job as the PR gate.
-- [ ] Delete `public/CNAME` (GitHub Pages only). Add `public/_redirects`.
-- [ ] Add a custom-404 check: Cloudflare Pages serves `dist/404.html`
-      automatically; Workers needs `not_found_handling = "404-page"`.
+- [ ] **Create the GCP project `shorebird-website`** (billing account: same as
+      the other Shorebird projects; Blaze is required for custom domains'
+      bandwidth beyond the free tier — expect low single-digit dollars a month
+      at current traffic). Enable Firebase on it
+      (`firebase projects:addfirebase     shorebird-website`) and create the
+      Hosting site `shorebird-website`
+      (`firebase hosting:sites:create shorebird-website --project     shorebird-website`).
+      If the project id is taken, change it in `.firebaserc`, `firebase.json`
+      (`site`) and the workflow `env`.
+- [ ] **Deploy identity via WIF, no keys.** Create
+      `website-deployer@shorebird-website.iam.gserviceaccount.com` with
+      `roles/firebasehosting.admin` on the project, and bind it to this
+      repository through the org's existing pool in `code-push-dev`
+      (`projects/30552215580/locations/global/workloadIdentityPools/github-actions`):
+      `gcloud iam service-accounts add-iam-policy-binding website-deployer@shorebird-website.iam.gserviceaccount.com --project shorebird-website --role roles/iam.workloadIdentityUser --member "principalSet://iam.googleapis.com/projects/30552215580/locations/global/workloadIdentityPools/github-actions/attribute.repository/shorebirdtech/website"`.
+      Check the pool's attribute condition allows this repo (it may be scoped to
+      an allow-list).
+- [ ] Open the PR from `webflow-port` (40+ commits; squash or not, your call).
+      `npm run build`, `format:check`, `cspell`, `check:links` are green. The PR
+      itself will exercise the `preview` job and comment its URL.
+- [x] Replace the GitHub Pages deploy with Firebase Hosting:
+      `.github/workflows/main.yaml` now runs the same checks as the PR gate
+      (plus `check:links` and a `firebase.json` drift check), deploys a 7-day
+      **preview channel** per PR (URL commented on the PR) and
+      `firebase deploy --only hosting` on push to `main`.
+- [x] Delete `public/CNAME` (GitHub Pages only).
+- [x] Redirects: `hosting.redirects` in `firebase.json` is regenerated at build
+      from `redirects` in `astro.config.mjs` by `src/integrations/firebase.ts` —
+      one source of truth; add Webflow's 301s to the config only.
+- [x] Custom 404: Firebase serves `dist/404.html` with a 404 status
+      automatically.
+- [x] `www` → apex: handled by Firebase's custom-domain redirect setting (see §1
+      DNS), nothing in the repo.
 - [ ] Delete the local `webflow-port-backup` ref once the PR is merged.
 
 ## 3. Preview deploy — verify on https before DNS
@@ -123,11 +160,14 @@ here is done until its box is checked.
       diff (only new/changed CMS items should move), build, commit.
 - [ ] Re-check the Webflow 301 list and Site Settings against the section-1
       inventory one last time.
-- [ ] Deploy.
-- [ ] Point `shorebird.dev` and `www` at Cloudflare. Watch for cert issuance.
+- [ ] Firebase console → Hosting → Add custom domain `shorebird.dev` (with
+      "redirect `www` to it"). Add the TXT it asks for in Cloud DNS, wait for
+      verified, then replace Webflow's apex A record (`198.202.211.1`) and the
+      `www` CNAME (`cdn.webflow.com`) with the records Firebase gives you. Watch
+      for certificate issuance (site serves on `https://` without a warning).
 - [ ] Do **not** delete the Webflow site. Unpublish it (or leave it on the
       `webflow.io` subdomain) for 30 days as a rollback.
-- [ ] Watch 404s for a week (Plausible "404" goal or Cloudflare analytics) and
+- [ ] Watch 404s for a week (Plausible "404" goal or Firebase Hosting usage) and
       add redirects for anything real.
 - [ ] Google Search Console: resubmit the sitemap.
 
