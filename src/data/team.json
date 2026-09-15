@@ -6,28 +6,7 @@
     "headshot": "/src/assets/team/eric-seidel.jpg",
     "linkedin": "https://www.linkedin.com/in/ericseidel/",
     "linkedinLabel": "View Eric Seidel on LinkedIn",
-    "order": 1,
-    "draft": false
-  },
-  {
-    "slug": "bryan-oltman",
-    "name": "Bryan Oltman",
-    "role": "Founding software engineer",
-    "headshot": "/src/assets/team/bryan-oltman.webp",
-    "linkedin": "https://www.linkedin.com/in/bryanoltman/",
-    "linkedinLabel": "View Bryan Oltman on LinkedIn",
-    "order": 2,
-    "draft": true
-  },
-  {
-    "slug": "tom-arra",
-    "name": "Tom Arra",
-    "role": "Head of Operations",
-    "headshot": "/src/assets/team/tom-arra.avif",
-    "linkedin": "https://www.linkedin.com/in/tomarra/",
-    "linkedinLabel": "View Tom Arra on LinkedIn",
-    "order": 2,
-    "draft": true
+    "order": 1
   },
   {
     "slug": "dawn-parzych",
@@ -36,8 +15,7 @@
     "headshot": "/src/assets/team/dawn-parzych.avif",
     "linkedin": "https://www.linkedin.com/in/dawn-parzych/",
     "linkedinLabel": "View Dawn Parzych on LinkedIn",
-    "order": 3,
-    "draft": false
+    "order": 3
   },
   {
     "slug": "mac-carrithers",
@@ -46,18 +24,7 @@
     "headshot": "/src/assets/team/mac-carrithers.avif",
     "linkedin": "https://www.linkedin.com/in/mac-carrithers/",
     "linkedinLabel": "View Mac Carrithers on LinkedIn",
-    "order": 4,
-    "draft": false
-  },
-  {
-    "slug": "brandon-derosier",
-    "name": "Brandon DeRosier",
-    "role": "Software Engineer",
-    "headshot": "/src/assets/team/brandon-derosier.png",
-    "linkedin": "https://www.linkedin.com/in/bderosier/",
-    "linkedinLabel": "Connect with Brandon on LinkedIn",
-    "order": 5,
-    "draft": true
+    "order": 4
   },
   {
     "slug": "nick-weatherley",
@@ -66,8 +33,7 @@
     "headshot": "/src/assets/team/nick-weatherley.jpg",
     "linkedin": "https://www.linkedin.com/in/nicholas-weatherley-508b73aa/",
     "linkedinLabel": "View Nick Weatherley on LinkedIn",
-    "order": 6,
-    "draft": false
+    "order": 6
   },
   {
     "slug": "abhishek-doshi",
@@ -76,8 +42,7 @@
     "headshot": "/src/assets/team/abhishek-doshi.jpg",
     "linkedin": "https://www.linkedin.com/in/abhishekdoshi26/",
     "linkedinLabel": "View Abhishek Doshi on LinkedIn",
-    "order": 6,
-    "draft": false
+    "order": 6
   },
   {
     "slug": "wesley-peck",
@@ -86,8 +51,7 @@
     "headshot": "/src/assets/team/wesley-peck.png",
     "linkedin": "https://www.linkedin.com/in/wesley-peck/",
     "linkedinLabel": "View Wesley on LinkedIn",
-    "order": 7,
-    "draft": false
+    "order": 7
   },
   {
     "slug": "josh-owens",
@@ -96,7 +60,6 @@
     "headshot": "/src/assets/team/josh-owens.jpg",
     "linkedin": "https://www.linkedin.com/in/owens-josh/",
     "linkedinLabel": "View Josh Owens on LinkedIn",
-    "order": 8,
-    "draft": false
+    "order": 8
   }
 ]

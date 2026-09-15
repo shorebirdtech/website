@@ -12,14 +12,13 @@ import teamData from '@/data/team.json';
 
 /**
  * Team grid (Webflow `.c_team--cms_list`): `src/data/team.json` is the
- * Webflow "Teams" collection; drafts are not shown on the live site.
+ * Webflow "Teams" collection.
  */
 const headshots = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/team/*.{jpg,jpeg,png,webp,avif}',
   { eager: true },
 );
 const team = teamData
-  .filter((member) => !member.draft)
   .sort((a, b) => a.order - b.order)
   .map((member) => {
     const image = headshots[member.headshot];
