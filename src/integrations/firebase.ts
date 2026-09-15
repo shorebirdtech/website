@@ -1,5 +1,7 @@
 import type { AstroIntegration } from 'astro';
 import { readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { format, resolveConfig } from 'prettier';
 
 /**
  * Keeps `hosting.redirects` in `firebase.json` in sync with the `redirects`
@@ -31,10 +33,18 @@ export default function firebase(): AstroIntegration {
           destination: typeof target === 'string' ? target : target.destination,
           type: typeof target === 'string' ? 301 : (target.status ?? 301),
         }));
-        const path = new URL('../../firebase.json', import.meta.url);
+        const path = fileURLToPath(
+          new URL('../../firebase.json', import.meta.url),
+        );
         const json = JSON.parse(await readFile(path, 'utf8'));
         json.hosting.redirects = rules;
-        await writeFile(path, JSON.stringify(json, null, 2) + '\n');
+        // Match `npm run format` so the regenerated file never fails the
+        // format check.
+        const options = (await resolveConfig(path)) ?? {};
+        await writeFile(
+          path,
+          await format(JSON.stringify(json), { ...options, filepath: path }),
+        );
         logger.info(`firebase.json: ${rules.length} redirects`);
       },
     },

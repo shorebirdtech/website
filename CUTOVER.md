@@ -100,23 +100,21 @@ is done until its box is checked.
 
 - [ ] Un-archive `shorebirdtech/website`; remove the archival notice (done in
       `README.md` on this branch).
-- [ ] **Create the GCP project `shorebird-website`** (billing account: same as
-      the other Shorebird projects; Blaze is required for custom domains'
-      bandwidth beyond the free tier — expect low single-digit dollars a month
-      at current traffic). Enable Firebase on it
-      (`firebase projects:addfirebase     shorebird-website`) and create the
-      Hosting site `shorebird-website`
-      (`firebase hosting:sites:create shorebird-website --project     shorebird-website`).
-      If the project id is taken, change it in `.firebaserc`, `firebase.json`
-      (`site`) and the workflow `env`.
-- [ ] **Deploy identity via WIF, no keys.** Create
-      `website-deployer@shorebird-website.iam.gserviceaccount.com` with
-      `roles/firebasehosting.admin` on the project, and bind it to this
-      repository through the org's existing pool in `code-push-dev`
-      (`projects/30552215580/locations/global/workloadIdentityPools/github-actions`):
-      `gcloud iam service-accounts add-iam-policy-binding website-deployer@shorebird-website.iam.gserviceaccount.com --project shorebird-website --role roles/iam.workloadIdentityUser --member "principalSet://iam.googleapis.com/projects/30552215580/locations/global/workloadIdentityPools/github-actions/attribute.repository/shorebirdtech/website"`.
-      Check the pool's attribute condition allows this repo (it may be scoped to
-      an allow-list).
+- [x] **GCP project `shorebird-website`** (number `170788650532`) created
+      2026-09-15 under the org, billing → Dev (R&D) (`017BF2-4523FB-3E4FA8`; a
+      marketing site's egress isn't COGS — move it if finance disagrees).
+      Firebase added; Hosting site `shorebird-website`
+      (`https://shorebird-website.web.app`). Owner: eric@shorebird.dev; add a
+      second owner.
+- [x] **Deploy identity via WIF, no keys.**
+      `website-deployer@shorebird-website.iam.gserviceaccount.com` has
+      `roles/firebasehosting.admin` on the project only. It is impersonated
+      through a WIF pool _in the same project_
+      (`projects/170788650532/locations/global/workloadIdentityPools/github-actions/providers/github`)
+      whose attribute condition is
+      `attribute.repository ==     "shorebirdtech/website"`. The org's pool in
+      `code-push-dev` was left alone (its allow-list is Tofu-managed and holds
+      production repos).
 - [ ] Open the PR from `webflow-port` (40+ commits; squash or not, your call).
       `npm run build`, `format:check`, `cspell`, `check:links` are green. The PR
       itself will exercise the `preview` job and comment its URL.

@@ -8,14 +8,14 @@ on:
 
 # Deploys go to Firebase Hosting in the `shorebird-website` GCP project (its
 # own project, so the site's IAM is separate from everything else). CI
-# authenticates with Workload Identity Federation through the org's existing
-# `github-actions` pool — no stored keys. The service account below needs
-# `roles/firebasehosting.admin` on that project and a WIF binding for this
-# repository (see CUTOVER.md §2).
+# authenticates with Workload Identity Federation through a pool in that same
+# project whose provider only accepts tokens from this repository — no stored
+# keys. The service account has `roles/firebasehosting.admin` there and
+# nothing anywhere else (see CUTOVER.md §2).
 env:
   FIREBASE_PROJECT: shorebird-website
   FIREBASE_TOOLS: firebase-tools@15.30.1
-  WIF_PROVIDER: projects/30552215580/locations/global/workloadIdentityPools/github-actions/providers/github
+  WIF_PROVIDER: projects/170788650532/locations/global/workloadIdentityPools/github-actions/providers/github
   SERVICE_ACCOUNT: website-deployer@shorebird-website.iam.gserviceaccount.com
 
 permissions:

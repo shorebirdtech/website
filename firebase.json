@@ -2,11 +2,7 @@
   "hosting": {
     "site": "shorebird-website",
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "trailingSlash": true,
     "headers": [
       {
@@ -25,11 +21,7 @@
         "destination": "https://docs.shorebird.dev/faq",
         "type": 301
       },
-      {
-        "source": "/privacy.html{,/}",
-        "destination": "/privacy",
-        "type": 301
-      },
+      { "source": "/privacy.html{,/}", "destination": "/privacy", "type": 301 },
       {
         "source": "/security{,/}",
         "destination": "https://handbook.shorebird.dev/security",
@@ -45,11 +37,7 @@
         "destination": "https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales",
         "type": 301
       },
-      {
-        "source": "/terms.html{,/}",
-        "destination": "/terms",
-        "type": 301
-      },
+      { "source": "/terms.html{,/}", "destination": "/terms", "type": 301 },
       {
         "source": "/workshops{,/}",
         "destination": "https://calendly.com/felix-shorebird/shorebird-workshop",
@@ -60,26 +48,14 @@
         "destination": "/jobs",
         "type": 301
       },
-      {
-        "source": "/legal/dpa{,/}",
-        "destination": "/dpa",
-        "type": 301
-      },
-      {
-        "source": "/terms/ci{,/}",
-        "destination": "/terms",
-        "type": 301
-      },
+      { "source": "/legal/dpa{,/}", "destination": "/dpa", "type": 301 },
+      { "source": "/terms/ci{,/}", "destination": "/terms", "type": 301 },
       {
         "source": "/terms/code-push{,/}",
         "destination": "/terms",
         "type": 301
       },
-      {
-        "source": "/blog/1.0{,/}",
-        "destination": "/blog/1",
-        "type": 301
-      },
+      { "source": "/blog/1.0{,/}", "destination": "/blog/1", "type": 301 },
       {
         "source": "/blog/dart-3.5.0{,/}",
         "destination": "/blog/dart-3-5-0",
