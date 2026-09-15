@@ -7,7 +7,7 @@ import Section from '@/components/ui/section.astro';
 
 <MainLayout
   title="Shorebird CI for Flutter | Sunsetting August 8, 2026"
-  description="Shorebird CI is sunsetting on August 8, 2026. Please refer to the pub package instead https://pub.dev/packages/shorebird_ci"
+  description="Shorebird CI was deprecated on August 8, 2026. Please refer to the pub package instead https://pub.dev/packages/shorebird_ci"
 >
   <Navbar client:load />
   {/* The live page is just the sunset notice in the hero slot, no CTA band. */}
@@ -20,10 +20,8 @@ import Section from '@/components/ui/section.astro';
       >
         <div class="pb-text-m"></div>
         <p class="sunset-notice pb-text-xl">
-          Shorebird CI is sunsetting on <strong>August 8, 2026</strong>. After
-          that you will see hard failures in your CI pipeline. To avoid errors,
-          remove the hosted version of Shorebird CI from wherever you have
-          integrated it and switch to the <a
+          Shorebird CI was deprecated on <strong>August 8, 2026</strong>.<br /><br
+          />Please switch to the <a
             href="https://pub.dev/packages/shorebird_ci"
             target="_blank"
             rel="noopener">open source package</a

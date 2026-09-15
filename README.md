@@ -61,6 +61,8 @@ Scripts (Python 3, stdlib only):
 
 The page background is dark (`:root`). Sections opt into light with
 `data-theme="light"` (see `src/components/ui/section.astro`), which redefines
-the surface/text/border tokens for everything inside; the sticky navbar follows
-the theme of the section under it. There is no system `prefers-color-scheme`
-switching, matching the Webflow site.
+the surface/text/border tokens for everything inside. The sticky navbar's theme
+is fixed per page and matches the first section (light on blog pages via
+`initialTheme="light"`, dark everywhere else); it does not change as sections
+scroll under it. There is no system `prefers-color-scheme` switching, matching
+the Webflow site.

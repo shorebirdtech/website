@@ -182,57 +182,15 @@ function ProductsDropdown() {
 }
 
 /**
- * Sticky site navigation (`.c_navigation`). It is dark by default and follows
- * the theme of the section under its bottom edge (`[data-theme="light"]` /
- * `.is--mode_1` wrappers, see `Section.astro`).
- *
- * Pass `initialTheme="light"` on pages whose first section is light to avoid
- * a dark flash before hydration.
+ * Sticky site navigation (`.c_navigation`). Its theme is fixed per page and
+ * matches the page's first section: dark everywhere except the blog, which is
+ * light (`theme="light"`). Like the live site, it does not change as light
+ * and dark sections scroll underneath it.
  */
 function Navbar({ initialTheme = 'dark' }: { initialTheme?: Theme }) {
-  const [theme, setTheme] = React.useState<Theme>(initialTheme);
+  const theme = initialTheme;
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const menuOpenRef = React.useRef(false);
   const headerRef = React.useRef<HTMLElement>(null);
-  menuOpenRef.current = menuOpen;
-
-  React.useEffect(() => {
-    const header = headerRef.current;
-    if (!header) return;
-    let raf = 0;
-
-    const update = () => {
-      raf = 0;
-      if (menuOpenRef.current) return;
-      const rect = header.getBoundingClientRect();
-      const y = Math.min(rect.bottom + 1, window.innerHeight - 1);
-      const x = Math.floor(window.innerWidth / 2);
-      const hits = document.elementsFromPoint(x, y);
-      const target = hits.find((el) => !header.contains(el));
-      const themed = target?.closest(
-        '[data-theme], .is--mode_1, .is--mode_0',
-      ) as HTMLElement | null;
-      let next: Theme = 'dark';
-      if (themed) {
-        const attr = themed.getAttribute('data-theme');
-        if (attr) next = attr === 'light' ? 'light' : 'dark';
-        else next = themed.classList.contains('is--mode_1') ? 'light' : 'dark';
-      }
-      setTheme(next);
-    };
-    const schedule = () => {
-      if (!raf) raf = window.requestAnimationFrame(update);
-    };
-
-    update();
-    window.addEventListener('scroll', schedule, { passive: true });
-    window.addEventListener('resize', schedule);
-    return () => {
-      if (raf) window.cancelAnimationFrame(raf);
-      window.removeEventListener('scroll', schedule);
-      window.removeEventListener('resize', schedule);
-    };
-  }, []);
 
   return (
     <header
@@ -357,10 +315,10 @@ function Navbar({ initialTheme = 'dark' }: { initialTheme?: Theme }) {
 
             <nav
               aria-label="Main"
-              className="px-container flex min-h-full flex-col gap-20 pt-20 pb-20"
+              className="px-container flex min-h-full flex-col gap-20 pb-20"
             >
-              <ul className="border-border flex flex-col gap-8 border-t pt-8">
-                <li className="flex flex-col gap-2">
+              <ul className="border-border flex flex-col gap-4 border-t pt-8">
+                <li className="flex flex-col">
                   <span className="text-nav-link text-text-2 font-semibold">
                     Products
                   </span>

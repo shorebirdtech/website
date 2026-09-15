@@ -51,13 +51,13 @@ Plausible + LinkedIn Insight tags are in `main.astro`.
 
 `:root` is dark. `Section theme="light"` sets `data-theme="light"` on a
 full-bleed band, which redefines the surface/text/border tokens inside it
-(`src/styles/global.css`). The sticky navbar samples the element under its
-bottom edge on scroll and swaps its own `data-theme` to match, like the Webflow
-`is--mode_0/1` toggling. No `prefers-color-scheme`. Pages whose first section is
-light pass `initialTheme="light"` to `<Navbar />` to avoid a flash.
-`<CtaBand />` + `<Footer />` are per-page. The after-footer newsletter block and
-the blog-sidebar newsletter card were removed from the live site in September
-2026 and are not in the port.
+(`src/styles/global.css`). The sticky navbar's theme is fixed per page: blog
+pages pass `initialTheme="light"` to `<Navbar />`, everything else is dark. An
+earlier version swapped the navbar theme to match the section scrolling under
+it; the live site does not do that, so it was removed (2026-09-15). No
+`prefers-color-scheme`. `<CtaBand />` + `<Footer />` are per-page. The
+after-footer newsletter block and the blog-sidebar newsletter card were removed
+from the live site in September 2026 and are not in the port.
 
 ## Remaining differences vs Webflow (ranked)
 
