@@ -1,0 +1,1 @@
+import{t as e}from"./newsletter-form.C-a5g_sX.js";export{e as default};
