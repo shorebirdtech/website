@@ -29,9 +29,13 @@ import type { ImageMetadata } from 'astro';
       class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
     >
     
-    <div id="gem_job_board_embed" style="width: 100%;max-width: 900px;margin: 0 auto;padding: 
-    2rem 1rem;display: block;"/>
-    
+      <div
+        id="gem_job_board_embed"
+        style="width: 100%;max-width: 900px;margin: 0 auto;padding: 2rem 1rem;display: block;"
+      >
+      </div>
+    </div>
+
     <!-- Keep these scripts inline so it runs in the browser, not server side -->
     <script is:inline>
       window.__gemJobBoardUrl = "https://jobs.gem.com/shorebird-dev";
