@@ -131,10 +131,12 @@ The pricing model compounds at scale. Expo charges per Monthly Active User
 downloads the full JavaScript bundle. A 12MB bundle to 500,000 users consumes
 ~6TB of bandwidth. Ship monthly hotfixes, that’s 72TB annually.
 
-As of February 2026, Expo’s enterprise tier starts around $1,000-2,000 monthly
+As of February 2026, Expo’s enterprise tier starts around
+$1,000-2,000 monthly
 with usage-based charges on top. A realistic enterprise scenario: fintech app,
 500,000 active users, monthly security patches. Base cost plus overages runs
-$25,000-30,000 annually just for OTA capability.
+$25,000-30,000
+annually just for OTA capability.
 
 [Shorebird](https://shorebird.dev/) works differently. You keep your existing
 build system. Shorebird provides a modified Flutter engine that enables
@@ -144,9 +146,11 @@ push artifacts to stores normally, then `shorebird patch` for instant updates.
 
 The pricing is transparent: usage-based on
 [patch installs](https://shorebird.dev/pricing/). Free tier covers 5,000
-installs monthly, then $0.01 per install. Same scenario (500,000 users, monthly
-patches): in the Business tier, cost would come out to be $400 per month, or
-$4800 annually. For volumes larger than 1M patch installs per month, you can
+installs monthly, then
+$0.01 per install. Same scenario (500,000 users, monthly
+patches): in the Business tier, cost would come out to be $400
+per month, or $4800 annually. For volumes larger than 1M patch installs per
+month, you can
 [contact the sales team](https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales)
 for pricing.
 
@@ -299,14 +303,18 @@ Here’s a real scenario to consider:
 
 Fintech app, 500,000 active users, 5-year timeline. React Native Year 1 costs
 less (faster development, easier hiring). But Years 2-5 include Expo EAS OTA
-costs ($25,000-30,000 annually), dependency upgrade sprints (2-3 weeks
+costs
+($25,000-30,000 annually), dependency upgrade sprints (2-3 weeks
 annually), platform update fixes (1-2 weeks per major OS release). Accumulated
-TCO over 5 years runs roughly $150,000-200,000 beyond base development.
+TCO over 5 years runs roughly $150,000-200,000
+beyond base development.
 
 Flutter Year 1 costs more (Dart learning, slightly longer development). But
-Years 2-5 include Shorebird OTA costs (~$16,000-30,000 annually with better
+Years 2-5 include Shorebird OTA costs
+(~$16,000-30,000 annually with better
 control), fewer upgrade sprints, minimal platform update work. Accumulated TCO
-over 5 years runs roughly $130,000-170,000 beyond base development.
+over 5 years runs roughly $130,000-170,000
+beyond base development.
 
 The TCO model favors Flutter for long-lived, maintained codebases. Higher
 upfront cost pays back through lower maintenance burden, predictable upgrade

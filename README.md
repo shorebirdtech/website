@@ -1,6 +1,6 @@
 # Shorebird Site 🐦
 
-Home of the [shorebird.dev](https://shorebird.dev) site: Astro 5 + Tailwind v4
+Home of the [shorebird.dev](https://shorebird.dev) site: Astro 7 + Tailwind v4
 with a few React islands, deployed to Firebase Hosting (`firebase.json`, GCP
 project `shorebird-website`) by `.github/workflows/main.yaml` on every push to
 `main`. Pull requests get a preview URL commented on the PR. See `CUTOVER.md`

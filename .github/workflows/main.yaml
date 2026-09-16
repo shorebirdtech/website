@@ -29,12 +29,12 @@ jobs:
 
     steps:
       - name: 📚 Git Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: ⚙️ Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
-          node-version: 22.12.x
+          node-version: 24.x
           cache: npm
           cache-dependency-path: package-lock.json
 
@@ -81,7 +81,7 @@ jobs:
 
     steps:
       - name: 📚 Git Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 📥 Download build
         uses: actions/download-artifact@v4
@@ -128,7 +128,7 @@ jobs:
 
     steps:
       - name: 📚 Git Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 📥 Download build
         uses: actions/download-artifact@v4
