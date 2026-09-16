@@ -73,6 +73,10 @@ function GuideForm() {
       onSubmit={handleSubmit}
       className="flex w-full flex-col items-center gap-2.5 md:items-start"
     >
+      {/* Webflow marked "Last name" required and "First name" optional, which
+          is backwards for the many people who have one name or whose family
+          name comes first. Loops only needs the email; we ask for the name it
+          greets people by. */}
       <input
         className={inputClass}
         maxLength={256}
@@ -81,16 +85,16 @@ function GuideForm() {
         type="text"
         id="firstName"
         autoComplete="given-name"
+        required
       />
       <input
         className={inputClass}
         maxLength={256}
         name="lastName"
-        placeholder="Last name"
+        placeholder="Last name (optional)"
         type="text"
         id="lastName"
         autoComplete="family-name"
-        required
       />
       <input
         className={inputClass}

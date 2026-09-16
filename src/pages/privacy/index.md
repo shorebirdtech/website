@@ -153,6 +153,7 @@ via email at privacy@shorebird.dev.
 - Discord, USA, Customer support
 - GitHub, USA, Code, bug reports, contributions
 - Google, USA, Cloud infrastructure for our Website & Services
+- LinkedIn, USA, Website advertising & conversion measurement
 - Loops.so, USA, Email Delivery
 - Mailchimp, USA, Email Delivery
 - Plausible, EU, Website Analytics

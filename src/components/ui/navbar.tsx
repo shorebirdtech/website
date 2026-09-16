@@ -89,6 +89,11 @@ function MenuGlyph({ open }: { open: boolean }) {
 /**
  * Desktop "Products" dropdown (`.c_navigation--dropdown`). Opens on hover and
  * on click/Enter/Space, closes on Escape, blur-out and outside click.
+ *
+ * Deliberately a disclosure (button with `aria-expanded` revealing a list of
+ * links), not an ARIA menu: `role="menu"`/`role="menuitem"` would promise
+ * arrow-key roving focus and typeahead that this doesn't implement. As links
+ * in a list, Tab moves through them the way the rest of the nav behaves.
  */
 function ProductsDropdown() {
   const [open, setOpen] = React.useState(false);
@@ -141,7 +146,6 @@ function ProductsDropdown() {
     >
       <button
         type="button"
-        aria-haspopup="true"
         aria-expanded={open}
         aria-controls={id}
         onClick={() => setOpen((v) => !v)}
@@ -157,25 +161,23 @@ function ProductsDropdown() {
       </button>
       <div
         id={id}
-        role="menu"
         hidden={!open}
         className="absolute top-full -left-4 z-50 pt-1"
       >
-        <div className="border-border bg-surface-1 flex w-[20.5rem] flex-col overflow-hidden rounded-lg border">
+        <ul className="border-border bg-surface-1 flex w-[20.5rem] flex-col overflow-hidden rounded-lg border">
           {products.map((item, i) => (
-            <React.Fragment key={item.href}>
+            <li key={item.href}>
               {i > 0 && <div className="divider" aria-hidden="true" />}
               <a
-                role="menuitem"
                 href={item.href}
                 className="bg-surface-1 hover:bg-surface-2 flex w-full flex-col gap-0.5 p-6 transition-colors duration-300"
               >
                 <span className="body-xs-strong text-text-1">{item.label}</span>
                 <span className="body-xs">{item.description}</span>
               </a>
-            </React.Fragment>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

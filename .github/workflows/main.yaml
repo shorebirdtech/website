@@ -68,6 +68,10 @@ jobs:
           name: dist
           path: dist
           retention-days: 7
+          # `dist/.well-known/` (Microsoft domain verification) is hidden, and
+          # upload-artifact skips hidden files by default; without this the
+          # deploy jobs would publish a build that is missing it.
+          include-hidden-files: true
 
   # Every PR from this repo gets a Firebase Hosting preview channel with its
   # own https URL, so the hosted checks in CUTOVER.md §3 can run before merge.

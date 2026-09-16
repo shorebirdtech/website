@@ -7,6 +7,12 @@ import type { APIRoute } from 'astro';
 // of the per-product terms. The Markdown lives in `src/legal/` (not `src/pages/`)
 // because the live site no longer serves `/terms/ci` and `/terms/code-push` as
 // pages; `/terms` links the PDF versions instead.
+//
+// The `.json` in the filename is what makes this work on a static host: the
+// `Response` headers below are only used by `astro dev`/`preview`, so on
+// Firebase Hosting the content type comes from the emitted file's extension.
+// `/terms/raw` redirects here (see `astro.config.mjs`) for anything still
+// pointing at the pre-Webflow URL.
 export const GET: APIRoute = async () => {
   return new Response(
     JSON.stringify({

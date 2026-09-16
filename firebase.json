@@ -2,7 +2,7 @@
   "hosting": {
     "site": "shorebird-website",
     "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": ["firebase.json", "**/node_modules/**"],
     "trailingSlash": true,
     "headers": [
       {
@@ -13,6 +13,19 @@
             "value": "public, max-age=31536000, immutable"
           }
         ]
+      },
+      {
+        "source": "/fonts/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/microsoft-identity-association",
+        "headers": [{ "key": "Content-Type", "value": "application/json" }]
       }
     ],
     "redirects": [
@@ -48,6 +61,16 @@
       {
         "source": "/terms/code-push{,/}",
         "destination": "/terms",
+        "type": 301
+      },
+      {
+        "source": "/privacy/raw{,/}",
+        "destination": "/privacy/raw.json",
+        "type": 301
+      },
+      {
+        "source": "/terms/raw{,/}",
+        "destination": "/terms/raw.json",
         "type": 301
       },
       { "source": "/blog/1.0{,/}", "destination": "/blog/1", "type": 301 },

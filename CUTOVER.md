@@ -81,10 +81,21 @@ is done until its box is checked.
 - [ ] **Sitemap & robots.** `dist/sitemap-index.xml` is generated; confirm the
       deployed host serves it and that no `robots.txt`/`noindex` from the
       preview environment leaks to production.
-- [ ] **Console dependencies.** `/privacy/raw` and `/terms/raw` still serve
-      JSON; confirm the console reads them from the new host (the `content`
-      field of `/privacy/raw` no longer starts with the H1 — check nothing
-      parses that).
+- [ ] **Microsoft domain verification.**
+      `public/.well-known/microsoft-identity-association` is a hidden path, so
+      it needs `include-hidden-files` on the CI artifact upload and had to come
+      off `firebase.json`'s `ignore` list; it also has no extension, so
+      `firebase.json` sets its `Content-Type` explicitly. On the preview
+      channel, confirm `curl -i .../.well-known/microsoft-identity-association`
+      returns 200 with `application/json` and does **not** 301 to a trailing
+      slash. If nobody still needs the Entra app (`4fc38981-…`), delete the file
+      instead.
+- [ ] **Console dependencies.** `/privacy/raw.json` and `/terms/raw.json` serve
+      the same JSON the pre-Webflow site served at `/privacy/raw` and
+      `/terms/raw`, which now 301 there; confirm the console reads them from the
+      new host and follows the redirect (the `content` field of
+      `/privacy/raw.json` no longer starts with the H1 — check nothing parses
+      that).
 - [ ] **DNS stays on Google Cloud DNS.** Firebase Hosting takes the apex with A
       records (and `www` with a CNAME or A records — the console tells you
       which) plus a one-time TXT for ownership verification, all added in the

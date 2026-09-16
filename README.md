@@ -6,6 +6,13 @@ project `shorebird-website`) by `.github/workflows/main.yaml` on every push to
 `main`. Pull requests get a preview URL commented on the PR. See `CUTOVER.md`
 for the DNS and custom-domain steps still pending.
 
+`firebase.json` caches `/_astro/**` and `/fonts/**` for a year as `immutable`.
+Astro fingerprints everything under `/_astro/`, but the font files in
+`public/fonts/` are named by hand — if a face is ever re-exported, change its
+filename (and the `@font-face`/preload in `src/styles/global.css` and
+`src/layouts/main.astro`) rather than overwriting it in place. Everything else,
+including HTML, uses Hosting's default `max-age=3600`.
+
 ## Running locally
 
 ```
@@ -39,8 +46,10 @@ docker compose up --build
 - `src/data/{reviews,logos,team}.json` — the homepage testimonials, the "Trusted
   by" logo strip and the About page team grid. Image paths are `/src/assets/...`
   strings resolved with `import.meta.glob`.
-- `src/pages/{dpa,privacy,terms}` — legal pages as Markdown; `/privacy/raw` and
-  `/terms/raw` expose the Markdown as JSON for the console.
+- `src/pages/{dpa,privacy,terms}` — legal pages as Markdown; `/privacy/raw.json`
+  and `/terms/raw.json` expose the Markdown as JSON for the console (the
+  slash-less `/privacy/raw` and `/terms/raw` 301 there; a static host takes the
+  content type from the extension, so the name has to carry the `.json`).
 
 Scripts (Python 3, stdlib only):
 

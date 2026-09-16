@@ -28,6 +28,11 @@ export default defineConfig({
     '/legal/dpa': '/dpa',
     '/terms/ci': '/terms',
     '/terms/code-push': '/terms',
+    // The raw-legal-text endpoints have to end in `.json` for a static host to
+    // serve them as JSON (nothing rewrites the `content-type` at the edge);
+    // keep the old paths the console may still hold working.
+    '/privacy/raw': '/privacy/raw.json',
+    '/terms/raw': '/terms/raw.json',
     // Blog slugs were renamed when the site moved to Webflow; Webflow's slugs
     // are canonical now.
     '/blog/1.0': '/blog/1',

@@ -82,7 +82,10 @@ from the live site in September 2026 and are not in the port.
    approximated.
 7. **Guide download form** — posts to the live Loops endpoint with the same
    hidden fields (`source=ebook-CP-guide`, `userGroup=web-download`) but was not
-   submitted end-to-end during the port.
+   submitted end-to-end during the port. Webflow marked "Last name" required and
+   "First name" optional; the port requires first name and marks last name
+   optional instead (Loops only needs the email, and a required family name
+   excludes people who have one name or whose name orders the other way).
 8. **Forms elsewhere** — Webflow form success/error blocks are reproduced in
    React; HubSpot chat widget (`js-na2.hs-scripts.com/246912764.js`) and the
    Unify website tag (script and key in
