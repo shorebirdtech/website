@@ -1,52 +1,61 @@
 ---
-import { Button, GradientOutlineButton } from '@/components/ui/button';
-import { Ellipse } from '@/components/ellipse';
-import { FlutterLogo } from '@/components/logos/flutter-logo';
+/**
+ * Homepage hero (Webflow `header.g_page--section` + `.c_hero_content`).
+ *
+ * Dark band: centered title/subtitle/buttons, then the purple illustration
+ * card (`.c_hero_lottie`: background image + the "home" Lottie animation),
+ * then the "Trusted by" logo marquee. On tablet/mobile the illustration moves
+ * above the title (`.c_hero_lottie { order: -9999 }`).
+ */
+import { ButtonLink } from '@/components/ui/button';
 import { HeroMotion } from '@/components/home/hero-motion';
-import { Spacer } from '@/components/ui/spacer';
+import Section from '@/components/ui/section.astro';
+import Brands from '@/components/home/brands.astro';
+import heroBackground from '@/assets/home/hero-background.webp';
 import config from '@/config';
 ---
 
-<section
-  id="hero"
-  class="mx-auto flex w-11/12 flex-col py-5 xl:w-10/12 2xl:w-[1280px]"
->
-  <div class="flex flex-col justify-center gap-4 lg:flex-row">
-    <div
-      class="flex shrink-0 flex-col items-center justify-center gap-1 lg:items-start"
-    >
-      <h1 class="text-center text-6xl font-medium">
-        Ship <span class="gradient-text">fast.</span>
-      </h1>
-      <h1 class="text-text-3 text-center text-6xl font-medium line-through">
-        Break things.
-      </h1>
-      <Spacer />
-      <div class="flex flex-row">
-        <span class="text-text-2">
-          Confidently update{' '}
-          <span class="text-text-1">
-            <FlutterLogo className="inline h-6 w-6" /> Flutter apps
-          </span>
-          , instantly.
-        </span>
-      </div>
-      <Spacer />
+<Section as="header" theme="dark" container="none" id="hero">
+  {/* Webflow `is--section_hero_xl` (10rem / 7.5rem). The live nav overlays the
+      hero (out of flow) whereas ours is in flow, so subtract its height. */}
+  <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+  <div class="page-container flex flex-col gap-section-s">
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-3 lg:block"></div>
       <div
-        class="flex w-full flex-row items-center justify-center gap-4 lg:justify-start"
+        class="col-span-12 flex flex-col items-center text-center lg:col-span-6"
       >
-        <a href={config.consoleUrl}>
-          <GradientOutlineButton className="font-light">
-            <Ellipse /> Try it now
-          </GradientOutlineButton>
-        </a>
-        <a href={config.docsUrl}>
-          <Button variant="outline" className="font-light"> Learn more </Button>
-        </a>
+        <h1 class="title-xxl pb-text-m">Build Flutter apps with confidence</h1>
+        <p class="body-m pb-text-xl">
+          Ship on your timeline, not somebody else’s.
+        </p>
+        <div class="flex w-full flex-col gap-4 md:w-auto md:flex-row">
+          <ButtonLink variant="primary" href={`${config.consoleUrl}/login`}>
+            Try for Free
+          </ButtonLink>
+          <ButtonLink
+            variant="secondary"
+            href={config.demoUrl}
+            target="_blank"
+            trailing="dot"
+          >
+            View our Demo
+          </ButtonLink>
+        </div>
       </div>
     </div>
-    <div class="flex h-auto w-auto lg:h-[663px] lg:w-[777px]">
-      <HeroMotion client:only />
+    <div
+      class="relative -order-1 overflow-hidden rounded-t-4xl bg-cover bg-[0_0] lg:order-none"
+      style={`background-image: url(${heroBackground.src});`}
+    >
+      <div
+        class="relative z-[2] flex aspect-[1200/565] w-full items-end justify-center"
+      >
+        <HeroMotion client:only="react" />
+      </div>
     </div>
   </div>
-</section>
+  <div class="pb-section-xs"></div>
+  <Brands />
+  <div class="pb-section-xs"></div>
+</Section>

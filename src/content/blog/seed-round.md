@@ -1,12 +1,23 @@
 ---
-title: Accel Leads $3M Seed Round in Shorebird
+title: Accel leads $3M seed round in Shorebird
 author: shorebirdtech
 description:
   Shorebird has raised $3M to expand its suite of Flutter developer tools,
   including Code Push and Shorebird CI, making mobile iteration faster than
   ever.
 date: 2025-09-23
-cover: 'seed-round-cover.png'
+cover: seed-round.png
+intro:
+  Shorebird has raised $3M to expand its suite of Flutter developer tools,
+  including Code Push and Shorebird CI, making mobile iteration faster than
+  ever.
+readingTime: 2 min read
+ogImage: '/blog/og/seed-round.jpg'
+seoTitle: Accel Leads $3M Seed Round in Shorebird
+seoDescription:
+  Shorebird has raised $3M to expand its suite of Flutter developer tools,
+  including Code Push and Shorebird CI, making mobile iteration faster than
+  ever.
 ---
 
 We at Shorebird, a developer tools company founded by the creators of Flutter,

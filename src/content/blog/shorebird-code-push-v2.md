@@ -1,9 +1,16 @@
 ---
-title: What's New in v2.0 of the Shorebird Code Push Package
+title: What's new in v2.0 of the Shorebird Code Push Package
 author: felangel
-description: Announcing the pre-release of pkg:shorebird_code_push v2.0
+description: 'Announcing the pre-release of pkg:shorebird_code_push v2.0.'
 date: 2024-11-05
-cover: code-push-v2-cover.png
+cover: shorebird-code-push-v2.avif
+intro: 'Announcing the pre-release of pkg:shorebird_code_push v2.0.'
+readingTime: 4 min read
+ogImage: '/blog/og/shorebird-code-push-v2.jpg'
+seoTitle: What's New in v2.0 of the Shorebird Code Push Package
+seoDescription:
+  Shorebird Code Push package v2.0 pre-release adds new ways to customize how
+  Flutter apps download and install over-the-air updates.
 ---
 
 We're excited to announce a pre-release of version 2.0 of the
@@ -170,4 +177,4 @@ dependencies:
 
 We'd love to hear your feedback! If there's anything you'd like to see adjusted
 or improved, please
-[let us know by filing an issue](https://github.com/shorebirdtech/updater/issues/new).
+[let us know by filing an issue](https://github.com/shorebirdtech/shorebird/issues/new/choose).

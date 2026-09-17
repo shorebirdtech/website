@@ -1,0 +1,61 @@
+---
+/**
+ * "Secure and Compliant — Designed with reliability and trust in mind"
+ * (Webflow `.c_grid_2cols` of `.c_card_l`).
+ */
+import { Image } from 'astro:assets';
+import Section from '@/components/ui/section.astro';
+import securityVersions from '@/assets/home/security-versions.webp';
+import securityWorkflow from '@/assets/home/security-workflow.webp';
+
+const cards = [
+  {
+    title: 'Your code is safe and secure',
+    description: 'No matter how big or small your use case.',
+    image: securityVersions,
+    alt: 'Shorebird version management dashboard with security shield protecting app releases',
+  },
+  {
+    title: 'Reduce your exposure to risk',
+    description: 'Shorten the window between identifying and fixing issues.',
+    image: securityWorkflow,
+    alt: 'Shorebird workflow for analyzing and fixing app bugs with security protection',
+  },
+];
+---
+
+<Section theme="light" id="security">
+  <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="hidden lg:col-span-1 lg:block"></div>
+    <div
+      class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-10"
+    >
+      <p class="body-s-strong text-brand-primary pb-text-s">
+        Secure and Compliant
+      </p>
+      <h2 class="title-l">Designed with reliability and trust in mind</h2>
+    </div>
+  </div>
+  <div class="pb-section-s"></div>
+  <div class="bg-border grid grid-cols-1 gap-px md:grid-cols-2">
+    {
+      cards.map((card) => (
+        <div class="bg-surface-1 flex h-full flex-col justify-between py-8 md:py-16 lg:px-16">
+          <div>
+            <h3 class="title-m pb-text-s">{card.title}</h3>
+            <p class="body-s pb-text-xl">{card.description}</p>
+          </div>
+          <div class="overflow-hidden rounded-2xl">
+            <Image
+              src={card.image}
+              widths={[500, 800, 1080, 1416]}
+              sizes="(max-width: 767px) 100vw, 500px"
+              alt={card.alt}
+              class="w-full"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Section>

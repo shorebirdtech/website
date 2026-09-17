@@ -1,9 +1,16 @@
 ---
-title: Getting a Flutter Job
+title: Getting a Flutter job
 author: eseidel
-description: Advice on how to find or hire for a "Flutter job"
+description: 'Advice on how to find or hire for a "Flutter job".'
 date: 2024-10-10
-cover: flutter-jobs-cover.png
+cover: flutter-jobs.avif
+intro: 'Advice on how to find or hire for a "Flutter job".'
+readingTime: 8 min read
+ogImage: '/blog/og/flutter-jobs.jpg'
+seoTitle: 'Getting a Flutter Job: Advice for Devs and Hiring Teams'
+seoDescription:
+  Practical advice on finding or hiring for Flutter roles, from Flutter's
+  original creator, for both job-seekers and job-posters.
 ---
 
 I founded the Flutter project 10 years ago, and led the Flutter team at Google

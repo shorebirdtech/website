@@ -1,0 +1,99 @@
+{
+  "hosting": {
+    "site": "shorebird-website",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/node_modules/**"],
+    "trailingSlash": true,
+    "headers": [
+      {
+        "source": "/_astro/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/fonts/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/.well-known/microsoft-identity-association",
+        "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/faq{,/}",
+        "destination": "https://docs.shorebird.dev/faq",
+        "type": 301
+      },
+      { "source": "/privacy.html{,/}", "destination": "/privacy", "type": 301 },
+      {
+        "source": "/security{,/}",
+        "destination": "https://handbook.shorebird.dev/security",
+        "type": 301
+      },
+      {
+        "source": "/success-stories/pushpress{,/}",
+        "destination": "/success-stories/push-press",
+        "type": 301
+      },
+      {
+        "source": "/talk-to-sales{,/}",
+        "destination": "https://calendly.com/d/cmtb-j7m-qpb/shorebird-sales",
+        "type": 301
+      },
+      { "source": "/terms.html{,/}", "destination": "/terms", "type": 301 },
+      {
+        "source": "/jobs/full-stack-software-engineer{,/}",
+        "destination": "/jobs",
+        "type": 301
+      },
+      { "source": "/legal/dpa{,/}", "destination": "/dpa", "type": 301 },
+      { "source": "/terms/ci{,/}", "destination": "/terms", "type": 301 },
+      {
+        "source": "/terms/code-push{,/}",
+        "destination": "/terms",
+        "type": 301
+      },
+      {
+        "source": "/privacy/raw{,/}",
+        "destination": "/privacy/raw.json",
+        "type": 301
+      },
+      {
+        "source": "/terms/raw{,/}",
+        "destination": "/terms/raw.json",
+        "type": 301
+      },
+      { "source": "/blog/1.0{,/}", "destination": "/blog/1", "type": 301 },
+      {
+        "source": "/blog/dart-3.5.0{,/}",
+        "destination": "/blog/dart-3-5-0",
+        "type": 301
+      },
+      {
+        "source": "/blog/flutter-3.32-release{,/}",
+        "destination": "/blog/flutter-3-32-release",
+        "type": 301
+      },
+      {
+        "source": "/blog/growing{,/}",
+        "destination": "/blog/shorebird-is-growing",
+        "type": 301
+      },
+      {
+        "source": "/blog/building-great-developer-tools{,/}",
+        "destination": "/blog/building-good-software",
+        "type": 301
+      }
+    ]
+  }
+}

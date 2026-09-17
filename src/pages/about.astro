@@ -1,149 +1,175 @@
 ---
-import '@/styles/global.css';
-import { Button, GradientOutlineButton } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Ellipse } from '@/components/ellipse';
-import { FlutterLogo } from '@/components/logos/flutter-logo';
 import { Image } from 'astro:assets';
-import { LinkedInLogo } from '@/components/logos/linkedin-logo';
-import { Markdown } from '@/components/ui/markdown';
 import { Navbar } from '@/components/ui/navbar';
-import { Spacer } from '@/components/ui/spacer';
-import bryanHeadshot from '@/assets/team/bryan-headshot.png';
-import config from '@/config';
-import ericHeadshot from '@/assets/team/eric-headshot.jpeg';
+import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
-import tomHeadshot from '@/assets/team/tom-headshot.jpg';
+import Resources from '@/components/home/resources.astro';
+import Section from '@/components/ui/section.astro';
+import accelLogo from '@/assets/about/accel.webp';
+import heroLogos from '@/assets/about/hero-logos.svg';
+import teamData from '@/data/team.json';
 
-const team = [
-  {
-    name: 'Eric Seidel',
-    title: 'Founder',
-    bio: 'Founder of [Flutter](https://flutter.dev) & former Director of Engineering for Flutter/Dart at Google.',
-    linkedIn: 'https://www.linkedin.com/in/ericseidel',
-    headshot: ericHeadshot,
-  },
-  {
-    name: 'Bryan Oltman',
-    title: 'Founding Engineer',
-    bio: "Former architecture lead for Google's internal-facing enterprise [Flutter](https://flutter.dev) team.",
-    linkedIn: 'https://www.linkedin.com/in/bryanoltman',
-    headshot: bryanHeadshot,
-  },
-  {
-    name: 'Tom Arra',
-    title: 'Founding Operations Lead',
-    bio: 'Former Director of Product Development at [Very Good Ventures](https://verygood.ventures).',
-    linkedIn: 'https://www.linkedin.com/in/tomarra',
-    headshot: tomHeadshot,
-  },
-];
+/**
+ * Team grid (Webflow `.c_team--cms_list`): `src/data/team.json` is the
+ * Webflow "Teams" collection.
+ */
+const headshots = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/team/*.{jpg,jpeg,png,webp,avif}',
+  { eager: true },
+);
+const team = teamData
+  .sort((a, b) => a.order - b.order)
+  .map((member) => {
+    const image = headshots[member.headshot];
+    if (!image) throw new Error(`Headshot ${member.headshot} not found`);
+    return { ...member, image: image.default };
+  });
+/** Webflow `.social_icn` LinkedIn glyph (14x14). */
+const linkedinIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.17852 14V4.55374H0.177409V14H3.17852ZM1.67795 3.26401C2.7245 3.26401 3.37589 2.53864 3.37589 1.63214C3.35639 0.705241 2.7245 4.89563e-07 1.69781 4.89563e-07C0.671215 4.89563e-07 0 0.705241 0 1.63214C0 2.53864 0.65125 3.26401 1.65839 3.26401H1.67795Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.83936 14H7.84044V8.72481C7.84044 8.44249 7.85994 8.16045 7.93919 7.95863C8.15614 7.39455 8.64995 6.81034 9.47901 6.81034C10.565 6.81034 10.9994 7.67659 10.9994 8.94647V14H14.0002V8.58365C14.0002 5.68218 12.5196 4.33208 10.5451 4.33208C8.92613 4.33208 8.21537 5.27883 7.82048 5.92369H7.84052V4.55374H4.83944C4.87882 5.44011 4.83936 14 4.83936 14Z" fill="currentColor"/></svg>`;
 ---
 
-<MainLayout title="About Us">
-  <Navbar client:load />
-  <section
-    class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
-  >
-    <h1
-      class="text-text-1 text-center text-5xl md:px-24 lg:px-40 font-semibold"
-    >
-      We help businesses <span class="gradient-text">succeed</span>
-      with <span class="inline-block"
-        ><FlutterLogo className="size-10 inline" /> Flutter</span
+<MainLayout
+  title="About Shorebird | Building Better Tools for Flutter"
+  description="Founded by Eric Seidel, creator of Flutter, Shorebird helps developers ship apps faster with secure Code Push and modern CI for Flutter."
+>
+  <Navbar client:load initialTheme="dark" />
+
+  {/* Hero (Webflow `header.g_page--section` + `.c_hero--about--logos`). */}
+  <Section as="header" theme="dark" id="hero">
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-2 lg:block"></div>
+      <div
+        class="col-span-12 flex flex-col items-center text-center lg:col-span-8"
       >
-    </h1>
-    <Spacer className="h-18 md:h-24" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
-      <div class="flex flex-col gap-2">
-        <h2 class="text-3xl">Our Mission</h2>
-        <p class="text-text-2">
-          Shorebird was started to solve problems others can't or won't solve
-          with Flutter and to bring the benefits of multi-platform development
-          to the many millions of developers who are still stuck on
-          single-platform toolchains. Every interactive pane of glass should
-          deliver great user experiences, and to do that, Flutter is the best
-          tool we have so far. Shorebird is here to help.
-        </p>
-      </div>
-      <div class="flex flex-col gap-2">
-        <h2 class="text-3xl">Why Shorebird</h2>
-        <p class="text-text-2">
-          Shorebird exists because we're frustrated that the world wastes years
-          of human life, writing the same thing multiple times. It's important
-          that Shorebird is a company. We're exploiting capitalism to align
-          incentives behind the world adopting multi-platform. Flutter and other
-          multi-platform solutions have suffered from a lack of economic
-          incentives. Shorebird is here to change that.
-        </p>
+        <img
+          src={heroLogos.src}
+          width={heroLogos.width}
+          height={heroLogos.height}
+          alt="Shorebird and Flutter logos"
+          class="h-auto w-full max-w-[360px]"
+        />
+        <h1 class="title-xxl pb-text-m">Ship Flutter apps at the speed of web</h1>
       </div>
     </div>
-    <Spacer className="h-18" />
-    <div
-      class="mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center"
-    >
-      <FlutterLogo className="inline h-6 w-6" />
-      <span class="text-text-1">
-        Built by the same people who built Flutter
-      </span>
-    </div>
-    <Spacer />
-    <h1 class="text-text-1 text-4xl text-center">Our Team</h1>
-    <Spacer className="h-8" />
-    <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
-      {
-        team.map((member, index) => (
-          <div
-            id={`member-${index}`}
-            class="flex flex-col items-center mx-auto justify-center gap-1 max-w-[200px]"
-          >
-            <Image
-              class="object-cover rounded-xl"
-              src={member.headshot}
-              alt={`${member.name} headshot`}
-            />
-            <Spacer className="h-2" />
-            <div class="flex flex-row w-full justify-between">
-              <p>{member.name}</p>
-              <a href={member.linkedIn}>
-                <LinkedInLogo className="text-text-2 size-4" />
-              </a>
-            </div>
-            <div class="flex flex-row w-full justify-between text-text-2 text-sm">
-              <Markdown content={member.bio} />
-            </div>
-          </div>
-        ))
-      }
-    </div>
-    <Spacer className="h-18" />
-    <div class="mx-auto flex justify-center items-center py-6 md:py-12 w-full">
-      <Card
-        className="w-full p-6 lg:p-16 flex flex-col items-center justify-center"
+    <div class="pb-section-s"></div>
+  </Section>
+
+  {/* "Founded in 2023" (light). */}
+  <Section theme="light" id="founded">
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-2 lg:block"></div>
+      <div
+        class="col-span-12 flex flex-col items-center text-center lg:col-span-8"
       >
-        <h2 class="text-text-1 text-4xl text-center">
-          Build for <span class="gradient-text">users</span>, not platforms.
+        <h2 class="title-m pb-text-l">
+          Founded in 2023 by Eric Seidel, creator of Flutter.
         </h2>
-        <p class="text-text-2 text-center">
-          Shaping the future of multi-platform, one solution at a time.
+        <p class="body-m">
+          We care about making portable development the default and creating a
+          rich and robust Flutter ecosystem. Our flagship service, Code Push,
+          enables instant app updates without app store delays.
         </p>
-        <div
-          class="flex w-full items-center justify-center flex-col md:flex-row gap-4 mt-6"
-        >
-          <a href={config.consoleUrl} class="w-full md:w-auto">
-            <GradientOutlineButton className="font-light w-full">
-              <Ellipse /> Try it now
-            </GradientOutlineButton>
-          </a>
-          <a href="/jobs" class="w-full md:w-auto">
-            <Button variant="outline" className="font-light w-full">
-              View open positions
-            </Button>
-          </a>
-        </div>
-      </Card>
+      </div>
     </div>
-  </section>
+  </Section>
+
+  {/* Mission card (Webflow `.c_mission_card`: dark card on the light band). */}
+  <Section theme="light" container="large" id="mission">
+    <div
+      data-theme="dark"
+      class="bg-surface-1 grid grid-cols-1 gap-x-16 gap-y-text-m rounded-3xl p-6 md:grid-cols-2 md:px-20 md:py-30"
+    >
+      <div class="flex flex-col items-start">
+        <p class="body-s-strong text-brand-secondary pb-text-s">Mission</p>
+        <h2 class="title-l">
+          Our mission is to make portable software the default way to build for
+          everyone.
+        </h2>
+      </div>
+      <div class="flex flex-col items-start">
+        <p class="body-m">
+          Our vision is a future where mobile developers operate at the speed of
+          web and systems engineers. Where Shorebird is a safe and supported
+          choice for businesses and offers a rich and robust Flutter ecosystem.
+          We are fundamentally guided by principles like prioritizing developer
+          productivity, being open source by default, and believing in the
+          inevitability of high-quality portable software. We aim to align our
+          success directly with the needs and success of the global Flutter
+          developer community.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  {/* "Our team" (Webflow `.c_team--cms`). */}
+  <Section theme="light" id="team">
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="col-span-12 lg:col-span-3">
+        <div class="flex flex-col items-start">
+          <h2 class="title-l pb-text-s">Our team</h2>
+          <div class="flex items-end gap-2">
+            <p class="body-m">Backed by</p>
+            <Image
+              src={accelLogo}
+              alt="Accel"
+              width={144}
+              class="h-auto w-16 lg:w-[4.5rem]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:col-span-1 lg:block"></div>
+      <div class="col-span-12 overflow-hidden lg:col-span-8">
+        <ul
+          class="-mx-6 -my-6 grid w-[calc(100%+3rem)] grid-cols-2 gap-px bg-white md:-mx-16 md:-my-16 md:w-[calc(100%+8rem)] lg:mx-0 lg:w-full"
+        >
+          {
+            team.map((member) => (
+              <li class="bg-surface-1 h-full p-6 md:p-16">
+                <div class="flex flex-col items-start">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={400}
+                    height={400}
+                    class="aspect-square h-auto w-full rounded-2xl object-cover object-top"
+                  />
+                  <div class="pb-section-xs" />
+                  <div class="flex flex-wrap items-center gap-[0.5625rem] pb-text-xs">
+                    <p class="body-l text-text-1">{member.name}</p>
+                    <a
+                      aria-label={member.linkedinLabel}
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener"
+                      class="text-text-3 hover:text-text-1 hidden size-4 md:block"
+                      set:html={linkedinIcon}
+                    />
+                  </div>
+                  <p class="body-m">{member.role}</p>
+                  <div class="md:hidden">
+                    <div class="pb-section-xs" />
+                    <a
+                      aria-label={member.linkedinLabel}
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener"
+                      class="text-text-3 hover:text-text-1 block size-4"
+                      set:html={linkedinIcon}
+                    />
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Resources />
+  <CtaBand />
   <Footer />
 </MainLayout>

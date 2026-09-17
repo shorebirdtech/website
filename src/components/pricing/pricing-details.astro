@@ -1,46 +1,27 @@
 ---
-import config from '@/config';
-import { GradientOutlineButton } from '@/components/ui/button';
-import { PricingCalculator } from '@/components/pricing/pricing-calculator';
+/**
+ * Pricing page body: the "Pay as you grow" header with the billing toggle
+ * and plan cards (Webflow `header.g_page--section` + `.c_tabs_pricing`),
+ * the "Trusted by" logo marquee, then the "Plan comparison" table.
+ */
+import Brands from '@/components/home/brands.astro';
+import Section from '@/components/ui/section.astro';
 import { PricingPlans } from '@/components/pricing/pricing-plans';
-import { PricingFaq } from '@/components/pricing/pricing-faq';
-import { Spacer } from '@/components/ui/spacer';
-import { ArrowRightIcon } from '@phosphor-icons/react';
+import { PricingTable } from '@/components/pricing/pricing-table';
 ---
 
-<section
-  class="mx-auto flex w-10/12 flex-col py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
->
-  <div class="flex flex-col items-center justify-center">
-    <h1 class="text-text-1 text-center text-5xl font-semibold">
-      Pay as you <span class="gradient-text">grow</span>
-    </h1>
-    <Spacer />
-    <h3 class="text-text-2 text-center text-lg">
-      Deliver instant updates with pricing that scales as you grow.
-    </h3>
-    <Spacer className="h-10" />
-    <PricingPlans includeTable={true} client:load />
-    <Spacer className="h-10" />
-    <PricingCalculator hideCTA={true} client:load />
-    <div class="w-full pt-18">
-      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-16">
-        <div class="flex flex-col items-start gap-6">
-          <h2 class="text-4xl font-medium">FAQ</h2>
-          <span class="text-text-2">
-            Check out the top frequently asked questions regarding pricing. If
-            you still have questions, please contact us.
-          </span>
-          <a href={config.contactSales} class="w-full md:w-auto">
-            <GradientOutlineButton className="w-full font-light">
-              Contact us <ArrowRightIcon className="size-5" weight="bold" />
-            </GradientOutlineButton>
-          </a>
-        </div>
-        <div class="col-span-2">
-          <PricingFaq client:load />
-        </div>
-      </div>
-    </div>
+<Section as="header" theme="dark" container="none" id="plans">
+  {/* Webflow `is--section_hero_xl`; the live nav overlays the hero. */}
+  <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+  <div class="page-container">
+    <PricingPlans client:load />
   </div>
-</section>
+  <div class="pb-section-xs"></div>
+  <Brands />
+  <div class="pb-section-xs"></div>
+</Section>
+
+<Section theme="dark" id="plan-comparison">
+  <div class="pb-section-s"></div>
+  <PricingTable client:load />
+</Section>

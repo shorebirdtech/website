@@ -1,0 +1,53 @@
+---
+/**
+ * "Benefits — Make impactful decisions quickly" (Webflow `.c_grid_3cols` of
+ * `.c_card_s`).
+ */
+import { CubeIcon, HourglassIcon, WrenchIcon } from '@phosphor-icons/react';
+import Section from '@/components/ui/section.astro';
+
+const benefits = [
+  {
+    icon: WrenchIcon,
+    title: 'Deploy patches without delays',
+    description: 'Waiting for the next app review cycle',
+  },
+  {
+    icon: HourglassIcon,
+    title: 'Phase out support',
+    description: 'For older versions',
+  },
+  {
+    icon: CubeIcon,
+    title: "See what's being shipped",
+    description: 'Monitor adoption across versions',
+  },
+];
+---
+
+<Section theme="light" id="benefits">
+  <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="hidden lg:col-span-2 lg:block"></div>
+    <div
+      class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-8"
+    >
+      <p class="body-s-strong text-brand-secondary pb-text-s">Benefits</p>
+      <h2 class="title-l pb-text-m">Make impactful decisions quickly</h2>
+      <p class="body-m">The ultimate insurance policy for business continuity</p>
+    </div>
+  </div>
+  <div class="pb-section-xs"></div>
+  <div class="bg-border grid grid-cols-1 items-center gap-px md:grid-cols-3">
+    {
+      benefits.map((benefit) => (
+        <div class="bg-surface-1 flex h-full flex-col items-center py-8 text-center md:py-10 md:pr-8 md:pl-10">
+          <span class="badge-icon-secondary mb-text-s">
+            <benefit.icon size={24} weight="fill" />
+          </span>
+          <p class="body-l text-text-1 pb-text-xs">{benefit.title}</p>
+          <p class="body-m">{benefit.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</Section>

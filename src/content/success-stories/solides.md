@@ -5,6 +5,15 @@ description:
   delivery with Shorebird.
 date: 2025-05-01
 cover: solides-cover.png
+industry: HR Tech
+companySize: Enterprise
+website: 'https://solides.com'
+intro:
+  Hot fixes in minutes, not weeks. Learn how Solides transformed their mobile
+  delivery with Shorebird.
+seoTitle: Solides - Shorebird Success Story
+seoDescription:
+  Solides created 52 releases witih 26 patches in their first six months.
 highlights:
   [
     'Over 500,000 active users on the Solides Super App',
@@ -13,6 +22,8 @@ highlights:
     '~650,000 patches installed in the first 6 months of using Shorebird',
   ]
 ---
+
+<!-- cSpell:ignore witih -->
 
 At Solides, speed matters. As one of Brazil’s leading HR tech companies, Solides
 empowers businesses to manage their people more intelligently, with behavioral

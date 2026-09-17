@@ -1,0 +1,97 @@
+---
+/**
+ * Page section (Webflow `.g_page--section`).
+ *
+ * The page is dark by default; a section opts into light with
+ * `theme="light"` which sets `data-theme="light"` so every token inside
+ * (surfaces, text, borders, brand colors, button colors) flips. The sticky
+ * navbar reads this attribute to follow the section under it.
+ *
+ * - `variant="plain"` (default): full-bleed band in the section's surface.
+ * - `variant="card"`: the band keeps the *surrounding* theme; the content
+ *   sits in a rounded card (radius 2rem, 4rem padding on desktop) that
+ *   carries the requested theme. Use it for e.g. the dark
+ *   "Enterprise-scale infrastructure" card inside a light section
+ *   (Webflow `.c_cta_card` / `.c_cta_footer`).
+ * - `spacing`: extra vertical padding on top of the 10px every Webflow
+ *   section has, maps to `--spacer-section-*` (`xs` 2.5rem, `s` 4rem,
+ *   `m` 6rem, `l` 7.5rem, `hero` 10rem; all smaller on mobile). Default
+ *   `none`. Note: on the live site `g_spacer.is--section_m` has no CSS rule
+ *   and renders 0px, so most "m" spacers in the exported HTML are 0.
+ * - `container`: `small` (default, 85rem), `large` (96rem) or `none`
+ *   (full bleed; you lay out the content yourself, e.g. `page-container`).
+ * - `as`: element tag (`section` by default; `header` for heroes).
+ */
+export interface Props {
+  theme?: 'dark' | 'light';
+  variant?: 'plain' | 'card';
+  spacing?: 'none' | 'xs' | 's' | 'm' | 'l' | 'hero';
+  container?: 'small' | 'large' | 'none';
+  as?: 'section' | 'header' | 'div' | 'article' | 'aside';
+  id?: string;
+  class?: string;
+  /** Extra classes for the inner card when `variant="card"`. */
+  cardClass?: string;
+  [key: string]: unknown;
+}
+
+const {
+  theme,
+  variant = 'plain',
+  spacing = 'none',
+  container = 'small',
+  as: Tag = 'section',
+  id,
+  class: className,
+  cardClass,
+  ...rest
+} = Astro.props;
+
+const spacingClass = {
+  none: '',
+  xs: 'py-section-xs',
+  s: 'py-section-s',
+  m: 'py-section-m',
+  l: 'py-section-l',
+  hero: 'py-section-hero',
+}[spacing];
+
+const containerClass =
+  container === 'none'
+    ? ''
+    : container === 'large'
+      ? 'page-container-lg'
+      : 'page-container';
+
+const isCard = variant === 'card';
+---
+
+<Tag
+  id={id}
+  data-theme={!isCard ? theme : undefined}
+  data-section
+  class:list={['bg-surface-1 relative py-2.5', spacingClass, className]}
+  {...rest}
+>
+  {
+    isCard ? (
+      <div class={containerClass}>
+        <div
+          data-theme={theme}
+          class:list={[
+            'bg-surface-1 border-border relative overflow-hidden rounded-4xl border p-6 md:p-16',
+            cardClass,
+          ]}
+        >
+          <slot />
+        </div>
+      </div>
+    ) : containerClass ? (
+      <div class={containerClass}>
+        <slot />
+      </div>
+    ) : (
+      <slot />
+    )
+  }
+</Tag>

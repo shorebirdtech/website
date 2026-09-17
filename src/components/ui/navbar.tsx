@@ -1,112 +1,383 @@
-import { DiscordLogo } from '@/components/logos/discord-logo';
-import { GitHubLogo } from '@/components/logos/github-logo';
 import { LogoFull } from '@/components/logos/logo-full';
-import { Button, GradientOutlineButton } from '@/components/ui/button';
+import { ButtonLink } from '@/components/ui/button';
 import {
   Sheet,
+  SheetClose,
   SheetContent,
-  SheetHeader,
+  SheetDescription,
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import config from '@/config';
-import {
-  ArrowRightIcon,
-  BookmarkIcon,
-  BooksIcon,
-  BuildingIcon,
-  ListIcon,
-  MoneyIcon,
-  QuestionIcon,
-  RssIcon,
-} from '@phosphor-icons/react';
+import { cn } from '@/lib/utils';
+import * as React from 'react';
 
-function Navbar() {
+type Theme = 'dark' | 'light';
+
+const products = [
+  {
+    label: 'Code Push',
+    description: 'Deploy on your schedule',
+    href: '/product/code-push',
+  },
+  {
+    label: 'Shorebird CI',
+    description: 'Shave minutes off your build times',
+    href: '/product/shorebird-ci',
+  },
+];
+
+const links = [
+  { label: 'Docs', href: config.docsUrl, external: true },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Customers', href: '/success-stories' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+];
+
+const signInUrl = `${config.consoleUrl}/login`;
+const tryUrl = `${config.consoleUrl}/login`;
+
+function ChevronIcon({ className }: { className?: string }) {
   return (
-    <Sheet>
-      <nav className="border-border-1 flex items-center justify-between border-t-[1px] border-b-[1px] py-5">
-        <div className="mx-auto flex w-11/12 items-center justify-between xl:w-10/12 2xl:w-[1280px]">
-          <div className="flex w-full flex-row items-center gap-8 lg:gap-12">
-            <a className="transition hover:scale-105" href="/">
-              <LogoFull className="w-36" />
-            </a>
-            <div className="hidden flex-row gap-4 md:flex lg:gap-8">
-              <a href="/pricing">Pricing</a>
-              <a href="/about">About</a>
-              <a href="/blog">Blog</a>
-              <a href={config.docsUrl}>Docs</a>
-              <a href="/faq">FAQs</a>
-            </div>
+    <svg
+      aria-hidden="true"
+      className={className}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.7071 13.2071C10.3166 13.5976 9.68342 13.5976 9.29289 13.2071L4.29289 8.20711C3.90237 7.81658 3.90237 7.18342 4.29289 6.79289C4.68342 6.40237 5.31658 6.40237 5.70711 6.79289L10 11.0858L14.2929 6.79289C14.6834 6.40237 15.3166 6.40237 15.7071 6.79289C16.0976 7.18342 16.0976 7.81658 15.7071 8.20711L10.7071 13.2071Z"
+        fill="#999999"
+      />
+    </svg>
+  );
+}
+
+/** Three-line hamburger that morphs into an X (`.c_navigation--menu_button`). */
+function MenuGlyph({ open }: { open: boolean }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="relative flex h-6 w-6 flex-col items-end justify-center"
+    >
+      <span
+        className={cn(
+          'bg-text-1 absolute h-0.5 w-6 rounded transition-transform duration-300',
+          open ? 'rotate-45' : '-translate-y-2',
+        )}
+      />
+      <span
+        className={cn(
+          'bg-text-1 absolute h-0.5 w-6 rounded transition-opacity duration-300',
+          open && 'opacity-0',
+        )}
+      />
+      <span
+        className={cn(
+          'bg-text-1 absolute h-0.5 w-6 rounded transition-transform duration-300',
+          open ? '-rotate-45' : 'translate-y-2',
+        )}
+      />
+    </span>
+  );
+}
+
+/**
+ * Desktop "Products" dropdown (`.c_navigation--dropdown`). Opens on hover and
+ * on click/Enter/Space, closes on Escape, blur-out and outside click.
+ *
+ * Deliberately a disclosure (button with `aria-expanded` revealing a list of
+ * links), not an ARIA menu: `role="menu"`/`role="menuitem"` would promise
+ * arrow-key roving focus and typeahead that this doesn't implement. As links
+ * in a list, Tab moves through them the way the rest of the nav behaves.
+ */
+function ProductsDropdown() {
+  const [open, setOpen] = React.useState(false);
+  const rootRef = React.useRef<HTMLDivElement>(null);
+  const closeTimer = React.useRef<number | undefined>(undefined);
+  const id = React.useId();
+
+  const cancelClose = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = window.setTimeout(() => setOpen(false), 120);
+  };
+
+  React.useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  return (
+    <div
+      ref={rootRef}
+      className="relative flex h-full items-stretch"
+      onPointerEnter={(e) => {
+        if (e.pointerType === 'mouse') {
+          cancelClose();
+          setOpen(true);
+        }
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === 'mouse') scheduleClose();
+      }}
+      onBlur={(e) => {
+        if (!rootRef.current?.contains(e.relatedTarget as Node)) {
+          setOpen(false);
+        }
+      }}
+    >
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls={id}
+        onClick={() => setOpen((v) => !v)}
+        className="text-nav-link text-text-2 hover:text-text-1 flex h-full items-center gap-1 py-2 font-semibold transition-colors duration-300"
+      >
+        Products
+        <ChevronIcon
+          className={cn(
+            'size-4 transition-transform duration-200',
+            open && 'rotate-180',
+          )}
+        />
+      </button>
+      <div
+        id={id}
+        hidden={!open}
+        className="absolute top-full -left-4 z-50 pt-1"
+      >
+        <ul className="border-border bg-surface-1 flex w-[20.5rem] flex-col overflow-hidden rounded-lg border">
+          {products.map((item, i) => (
+            <li key={item.href}>
+              {i > 0 && <div className="divider" aria-hidden="true" />}
+              <a
+                href={item.href}
+                className="bg-surface-1 hover:bg-surface-2 flex w-full flex-col gap-0.5 p-6 transition-colors duration-300"
+              >
+                <span className="body-xs-strong text-text-1">{item.label}</span>
+                <span className="body-xs">{item.description}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Sticky site navigation (`.c_navigation`). Its theme is fixed per page and
+ * matches the page's first section: dark everywhere except the blog, which is
+ * light (`theme="light"`). Like the live site, it does not change as light
+ * and dark sections scroll underneath it.
+ */
+function Navbar({ initialTheme = 'dark' }: { initialTheme?: Theme }) {
+  const theme = initialTheme;
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const headerRef = React.useRef<HTMLElement>(null);
+
+  return (
+    <header
+      ref={headerRef}
+      data-theme={theme}
+      data-nav
+      className="border-border bg-surface-1 h-nav sticky top-0 z-40 border-b transition-colors duration-300"
+    >
+      <div className="page-container flex h-full items-center justify-between gap-6 lg:gap-14">
+        <a
+          href="/"
+          aria-label="Shorebird home"
+          className="text-text-1 hover:text-text-1 flex shrink-0 items-center"
+        >
+          <LogoFull className="h-6 w-auto" />
+        </a>
+
+        {/* Desktop menu */}
+        <nav
+          aria-label="Main"
+          className="hidden h-full flex-1 items-center justify-between lg:flex lg:pr-14"
+        >
+          <ul className="flex h-full items-center gap-6">
+            <li className="h-full">
+              <ProductsDropdown />
+            </li>
+            {links.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noreferrer' : undefined}
+                  className="text-nav-link text-text-2 hover:text-text-1 font-semibold transition-colors duration-300"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center gap-4">
+            <ButtonLink
+              variant="secondary"
+              size="small"
+              href={signInUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-6"
+            >
+              Sign in
+            </ButtonLink>
+            <ButtonLink
+              variant="primary"
+              size="small"
+              href={tryUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Try for Free
+            </ButtonLink>
           </div>
-          <div className="flex flex-row items-center gap-2">
-            <a className="hidden lg:block" href={config.githubUrl}>
-              <Button variant="outline" size="sm" className="font-light">
-                <GitHubLogo className="size-5" />
-                2.8k
-              </Button>
-            </a>
-            <a className="hidden lg:block" href={config.discordUrl}>
-              <Button variant="outline" size="sm" className="font-light">
-                <DiscordLogo className="size-5" />
-              </Button>
-            </a>
-            <a className="hidden lg:block" href={'/rss.xml'}>
-              <Button variant="outline" size="sm" className="font-light">
-                <RssIcon className="size-5" />
-              </Button>
-            </a>
-            <a href={config.consoleUrl}>
-              <GradientOutlineButton className="h-9 gap-1.5 rounded-full px-3 font-light">
-                Get started <ArrowRightIcon className="size-5" weight="bold" />
-              </GradientOutlineButton>
-            </a>
+        </nav>
+
+        {/* Mobile: small CTA + hamburger */}
+        <Sheet
+          open={menuOpen}
+          onOpenChange={(open) => {
+            // Anchor the sheet to the nav's real bottom edge (a banner may sit
+            // above the sticky nav while the page is scrolled to the top).
+            const bottom = headerRef.current?.getBoundingClientRect().bottom;
+            document.documentElement.style.setProperty(
+              '--nav-bottom',
+              `${Math.max(0, Math.round(bottom ?? 0))}px`,
+            );
+            setMenuOpen(open);
+          }}
+        >
+          <div className="flex items-center gap-4 lg:hidden">
+            <ButtonLink
+              variant="primary"
+              size="small"
+              href={tryUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Try for Free
+            </ButtonLink>
             <SheetTrigger asChild>
-              <Button size="icon" className="md:hidden">
-                <ListIcon className="size-6" />
-              </Button>
+              <button
+                type="button"
+                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                className="flex h-16 items-center justify-end pl-3"
+              >
+                <MenuGlyph open={menuOpen} />
+              </button>
             </SheetTrigger>
           </div>
-        </div>
-        <SheetContent>
-          <SheetHeader>
-            <SheetTitle className="border-border-1 border-b-2 py-4">
-              <a href="/">
-                <LogoFull className="w-36" />
-              </a>
-            </SheetTitle>
-          </SheetHeader>
-          <div className="flex flex-col gap-6 px-6 text-lg">
-            <a className="flex flex-row items-center gap-2" href="/pricing">
-              <MoneyIcon className="text-accent-primary-1 size-6" />
-              Pricing
-            </a>
-            <a className="flex flex-row items-center gap-2" href="/about">
-              <BuildingIcon className="text-accent-primary-1 size-6" />
-              About
-            </a>
-            <a className="flex flex-row items-center gap-2" href="/blog">
-              <BookmarkIcon className="text-accent-primary-1 size-6" />
-              Blog
-            </a>
-            <a
-              className="flex flex-row items-center gap-2"
-              href={config.docsUrl}
+          <SheetContent
+            side="top"
+            hideClose
+            overlayClassName="top-[var(--nav-bottom,var(--nav-height))] bg-black/60"
+            aria-describedby={undefined}
+            className={cn(
+              'bg-surface-1 inset-x-0 top-[var(--nav-bottom,var(--nav-height))] bottom-0 h-auto gap-0 overflow-y-auto border-b-0 p-0 shadow-none',
+              'data-[state=closed]:duration-200 data-[state=open]:duration-300',
+            )}
+            data-theme={theme}
+          >
+            <SheetTitle className="sr-only">Menu</SheetTitle>
+            <SheetDescription className="sr-only">
+              Site navigation
+            </SheetDescription>
+            {/* Close button drawn over the hamburger in the (inert) nav. */}
+            <SheetClose asChild>
+              <button
+                type="button"
+                aria-label="Close menu"
+                className="-top-nav h-nav absolute right-[var(--container-padding)] z-10 flex items-center justify-end pl-3"
+              >
+                <MenuGlyph open />
+              </button>
+            </SheetClose>
+
+            <nav
+              aria-label="Main"
+              className="px-container flex min-h-full flex-col gap-20 pb-20"
             >
-              <BooksIcon className="text-accent-primary-1 size-6" />
-              Docs
-            </a>
-            <a className="flex flex-row items-center gap-2" href="/faq">
-              <QuestionIcon className="text-accent-primary-1 size-6" />
-              FAQs
-            </a>
-            <a className="flex flex-row items-center gap-2" href="/rss.xml">
-              <RssIcon className="text-accent-primary-1 size-6" />
-              RSS
-            </a>
-          </div>
-        </SheetContent>
-      </nav>
-    </Sheet>
+              <ul className="border-border flex flex-col gap-4 border-t pt-8">
+                <li className="flex flex-col">
+                  <span className="text-nav-link text-text-2 font-semibold">
+                    Products
+                  </span>
+                  <ul className="flex flex-col">
+                    {products.map((item) => (
+                      <li key={item.href}>
+                        <a
+                          href={item.href}
+                          className="flex flex-col gap-0.5 py-2"
+                        >
+                          <span className="body-xs-strong text-text-1">
+                            {item.label}
+                          </span>
+                          <span className="body-xs">{item.description}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target={link.external ? '_blank' : undefined}
+                      rel={link.external ? 'noreferrer' : undefined}
+                      className="text-nav-link text-text-2 hover:text-text-1 block font-semibold"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex w-full flex-col gap-4">
+                <ButtonLink
+                  variant="secondary"
+                  size="small"
+                  href={signInUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Sign in
+                </ButtonLink>
+                <ButtonLink
+                  variant="primary"
+                  size="small"
+                  href={tryUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Try for Free
+                </ButtonLink>
+              </div>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
   );
 }
 

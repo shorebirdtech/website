@@ -5,7 +5,16 @@ description:
   Why this overlooked superpower gives Flutter teams the control they’ve been
   missing.
 date: 2025-07-07
-cover: patch-rollback-cover.png
+cover: rolling-back-patches-reflection.png
+intro:
+  Why this overlooked superpower gives Flutter teams the control they’ve been
+  missing.
+readingTime: 3 min read
+ogImage: '/blog/og/rolling-back-patches-reflection.jpg'
+seoTitle: Rolling Back Patches - Why It Matters More Than You Think
+seoDescription:
+  This overlooked superpower gives Flutter teams the control they’ve been
+  missing.
 ---
 
 At Fluttercon USA this year, I had a bunch of great conversations with Flutter

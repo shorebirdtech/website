@@ -4,49 +4,100 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+/**
+ * Button variants ported from the Webflow design system:
+ *
+ * - `primary`   → `.g_button_primary`   (gradient pill, white text; hover
+ *                 fades the darker gradient stop in over the whole button)
+ * - `secondary` → `.g_button_secondary` (1.5px inset-border pill on the
+ *                 current surface; `outline` is kept as an alias)
+ * - `tertiary`  → plain text link in `--button-tertiary-text`, pair with
+ *                 `<ArrowRightIcon />` or `trailing="arrow"`
+ *
+ * Sizes: `default` (1rem / 1.375rem padding) and `small`
+ * (`data-wf--button-*--variant="small"`). The old shadcn sizes `sm`, `lg`
+ * and `icon` are still accepted for pre-port callers.
+ */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "relative isolate inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-[color,background-color,box-shadow] duration-300 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50",
   {
     variants: {
       variant: {
-        default: 'bg-primary text-button-primary-text shadow-xs',
-        outline:
-          'text-button-primary-text border border-input border-border-1 rounded-full bg-background hover:shadow-xs hover:bg-foreground/10 hover:border-foreground/40',
+        primary:
+          'overflow-hidden bg-linear-to-r from-button-primary-1 to-button-primary-2 text-button-primary-text hover:text-button-primary-text after:pointer-events-none after:absolute after:inset-0 after:-z-10 after:bg-button-primary-2 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100',
         secondary:
-          'bg-secondary text-button-secondary-text shadow-xs hover:bg-secondary/80',
-        ghost: 'text-button-primary-text',
-        link: 'text-primary underline-offset-4 hover:underline',
+          'bg-transparent text-button-secondary-text shadow-[inset_0_0_0_1.5px_var(--button-secondary-border)] hover:bg-button-secondary-surface-hover hover:text-button-secondary-text hover:shadow-[0_2px_8px_-8px_rgba(0,0,0,0.8),inset_0_0_0_1.5px_var(--button-secondary-border)]',
+        tertiary:
+          'h-auto rounded-none bg-transparent p-0 text-button-tertiary-text hover:text-button-tertiary-text hover:underline hover:underline-offset-4',
+        /* Legacy aliases. */
+        default:
+          'overflow-hidden bg-linear-to-r from-button-primary-1 to-button-primary-2 text-button-primary-text hover:text-button-primary-text after:pointer-events-none after:absolute after:inset-0 after:-z-10 after:bg-button-primary-2 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100',
+        outline:
+          'bg-transparent text-button-secondary-text shadow-[inset_0_0_0_1.5px_var(--button-secondary-border)] hover:bg-button-secondary-surface-hover hover:text-button-secondary-text hover:shadow-[0_2px_8px_-8px_rgba(0,0,0,0.8),inset_0_0_0_1.5px_var(--button-secondary-border)]',
+        ghost: 'bg-transparent text-text-1 hover:bg-border-1 hover:text-text-1',
+        link: 'h-auto rounded-none bg-transparent p-0 text-text-1 underline-offset-4 hover:underline',
       },
       size: {
-        default: 'h-12 px-4 py-2',
-        sm: 'h-10 rounded-full gap-1.5 px-3',
-        lg: 'h-15 rounded-md px-6 has-[>svg]:px-4',
-        icon: 'size-12 rounded-full p-1',
+        default: 'px-[1.375rem] py-4 text-button-m',
+        small: 'px-5 py-3 text-button-s',
+        /* Legacy sizes. */
+        sm: 'h-10 px-4 text-button-s',
+        lg: 'px-7 py-5 text-button-m',
+        icon: 'size-10 p-0',
       },
     },
+    compoundVariants: [
+      { variant: ['tertiary', 'link'], className: 'h-auto p-0' },
+    ],
     defaultVariants: {
-      variant: 'default',
+      variant: 'primary',
       size: 'default',
     },
   },
 );
 
-function GradientOutlineButton({
-  className,
-  children,
-}: React.PropsWithChildren<{ className?: string }>) {
+/**
+ * The small "live" dot used by "View our Demo ●" (`.c_button--indicator`).
+ */
+function ButtonIndicator({ className }: { className?: string }) {
   return (
-    <div className="from-text-gradient-1 to-text-gradient-2 shadow-text-gradient-2 rounded-full bg-gradient-to-tr p-[2px]">
-      <Button
-        variant="ghost"
-        className={cn(
-          'bg-background hover:shadow-text-gradient-2 hover:bg-background/85 rounded-full hover:shadow-xs',
-          className,
-        )}
-      >
-        {children}
-      </Button>
-    </div>
+    <span
+      aria-hidden="true"
+      className={cn(
+        'relative flex size-2.5 shrink-0 items-center justify-center',
+        className,
+      )}
+    >
+      <span className="bg-nav-indicator-back absolute inset-0 rounded-full" />
+      <span className="bg-nav-indicator-front relative size-2 rounded-full" />
+    </span>
+  );
+}
+
+type ButtonProps = React.ComponentProps<'button'> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+    /** Optional trailing adornment: the blue "live" dot or a right arrow. */
+    trailing?: 'dot' | 'arrow';
+  };
+
+function ArrowGlyph() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 20 20"
+      fill="none"
+      className="size-4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 10h12m0 0-5-5m5 5-5 5"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
@@ -55,20 +106,91 @@ function Button({
   variant,
   size,
   asChild = false,
+  trailing,
+  children,
   ...props
-}: React.ComponentProps<'button'> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }) {
+}: ButtonProps) {
   const Comp = asChild ? Slot : 'button';
+  const adornment =
+    trailing === 'dot' ? (
+      <ButtonIndicator />
+    ) : trailing === 'arrow' ? (
+      <ArrowGlyph />
+    ) : null;
+
+  if (asChild && adornment) {
+    // Slot needs exactly one child; append the adornment inside it.
+    const child = React.Children.only(children) as React.ReactElement<{
+      children?: React.ReactNode;
+    }>;
+    children = React.cloneElement(
+      child,
+      undefined,
+      <>
+        {child.props.children}
+        {adornment}
+      </>,
+    );
+  }
 
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-    />
+    >
+      {children}
+      {!asChild && adornment}
+    </Comp>
   );
 }
 
-export { Button, buttonVariants, GradientOutlineButton };
+/**
+ * Anchor-flavoured button. Use for links so that the markup is a real `<a>`.
+ */
+function ButtonLink({
+  className,
+  variant,
+  size,
+  trailing,
+  children,
+  ...props
+}: React.ComponentProps<'a'> &
+  VariantProps<typeof buttonVariants> & {
+    trailing?: 'dot' | 'arrow';
+  }) {
+  return (
+    <a
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    >
+      {children}
+      {trailing === 'dot' && <ButtonIndicator />}
+      {trailing === 'arrow' && <ArrowGlyph />}
+    </a>
+  );
+}
+
+/**
+ * Legacy: pre-port pages used a gradient-outlined pill. It now renders the
+ * secondary (outlined) button so callers keep working.
+ */
+function GradientOutlineButton({
+  className,
+  children,
+}: React.PropsWithChildren<{ className?: string }>) {
+  return (
+    <Button variant="secondary" className={className}>
+      {children}
+    </Button>
+  );
+}
+
+export {
+  Button,
+  ButtonIndicator,
+  ButtonLink,
+  buttonVariants,
+  GradientOutlineButton,
+};

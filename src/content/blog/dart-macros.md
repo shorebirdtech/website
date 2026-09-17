@@ -1,9 +1,17 @@
 ---
-title: On Focus and Dart Macros
+title: On focus and Dart macros
 author: eseidel
-description: Reacting to Google's decision to cancel Dart's "macros" feature
+description:
+  'Reacting to Google''s decision to cancel Dart''s "macros" feature.'
 date: 2025-01-29
-cover: dart-macros-cover.png
+cover: dart-macros.avif
+intro: 'Reacting to Google''s decision to cancel Dart''s "macros" feature.'
+readingTime: 3 min read
+ogImage: '/blog/og/dart-macros.jpg'
+seoTitle: On Focus and Google's Cancellation of Dart Macros
+seoDescription:
+  Shorebird's founder reacts to Google canceling Dart's macros feature and what
+  it means for focus in the Flutter ecosystem.
 ---
 
 Brace yourselves. We may be in for another round of “Flutter is dying” and “Dart

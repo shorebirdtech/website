@@ -1,0 +1,257 @@
+/*
+ * Rich text (Webflow `.g_rich_text.w-richtext`), layered on top of
+ * `@tailwindcss/typography`'s `.prose`. Use as `class="prose rich-text"`.
+ *
+ * Every rule is written as `.prose.rich-text …` so it out-ranks the plugin's
+ * `.prose :where(x):not(…)` selectors. Colors come from the theme tokens, so
+ * the block follows whichever `data-theme` it sits in.
+ */
+
+.prose.rich-text {
+  --tw-prose-body: var(--text-2);
+  --tw-prose-headings: var(--text-1);
+  --tw-prose-lead: var(--text-2);
+  --tw-prose-links: var(--text-2);
+  --tw-prose-bold: inherit;
+  --tw-prose-counters: var(--text-2);
+  --tw-prose-bullets: var(--text-2);
+  --tw-prose-hr: var(--border-1);
+  --tw-prose-quotes: var(--text-2);
+  --tw-prose-quote-borders: var(--border-1);
+  --tw-prose-captions: var(--text-3);
+  --tw-prose-code: var(--text-1);
+  --tw-prose-pre-code: #f8f8f2;
+  --tw-prose-pre-bg: #2b2b2b;
+  --tw-prose-th-borders: var(--border-1);
+  --tw-prose-td-borders: var(--border-1);
+
+  max-width: none;
+  color: var(--text-2);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-title-s);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.prose.rich-text > :first-child {
+  margin-top: 0;
+}
+.prose.rich-text > :last-child {
+  margin-bottom: 0;
+}
+
+.prose.rich-text p {
+  margin-top: var(--spacer-text-s);
+  margin-bottom: var(--spacer-text-s);
+  line-height: 1.4;
+}
+
+.prose.rich-text h1,
+.prose.rich-text h2,
+.prose.rich-text h3,
+.prose.rich-text h4,
+.prose.rich-text h5,
+.prose.rich-text h6 {
+  color: var(--text-1);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.prose.rich-text h1 {
+  margin-top: 1.25rem;
+  margin-bottom: var(--spacer-text-s);
+  font-size: var(--font-size-title-xxl);
+}
+.prose.rich-text h2 {
+  margin-top: var(--spacer-text-xxl);
+  margin-bottom: var(--spacer-text-m);
+  font-size: var(--font-size-title-m);
+}
+.prose.rich-text h3 {
+  margin-top: var(--spacer-text-xl);
+  margin-bottom: var(--spacer-text-m);
+  font-size: var(--font-size-title-s);
+}
+.prose.rich-text h4,
+.prose.rich-text h5,
+.prose.rich-text h6 {
+  margin-top: 1.25rem;
+  margin-bottom: var(--spacer-text-s);
+  font-size: var(--font-size-title-s);
+}
+
+.prose.rich-text a {
+  color: var(--text-2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose.rich-text a:hover {
+  color: var(--text-1);
+}
+
+.prose.rich-text strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+.prose.rich-text blockquote {
+  margin-top: var(--spacer-text-xl);
+  margin-bottom: var(--spacer-text-xl);
+  padding: 0 0 0 1.5rem;
+  border-left: 2px solid var(--border-1);
+  color: var(--text-2);
+  font-size: var(--font-size-title-s);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+  quotes: none;
+}
+.prose.rich-text blockquote p:first-of-type::before,
+.prose.rich-text blockquote p:last-of-type::after {
+  content: none;
+}
+
+.prose.rich-text ul,
+.prose.rich-text ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: var(--spacer-text-s);
+  margin-bottom: var(--spacer-text-s);
+  padding-left: 1.5rem;
+}
+.prose.rich-text ul {
+  list-style: disc;
+}
+.prose.rich-text ul ul {
+  list-style: circle;
+}
+.prose.rich-text ol {
+  list-style: decimal;
+}
+.prose.rich-text li {
+  margin: 0;
+  padding-left: 0.25rem;
+}
+.prose.rich-text li > p {
+  margin: 0;
+}
+.prose.rich-text li > ul,
+.prose.rich-text li > ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+.prose.rich-text li::marker {
+  color: var(--text-2);
+}
+
+/* Inline code: plain monospace, no backticks or pill. */
+.prose.rich-text code {
+  color: inherit;
+  font-weight: 500;
+  font-size: 0.95em;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+.prose.rich-text code::before,
+.prose.rich-text code::after {
+  content: none;
+}
+
+/* Fenced code (Webflow `.w-code-block`: #2b2b2b / #f8f8f2). Shiki inlines
+ * its own theme background on `pre`, so the override needs !important. */
+.prose.rich-text pre {
+  margin-top: var(--spacer-text-s);
+  margin-bottom: var(--spacer-text-s);
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  background-color: #2b2b2b !important;
+  color: #f8f8f2;
+  font-size: var(--font-size-body-s);
+  font-weight: 500;
+  line-height: 1.6;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.prose.rich-text pre code {
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  padding: 0;
+}
+
+.prose.rich-text img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: var(--spacer-section-s);
+  margin-bottom: var(--spacer-text-s);
+  border-radius: 0.75rem;
+}
+.prose.rich-text p > img:only-child {
+  margin-top: var(--spacer-section-s);
+}
+.prose.rich-text figure {
+  margin-top: var(--spacer-section-s);
+  margin-bottom: var(--spacer-text-s);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.prose.rich-text figure img {
+  margin: 0;
+  border-radius: 0;
+}
+.prose.rich-text figcaption {
+  color: var(--text-3);
+  font-size: var(--font-size-body-xs);
+  margin-top: var(--spacer-text-xs);
+}
+
+/* Embeds (YouTube, Arcade demos) written straight into the Markdown. */
+.prose.rich-text iframe {
+  max-width: 100%;
+  border: 0;
+  border-radius: 0.75rem;
+}
+.prose.rich-text > iframe {
+  display: block;
+  width: 100%;
+  margin-top: var(--spacer-text-m);
+  margin-bottom: var(--spacer-text-m);
+}
+/* Video embeds keep 16:9 when squeezed below their width attribute. */
+.prose.rich-text > iframe,
+.prose.rich-text iframe[src*='youtube.com/embed'] {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+.prose.rich-text video {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+.prose.rich-text hr {
+  margin-top: var(--spacer-text-xl);
+  margin-bottom: var(--spacer-text-xl);
+  border-color: var(--border-1);
+}
+
+.prose.rich-text table {
+  display: block;
+  overflow-x: auto;
+  font-size: var(--font-size-body-s);
+  line-height: 1.4;
+  margin-top: var(--spacer-text-m);
+  margin-bottom: var(--spacer-text-m);
+}
+.prose.rich-text th {
+  color: var(--text-1);
+  font-weight: 600;
+}
+.prose.rich-text th,
+.prose.rich-text td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}

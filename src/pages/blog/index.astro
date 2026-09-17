@@ -1,92 +1,157 @@
 ---
-import '@/styles/global.css';
-import { ArrowRightIcon } from '@phosphor-icons/react';
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { getCollection } from 'astro:content';
+/**
+ * Blog index (Webflow `/blog`): a light hero with the highlighted article on
+ * the left, the three most recent posts as a compact list on the right, then
+ * the "All articles" grid of every post (newest first — the live page renders
+ * all 69 without pagination), then the CTA band + footer.
+ */
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import { Navbar } from '@/components/ui/navbar';
-import { ScrollToTopButton } from '@/components/scroll-to-top-button';
-import { Spacer } from '@/components/ui/spacer';
-import config from '@/config';
+import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
-import FormattedDate from '@/components/blog/formatted-date.astro';
 import MainLayout from '@/layouts/main.astro';
-import type { ImageMetadata } from 'astro';
+import Section from '@/components/ui/section.astro';
 
-const sortByDate = (a: any, b: any) =>
-  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf();
-const posts = (await getCollection('blog')).sort(sortByDate);
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif}'
+// Newest first; same-day posts tie-break the way the live site orders them.
+const posts = (await getCollection('blog')).sort(
+  (a, b) =>
+    b.data.date.valueOf() - a.data.date.valueOf() || b.id.localeCompare(a.id),
 );
-const postImages = posts.map((post) => {
-  const cover = post.data.cover;
-  if (images[`/src/assets/blog/covers/${cover}`]) {
-    return images[`/src/assets/blog/covers/${cover}`];
+
+const covers = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif,webp,avif}',
+  { eager: true },
+);
+const coverFor = (post: (typeof posts)[number]) => {
+  const cover = covers[`/src/assets/blog/covers/${post.data.cover}`];
+  if (!cover) {
+    throw new Error(`Cover image for blog ${post.data.title} not found`);
   }
-  throw new Error(`Cover image for blog ${post.data.title} not found`);
-});
+  return cover.default;
+};
+
+// Featured card: the `highlight: true` post (newest wins); fall back to the
+// newest post so the slot is never empty.
+const highlight = posts.find((post) => post.data.highlight) ?? posts[0];
+const latest = posts.filter((post) => post.id !== highlight.id).slice(0, 3);
 ---
 
-<MainLayout title="Blog">
-  <Navbar client:load />
-  <section
-    class="mx-auto flex w-10/12 flex-col items-start py-12 lg:py-24 xl:w-10/12 2xl:w-[1280px]"
-  >
-    <h1
-      class="text-text-1 mx-auto text-center text-5xl font-semibold md:mx-0 md:text-start"
-    >
-      Our latest <span class="gradient-text">news</span>
-    </h1>
-    <Spacer />
-    <div
-      class="flex w-full flex-col items-start justify-between gap-6 md:flex-row"
-    >
-      <h3 class="text-text-2 mx-auto text-center text-lg md:mx-0 md:text-start">
-        Stay up to date on all things Shorebird with our latest blog posts.
-      </h3>
-      <a href={config.newsletterSubscriptionUrl} class="w-full md:w-auto">
-        <Button variant="outline" className="w-full font-light">
-          Join our newsletter <ArrowRightIcon
-            className="size-5"
-            weight="bold"
-          />
-        </Button>
-      </a>
+<MainLayout
+  title="Shorebird Blog | Insights on Shipping Flutter Apps"
+  description="Stay up to date with Flutter development insights, product updates, and best practices for shipping faster with Shorebird."
+>
+  <Navbar client:load initialTheme="light" />
+
+  <Section as="header" theme="light">
+    {/* Webflow `is--section_hero_xl` (10rem / 7.5rem); the live nav overlays
+        the page whereas ours is in flow, so subtract its height. */}
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="flex flex-col items-start">
+      <h1 class="title-xl pb-text-m">Blog</h1>
+      <p class="body-m">Stay up to date with our latest articles</p>
     </div>
-    <Spacer className="h-10" />
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-      {
-        posts.map((post, index) => (
-          <a href={`/blog/${post.id}`} class="hover:no-underline">
-            <Card className="gap-2 py-0 cursor-pointer border-2 border-border-1 hover:border-accent-secondary-1">
-              <CardHeader className="p-0">
-                <Image
-                  src={postImages[index]()}
-                  alt={`${post.data.title} cover image`}
-                  class="w-full rounded-xl object-cover"
-                />
-              </CardHeader>
-              <CardContent className="p-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-text-2 text-sm">
-                    <FormattedDate date={post.data.date} />
-                  </p>
-                  <h1 class="text-text-1 text-xl hover:underline">
-                    {post.data.title}
-                  </h1>
+    <div class="pb-section-xs"></div>
+
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      {/* Highlighted article */}
+      <div class="col-span-12 lg:col-span-4">
+        <a
+          href={`/blog/${highlight.id}`}
+          class="group flex flex-col hover:no-underline"
+        >
+          <div class="overflow-hidden rounded-2xl">
+            <Image
+              src={coverFor(highlight)}
+              widths={[500, 736, 1000]}
+              sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 390px"
+              alt={highlight.data.title}
+              class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+          <div class="pb-section-xs"></div>
+          <p class="title-s pb-text-s">{highlight.data.title}</p>
+          <p class="body-s">{highlight.data.description}</p>
+        </a>
+      </div>
+      <div class="hidden lg:col-span-1 lg:block"></div>
+
+      {/* Latest three: a vertical list on desktop, a horizontal scroller on
+          tablet/mobile (Webflow `.c_blog_latest--cms_list`). */}
+      <div class="col-span-12 lg:col-span-7">
+        <div
+          class="latest-list -mx-container flex snap-x snap-mandatory gap-10 overflow-x-auto px-container scroll-px-container lg:mx-0 lg:grid lg:grid-cols-1 lg:overflow-visible lg:px-0"
+        >
+          {
+            latest.map((post) => (
+              <a
+                href={`/blog/${post.id}`}
+                class="group w-[92%] shrink-0 snap-start hover:no-underline md:w-[75%] lg:w-auto"
+              >
+                <div class="flex flex-col gap-10 lg:grid lg:grid-cols-8 lg:items-center">
+                  <div class="lg:col-span-2">
+                    <div class="overflow-hidden rounded-2xl">
+                      <Image
+                        src={coverFor(post)}
+                        widths={[500, 736]}
+                        sizes="(max-width: 767px) 92vw, (max-width: 991px) 75vw, 150px"
+                        alt={post.data.title}
+                        class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col lg:col-span-6">
+                    <p class="title-s pb-text-xs">{post.data.title}</p>
+                    <p class="body-s">{post.data.description}</p>
+                  </div>
                 </div>
-                <p class="text-text-2 overflow-hidden text-ellipsis whitespace-nowrap">
-                  {post.data.description}
-                </p>
-              </CardContent>
-            </Card>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section theme="light">
+    <p class="body-s pb-text-m">All articles</p>
+    <div class="grid grid-cols-1 gap-x-10 gap-y-14 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <a
+            href={`/blog/${post.id}`}
+            class="group flex flex-col hover:no-underline"
+          >
+            <div class="overflow-hidden rounded-2xl">
+              <Image
+                src={coverFor(post)}
+                widths={[500, 736, 1000]}
+                sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 390px"
+                alt={post.data.title}
+                loading="lazy"
+                class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </div>
+            <div class="pb-text-l"></div>
+            <p class="title-s pb-text-s">{post.data.title}</p>
+            <p class="body-s">{post.data.description}</p>
           </a>
         ))
       }
     </div>
-  </section>
+  </Section>
+
+  <CtaBand />
   <Footer />
-  <ScrollToTopButton client:load />
 </MainLayout>
+
+<style>
+  /* Webflow hides the scrollbar on the tablet/mobile "latest" scroller. */
+  .latest-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .latest-list::-webkit-scrollbar {
+    display: none;
+  }
+</style>

@@ -5,7 +5,16 @@ description:
   Here’s a simple way to estimate usage—whether you ship once a month or every
   commit.
 date: 2025-07-22
-cover: how-many-patches-cover.png
+cover: how-many-patches.png
+intro:
+  Here’s a simple way to estimate usage—whether you ship once a month or every
+  commit.
+readingTime: 2 min read
+ogImage: '/blog/og/how-many-patches.jpg'
+seoTitle: Estimating your patch needs with Shorebird
+seoDescription:
+  Here’s a simple way to estimate usage—whether you ship once a month or every
+  commit.
 ---
 
 One of the most common questions we hear from teams considering Shorebird is:

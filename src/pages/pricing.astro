@@ -1,12 +1,17 @@
 ---
+import CtaBand from '@/components/ui/cta-band.astro';
+import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import { Navbar } from '@/components/ui/navbar';
 import PricingDetails from '@/components/pricing/pricing-details.astro';
-import Footer from '@/components/ui/footer.astro';
 ---
 
-<MainLayout title="Pricing">
-  <Navbar client:load />
+<MainLayout
+  title="Shorebird Pricing | Plans for Flutter Teams"
+  description="Simple, scalable pricing for Flutter teams. Start free, grow with usage-based plans, and choose the plan that fits your product."
+>
+  <Navbar client:load initialTheme="dark" />
   <PricingDetails />
+  <CtaBand />
   <Footer />
 </MainLayout>

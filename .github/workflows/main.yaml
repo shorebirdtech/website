@@ -6,6 +6,23 @@ on:
     branches:
       - main
 
+# Deploys go to Firebase Hosting in the `shorebird-website` GCP project (its
+# own project, so the site's IAM is separate from everything else). CI
+# authenticates with Workload Identity Federation through a pool in that same
+# project whose provider only accepts tokens from this repository — no stored
+# keys. The service account has `roles/firebasehosting.admin` there and
+# nothing anywhere else (see CUTOVER.md §2).
+env:
+  FIREBASE_PROJECT: shorebird-website
+  FIREBASE_TOOLS: firebase-tools@15.30.1
+  WIF_PROVIDER: projects/170788650532/locations/global/workloadIdentityPools/github-actions/providers/github
+  SERVICE_ACCOUNT: website-deployer@shorebird-website.iam.gserviceaccount.com
+
+permissions:
+  contents: read
+  id-token: write # WIF
+  pull-requests: write # preview job comments the channel URL on the PR
+
 jobs:
   build:
     runs-on: macos-latest
@@ -36,43 +53,100 @@ jobs:
       - name: 👷 Build website
         run: npm run build
 
-  deploy:
+      - name: 🔗 Check Links
+        run: npm run check:links
+
+      # The build rewrites hosting.redirects in firebase.json from
+      # astro.config.mjs; a diff here means someone edited one and not the
+      # other. Run `npm run build` and commit firebase.json.
+      - name: 🔁 Check firebase.json redirects are committed
+        run: git diff --exit-code firebase.json
+
+      - name: 📤 Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 7
+          # `dist/.well-known/` (Microsoft domain verification) is hidden, and
+          # upload-artifact skips hidden files by default; without this the
+          # deploy jobs would publish a build that is missing it.
+          include-hidden-files: true
+
+  # Every PR from this repo gets a Firebase Hosting preview channel with its
+  # own https URL, so the hosted checks in CUTOVER.md §3 can run before merge.
+  # Fork PRs are skipped: they cannot mint a WIF token for the repository.
+  preview:
     needs: build
-
-    runs-on: macos-latest
-
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository
 
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v7
 
-      - name: ⚙️ Setup Node
-        uses: actions/setup-node@v7
+      - name: 📥 Download build
+        uses: actions/download-artifact@v4
         with:
-          node-version: 24.x
-          cache: npm
-          cache-dependency-path: package-lock.json
+          name: dist
+          path: dist
 
-      - name: 📦 Install Dependencies
-        run: npm ci && npx --no allow-scripts
-
-      - name: ✨ Check Format
-        run: npm run format:check
-
-      - name: 🧹 Lint
-        run: npm run lint
-
-      - name: 🔤 Check Spelling
-        run: npm run cspell
-
-      - name: 👷 Build website
-        run: npm run build
-
-      - name: ☁️ Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: 🔐 Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.SERVICE_ACCOUNT }}
+
+      - name: ☁️ Deploy preview channel
+        id: channel
+        run: |
+          npx -y "$FIREBASE_TOOLS" hosting:channel:deploy "pr-${{ github.event.pull_request.number }}" \
+            --project "$FIREBASE_PROJECT" --expires 7d --json > channel.json
+          url=$(python3 -c 'import json,sys; r=json.load(sys.stdin)["result"]; print(next(iter(r.values()))["url"])' < channel.json)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: 💬 Comment preview URL
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.channel.outputs.url }}
+        run: |
+          body="🐦 Preview of ${{ github.event.pull_request.head.sha }}: $URL (expires in 7 days)"
+          # Edit the existing preview comment rather than adding one per push.
+          existing=$(gh api "repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("🐦 Preview of"))) | .id' | head -1)
+          if [ -n "$existing" ]; then
+            gh api -X PATCH "repos/${{ github.repository }}/issues/comments/$existing" -f body="$body" > /dev/null
+          else
+            gh pr comment "${{ github.event.pull_request.number }}" --body "$body"
+          fi
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v7
+
+      - name: 📥 Download build
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: 🔐 Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.SERVICE_ACCOUNT }}
+
+      - name: ☁️ Deploy to Firebase Hosting
+        run: |
+          npx -y "$FIREBASE_TOOLS" deploy --only hosting --project "$FIREBASE_PROJECT" \
+            --message "${{ github.sha }}"

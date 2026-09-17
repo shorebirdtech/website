@@ -1,12 +1,17 @@
 ---
-title: Why Flutter isn’t Dead
+title: Why Flutter isn’t dead
 author: eseidel
-description: Flutter is inevitable and growing, here’s why you should use it
+description: Flutter is inevitable and growing, here’s why you should use it.
 date: 2026-01-15
-cover: 'FlutterNotDeadYet.png'
+cover: flutter-not-dead.avif
+intro: Flutter is inevitable and growing, here’s why you should use it.
+readingTime: 6 min read
+ogImage: '/blog/og/flutter-not-dead.jpg'
+seoTitle: "Why Flutter Isn't Dead: The Case for Longevity"
+seoDescription:
+  Flutter's creator makes the case for why Flutter is inevitable and growing,
+  and why developers shouldn't worry about its future.
 ---
-
-# Why Flutter Isn’t Dead
 
 For over 11 years now, my social media feed has been full of stories proclaiming
 "Flutter is dead.” I’m here to tell you it’s not, and why it won’t be.

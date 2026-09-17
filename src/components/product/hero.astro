@@ -1,0 +1,69 @@
+---
+/**
+ * Product page hero (Webflow `header.g_page--section` + `.c_hero_content`),
+ * same bones as the homepage hero: centered title/subtitle/buttons, then the
+ * purple illustration card (`.c_hero_lottie`) holding whatever is slotted in
+ * (a Lottie island), then the "Trusted by" logo marquee. On tablet/mobile the
+ * illustration moves above the title.
+ */
+import { ButtonLink } from '@/components/ui/button';
+import Section from '@/components/ui/section.astro';
+import Brands from '@/components/home/brands.astro';
+import heroBackground from '@/assets/home/hero-background.webp';
+
+export interface Props {
+  title: string;
+  description: string;
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel: string;
+  secondaryHref: string;
+}
+
+const {
+  title,
+  description,
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+} = Astro.props;
+---
+
+<Section as="header" theme="dark" container="none" id="hero">
+  {/* Webflow `is--section_hero_xl`. The live nav overlays the hero (out of
+      flow) whereas ours is in flow, so subtract its height. */}
+  <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+  <div class="page-container flex flex-col gap-section-s">
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="hidden lg:col-span-1 lg:block"></div>
+      <div
+        class="col-span-12 flex flex-col items-center text-center lg:col-span-10"
+      >
+        <h1 class="title-xxl pb-text-m">{title}</h1>
+        <p class="body-m pb-text-xl">{description}</p>
+        <div class="flex w-full flex-col gap-4 md:w-auto md:flex-row">
+          <ButtonLink variant="primary" href={primaryHref}>
+            {primaryLabel}
+          </ButtonLink>
+          <ButtonLink variant="secondary" href={secondaryHref}>
+            {secondaryLabel}
+          </ButtonLink>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative -order-1 overflow-hidden rounded-t-4xl bg-cover bg-[0_0] lg:order-none"
+      style={`background-image: url(${heroBackground.src});`}
+    >
+      <div
+        class="relative z-[2] flex aspect-[1200/565] w-full items-end justify-center"
+      >
+        <slot />
+      </div>
+    </div>
+  </div>
+  <div class="pb-section-xs"></div>
+  <Brands />
+  <div class="pb-section-xs"></div>
+</Section>

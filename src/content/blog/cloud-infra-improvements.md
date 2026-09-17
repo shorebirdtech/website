@@ -1,11 +1,20 @@
 ---
-title: Improved Cloud Infrastructure
+title: Improved cloud infrastructure
 author: felangel
 description:
   A deep dive into some of the recent backend infrastructure improvements we've
   made.
 date: 2025-04-17
-cover: improved-cloud-infra-cover.png
+cover: cloud-infra-improvements.png
+intro:
+  A deep dive into some of the recent backend infrastructure improvements we've
+  made.
+readingTime: 4 min read
+ogImage: '/blog/og/cloud-infra-improvements.jpg'
+seoTitle: Improved Cloud Infrastructure Behind Shorebird's Scale
+seoDescription:
+  A deep dive into some of the recent backend infrastructure improvements we've
+  made.
 ---
 
 Over the last few months we've experienced a lot of growth at Shorebird! Just in

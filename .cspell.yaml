@@ -2,111 +2,213 @@ $schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell
 version: '0.2'
 ignorePaths: ['dist', 'node_modules']
 words:
+  - abhilash
+  - abhishek
+  - abhishekdoshi
+  - addfirebase
+  - adekunle
   - afonso
+  - agentic
+  - aiks
+  - allowfullscreen
   - angelov
+  - aoki
   - apna
+  - apnaklub
   - araujo
   - arra
   - astro
   - astrojs
+  - atuoha
   - autoplay
+  - bdero
+  - behaviour
   - bhavesh
   - bigl
+  - bitrise
+  - blazor
+  - blockquotes
+  - brandonderosier
+  - brix
   - bryanoltman
   - cancelbots
-  - codemagic
-  - codelessly
-  - copplestone
+  - carrithers
   - chromecast
+  - cinterop
+  - cloudwalk
+  - codegen
+  - codelabs
+  - codelessly
+  - codemagic
+  - codesign
+  - copplestone
+  - couchsurfing
   - cupertino
+  - cutover
+  - deliveryhero
+  - derosier
   - devnomic
+  - devrel
+  - dmarc
   - dominik
+  - doshi
   - dougall
   - dreamflow
   - droidcon
+  - easymac
+  - eich
   - eseidel
   - esra
   - evenodd
+  - exat
   - felangel
   - felangelov
+  - figcaption
   - findstr
+  - finsweet
   - fintech
+  - firebasehosting
+  - firebaserc
   - fluttercon
   - flutterconusa
+  - foldables
   - fontsource
-  - fouc
   - footguns
+  - forrester
+  - fouc
   - frontends
   - frontmatter
+  - futureproof
   - gallego
   - ghisi
+  - glsl
+  - gradlew
   - grayscale
   - hackathon
+  - hamen
+  - hashir
   - headshot
   - headshots
+  - hiếu
+  - hotfixes
+  - hotlinking
   - howzat
   - icaza
   - idris
+  - inlines
   - itar
+  - jadx
+  - jank
+  - janky
+  - jaspr
+  - jetpack
   - jsxs
+  - jundlegames
   - junglee
   - kadah
   - kalshi
+  - katz
+  - kelkar
   - kellar
   - kijiji
   - killop
+  - klingsbo
   - klub
+  - koin
+  - kotlinx
+  - ktor
+  - laksh
   - lavamoat
   - leeming
+  - lintrk
   - logcat
+  - lukas
+  - maccarrithers
   - macdougall
   - mailchimp
   - mairramer
+  - masahiro
   - miklas
+  - mishra
+  - morgillo
+  - mozallowfullscreen
+  - multiplatform
   - narkhede
   - neha
+  - nickshorebird
+  - nickweatherley
+  - noindex
+  - nowa
   - nowrap
   - nubank
-  - nowa
   - oltman
   - onclick
   - pageload
   - palo
   - parzych
+  - peloton
   - pichai
+  - podfile
   - posthog
   - pubspec
   - pushpress
+  - rasterizes
+  - referrerpolicy
   - renan
+  - renuka
   - roadmaps
   - rollout
   - rollouts
   - roszkowski
   - sagalov
+  - samdariya
+  - scapia
+  - scroller
+  - scrollport
   - seidel
+  - serverpod
+  - shiki
+  - shoaib
   - shorebirddev
   - shorebirdtech
   - siclen
   - signup
   - signups
+  - skia
+  - skie
+  - skiko
+  - slsa
+  - snopes
   - solana
   - solides
   - souza
-  - sundar
-  - sunsetting
-  - snopes
-  - stac
+  - spirv
   - squircle
   - squircles
+  - stac
+  - startswith
+  - statista
+  - stdlib
+  - styleguide
+  - subosito
+  - sundar
+  - sunsetting
   - superlist
   - taha
+  - tasco
   - techlead
+  - techmakers
   - tesser
   - thiago
   - tomarra
+  - toolkits
   - tradeling
   - transformative
+  - triaging
+  - trần
   - tsconfigs
+  - tushar
+  - tusharghige
   - umit
   - underperforming
   - unsexy
@@ -114,9 +216,22 @@ words:
   - upvoted
   - userbase
   - veloso
+  - vercel
+  - vetc
+  - videogame
   - vyuh
   - wagus
+  - weatherley
+  - webclip
   - webflow
+  - webkitallowfullscreen
+  - webp
+  - wesleypeck
   - widgetbook
+  - withings
   - wolt
+  - wordmark
+  - worktree
+  - xcarchive
   - xlink
+  - yehuda

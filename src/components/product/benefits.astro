@@ -1,0 +1,79 @@
+---
+/**
+ * "Benefits — Shipping updates, made simple" (Webflow `.c_grid_3cols` of
+ * six `.c_card_s`), followed by the PushPress pull quote
+ * (`.c_unique_review`).
+ */
+import {
+  CircleDashedIcon,
+  ListChecksIcon,
+  PlanetIcon,
+  RewindIcon,
+  TimerIcon,
+  WrenchIcon,
+} from '@phosphor-icons/react';
+import Section from '@/components/ui/section.astro';
+import pushpress from '@/assets/product/pushpress.svg';
+
+const benefits = [
+  { icon: WrenchIcon, title: 'Push critical updates instantly' },
+  { icon: TimerIcon, title: 'Update apps for all users' },
+  { icon: RewindIcon, title: 'Rollback changes with impact' },
+  { icon: PlanetIcon, title: 'Deploy patches without delays' },
+  { icon: ListChecksIcon, title: 'Stay compliant' },
+  { icon: CircleDashedIcon, title: 'Phase out support' },
+];
+---
+
+<Section theme="light" id="benefits">
+  <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="hidden lg:col-span-1 lg:block"></div>
+    <div
+      class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-10"
+    >
+      <p class="body-s-strong text-brand-primary pb-text-s">Benefits</p>
+      <h2 class="title-l">Shipping updates, made simple</h2>
+    </div>
+  </div>
+  <div class="pb-section-xs"></div>
+  <div class="bg-border grid grid-cols-1 items-center gap-px md:grid-cols-3">
+    {
+      benefits.map((benefit) => (
+        <div class="bg-surface-1 flex h-full flex-col items-center justify-center py-8 text-center md:py-10 md:pr-8 md:pl-10">
+          <span class="badge-icon mb-text-s">
+            <benefit.icon size={24} weight="fill" />
+          </span>
+          <p class="body-l text-text-1">{benefit.title}</p>
+        </div>
+      ))
+    }
+  </div>
+  <div class="pb-section-l"></div>
+  <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+    <div class="hidden lg:col-span-2 lg:block"></div>
+    <div
+      class="col-span-12 flex h-full flex-col items-center justify-center text-center lg:col-span-8"
+    >
+      <img
+        src={pushpress.src}
+        width={pushpress.width}
+        height={pushpress.height}
+        alt="PushPress"
+        loading="lazy"
+        class="mb-text-l h-12 w-auto"
+      />
+      <p class="title-m">
+        Our speed to release updates has skyrocketed. It used to take four days
+        to two weeks depending on urgency. Now it’s way faster. The reliability
+        of shipping fixes is night and day.
+      </p>
+      <div
+        class="pt-text-xl flex flex-wrap items-center justify-center gap-0.5"
+      >
+        <p class="body-m">Allan Wright</p>
+        <p class="body-m">,</p>
+        <p class="body-m">Senior Mobile Developer</p>
+      </div>
+    </div>
+  </div>
+</Section>

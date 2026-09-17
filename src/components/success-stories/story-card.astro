@@ -1,0 +1,42 @@
+---
+/**
+ * Success-story card (Webflow `.c_card--cms_item`): the cover at its natural
+ * aspect ratio in a rounded frame, the customer name, and the one-line
+ * summary. Used by the success-stories index and the product pages'
+ * "Customers stories" grid.
+ */
+import { Image } from 'astro:assets';
+import { coverFor, type SuccessStory } from '@/lib/success-stories';
+
+export interface Props {
+  story: SuccessStory;
+  /** `sizes` for the responsive cover; defaults to a 3-up grid. */
+  sizes?: string;
+  /** Element to use for the name (`h2` on the index, `p` elsewhere). */
+  headingAs?: 'h2' | 'h3' | 'p';
+}
+
+const {
+  story,
+  sizes = '(max-width: 767px) 100vw, (max-width: 991px) 95vw, 390px',
+  headingAs: Heading = 'h2',
+} = Astro.props;
+---
+
+<a
+  href={`/success-stories/${story.id}`}
+  class="group flex flex-col hover:no-underline"
+>
+  <div class="overflow-hidden rounded-2xl">
+    <Image
+      src={coverFor(story)}
+      widths={[500, 800, 1080]}
+      sizes={sizes}
+      alt={story.data.title}
+      class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+    />
+  </div>
+  <div class="pb-text-l"></div>
+  <Heading class="title-s pb-text-s">{story.data.title}</Heading>
+  <p class="body-s">{story.data.description}</p>
+</a>

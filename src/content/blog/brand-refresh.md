@@ -1,9 +1,16 @@
 ---
-title: Website Redesign & Brand Refresh
+title: Website redesign & brand refresh
 author: felangel
 description: Announcing our redesigned site and refreshed branding.
 date: 2025-03-06
-cover: 'brand-refresh-cover.png'
+cover: brand-refresh.png
+intro: Announcing our redesigned site and refreshed branding.
+readingTime: 1 min read
+ogImage: '/blog/og/brand-refresh.jpg'
+seoTitle: Website Redesign & Brand Refresh
+seoDescription:
+  Shorebird unveils a redesigned website and refreshed brand, built to clearly
+  communicate our value to developers and non-technical teams.
 ---
 
 <!-- cspell:ignore Enuma  -->

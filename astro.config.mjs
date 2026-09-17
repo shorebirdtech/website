@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import config from './src/config';
+import firebase from './src/integrations/firebase';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap(), mdx()],
+  integrations: [react(), sitemap(), mdx(), firebase()],
   redirects: {
     '/faq': 'https://docs.shorebird.dev/faq',
     '/privacy.html': '/privacy',
@@ -21,7 +22,23 @@ export default defineConfig({
     '/success-stories/pushpress/': '/success-stories/push-press',
     '/talk-to-sales': config.contactSales,
     '/terms.html': '/terms',
-    '/workshops': 'https://calendly.com/felix-shorebird/shorebird-workshop',
     '/jobs/full-stack-software-engineer': '/jobs',
+    // Legal pages moved when the site moved to Webflow: the DPA lives at
+    // `/dpa` and the per-product terms are PDFs linked from `/terms`.
+    '/legal/dpa': '/dpa',
+    '/terms/ci': '/terms',
+    '/terms/code-push': '/terms',
+    // The raw-legal-text endpoints have to end in `.json` for a static host to
+    // serve them as JSON (nothing rewrites the `content-type` at the edge);
+    // keep the old paths the console may still hold working.
+    '/privacy/raw': '/privacy/raw.json',
+    '/terms/raw': '/terms/raw.json',
+    // Blog slugs were renamed when the site moved to Webflow; Webflow's slugs
+    // are canonical now.
+    '/blog/1.0': '/blog/1',
+    '/blog/dart-3.5.0': '/blog/dart-3-5-0',
+    '/blog/flutter-3.32-release': '/blog/flutter-3-32-release',
+    '/blog/growing': '/blog/shorebird-is-growing',
+    '/blog/building-great-developer-tools': '/blog/building-good-software',
   },
 });

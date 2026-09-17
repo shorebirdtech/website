@@ -1,11 +1,20 @@
 ---
-title: Introducing Shorebird CI (Beta)
+title: Introducing Shorebird CI (beta)
 author: shorebirdtech
 description:
   Announcing a new service from Shorebird, zero config CI for Flutter and Dart
   applications.
 date: 2025-09-09
-cover: 'introducing-shorebird-ci-cover.png'
+cover: introducing-shorebird-ci.png
+intro:
+  Announcing a new service from Shorebird, zero config CI for Flutter and Dart
+  applications.
+readingTime: 2 min read
+ogImage: '/blog/og/introducing-shorebird-ci.jpg'
+seoTitle: Introducing Shorebird CI (Beta)
+seoDescription:
+  Announcing a new service from Shorebird, zero config CI for Flutter and Dart
+  applications.
 ---
 
 We’re thrilled to announce our newest product:

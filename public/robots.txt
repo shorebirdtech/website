@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shorebird.dev/sitemap-index.xml

@@ -1,0 +1,36 @@
+---
+/**
+ * "Customers stories — View our customers using Code Push" (Webflow
+ * `.c_card--list`): three success-story cards from the content collection.
+ */
+import { getCollection } from 'astro:content';
+import Section from '@/components/ui/section.astro';
+import StoryCard from '@/components/success-stories/story-card.astro';
+
+export interface Props {
+  eyebrow: string;
+  title: string;
+  /** Success-story slugs to show, in order. */
+  stories: string[];
+}
+
+const { eyebrow, title, stories: slugs } = Astro.props;
+
+const all = await getCollection('successStories');
+const stories = slugs.map((slug) => {
+  const story = all.find((entry) => entry.id === slug);
+  if (!story) throw new Error(`Success story ${slug} not found`);
+  return story;
+});
+---
+
+<Section theme="dark" id="customers">
+  <div class="flex flex-col items-start">
+    <p class="body-s-strong text-brand-primary pb-text-s">{eyebrow}</p>
+    <h2 class="title-l">{title}</h2>
+  </div>
+  <div class="pb-section-xs"></div>
+  <div class="grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-3">
+    {stories.map((story) => <StoryCard story={story} headingAs="p" />)}
+  </div>
+</Section>

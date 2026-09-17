@@ -1,9 +1,16 @@
 ---
-title: Custom Update Tracks
+title: Custom update tracks
 author: bryanoltman
-description: Announcing the ability to create custom tracks
+description: Announcing the ability to create custom tracks.
 date: 2025-05-30
-cover: custom-tracks-cover.png
+cover: custom-tracks.avif
+intro: Announcing the ability to create custom tracks.
+readingTime: 2 min read
+ogImage: '/blog/og/custom-tracks.jpg'
+seoTitle: Custom Update Tracks for Flutter Patches
+seoDescription:
+  Create unlimited custom update tracks in Shorebird to control which users
+  receive which Flutter patches, beyond staging and beta.
 ---
 
 Shorebird now supports custom update tracks!

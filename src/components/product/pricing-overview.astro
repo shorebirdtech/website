@@ -1,0 +1,89 @@
+---
+/**
+ * "Pricing — Pay as you grow" (Webflow `.c_card_pricing` x4): the yearly
+ * plan summary on the product page, linking to the full pricing page.
+ */
+import { ButtonLink } from '@/components/ui/button';
+import Section from '@/components/ui/section.astro';
+import config from '@/config';
+
+const plans = [
+  {
+    name: 'Free',
+    description: 'Made for hobbyists, small apps, and demos.',
+    price: '$0',
+    period: '/year',
+    cta: 'Join free',
+    href: `${config.consoleUrl}/login`,
+    variant: 'secondary' as const,
+  },
+  {
+    name: 'Pro',
+    description: 'Sized for usage from medium sized apps with scalable pricing.',
+    price: '$240',
+    period: '/year',
+    cta: 'Get started',
+    href: `${config.consoleUrl}/login`,
+    variant: 'primary' as const,
+  },
+  {
+    name: 'Business',
+    description: 'Great for large apps with advanced needs.',
+    price: '$4,800',
+    period: '/year',
+    cta: 'Get started',
+    href: `${config.consoleUrl}/login`,
+    variant: 'secondary' as const,
+  },
+  {
+    name: 'Enterprise',
+    description: 'Build a custom plan for enterprise apps & needs.',
+    price: 'Custom',
+    cta: 'Talk to sales',
+    href: config.contactSales,
+    variant: 'secondary' as const,
+  },
+];
+---
+
+<Section theme="dark" id="pricing">
+  <div class="flex flex-row items-end justify-between">
+    <div class="flex flex-col items-start">
+      <p class="body-s-strong text-brand-secondary pb-text-s">Pricing</p>
+      <h2 class="title-l">Pay as you grow</h2>
+    </div>
+    <div class="hidden md:block">
+      <ButtonLink variant="secondary" href="/pricing">View full pricing</ButtonLink>
+    </div>
+  </div>
+  <div class="pb-section-s"></div>
+  <div class="grid grid-cols-1 gap-x-column-gap gap-y-row-gap md:grid-cols-2 lg:grid-cols-4">
+    {
+      plans.map((plan) => (
+        <div class="bg-surface-2 border-border flex h-full flex-col rounded-3xl border px-7 py-8">
+          <p class="title-s pb-text-xs">{plan.name}</p>
+          <p class="body-xs pb-text-s">{plan.description}</p>
+          <div class="divider" />
+          <div class="pt-text-l pb-text-l flex items-end gap-2">
+            <p class="title-m">{plan.price}</p>
+            {plan.period && <p class="body-s mb-[3px]">{plan.period}</p>}
+          </div>
+          <div class="flex flex-1 flex-col justify-end">
+            <ButtonLink
+              variant={plan.variant}
+              href={plan.href}
+              className="w-full"
+            >
+              {plan.cta}
+            </ButtonLink>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="pt-section-m md:hidden">
+    <ButtonLink variant="secondary" href="/pricing" className="w-full">
+      View full pricing
+    </ButtonLink>
+  </div>
+</Section>

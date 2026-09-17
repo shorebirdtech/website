@@ -1,35 +1,42 @@
+/*
+ * Shorebird design system.
+ *
+ * Tokens are ported from the Webflow site (shorebird.webflow.shared.*.css, kept in ../webflow-migration/webflow-export/css).
+ * The page is DARK by default (`:root`). Individual sections opt into light with
+ * `data-theme="light"` (alias: `.is--mode_1`), which re-assigns the surface/text
+ * variables for everything inside. `data-theme="dark"` (alias: `.is--mode_0`)
+ * re-asserts the dark values, e.g. for a dark card inside a light section.
+ * There is no `prefers-color-scheme` switching, on purpose.
+ */
+
+/* The live site only ships Medium (500) and Semibold (600). Weight 400 is not
+ * registered on purpose so `font-normal` resolves to Medium, exactly like the
+ * live site. Bold (700) is kept for <strong>. */
 @font-face {
-  font-family: 'GeneralSans';
-  src: url('/fonts/GeneralSans/GeneralSans-Bold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'GeneralSans';
-  src: url('/fonts/GeneralSans/GeneralSans-Semibold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'GeneralSans';
-  src: url('/fonts/GeneralSans/GeneralSans-Medium.otf') format('opentype');
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans/GeneralSans-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'GeneralSans';
-  src: url('/fonts/GeneralSans/GeneralSans-Regular.otf') format('opentype');
-  font-weight: normal;
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans/GeneralSans-Semibold.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'GeneralSans';
-  src: url('/fonts/GeneralSans/GeneralSans-Italic.otf') format('opentype');
-  font-weight: normal;
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans/GeneralSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans/GeneralSans-MediumItalic.otf') format('opentype');
+  font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
@@ -38,39 +45,474 @@
 @plugin '@tailwindcss/typography';
 @plugin 'tailwindcss-animate';
 
+/* ------------------------------------------------------------------------ */
+/* Color tokens (dark = default)                                            */
+/* ------------------------------------------------------------------------ */
+
 :root {
-  --foreground: #ffffff;
+  --surface-1: #0d1117;
+  --surface-2: #161c25;
+  --surface-3: #1e2733;
 
-  --surface-1: #151518;
-  --surface-2: #1f1f24;
-  --surface-3: #3f3f47;
+  --text-1: #f8f8f9;
+  --text-2: #909aa3;
+  --text-3: #5b6067;
+
+  --border-1: #ffffff1a;
+
+  --brand-primary: #79c0ff;
+  --brand-primary-soft: #e0f1ff;
+  --brand-secondary: #d49bff;
+  --brand-secondary-soft: #f2e0ff;
+
+  --button-primary-surface-1: #916ebb;
+  --button-primary-surface-2: #425ea3;
+  --button-primary-text: #ffffff;
+
+  --button-secondary-surface: #0d1117;
+  --button-secondary-surface-hover: #ffffff0a;
+  --button-secondary-border: #ffffff29;
+  --button-secondary-text: #ffffff;
+
+  --button-tertiary-text: #ffffff;
+
+  --nav-indicator-back: #79c0ff66;
+  --nav-indicator-front: #79c0ff;
+
+  /* Misc surfaces used by specific live components. */
+  --cta-band-surface: #1a2028;
+
+  /* Legacy aliases (pre-port pages still reference these). */
+  --foreground: var(--text-1);
   --surface-overlay: #000000;
-
-  --border-1: #3a3a42;
-  --border-2: #1a1a1a;
-
-  --text-1: #f0f0ee;
-  --text-2: #b8b8b7;
-  --text-3: #6d6d7a;
-  --text-gradient-1: #46ceff;
-  --text-gradient-2: #17ffcd;
-
-  --accent-primary-1: #2de8e5;
-  --accent-primary-2: #f0f0ee;
-  --accent-secondary-1: #2de8e5;
-  --accent-secondary-2: #f0f0ee;
-
-  --button-primary-surface: #3edcba;
-  --button-primary-surface-hover: #23c2a0;
+  --border-2: var(--border-1);
+  --text-gradient-1: var(--brand-primary);
+  --text-gradient-2: var(--brand-secondary);
+  --accent-primary-1: var(--brand-primary);
+  --accent-primary-2: var(--text-1);
+  --accent-secondary-1: var(--brand-secondary);
+  --accent-secondary-2: var(--text-1);
+  --button-primary-surface: var(--button-primary-surface-1);
+  --button-primary-surface-hover: var(--button-primary-surface-2);
   --button-primary-border: #ffffff;
-  --button-primary-text: #f0f0ee;
 
-  --button-secondary-surface: #161619;
-  --button-secondary-surface-hover: #161619;
-  --button-secondary-border: #3a3a42;
-  --button-secondary-text: #f0f0ee;
+  /* ---------------------------------------------------------------------- */
+  /* Layout / type scale tokens (responsive: overridden in media queries)    */
+  /* ---------------------------------------------------------------------- */
+
+  --container-size: 85rem; /* 1360px */
+  --container-size-lg: 96rem; /* 1536px */
+  --container-padding: 3.5rem;
+
+  --font-size-title-xxl: 4.5rem;
+  --font-size-title-xl: 4rem;
+  --font-size-title-l: 3rem;
+  --font-size-title-m: 1.75rem;
+  --font-size-title-s: 1.25rem;
+  --font-size-body-l: 1.375rem;
+  --font-size-body-m: 1.125rem;
+  --font-size-body-s: 1rem;
+  --font-size-body-xs: 0.875rem;
+  --font-size-label-s: 1rem;
+  --font-size-label-xs: 0.875rem;
+  --font-size-link-button-m: 1rem;
+  --font-size-link-button-s: 1rem;
+  --font-size-nav-link: 1rem;
+
+  --spacer-text-xs: 0.25rem;
+  --spacer-text-s: 1rem;
+  --spacer-text-m: 1.5rem;
+  --spacer-text-l: 2rem;
+  --spacer-text-xl: 2.5rem;
+  --spacer-text-xxl: 3.5rem;
+  --spacer-button: 2rem;
+  --spacer-section-xs: 2.5rem;
+  --spacer-section-s: 4rem;
+  --spacer-section-m: 6rem;
+  --spacer-section-l: 7.5rem;
+  --spacer-section-hero: 10rem;
+
+  --layout-column-gap: 2.5rem;
+  --layout-row-gap: 2rem;
+
+  --nav-height: 5rem;
 }
 
+/* Tablet (<= 991px) */
+@media (max-width: 991px) {
+  :root {
+    --container-padding: 1.5rem;
+    --font-size-nav-link: 1.125rem;
+  }
+}
+
+/* Mobile (<= 767px) */
+@media (max-width: 767px) {
+  :root {
+    --font-size-title-xxl: 2.5rem;
+    --font-size-title-xl: 2.25rem;
+    --font-size-title-l: 1.75rem;
+    --font-size-title-m: 1.375rem;
+    --font-size-title-s: 1.125rem;
+    --font-size-body-l: 1.25rem;
+    --font-size-body-m: 1rem;
+    --font-size-body-s: 0.875rem;
+    --font-size-body-xs: 0.75rem;
+    --font-size-label-xs: 0.75rem;
+    --font-size-link-button-m: 1.125rem;
+    --font-size-link-button-s: 0.875rem;
+    --font-size-nav-link: 1.125rem;
+
+    --spacer-text-s: 0.75rem;
+    --spacer-text-m: 1rem;
+    --spacer-text-l: 1rem;
+    --spacer-text-xl: 1.5rem;
+    --spacer-text-xxl: 3rem;
+    --spacer-section-xs: 1.5rem;
+    --spacer-section-s: 2rem;
+    --spacer-section-m: 2.5rem;
+    --spacer-section-l: 4rem;
+    --spacer-section-hero: 7.5rem;
+
+    --layout-column-gap: 1rem;
+
+    --nav-height: 4.5rem;
+  }
+}
+
+/* ------------------------------------------------------------------------ */
+/* Theme model                                                              */
+/* ------------------------------------------------------------------------ */
+
+[data-theme='light'],
+.is--mode_1 {
+  --surface-1: #ffffff;
+  --surface-2: #f6f6f7;
+  --surface-3: #faf6f3;
+  --text-1: #0d1117;
+  --text-2: #5a6066;
+  --text-3: #909aa3;
+  --border-1: #00000014;
+  --brand-primary: #be5615;
+  --brand-primary-soft: #fdf3ed;
+  --brand-secondary: #c7359b;
+  --brand-secondary-soft: #fbeff7;
+  --button-secondary-surface: #ffffff;
+  --button-secondary-surface-hover: #00000014;
+  --button-secondary-border: #00000014;
+  --button-secondary-text: #0d1117;
+  --button-tertiary-text: #666666;
+  color-scheme: light;
+}
+
+[data-theme='dark'],
+.is--mode_0 {
+  --surface-1: #0d1117;
+  --surface-2: #161c25;
+  --surface-3: #1e2733;
+  --text-1: #f8f8f9;
+  --text-2: #909aa3;
+  --text-3: #5b6067;
+  --border-1: #ffffff1a;
+  --brand-primary: #79c0ff;
+  --brand-primary-soft: #e0f1ff;
+  --brand-secondary: #d49bff;
+  --brand-secondary-soft: #f2e0ff;
+  --button-secondary-surface: #0d1117;
+  --button-secondary-surface-hover: #ffffff0a;
+  --button-secondary-border: #ffffff29;
+  --button-secondary-text: #ffffff;
+  --button-tertiary-text: #ffffff;
+  color-scheme: dark;
+}
+
+/* A themed wrapper paints its own surface and text color so that the theme is
+ * visible without any extra classes. Elements that also carry `.bg-*` classes
+ * win because Tailwind utilities are emitted later. */
+[data-theme] {
+  background-color: var(--surface-1);
+  color: var(--text-2);
+}
+
+/* ------------------------------------------------------------------------ */
+/* Tailwind theme                                                           */
+/* ------------------------------------------------------------------------ */
+
+@theme inline {
+  --font-sans:
+    'General Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Arial,
+    sans-serif;
+
+  /* Surfaces / text / borders: bg-surface-1, text-text-2, border-border, ... */
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-text-1: var(--text-1);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-border: var(--border-1);
+  --color-border-1: var(--border-1);
+  --color-border-2: var(--border-2);
+
+  /* Brand: text-brand-primary, bg-brand-primary-soft, ... */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-soft: var(--brand-primary-soft);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-secondary-soft: var(--brand-secondary-soft);
+
+  /* Buttons */
+  --color-button-primary-1: var(--button-primary-surface-1);
+  --color-button-primary-2: var(--button-primary-surface-2);
+  --color-button-primary-text: var(--button-primary-text);
+  --color-button-secondary-surface: var(--button-secondary-surface);
+  --color-button-secondary-surface-hover: var(--button-secondary-surface-hover);
+  --color-button-secondary-border: var(--button-secondary-border);
+  --color-button-secondary-text: var(--button-secondary-text);
+  --color-button-tertiary-text: var(--button-tertiary-text);
+  --color-nav-indicator-back: var(--nav-indicator-back);
+  --color-nav-indicator-front: var(--nav-indicator-front);
+  --color-cta-band: var(--cta-band-surface);
+
+  /* Legacy names still used by pre-port pages/components. */
+  --color-background: var(--surface-1);
+  --color-foreground: var(--text-1);
+  --color-accent-primary-1: var(--brand-primary);
+  --color-accent-primary-2: var(--accent-primary-2);
+  --color-accent-secondary-1: var(--brand-secondary);
+  --color-accent-secondary-2: var(--accent-secondary-2);
+  --color-text-gradient-1: var(--text-gradient-1);
+  --color-text-gradient-2: var(--text-gradient-2);
+  --color-card: var(--surface-2);
+  --color-card-foreground: var(--text-1);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--text-2);
+  --color-primary: var(--button-primary-surface-1);
+  --color-primary-foreground: var(--button-primary-text);
+  --color-secondary: var(--surface-2);
+  --color-secondary-foreground: var(--text-1);
+  --color-input: var(--border-1);
+  --color-ring: var(--brand-primary);
+  --color-destructive: #ef4444;
+  --color-segmented-control-background: var(--surface-2);
+  --color-segmented-control-foreground: var(--surface-3);
+
+  /* Type scale: text-title-xxl ... text-body-xs (responsive via the vars). */
+  --text-title-xxl: var(--font-size-title-xxl);
+  --text-title-xxl--line-height: 1.2;
+  --text-title-xxl--letter-spacing: -0.02em;
+  --text-title-xxl--font-weight: 600;
+  --text-title-xl: var(--font-size-title-xl);
+  --text-title-xl--line-height: 1.2;
+  --text-title-xl--letter-spacing: -0.02em;
+  --text-title-xl--font-weight: 600;
+  --text-title-l: var(--font-size-title-l);
+  --text-title-l--line-height: 1.2;
+  --text-title-l--letter-spacing: -0.02em;
+  --text-title-l--font-weight: 600;
+  --text-title-m: var(--font-size-title-m);
+  --text-title-m--line-height: 1.2;
+  --text-title-m--letter-spacing: -0.02em;
+  --text-title-m--font-weight: 600;
+  --text-title-s: var(--font-size-title-s);
+  --text-title-s--line-height: 1.2;
+  --text-title-s--letter-spacing: -0.02em;
+  --text-title-s--font-weight: 600;
+  --text-body-l: var(--font-size-body-l);
+  --text-body-l--line-height: 1.4;
+  --text-body-m: var(--font-size-body-m);
+  --text-body-m--line-height: 1.4;
+  --text-body-s: var(--font-size-body-s);
+  --text-body-s--line-height: 1.4;
+  --text-body-xs: var(--font-size-body-xs);
+  --text-body-xs--line-height: 1.4;
+  --text-label-s: var(--font-size-label-s);
+  --text-label-s--line-height: 1.4;
+  --text-label-xs: var(--font-size-label-xs);
+  --text-label-xs--line-height: 1.4;
+  --text-button-m: var(--font-size-link-button-m);
+  --text-button-m--line-height: 1.5;
+  --text-button-s: var(--font-size-link-button-s);
+  --text-button-s--line-height: 1.35;
+  --text-nav-link: var(--font-size-nav-link);
+  --text-nav-link--line-height: 1.35;
+
+  /* Spacing: p-section-m, gap-text-s, px-container, pt-nav ... */
+  --spacing-text-xs: var(--spacer-text-xs);
+  --spacing-text-s: var(--spacer-text-s);
+  --spacing-text-m: var(--spacer-text-m);
+  --spacing-text-l: var(--spacer-text-l);
+  --spacing-text-xl: var(--spacer-text-xl);
+  --spacing-text-xxl: var(--spacer-text-xxl);
+  --spacing-button: var(--spacer-button);
+  --spacing-section-xs: var(--spacer-section-xs);
+  --spacing-section-s: var(--spacer-section-s);
+  --spacing-section-m: var(--spacer-section-m);
+  --spacing-section-l: var(--spacer-section-l);
+  --spacing-section-hero: var(--spacer-section-hero);
+  --spacing-container: var(--container-padding);
+  --spacing-column-gap: var(--layout-column-gap);
+  --spacing-row-gap: var(--layout-row-gap);
+  --spacing-nav: var(--nav-height);
+
+  --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
+  --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Utilities                                                                */
+/* ------------------------------------------------------------------------ */
+
+/* Webflow `.g_page--container`: min(100%, 85rem) minus side padding, centered. */
+@utility page-container {
+  width: calc(min(100%, var(--container-size)) - var(--container-padding) * 2);
+  margin-inline: auto;
+  position: relative;
+}
+
+/* Webflow `.g_page--container.is--large` (96rem). */
+@utility page-container-lg {
+  width: calc(
+    min(100%, var(--container-size-lg)) - var(--container-padding) * 2
+  );
+  margin-inline: auto;
+  position: relative;
+}
+
+/* Webflow `.g_title--*` / `.g_body--*` / `.g_label` text styles. */
+@utility title-xxl {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-title-xxl);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text-1);
+}
+@utility title-xl {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-title-xl);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text-1);
+}
+@utility title-l {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-title-l);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text-1);
+}
+@utility title-m {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-title-m);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text-1);
+}
+@utility title-s {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-title-s);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text-1);
+}
+/* body-* = medium weight (Webflow *_1), body-*-strong = semibold (*_2). */
+@utility body-l {
+  font-size: var(--font-size-body-l);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-2);
+}
+@utility body-l-strong {
+  font-size: var(--font-size-body-l);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-2);
+}
+/* Webflow `.g_body--m_1` is actually title-s sized (1.25rem). */
+@utility body-m {
+  font-size: var(--font-size-title-s);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-2);
+}
+@utility body-m-strong {
+  font-size: var(--font-size-body-m);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-2);
+}
+@utility body-s {
+  font-size: var(--font-size-body-s);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-2);
+}
+@utility body-s-strong {
+  font-size: var(--font-size-body-s);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-2);
+}
+@utility body-xs {
+  font-size: var(--font-size-body-xs);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-2);
+}
+@utility body-xs-strong {
+  font-size: var(--font-size-body-xs);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-2);
+}
+@utility label-s {
+  font-size: var(--font-size-label-s);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-1);
+}
+/* Webflow `.g_label.is--footer`: uppercase eyebrow. */
+@utility label-xs {
+  font-size: var(--font-size-label-xs);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-1);
+}
+
+/* Webflow `.g_badge_icon` (icon chip on soft brand background). */
+@utility badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: var(--brand-primary-soft);
+  color: var(--brand-primary);
+}
+@utility badge-icon-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: var(--brand-secondary-soft);
+  color: var(--brand-secondary);
+}
+
+/* Webflow `.g_divider`. */
+@utility divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-1);
+}
+
+/* Legacy: gradient text used by pre-port pages. */
 .gradient-text {
   background: linear-gradient(
     90deg,
@@ -86,34 +528,6 @@
   a {
     @apply underline;
   }
-}
-
-@theme inline {
-  --font-sans: 'GeneralSans', 'sans-serif';
-  --color-background: var(--surface-1);
-  --color-foreground: var(--foreground);
-  --color-accent-secondary-1: var(--accent-secondary-1);
-  --color-border-1: var(--border-1);
-  --color-border-2: var(--border-2);
-
-  --color-text-1: var(--text-1);
-  --color-text-2: var(--text-2);
-  --color-text-3: var(--text-3);
-  --color-text-gradient-1: var(--text-gradient-1);
-  --color-text-gradient-2: var(--text-gradient-2);
-
-  --color-card: var(--surface-2);
-  --color-card-foreground: var(--text-1);
-  --color-accent-primary-1: var(--accent-primary-1);
-
-  --color-segmented-control-background: var(--surface-2);
-  --color-segmented-control-foreground: var(--surface-3);
-
-  --color-button-primary-text: var(--button-primary-text);
-  --color-button-secondary-text: var(--button-secondary-text);
-
-  --animate-marquee-left: marquee-left var(--duration, 40s) linear infinite;
-  --animate-marquee-up: marquee-up var(--duration, 40s) linear infinite;
 }
 
 @keyframes marquee-left {
@@ -134,9 +548,56 @@
   }
 }
 
+/* ------------------------------------------------------------------------ */
+/* Base                                                                     */
+/* ------------------------------------------------------------------------ */
+
 @layer base {
+  html {
+    background-color: var(--surface-1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: var(--nav-height);
+  }
+
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--surface-1);
+    color: var(--text-2);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-body-m);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-1);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    font-size: var(--font-size-title-xxl);
+  }
+  h2 {
+    font-size: var(--font-size-title-xl);
+  }
+  h3 {
+    font-size: var(--font-size-title-l);
+  }
+  h4 {
+    font-size: var(--font-size-title-m);
+  }
+  h5 {
+    font-size: var(--font-size-title-s);
+  }
+
+  strong {
+    font-weight: 700;
   }
 
   button {
@@ -144,26 +605,17 @@
   }
 
   a {
-    @apply hover:text-text-1 text-text-2 cursor-pointer hover:underline;
+    color: var(--text-2);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.25s;
+  }
+  a:hover {
+    color: var(--text-1);
   }
 
   ::selection {
-    @apply bg-accent-primary-1/60 text-text-1;
-  }
-
-  ::-moz-selection {
-    @apply bg-accent-primary-1/60 text-text-1;
-  }
-
-  ::-o-selection {
-    @apply bg-accent-primary-1/60 text-text-1;
-  }
-
-  ::-ms-selection {
-    @apply bg-accent-primary-1/60 text-text-1;
-  }
-
-  ::-webkit-selection {
-    @apply bg-accent-primary-1/60 text-text-1;
+    background-color: color-mix(in srgb, var(--brand-primary) 60%, transparent);
+    color: var(--text-1);
   }
 }

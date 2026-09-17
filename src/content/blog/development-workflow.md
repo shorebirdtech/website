@@ -3,7 +3,14 @@ title: How to integrate Shorebird into your development workflow
 author: felangel
 description: Announcing our opinionated development workflow guide.
 date: 2024-09-25
-cover: development-workflow-cover.png
+cover: development-workflow.avif
+intro: Announcing our opinionated development workflow guide.
+readingTime: 1 min read
+ogImage: '/blog/og/development-workflow.jpg'
+seoTitle: How to integrate Shorebird into your development workflow
+seoDescription:
+  An opinionated development workflow guide covering branching, CI, automated
+  releases, and Shorebird patches for Flutter teams.
 ---
 
 Our customers have been asking for an opinionated development workflow which

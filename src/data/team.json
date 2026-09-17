@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "eric-seidel",
+    "name": "Eric Seidel",
+    "role": "CEO and Founder",
+    "headshot": "/src/assets/team/eric-seidel.jpg",
+    "linkedin": "https://www.linkedin.com/in/ericseidel/",
+    "linkedinLabel": "View Eric Seidel on LinkedIn",
+    "order": 1
+  },
+  {
+    "slug": "dawn-parzych",
+    "name": "Dawn Parzych",
+    "role": "Head of Marketing",
+    "headshot": "/src/assets/team/dawn-parzych.avif",
+    "linkedin": "https://www.linkedin.com/in/dawn-parzych/",
+    "linkedinLabel": "View Dawn Parzych on LinkedIn",
+    "order": 3
+  },
+  {
+    "slug": "mac-carrithers",
+    "name": "Mac Carrithers",
+    "role": "Software Engineer",
+    "headshot": "/src/assets/team/mac-carrithers.avif",
+    "linkedin": "https://www.linkedin.com/in/mac-carrithers/",
+    "linkedinLabel": "View Mac Carrithers on LinkedIn",
+    "order": 4
+  },
+  {
+    "slug": "nick-weatherley",
+    "name": "Nick Weatherley",
+    "role": "Software Engineer",
+    "headshot": "/src/assets/team/nick-weatherley.jpg",
+    "linkedin": "https://www.linkedin.com/in/nicholas-weatherley-508b73aa/",
+    "linkedinLabel": "View Nick Weatherley on LinkedIn",
+    "order": 6
+  },
+  {
+    "slug": "abhishek-doshi",
+    "name": "Abhishek Doshi",
+    "role": "Developer Relations Engineer",
+    "headshot": "/src/assets/team/abhishek-doshi.jpg",
+    "linkedin": "https://www.linkedin.com/in/abhishekdoshi26/",
+    "linkedinLabel": "View Abhishek Doshi on LinkedIn",
+    "order": 6
+  },
+  {
+    "slug": "wesley-peck",
+    "name": "Wesley Peck",
+    "role": "Lead Product Manager",
+    "headshot": "/src/assets/team/wesley-peck.png",
+    "linkedin": "https://www.linkedin.com/in/wesley-peck/",
+    "linkedinLabel": "View Wesley on LinkedIn",
+    "order": 7
+  },
+  {
+    "slug": "josh-owens",
+    "name": "Josh Owens",
+    "role": "Sales Lead",
+    "headshot": "/src/assets/team/josh-owens.jpg",
+    "linkedin": "https://www.linkedin.com/in/owens-josh/",
+    "linkedinLabel": "View Josh Owens on LinkedIn",
+    "order": 8
+  }
+]

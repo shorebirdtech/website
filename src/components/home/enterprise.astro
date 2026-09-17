@@ -1,0 +1,52 @@
+---
+/**
+ * "Enterprise-scale infrastructure" — the dark card inside a light band
+ * (Webflow `.c_cta_card` in a `.g_page--container.is--large`).
+ */
+import { Image } from 'astro:assets';
+import { ButtonLink } from '@/components/ui/button';
+import Section from '@/components/ui/section.astro';
+import globe from '@/assets/home/enterprise-globe.webp';
+import config from '@/config';
+---
+
+<Section theme="light" container="large" id="enterprise">
+  <div
+    data-theme="dark"
+    class="bg-surface-1 grid grid-cols-1 gap-16 rounded-3xl px-6 py-8 md:p-16 lg:grid-cols-2"
+  >
+    <div class="flex h-full flex-col items-start justify-center">
+      <h2 class="title-l pb-text-s">Enterprise-scale infrastructure</h2>
+      <p class="body-m pb-text-xl">
+        Our global distribution network ensures patches reach users quickly,
+        anywhere in the world
+      </p>
+      <div class="flex w-full flex-col gap-4 md:w-auto md:flex-row">
+        <ButtonLink variant="primary" href={`${config.consoleUrl}/login`}>
+          Try for Free
+        </ButtonLink>
+        <ButtonLink
+          variant="secondary"
+          href={config.enterpriseDemoUrl}
+          target="_blank"
+          trailing="dot"
+        >
+          View our Demo
+        </ButtonLink>
+      </div>
+    </div>
+    <div
+      class="-order-1 flex h-full flex-col items-center justify-start lg:order-none lg:items-start lg:justify-center"
+    >
+      <div class="w-full overflow-hidden rounded-2xl">
+        <Image
+          src={globe}
+          widths={[500, 800, 1080, 1476]}
+          sizes="(max-width: 1023px) 100vw, 600px"
+          alt=""
+          class="w-full"
+        />
+      </div>
+    </div>
+  </div>
+</Section>

@@ -1,9 +1,16 @@
 ---
-title: Building The Flock - Tom Arra joins Shorebird!
+title: Building the flock - Tom Arra joins Shorebird!
 author: tomarra
-description: Starting the growth outside of just Engineering
+description: Starting the growth outside of just Engineering.
 date: 2025-02-10
-cover: tom-joins-shorebird-cover.png
+cover: tom-joins-shorebird.avif
+intro: Starting the growth outside of just Engineering.
+readingTime: 2 min read
+ogImage: '/blog/og/tom-joins-shorebird.jpg'
+seoTitle: Building The Flock - Tom Arra joins Shorebird!
+seoDescription:
+  Tom Arra joins Shorebird to lead growth beyond engineering, doubling down on
+  Flutter and multi-platform app development.
 ---
 
 I’m excited to share that I’ve joined Shorebird!
