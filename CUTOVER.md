@@ -74,6 +74,18 @@ is done until its box is checked.
       Webflow page and were deliberately not ported. Plausible and the LinkedIn
       insight tag are ported. Script and keys are in
       `../webflow-migration/webflow-export/pages/home.html` if we want them.
+      This decision gates the legal round below: HubSpot sets cookies, so
+      whether it ships changes what the policy has to say.
+- [ ] **Legal round on the privacy policy and terms** (@eseidel, 2026-09-16: "we
+      need to do another round of our Terms with our lawyers"). Two known gaps,
+      both pre-existing on the live Webflow site rather than introduced by the
+      port:
+  - The **Cookies** section says "We do not use any cookies for advertising,
+    analytics, or tracking purposes." The LinkedIn Insight tag (ported) sets
+    `bcookie`/`li_*` for exactly that, and HubSpot sets its own if it ships.
+  - The **Shorebird List of Vendors** now lists LinkedIn. Add HubSpot only if
+    the decision above is to port it — the Astro site does not load it today, so
+    listing it before then would be wrong in the other direction.
 - [ ] **Trailing slashes: decided, keep Astro's default** (`/blog/foo/`,
       canonical + `og:url` + sitemap already agree). Webflow served `/blog/foo`;
       `"trailingSlash": true` in `firebase.json` 301s the slash-less form to the
