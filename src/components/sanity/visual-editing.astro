@@ -29,16 +29,77 @@ const exitUrl = `/api/preview/disable?to=${encodeURIComponent(Astro.url.pathname
 }
 
 <script>
+  import type {
+    HistoryAdapter,
+    HistoryAdapterNavigate,
+  } from '@sanity/visual-editing';
+
+  // This is a multi-page site, so the Studio has to be told the iframe's
+  // URL explicitly and every navigation it requests becomes a full load.
+  // Mirrors the adapter in @sanity/astro's VisualEditing component.
+  const currentUrl = () =>
+    `${location.pathname}${location.search}${location.hash}`;
+
+  let navigate: HistoryAdapterNavigate | undefined;
+  let lastUrl = '';
+
+  const publish = (url: string, force = false) => {
+    if (!navigate || (!force && url === lastUrl)) return;
+    lastUrl = url;
+    navigate({ type: 'push', title: document.title, url });
+  };
+  const sync = () => publish(currentUrl());
+
+  // Report same-origin link clicks before the load starts so the Studio's
+  // address bar and document list follow along instead of snapping back.
+  document.addEventListener(
+    'click',
+    (event) => {
+      if (event.defaultPrevented || event.button !== 0) return;
+      if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+      const anchor =
+        event.target instanceof Element
+          ? event.target.closest<HTMLAnchorElement>('a[href]')
+          : null;
+      if (!anchor || (anchor.target && anchor.target !== '_self')) return;
+      const target = new URL(anchor.href, location.href);
+      if (target.origin !== location.origin) return;
+      publish(`${target.pathname}${target.search}${target.hash}`, true);
+    },
+    true,
+  );
+  window.addEventListener('popstate', sync);
+  window.addEventListener('hashchange', sync);
+
+  const history: HistoryAdapter = {
+    subscribe(callback) {
+      navigate = callback;
+      lastUrl = currentUrl();
+      navigate({ type: 'replace', title: document.title, url: lastUrl });
+      return () => {
+        if (navigate === callback) navigate = undefined;
+      };
+    },
+    update(update) {
+      if (update.type === 'pop') return window.history.back();
+      if (location.href === new URL(update.url, location.href).href) return;
+      if (update.type === 'replace') location.replace(update.url);
+      else location.assign(update.url);
+    },
+  };
+
   if (document.querySelector('[data-sanity-visual-editing]')) {
     const { enableVisualEditing } = await import('@sanity/visual-editing');
     enableVisualEditing({
       zIndex: 1000,
+      history,
       // Every edit re-renders on the server; a reload is the simplest way to
       // pick that up without client-side data loaders.
-      refresh: () => {
-        window.location.reload();
-        return new Promise(() => {});
-      },
+      refresh: () =>
+        new Promise<void>((resolve) => {
+          location.reload();
+          resolve();
+        }),
     });
   }
 </script>
@@ -75,6 +136,7 @@ const exitUrl = `/api/preview/disable?to=${encodeURIComponent(Astro.url.pathname
     height: 0.5rem;
     border-radius: 50%;
     background: var(--brand-primary);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-primary) 30%, transparent);
+    box-shadow: 0 0 0 4px
+      color-mix(in srgb, var(--brand-primary) 30%, transparent);
   }
 </style>

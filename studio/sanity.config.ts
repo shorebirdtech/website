@@ -4,6 +4,7 @@ import { visionTool } from '@sanity/vision';
 import { defineConfig, type WorkspaceOptions } from 'sanity';
 import { presentationTool } from 'sanity/presentation';
 import { structureTool } from 'sanity/structure';
+import { resolve } from './presentation/resolve';
 import { schemaTypes } from './schemaTypes';
 import { structure } from './structure';
 
@@ -24,6 +25,7 @@ function workspace(
     plugins: [
       structureTool({ structure }),
       presentationTool({
+        resolve,
         previewUrl: {
           origin: previewOrigin ?? 'http://localhost:4321',
           previewMode: { enable: '/api/preview/enable' },
@@ -43,5 +45,9 @@ export default defineConfig([
     'Shorebird',
     process.env.SANITY_STUDIO_PREVIEW_ORIGIN_PRODUCTION,
   ),
-  workspace('dev', 'Shorebird (dev)', process.env.SANITY_STUDIO_PREVIEW_ORIGIN_DEV),
+  workspace(
+    'dev',
+    'Shorebird (dev)',
+    process.env.SANITY_STUDIO_PREVIEW_ORIGIN_DEV,
+  ),
 ]);

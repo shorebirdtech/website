@@ -209,7 +209,7 @@ const pluginTypes = [
 const blockContentType = createSchema({
   name: 'shorebird',
   types: [...schemaTypes, ...pluginTypes],
-}).get('blockContent')!;
+}).get('blockContent') as Parameters<typeof htmlToBlocks>[1];
 
 const keyGenerator = () => Math.random().toString(36).slice(2, 14);
 
@@ -217,7 +217,9 @@ const tag = (node: Node) => (node as Element).tagName?.toLowerCase();
 const attr = (node: Node, name: string) =>
   (node as Element).getAttribute?.(name) ?? '';
 
-function embedFor(el: Element): Record<string, unknown> | undefined {
+function embedFor(
+  el: Element,
+): { _type: 'embed'; [key: string]: unknown } | undefined {
   const iframe = tag(el) === 'iframe' ? el : el.querySelector('iframe');
   const src = iframe ? attr(iframe, 'src') : '';
   if (/youtube\.com\/embed\//.test(src)) {
