@@ -1,19 +1,33 @@
 ---
-import { getCollection, render } from 'astro:content';
 import BlogLayout from '@/layouts/blog.astro';
+import {
+  allPostsFullQuery,
+  loadQuery,
+  postQuery,
+  type Post,
+} from '@/lib/sanity';
 
+// Static build: one query for every post, passed down as props. The preview
+// server ignores this and fetches per request so drafts show up.
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
-  }));
+  const posts = await loadQuery<Post[]>({ query: allPostsFullQuery });
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
 
-const { post } = Astro.props;
-const { Content } = await render(post);
+interface Props {
+  post?: Post;
+}
+
+const preview = Astro.locals.preview;
+const post =
+  !preview && Astro.props.post
+    ? Astro.props.post
+    : await loadQuery<Post | null>({
+        query: postQuery,
+        params: { slug: Astro.params.slug },
+        preview,
+      });
+if (!post) return Astro.rewrite('/404');
 ---
 
-<BlogLayout {...post.data}>
-  <Content />
-</BlogLayout>
+<BlogLayout {post} />

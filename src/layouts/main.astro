@@ -1,6 +1,8 @@
 ---
 import '@/styles/global.css';
 import config from '@/config';
+import VisualEditing from '@/components/sanity/visual-editing.astro';
+import { previewDeployment } from '@/lib/sanity/config';
 export interface Props {
   title: string;
   /** Meta/OG description. Defaults to the site tagline. */
@@ -15,6 +17,7 @@ const {
 } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const coverUrl = new URL(image, Astro.site);
+const preview = Astro.locals?.preview ?? false;
 ---
 
 <!doctype html>
@@ -28,6 +31,7 @@ const coverUrl = new URL(image, Astro.site);
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalUrl} />
+    {previewDeployment && <meta name="robots" content="noindex, nofollow" />}
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
       rel="alternate"
@@ -123,5 +127,6 @@ const coverUrl = new URL(image, Astro.site);
   </head>
   <body class="bg-surface-1 text-text-2 font-sans">
     <slot />
+    <VisualEditing enabled={preview} />
   </body>
 </html>

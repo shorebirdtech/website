@@ -4,16 +4,18 @@
  * a dark hero title, the 3-up grid of every story newest first, then the CTA
  * band + footer.
  */
-import { getCollection } from 'astro:content';
 import { Navbar } from '@/components/ui/navbar';
 import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import Section from '@/components/ui/section.astro';
 import StoryCard from '@/components/success-stories/story-card.astro';
-import { sortByDate } from '@/lib/success-stories';
+import { loadQuery, storiesQuery, type StoryCard as Story } from '@/lib/sanity';
 
-const stories = sortByDate(await getCollection('successStories'));
+const stories = await loadQuery<Story[]>({
+  query: storiesQuery,
+  preview: Astro.locals.preview,
+});
 ---
 
 <MainLayout

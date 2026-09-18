@@ -1,0 +1,80 @@
+---
+/**
+ * Click-to-edit overlays for the Studio's Presentation tool. Rendered only
+ * when the request carries the preview cookie, and the overlay script is
+ * loaded on demand so published pages never ship it.
+ */
+import { studioUrl } from '@/lib/sanity/config';
+
+interface Props {
+  enabled: boolean;
+}
+
+const { enabled } = Astro.props;
+const exitUrl = `/api/preview/disable?to=${encodeURIComponent(Astro.url.pathname)}`;
+---
+
+{
+  enabled && (
+    <>
+      <div data-sanity-visual-editing hidden />
+      <div class="preview-pill" role="status">
+        <span class="preview-dot" aria-hidden="true" />
+        Previewing drafts
+        <a href={studioUrl}>Studio</a>
+        <a href={exitUrl}>Exit</a>
+      </div>
+    </>
+  )
+}
+
+<script>
+  if (document.querySelector('[data-sanity-visual-editing]')) {
+    const { enableVisualEditing } = await import('@sanity/visual-editing');
+    enableVisualEditing({
+      zIndex: 1000,
+      // Every edit re-renders on the server; a reload is the simplest way to
+      // pick that up without client-side data loaders.
+      refresh: () => {
+        window.location.reload();
+        return new Promise(() => {});
+      },
+    });
+  }
+</script>
+
+<style>
+  .preview-pill {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.875rem;
+    border: 1px solid var(--border-1);
+    border-radius: 999px;
+    background: var(--surface-2);
+    color: var(--text-1);
+    font-size: var(--font-size-body-s);
+    font-weight: 500;
+    transform: translateX(-50%);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.25);
+  }
+  .preview-pill a {
+    color: var(--text-2);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .preview-pill a:hover {
+    color: var(--text-1);
+  }
+  .preview-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-primary) 30%, transparent);
+  }
+</style>

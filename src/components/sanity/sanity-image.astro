@@ -1,0 +1,54 @@
+---
+/**
+ * An <img> served from Sanity's image CDN with a `srcset` at the given
+ * widths. Width/height come from the asset metadata so the layout does not
+ * shift while it loads. Resizing happens on the CDN, so builds never
+ * download or re-encode images.
+ */
+import type { HTMLAttributes } from 'astro/types';
+import { srcSet, urlFor, type SanityImage } from '@/lib/sanity/image';
+
+interface Props extends Omit<HTMLAttributes<'img'>, 'src' | 'srcset' | 'width' | 'height'> {
+  image: SanityImage;
+  alt: string;
+  widths?: number[];
+  sizes?: string;
+  /** Force a fixed aspect by cropping to `width x height` (uses the hotspot). */
+  crop?: { width: number; height: number };
+}
+
+const {
+  image,
+  alt,
+  widths = [500, 800, 1080, 1600],
+  sizes = '100vw',
+  crop,
+  loading = 'lazy',
+  decoding = 'async',
+  ...rest
+} = Astro.props;
+
+const dims = image.asset?.metadata?.dimensions;
+const src = crop
+  ? urlFor(image).width(crop.width).height(crop.height).fit('crop').url()
+  : urlFor(image).width(widths[widths.length - 1]).url();
+const srcset = crop
+  ? [1, 2]
+      .map((dpr) => `${urlFor(image).width(crop.width * dpr).height(crop.height * dpr).fit('crop').url()} ${dpr}x`)
+      .join(', ')
+  : srcSet(image, widths);
+const width = crop?.width ?? dims?.width;
+const height = crop?.height ?? dims?.height;
+---
+
+<img
+  {src}
+  {srcset}
+  sizes={crop ? undefined : sizes}
+  {width}
+  {height}
+  {alt}
+  {loading}
+  {decoding}
+  {...rest}
+/>

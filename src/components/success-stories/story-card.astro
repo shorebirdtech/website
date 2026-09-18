@@ -5,11 +5,11 @@
  * summary. Used by the success-stories index and the product pages'
  * "Customers stories" grid.
  */
-import { Image } from 'astro:assets';
-import { coverFor, type SuccessStory } from '@/lib/success-stories';
+import SanityImage from '@/components/sanity/sanity-image.astro';
+import type { StoryCard } from '@/lib/sanity';
 
 export interface Props {
-  story: SuccessStory;
+  story: StoryCard;
   /** `sizes` for the responsive cover; defaults to a 3-up grid. */
   sizes?: string;
   /** Element to use for the name (`h2` on the index, `p` elsewhere). */
@@ -24,19 +24,19 @@ const {
 ---
 
 <a
-  href={`/success-stories/${story.id}`}
+  href={`/success-stories/${story.slug}`}
   class="group flex flex-col hover:no-underline"
 >
   <div class="overflow-hidden rounded-2xl">
-    <Image
-      src={coverFor(story)}
+    <SanityImage
+      image={story.cover}
       widths={[500, 800, 1080]}
       sizes={sizes}
-      alt={story.data.title}
+      alt={story.title}
       class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
     />
   </div>
   <div class="pb-text-l"></div>
-  <Heading class="title-s pb-text-s">{story.data.title}</Heading>
-  <p class="body-s">{story.data.description}</p>
+  <Heading class="title-s pb-text-s">{story.title}</Heading>
+  <p class="body-s">{story.description}</p>
 </a>

@@ -1,0 +1,34 @@
+---
+import type { Props as PtProps } from 'astro-portabletext/types';
+
+interface Row {
+  _key: string;
+  cells: string[];
+}
+
+type Props = PtProps<{ _type: 'table'; rows: Row[] }>;
+
+const { node } = Astro.props;
+// The Studio's table has no header flag; the first row is the header, which
+// is how every migrated Markdown table was written.
+const [head, ...rows] = node.rows ?? [];
+---
+
+{
+  head && (
+    <table>
+      <thead>
+        <tr>
+          {head.cells.map((cell) => <th>{cell}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => (
+          <tr>
+            {row.cells.map((cell) => <td>{cell}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}

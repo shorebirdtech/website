@@ -1,0 +1,28 @@
+---
+/**
+ * Renders a Portable Text body with the site's block types. Default text
+ * blocks, lists and marks come from astro-portabletext and are styled by
+ * `rich-text.css` through the wrapping `.prose.rich-text`.
+ */
+import { PortableText } from 'astro-portabletext';
+import type { PortableTextBlock } from '@portabletext/types';
+import Code from './code.astro';
+import Embed from './embed.astro';
+import Figure from './figure.astro';
+import Kbd from './kbd.astro';
+import Link from './link.astro';
+import Table from './table.astro';
+
+interface Props {
+  value: PortableTextBlock[] | undefined;
+}
+
+const { value } = Astro.props;
+
+const components = {
+  type: { image: Figure, code: Code, table: Table, embed: Embed },
+  mark: { link: Link, kbd: Kbd },
+};
+---
+
+{value && <PortableText {value} {components} />}

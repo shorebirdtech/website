@@ -1,0 +1,270 @@
+---
+/**
+ * Product changelog: a month-by-month timeline of every shipped change,
+ * filterable by product area. The same entries feed `/changelog.json` and
+ * `/changelog/rss.xml`.
+ */
+import '@/styles/rich-text.css';
+import { Navbar } from '@/components/ui/navbar';
+import CtaBand from '@/components/ui/cta-band.astro';
+import Footer from '@/components/ui/footer.astro';
+import FormattedDate from '@/components/blog/formatted-date.astro';
+import RichText from '@/components/portable-text/rich-text.astro';
+import MainLayout from '@/layouts/main.astro';
+import Section from '@/components/ui/section.astro';
+import {
+  areaLabels,
+  groupByMonth,
+  kindLabels,
+  loadChangelog,
+} from '@/lib/changelog';
+import { toDate, type ChangelogArea } from '@/lib/sanity';
+
+const entries = await loadChangelog(Astro.locals.preview);
+const months = groupByMonth(entries);
+const areas = (Object.keys(areaLabels) as ChangelogArea[]).filter((area) =>
+  entries.some((entry) => entry.area === area),
+);
+---
+
+<MainLayout
+  title="Changelog | What's New in Shorebird"
+  description="Every improvement to Shorebird Code Push, the console, the CLI and the docs, as it ships."
+>
+  <Fragment slot="head">
+    <link
+      rel="alternate"
+      type="application/json"
+      title="Shorebird Changelog (JSON)"
+      href="/changelog.json"
+    />
+  </Fragment>
+
+  <Navbar client:load initialTheme="dark" />
+
+  <Section as="header" theme="dark">
+    <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
+    <div class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap">
+      <div class="col-span-12 flex flex-col items-start lg:col-span-8">
+        <h1 class="title-xl pb-text-m">Changelog</h1>
+        <p class="body-m">Every improvement to Shorebird, as it ships.</p>
+      </div>
+      <div
+        class="col-span-12 flex items-center gap-4 lg:col-span-4 lg:justify-end"
+      >
+        <a href="/changelog/rss.xml" class="feed-link">RSS</a>
+        <a href="/changelog.json" class="feed-link">JSON</a>
+      </div>
+    </div>
+    <div class="pb-section-xs"></div>
+
+    {/* Area filter. Progressive: without JS every entry shows. */}
+    <div
+      class="flex flex-wrap gap-2"
+      role="group"
+      aria-label="Filter by product area"
+      data-changelog-filter
+    >
+      <button type="button" class="chip" data-area="all" aria-pressed="true">
+        All
+      </button>
+      {
+        areas.map((area) => (
+          <button
+            type="button"
+            class="chip"
+            data-area={area}
+            aria-pressed="false"
+          >
+            {areaLabels[area]}
+          </button>
+        ))
+      }
+    </div>
+    <div class="pb-section-xs"></div>
+  </Section>
+
+  <Section theme="dark">
+    {
+      months.length === 0 && (
+        <p class="body-m">Nothing here yet. Check back soon.</p>
+      )
+    }
+    <div class="flex flex-col gap-section-s" data-changelog-list>
+      {
+        months.map((month) => (
+          <section
+            class="grid grid-cols-12 gap-x-column-gap gap-y-row-gap"
+            data-month
+          >
+            <h2 class="label-xs col-span-12 lg:col-span-3 lg:sticky lg:top-24 lg:self-start">
+              {month.label}
+            </h2>
+            <ol class="col-span-12 flex flex-col lg:col-span-9">
+              {month.entries.map((entry) => (
+                <li
+                  id={entry.slug}
+                  class="entry"
+                  data-area={entry.area}
+                >
+                  <div class="flex flex-wrap items-center gap-3 pb-text-s">
+                    <span class:list={['kind', `kind--${entry.kind}`]}>
+                      {kindLabels[entry.kind]}
+                    </span>
+                    <span class="body-s text-text-3">
+                      {areaLabels[entry.area]}
+                    </span>
+                    <span class="body-s text-text-3" aria-hidden="true">
+                      ·
+                    </span>
+                    <span class="body-s text-text-3">
+                      <FormattedDate date={toDate(entry.date)} />
+                    </span>
+                    {entry.minFlutterVersion && (
+                      <span class="body-s text-text-3">
+                        Flutter {entry.minFlutterVersion}+
+                      </span>
+                    )}
+                  </div>
+                  <h3 class="title-s pb-text-s">
+                    <a href={`#${entry.slug}`} class="hover:no-underline">
+                      {entry.title}
+                    </a>
+                  </h3>
+                  <p class="body-m">{entry.summary}</p>
+                  {entry.body && entry.body.length > 0 && (
+                    <div class="prose rich-text pt-text-m">
+                      <RichText value={entry.body} />
+                    </div>
+                  )}
+                  {entry.link && (
+                    <p class="pt-text-m">
+                      <a
+                        href={entry.link}
+                        class="body-s-strong text-text-1 underline underline-offset-2"
+                      >
+                        Read more
+                      </a>
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))
+      }
+    </div>
+    <p class="body-m hidden" data-changelog-empty>
+      No entries in this area yet.
+    </p>
+  </Section>
+
+  <CtaBand />
+  <Footer />
+</MainLayout>
+
+<script>
+  // Area filter: toggle entries, hide months with nothing left to show, and
+  // keep the choice in the URL hash-free query so a link can pre-filter.
+  const root = document.querySelector<HTMLElement>('[data-changelog-filter]');
+  const chips = root
+    ? Array.from(root.querySelectorAll<HTMLButtonElement>('[data-area]'))
+    : [];
+  const entries = Array.from(
+    document.querySelectorAll<HTMLElement>('.entry[data-area]'),
+  );
+  const months = Array.from(document.querySelectorAll<HTMLElement>('[data-month]'));
+  const empty = document.querySelector<HTMLElement>('[data-changelog-empty]');
+
+  function apply(area: string) {
+    let shown = 0;
+    for (const entry of entries) {
+      const on = area === 'all' || entry.dataset.area === area;
+      entry.hidden = !on;
+      if (on) shown++;
+    }
+    for (const month of months) {
+      month.hidden = !month.querySelector('.entry:not([hidden])');
+    }
+    empty?.classList.toggle('hidden', shown > 0);
+    for (const chip of chips) {
+      chip.setAttribute('aria-pressed', String(chip.dataset.area === area));
+    }
+    const url = new URL(window.location.href);
+    if (area === 'all') url.searchParams.delete('area');
+    else url.searchParams.set('area', area);
+    history.replaceState(null, '', url);
+  }
+
+  for (const chip of chips) {
+    chip.addEventListener('click', () => apply(chip.dataset.area ?? 'all'));
+  }
+  const initial = new URL(window.location.href).searchParams.get('area');
+  if (initial && chips.some((chip) => chip.dataset.area === initial)) {
+    apply(initial);
+  }
+</script>
+
+<style>
+  .feed-link {
+    color: var(--text-2);
+    font-size: var(--font-size-body-s);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .feed-link:hover {
+    color: var(--text-1);
+  }
+  .chip {
+    padding: 0.375rem 0.875rem;
+    border: 1px solid var(--border-1);
+    border-radius: 999px;
+    color: var(--text-2);
+    font-size: var(--font-size-body-s);
+    font-weight: 500;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+  }
+  .chip:hover {
+    color: var(--text-1);
+    background-color: var(--button-secondary-surface-hover);
+  }
+  .chip[aria-pressed='true'] {
+    color: var(--surface-1);
+    background-color: var(--text-1);
+    border-color: var(--text-1);
+  }
+  .entry {
+    padding: var(--spacer-text-xl) 0;
+    border-top: 1px solid var(--border-1);
+    scroll-margin-top: 6rem;
+  }
+  .entry:last-child {
+    border-bottom: 1px solid var(--border-1);
+  }
+  .kind {
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: var(--font-size-label-s);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .kind--new {
+    color: var(--brand-primary);
+    background-color: color-mix(in srgb, var(--brand-primary) 15%, transparent);
+  }
+  .kind--improved {
+    color: var(--brand-secondary);
+    background-color: color-mix(in srgb, var(--brand-secondary) 15%, transparent);
+  }
+  .kind--fixed {
+    color: var(--text-1);
+    background-color: color-mix(in srgb, var(--text-1) 12%, transparent);
+  }
+  .kind--deprecated {
+    color: var(--text-2);
+    background-color: color-mix(in srgb, var(--text-2) 15%, transparent);
+  }
+</style>

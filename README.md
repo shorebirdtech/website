@@ -33,16 +33,25 @@ docker compose up --build
 
 ## Content
 
-- `src/content/blog/*.md` — blog posts. Frontmatter: `title`, `description`,
-  `author` (key into the `authors` map in `src/layouts/blog.astro`), `date`,
-  `cover`, plus the Webflow-era fields `intro`, `readingTime`, `ogImage`,
-  `seoTitle`, `seoDescription`, `highlight`. Body images live in
-  `src/assets/blog/<slug>/`, covers in `src/assets/blog/covers/`, share images
-  in `public/blog/og/` (JPEG on purpose: social crawlers don't reliably read
-  WebP/AVIF for `og:image`; everything shown on-site goes through Astro's image
-  pipeline, which emits WebP/AVIF itself).
-- `src/content/success-stories/*.md` — customer stories, with `industry`,
-  `companySize`, `website` and `highlights` for the sidebar.
+Blog posts, success stories, authors and the changelog live in Sanity (project
+`jrhcct5b`, org "Shorebird"). The Studio is `studio/` in this repo, hosted at
+<https://shorebird.sanity.studio> with one workspace per dataset (`/production`,
+`/dev`). Everything else on the site is code.
+
+- The site reads Sanity at build time through `src/lib/sanity/load-query.ts` and
+  the GROQ in `src/lib/sanity/queries.ts`; bodies are Portable Text rendered by
+  `src/components/portable-text/rich-text.astro`. Images are served from
+  Sanity's CDN with `srcset` (`src/components/sanity/sanity-image.astro`), so
+  builds never download or re-encode them. Reading time is computed from the
+  body, and `og:image` is the share image or the cover, cropped to 1200×630
+  JPEG.
+- `/changelog` renders the `changelogEntry` documents; `/changelog.json` and
+  `/changelog/rss.xml` expose the same entries for the docs site and console.
+  The JSON field set only ever grows (see `src/lib/changelog.ts`).
+- Publishing does not redeploy by itself: a Sanity webhook dispatches
+  `.github/workflows/sanity-rebuild.yaml`, which rebuilds and deploys.
+- `SANITY_DATASET` selects the dataset (default `production`). See
+  `.env.example`.
 - `src/data/{reviews,logos,team}.json` — the homepage testimonials, the "Trusted
   by" logo strip and the About page team grid. Image paths are `/src/assets/...`
   strings resolved with `import.meta.glob`.
@@ -51,11 +60,42 @@ docker compose up --build
   slash-less `/privacy/raw` and `/terms/raw` 301 there; a static host takes the
   content type from the extension, so the name has to carry the `.json`).
 
+### Live preview
+
+Editors preview drafts through the Studio's Presentation tool, which loads a
+server-rendered copy of this site. That copy is the same code built with
+`PREVIEW_MODE=true` (`Dockerfile.preview`, `cloudbuild.preview.yaml`): pages
+render per request, `/api/preview/enable` validates the Studio's secret and sets
+a cookie, and from then on that session reads drafts with click-to-edit
+overlays. Without the cookie the preview host serves published content only,
+`noindex`. It needs a Viewer token in `SANITY_API_READ_TOKEN` at runtime.
+
+The dev copy runs on Cloud Run in `code-push-dev` as `website-preview`, reading
+the `dev` dataset. Locally, `npm run dev` with the token in `.env` works the
+same way, and the Studio falls back to `http://localhost:4321` when no preview
+origin is configured for a workspace.
+
+### Studio
+
+```
+cd studio
+npm install
+npm run dev                          # http://localhost:3333
+SANITY_STUDIO_PREVIEW_ORIGIN_DEV=... npm run deploy
+```
+
+`studio/scripts/migrate.ts` is the one-time import of the pre-Sanity Markdown
+content and is kept for reference; production gets its content by copying the
+`dev` dataset (`sanity dataset export` / `import`), not by re-running it.
+`studio/scripts/seed-changelog.ts` creates changelog entries from published
+posts.
+
 Scripts (Python 3, stdlib only):
 
 - `scripts/import_webflow.py` — one-time import of the Webflow CMS export into
-  `src/content` and `src/data` (downloads images, converts HTML to Markdown,
-  keeps hand-written posts). The snapshot it reads is kept outside the repo at
+  the pre-Sanity `src/content` and into `src/data` (downloads images, converts
+  HTML to Markdown, keeps hand-written posts). Only the `src/data` part still
+  has a target. The snapshot it reads is kept outside the repo at
   `../webflow-migration/webflow-export/` (override with `WEBFLOW_EXPORT=`).
   Re-running regenerates every body that still carries the
   `<!-- Converted from the Webflow CMS export ... -->` marker and rewrites

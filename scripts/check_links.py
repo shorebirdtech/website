@@ -38,7 +38,9 @@ class RefParser(HTMLParser):
             if attrs.get(attr):
                 self.refs.append((tag, attr, attrs[attr]))
         if attrs.get("srcset"):
-            for part in attrs["srcset"].split(","):
+            # Candidates are separated by a comma followed by whitespace;
+            # commas inside a URL (Sanity's `rect=x,y,w,h`) are part of it.
+            for part in re.split(r",(?=\s)", attrs["srcset"]):
                 url = part.strip().split(" ")[0]
                 if url:
                     self.refs.append((tag, "srcset", url))

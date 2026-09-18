@@ -13,6 +13,7 @@ words:
   - allowfullscreen
   - angelov
   - aoki
+  - apicdn
   - apna
   - apnaklub
   - araujo
@@ -92,6 +93,7 @@ words:
   - hiếu
   - hotfixes
   - hotlinking
+  - hotspot
   - howzat
   - icaza
   - idris
@@ -102,6 +104,7 @@ words:
   - janky
   - jaspr
   - jetpack
+  - jrhcct
   - jsxs
   - jundlegames
   - junglee
@@ -122,6 +125,7 @@ words:
   - leeming
   - lintrk
   - logcat
+  - lqip
   - lukas
   - maccarrithers
   - macdougall
@@ -137,6 +141,7 @@ words:
   - neha
   - nickshorebird
   - nickweatherley
+  - nocookie
   - noindex
   - nowa
   - nowrap
@@ -149,6 +154,7 @@ words:
   - peloton
   - pichai
   - podfile
+  - portabletext
   - posthog
   - pubspec
   - pushpress
@@ -162,6 +168,7 @@ words:
   - roszkowski
   - sagalov
   - samdariya
+  - sanity
   - scapia
   - scroller
   - scrollport
@@ -189,6 +196,7 @@ words:
   - startswith
   - statista
   - stdlib
+  - stega
   - styleguide
   - subosito
   - sundar
@@ -235,3 +243,4 @@ words:
   - xcarchive
   - xlink
   - yehuda
+  - youtu

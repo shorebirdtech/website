@@ -5,36 +5,24 @@
  * the "All articles" grid of every post (newest first — the live page renders
  * all 69 without pagination), then the CTA band + footer.
  */
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
 import { Navbar } from '@/components/ui/navbar';
+import SanityImage from '@/components/sanity/sanity-image.astro';
 import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import Section from '@/components/ui/section.astro';
+import { loadQuery, postsQuery, type PostCard } from '@/lib/sanity';
 
-// Newest first; same-day posts tie-break the way the live site orders them.
-const posts = (await getCollection('blog')).sort(
-  (a, b) =>
-    b.data.date.valueOf() - a.data.date.valueOf() || b.id.localeCompare(a.id),
-);
+// Newest first (the query orders by date, then slug).
+const posts = await loadQuery<PostCard[]>({
+  query: postsQuery,
+  preview: Astro.locals.preview,
+});
 
-const covers = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/blog/covers/*.{jpeg,jpg,png,gif,webp,avif}',
-  { eager: true },
-);
-const coverFor = (post: (typeof posts)[number]) => {
-  const cover = covers[`/src/assets/blog/covers/${post.data.cover}`];
-  if (!cover) {
-    throw new Error(`Cover image for blog ${post.data.title} not found`);
-  }
-  return cover.default;
-};
-
-// Featured card: the `highlight: true` post (newest wins); fall back to the
-// newest post so the slot is never empty.
-const highlight = posts.find((post) => post.data.highlight) ?? posts[0];
-const latest = posts.filter((post) => post.id !== highlight.id).slice(0, 3);
+// Featured card: the newest post flagged "Feature on the blog index"; fall
+// back to the newest post so the slot is never empty.
+const highlight = posts.find((post) => post.highlight) ?? posts[0];
+const latest = posts.filter((post) => post._id !== highlight._id).slice(0, 3);
 ---
 
 <MainLayout
@@ -57,21 +45,22 @@ const latest = posts.filter((post) => post.id !== highlight.id).slice(0, 3);
       {/* Highlighted article */}
       <div class="col-span-12 lg:col-span-4">
         <a
-          href={`/blog/${highlight.id}`}
+          href={`/blog/${highlight.slug}`}
           class="group flex flex-col hover:no-underline"
         >
           <div class="overflow-hidden rounded-2xl">
-            <Image
-              src={coverFor(highlight)}
+            <SanityImage
+              image={highlight.cover}
               widths={[500, 736, 1000]}
               sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 390px"
-              alt={highlight.data.title}
+              alt={highlight.title}
+              loading="eager"
               class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           </div>
           <div class="pb-section-xs"></div>
-          <p class="title-s pb-text-s">{highlight.data.title}</p>
-          <p class="body-s">{highlight.data.description}</p>
+          <p class="title-s pb-text-s">{highlight.title}</p>
+          <p class="body-s">{highlight.description}</p>
         </a>
       </div>
       <div class="hidden lg:col-span-1 lg:block"></div>
@@ -85,24 +74,24 @@ const latest = posts.filter((post) => post.id !== highlight.id).slice(0, 3);
           {
             latest.map((post) => (
               <a
-                href={`/blog/${post.id}`}
+                href={`/blog/${post.slug}`}
                 class="group w-[92%] shrink-0 snap-start hover:no-underline md:w-[75%] lg:w-auto"
               >
                 <div class="flex flex-col gap-10 lg:grid lg:grid-cols-8 lg:items-center">
                   <div class="lg:col-span-2">
                     <div class="overflow-hidden rounded-2xl">
-                      <Image
-                        src={coverFor(post)}
+                      <SanityImage
+                        image={post.cover}
                         widths={[500, 736]}
                         sizes="(max-width: 767px) 92vw, (max-width: 991px) 75vw, 150px"
-                        alt={post.data.title}
+                        alt={post.title}
                         class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       />
                     </div>
                   </div>
                   <div class="flex flex-col lg:col-span-6">
-                    <p class="title-s pb-text-xs">{post.data.title}</p>
-                    <p class="body-s">{post.data.description}</p>
+                    <p class="title-s pb-text-xs">{post.title}</p>
+                    <p class="body-s">{post.description}</p>
                   </div>
                 </div>
               </a>
@@ -119,22 +108,21 @@ const latest = posts.filter((post) => post.id !== highlight.id).slice(0, 3);
       {
         posts.map((post) => (
           <a
-            href={`/blog/${post.id}`}
+            href={`/blog/${post.slug}`}
             class="group flex flex-col hover:no-underline"
           >
             <div class="overflow-hidden rounded-2xl">
-              <Image
-                src={coverFor(post)}
+              <SanityImage
+                image={post.cover}
                 widths={[500, 736, 1000]}
                 sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 390px"
-                alt={post.data.title}
-                loading="lazy"
+                alt={post.title}
                 class="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </div>
             <div class="pb-text-l"></div>
-            <p class="title-s pb-text-s">{post.data.title}</p>
-            <p class="body-s">{post.data.description}</p>
+            <p class="title-s pb-text-s">{post.title}</p>
+            <p class="body-s">{post.description}</p>
           </a>
         ))
       }

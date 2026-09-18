@@ -1,0 +1,86 @@
+---
+import type { Props as PtProps } from 'astro-portabletext/types';
+
+type Props = PtProps<{
+  _type: 'embed';
+  provider: 'youtube' | 'arcade' | 'tweet';
+  url: string;
+  title?: string;
+}>;
+
+const { node } = Astro.props;
+
+const youtubeId = (url: string) =>
+  url.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{6,})/)?.[1];
+---
+
+{
+  node.provider === 'youtube' && (
+    <div class="embed-frame">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${youtubeId(node.url)}`}
+        title={node.title ?? 'YouTube video'}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"
+      />
+    </div>
+  )
+}
+{
+  node.provider === 'arcade' && (
+    <div class="embed-frame embed-frame--arcade">
+      <iframe
+        src={`${node.url}?embed`}
+        title={node.title ?? 'Interactive demo'}
+        allow="clipboard-write"
+        allowfullscreen
+        loading="lazy"
+      />
+    </div>
+  )
+}
+{
+  node.provider === 'tweet' && (
+    <blockquote class="twitter-tweet" data-dnt="true">
+      <a href={node.url}>{node.title ?? node.url}</a>
+    </blockquote>
+  )
+}
+
+<script>
+  // X's widgets script upgrades <blockquote class="twitter-tweet">; load it
+  // once per page and only when a post embeds one.
+  if (document.querySelector('blockquote.twitter-tweet')) {
+    const s = document.createElement('script');
+    s.src = 'https://platform.twitter.com/widgets.js';
+    s.async = true;
+    document.head.append(s);
+  }
+</script>
+
+<style>
+  .embed-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: var(--spacer-text-m);
+    margin-bottom: var(--spacer-text-m);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  /* Arcade's own recommended box: 16:9 plus its 41px chrome. */
+  .embed-frame--arcade {
+    aspect-ratio: auto;
+    height: 0;
+    padding-bottom: calc(56.25% + 41px);
+  }
+  .embed-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>

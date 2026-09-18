@@ -1,0 +1,19 @@
+---
+import type { Props as PtProps } from 'astro-portabletext/types';
+import SanityImage from '@/components/sanity/sanity-image.astro';
+import type { SanityImage as SanityImageValue } from '@/lib/sanity/image';
+
+type Props = PtProps<SanityImageValue & { _key?: string }>;
+
+const { node } = Astro.props;
+---
+
+<figure>
+  <SanityImage
+    image={node}
+    alt={node.alt ?? ''}
+    widths={[600, 900, 1200, 1640]}
+    sizes="(max-width: 1023px) calc(100vw - 2rem), 820px"
+  />
+  {node.caption && <figcaption>{node.caption}</figcaption>}
+</figure>

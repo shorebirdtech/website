@@ -4,8 +4,15 @@ import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import node from '@astrojs/node';
 import config from './src/config';
+import { previewRoutes } from './src/preview/integration';
+
 import firebase from './src/integrations/firebase';
+
+// The preview deployment (Cloud Run, loaded by the Sanity Studio) renders on
+// request so editors see drafts; production stays a static build.
+const preview = process.env.PREVIEW_MODE === 'true';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +20,11 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap(), mdx(), firebase()],
+  output: preview ? 'server' : 'static',
+  adapter: preview ? node({ mode: 'standalone' }) : undefined,
+  integrations: preview
+    ? [react(), mdx(), previewRoutes()]
+    : [react(), sitemap(), mdx(), firebase()],
   redirects: {
     '/faq': 'https://docs.shorebird.dev/faq',
     '/privacy.html': '/privacy',

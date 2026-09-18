@@ -5,141 +5,39 @@
  * column and a sticky 4-column aside ("In this article" intro, share
  * buttons), then the CTA band and footer. The newsletter card that used to
  * close the aside was dropped from the live site in September 2026.
- *
- * Author metadata (name, title, headshot, handles) lives in the `authors`
- * record below; `author` in a post's frontmatter is a key into it.
  */
 import '@/styles/rich-text.css';
-import { Image } from 'astro:assets';
 import { Navbar } from '@/components/ui/navbar';
 import CtaBand from '@/components/ui/cta-band.astro';
 import Footer from '@/components/ui/footer.astro';
 import FormattedDate from '@/components/blog/formatted-date.astro';
+import RichText from '@/components/portable-text/rich-text.astro';
+import SanityImage from '@/components/sanity/sanity-image.astro';
 import MainLayout from '@/layouts/main.astro';
 import Section from '@/components/ui/section.astro';
-import bryanHeadshot from '@/assets/blog/headshots/bryan-headshot.png';
-import ericHeadshot from '@/assets/blog/headshots/eric-headshot.jpeg';
-import felixHeadshot from '@/assets/blog/headshots/felix-headshot.jpeg';
-import shorebirdHeadshot from '@/assets/blog/headshots/shorebird-headshot.png';
-import tomHeadshot from '@/assets/blog/headshots/tom-headshot.jpg';
-import dawnHeadshot from '@/assets/blog/headshots/dawn-headshot.jpg';
-import wesleyHeadshot from '@/assets/blog/headshots/wesleypeck.png';
-import abhishekHeadshot from '@/assets/blog/headshots/abhishekdoshi.jpg';
-import nickHeadshot from '@/assets/blog/headshots/nickweatherley.jpg';
-import macHeadshot from '@/assets/blog/headshots/maccarrithers.avif';
-import brandonHeadshot from '@/assets/blog/headshots/brandonderosier.png';
+import { ogImageUrl, readingTime, toDate, type Post } from '@/lib/sanity';
 
 export interface Props {
-  title: string;
-  description: string;
-  author: string;
-  date: Date;
-  intro?: string;
-  readingTime?: string;
-  ogImage?: string;
-  seoTitle?: string;
-  seoDescription?: string;
+  post: Post;
 }
 
+const { post } = Astro.props;
 const {
   title,
   description,
-  author,
-  date,
+  author: postAuthor,
   intro = description,
-  readingTime,
-  ogImage = '/open-graph.jpg',
   seoTitle = title,
   seoDescription = description,
-} = Astro.props;
+} = post;
+const date = toDate(post.date);
+const minutes = readingTime(post.body);
+const ogImage = ogImageUrl(post.ogImage ?? post.cover);
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const shareUrl = canonicalUrl.toString();
 const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
 const xShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}`;
-
-interface Author {
-  name: string;
-  title: string;
-  avatar: ImageMetadata;
-  github: string;
-  twitter?: string;
-}
-
-const authors: Record<string, Author> = {
-  shorebirdtech: {
-    name: 'Shorebird',
-    title: 'The Shorebird Team',
-    avatar: shorebirdHeadshot,
-    github: 'shorebirdtech',
-    twitter: '@shorebirddev',
-  },
-  eseidel: {
-    name: 'Eric Seidel',
-    title: 'CEO and Founder',
-    avatar: ericHeadshot,
-    github: 'eseidel',
-    twitter: '@_eseidel',
-  },
-  felangel: {
-    name: 'Felix Angelov',
-    title: 'Founding Engineer',
-    avatar: felixHeadshot,
-    github: 'felangel',
-    twitter: '@felangelov',
-  },
-  bryanoltman: {
-    name: 'Bryan Oltman',
-    title: 'Founding Engineer',
-    avatar: bryanHeadshot,
-    github: 'bryanoltman',
-  },
-  tomarra: {
-    name: 'Tom Arra',
-    title: 'Operations Lead',
-    avatar: tomHeadshot,
-    github: 'tomarra',
-  },
-  'dawn-ducky': {
-    name: 'Dawn Parzych',
-    title: 'Head of Marketing',
-    avatar: dawnHeadshot,
-    github: 'dawn-ducky',
-  },
-  wesleypeck: {
-    name: 'Wesley Peck',
-    title: 'Lead Product Manager',
-    avatar: wesleyHeadshot,
-    github: 'wesleypeck',
-  },
-  abhishekdoshi: {
-    name: 'Abhishek Doshi',
-    title: 'Developer Relations Engineer',
-    avatar: abhishekHeadshot,
-    github: 'AbhishekDoshi26',
-  },
-  nickweatherley: {
-    name: 'Nick Weatherley',
-    title: 'Software Engineer',
-    avatar: nickHeadshot,
-    github: 'nickshorebird',
-  },
-  maccarrithers: {
-    name: 'Mac Carrithers',
-    title: 'Software Engineer',
-    avatar: macHeadshot,
-    github: 'easymac',
-  },
-  brandonderosier: {
-    name: 'Brandon DeRosier',
-    title: 'Software Engineer',
-    avatar: brandonHeadshot,
-    github: 'bdero',
-  },
-};
-
-const postAuthor = authors[author];
-if (!postAuthor) throw new Error(`Unknown blog author "${author}"`);
 ---
 
 <MainLayout title={seoTitle} description={seoDescription} image={ogImage}>
@@ -169,23 +67,23 @@ if (!postAuthor) throw new Error(`Unknown blog author "${author}"`);
         >
           <div class="flex flex-wrap items-center gap-4">
             <div class="flex items-center gap-2">
-              <Image
-                src={postAuthor.avatar}
+              <SanityImage
+                image={postAuthor.avatar}
                 alt={postAuthor.name}
-                width={48}
-                height={48}
+                crop={{ width: 48, height: 48 }}
+                loading="eager"
                 class="size-6 rounded-full object-cover"
               />
               <div class="flex gap-2">
                 <span class="body-s text-text-1">{postAuthor.name}</span>
-                <span class="body-s">{postAuthor.title}</span>
+                <span class="body-s">{postAuthor.jobTitle}</span>
               </div>
             </div>
             <div class="body-s" aria-hidden="true">|</div>
             <p class="body-s"><FormattedDate date={date} /></p>
           </div>
           {
-            readingTime && (
+            minutes && (
               <div class="text-text-3 flex items-center gap-2">
                 <svg
                   aria-hidden="true"
@@ -201,14 +99,14 @@ if (!postAuthor) throw new Error(`Unknown blog author "${author}"`);
                     fill="currentColor"
                   />
                 </svg>
-                <span class="body-s text-text-3">{readingTime}</span>
+                <span class="body-s text-text-3">{minutes}</span>
               </div>
             )
           }
         </div>
         <div class="pb-text-xl"></div>
         <div class="prose rich-text">
-          <slot />
+          <RichText value={post.body} />
         </div>
       </article>
 

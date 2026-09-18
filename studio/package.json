@@ -1,0 +1,32 @@
+{
+  "name": "shorebird-studio",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "typegen": "sanity schema extract --path ../src/lib/sanity/schema.json && sanity typegen generate"
+  },
+  "dependencies": {
+    "@sanity/code-input": "^7.3.8",
+    "@sanity/table": "^3.1.16",
+    "@sanity/vision": "^6.15.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sanity": "^6.15.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@portabletext/block-tools": "^6.0.2",
+    "@sanity/client": "^8.6.2",
+    "@types/jsdom": "^30.0.0",
+    "@types/react": "^19.3.0",
+    "gray-matter": "^4.0.3",
+    "jsdom": "^30.1.0",
+    "marked": "^18.0.13",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.0"
+  }
+}

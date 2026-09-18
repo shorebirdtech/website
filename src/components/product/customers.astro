@@ -1,11 +1,15 @@
 ---
 /**
  * "Customers stories — View our customers using Code Push" (Webflow
- * `.c_card--list`): three success-story cards from the content collection.
+ * `.c_card--list`): three success-story cards, in the order given.
  */
-import { getCollection } from 'astro:content';
 import Section from '@/components/ui/section.astro';
 import StoryCard from '@/components/success-stories/story-card.astro';
+import {
+  loadQuery,
+  storiesBySlugsQuery,
+  type StoryCard as Story,
+} from '@/lib/sanity';
 
 export interface Props {
   eyebrow: string;
@@ -16,9 +20,13 @@ export interface Props {
 
 const { eyebrow, title, stories: slugs } = Astro.props;
 
-const all = await getCollection('successStories');
+const all = await loadQuery<Story[]>({
+  query: storiesBySlugsQuery,
+  params: { slugs },
+  preview: Astro.locals.preview,
+});
 const stories = slugs.map((slug) => {
-  const story = all.find((entry) => entry.id === slug);
+  const story = all.find((entry) => entry.slug === slug);
   if (!story) throw new Error(`Success story ${slug} not found`);
   return story;
 });

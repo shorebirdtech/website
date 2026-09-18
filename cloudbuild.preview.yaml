@@ -1,0 +1,23 @@
+# Builds the server-rendered preview image (see Dockerfile.preview).
+#
+#   gcloud builds submit --project code-push-dev --config cloudbuild.preview.yaml \
+#     --substitutions _SANITY_DATASET=dev,_TAG=<git sha>
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --file=Dockerfile.preview
+      - --build-arg=SANITY_DATASET=${_SANITY_DATASET}
+      - --tag=${_IMAGE}:${_TAG}
+      - --tag=${_IMAGE}:${_SANITY_DATASET}
+      - .
+images:
+  - ${_IMAGE}:${_TAG}
+  - ${_IMAGE}:${_SANITY_DATASET}
+substitutions:
+  _SANITY_DATASET: production
+  _TAG: manual
+  _IMAGE: us-central1-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/website-preview
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: E2_HIGHCPU_8

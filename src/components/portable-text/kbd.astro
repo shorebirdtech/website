@@ -1,0 +1,1 @@
+<kbd><slot /></kbd>

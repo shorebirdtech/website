@@ -1,19 +1,34 @@
 ---
-import { getCollection, render } from 'astro:content';
 import SuccessStoryLayout from '@/layouts/success-story.astro';
+import {
+  allStoriesFullQuery,
+  loadQuery,
+  storyQuery,
+  type Story,
+} from '@/lib/sanity';
 
 export async function getStaticPaths() {
-  const stories = await getCollection('successStories');
+  const stories = await loadQuery<Story[]>({ query: allStoriesFullQuery });
   return stories.map((story) => ({
-    params: { slug: story.id },
+    params: { slug: story.slug },
     props: { story },
   }));
 }
 
-const { story } = Astro.props;
-const { Content } = await render(story);
+interface Props {
+  story?: Story;
+}
+
+const preview = Astro.locals.preview;
+const story =
+  !preview && Astro.props.story
+    ? Astro.props.story
+    : await loadQuery<Story | null>({
+        query: storyQuery,
+        params: { slug: Astro.params.slug },
+        preview,
+      });
+if (!story) return Astro.rewrite('/404');
 ---
 
-<SuccessStoryLayout story={story}>
-  <Content />
-</SuccessStoryLayout>
+<SuccessStoryLayout {story} />

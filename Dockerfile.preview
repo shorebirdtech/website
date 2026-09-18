@@ -1,0 +1,21 @@
+# The server-rendered preview deployment the Sanity Studio's Presentation
+# tool loads. Built with PREVIEW_MODE=true so pages render on request and
+# the /api/preview/* routes exist; SANITY_API_READ_TOKEN is supplied at
+# runtime. Production is the static build in .github/workflows/main.yaml.
+FROM node:24-slim AS build
+WORKDIR /app
+COPY package.json package-lock.json .npmrc ./
+RUN npm ci && npx --no allow-scripts
+COPY . .
+ARG SANITY_DATASET=production
+ENV SANITY_DATASET=$SANITY_DATASET PREVIEW_MODE=true
+RUN npm run build
+
+FROM node:24-slim
+WORKDIR /app
+ENV NODE_ENV=production HOST=0.0.0.0 PORT=8080
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./
+EXPOSE 8080
+CMD ["node", "./dist/server/entry.mjs"]

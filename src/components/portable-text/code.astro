@@ -1,0 +1,12 @@
+---
+import { Code } from 'astro:components';
+import type { Props as PtProps } from 'astro-portabletext/types';
+
+type Props = PtProps<{ _type: 'code'; code: string; language?: string }>;
+
+const { node } = Astro.props;
+// Shiki's name for the shell grammar; other ids used in the Studio match.
+const lang = node.language === 'sh' ? 'shellscript' : (node.language ?? 'text');
+---
+
+<Code code={node.code} lang={lang as never} theme="github-dark" />

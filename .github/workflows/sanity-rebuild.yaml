@@ -1,0 +1,64 @@
+name: Sanity rebuild
+
+# Rebuilds the static site when content is published in Sanity. A GROQ
+# webhook on the Sanity project calls the workflow_dispatch API; this job
+# builds the branch it was dispatched on and deploys it to a Firebase Hosting
+# preview channel named after the dataset. Production (main) still deploys
+# through main.yaml.
+on:
+  workflow_dispatch:
+    inputs:
+      dataset:
+        description: Sanity dataset to build from
+        required: true
+        default: production
+        type: string
+
+env:
+  FIREBASE_PROJECT: shorebird-website
+  WIF_PROVIDER: projects/170788650532/locations/global/workloadIdentityPools/github-actions/providers/github
+  SERVICE_ACCOUNT: website-deployer@shorebird-website.iam.gserviceaccount.com
+  FIREBASE_TOOLS: firebase-tools@15.30.1
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: sanity-rebuild-${{ github.ref_name }}-${{ inputs.dataset }}
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v7
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+          cache: npm
+
+      - name: 📦 Install Dependencies
+        run: npm ci && npx --no allow-scripts
+
+      - name: 🏗️ Build
+        run: npm run build
+        env:
+          SANITY_DATASET: ${{ inputs.dataset }}
+
+      - name: 🔗 Check links
+        run: npm run check:links
+
+      - name: 🔐 Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.SERVICE_ACCOUNT }}
+
+      - name: ☁️ Deploy preview channel
+        run: |
+          npx -y "$FIREBASE_TOOLS" hosting:channel:deploy "sanity-${{ inputs.dataset }}" \
+            --project "$FIREBASE_PROJECT" --expires 30d
