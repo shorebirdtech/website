@@ -1,4 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/types';
+import { stegaClean } from '@sanity/client/stega';
 
 const WORDS_PER_MINUTE = 200;
 
@@ -10,7 +11,9 @@ export function readingTime(body: PortableTextBlock[] | undefined): string {
     if (block._type !== 'block') continue;
     for (const child of block.children ?? []) {
       if (typeof child.text === 'string') {
-        words += child.text.split(/\s+/).filter(Boolean).length;
+        // Preview responses carry invisible stega characters that `\s`
+        // matches, so strip them before counting.
+        words += stegaClean(child.text).split(/\s+/).filter(Boolean).length;
       }
     }
   }

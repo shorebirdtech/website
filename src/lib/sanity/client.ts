@@ -1,4 +1,8 @@
-import { createClient, type SanityClient } from '@sanity/client';
+import {
+  createClient,
+  type SanityClient,
+  type StegaConfig,
+} from '@sanity/client';
 import {
   apiVersion,
   dataset,
@@ -19,6 +23,33 @@ export const client: SanityClient = createClient({
 
 let previewClientInstance: SanityClient | undefined;
 
+// Fields whose values are prose an editor would click on. Everything else
+// (enum values, code, language ids, slugs) must stay byte-exact because the
+// site switches on it.
+const editorialFields = new Set([
+  'title',
+  'description',
+  'intro',
+  'summary',
+  'text',
+  'alt',
+  'caption',
+  'name',
+  'jobTitle',
+  'industry',
+  'companySize',
+  'highlights',
+]);
+
+const isEditorialText: NonNullable<StegaConfig['filter']> = ({
+  sourcePath,
+}) => {
+  const last = sourcePath[sourcePath.length - 1];
+  const parent = sourcePath[sourcePath.length - 2];
+  if (typeof last === 'number') return parent === 'highlights';
+  return editorialFields.has(String(last));
+};
+
 /**
  * Reads drafts with stega-encoded source maps so the Studio can map any
  * rendered string back to its field. The token is a runtime secret on the
@@ -35,7 +66,7 @@ export function previewClient(): SanityClient {
     token,
     useCdn: false,
     perspective: 'drafts',
-    stega: { enabled: true, studioUrl },
+    stega: { enabled: true, studioUrl, filter: isEditorialText },
   });
   return previewClientInstance;
 }
