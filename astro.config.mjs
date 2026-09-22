@@ -23,6 +23,9 @@ export default defineConfig({
     '/talk-to-sales': config.contactSales,
     '/terms.html': '/terms',
     '/jobs/full-stack-software-engineer': '/jobs',
+    // Webflow served the sitemap at `/sitemap.xml` (its robots.txt, Search
+    // Console and the 404 page all point there); Astro emits an index instead.
+    '/sitemap.xml': '/sitemap-index.xml',
     // Legal pages moved when the site moved to Webflow: the DPA lives at
     // `/dpa` and the per-product terms are PDFs linked from `/terms`.
     '/legal/dpa': '/dpa',

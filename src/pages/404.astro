@@ -29,6 +29,15 @@ import flyingBird from '@/assets/404/flying-bird.png';
         <p class="text-text-2 pt-2 text-center text-xl leading-7 sm:text-left">
           We can push code instantly but we can't seem to push this page.
         </p>
+        <p
+          class="not-found-links text-text-2 pt-6 text-center text-xl leading-7 sm:text-left"
+        >
+          Looking for something? Try the <a href="https://docs.shorebird.dev/"
+            >documentation</a
+          >, <a href="/pricing">pricing</a>, <a href="https://console.shorebird.dev/"
+            >console</a
+          >, <a href="/sitemap.xml">sitemap</a>, or <a href="/llms.txt">llms.txt</a>.
+        </p>
       </div>
       <ButtonLink href="/" variant="primary" className="mt-10 w-full">
         Go to homepage
@@ -36,3 +45,14 @@ import flyingBird from '@/assets/404/flying-bird.png';
     </div>
   </main>
 </MainLayout>
+
+<style>
+  .not-found-links a {
+    color: var(--text-1);
+    font-weight: 600;
+  }
+  .not-found-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+</style>

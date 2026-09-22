@@ -33,6 +33,7 @@ npm run build && npm run check:links
 | `/contact`, `/newsletter-signup`, `/demo`         | —                                                                 | Removed | Pre-Webflow pages nothing linked to; `/demo` pointed at a personal Calendly. Removed 2026-09-15 so the port does not resurrect them |
 | `404`                                             | `src/pages/404.astro`                                             | Done    | Copy/bird/layout from the Webflow utility page; mobile stacks instead of copying the live overflow                                  |
 | `/rss.xml`, `/blog/rss.xml`, `/sitemap-index.xml` | `src/pages/*.ts`, `@astrojs/sitemap`                              | Done    | 69 RSS items, 94 sitemap URLs                                                                                                       |
+| `/llms.txt`                                       | `public/llms.txt`                                                 | Done    | Copied from live 2026-09-21 (fixed its `/term` link); `/sitemap.xml` 301s to `/sitemap-index.xml`                                   |
 | `/design-system/styleguide`                       | —                                                                 | Dropped | Webflow-internal page                                                                                                               |
 
 Every URL in the live sitemap at export time

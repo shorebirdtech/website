@@ -56,6 +56,11 @@
         "destination": "/jobs",
         "type": 301
       },
+      {
+        "source": "/sitemap.xml{,/}",
+        "destination": "/sitemap-index.xml",
+        "type": 301
+      },
       { "source": "/legal/dpa{,/}", "destination": "/dpa", "type": 301 },
       { "source": "/terms/ci{,/}", "destination": "/terms", "type": 301 },
       {
