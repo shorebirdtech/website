@@ -66,7 +66,7 @@ is done until its box is checked.
       found no CMS changes and ported the static-page ones (home JSON-LD
       address, 404 help links, `/llms.txt`). Two unpublished Designer edits
       exist: the Jobs page title/description (already matches the port) and a
-      draft `/contact` page (not ported; decide before cutover). Anything
+      draft `/contact` page (ported as `src/pages/contact.md`). Anything
       published in Webflow after that must be re-imported
       (`scripts/import_webflow.py --only blog,stories` against a fresh CMS
       export; it only regenerates bodies that still carry the "Converted from
