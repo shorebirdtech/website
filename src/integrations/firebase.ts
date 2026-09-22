@@ -15,8 +15,13 @@ import { format, resolveConfig } from 'prettier';
  * `firebase.json` is checked in — the Firebase CLI reads it at deploy time —
  * so a build that changes it leaves a diff to commit; CI fails on that diff.
  * Each source is written as `/path{,/}` so both slash forms match.
+ *
+ * `hostOnly` rules go to Firebase without an Astro stub, for sources that
+ * collide with a real page on a case-insensitive filesystem.
  */
-export default function firebase(): AstroIntegration {
+export default function firebase({
+  hostOnly = {},
+}: { hostOnly?: Record<string, string> } = {}): AstroIntegration {
   let redirects: Record<
     string,
     string | { destination: string; status?: number }
@@ -25,7 +30,7 @@ export default function firebase(): AstroIntegration {
     name: 'firebase',
     hooks: {
       'astro:config:done': ({ config }) => {
-        redirects = config.redirects;
+        redirects = { ...config.redirects, ...hostOnly };
       },
       'astro:build:done': async ({ logger }) => {
         const rules = Object.entries(redirects).map(([source, target]) => ({

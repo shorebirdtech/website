@@ -56,6 +56,26 @@
         "destination": "/jobs",
         "type": 301
       },
+      {
+        "source": "/customer-stories{,/}",
+        "destination": "/success-stories",
+        "type": 301
+      },
+      {
+        "source": "/terms-of-service{,/}",
+        "destination": "/terms",
+        "type": 301
+      },
+      {
+        "source": "/privacy-policy{,/}",
+        "destination": "/privacy",
+        "type": 301
+      },
+      {
+        "source": "/sitemap.xml{,/}",
+        "destination": "/sitemap-index.xml",
+        "type": 301
+      },
       { "source": "/legal/dpa{,/}", "destination": "/dpa", "type": 301 },
       { "source": "/terms/ci{,/}", "destination": "/terms", "type": 301 },
       {
@@ -85,6 +105,11 @@
         "type": 301
       },
       {
+        "source": "/blog/flutter-332-release{,/}",
+        "destination": "/blog/flutter-3-32-release",
+        "type": 301
+      },
+      {
         "source": "/blog/growing{,/}",
         "destination": "/blog/shorebird-is-growing",
         "type": 301
@@ -92,6 +117,11 @@
       {
         "source": "/blog/building-great-developer-tools{,/}",
         "destination": "/blog/building-good-software",
+        "type": 301
+      },
+      {
+        "source": "/success-stories/VETC{,/}",
+        "destination": "/success-stories/vetc",
         "type": 301
       }
     ]

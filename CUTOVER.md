@@ -13,8 +13,9 @@ is done until its box is checked.
 
 ## 1. Before we touch DNS
 
-- [ ] **Export Webflow's 301 redirect rules.** Webflow does not expose them in
-      the site export or the MCP tools we used. Two ways:
+- [x] **Export Webflow's 301 redirect rules.** Done 2026-09-22 (5 rules, all in
+      `astro.config.mjs`; re-check on cutover day). Original notes: Webflow does
+      not expose them in the site export or the MCP tools we used. Two ways:
   - Site settings → Publishing → 301 Redirects: copy the table by hand.
   - Data API v2:
     `curl -H "Authorization: Bearer $WEBFLOW_TOKEN" https://api.webflow.com/v2/sites/694e589e299270321119525e/redirects`
@@ -61,7 +62,12 @@ is done until its box is checked.
     templates / social posts for `website-files.com` before the Webflow site is
     deleted — those URLs die with the site.
 - [ ] **Content freeze + final delta pull.** The port's snapshot is from
-      2026-09-13. Anything published in Webflow after that must be re-imported
+      2026-09-13; a delta pass on 2026-09-21 (Webflow last published 2026-09-15)
+      found no CMS changes and ported the static-page ones (home JSON-LD
+      address, 404 help links, `/llms.txt`). Two unpublished Designer edits
+      exist: the Jobs page title/description (already matches the port) and a
+      draft `/contact` page (ported as `src/pages/contact.md`). Anything
+      published in Webflow after that must be re-imported
       (`scripts/import_webflow.py --only blog,stories` against a fresh CMS
       export; it only regenerates bodies that still carry the "Converted from
       the Webflow CMS export" marker, so hand-edited posts are safe). Freeze
