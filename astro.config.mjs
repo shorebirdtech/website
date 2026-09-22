@@ -13,7 +13,17 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap(), mdx(), firebase()],
+  integrations: [
+    react(),
+    sitemap(),
+    mdx(),
+    firebase({
+      // Rules that must not become Astro redirect stubs: this one differs
+      // from the real page only by case, and on a case-insensitive filesystem
+      // the stub and the page would land in the same directory.
+      hostOnly: { '/success-stories/VETC': '/success-stories/vetc' },
+    }),
+  ],
   redirects: {
     '/faq': 'https://docs.shorebird.dev/faq',
     '/privacy.html': '/privacy',
@@ -23,6 +33,11 @@ export default defineConfig({
     '/talk-to-sales': config.contactSales,
     '/terms.html': '/terms',
     '/jobs/full-stack-software-engineer': '/jobs',
+    // Webflow's own 301 rules (Site settings → Publishing, exported
+    // 2026-09-22); `/talk-to-sales` above is the fifth.
+    '/customer-stories': '/success-stories',
+    '/terms-of-service': '/terms',
+    '/privacy-policy': '/privacy',
     // Webflow served the sitemap at `/sitemap.xml` (its robots.txt, Search
     // Console and the 404 page all point there); Astro emits an index instead.
     '/sitemap.xml': '/sitemap-index.xml',
@@ -41,6 +56,7 @@ export default defineConfig({
     '/blog/1.0': '/blog/1',
     '/blog/dart-3.5.0': '/blog/dart-3-5-0',
     '/blog/flutter-3.32-release': '/blog/flutter-3-32-release',
+    '/blog/flutter-332-release': '/blog/flutter-3-32-release',
     '/blog/growing': '/blog/shorebird-is-growing',
     '/blog/building-great-developer-tools': '/blog/building-good-software',
   },

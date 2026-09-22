@@ -13,8 +13,9 @@ is done until its box is checked.
 
 ## 1. Before we touch DNS
 
-- [ ] **Export Webflow's 301 redirect rules.** Webflow does not expose them in
-      the site export or the MCP tools we used. Two ways:
+- [x] **Export Webflow's 301 redirect rules.** Done 2026-09-22 (5 rules, all in
+      `astro.config.mjs`; re-check on cutover day). Original notes: Webflow does
+      not expose them in the site export or the MCP tools we used. Two ways:
   - Site settings → Publishing → 301 Redirects: copy the table by hand.
   - Data API v2:
     `curl -H "Authorization: Bearer $WEBFLOW_TOKEN" https://api.webflow.com/v2/sites/694e589e299270321119525e/redirects`
