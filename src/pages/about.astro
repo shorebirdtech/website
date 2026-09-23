@@ -9,6 +9,7 @@ import Section from '@/components/ui/section.astro';
 import accelLogo from '@/assets/about/accel.webp';
 import heroLogos from '@/assets/about/hero-logos.svg';
 import teamData from '@/data/team.json';
+import { organization, website } from '@/lib/structured-data';
 
 /**
  * Team grid (Webflow `.c_team--cms_list`): `src/data/team.json` is the
@@ -25,6 +26,23 @@ const team = teamData
     if (!image) throw new Error(`Headshot ${member.headshot} not found`);
     return { ...member, image: image.default };
   });
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': 'https://shorebird.dev/about#webpage',
+      url: 'https://shorebird.dev/about',
+      name: 'About Shorebird',
+      isPartOf: { '@id': website['@id'] },
+      about: { '@id': organization['@id'] },
+    },
+    organization,
+    website,
+  ],
+};
+
 /** Webflow `.social_icn` LinkedIn glyph (14x14). */
 const linkedinIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.17852 14V4.55374H0.177409V14H3.17852ZM1.67795 3.26401C2.7245 3.26401 3.37589 2.53864 3.37589 1.63214C3.35639 0.705241 2.7245 4.89563e-07 1.69781 4.89563e-07C0.671215 4.89563e-07 0 0.705241 0 1.63214C0 2.53864 0.65125 3.26401 1.65839 3.26401H1.67795Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.83936 14H7.84044V8.72481C7.84044 8.44249 7.85994 8.16045 7.93919 7.95863C8.15614 7.39455 8.64995 6.81034 9.47901 6.81034C10.565 6.81034 10.9994 7.67659 10.9994 8.94647V14H14.0002V8.58365C14.0002 5.68218 12.5196 4.33208 10.5451 4.33208C8.92613 4.33208 8.21537 5.27883 7.82048 5.92369H7.84052V4.55374H4.83944C4.87882 5.44011 4.83936 14 4.83936 14Z" fill="currentColor"/></svg>`;
 ---
@@ -33,6 +51,13 @@ const linkedinIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" heigh
   title="About Shorebird | Building Better Tools for Flutter"
   description="Founded by Eric Seidel, creator of Flutter, Shorebird helps developers ship apps faster with secure Code Push and modern CI for Flutter."
 >
+  <Fragment slot="head">
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  </Fragment>
   <Navbar client:load initialTheme="dark" />
 
   {/* Hero (Webflow `header.g_page--section` + `.c_hero--about--logos`). */}
@@ -69,7 +94,8 @@ const linkedinIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" heigh
         <p class="body-m">
           We care about making portable development the default and creating a
           rich and robust Flutter ecosystem. Our flagship service, Code Push,
-          enables instant app updates without app store delays.
+          enables instant app updates without app store delays, and Shorebird CI
+          brings zero-config continuous integration to Flutter and Dart.
         </p>
       </div>
     </div>
