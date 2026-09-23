@@ -1,7 +1,6 @@
 /**
- * schema.org nodes shared by the pages that emit JSON-LD. Keep these in sync
- * with the visible "Shorebird at a glance" facts on the About page so search
- * engines and AI answers see one consistent set of company facts.
+ * schema.org nodes shared by the pages that emit JSON-LD, so the home and
+ * About pages describe the company identically.
  */
 
 const siteUrl = 'https://shorebird.dev/';
