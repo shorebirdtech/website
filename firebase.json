@@ -84,6 +84,16 @@
         "type": 301
       },
       {
+        "source": "/code-push-guide{,/}",
+        "destination": "/product/code-push",
+        "type": 301
+      },
+      {
+        "source": "/guides/shorebird-code-push-guide.pdf{,/}",
+        "destination": "/product/code-push",
+        "type": 301
+      },
+      {
         "source": "/privacy/raw{,/}",
         "destination": "/privacy/raw.json",
         "type": 301

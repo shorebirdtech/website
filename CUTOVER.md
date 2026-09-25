@@ -72,22 +72,22 @@ is done until its box is checked.
       export; it only regenerates bodies that still carry the "Converted from
       the Webflow CMS export" marker, so hand-edited posts are safe). Freeze
       Webflow edits the day of cutover.
-- [ ] **Test the Code Push guide form for real** on a preview deploy, with a
-      test address (the only form left after the newsletter was removed from the
-      live site). It posts to the same Loops endpoint Webflow used; confirm the
-      contact shows up in Loops with the right `source`/`userGroup`.
-- [ ] **Decide on HubSpot chat and the Unify website tag.** Both were on every
-      Webflow page and were deliberately not ported. Plausible and the LinkedIn
-      insight tag are ported. Script and keys are in
-      `../webflow-migration/webflow-export/pages/home.html` if we want them.
-- [ ] **Trailing slashes: decided, keep Astro's default** (`/blog/foo/`,
+- [x] **Code Push guide: dropped** (2026-09-25). The ebook and its Loops signup
+      form were removed; `/code-push-guide` and the PDF 301 to
+      `/product/code-push`. The site has no forms left.
+- [x] **HubSpot chat and the Unify website tag: not ported** (2026-09-25). We're
+      keeping HubSpot itself, just not the chat widget on the site. Plausible
+      and the LinkedIn insight tag are ported.
+- [x] **Trailing slashes: decided, keep Astro's default** (`/blog/foo/`,
       canonical + `og:url` + sitemap already agree). Webflow served `/blog/foo`;
       `"trailingSlash": true` in `firebase.json` 301s the slash-less form to the
-      slash form, so inbound links keep working. Verify one on the preview.
-- [ ] **Sitemap & robots.** `dist/sitemap-index.xml` is generated; confirm the
-      deployed host serves it and that no `robots.txt`/`noindex` from the
-      preview environment leaks to production.
-- [ ] **Microsoft domain verification.**
+      slash form, so inbound links keep working. Verified on the live Firebase
+      site 2026-09-25 (`/blog` → `/blog/`).
+- [x] **Sitemap & robots.** Verified 2026-09-25: `dist/sitemap-index.xml` is
+      generated; confirm the deployed host serves it and that no
+      `robots.txt`/`noindex` from the preview environment leaks to production.
+- [x] **Microsoft domain verification.** Verified 2026-09-25: 200,
+      `application/json`, no redirect.
       `public/.well-known/microsoft-identity-association` is a hidden path, so
       it needs `include-hidden-files` on the CI artifact upload and had to come
       off `firebase.json`'s `ignore` list; it also has no extension, so
@@ -96,8 +96,9 @@ is done until its box is checked.
       returns 200 with `application/json` and does **not** 301 to a trailing
       slash. If nobody still needs the Entra app (`4fc38981-…`), delete the file
       instead.
-- [ ] **Console dependencies.** `/privacy/raw.json` and `/terms/raw.json` serve
-      the same JSON the pre-Webflow site served at `/privacy/raw` and
+- [x] **Console dependencies.** Redirect verified 2026-09-25 (`/privacy/raw` →
+      `/privacy/raw.json`, 200 JSON). `/privacy/raw.json` and `/terms/raw.json`
+      serve the same JSON the pre-Webflow site served at `/privacy/raw` and
       `/terms/raw`, which now 301 there; confirm the console reads them from the
       new host and follows the redirect (the `content` field of
       `/privacy/raw.json` no longer starts with the H1 — check nothing parses
@@ -107,9 +108,14 @@ is done until its box is checked.
       which) plus a one-time TXT for ownership verification, all added in the
       existing zone. `api`, `console`, `admin`, `download`, `artifacts`,
       `handbook`, `docs`, MX/SPF/DKIM/DMARC and the verification TXTs are not
-      touched. Note the zone is **not** in the `shorebird-gws` project (Cloud
-      DNS API is disabled there); find which project owns it before cutover day
-      so whoever flips the records has access.
+      touched. The zone is `shorebird-dev` in GCP project `code-push-prod` and
+      every record is managed by OpenTofu
+      (`_shorebird/infra/tofu/envs/prod/dns.tf`): change records by PR there,
+      then run `tf-apply-prod`; console edits get reverted. Firebase wants apex
+      A `199.36.158.100`, apex TXT `hosting-site=shorebird-website`, `www` CNAME
+      `shorebird-website.web.app`, and the Webflow AAAA (`2620:cb:2000::1`)
+      removed. Both custom domains were created in Firebase on 2026-09-25 (`www`
+      redirects to the apex).
   - Firebase provisions the certificate after the A records point at it; that
     can take up to a few hours on first setup. The verification TXT can be added
     early, and the `www` → apex redirect is a setting in the same custom-domain
@@ -117,8 +123,7 @@ is done until its box is checked.
 
 ## 2. Repo & CI
 
-- [ ] Un-archive `shorebirdtech/website`; remove the archival notice (done in
-      `README.md` on this branch).
+- [x] Un-archive `shorebirdtech/website`; remove the archival notice.
 - [x] **GCP project `shorebird-website`** (number `170788650532`) created
       2026-09-15 under the org, billing → Dev (R&D) (`017BF2-4523FB-3E4FA8`; a
       marketing site's egress isn't COGS — move it if finance disagrees).
@@ -134,9 +139,10 @@ is done until its box is checked.
       `attribute.repository ==     "shorebirdtech/website"`. The org's pool in
       `code-push-dev` was left alone (its allow-list is Tofu-managed and holds
       production repos).
-- [ ] Open the PR from `webflow-port` (40+ commits; squash or not, your call).
-      `npm run build`, `format:check`, `cspell`, `check:links` are green. The PR
-      itself will exercise the `preview` job and comment its URL.
+- [x] Open the PR from `webflow-port` (#411, merged 2026-09-17) (40+ commits;
+      squash or not, your call). `npm run build`, `format:check`, `cspell`,
+      `check:links` are green. The PR itself will exercise the `preview` job and
+      comment its URL.
 - [x] Replace the GitHub Pages deploy with Firebase Hosting:
       `.github/workflows/main.yaml` now runs the same checks as the PR gate
       (plus `check:links` and a `firebase.json` drift check), deploys a 7-day
@@ -150,7 +156,7 @@ is done until its box is checked.
       automatically.
 - [x] `www` → apex: handled by Firebase's custom-domain redirect setting (see §1
       DNS), nothing in the repo.
-- [ ] Delete the local `webflow-port-backup` ref once the PR is merged.
+- [x] Delete the local `webflow-port-backup` ref.
 
 ## 3. Preview deploy — verify on https before DNS
 

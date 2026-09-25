@@ -21,7 +21,7 @@ npm run build && npm run check:links
 | `/`                                               | `src/pages/index.astro`, `src/components/home/*`                  | Done    | Hero Lottie, logo marquee, benefits, enterprise, security, testimonials, FAQ, JSON-LD                                               |
 | `/product/code-push`                              | `src/pages/product/code-push.astro`, `src/components/product/*`   | Done    | Arcade demo embed, Lottie motion                                                                                                    |
 | `/product/shorebird-ci`                           | `src/pages/product/shorebird-ci.astro`                            | Done    | Sunset notice page, as live                                                                                                         |
-| `/code-push-guide`                                | `src/pages/code-push-guide.astro`, `product/guide-form.tsx`       | Done    | Form posts to the same Loops endpoint as live, PDF in `public/guides/`                                                              |
+| `/code-push-guide`                                | removed at cutover; 301 → `/product/code-push`                    | Dropped | The ebook and its Loops form were cut                                                                                               |
 | `/pricing`                                        | `src/pages/pricing.astro`, `src/components/pricing/*`             | Done    | Monthly/yearly toggle, comparison table, FAQ                                                                                        |
 | `/about`                                          | `src/pages/about.astro`, `src/data/team.json`                     | Done    | Team from CMS `teams`                                                                                                               |
 | `/jobs`                                           | `src/pages/jobs.astro`                                            | Done    | Gem job board iframe (blank on `http://localhost`, see diffs)                                                                       |
@@ -119,4 +119,3 @@ real deploy, DNS inventory before moving the apex.
 ## Not resolved
 
 - No fallback for the Gem iframe when framing is blocked.
-- No end-to-end test of the Loops submission (Code Push guide form).
