@@ -108,8 +108,14 @@ is done until its box is checked.
       which) plus a one-time TXT for ownership verification, all added in the
       existing zone. `api`, `console`, `admin`, `download`, `artifacts`,
       `handbook`, `docs`, MX/SPF/DKIM/DMARC and the verification TXTs are not
-      touched. The zone is **not** in the `shorebird-gws` project; it lives in
-      the prod GCP project (`shorebird-prod`).
+      touched. The zone is `shorebird-dev` in GCP project `code-push-prod` and
+      every record is managed by OpenTofu
+      (`_shorebird/infra/tofu/envs/prod/dns.tf`): change records by PR there,
+      then run `tf-apply-prod`; console edits get reverted. Firebase wants apex
+      A `199.36.158.100`, apex TXT `hosting-site=shorebird-website`, `www` CNAME
+      `shorebird-website.web.app`, and the Webflow AAAA (`2620:cb:2000::1`)
+      removed. Both custom domains were created in Firebase on 2026-09-25 (`www`
+      redirects to the apex).
   - Firebase provisions the certificate after the A records point at it; that
     can take up to a few hours on first setup. The verification TXT can be added
     early, and the `www` → apex redirect is a setting in the same custom-domain
