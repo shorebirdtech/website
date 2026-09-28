@@ -46,6 +46,10 @@ export default defineConfig({
     '/legal/dpa': '/dpa',
     '/terms/ci': '/terms',
     '/terms/code-push': '/terms',
+    // The Code Push guide (an ebook behind a Loops signup form) was dropped
+    // at cutover; send its landing page and PDF to the product page.
+    '/code-push-guide': '/product/code-push',
+    '/guides/shorebird-code-push-guide.pdf': '/product/code-push',
     // The raw-legal-text endpoints have to end in `.json` for a static host to
     // serve them as JSON (nothing rewrites the `content-type` at the edge);
     // keep the old paths the console may still hold working.
