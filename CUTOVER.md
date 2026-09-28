@@ -83,9 +83,10 @@ is done until its box is checked.
       `"trailingSlash": true` in `firebase.json` 301s the slash-less form to the
       slash form, so inbound links keep working. Verified on the live Firebase
       site 2026-09-25 (`/blog` → `/blog/`).
-- [x] **Sitemap & robots.** Verified 2026-09-25: `dist/sitemap-index.xml` is
-      generated; confirm the deployed host serves it and that no
-      `robots.txt`/`noindex` from the preview environment leaks to production.
+- [x] **Sitemap & robots.** Verified 2026-09-25: the deployed host serves
+      `/sitemap-index.xml` (`/sitemap.xml` 301s to it), `robots.txt` is
+      `Allow: /` plus the sitemap, and no `noindex` meta or `X-Robots-Tag` leaks
+      from the preview environment.
 - [x] **Microsoft domain verification.** Verified 2026-09-25: 200,
       `application/json`, no redirect.
       `public/.well-known/microsoft-identity-association` is a hidden path, so
