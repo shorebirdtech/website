@@ -6,7 +6,7 @@ subtitle: Last update August 13, 2025.
 description:
   Read Shorebird's Privacy Policy to learn how we collect, use, and protect your
   information when using our Flutter development tools.
-last_updated: 08-13-2025
+last_updated: 10-13-2026
 ---
 
 ## General Information
@@ -153,7 +153,6 @@ via email at privacy@shorebird.dev.
 - Discord, USA, Customer support
 - GitHub, USA, Code, bug reports, contributions
 - Google, USA, Cloud infrastructure for our Website & Services
-- LinkedIn, USA, Website advertising & conversion measurement
 - Loops.so, USA, Email Delivery
 - Mailchimp, USA, Email Delivery
 - Plausible, EU, Website Analytics
