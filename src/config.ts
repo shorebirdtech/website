@@ -25,4 +25,5 @@ export default {
   complianceUrl: 'https://handbook.shorebird.dev/compliance',
   handbookUrl: 'https://handbook.shorebird.dev',
   jobBoardUrl: 'https://jobs.gem.com/shorebird-dev',
+  jobBoardApiUrl: 'https://api.gem.com/job_board/v0/shorebird-dev/job_posts/',
 };
