@@ -94,8 +94,6 @@ media
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">10 years defending Android native development. 3 books published. Conference stages telling people cross-platform was compromise.<br><br>Then I tried Flutter from my Italian mountain town and everything I preached crumbled.<br><br>I used to think real developers wrote platform-specific code.…</p>— Ivan Morgillo (@hamen) <a href="https://twitter.com/hamen/status/2041802008340975980?ref_src=twsrc%5Etfw">April 8, 2026</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 The iOS tech lead has been iOS through and through their entire career, and
 they'll tell you plainly that they'd leave the company before they'd rewrite in
 Flutter. We heard that for years. It's almost religious — you commit to the
