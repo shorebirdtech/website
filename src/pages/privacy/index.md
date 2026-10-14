@@ -2,7 +2,7 @@
 layout: '@/layouts/markdown.astro'
 title: Privacy Policy
 seoTitle: Privacy Policy | Shorebird
-subtitle: Last update August 13, 2025.
+subtitle: Last update October 13, 2026.
 description:
   Read Shorebird's Privacy Policy to learn how we collect, use, and protect your
   information when using our Flutter development tools.
