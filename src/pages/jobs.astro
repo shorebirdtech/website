@@ -1,6 +1,7 @@
 ---
 import config from '@/config';
 import { Navbar } from '@/components/ui/navbar';
+import { ButtonLink } from '@/components/ui/button';
 import Footer from '@/components/ui/footer.astro';
 import MainLayout from '@/layouts/main.astro';
 import Section from '@/components/ui/section.astro';
@@ -11,18 +12,72 @@ import Section from '@/components/ui/section.astro';
   description="Shorebird is a small, fully remote team building the best way to write apps. Built by the people who made Flutter. See our open roles."
 >
   <Navbar client:load initialTheme="dark" />
-  {/* The live page is just the Gem job board (`config.jobBoardUrl`) in an
-      800px iframe under the hero spacer; the board renders its own logo,
-      intro copy and "Open positions" list. */}
+  {/* Open roles come from Gem's public job board API (`config.jobBoardApiUrl`)
+      in the browser, so a newly posted role shows up without a redeploy. Each
+      role links out to its Gem page, where candidates apply. The "all open
+      positions" link is the fallback if the fetch fails. */}
   <Section as="header" theme="dark" container="none" id="jobs">
     <div class="pb-[calc(var(--spacer-section-hero)-var(--nav-height))]"></div>
-    <iframe
-      src={config.jobBoardUrl}
-      title="Shorebird job board"
-      width="100%"
-      height="800"
-      class="block w-full border-0"
-      loading="lazy"></iframe>
+    <div class="page-container pb-section-l">
+      <h1 class="title-l pb-text-s">Jobs at Shorebird</h1>
+      <p class="body-m pb-text-xl">
+        We're a small team building the best way to write apps, built by the
+        people who made Flutter.
+      </p>
+      <ul id="job-list" class="flex min-h-24 flex-col gap-4 pb-text-xl"></ul>
+      <ButtonLink variant="secondary" href={config.jobBoardUrl} target="_blank">
+        See all open positions
+      </ButtonLink>
+    </div>
   </Section>
   <Footer />
 </MainLayout>
+
+<script>
+  import config from '@/config';
+
+  interface JobPost {
+    title: string;
+    absolute_url: string;
+    location?: { name?: string };
+  }
+
+  const list = document.getElementById('job-list');
+  fetch(config.jobBoardApiUrl, { credentials: 'omit' })
+    .then((response) => (response.ok ? response.json() : []))
+    .then((posts: JobPost[]) => {
+      if (!list) return;
+      for (const post of posts) {
+        const link = document.createElement('a');
+        link.href = post.absolute_url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.className =
+          'border-border hover:bg-surface-2 block rounded-2xl border p-6';
+
+        const title = document.createElement('p');
+        title.className = 'title-s';
+        title.textContent = post.title;
+        link.append(title);
+
+        if (post.location?.name) {
+          const location = document.createElement('p');
+          location.className = 'body-s';
+          location.textContent = post.location.name;
+          link.append(location);
+        }
+
+        const item = document.createElement('li');
+        item.append(link);
+        list.append(item);
+      }
+    })
+    .catch(() => {
+      // The "See all open positions" link still works.
+    })
+    .finally(() => {
+      // Drop the reserved space if no roles rendered (none open, or the fetch
+      // failed) so the intro sits right above the fallback link.
+      if (list && !list.hasChildNodes()) list.hidden = true;
+    });
+</script>
