@@ -74,5 +74,10 @@ import Section from '@/components/ui/section.astro';
     })
     .catch(() => {
       // The "See all open positions" link still works.
+    })
+    .finally(() => {
+      // Drop the reserved space if no roles rendered (none open, or the fetch
+      // failed) so the intro sits right above the fallback link.
+      if (list && !list.hasChildNodes()) list.hidden = true;
     });
 </script>
