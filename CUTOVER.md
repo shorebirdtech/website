@@ -34,11 +34,12 @@ is done until its box is checked.
       Custom code, SEO, Integrations):
   - Custom code (verified via API): site-level head = Plausible
     (`pa-KkCTgCak2h0t6JBTj3Tgm`) + Unify tag; footer = LinkedIn insight
-    (`8654276`) + HubSpot (`js-na2.hs-scripts.com/246912764.js`). Plausible +
-    LinkedIn are ported; Unify + HubSpot are a decision (below). No registered
-    scripts. Per-page custom code: not readable via API without page ids, but
-    the rendered HTML in `../webflow-migration/webflow-export/pages/` contains
-    whatever was there; re-fetch any page edited after 2026-09-13.
+    (`8654276`) + HubSpot (`js-na2.hs-scripts.com/246912764.js`). Plausible is
+    ported; LinkedIn was dropped (no longer advertising there); Unify + HubSpot
+    are a decision (below). No registered scripts. Per-page custom code: not
+    readable via API without page ids, but the rendered HTML in
+    `../webflow-migration/webflow-export/pages/` contains whatever was there;
+    re-fetch any page edited after 2026-09-13.
   - Forms (verified via API 2026-09-14): 15 form instances, all one of two
     shapes (newsletter: `email` + `country` honeypot; guide: `firstName`,
     `lastName`, `Email`, `country`), every one POSTing to
@@ -76,8 +77,9 @@ is done until its box is checked.
       form were removed; `/code-push-guide` and the PDF 301 to
       `/product/code-push`. The site has no forms left.
 - [x] **HubSpot chat and the Unify website tag: not ported** (2026-09-25). We're
-      keeping HubSpot itself, just not the chat widget on the site. Plausible
-      and the LinkedIn insight tag are ported.
+      keeping HubSpot itself, just not the chat widget on the site. Plausible is
+      ported; the LinkedIn insight tag was removed (no longer advertising on
+      LinkedIn).
 - [x] **Trailing slashes: decided, keep Astro's default** (`/blog/foo/`,
       canonical + `og:url` + sitemap already agree). Webflow served `/blog/foo`;
       `"trailingSlash": true` in `firebase.json` 301s the slash-less form to the

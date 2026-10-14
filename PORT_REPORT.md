@@ -47,7 +47,7 @@ plus the pre-existing `/faq`, `/security`, `/talk-to-sales`, `/workshops`,
 Head: `<title>`/description match the live pages; default share image is the
 Webflow "shared image" (`public/open-graph.jpg`), posts use their CMS
 `shared-image`, stories their cover; favicon/apple-touch-icon are the live ones;
-Plausible + LinkedIn Insight tags are in `main.astro`.
+Plausible is in `main.astro` (the LinkedIn Insight tag was later removed).
 
 ## Theme model
 
