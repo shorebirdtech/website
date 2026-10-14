@@ -24,8 +24,6 @@ fallback logic and redirect requests to secondary services.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/shorebirddev?ref_src=twsrc%5Etfw">@shorebirddev</a> has been an absolute saviour in this AWS outage in UAE region saving our app from down time, helping release fallback logics quickly. Already on patch fix no #5. <a href="https://t.co/mVsXTmYXmm">pic.twitter.com/mVsXTmYXmm</a></p>— tushar (@tusharghige) <a href="https://twitter.com/tusharghige/status/2028529716068851817?ref_src=twsrc%5Etfw">March 2, 2026</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 This shines a light on a common problem that mobile devs face. Web devs can push
 code at a moments notice, this isn’t a luxury that mobile devs have based on app
 store policies and user update habits. The industry has tried to solve this for

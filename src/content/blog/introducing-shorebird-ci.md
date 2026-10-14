@@ -32,7 +32,7 @@ pipelines so we finally decided to build a CI solution specifically designed for
 Flutter & Dart 💙
 
 <div style="display:flex;justify-content:center">
-  <iframe style="aspect-ratio:16/9;width:100%;margin-inline:auto;margin-bottom:1em" src="https://www.youtube.com/embed/ZMMV418Dt80?si=Ec4cphd4vm1WFBEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe style="aspect-ratio:16/9;width:100%;margin-inline:auto;margin-bottom:1em" src="https://www.youtube-nocookie.com/embed/ZMMV418Dt80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Why We Built Shorebird CI

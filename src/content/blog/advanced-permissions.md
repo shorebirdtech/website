@@ -23,7 +23,7 @@ specifically for larger teams that need more granular governance over how
 patches are tested and deployed.
 
 <div style="display:flex;justify-content:center"\>  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JSJW_NrmSig?si=2DJM2rKPIXpTMohW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JSJW_NrmSig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </div>
 

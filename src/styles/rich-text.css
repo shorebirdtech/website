@@ -223,7 +223,7 @@
 }
 /* Video embeds keep 16:9 when squeezed below their width attribute. */
 .prose.rich-text > iframe,
-.prose.rich-text iframe[src*='youtube.com/embed'] {
+.prose.rich-text iframe[src*='youtube-nocookie.com/embed'] {
   height: auto;
   aspect-ratio: 16 / 9;
 }
