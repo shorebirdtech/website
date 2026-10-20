@@ -1,7 +1,6 @@
 {
   "specVersion": "0.1.0",
   "host": {
-    "identifier": "did:web:shorebird.dev",
     "domain": "shorebird.dev",
     "displayName": "Shorebird",
     "description": "Shorebird: code push (over-the-air updates) for Flutter apps. Product, pricing and company information lives on shorebird.dev; developer documentation on docs.shorebird.dev."

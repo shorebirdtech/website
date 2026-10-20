@@ -32,7 +32,7 @@
         "headers": [
           {
             "key": "Link",
-            "value": "</llms.txt>; rel=\"alternate\"; type=\"text/plain\", </.well-known/api-catalog>; rel=\"api-catalog\", <https://api.shorebird.dev/openapi.json>; rel=\"service-desc\"; type=\"application/json\", <https://docs.shorebird.dev/>; rel=\"service-doc\"; type=\"text/html\", <https://auth.shorebird.dev/.well-known/oauth-authorization-server>; rel=\"oauth-authorization-server\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\", </.well-known/ai-catalog.json>; rel=\"service-desc\"; type=\"application/json\", </sitemap-index.xml>; rel=\"sitemap\"; type=\"application/xml\""
+            "value": "</llms.txt>; rel=\"alternate\"; type=\"text/plain\", </.well-known/api-catalog>; rel=\"api-catalog\", <https://api.shorebird.dev/openapi.json>; rel=\"service-desc\"; type=\"application/json\", <https://docs.shorebird.dev/>; rel=\"service-doc\"; type=\"text/html\", <https://auth.shorebird.dev/.well-known/oauth-authorization-server>; rel=\"oauth-authorization-server\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\", </.well-known/ai-catalog.json>; rel=\"describedby\"; type=\"application/json\", </sitemap-index.xml>; rel=\"sitemap\"; type=\"application/xml\""
           }
         ]
       },
