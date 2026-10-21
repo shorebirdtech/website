@@ -13,11 +13,13 @@
  *   carries the requested theme. Use it for e.g. the dark
  *   "Enterprise-scale infrastructure" card inside a light section
  *   (Webflow `.c_cta_card` / `.c_cta_footer`).
- * - `spacing`: extra vertical padding on top of the 10px every Webflow
- *   section has, maps to `--spacer-section-*` (`xs` 2.5rem, `s` 4rem,
- *   `m` 6rem, `l` 7.5rem, `hero` 10rem; all smaller on mobile). Default
- *   `none`. Note: on the live site `g_spacer.is--section_m` has no CSS rule
- *   and renders 0px, so most "m" spacers in the exported HTML are 0.
+ * - `spacing`: vertical padding above and below the content, maps to
+ *   `--spacer-section-*` (`xs` 2.5rem, `s` 4rem, `m` 6rem, `l` 7.5rem,
+ *   `hero` 10rem; all smaller on mobile). Defaults to `m`, the spacer the
+ *   Webflow design put around every section (Webflow never shipped a CSS rule
+ *   for it, so it rendered 0px there). Defaults to `none` for
+ *   `as="header"`, since heroes lay out their own spacing under the navbar;
+ *   `none` leaves 10px.
  * - `container`: `small` (default, 85rem), `large` (96rem) or `none`
  *   (full bleed; you lay out the content yourself, e.g. `page-container`).
  * - `as`: element tag (`section` by default; `header` for heroes).
@@ -38,9 +40,9 @@ export interface Props {
 const {
   theme,
   variant = 'plain',
-  spacing = 'none',
   container = 'small',
   as: Tag = 'section',
+  spacing = Tag === 'header' ? 'none' : 'm',
   id,
   class: className,
   cardClass,
@@ -48,7 +50,7 @@ const {
 } = Astro.props;
 
 const spacingClass = {
-  none: '',
+  none: 'py-2.5',
   xs: 'py-section-xs',
   s: 'py-section-s',
   m: 'py-section-m',
@@ -70,7 +72,7 @@ const isCard = variant === 'card';
   id={id}
   data-theme={!isCard ? theme : undefined}
   data-section
-  class:list={['bg-surface-1 relative py-2.5', spacingClass, className]}
+  class:list={['bg-surface-1 relative', spacingClass, className]}
   {...rest}
 >
   {

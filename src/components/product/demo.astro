@@ -18,8 +18,7 @@ export interface Props {
 const { eyebrow, title, description, src, iframeTitle } = Astro.props;
 ---
 
-<Section theme="light" container="large" id="demo">
-  <div class="pb-section-l"></div>
+<Section theme="light" container="large" spacing="l" id="demo">
   <div
     data-theme="dark"
     class="bg-surface-1 overflow-hidden rounded-3xl px-6 pt-10 md:px-10 lg:px-[7.5rem] lg:pt-24"
@@ -57,7 +56,6 @@ const { eyebrow, title, description, src, iframeTitle } = Astro.props;
       </div>
     </div>
   </div>
-  <div class="pb-section-l"></div>
 </Section>
 
 <style>
