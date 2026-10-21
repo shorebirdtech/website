@@ -14,12 +14,19 @@ import { organization, website } from '@/lib/structured-data';
 /**
  * Team grid (Webflow `.c_team--cms_list`): `src/data/team.json` is the
  * Webflow "Teams" collection.
+ *
+ * Headshots are cropped to a square at build time, so CSS object-position has
+ * no effect on them. The crop keeps the top of the photo unless a member sets
+ * `headshotPosition` to another sharp position keyword (e.g. `"center"`,
+ * `"left top"`, `"attention"`); sharp does not accept percentages.
  */
+type TeamMember = (typeof teamData)[number] & { headshotPosition?: string };
+
 const headshots = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/team/*.{jpg,jpeg,png,webp,avif}',
   { eager: true },
 );
-const team = teamData
+const team = (teamData as TeamMember[])
   .sort((a, b) => a.order - b.order)
   .map((member) => {
     const image = headshots[member.headshot];
@@ -160,7 +167,8 @@ const linkedinIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" heigh
                     alt={member.name}
                     width={400}
                     height={400}
-                    class="aspect-square h-auto w-full rounded-2xl object-cover object-top"
+                    position={member.headshotPosition ?? 'top'}
+                    class="aspect-square h-auto w-full rounded-2xl object-cover"
                   />
                   <div class="pb-section-xs" />
                   <div class="flex flex-wrap items-center gap-[0.5625rem] pb-text-xs">
