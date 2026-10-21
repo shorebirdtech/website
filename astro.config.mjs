@@ -63,5 +63,18 @@ export default defineConfig({
     '/blog/flutter-332-release': '/blog/flutter-3-32-release',
     '/blog/growing': '/blog/shorebird-is-growing',
     '/blog/building-great-developer-tools': '/blog/building-good-software',
+    // The install one-liners in the docs. The scripts live in
+    // shorebirdtech/install so a push there ships without a site deploy; 302
+    // so no client caches the destination and it can move later.
+    '/install.sh': {
+      status: 302,
+      destination:
+        'https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh',
+    },
+    '/install.ps1': {
+      status: 302,
+      destination:
+        'https://raw.githubusercontent.com/shorebirdtech/install/main/install.ps1',
+    },
   },
 });
