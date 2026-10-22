@@ -55,6 +55,10 @@
       {
         "source": "/llms.txt",
         "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+      },
+      {
+        "source": "/install.{sh,ps1}{,/}",
+        "headers": [{ "key": "Cache-Control", "value": "no-store" }]
       }
     ],
     "redirects": [
@@ -159,6 +163,11 @@
         "type": 301
       },
       {
+        "source": "/success-stories/VETC{,/}",
+        "destination": "/success-stories/vetc",
+        "type": 301
+      },
+      {
         "source": "/install.sh{,/}",
         "destination": "https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh",
         "type": 302
@@ -167,11 +176,6 @@
         "source": "/install.ps1{,/}",
         "destination": "https://raw.githubusercontent.com/shorebirdtech/install/main/install.ps1",
         "type": 302
-      },
-      {
-        "source": "/success-stories/VETC{,/}",
-        "destination": "/success-stories/vetc",
-        "type": 301
       }
     ]
   }
