@@ -17,15 +17,15 @@ import { format, resolveConfig } from 'prettier';
  * Each source is written as `/path{,/}` so both slash forms match.
  *
  * `hostOnly` rules go to Firebase without an Astro stub, for sources that
- * collide with a real page on a case-insensitive filesystem.
+ * collide with a real page on a case-insensitive filesystem or that serve
+ * something other than HTML, where a meta-refresh stub would be wrong.
  */
+type Redirect = string | { destination: string; status?: number };
+
 export default function firebase({
   hostOnly = {},
-}: { hostOnly?: Record<string, string> } = {}): AstroIntegration {
-  let redirects: Record<
-    string,
-    string | { destination: string; status?: number }
-  > = {};
+}: { hostOnly?: Record<string, Redirect> } = {}): AstroIntegration {
+  let redirects: Record<string, Redirect> = {};
   return {
     name: 'firebase',
     hooks: {

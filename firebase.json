@@ -162,6 +162,16 @@
         "source": "/success-stories/VETC{,/}",
         "destination": "/success-stories/vetc",
         "type": 301
+      },
+      {
+        "source": "/install.sh{,/}",
+        "destination": "https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh",
+        "type": 302
+      },
+      {
+        "source": "/install.ps1{,/}",
+        "destination": "https://raw.githubusercontent.com/shorebirdtech/install/main/install.ps1",
+        "type": 302
       }
     ]
   }

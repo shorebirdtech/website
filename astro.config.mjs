@@ -18,10 +18,28 @@ export default defineConfig({
     sitemap(),
     mdx(),
     firebase({
-      // Rules that must not become Astro redirect stubs: this one differs
-      // from the real page only by case, and on a case-insensitive filesystem
-      // the stub and the page would land in the same directory.
-      hostOnly: { '/success-stories/VETC': '/success-stories/vetc' },
+      // Rules that must not become Astro redirect stubs.
+      hostOnly: {
+        // Differs from the real page only by case, and on a case-insensitive
+        // filesystem the stub and the page would land in the same directory.
+        '/success-stories/VETC': '/success-stories/vetc',
+        // The install one-liners in the docs. Host-only because a
+        // meta-refresh stub would hand curl or iwr HTML instead of a script.
+        // The scripts live in shorebirdtech/install so a push there ships
+        // without a site deploy; 302 rather than 301 so clients don't cache
+        // the destination permanently and it can move later. (Firebase
+        // doesn't apply `headers` rules to redirects, so no Cache-Control.)
+        '/install.sh': {
+          status: 302,
+          destination:
+            'https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh',
+        },
+        '/install.ps1': {
+          status: 302,
+          destination:
+            'https://raw.githubusercontent.com/shorebirdtech/install/main/install.ps1',
+        },
+      },
     }),
   ],
   redirects: {
