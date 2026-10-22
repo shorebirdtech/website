@@ -26,8 +26,9 @@ export default defineConfig({
         // The install one-liners in the docs. Host-only because a
         // meta-refresh stub would hand curl or iwr HTML instead of a script.
         // The scripts live in shorebirdtech/install so a push there ships
-        // without a site deploy; 302 (plus `no-store` in firebase.json) so
-        // nothing caches the destination and it can move later.
+        // without a site deploy; 302 rather than 301 so clients don't cache
+        // the destination permanently and it can move later. (Firebase
+        // doesn't apply `headers` rules to redirects, so no Cache-Control.)
         '/install.sh': {
           status: 302,
           destination:

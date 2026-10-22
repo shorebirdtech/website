@@ -55,10 +55,6 @@
       {
         "source": "/llms.txt",
         "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
-      },
-      {
-        "source": "/install.{sh,ps1}{,/}",
-        "headers": [{ "key": "Cache-Control", "value": "no-store" }]
       }
     ],
     "redirects": [
